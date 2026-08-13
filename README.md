@@ -24,7 +24,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] Implementasi, pengujian live, dan pendokumentasian arsitektur **Web Push Notification untuk Safari iOS (iPhone)** tanpa bot Telegram/WhatsApp (PWA Standalone, Service Worker, VAPID Keys, Express backend dengan library `web-push`, dan Cloudflare Pages) di `docs/safari-ios-web-push-notification.md`.
 - [x] Implementasi dan deployment live **Automasi Trading MetaTrader 5 (Docker + Exness + Wine Python)** yang terhubung langsung ke **Serverless Cloudflare Workers Web Push Notification** (`https://mt5-push-backend.alwiihsan50.workers.dev`) dengan Cloudflare KV dan Web Crypto API di `docs/mt5-docker-forex-trading-automation.md`.
 - [x] Standardisasi dan dokumentasi **Universal Web Push Notification Service Hub** untuk integrasi ke aplikasi lintas bahasa (Python, Node.js, PHP, Go, Bash) di `docs/universal-web-push-notification-service.md`.
-- [ ] Implementasi strategi & indikator algoritma trading lanjutan (RSI, MA crossover, risk management) di `bot.py`.
+- [x] Implementasi dan aktivasi strategi trading otomatis **EMA Crossover (Fast EMA 9 vs Slow EMA 21) + RSI Filter (Period 14)** dengan proteksi SL/TP tetap & Push Notification real-time ke iPhone di `mt5_config/bot.py`.
 
 ---
 
