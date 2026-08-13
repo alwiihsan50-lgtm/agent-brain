@@ -101,9 +101,17 @@ Akses `http://localhost:3000` di browser untuk login akun Exness.
 2. Tekan tombol **Share** -> **Add to Home Screen**.
 3. Buka ikon aplikasi di Home Screen, lalu tekan **Hubungkan ke Cloudflare Server** (izinkan notifikasi).
 
-### 3. Menjalankan Bot Trading Python
+### 3. Layanan Auto-Start 24/7 (Systemd Service)
+Bot trading dan container MT5 telah dikonfigurasi untuk otomatis berjalan sendiri saat PC dihidupkan (*boot*):
+* **Service Unit:** `/etc/systemd/system/mt5-trading-bot.service` (`systemctl status mt5-trading-bot.service`)
+* **Runner Script:** `/home/cuker/start-bot.sh`
+* **Log Realtime:** `journalctl -u mt5-trading-bot.service -f`
+
+Perintah kontrol service:
 ```bash
-docker exec --user abc exness-mt5 wine python -u /config/bot.py
+sudo systemctl restart mt5-trading-bot.service   # Restart bot
+sudo systemctl stop mt5-trading-bot.service      # Hentikan bot
+sudo systemctl status mt5-trading-bot.service    # Cek status
 ```
 
 ### 4. Deploy / Update Worker (Bila ada perubahan)
