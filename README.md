@@ -8,7 +8,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Project Scope:** Multi-project Context & Shared Memory (`Arsip-IMO`, `SmartHome`, `SaveBuddy`, `SIMPKK-DIGITAL`, `Mentari Ecosystem`, `TailShare`, `agent-brain`)
 - **Status:** Active / Production Ready
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-14 02:15 WIB
+- **Last Updated At:** 2026-08-14 02:19 WIB
 
 ---
 
@@ -19,13 +19,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] Pendokumentasian batasan lingkungan sistem & reserved port di `docs/system-environment-and-ports.md`
 - [x] Pemetaan seluruh repositori dan proyek di Drive `D:\` ke `docs/drive-d-projects-catalog.md`
 - [x] Tambahkan panduan instalasi & auto-start TailShare untuk **Linux Mint** di `docs/tailshare-linux-mint-installation.md`
-- [x] Implementasi dan deployment penuh aplikasi **TailShare** (Native Electron + Web UI + Auto-Sync Clipboard + File Sharing) di Linux Mint, auto-start systemd 24/7, dan push repo ke `https://github.com/alwiihsan50-lgtm/tailshare`.
+- [x] Implementasi dan deployment penuh aplikasi **TailShare** versi lintas platform (**Windows & Linux**) dengan auto-start background 24/7, installer 1-klik Windows, dan push update ke `https://github.com/alwiihsan50-lgtm/tailshare`.
 - [ ] Implementasi fitur baru atau pemeliharaan berkala sesuai instruksi pengguna selanjutnya.
 
 ---
 
 ## 📝 Ringkasan Konteks Terakhir
-1. **TailShare Suite (Linux Mint):** Berjalan di port `53317` (URL: `http://100.110.205.27:53317`), service systemd `tailshare.service` aktif 24/7 (`Restart=always`, `loginctl enable-linger cuker`), launcher desktop di `~/Desktop/TailShare.desktop`, repositori publik di `https://github.com/alwiihsan50-lgtm/tailshare`.
+1. **TailShare Universal Suite (Windows & Linux):** Berjalan di port `53317` (URL: `http://100.110.205.27:53317`), mendukung auto-sync clipboard Windows (PowerShell/clip) dan Linux (xclip/wl-copy), script installer 1-klik Windows (`install-windows.bat`), service systemd Linux (`tailshare.service`), dan tersimpan di `https://github.com/alwiihsan50-lgtm/tailshare`. Salinan Windows juga ditempatkan di `C:\Users\alwii\Desktop\tailshare-suite`.
 2. **Arsip-IMO Project:** Berada di branch `Beta2-redesign` (`D:\Documents\GitHub\Arsip-IMO`). Aplikasi karyawan React 19 + Supabase + Zustand. Layout kontrol kalender menggunakan grid 2x2 dengan font `12px`.
 3. **Katalog Proyek Drive D (`D:\Projects`):** Terdiri dari 18 repositori Git aktif termasuk ekosistem IMO, SmartHome, SaveBuddy, SIMPKK Digital, PRD Generator, dan Ekosistem LPKP Mentari.
 
