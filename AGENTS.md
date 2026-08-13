@@ -4,6 +4,9 @@ File ini adalah aturan wajib bagi SELURUH AI Agent yang mengakses repositori ini
 
 ### 1. PHASE READ (BOOTING)
 - Sebelum memulai pekerjaan apa pun, WAJIB membaca `README.md` untuk memahami konteks, riwayat pekerjaan, dan status proyek terkini.
+- Bacalah indeks dokumentasi di `docs/`:
+  - [`docs/arsip-imo-project.md`](docs/arsip-imo-project.md) untuk proyek **Arsip-IMO**.
+  - [`docs/system-environment-and-ports.md`](docs/system-environment-and-ports.md) untuk batasan port dan lingkungan sistem.
 - Jangan mengulang pekerjaan yang sudah dicentang selesai di `README.md`.
 
 ### 2. PHASE WRITE (HANDOFF / COMPLETION)
