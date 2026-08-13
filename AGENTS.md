@@ -9,6 +9,7 @@ File ini adalah aturan wajib bagi SELURUH AI Agent yang mengakses repositori ini
   - [`docs/drive-d-projects-catalog.md`](docs/drive-d-projects-catalog.md) untuk melihat daftar seluruh repositori dan proyek di Drive `D:\`.
   - [`docs/arsip-imo-project.md`](docs/arsip-imo-project.md) untuk proyek **Arsip-IMO**.
   - [`docs/system-environment-and-ports.md`](docs/system-environment-and-ports.md) untuk batasan port dan lingkungan sistem.
+  - [`docs/safari-ios-web-push-notification.md`](docs/safari-ios-web-push-notification.md) untuk panduan & spesifikasi implementasi Web Push Notification (Safari iOS & Browser).
 - Jangan mengulang pekerjaan yang sudah dicentang selesai di `README.md`.
 
 ### 2. PHASE WRITE (HANDOFF / COMPLETION)
