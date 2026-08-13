@@ -10,6 +10,7 @@ File ini adalah aturan wajib bagi SELURUH AI Agent yang mengakses repositori ini
   - [`docs/arsip-imo-project.md`](docs/arsip-imo-project.md) untuk proyek **Arsip-IMO**.
   - [`docs/system-environment-and-ports.md`](docs/system-environment-and-ports.md) untuk batasan port dan lingkungan sistem.
   - [`docs/safari-ios-web-push-notification.md`](docs/safari-ios-web-push-notification.md) untuk panduan & spesifikasi implementasi Web Push Notification (Safari iOS & Browser).
+  - [`docs/mt5-docker-forex-trading-automation.md`](docs/mt5-docker-forex-trading-automation.md) untuk arsitektur, setup Docker MT5 Exness, Wine Python, dan integrasi push notification bot.
 - Jangan mengulang pekerjaan yang sudah dicentang selesai di `README.md`.
 
 ### 2. PHASE WRITE (HANDOFF / COMPLETION)
