@@ -11,6 +11,7 @@ File ini adalah aturan wajib bagi SELURUH AI Agent yang mengakses repositori ini
   - [`docs/system-environment-and-ports.md`](docs/system-environment-and-ports.md) untuk batasan port dan lingkungan sistem.
   - [`docs/safari-ios-web-push-notification.md`](docs/safari-ios-web-push-notification.md) untuk panduan & spesifikasi implementasi Web Push Notification (Safari iOS & Browser).
   - [`docs/mt5-docker-forex-trading-automation.md`](docs/mt5-docker-forex-trading-automation.md) untuk arsitektur, setup Docker MT5 Exness, Wine Python, dan integrasi push notification bot.
+  - [`docs/universal-web-push-notification-service.md`](docs/universal-web-push-notification-service.md) untuk panduan integrasi notifikasi push ke aplikasi & bot lain (Python, Node.js, PHP, Go, cURL).
 - Jangan mengulang pekerjaan yang sudah dicentang selesai di `README.md`.
 
 ### 2. PHASE WRITE (HANDOFF / COMPLETION)
