@@ -1,41 +1,47 @@
-# Setup & Arsitektur Automasi Trading MT5 (Docker + Exness + Push Notification iOS)
+# Setup & Arsitektur Automasi Trading MT5 (Docker + Exness + Cloudflare Workers Push Notification)
 
-Dokumentasi komprehensif mengenai implementasi sistem trading bot otomatis yang berjalan di lingkungan terisolasi (Docker), terintegrasi dengan MetaTrader 5 Exness, serta terhubung ke sistem Push Notification mandiri (Apple Safari iOS) via Cloudflare Tunnel.
+Dokumentasi komprehensif mengenai implementasi sistem trading bot otomatis yang berjalan di lingkungan terisolasi (Docker), terintegrasi dengan MetaTrader 5 Exness, serta terhubung ke sistem Push Notification mandiri (Apple Safari iOS) via **Cloudflare Workers (Serverless 24/7 Gratis)**.
 
 ---
 
 ## 🏗️ 1. Arsitektur Keseluruhan
 
-Sistem automasi trading ini mengombinasikan 4 layer utama:
+Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 
 ```
-+-------------------------------------------------------------------------------+
-|                                Linux Host System                              |
-|                                                                               |
-|  +-----------------------------+         +---------------------------------+  |
-|  |     Docker Container        |         |        Host Services            |  |
-|  |       (exness-mt5)          |         |                                 |  |
-|  |                             |         |  +---------------------------+  |  |
-|  |  [MetaTrader 5 GUI (Wine)]  |         |  | Node.js Push Server       |  |  |
-|  |          |                  |  HTTP   |  | (Port 3005)               |  |  |
-|  |  [Python 3.9 (Wine)]        |-------->|  | (/home/cuker/bot_push_...) |  |  |
-|  |  - Script: /config/bot.py   | 172.17.0.1|  +-------------+-------------+  |  |
-|  |  - Package: MetaTrader5     |  :3005  |                |                |  |
-|  |  - Downgrade: numpy<2       |         |                v                |  |
-|  +--------------+--------------+         |  +---------------------------+  |  |
-|                 |                        |  | Cloudflare Tunnel         |  |  |
-|                 | Port 3000              |  | (mt5-push via cloudflared)|  |  |
-|                 v                        |  +-------------+-------------+  |  |
-|          Web VNC Interface               |                |                |  |
-|          (http://localhost:3000)         +----------------|----------------+  |
-+-----------------------------------------------------------|-------------------+
-                                                            | HTTPS / SSL
-                                                            v
-                                                  +-------------------+
-                                                  |   iPhone Safari   |
-                                                  |  (PWA Subscribed) |
-                                                  | Push Notification |
-                                                  +-------------------+
++-------------------------------------------------------------+
+|                      Linux Host System                      |
+|                                                             |
+|  +-------------------------------------------------------+  |
+|  |     Docker Container (exness-mt5)                     |  |
+|  |                                                       |  |
+|  |  [MetaTrader 5 GUI (Wine)] ---> Web VNC (Port 3000)   |  |
+|  |          |                                            |  |
+|  |  [Python 3.9 (Wine)]                                  |  |
+|  |  - Script: /config/bot.py                             |  |
+|  |  - Package: MetaTrader5 5.0.36                        |  |
+|  |  - Downgrade: numpy==1.26.4 (numpy<2)                 |  |
+|  +--------------------------+----------------------------+  |
+|                             | HTTPS POST                    |
++-----------------------------|-------------------------------+
+                              | (/trigger-notification)
+                              v
+             +----------------------------------+
+             |   Cloudflare Workers (Serverless)|
+             |   https://mt5-push-backend.      |
+             |   alwiihsan50.workers.dev        |
+             |                                  |
+             |  - Library: webcrypto-web-push   |
+             |  - Storage: Cloudflare KV (subs) |
+             |  - Web UI: PWA Subscribe Page    |
+             +----------------+-----------------+
+                              | Web Push Protocol (Apple/Google)
+                              v
+                    +-------------------+
+                    |   iPhone Safari   |
+                    |  (PWA Standalone) |
+                    | Push Notification |
+                    +-------------------+
 ```
 
 ---
@@ -58,73 +64,57 @@ Sistem automasi trading ini mengombinasikan 4 layer utama:
   ```bash
   docker exec --user abc exness-mt5 wine python -u /config/bot.py
   ```
-- **Network Bridge:** Container mengakses push server host menggunakan IP default Docker bridge `http://172.17.0.1:3005`.
 
 ### C. Bot Python Logic (`mt5_config/bot.py`)
 - Terletak di `/home/cuker/mt5_config/bot.py` (tersinkronisasi langsung ke `/config/bot.py` dalam container).
 - Inisialisasi koneksi IPC ke terminal MT5 (`mt5.initialize()`).
 - Mengambil info akun (Login ID, Saldo, Currency, Equity, Free Margin).
 - Berlangganan ke symbol Market Watch (contoh: `EURUSDm` di akun Exness).
-- Fungsi `send_push_notification(title, message)` yang mem-POST payload JSON ke server push lokal.
+- Fungsi `send_push_notification(title, message)` yang mem-POST payload JSON ke endpoint Cloudflare Workers:
+  `https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification`
 
-### D. Push Notification Server (Node.js)
-- **Lokasi:** `/home/cuker/bot_push_server/backend/`
-- **Port:** `3005` (diubah dari `3000` untuk mencegah konflik dengan MT5 Web GUI)
-- **Framework:** Express.js + `web-push` library
-- **Endpoint Utama:**
-  - `POST /subscribe`: Menerima & menyimpan objek `subscription` dari client browser / iPhone PWA.
-  - `POST /trigger-notification`: Menerima `{ title, message }` dan mem-broadcast web push ke seluruh perangkat terdaftar.
-
-### E. Cloudflare Tunnel (`cloudflared`)
-- **Nama Tunnel:** `mt5-push`
-- **CLI:** `cloudflared` (native linux-amd64 package)
-- **Rute DNS:** Dihubungkan ke custom subdomain di Cloudflare DNS user.
-- **Eksekusi:**
-  ```bash
-  cloudflared tunnel run --url http://localhost:3005 mt5-push
-  ```
-
-### F. Web Dokumentasi & PWA Client
-- **Dokumentasi Statis:** `/home/cuker/bot_web_docs/index.html`
-- **Client PWA Pendaftaran:** `/home/cuker/bot_push_server/backend/public/` (`index.html`, `sw.js`, `manifest.json`)
+### D. Cloudflare Worker Push Backend (`cf-push-backend`)
+- **Lokasi Source:** `/home/cuker/cf-push-backend/`
+- **URL Publik:** `https://mt5-push-backend.alwiihsan50.workers.dev`
+- **Engine:** Cloudflare Worker (Hono + `@block65/webcrypto-web-push` + Web Crypto API)
+- **Storage:** Cloudflare KV Namespace `SUBSCRIPTIONS` (ID: `0217d87236964fb796f7988e77f29de0`)
+- **Fitur All-in-One:**
+  - `GET /`: Menyajikan Web PWA Interface untuk tombol "Hubungkan ke Server" di iPhone.
+  - `GET /sw.js`: Menyajikan Service Worker untuk menangkap background push event.
+  - `GET /manifest.json`: Web App Manifest untuk PWA Standalone di Safari iOS.
+  - `POST /subscribe`: Menyimpan objek langganan ke Cloudflare KV.
+  - `POST /trigger-notification`: Mengirim notifikasi ke semua perangkat terdaftar.
 
 ---
 
-## ⚡ 3. Cara Menjalankan & Mengelola Layanan
+## ⚡ 3. Cara Menjalankan & Menguji
 
 ### 1. Menjalankan Container MT5
 ```bash
 cd /home/cuker
 docker compose up -d
 ```
-Akses `http://localhost:3000` untuk login akun Exness (pilih server sesuai akun demo/real).
+Akses `http://localhost:3000` di browser untuk login akun Exness.
 
-### 2. Menjalankan Backend Push Notification
-```bash
-cd /home/cuker/bot_push_server/backend
-npm start
-```
+### 2. Mendaftarkan iPhone (PWA Push)
+1. Buka `https://mt5-push-backend.alwiihsan50.workers.dev` di Safari iPhone.
+2. Tekan tombol **Share** -> **Add to Home Screen**.
+3. Buka ikon aplikasi di Home Screen, lalu tekan **Hubungkan ke Cloudflare Server** (izinkan notifikasi).
 
-### 3. Menjalankan Cloudflare Tunnel
-```bash
-cloudflared tunnel run --url http://localhost:3005 mt5-push
-```
-
-### 4. Menjalankan Bot Trading Python
+### 3. Menjalankan Bot Trading Python
 ```bash
 docker exec --user abc exness-mt5 wine python -u /config/bot.py
 ```
 
+### 4. Deploy / Update Worker (Bila ada perubahan)
+```bash
+cd /home/cuker/cf-push-backend
+npx wrangler deploy
+```
+
 ---
 
-## ⚠️ 4. Troubleshooting & Gotchas
-
-1. **Error NumPy `_ARRAY_API not found`:**
-   Pustaka `MetaTrader5` tidak kompatibel dengan NumPy 2.x. Jika diinstall ulang, pastikan downgrade:
-   ```bash
-   docker exec --user abc exness-mt5 wine python -m pip install "numpy<2"
-   ```
-2. **Koneksi Container ke Host (`Connection Refused` di localhost:3005):**
-   Di dalam Docker container, `localhost` merujuk ke container itu sendiri. Untuk mengakses port 3005 di host Linux, gunakan IP `172.17.0.1:3005`.
-3. **Encoding Karakter / Emoji di Terminal Windows (Wine):**
-   Standard output di Wine dapat memunculkan warning `charmap codec can't encode character` jika terdapat emoji non-ASCII pada `print()`, namun transmisi HTTP Push Notification tetap berhasil terkirim utuh ke iPhone.
+## 💡 Keuntungan Menggunakan Cloudflare Workers
+1. **100% Gratis & Serverless:** Tidak memerlukan port lokal di host Linux dan tidak memakan RAM.
+2. **24/7 Siap Sedia:** Backend selalu aktif di jaringan edge global Cloudflare.
+3. **Bebas Tunnel:** Tidak perlu lagi menjalankan proses tunneling `cloudflared` atau `pinggy` untuk push notification.
