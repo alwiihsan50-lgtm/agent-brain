@@ -25,29 +25,32 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] Implementasi dan deployment live **Automasi Trading MetaTrader 5 (Docker + Exness + Wine Python)** yang terhubung langsung ke **Serverless Cloudflare Workers Web Push Notification** (`https://mt5-push-backend.alwiihsan50.workers.dev`) dengan Cloudflare KV dan Web Crypto API di `docs/mt5-docker-forex-trading-automation.md`.
 - [x] Implementasi dan aktivasi strategi trading otomatis **Multi-Pair Scanner (6 Pairs: EURUSDm, GBPUSDm, USDJPYm, AUDUSDm, USDCADm, XAUUSDm)** dengan **EMA Crossover (9/21) + RSI (14)**, proteksi SL/TP per pair, dan Push Notification real-time ke iPhone di `mt5_config/bot.py`.
 - [x] Pembuatan dan containerisasi **MT5 Live Trading Web Dashboard (Docker container `mt5-dashboard` di Port `8080`)** untuk monitoring real-time balance, equity, floating P/L, scanner pair, open trades, dan log aktivitas via browser.
-- [x] Konfigurasi layanan latar belakang **Auto-Start 24/7 (Systemd Service `mt5-trading-bot.service`)** yang otomatis berjalan saat PC dinyalakan.
+- [x] Standardisasi protokol **Dual-Engine Synergy (`agent-brain` + `graphify`)** untuk seluruh AI Agent di `.agents/rules/agent-brain-and-graphify-synergy.md` dan `docs/agent-brain-and-graphify-synergy-guide.md`.
 
 ---
 
 ## 📝 Ringkasan Konteks Terakhir
-1. **Multi-Pair Algorithmic Trading Bot & Web Dashboard (Docker):** Berjalan aktif melalui Docker (`exness-mt5` di Port `3000` dan `mt5-dashboard` di Port `8080`) dan systemd service (`mt5-trading-bot.service`). Melakukan live scanning real-time pada 6 pair (Forex & Gold) di timeframe M5. State bot di-export secara real-time ke JSON dan divisualisasikan di web dashboard port `8080`.
-2. **Universal Web Push Notification Hub (Cloudflare Workers 24/7):** Dibangun sebagai hub notifikasi terpusat (`https://mt5-push-backend.alwiihsan50.workers.dev`) menggunakan Cloudflare KV (`SUBSCRIPTIONS`) dan `@block65/webcrypto-web-push`. Siap dipanggil oleh aplikasi mana pun cukup via 1 panggilan HTTP POST (`/trigger-notification`).
-3. **Web Dokumentasi Lokal:** Dokumentasi interaktif disimpan di `/home/cuker/bot_web_docs/index.html`.
-4. **Web Push Notification Safari iOS (iPhone & Local Server):** Menggunakan Web Push API standar, Service Worker (`sw.js`), `manifest.json` PWA Standalone, VAPID Keys, dan backend Node.js (`web-push`). Repo lokal: `safari-push-test`, Cloudflare Pages: `https://safari-push-test.pages.dev`.
-5. **TailShare Universal Suite (Windows & Linux Native GUI):** Terkoneksi langsung ke folder **Drive D `D:\tailshare`** (`/media/cuker/Data/tailshare`). Mendukung GUI Native Electron (`bin/tailshare` dengan CommonJS preload & X11 sandbox flags), auto-attach ke daemon background systemd tanpa konflik port `53317`, live folder watcher, dan web UI. Repo: `https://github.com/alwiihsan50-lgtm/tailshare`.
-6. **Pembaruan TailShare di Windows:** Repositori GitHub `alwiihsan50-lgtm/tailshare` telah dikloning dan diinstal di `C:\Users\alwii\Desktop\tailshare`. Port default telah dialihkan ke **53317**, script auto-start Startup Windows terpasang, file sharing terintegrasi ke `D:\tailshare`, dan shortcut Desktop diperbarui.
-7. **Arsip-IMO Project:** Berada di branch `Beta2-redesign` (`D:\Documents\GitHub\Arsip-IMO`). Aplikasi karyawan React 19 + Supabase + Zustand. Layout kontrol kalender menggunakan grid 2x2 dengan font `12px`.
-8. **Katalog Proyek Drive D (`D:\Projects`):** Terdiri dari 18 repositori Git aktif termasuk ekosistem IMO, SmartHome, SaveBuddy, SIMPKK Digital, PRD Generator, dan Ekosistem LPKP Mentari.
-9. **Lingkungan & Reserved Ports:** Port **`53317`** (TailShare), Port **`3000`** (MT5 Web VNC GUI), Port **`8080`** (MT5 Web Dashboard). Port `3005` telah dilepas.
+1. **Dual-Engine AI Synergy:** Sistem menggabungkan `agent-brain` sebagai memori strategis jangka panjang lintas proyek (Single Source of Truth) dan `graphify` sebagai knowledge graph AST kode lokal per-repositori.
+2. **Multi-Pair Algorithmic Trading Bot & Web Dashboard (Docker):** Berjalan aktif melalui Docker (`exness-mt5` di Port `3000` dan `mt5-dashboard` di Port `8080`) dan systemd service (`mt5-trading-bot.service`). Storage virtual ext4 berada di `/media/cuker/Data/mt5-storage.img` yang melegakan ruang SSD sistem.
+3. **Universal Web Push Notification Hub (Cloudflare Workers 24/7):** Dibangun sebagai hub notifikasi terpusat (`https://mt5-push-backend.alwiihsan50.workers.dev`) menggunakan Cloudflare KV (`SUBSCRIPTIONS`) dan `@block65/webcrypto-web-push`. Siap dipanggil oleh aplikasi mana pun cukup via 1 panggilan HTTP POST (`/trigger-notification`).
+4. **Web Dokumentasi Lokal:** Dokumentasi interaktif disimpan di `/home/cuker/bot_web_docs/index.html`.
+5. **Web Push Notification Safari iOS (iPhone & Local Server):** Menggunakan Web Push API standar, Service Worker (`sw.js`), `manifest.json` PWA Standalone, VAPID Keys, dan backend Node.js (`web-push`). Repo lokal: `safari-push-test`, Cloudflare Pages: `https://safari-push-test.pages.dev`.
+6. **TailShare Universal Suite (Windows & Linux Native GUI):** Terkoneksi langsung ke folder **Drive D `D:\tailshare`** (`/media/cuker/Data/tailshare`). Mendukung GUI Native Electron (`bin/tailshare` dengan CommonJS preload & X11 sandbox flags), auto-attach ke daemon background systemd tanpa konflik port `53317`, live folder watcher, dan web UI. Repo: `https://github.com/alwiihsan50-lgtm/tailshare`.
+7. **Pembaruan TailShare di Windows:** Repositori GitHub `alwiihsan50-lgtm/tailshare` telah dikloning dan diinstal di `C:\Users\alwii\Desktop\tailshare`. Port default telah dialihkan ke **53317**, script auto-start Startup Windows terpasang, file sharing terintegrasi ke `D:\tailshare`, dan shortcut Desktop diperbarui.
+8. **Arsip-IMO Project:** Berada di branch `Beta2-redesign` (`D:\Documents\GitHub\Arsip-IMO`). Aplikasi karyawan React 19 + Supabase + Zustand. Layout kontrol kalender menggunakan grid 2x2 dengan font `12px`.
+9. **Katalog Proyek Drive D (`D:\Projects`):** Terdiri dari 18 repositori Git aktif termasuk ekosistem IMO, SmartHome, SaveBuddy, SIMPKK Digital, PRD Generator, dan Ekosistem LPKP Mentari.
+10. **Lingkungan & Reserved Ports:** Port **`53317`** (TailShare), Port **`3000`** (MT5 Web VNC GUI), Port **`8080`** (MT5 Web Dashboard). Port `3005` telah dilepas.
 
 ---
 
 ## 📚 Indeks Dokumentasi (`docs/`)
+- 📄 [Panduan Sinergi agent-brain & graphify](docs/agent-brain-and-graphify-synergy-guide.md) - Protokol kolaborasi memori makro lintas proyek dan knowledge graph kode mikro.
 - 📄 [Panduan Universal Web Push Notification Service](docs/universal-web-push-notification-service.md) - Dokumentasi hub notifikasi terpusat, endpoint REST API, dan template kode integrasi untuk aplikasi lain (Python, JS, PHP, Go, cURL).
 - 📄 [Panduan Automasi Trading MT5 & Cloudflare Workers Push](docs/mt5-docker-forex-trading-automation.md) - Arsitektur Docker MT5, Wine Python MetaTrader5, Cloudflare Workers push backend, Cloudflare KV, dan integrasi bot.
 - 📄 [Panduan Web Push Notification Safari iOS](docs/safari-ios-web-push-notification.md) - Arsitektur, syarat Apple Safari iOS PWA, spesifikasi Service Worker, VAPID keys, dan backend Node.js.
 - 📄 [Panduan Instalasi TailShare di Linux Mint](docs/tailshare-linux-mint-installation.md) - Langkah-langkah instalasi Node.js, Tailscale, setup systemd auto-start, dan shortcut desktop di Linux Mint.
 - 📄 [Katalog Proyek Drive D](docs/drive-d-projects-catalog.md) - Pemetaan lengkap 18 repositori Git, remote URL, branch aktif, dan direktori di Drive `D:\`.
 - 📄 [Arsip-IMO Project Specification & Memory](docs/arsip-imo-project.md) - Dokumentasi lengkap proyek Arsip-IMO, batasan, arsitektur, navigasi, dan workflow delivery.
-- 📄 [System Environment & Reserved Ports](docs/system-environment-and-ports.md) - Informasi spesifikasi sistem Windows/Linux, konfigurasi GitHub CLI, dan aturan Port terpesan (53317, 3000).
+- 📄 [System Environment & Reserved Ports](docs/system-environment-and-ports.md) - Informasi spesifikasi sistem Windows/Linux, konfigurasi GitHub CLI, dan aturan Port terpesan (53317, 3000, 8080).
+
 

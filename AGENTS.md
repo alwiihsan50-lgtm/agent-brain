@@ -12,9 +12,14 @@ File ini adalah aturan wajib bagi SELURUH AI Agent yang mengakses repositori ini
   - [`docs/safari-ios-web-push-notification.md`](docs/safari-ios-web-push-notification.md) untuk panduan & spesifikasi implementasi Web Push Notification (Safari iOS & Browser).
   - [`docs/mt5-docker-forex-trading-automation.md`](docs/mt5-docker-forex-trading-automation.md) untuk arsitektur, setup Docker MT5 Exness, Wine Python, dan integrasi push notification bot.
   - [`docs/universal-web-push-notification-service.md`](docs/universal-web-push-notification-service.md) untuk panduan integrasi notifikasi push ke aplikasi & bot lain (Python, Node.js, PHP, Go, cURL).
+  - [`docs/agent-brain-and-graphify-synergy-guide.md`](docs/agent-brain-and-graphify-synergy-guide.md) untuk panduan sinergi antara **agent-brain** (memori global) dan **graphify** (knowledge graph kode).
 - Jangan mengulang pekerjaan yang sudah dicentang selesai di `README.md`.
 
-### 2. PHASE WRITE (HANDOFF / COMPLETION)
+### 2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)
+- Saat menginvestigasi repositori kode yang memiliki `graphify-out/`, gunakan perintah `graphify query "<tanya>"`, `graphify explain "<konsep>"`, atau `graphify path` untuk menavigasi struktur kode secara hemat token.
+- Setelah mengedit kode di repositori lokal, jalankan `graphify update .` untuk menyinkronkan knowledge graph.
+
+### 3. PHASE WRITE (HANDOFF / COMPLETION)
 - Setelah selesai mengerjakan tugas, WAJIB memperbarui `README.md`:
   * Centang checklist tugas yang selesai (`[x]`).
   * Tambahkan tugas baru di daftar jika ada.
