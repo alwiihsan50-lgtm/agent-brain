@@ -1,0 +1,80 @@
+{
+  ".github/workflows/graphify.yml": {
+    "mtime": 1786660381.2081208,
+    "seen": 1786713287.1965375,
+    "ast_hash": "47456252bd1f187c10e189c6801bb602",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1786668944.0728176,
+    "seen": 1786713287.1965396,
+    "ast_hash": "a38134c8df4ca24c1767c41501015abe",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1786713087.8542862,
+    "seen": 1786713287.1965404,
+    "ast_hash": "a13c936e54162c6fbee78d0ac7517d69",
+    "semantic_hash": ""
+  },
+  "docs/README.md": {
+    "mtime": 1786645741.060382,
+    "seen": 1786713287.196541,
+    "ast_hash": "3489b6fc76517078e2e4c812b4787a26",
+    "semantic_hash": ""
+  },
+  "docs/agent-brain-and-graphify-synergy-guide.md": {
+    "mtime": 1786668944.0736125,
+    "seen": 1786713287.196542,
+    "ast_hash": "ff738f1c58cb92040e649425a2b03886",
+    "semantic_hash": ""
+  },
+  "docs/arsip-imo-project.md": {
+    "mtime": 1786645741.061149,
+    "seen": 1786713287.1965425,
+    "ast_hash": "118a69817f7b44b66b2e665251c110ff",
+    "semantic_hash": ""
+  },
+  "docs/drive-d-projects-catalog.md": {
+    "mtime": 1786645741.061149,
+    "seen": 1786713287.1965432,
+    "ast_hash": "3ac74a409eb670f29b95316962c30a9d",
+    "semantic_hash": ""
+  },
+  "docs/linux-mint-developer-workflow-customizations.md": {
+    "mtime": 1786713087.8542862,
+    "seen": 1786713287.196549,
+    "ast_hash": "dc7735b281627cda599ce7e4924e9fbb",
+    "semantic_hash": ""
+  },
+  "docs/mt5-docker-forex-trading-automation.md": {
+    "mtime": 1786705120.204857,
+    "seen": 1786713287.1965506,
+    "ast_hash": "c4483a70857beed6f27c6c817c5e708c",
+    "semantic_hash": ""
+  },
+  "docs/safari-ios-web-push-notification.md": {
+    "mtime": 1786654608.5585558,
+    "seen": 1786713287.1965513,
+    "ast_hash": "d991087fd02bea2d1f0c6f9c92051026",
+    "semantic_hash": ""
+  },
+  "docs/system-environment-and-ports.md": {
+    "mtime": 1786667804.613223,
+    "seen": 1786713287.196552,
+    "ast_hash": "e1083c0377edc4af5abce03e3e3d835b",
+    "semantic_hash": ""
+  },
+  "docs/tailshare-linux-mint-installation.md": {
+    "mtime": 1786645741.061149,
+    "seen": 1786713287.1965525,
+    "ast_hash": "8f324817d2404e634027f28b02529220",
+    "semantic_hash": ""
+  },
+  "docs/universal-web-push-notification-service.md": {
+    "mtime": 1786656311.901909,
+    "seen": 1786713287.1965532,
+    "ast_hash": "49ab848cdbd2c22e7745dc31690fb646",
+    "semantic_hash": ""
+  }
+}
