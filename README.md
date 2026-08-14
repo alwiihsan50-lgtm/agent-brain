@@ -25,6 +25,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] Implementasi dan deployment live **Automasi Trading MetaTrader 5 (Docker + Exness + Wine Python)** yang terhubung langsung ke **Serverless Cloudflare Workers Web Push Notification** (`https://mt5-push-backend.alwiihsan50.workers.dev`) dengan Cloudflare KV dan Web Crypto API di `docs/mt5-docker-forex-trading-automation.md`.
 - [x] Implementasi dan aktivasi strategi trading otomatis **Multi-Pair Scanner (6 Pairs: EURUSDm, GBPUSDm, USDJPYm, AUDUSDm, USDCADm, XAUUSDm)** dengan **EMA Crossover (9/21) + RSI (14)**, proteksi SL/TP per pair, dan Push Notification real-time ke iPhone di `mt5_config/bot.py`.
 - [x] Pembuatan dan containerisasi **MT5 Live Trading Web Dashboard (Docker container `mt5-dashboard` di Port `8080`)** untuk monitoring real-time balance, equity, floating P/L, scanner pair, open trades, dan log aktivitas via browser.
+- [x] Optimasi **Zero-Flicker in-place DOM sync**, antarmuka **Mobile-Friendly iOS Segmented Tab**, integrasi **Riwayat Transaksi Selesai (Closed Deals History & Win Rate Metrik)**, serta dukungan **PWA Standalone Safari iOS (iPhone)** dengan Service Worker, safe-area insets, dan web manifest di `mt5-dashboard`.
 - [x] Standardisasi protokol **Dual-Engine Synergy (`agent-brain` + `graphify`)** untuk seluruh AI Agent di `.agents/rules/agent-brain-and-graphify-synergy.md` dan `docs/agent-brain-and-graphify-synergy-guide.md`.
 
 ---
