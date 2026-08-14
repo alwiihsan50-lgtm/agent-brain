@@ -48,14 +48,16 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 
 ## 📦 2. Komponen & Detail Konfigurasi
 
-### A. Container Docker MT5 (`docker-compose.yml`)
-- **Lokasi Compose:** `/home/cuker/docker-compose.yml`
-- **Container Name:** `exness-mt5`
-- **Image:** `mt5:latest` (berbasis `gmag11/MetaTrader5-Docker` dengan KasmVNC)
-- **Port:** `3000` (Web VNC HTTP), `3001` (HTTPS)
-- **Volume:** `/home/cuker/mt5_config` -> `/config`
+### A. Container Docker MT5 & Dashboard (`docker-compose.yml`)
+- **Lokasi Fisik (Drive D):** `/media/cuker/Data/mt5-storage.img` (Format ext4 30GB sparse image loop-mounted ke `/home/cuker/mt5_storage`)
+- **Lokasi Compose:** `/home/cuker/mt5_storage/docker-compose.yml`
+- **Containers:**
+  - `exness-mt5` (Image: `mt5:latest` KasmVNC Port `3000` / `3001`)
+  - `mt5-dashboard` (Python HTTP Realtime Web Dashboard Port `8080`)
+- **Volume:** `/home/cuker/mt5_storage/mt5_config` -> `/config`
 - **Environment:** `PUID=1000`, `PGID=1000`, `TZ=Asia/Jakarta`
-- **Web UI GUI:** `http://localhost:3000`
+- **Web UI GUI MT5:** `http://localhost:3000`
+- **Web Dashboard Bot:** `http://localhost:8080`
 
 ### B. Lingkungan Python di dalam Wine
 - **Path Python:** `C:\Program Files (x86)\Python39-32\python.exe` (Wine environment)
