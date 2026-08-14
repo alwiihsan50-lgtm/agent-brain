@@ -8,7 +8,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Project Scope:** Multi-project Context & Shared Memory (`Arsip-IMO`, `SmartHome`, `SaveBuddy`, `SIMPKK-DIGITAL`, `Mentari Ecosystem`, `TailShare`, `Web Push Safari iOS`, `MT5 Docker Bot`, `agent-brain`)
 - **Status:** Active / Production Ready
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-14 19:45 WIB
+- **Last Updated At:** 2026-08-14 20:12 WIB
 
 ---
 
@@ -28,6 +28,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] Optimasi **Zero-Flicker in-place DOM sync**, antarmuka **Mobile-Friendly iOS Segmented Tab**, integrasi **Riwayat Transaksi Selesai (Closed Deals History & Win Rate Metrik)**, serta dukungan **PWA Standalone Safari iOS (iPhone)** dengan Service Worker, safe-area insets, dan web manifest di `mt5-dashboard`.
 - [x] Standardisasi protokol **Dual-Engine Synergy (`agent-brain` + `graphify`)** untuk seluruh AI Agent di `.agents/rules/agent-brain-and-graphify-synergy.md` dan `docs/agent-brain-and-graphify-synergy-guide.md`.
 - [x] Implementasi **Dynamic Flexible Pips Risk Engine berdasarkan Nilai Rupiah (Max Loss SL: Rp 25.000 / Target Win TP: Rp 50.000, 1:2 RRR)** yang secara dinamis menghitung jarak pip sesuai karakteristik setiap pair dan ukuran volume lot.
+- [x] Setup & Tuning Lingkungan **Linux Mint Developer Workflow Suite** (Starship prompt, Zoxide smart jumping, FZF fuzzy search, LazyDocker TUI, Btop system monitor, Bat, Eza, smart aliases di `~/.bash_aliases`, Desktop guide, dan symlinks Drive D) di `docs/linux-mint-developer-workflow-customizations.md`.
 
 ---
 
@@ -35,7 +36,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 1. **Dual-Engine AI Synergy:** Sistem menggabungkan `agent-brain` sebagai memori strategis jangka panjang lintas proyek (Single Source of Truth) dan `graphify` sebagai knowledge graph AST kode lokal per-repositori.
 2. **Multi-Pair Algorithmic Trading Bot & Web Dashboard (Docker):** Berjalan aktif melalui Docker (`exness-mt5` di Port `3000` dan `mt5-dashboard` di Port `8080`) dan systemd service (`mt5-trading-bot.service`). Storage virtual ext4 berada di `/media/cuker/Data/mt5-storage.img` yang melegakan ruang SSD sistem.
 3. **Universal Web Push Notification Hub (Cloudflare Workers 24/7):** Dibangun sebagai hub notifikasi terpusat (`https://mt5-push-backend.alwiihsan50.workers.dev`) menggunakan Cloudflare KV (`SUBSCRIPTIONS`) dan `@block65/webcrypto-web-push`. Siap dipanggil oleh aplikasi mana pun cukup via 1 panggilan HTTP POST (`/trigger-notification`).
-4. **Web Dokumentasi Lokal:** Dokumentasi interaktif disimpan di `/home/cuker/bot_web_docs/index.html`.
+4. **Linux Mint Developer Workflow Customization:** Sistem terminal dan shell Linux Mint 22.3 telah dioptimasi dengan Starship prompt, Zoxide smart directory jumping, FZF fuzzy finder history (`Ctrl+R`) & file (`Ctrl+T`), LazyDocker (`ld`), Btop system monitor (`top`), Bat syntax highlighter, Eza modern tree/icons, smart aliases harian (Docker, systemd bot, port checking), symlinks Drive D (`~/Data`, `~/Projects`), dan file instruksi di Desktop.
 5. **Web Push Notification Safari iOS (iPhone & Local Server):** Menggunakan Web Push API standar, Service Worker (`sw.js`), `manifest.json` PWA Standalone, VAPID Keys, dan backend Node.js (`web-push`). Repo lokal: `safari-push-test`, Cloudflare Pages: `https://safari-push-test.pages.dev`.
 6. **TailShare Universal Suite (Windows & Linux Native GUI):** Terkoneksi langsung ke folder **Drive D `D:\tailshare`** (`/media/cuker/Data/tailshare`). Mendukung GUI Native Electron (`bin/tailshare` dengan CommonJS preload & X11 sandbox flags), auto-attach ke daemon background systemd tanpa konflik port `53317`, live folder watcher, dan web UI. Repo: `https://github.com/alwiihsan50-lgtm/tailshare`.
 7. **Pembaruan TailShare di Windows:** Repositori GitHub `alwiihsan50-lgtm/tailshare` telah dikloning dan diinstal di `C:\Users\alwii\Desktop\tailshare`. Port default telah dialihkan ke **53317**, script auto-start Startup Windows terpasang, file sharing terintegrasi ke `D:\tailshare`, dan shortcut Desktop diperbarui.
@@ -46,6 +47,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 ## 📚 Indeks Dokumentasi (`docs/`)
+- 📄 [Panduan Kustomisasi Workflow & Aliases Linux Mint](docs/linux-mint-developer-workflow-customizations.md) - Panduan alat produktivitas, aliases, shortcuts, dan konfigurasi terminal Linux Mint.
 - 📄 [Panduan Sinergi agent-brain & graphify](docs/agent-brain-and-graphify-synergy-guide.md) - Protokol kolaborasi memori makro lintas proyek dan knowledge graph kode mikro.
 - 📄 [Panduan Universal Web Push Notification Service](docs/universal-web-push-notification-service.md) - Dokumentasi hub notifikasi terpusat, endpoint REST API, dan template kode integrasi untuk aplikasi lain (Python, JS, PHP, Go, cURL).
 - 📄 [Panduan Automasi Trading MT5 & Cloudflare Workers Push](docs/mt5-docker-forex-trading-automation.md) - Arsitektur Docker MT5, Wine Python MetaTrader5, Cloudflare Workers push backend, Cloudflare KV, dan integrasi bot.
@@ -54,5 +56,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - 📄 [Katalog Proyek Drive D](docs/drive-d-projects-catalog.md) - Pemetaan lengkap 18 repositori Git, remote URL, branch aktif, dan direktori di Drive `D:\`.
 - 📄 [Arsip-IMO Project Specification & Memory](docs/arsip-imo-project.md) - Dokumentasi lengkap proyek Arsip-IMO, batasan, arsitektur, navigasi, dan workflow delivery.
 - 📄 [System Environment & Reserved Ports](docs/system-environment-and-ports.md) - Informasi spesifikasi sistem Windows/Linux, konfigurasi GitHub CLI, dan aturan Port terpesan (53317, 3000, 8080).
+
 
 
