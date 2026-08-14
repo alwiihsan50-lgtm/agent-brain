@@ -72,6 +72,7 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 - Inisialisasi koneksi IPC ke terminal MT5 (`mt5.initialize()`).
 - Mengambil info akun (Login ID, Saldo, Currency, Equity, Free Margin).
 - Berlangganan ke symbol Market Watch (contoh: `EURUSDm` di akun Exness).
+- Mengambil riwayat closed deal / transaksi selesai (`mt5.history_deals_get()`) untuk kalkulasi metrik win rate, total realized profit/loss, dan data tabel riwayat transaksi.
 - Fungsi `send_push_notification(title, message)` yang mem-POST payload JSON ke endpoint Cloudflare Workers:
   `https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification`
 
