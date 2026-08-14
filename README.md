@@ -8,7 +8,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Project Scope:** Multi-project Context & Shared Memory (`Arsip-IMO`, `SmartHome`, `SaveBuddy`, `SIMPKK-DIGITAL`, `Mentari Ecosystem`, `TailShare`, `Web Push Safari iOS`, `MT5 Docker Bot`, `agent-brain`)
 - **Status:** Active / Production Ready
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-14 04:26 WIB
+- **Last Updated At:** 2026-08-14 19:45 WIB
 
 ---
 
@@ -27,6 +27,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] Pembuatan dan containerisasi **MT5 Live Trading Web Dashboard (Docker container `mt5-dashboard` di Port `8080`)** untuk monitoring real-time balance, equity, floating P/L, scanner pair, open trades, dan log aktivitas via browser.
 - [x] Optimasi **Zero-Flicker in-place DOM sync**, antarmuka **Mobile-Friendly iOS Segmented Tab**, integrasi **Riwayat Transaksi Selesai (Closed Deals History & Win Rate Metrik)**, serta dukungan **PWA Standalone Safari iOS (iPhone)** dengan Service Worker, safe-area insets, dan web manifest di `mt5-dashboard`.
 - [x] Standardisasi protokol **Dual-Engine Synergy (`agent-brain` + `graphify`)** untuk seluruh AI Agent di `.agents/rules/agent-brain-and-graphify-synergy.md` dan `docs/agent-brain-and-graphify-synergy-guide.md`.
+- [x] Implementasi **Dynamic Flexible Pips Risk Engine berdasarkan Nilai Rupiah (Max Loss SL: Rp 25.000 / Target Win TP: Rp 50.000, 1:2 RRR)** yang secara dinamis menghitung jarak pip sesuai karakteristik setiap pair dan ukuran volume lot.
 
 ---
 
