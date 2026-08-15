@@ -2,27 +2,37 @@
 
 File ini adalah aturan wajib bagi SELURUH AI Agent yang mengakses repositori ini.
 
+---
+
 ### 1. PHASE READ (BOOTING)
-- Sebelum memulai pekerjaan apa pun, WAJIB membaca `README.md` untuk memahami konteks, riwayat pekerjaan, dan status proyek terkini.
-- Bacalah indeks dokumentasi di `docs/`:
+- Sebelum memulai pekerjaan apa pun, WAJIB membaca [`README.md`](README.md) untuk memahami konteks, riwayat pekerjaan, dan status proyek terkini.
+- Bacalah indeks dokumentasi di [`docs/`](docs/):
+  - [`docs/system-environment-and-ports.md`](docs/system-environment-and-ports.md) untuk batasan port dan lingkungan sistem.
+  - [`docs/agent-brain-and-graphify-synergy-guide.md`](docs/agent-brain-and-graphify-synergy-guide.md) untuk panduan sinergi antara **agent-brain** (memori global) dan **graphify** (knowledge graph kode).
+  - [`docs/universal-web-push-notification-service.md`](docs/universal-web-push-notification-service.md) untuk panduan integrasi notifikasi push ke aplikasi & bot lain.
+  - [`docs/mt5-docker-forex-trading-automation.md`](docs/mt5-docker-forex-trading-automation.md) untuk arsitektur, setup Docker MT5 Exness, Wine Python, dan risk engine.
+  - [`docs/safari-ios-web-push-notification.md`](docs/safari-ios-web-push-notification.md) untuk panduan implementasi Web Push Notification Safari iOS & PWA.
   - [`docs/tailshare-linux-mint-installation.md`](docs/tailshare-linux-mint-installation.md) untuk instruksi setup TailShare di Linux Mint.
   - [`docs/drive-d-projects-catalog.md`](docs/drive-d-projects-catalog.md) untuk melihat daftar seluruh repositori dan proyek di Drive `D:\`.
   - [`docs/arsip-imo-project.md`](docs/arsip-imo-project.md) untuk proyek **Arsip-IMO**.
-  - [`docs/system-environment-and-ports.md`](docs/system-environment-and-ports.md) untuk batasan port dan lingkungan sistem.
-  - [`docs/safari-ios-web-push-notification.md`](docs/safari-ios-web-push-notification.md) untuk panduan & spesifikasi implementasi Web Push Notification (Safari iOS & Browser).
-  - [`docs/mt5-docker-forex-trading-automation.md`](docs/mt5-docker-forex-trading-automation.md) untuk arsitektur, setup Docker MT5 Exness, Wine Python, dan integrasi push notification bot.
-  - [`docs/universal-web-push-notification-service.md`](docs/universal-web-push-notification-service.md) untuk panduan integrasi notifikasi push ke aplikasi & bot lain (Python, Node.js, PHP, Go, cURL).
-  - [`docs/agent-brain-and-graphify-synergy-guide.md`](docs/agent-brain-and-graphify-synergy-guide.md) untuk panduan sinergi antara **agent-brain** (memori global) dan **graphify** (knowledge graph kode).
-- Jangan mengulang pekerjaan yang sudah dicentang selesai di `README.md`.
+  - [`docs/linux-mint-developer-workflow-customizations.md`](docs/linux-mint-developer-workflow-customizations.md) untuk konfigurasi terminal dan produktivitas Linux Mint.
+  - [`docs/git-post-commit-graphify-hook.md`](docs/git-post-commit-graphify-hook.md) untuk panduan auto-sync graphify via Git Hook.
+- Jangan mengulang pekerjaan yang sudah dicentang selesai di `README.md` atau diarsipkan di [`docs/history/`](docs/history/).
+
+---
 
 ### 2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)
-- Saat menginvestigasi repositori kode yang memiliki `graphify-out/`, gunakan perintah `graphify query "<tanya>"`, `graphify explain "<konsep>"`, atau `graphify path` untuk menavigasi struktur kode secara hemat token.
+- **Auto-Init Fallback:** Jika repositori belum memiliki `graphify-out/graph.json`, jalankan `graphify .` (atau `/graphify .`) satu kali untuk membangun graf AST lokal secara gratis (0 API cost).
+- Gunakan perintah `graphify query "<tanya>"`, `graphify explain "<konsep>"`, atau `graphify path` untuk menavigasi struktur kode secara hemat token. Hindari membaca ribuan baris kode mentah sekaligus.
 - Setelah mengedit kode di repositori lokal, jalankan `graphify update .` untuk menyinkronkan knowledge graph.
 
+---
+
 ### 3. PHASE WRITE (HANDOFF / COMPLETION)
-- Setelah selesai mengerjakan tugas, WAJIB memperbarui `README.md`:
+- Setelah selesai mengerjakan tugas, WAJIB memperbarui [`README.md`](README.md):
   * Centang checklist tugas yang selesai (`[x]`).
   * Tambahkan tugas baru di daftar jika ada.
   * Update kolom `Last Updated By` (nama/platform kamu) dan `Last Updated At` (tanggal & waktu UTC/WIB saat ini).
-  * Tuliskan ringkasan singkat perubahan/konteks terbaru di bagian "Ringkasan Konteks".
+  * Jaga [`README.md`](README.md) tetap ringkas (<100 baris) demi efisiensi token. Pindahkan milestone yang telah selesai ke [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md).
 - Jika membuat dokumentasi teknis, kode, atau skema baru, simpan file-nya di dalam direktori `docs/` (contoh: `docs/api-spec.md`) lalu tautkan/link file tersebut di `README.md`.
+- Lakukan `git add`, `git commit -m "..."`, dan `git push` ke repositori `alwiihsan50-lgtm/agent-brain`.

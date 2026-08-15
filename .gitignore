@@ -1,0 +1,7 @@
+# Graphify Local Artifacts
+graphify-out/
+.graphify_*
+
+# OS Metadata
+.DS_Store
+Thumbs.db

@@ -9,10 +9,11 @@ Dokumentasi standarisasi lingkungan terminal, alat produktivitas, dan konfiguras
 - **Starship Prompt (`/usr/local/bin/starship`):** Prompt modern dengan git branch status, runtime version (Node.js, Python), docker context, dan eksekusi durasi. Konfigurasi di `~/.config/starship.toml`.
 - **Zoxide (`/usr/bin/zoxide`):** Smart directory jumping (`z <query>`) yang terintegrasi di `~/.bashrc`.
 - **FZF (`/usr/bin/fzf`):** Fuzzy finder interaktif untuk pencarian history (`Ctrl+R`) dan file navigation (`Ctrl+T`).
-- **LazyDocker (`/usr/local/bin/lazydocker`):** Visual TUI manager untuk container Docker.
-- **Btop (`/usr/bin/btop`):** TUI system & resource monitor untuk CPU, RAM, Disk, dan Network.
-- **Eza (`/usr/bin/eza`):** Pengganti modern `ls` dengan ikon dan git integration.
+- **LazyDocker (`/usr/local/bin/lazydocker`):** Visual TUI manager untuk container Docker (`ld`).
+- **Btop (`/usr/bin/btop`):** TUI system & resource monitor untuk CPU, RAM, Disk, dan Network (`top`).
+- **Eza (`/usr/bin/eza`):** Pengganti modern `ls` dengan ikon dan git integration (`ls`, `ll`, `lt`, `tree`).
 - **Bat (`/usr/bin/batcat` -> `~/.local/bin/bat`):** Pengganti `cat` dengan syntax highlighting.
+- **Graphify CLI (`~/.local/bin/graphify`):** Knowledge graph & AST engine (`gf`, `gfu`, `gfq`, `gfp`, `gfe`, `gf-status`, `gf-viz`).
 
 ---
 
@@ -66,6 +67,20 @@ alias gp='git push'
 alias gpl='git pull'
 alias gd='git diff'
 alias gl='git log --oneline --graph --decorate -n 15'
+
+# 🕸️ Graphify Helpers
+alias gf='graphify'
+alias gfu='graphify update .'
+alias gfq='graphify query'
+alias gfp='graphify path'
+alias gfe='graphify explain'
+gf-status()   # Cek status graphify-out di direktori saat ini
+gf-viz()      # Buka graphify-out/graph.html di browser
+
+# 🧠 Agent Brain Shortcuts
+alias brain='cd /home/cuker/agent-brain && git status -sb'
+brain-sync()  # git pull agent-brain dari GitHub
+brain-push()  # git add, commit, & push agent-brain ke GitHub
 
 # Sistem & Dual-boot
 alias win='~/reboot-to-windows.sh'
