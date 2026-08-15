@@ -9,10 +9,10 @@
       "source_file": "AGENTS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agents",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "agents.md"
+      "norm_label": "agents.md",
+      "id": "agents"
     },
     {
       "label": "agent-brain-and-graphify-synergy-guide.md",
@@ -20,10 +20,10 @@
       "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "agent-brain-and-graphify-synergy-guide.md"
+      "norm_label": "agent-brain-and-graphify-synergy-guide.md",
+      "id": "docs_agent_brain_and_graphify_synergy_guide"
     },
     {
       "label": "\ud83c\udfaf Mengapa Keduanya Diperlukan Bersama?",
@@ -31,10 +31,10 @@
       "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide_mengapa_keduanya_diperlukan_bersama",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "\ud83c\udfaf mengapa keduanya diperlukan bersama?"
+      "norm_label": "\ud83c\udfaf mengapa keduanya diperlukan bersama?",
+      "id": "docs_agent_brain_and_graphify_synergy_guide_mengapa_keduanya_diperlukan_bersama"
     },
     {
       "label": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
@@ -42,10 +42,10 @@
       "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "\ud83e\udde0\ud83d\udd78\ufe0f panduan sinergi: agent-brain & graphify"
+      "norm_label": "\ud83e\udde0\ud83d\udd78\ufe0f panduan sinergi: agent-brain & graphify",
+      "id": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify"
     },
     {
       "label": "\ud83d\udd04 Siklus Alur Kerja Sinergis (The Synergy Lifecycle)",
@@ -53,10 +53,10 @@
       "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide_siklus_alur_kerja_sinergis_the_synergy_lifecycle",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "\ud83d\udd04 siklus alur kerja sinergis (the synergy lifecycle)"
+      "norm_label": "\ud83d\udd04 siklus alur kerja sinergis (the synergy lifecycle)",
+      "id": "docs_agent_brain_and_graphify_synergy_guide_siklus_alur_kerja_sinergis_the_synergy_lifecycle"
     },
     {
       "label": "arsip-imo-project.md",
@@ -64,10 +64,10 @@
       "source_file": "docs/arsip-imo-project.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_arsip_imo_project",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "arsip-imo-project.md"
+      "norm_label": "arsip-imo-project.md",
+      "id": "docs_arsip_imo_project"
     },
     {
       "label": "drive-d-projects-catalog.md",
@@ -75,10 +75,10 @@
       "source_file": "docs/drive-d-projects-catalog.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_drive_d_projects_catalog",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "drive-d-projects-catalog.md"
+      "norm_label": "drive-d-projects-catalog.md",
+      "id": "docs_drive_d_projects_catalog"
     },
     {
       "label": "1. Repositori Utama & Proyek Aktif (Git Repositories)",
@@ -86,21 +86,21 @@
       "source_file": "docs/drive-d-projects-catalog.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "docs_drive_d_projects_catalog_1_repositori_utama_proyek_aktif_git_repositories",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "1. repositori utama & proyek aktif (git repositories)"
+      "norm_label": "1. repositori utama & proyek aktif (git repositories)",
+      "id": "docs_drive_d_projects_catalog_1_repositori_utama_proyek_aktif_git_repositories"
     },
     {
       "label": "2. Direktori Proyek & Aplikasi Non-Git / Infrastruktur Drive D:",
       "file_type": "document",
       "source_file": "docs/drive-d-projects-catalog.md",
-      "source_location": "L32",
+      "source_location": "L31",
       "_origin": "ast",
-      "id": "docs_drive_d_projects_catalog_2_direktori_proyek_aplikasi_non_git_infrastruktur_drive_d",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "2. direktori proyek & aplikasi non-git / infrastruktur drive d:"
+      "norm_label": "2. direktori proyek & aplikasi non-git / infrastruktur drive d:",
+      "id": "docs_drive_d_projects_catalog_2_direktori_proyek_aplikasi_non_git_infrastruktur_drive_d"
     },
     {
       "label": "Katalog Proyek & Repositori Drive D:",
@@ -108,10 +108,10 @@
       "source_file": "docs/drive-d-projects-catalog.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_drive_d_projects_catalog_katalog_proyek_repositori_drive_d",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "katalog proyek & repositori drive d:"
+      "norm_label": "katalog proyek & repositori drive d:",
+      "id": "docs_drive_d_projects_catalog_katalog_proyek_repositori_drive_d"
     },
     {
       "label": "system-environment-and-ports.md",
@@ -119,10 +119,10 @@
       "source_file": "docs/system-environment-and-ports.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_system_environment_and_ports",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "system-environment-and-ports.md"
+      "norm_label": "system-environment-and-ports.md",
+      "id": "docs_system_environment_and_ports"
     },
     {
       "label": "1. Lingkungan Sistem (Environment)",
@@ -130,10 +130,10 @@
       "source_file": "docs/system-environment-and-ports.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "docs_system_environment_and_ports_1_lingkungan_sistem_environment",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "1. lingkungan sistem (environment)"
+      "norm_label": "1. lingkungan sistem (environment)",
+      "id": "docs_system_environment_and_ports_1_lingkungan_sistem_environment"
     },
     {
       "label": "2. Port Sistem Terpesan (Reserved Ports)",
@@ -141,10 +141,10 @@
       "source_file": "docs/system-environment-and-ports.md",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "docs_system_environment_and_ports_2_port_sistem_terpesan_reserved_ports",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "2. port sistem terpesan (reserved ports)"
+      "norm_label": "2. port sistem terpesan (reserved ports)",
+      "id": "docs_system_environment_and_ports_2_port_sistem_terpesan_reserved_ports"
     },
     {
       "label": "3. Repositori & Proyek Utama dalam Sistem",
@@ -152,10 +152,10 @@
       "source_file": "docs/system-environment-and-ports.md",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "docs_system_environment_and_ports_3_repositori_proyek_utama_dalam_sistem",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "3. repositori & proyek utama dalam sistem"
+      "norm_label": "3. repositori & proyek utama dalam sistem",
+      "id": "docs_system_environment_and_ports_3_repositori_proyek_utama_dalam_sistem"
     },
     {
       "label": "Spesifikasi Lingkungan Sistem & Port Terpesan",
@@ -163,10 +163,10 @@
       "source_file": "docs/system-environment-and-ports.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "spesifikasi lingkungan sistem & port terpesan"
+      "norm_label": "spesifikasi lingkungan sistem & port terpesan",
+      "id": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan"
     },
     {
       "label": "tailshare-linux-mint-installation.md",
@@ -174,10 +174,10 @@
       "source_file": "docs/tailshare-linux-mint-installation.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_tailshare_linux_mint_installation",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "tailshare-linux-mint-installation.md"
+      "norm_label": "tailshare-linux-mint-installation.md",
+      "id": "docs_tailshare_linux_mint_installation"
     },
     {
       "label": "README.md",
@@ -185,10 +185,10 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "readme"
     },
     {
       "label": "mt5-docker-forex-trading-automation.md",
@@ -196,10 +196,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "mt5-docker-forex-trading-automation.md"
+      "norm_label": "mt5-docker-forex-trading-automation.md",
+      "id": "docs_mt5_docker_forex_trading_automation"
     },
     {
       "label": "\ud83c\udfd7\ufe0f 1. Arsitektur Keseluruhan",
@@ -207,10 +207,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_1_arsitektur_keseluruhan",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "\ud83c\udfd7\ufe0f 1. arsitektur keseluruhan"
+      "norm_label": "\ud83c\udfd7\ufe0f 1. arsitektur keseluruhan",
+      "id": "docs_mt5_docker_forex_trading_automation_1_arsitektur_keseluruhan"
     },
     {
       "label": "1. Menjalankan Container MT5",
@@ -218,10 +218,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L95",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_1_menjalankan_container_mt5",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "1. menjalankan container mt5"
+      "norm_label": "1. menjalankan container mt5",
+      "id": "docs_mt5_docker_forex_trading_automation_1_menjalankan_container_mt5"
     },
     {
       "label": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
@@ -229,10 +229,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "\ud83d\udce6 2. komponen & detail konfigurasi"
+      "norm_label": "\ud83d\udce6 2. komponen & detail konfigurasi",
+      "id": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi"
     },
     {
       "label": "2. Mendaftarkan iPhone (PWA Push)",
@@ -240,10 +240,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L102",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_2_mendaftarkan_iphone_pwa_push",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "2. mendaftarkan iphone (pwa push)"
+      "norm_label": "2. mendaftarkan iphone (pwa push)",
+      "id": "docs_mt5_docker_forex_trading_automation_2_mendaftarkan_iphone_pwa_push"
     },
     {
       "label": "\u26a1 3. Cara Menjalankan & Menguji",
@@ -251,10 +251,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L93",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "\u26a1 3. cara menjalankan & menguji"
+      "norm_label": "\u26a1 3. cara menjalankan & menguji",
+      "id": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji"
     },
     {
       "label": "3. Layanan Auto-Start 24/7 (Systemd Service)",
@@ -262,10 +262,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L107",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_3_layanan_auto_start_24_7_systemd_service",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "3. layanan auto-start 24/7 (systemd service)"
+      "norm_label": "3. layanan auto-start 24/7 (systemd service)",
+      "id": "docs_mt5_docker_forex_trading_automation_3_layanan_auto_start_24_7_systemd_service"
     },
     {
       "label": "4. Deploy / Update Worker (Bila ada perubahan)",
@@ -273,10 +273,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L120",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_4_deploy_update_worker_bila_ada_perubahan",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "4. deploy / update worker (bila ada perubahan)"
+      "norm_label": "4. deploy / update worker (bila ada perubahan)",
+      "id": "docs_mt5_docker_forex_trading_automation_4_deploy_update_worker_bila_ada_perubahan"
     },
     {
       "label": "A. Container Docker MT5 & Dashboard (`docker-compose.yml`)",
@@ -284,10 +284,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L51",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_a_container_docker_mt5_dashboard_docker_compose_yml",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "a. container docker mt5 & dashboard (`docker-compose.yml`)"
+      "norm_label": "a. container docker mt5 & dashboard (`docker-compose.yml`)",
+      "id": "docs_mt5_docker_forex_trading_automation_a_container_docker_mt5_dashboard_docker_compose_yml"
     },
     {
       "label": "B. Lingkungan Python di dalam Wine",
@@ -295,10 +295,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L62",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_b_lingkungan_python_di_dalam_wine",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "b. lingkungan python di dalam wine"
+      "norm_label": "b. lingkungan python di dalam wine",
+      "id": "docs_mt5_docker_forex_trading_automation_b_lingkungan_python_di_dalam_wine"
     },
     {
       "label": "C. Bot Python Logic (`mt5_config/bot.py`)",
@@ -306,10 +306,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L70",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_c_bot_python_logic_mt5_config_bot_py",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "c. bot python logic (`mt5_config/bot.py`)"
+      "norm_label": "c. bot python logic (`mt5_config/bot.py`)",
+      "id": "docs_mt5_docker_forex_trading_automation_c_bot_python_logic_mt5_config_bot_py"
     },
     {
       "label": "D. Cloudflare Worker Push Backend (`cf-push-backend`)",
@@ -317,10 +317,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L79",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_d_cloudflare_worker_push_backend_cf_push_backend",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "d. cloudflare worker push backend (`cf-push-backend`)"
+      "norm_label": "d. cloudflare worker push backend (`cf-push-backend`)",
+      "id": "docs_mt5_docker_forex_trading_automation_d_cloudflare_worker_push_backend_cf_push_backend"
     },
     {
       "label": "\ud83d\udca1 Keuntungan Menggunakan Cloudflare Workers",
@@ -328,10 +328,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L128",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_keuntungan_menggunakan_cloudflare_workers",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "\ud83d\udca1 keuntungan menggunakan cloudflare workers"
+      "norm_label": "\ud83d\udca1 keuntungan menggunakan cloudflare workers",
+      "id": "docs_mt5_docker_forex_trading_automation_keuntungan_menggunakan_cloudflare_workers"
     },
     {
       "label": "Setup & Arsitektur Automasi Trading MT5 (Docker + Exness + Cloudflare Workers Push Notification)",
@@ -339,10 +339,10 @@
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification",
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
-      "norm_label": "setup & arsitektur automasi trading mt5 (docker + exness + cloudflare workers push notification)"
+      "norm_label": "setup & arsitektur automasi trading mt5 (docker + exness + cloudflare workers push notification)",
+      "id": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification"
     },
     {
       "label": "universal-web-push-notification-service.md",
@@ -350,10 +350,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "universal-web-push-notification-service.md"
+      "norm_label": "universal-web-push-notification-service.md",
+      "id": "docs_universal_web_push_notification_service"
     },
     {
       "label": "\ud83c\udf10 1. Arsitektur Terpusat (Central Notification Hub)",
@@ -361,10 +361,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service_1_arsitektur_terpusat_central_notification_hub",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "\ud83c\udf10 1. arsitektur terpusat (central notification hub)"
+      "norm_label": "\ud83c\udf10 1. arsitektur terpusat (central notification hub)",
+      "id": "docs_universal_web_push_notification_service_1_arsitektur_terpusat_central_notification_hub"
     },
     {
       "label": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
@@ -372,10 +372,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "\ud83d\udcbb 2. snippet integrasi pengirim (trigger notification)"
+      "norm_label": "\ud83d\udcbb 2. snippet integrasi pengirim (trigger notification)",
+      "id": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification"
     },
     {
       "label": "\ud83d\udcf1 3. Mendaftarkan Perangkat Baru (Client PWA)",
@@ -383,10 +383,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L126",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service_3_mendaftarkan_perangkat_baru_client_pwa",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "\ud83d\udcf1 3. mendaftarkan perangkat baru (client pwa)"
+      "norm_label": "\ud83d\udcf1 3. mendaftarkan perangkat baru (client pwa)",
+      "id": "docs_universal_web_push_notification_service_3_mendaftarkan_perangkat_baru_client_pwa"
     },
     {
       "label": "\ud83d\udee1\ufe0f 4. Maintenance & Operasional",
@@ -394,10 +394,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L137",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service_4_maintenance_operasional",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "\ud83d\udee1\ufe0f 4. maintenance & operasional"
+      "norm_label": "\ud83d\udee1\ufe0f 4. maintenance & operasional",
+      "id": "docs_universal_web_push_notification_service_4_maintenance_operasional"
     },
     {
       "label": "A. Python (requests / urllib standar)",
@@ -405,10 +405,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L33",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service_a_python_requests_urllib_standar",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "a. python (requests / urllib standar)"
+      "norm_label": "a. python (requests / urllib standar)",
+      "id": "docs_universal_web_push_notification_service_a_python_requests_urllib_standar"
     },
     {
       "label": "B. JavaScript / TypeScript / Node.js",
@@ -416,10 +416,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L58",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service_b_javascript_typescript_node_js",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "b. javascript / typescript / node.js"
+      "norm_label": "b. javascript / typescript / node.js",
+      "id": "docs_universal_web_push_notification_service_b_javascript_typescript_node_js"
     },
     {
       "label": "C. PHP / Laravel",
@@ -427,10 +427,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L78",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service_c_php_laravel",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "c. php / laravel"
+      "norm_label": "c. php / laravel",
+      "id": "docs_universal_web_push_notification_service_c_php_laravel"
     },
     {
       "label": "D. Golang",
@@ -438,10 +438,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L94",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service_d_golang",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "d. golang"
+      "norm_label": "d. golang",
+      "id": "docs_universal_web_push_notification_service_d_golang"
     },
     {
       "label": "Detail Endpoint:",
@@ -449,10 +449,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service_detail_endpoint",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "detail endpoint:"
+      "norm_label": "detail endpoint:",
+      "id": "docs_universal_web_push_notification_service_detail_endpoint"
     },
     {
       "label": "E. Shell / Bash (cURL / Cron Job)",
@@ -460,10 +460,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L116",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service_e_shell_bash_curl_cron_job",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "e. shell / bash (curl / cron job)"
+      "norm_label": "e. shell / bash (curl / cron job)",
+      "id": "docs_universal_web_push_notification_service_e_shell_bash_curl_cron_job"
     },
     {
       "label": "Universal Web Push Notification Service (Cloudflare Workers 24/7)",
@@ -471,10 +471,10 @@
       "source_file": "docs/universal-web-push-notification-service.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7",
       "community": 2,
       "community_name": "\ud83d\udcbb 2. Snippet Integrasi Pengirim (Trigger Notification)",
-      "norm_label": "universal web push notification service (cloudflare workers 24/7)"
+      "norm_label": "universal web push notification service (cloudflare workers 24/7)",
+      "id": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7"
     },
     {
       "label": "safari-ios-web-push-notification.md",
@@ -482,10 +482,10 @@
       "source_file": "docs/safari-ios-web-push-notification.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_safari_ios_web_push_notification",
       "community": 3,
       "community_name": "Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)",
-      "norm_label": "safari-ios-web-push-notification.md"
+      "norm_label": "safari-ios-web-push-notification.md",
+      "id": "docs_safari_ios_web_push_notification"
     },
     {
       "label": "1. Persyaratan Khusus iOS Safari (Apple Web Push)",
@@ -493,10 +493,10 @@
       "source_file": "docs/safari-ios-web-push-notification.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "docs_safari_ios_web_push_notification_1_persyaratan_khusus_ios_safari_apple_web_push",
       "community": 3,
       "community_name": "Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)",
-      "norm_label": "1. persyaratan khusus ios safari (apple web push)"
+      "norm_label": "1. persyaratan khusus ios safari (apple web push)",
+      "id": "docs_safari_ios_web_push_notification_1_persyaratan_khusus_ios_safari_apple_web_push"
     },
     {
       "label": "2. Arsitektur Komponen",
@@ -504,10 +504,10 @@
       "source_file": "docs/safari-ios-web-push-notification.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "docs_safari_ios_web_push_notification_2_arsitektur_komponen",
       "community": 3,
       "community_name": "Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)",
-      "norm_label": "2. arsitektur komponen"
+      "norm_label": "2. arsitektur komponen",
+      "id": "docs_safari_ios_web_push_notification_2_arsitektur_komponen"
     },
     {
       "label": "3. Contoh Implementasi Kode",
@@ -515,10 +515,10 @@
       "source_file": "docs/safari-ios-web-push-notification.md",
       "source_location": "L47",
       "_origin": "ast",
-      "id": "docs_safari_ios_web_push_notification_3_contoh_implementasi_kode",
       "community": 3,
       "community_name": "Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)",
-      "norm_label": "3. contoh implementasi kode"
+      "norm_label": "3. contoh implementasi kode",
+      "id": "docs_safari_ios_web_push_notification_3_contoh_implementasi_kode"
     },
     {
       "label": "4. Lokasi Prototype & Pengujian",
@@ -526,10 +526,10 @@
       "source_file": "docs/safari-ios-web-push-notification.md",
       "source_location": "L130",
       "_origin": "ast",
-      "id": "docs_safari_ios_web_push_notification_4_lokasi_prototype_pengujian",
       "community": 3,
       "community_name": "Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)",
-      "norm_label": "4. lokasi prototype & pengujian"
+      "norm_label": "4. lokasi prototype & pengujian",
+      "id": "docs_safari_ios_web_push_notification_4_lokasi_prototype_pengujian"
     },
     {
       "label": "A. Client / Frontend (`public/`)",
@@ -537,10 +537,10 @@
       "source_file": "docs/safari-ios-web-push-notification.md",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "docs_safari_ios_web_push_notification_a_client_frontend_public",
       "community": 3,
       "community_name": "Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)",
-      "norm_label": "a. client / frontend (`public/`)"
+      "norm_label": "a. client / frontend (`public/`)",
+      "id": "docs_safari_ios_web_push_notification_a_client_frontend_public"
     },
     {
       "label": "B. Server / Backend (`server.js`)",
@@ -548,10 +548,10 @@
       "source_file": "docs/safari-ios-web-push-notification.md",
       "source_location": "L36",
       "_origin": "ast",
-      "id": "docs_safari_ios_web_push_notification_b_server_backend_server_js",
       "community": 3,
       "community_name": "Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)",
-      "norm_label": "b. server / backend (`server.js`)"
+      "norm_label": "b. server / backend (`server.js`)",
+      "id": "docs_safari_ios_web_push_notification_b_server_backend_server_js"
     },
     {
       "label": "`server.js` (Node.js Backend)",
@@ -559,10 +559,10 @@
       "source_file": "docs/safari-ios-web-push-notification.md",
       "source_location": "L83",
       "_origin": "ast",
-      "id": "docs_safari_ios_web_push_notification_server_js_node_js_backend",
       "community": 3,
       "community_name": "Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)",
-      "norm_label": "`server.js` (node.js backend)"
+      "norm_label": "`server.js` (node.js backend)",
+      "id": "docs_safari_ios_web_push_notification_server_js_node_js_backend"
     },
     {
       "label": "Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)",
@@ -570,10 +570,10 @@
       "source_file": "docs/safari-ios-web-push-notification.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser",
       "community": 3,
       "community_name": "Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)",
-      "norm_label": "spesifikasi & panduan implementasi web push notification (safari ios & browser)"
+      "norm_label": "spesifikasi & panduan implementasi web push notification (safari ios & browser)",
+      "id": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser"
     },
     {
       "label": "`sw.js`",
@@ -581,10 +581,10 @@
       "source_file": "docs/safari-ios-web-push-notification.md",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "docs_safari_ios_web_push_notification_sw_js",
       "community": 3,
       "community_name": "Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)",
-      "norm_label": "`sw.js`"
+      "norm_label": "`sw.js`",
+      "id": "docs_safari_ios_web_push_notification_sw_js"
     },
     {
       "label": "1. Metadata Repositori & Cabang",
@@ -592,87 +592,87 @@
       "source_file": "docs/arsip-imo-project.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "docs_arsip_imo_project_1_metadata_repositori_cabang",
       "community": 4,
       "community_name": "Dokumentasi Proyek: Arsip-IMO",
-      "norm_label": "1. metadata repositori & cabang"
+      "norm_label": "1. metadata repositori & cabang",
+      "id": "docs_arsip_imo_project_1_metadata_repositori_cabang"
     },
     {
       "label": "2. Tech Stack",
       "file_type": "document",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L9",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "docs_arsip_imo_project_2_tech_stack",
       "community": 4,
       "community_name": "Dokumentasi Proyek: Arsip-IMO",
-      "norm_label": "2. tech stack"
+      "norm_label": "2. tech stack",
+      "id": "docs_arsip_imo_project_2_tech_stack"
     },
     {
       "label": "3. Aturan & Batasan Permanen (Constraints)",
       "file_type": "document",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L15",
+      "source_location": "L16",
       "_origin": "ast",
-      "id": "docs_arsip_imo_project_3_aturan_batasan_permanen_constraints",
       "community": 4,
       "community_name": "Dokumentasi Proyek: Arsip-IMO",
-      "norm_label": "3. aturan & batasan permanen (constraints)"
+      "norm_label": "3. aturan & batasan permanen (constraints)",
+      "id": "docs_arsip_imo_project_3_aturan_batasan_permanen_constraints"
     },
     {
       "label": "4. Arsitektur Navigasi Aplikasi",
       "file_type": "document",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L22",
+      "source_location": "L23",
       "_origin": "ast",
-      "id": "docs_arsip_imo_project_4_arsitektur_navigasi_aplikasi",
       "community": 4,
       "community_name": "Dokumentasi Proyek: Arsip-IMO",
-      "norm_label": "4. arsitektur navigasi aplikasi"
+      "norm_label": "4. arsitektur navigasi aplikasi",
+      "id": "docs_arsip_imo_project_4_arsitektur_navigasi_aplikasi"
     },
     {
       "label": "5. Tata Letak Grid Kontrol Kalender (2x2 Grid)",
       "file_type": "document",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
-      "id": "docs_arsip_imo_project_5_tata_letak_grid_kontrol_kalender_2x2_grid",
       "community": 4,
       "community_name": "Dokumentasi Proyek: Arsip-IMO",
-      "norm_label": "5. tata letak grid kontrol kalender (2x2 grid)"
+      "norm_label": "5. tata letak grid kontrol kalender (2x2 grid)",
+      "id": "docs_arsip_imo_project_5_tata_letak_grid_kontrol_kalender_2x2_grid"
     },
     {
       "label": "6. Verifikasi & Prosedur Pengujian",
       "file_type": "document",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L42",
+      "source_location": "L43",
       "_origin": "ast",
-      "id": "docs_arsip_imo_project_6_verifikasi_prosedur_pengujian",
       "community": 4,
       "community_name": "Dokumentasi Proyek: Arsip-IMO",
-      "norm_label": "6. verifikasi & prosedur pengujian"
+      "norm_label": "6. verifikasi & prosedur pengujian",
+      "id": "docs_arsip_imo_project_6_verifikasi_prosedur_pengujian"
     },
     {
       "label": "7. Workflow Pengiriman (Delivery)",
       "file_type": "document",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L48",
+      "source_location": "L49",
       "_origin": "ast",
-      "id": "docs_arsip_imo_project_7_workflow_pengiriman_delivery",
       "community": 4,
       "community_name": "Dokumentasi Proyek: Arsip-IMO",
-      "norm_label": "7. workflow pengiriman (delivery)"
+      "norm_label": "7. workflow pengiriman (delivery)",
+      "id": "docs_arsip_imo_project_7_workflow_pengiriman_delivery"
     },
     {
       "label": "8. Riwayat Commit Terkait",
       "file_type": "document",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L53",
+      "source_location": "L54",
       "_origin": "ast",
-      "id": "docs_arsip_imo_project_8_riwayat_commit_terkait",
       "community": 4,
       "community_name": "Dokumentasi Proyek: Arsip-IMO",
-      "norm_label": "8. riwayat commit terkait"
+      "norm_label": "8. riwayat commit terkait",
+      "id": "docs_arsip_imo_project_8_riwayat_commit_terkait"
     },
     {
       "label": "Dokumentasi Proyek: Arsip-IMO",
@@ -680,10 +680,10 @@
       "source_file": "docs/arsip-imo-project.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
       "community": 4,
       "community_name": "Dokumentasi Proyek: Arsip-IMO",
-      "norm_label": "dokumentasi proyek: arsip-imo"
+      "norm_label": "dokumentasi proyek: arsip-imo",
+      "id": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo"
     },
     {
       "label": "1. Prasyarat Sistem",
@@ -691,10 +691,10 @@
       "source_file": "docs/tailshare-linux-mint-installation.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "docs_tailshare_linux_mint_installation_1_prasyarat_sistem",
       "community": 5,
       "community_name": "Panduan Instalasi & Konfigurasi TailShare di Linux Mint",
-      "norm_label": "1. prasyarat sistem"
+      "norm_label": "1. prasyarat sistem",
+      "id": "docs_tailshare_linux_mint_installation_1_prasyarat_sistem"
     },
     {
       "label": "2. Clone Repositori & Install Dependensi",
@@ -702,10 +702,10 @@
       "source_file": "docs/tailshare-linux-mint-installation.md",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "docs_tailshare_linux_mint_installation_2_clone_repositori_install_dependensi",
       "community": 5,
       "community_name": "Panduan Instalasi & Konfigurasi TailShare di Linux Mint",
-      "norm_label": "2. clone repositori & install dependensi"
+      "norm_label": "2. clone repositori & install dependensi",
+      "id": "docs_tailshare_linux_mint_installation_2_clone_repositori_install_dependensi"
     },
     {
       "label": "3. Menjalankan Server Secara Manual (Pengujian)",
@@ -713,10 +713,10 @@
       "source_file": "docs/tailshare-linux-mint-installation.md",
       "source_location": "L40",
       "_origin": "ast",
-      "id": "docs_tailshare_linux_mint_installation_3_menjalankan_server_secara_manual_pengujian",
       "community": 5,
       "community_name": "Panduan Instalasi & Konfigurasi TailShare di Linux Mint",
-      "norm_label": "3. menjalankan server secara manual (pengujian)"
+      "norm_label": "3. menjalankan server secara manual (pengujian)",
+      "id": "docs_tailshare_linux_mint_installation_3_menjalankan_server_secara_manual_pengujian"
     },
     {
       "label": "4. Konfigurasi Auto-Start (Systemd Background Service)",
@@ -724,10 +724,10 @@
       "source_file": "docs/tailshare-linux-mint-installation.md",
       "source_location": "L50",
       "_origin": "ast",
-      "id": "docs_tailshare_linux_mint_installation_4_konfigurasi_auto_start_systemd_background_service",
       "community": 5,
       "community_name": "Panduan Instalasi & Konfigurasi TailShare di Linux Mint",
-      "norm_label": "4. konfigurasi auto-start (systemd background service)"
+      "norm_label": "4. konfigurasi auto-start (systemd background service)",
+      "id": "docs_tailshare_linux_mint_installation_4_konfigurasi_auto_start_systemd_background_service"
     },
     {
       "label": "5. Membuat Desktop Shortcut di Linux Mint (.desktop)",
@@ -735,10 +735,10 @@
       "source_file": "docs/tailshare-linux-mint-installation.md",
       "source_location": "L95",
       "_origin": "ast",
-      "id": "docs_tailshare_linux_mint_installation_5_membuat_desktop_shortcut_di_linux_mint_desktop",
       "community": 5,
       "community_name": "Panduan Instalasi & Konfigurasi TailShare di Linux Mint",
-      "norm_label": "5. membuat desktop shortcut di linux mint (.desktop)"
+      "norm_label": "5. membuat desktop shortcut di linux mint (.desktop)",
+      "id": "docs_tailshare_linux_mint_installation_5_membuat_desktop_shortcut_di_linux_mint_desktop"
     },
     {
       "label": "Panduan Instalasi & Konfigurasi TailShare di Linux Mint",
@@ -746,10 +746,10 @@
       "source_file": "docs/tailshare-linux-mint-installation.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
       "community": 5,
       "community_name": "Panduan Instalasi & Konfigurasi TailShare di Linux Mint",
-      "norm_label": "panduan instalasi & konfigurasi tailshare di linux mint"
+      "norm_label": "panduan instalasi & konfigurasi tailshare di linux mint",
+      "id": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint"
     },
     {
       "label": "linux-mint-developer-workflow-customizations.md",
@@ -757,10 +757,10 @@
       "source_file": "docs/linux-mint-developer-workflow-customizations.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_linux_mint_developer_workflow_customizations",
       "community": 6,
       "community_name": "\ud83d\udc27 Linux Mint Developer Workflow Customizations & Aliases",
-      "norm_label": "linux-mint-developer-workflow-customizations.md"
+      "norm_label": "linux-mint-developer-workflow-customizations.md",
+      "id": "docs_linux_mint_developer_workflow_customizations"
     },
     {
       "label": "\ud83d\udee0\ufe0f 1. Paket & Utilitas CLI yang Terpasang",
@@ -768,10 +768,10 @@
       "source_file": "docs/linux-mint-developer-workflow-customizations.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "docs_linux_mint_developer_workflow_customizations_1_paket_utilitas_cli_yang_terpasang",
       "community": 6,
       "community_name": "\ud83d\udc27 Linux Mint Developer Workflow Customizations & Aliases",
-      "norm_label": "\ud83d\udee0\ufe0f 1. paket & utilitas cli yang terpasang"
+      "norm_label": "\ud83d\udee0\ufe0f 1. paket & utilitas cli yang terpasang",
+      "id": "docs_linux_mint_developer_workflow_customizations_1_paket_utilitas_cli_yang_terpasang"
     },
     {
       "label": "\u2328\ufe0f 2. Standar Aliases Sistem (`~/.bash_aliases`)",
@@ -779,10 +779,10 @@
       "source_file": "docs/linux-mint-developer-workflow-customizations.md",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "docs_linux_mint_developer_workflow_customizations_2_standar_aliases_sistem_bash_aliases",
       "community": 6,
       "community_name": "\ud83d\udc27 Linux Mint Developer Workflow Customizations & Aliases",
-      "norm_label": "\u2328\ufe0f 2. standar aliases sistem (`~/.bash_aliases`)"
+      "norm_label": "\u2328\ufe0f 2. standar aliases sistem (`~/.bash_aliases`)",
+      "id": "docs_linux_mint_developer_workflow_customizations_2_standar_aliases_sistem_bash_aliases"
     },
     {
       "label": "\ud83d\uddc2\ufe0f 3. Symlink & Integrasi File Manager (Nemo)",
@@ -790,10 +790,10 @@
       "source_file": "docs/linux-mint-developer-workflow-customizations.md",
       "source_location": "L79",
       "_origin": "ast",
-      "id": "docs_linux_mint_developer_workflow_customizations_3_symlink_integrasi_file_manager_nemo",
       "community": 6,
       "community_name": "\ud83d\udc27 Linux Mint Developer Workflow Customizations & Aliases",
-      "norm_label": "\ud83d\uddc2\ufe0f 3. symlink & integrasi file manager (nemo)"
+      "norm_label": "\ud83d\uddc2\ufe0f 3. symlink & integrasi file manager (nemo)",
+      "id": "docs_linux_mint_developer_workflow_customizations_3_symlink_integrasi_file_manager_nemo"
     },
     {
       "label": "\ud83d\udc27 Linux Mint Developer Workflow Customizations & Aliases",
@@ -801,10 +801,10 @@
       "source_file": "docs/linux-mint-developer-workflow-customizations.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases",
       "community": 6,
       "community_name": "\ud83d\udc27 Linux Mint Developer Workflow Customizations & Aliases",
-      "norm_label": "\ud83d\udc27 linux mint developer workflow customizations & aliases"
+      "norm_label": "\ud83d\udc27 linux mint developer workflow customizations & aliases",
+      "id": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases"
     },
     {
       "label": "Agent Brain - Central Context & Workspace",
@@ -812,21 +812,21 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme_agent_brain_central_context_workspace",
       "community": 7,
       "community_name": "Agent Brain - Central Context & Workspace",
-      "norm_label": "agent brain - central context & workspace"
+      "norm_label": "agent brain - central context & workspace",
+      "id": "readme_agent_brain_central_context_workspace"
     },
     {
       "label": "\ud83d\udcda Indeks Dokumentasi (`docs/`)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L49",
+      "source_location": "L54",
       "_origin": "ast",
-      "id": "readme_indeks_dokumentasi_docs",
       "community": 7,
       "community_name": "Agent Brain - Central Context & Workspace",
-      "norm_label": "\ud83d\udcda indeks dokumentasi (`docs/`)"
+      "norm_label": "\ud83d\udcda indeks dokumentasi (`docs/`)",
+      "id": "readme_indeks_dokumentasi_docs"
     },
     {
       "label": "\ud83d\ude80 Progress & Checklist Pekerjaan",
@@ -834,21 +834,21 @@
       "source_file": "README.md",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "readme_progress_checklist_pekerjaan",
       "community": 7,
       "community_name": "Agent Brain - Central Context & Workspace",
-      "norm_label": "\ud83d\ude80 progress & checklist pekerjaan"
+      "norm_label": "\ud83d\ude80 progress & checklist pekerjaan",
+      "id": "readme_progress_checklist_pekerjaan"
     },
     {
       "label": "\ud83d\udcdd Ringkasan Konteks Terakhir",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
-      "id": "readme_ringkasan_konteks_terakhir",
       "community": 7,
       "community_name": "Agent Brain - Central Context & Workspace",
-      "norm_label": "\ud83d\udcdd ringkasan konteks terakhir"
+      "norm_label": "\ud83d\udcdd ringkasan konteks terakhir",
+      "id": "readme_ringkasan_konteks_terakhir"
     },
     {
       "label": "\ud83d\udccc Status Proyek & Lingkungan Saat Ini",
@@ -856,10 +856,10 @@
       "source_file": "README.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "readme_status_proyek_lingkungan_saat_ini",
       "community": 7,
       "community_name": "Agent Brain - Central Context & Workspace",
-      "norm_label": "\ud83d\udccc status proyek & lingkungan saat ini"
+      "norm_label": "\ud83d\udccc status proyek & lingkungan saat ini",
+      "id": "readme_status_proyek_lingkungan_saat_ini"
     },
     {
       "label": "1. PHASE READ (BOOTING)",
@@ -867,10 +867,10 @@
       "source_file": "AGENTS.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "agents_1_phase_read_booting",
       "community": 8,
       "community_name": "SOP & PROTOKOL MEMORI AGENT",
-      "norm_label": "1. phase read (booting)"
+      "norm_label": "1. phase read (booting)",
+      "id": "agents_1_phase_read_booting"
     },
     {
       "label": "2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)",
@@ -878,10 +878,10 @@
       "source_file": "AGENTS.md",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "agents_2_phase_code_intelligence_graphify_integration",
       "community": 8,
       "community_name": "SOP & PROTOKOL MEMORI AGENT",
-      "norm_label": "2. phase code intelligence (graphify integration)"
+      "norm_label": "2. phase code intelligence (graphify integration)",
+      "id": "agents_2_phase_code_intelligence_graphify_integration"
     },
     {
       "label": "3. PHASE WRITE (HANDOFF / COMPLETION)",
@@ -889,10 +889,10 @@
       "source_file": "AGENTS.md",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "agents_3_phase_write_handoff_completion",
       "community": 8,
       "community_name": "SOP & PROTOKOL MEMORI AGENT",
-      "norm_label": "3. phase write (handoff / completion)"
+      "norm_label": "3. phase write (handoff / completion)",
+      "id": "agents_3_phase_write_handoff_completion"
     },
     {
       "label": "SOP & PROTOKOL MEMORI AGENT",
@@ -900,10 +900,10 @@
       "source_file": "AGENTS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agents_sop_protokol_memori_agent",
       "community": 8,
       "community_name": "SOP & PROTOKOL MEMORI AGENT",
-      "norm_label": "sop & protokol memori agent"
+      "norm_label": "sop & protokol memori agent",
+      "id": "agents_sop_protokol_memori_agent"
     },
     {
       "label": "docs/README.md",
@@ -911,10 +911,10 @@
       "source_file": "docs/README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_readme",
       "community": 9,
       "community_name": "docs/README.md",
-      "norm_label": "docs/readme.md"
+      "norm_label": "docs/readme.md",
+      "id": "docs_readme"
     },
     {
       "label": "Dokumentasi Agent Brain",
@@ -922,10 +922,10 @@
       "source_file": "docs/README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_readme_dokumentasi_agent_brain",
       "community": 9,
       "community_name": "docs/README.md",
-      "norm_label": "dokumentasi agent brain"
+      "norm_label": "dokumentasi agent brain",
+      "id": "docs_readme_dokumentasi_agent_brain"
     }
   ],
   "links": [
@@ -936,9 +936,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "agents_sop_protokol_memori_agent",
-      "confidence_score": 1.0
+      "target": "agents_sop_protokol_memori_agent"
     },
     {
       "relation": "contains",
@@ -947,9 +947,9 @@
       "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents_sop_protokol_memori_agent",
-      "target": "agents_2_phase_code_intelligence_graphify_integration",
-      "confidence_score": 1.0
+      "target": "agents_2_phase_code_intelligence_graphify_integration"
     },
     {
       "relation": "contains",
@@ -958,9 +958,9 @@
       "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents_sop_protokol_memori_agent",
-      "target": "agents_3_phase_write_handoff_completion",
-      "confidence_score": 1.0
+      "target": "agents_3_phase_write_handoff_completion"
     },
     {
       "relation": "contains",
@@ -969,9 +969,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents_sop_protokol_memori_agent",
-      "target": "agents_1_phase_read_booting",
-      "confidence_score": 1.0
+      "target": "agents_1_phase_read_booting"
     },
     {
       "relation": "contains",
@@ -980,9 +980,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_agent_brain_and_graphify_synergy_guide",
-      "target": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
-      "confidence_score": 1.0
+      "target": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify"
     },
     {
       "relation": "contains",
@@ -991,9 +991,9 @@
       "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
-      "target": "docs_agent_brain_and_graphify_synergy_guide_siklus_alur_kerja_sinergis_the_synergy_lifecycle",
-      "confidence_score": 1.0
+      "target": "docs_agent_brain_and_graphify_synergy_guide_siklus_alur_kerja_sinergis_the_synergy_lifecycle"
     },
     {
       "relation": "contains",
@@ -1002,9 +1002,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
-      "target": "docs_agent_brain_and_graphify_synergy_guide_mengapa_keduanya_diperlukan_bersama",
-      "confidence_score": 1.0
+      "target": "docs_agent_brain_and_graphify_synergy_guide_mengapa_keduanya_diperlukan_bersama"
     },
     {
       "relation": "contains",
@@ -1013,42 +1013,42 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project",
-      "target": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "confidence_score": 1.0
+      "target": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L15",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_3_aturan_batasan_permanen_constraints",
-      "confidence_score": 1.0
+      "target": "docs_arsip_imo_project_2_tech_stack"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L22",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_4_arsitektur_navigasi_aplikasi",
-      "confidence_score": 1.0
+      "target": "docs_arsip_imo_project_3_aturan_batasan_permanen_constraints"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L29",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_5_tata_letak_grid_kontrol_kalender_2x2_grid",
-      "confidence_score": 1.0
+      "target": "docs_arsip_imo_project_4_arsitektur_navigasi_aplikasi"
     },
     {
       "relation": "contains",
@@ -1057,53 +1057,53 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_1_metadata_repositori_cabang",
-      "confidence_score": 1.0
+      "target": "docs_arsip_imo_project_1_metadata_repositori_cabang"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L42",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_6_verifikasi_prosedur_pengujian",
-      "confidence_score": 1.0
+      "target": "docs_arsip_imo_project_5_tata_letak_grid_kontrol_kalender_2x2_grid"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L48",
+      "source_location": "L43",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_7_workflow_pengiriman_delivery",
-      "confidence_score": 1.0
+      "target": "docs_arsip_imo_project_6_verifikasi_prosedur_pengujian"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L53",
+      "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_8_riwayat_commit_terkait",
-      "confidence_score": 1.0
+      "target": "docs_arsip_imo_project_7_workflow_pengiriman_delivery"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/arsip-imo-project.md",
-      "source_location": "L9",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_2_tech_stack",
-      "confidence_score": 1.0
+      "target": "docs_arsip_imo_project_8_riwayat_commit_terkait"
     },
     {
       "relation": "contains",
@@ -1112,20 +1112,20 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_drive_d_projects_catalog",
-      "target": "docs_drive_d_projects_catalog_katalog_proyek_repositori_drive_d",
-      "confidence_score": 1.0
+      "target": "docs_drive_d_projects_catalog_katalog_proyek_repositori_drive_d"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/drive-d-projects-catalog.md",
-      "source_location": "L32",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_drive_d_projects_catalog_katalog_proyek_repositori_drive_d",
-      "target": "docs_drive_d_projects_catalog_2_direktori_proyek_aplikasi_non_git_infrastruktur_drive_d",
-      "confidence_score": 1.0
+      "target": "docs_drive_d_projects_catalog_2_direktori_proyek_aplikasi_non_git_infrastruktur_drive_d"
     },
     {
       "relation": "contains",
@@ -1134,9 +1134,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_drive_d_projects_catalog_katalog_proyek_repositori_drive_d",
-      "target": "docs_drive_d_projects_catalog_1_repositori_utama_proyek_aktif_git_repositories",
-      "confidence_score": 1.0
+      "target": "docs_drive_d_projects_catalog_1_repositori_utama_proyek_aktif_git_repositories"
     },
     {
       "relation": "contains",
@@ -1145,9 +1145,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_linux_mint_developer_workflow_customizations",
-      "target": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases",
-      "confidence_score": 1.0
+      "target": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases"
     },
     {
       "relation": "contains",
@@ -1156,9 +1156,9 @@
       "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases",
-      "target": "docs_linux_mint_developer_workflow_customizations_2_standar_aliases_sistem_bash_aliases",
-      "confidence_score": 1.0
+      "target": "docs_linux_mint_developer_workflow_customizations_2_standar_aliases_sistem_bash_aliases"
     },
     {
       "relation": "contains",
@@ -1167,9 +1167,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases",
-      "target": "docs_linux_mint_developer_workflow_customizations_1_paket_utilitas_cli_yang_terpasang",
-      "confidence_score": 1.0
+      "target": "docs_linux_mint_developer_workflow_customizations_1_paket_utilitas_cli_yang_terpasang"
     },
     {
       "relation": "contains",
@@ -1178,9 +1178,9 @@
       "source_location": "L79",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases",
-      "target": "docs_linux_mint_developer_workflow_customizations_3_symlink_integrasi_file_manager_nemo",
-      "confidence_score": 1.0
+      "target": "docs_linux_mint_developer_workflow_customizations_3_symlink_integrasi_file_manager_nemo"
     },
     {
       "relation": "contains",
@@ -1189,9 +1189,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation",
-      "target": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification"
     },
     {
       "relation": "contains",
@@ -1200,9 +1200,9 @@
       "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi",
-      "target": "docs_mt5_docker_forex_trading_automation_a_container_docker_mt5_dashboard_docker_compose_yml",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_a_container_docker_mt5_dashboard_docker_compose_yml"
     },
     {
       "relation": "contains",
@@ -1211,9 +1211,9 @@
       "source_location": "L62",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi",
-      "target": "docs_mt5_docker_forex_trading_automation_b_lingkungan_python_di_dalam_wine",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_b_lingkungan_python_di_dalam_wine"
     },
     {
       "relation": "contains",
@@ -1222,9 +1222,9 @@
       "source_location": "L70",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi",
-      "target": "docs_mt5_docker_forex_trading_automation_c_bot_python_logic_mt5_config_bot_py",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_c_bot_python_logic_mt5_config_bot_py"
     },
     {
       "relation": "contains",
@@ -1233,9 +1233,9 @@
       "source_location": "L79",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi",
-      "target": "docs_mt5_docker_forex_trading_automation_d_cloudflare_worker_push_backend_cf_push_backend",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_d_cloudflare_worker_push_backend_cf_push_backend"
     },
     {
       "relation": "contains",
@@ -1244,9 +1244,9 @@
       "source_location": "L102",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
-      "target": "docs_mt5_docker_forex_trading_automation_2_mendaftarkan_iphone_pwa_push",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_2_mendaftarkan_iphone_pwa_push"
     },
     {
       "relation": "contains",
@@ -1255,9 +1255,9 @@
       "source_location": "L107",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
-      "target": "docs_mt5_docker_forex_trading_automation_3_layanan_auto_start_24_7_systemd_service",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_3_layanan_auto_start_24_7_systemd_service"
     },
     {
       "relation": "contains",
@@ -1266,9 +1266,9 @@
       "source_location": "L120",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
-      "target": "docs_mt5_docker_forex_trading_automation_4_deploy_update_worker_bila_ada_perubahan",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_4_deploy_update_worker_bila_ada_perubahan"
     },
     {
       "relation": "contains",
@@ -1277,9 +1277,9 @@
       "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
-      "target": "docs_mt5_docker_forex_trading_automation_1_menjalankan_container_mt5",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_1_menjalankan_container_mt5"
     },
     {
       "relation": "contains",
@@ -1288,9 +1288,9 @@
       "source_location": "L128",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification",
-      "target": "docs_mt5_docker_forex_trading_automation_keuntungan_menggunakan_cloudflare_workers",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_keuntungan_menggunakan_cloudflare_workers"
     },
     {
       "relation": "contains",
@@ -1299,9 +1299,9 @@
       "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification",
-      "target": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi"
     },
     {
       "relation": "contains",
@@ -1310,9 +1310,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification",
-      "target": "docs_mt5_docker_forex_trading_automation_1_arsitektur_keseluruhan",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_1_arsitektur_keseluruhan"
     },
     {
       "relation": "contains",
@@ -1321,9 +1321,9 @@
       "source_location": "L93",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification",
-      "target": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji"
     },
     {
       "relation": "contains",
@@ -1332,9 +1332,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_readme",
-      "target": "docs_readme_dokumentasi_agent_brain",
-      "confidence_score": 1.0
+      "target": "docs_readme_dokumentasi_agent_brain"
     },
     {
       "relation": "contains",
@@ -1343,9 +1343,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification",
-      "target": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser",
-      "confidence_score": 1.0
+      "target": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser"
     },
     {
       "relation": "contains",
@@ -1354,9 +1354,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_2_arsitektur_komponen",
-      "target": "docs_safari_ios_web_push_notification_a_client_frontend_public",
-      "confidence_score": 1.0
+      "target": "docs_safari_ios_web_push_notification_a_client_frontend_public"
     },
     {
       "relation": "contains",
@@ -1365,9 +1365,9 @@
       "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_2_arsitektur_komponen",
-      "target": "docs_safari_ios_web_push_notification_b_server_backend_server_js",
-      "confidence_score": 1.0
+      "target": "docs_safari_ios_web_push_notification_b_server_backend_server_js"
     },
     {
       "relation": "contains",
@@ -1376,9 +1376,9 @@
       "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_3_contoh_implementasi_kode",
-      "target": "docs_safari_ios_web_push_notification_sw_js",
-      "confidence_score": 1.0
+      "target": "docs_safari_ios_web_push_notification_sw_js"
     },
     {
       "relation": "contains",
@@ -1387,9 +1387,9 @@
       "source_location": "L83",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_3_contoh_implementasi_kode",
-      "target": "docs_safari_ios_web_push_notification_server_js_node_js_backend",
-      "confidence_score": 1.0
+      "target": "docs_safari_ios_web_push_notification_server_js_node_js_backend"
     },
     {
       "relation": "contains",
@@ -1398,9 +1398,9 @@
       "source_location": "L130",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser",
-      "target": "docs_safari_ios_web_push_notification_4_lokasi_prototype_pengujian",
-      "confidence_score": 1.0
+      "target": "docs_safari_ios_web_push_notification_4_lokasi_prototype_pengujian"
     },
     {
       "relation": "contains",
@@ -1409,9 +1409,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser",
-      "target": "docs_safari_ios_web_push_notification_2_arsitektur_komponen",
-      "confidence_score": 1.0
+      "target": "docs_safari_ios_web_push_notification_2_arsitektur_komponen"
     },
     {
       "relation": "contains",
@@ -1420,9 +1420,9 @@
       "source_location": "L47",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser",
-      "target": "docs_safari_ios_web_push_notification_3_contoh_implementasi_kode",
-      "confidence_score": 1.0
+      "target": "docs_safari_ios_web_push_notification_3_contoh_implementasi_kode"
     },
     {
       "relation": "contains",
@@ -1431,9 +1431,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser",
-      "target": "docs_safari_ios_web_push_notification_1_persyaratan_khusus_ios_safari_apple_web_push",
-      "confidence_score": 1.0
+      "target": "docs_safari_ios_web_push_notification_1_persyaratan_khusus_ios_safari_apple_web_push"
     },
     {
       "relation": "contains",
@@ -1442,9 +1442,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_system_environment_and_ports",
-      "target": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan",
-      "confidence_score": 1.0
+      "target": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan"
     },
     {
       "relation": "contains",
@@ -1453,9 +1453,9 @@
       "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan",
-      "target": "docs_system_environment_and_ports_3_repositori_proyek_utama_dalam_sistem",
-      "confidence_score": 1.0
+      "target": "docs_system_environment_and_ports_3_repositori_proyek_utama_dalam_sistem"
     },
     {
       "relation": "contains",
@@ -1464,9 +1464,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan",
-      "target": "docs_system_environment_and_ports_1_lingkungan_sistem_environment",
-      "confidence_score": 1.0
+      "target": "docs_system_environment_and_ports_1_lingkungan_sistem_environment"
     },
     {
       "relation": "contains",
@@ -1475,9 +1475,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan",
-      "target": "docs_system_environment_and_ports_2_port_sistem_terpesan_reserved_ports",
-      "confidence_score": 1.0
+      "target": "docs_system_environment_and_ports_2_port_sistem_terpesan_reserved_ports"
     },
     {
       "relation": "contains",
@@ -1486,9 +1486,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation",
-      "target": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
-      "confidence_score": 1.0
+      "target": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint"
     },
     {
       "relation": "contains",
@@ -1497,9 +1497,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
-      "target": "docs_tailshare_linux_mint_installation_2_clone_repositori_install_dependensi",
-      "confidence_score": 1.0
+      "target": "docs_tailshare_linux_mint_installation_2_clone_repositori_install_dependensi"
     },
     {
       "relation": "contains",
@@ -1508,9 +1508,9 @@
       "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
-      "target": "docs_tailshare_linux_mint_installation_3_menjalankan_server_secara_manual_pengujian",
-      "confidence_score": 1.0
+      "target": "docs_tailshare_linux_mint_installation_3_menjalankan_server_secara_manual_pengujian"
     },
     {
       "relation": "contains",
@@ -1519,9 +1519,9 @@
       "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
-      "target": "docs_tailshare_linux_mint_installation_4_konfigurasi_auto_start_systemd_background_service",
-      "confidence_score": 1.0
+      "target": "docs_tailshare_linux_mint_installation_4_konfigurasi_auto_start_systemd_background_service"
     },
     {
       "relation": "contains",
@@ -1530,9 +1530,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
-      "target": "docs_tailshare_linux_mint_installation_1_prasyarat_sistem",
-      "confidence_score": 1.0
+      "target": "docs_tailshare_linux_mint_installation_1_prasyarat_sistem"
     },
     {
       "relation": "contains",
@@ -1541,9 +1541,9 @@
       "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
-      "target": "docs_tailshare_linux_mint_installation_5_membuat_desktop_shortcut_di_linux_mint_desktop",
-      "confidence_score": 1.0
+      "target": "docs_tailshare_linux_mint_installation_5_membuat_desktop_shortcut_di_linux_mint_desktop"
     },
     {
       "relation": "contains",
@@ -1552,9 +1552,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service",
-      "target": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7"
     },
     {
       "relation": "contains",
@@ -1563,9 +1563,9 @@
       "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_1_arsitektur_terpusat_central_notification_hub",
-      "target": "docs_universal_web_push_notification_service_detail_endpoint",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service_detail_endpoint"
     },
     {
       "relation": "contains",
@@ -1574,9 +1574,9 @@
       "source_location": "L116",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
-      "target": "docs_universal_web_push_notification_service_e_shell_bash_curl_cron_job",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service_e_shell_bash_curl_cron_job"
     },
     {
       "relation": "contains",
@@ -1585,9 +1585,9 @@
       "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
-      "target": "docs_universal_web_push_notification_service_a_python_requests_urllib_standar",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service_a_python_requests_urllib_standar"
     },
     {
       "relation": "contains",
@@ -1596,9 +1596,9 @@
       "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
-      "target": "docs_universal_web_push_notification_service_b_javascript_typescript_node_js",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service_b_javascript_typescript_node_js"
     },
     {
       "relation": "contains",
@@ -1607,9 +1607,9 @@
       "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
-      "target": "docs_universal_web_push_notification_service_c_php_laravel",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service_c_php_laravel"
     },
     {
       "relation": "contains",
@@ -1618,9 +1618,9 @@
       "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
-      "target": "docs_universal_web_push_notification_service_d_golang",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service_d_golang"
     },
     {
       "relation": "contains",
@@ -1629,9 +1629,9 @@
       "source_location": "L126",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7",
-      "target": "docs_universal_web_push_notification_service_3_mendaftarkan_perangkat_baru_client_pwa",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service_3_mendaftarkan_perangkat_baru_client_pwa"
     },
     {
       "relation": "contains",
@@ -1640,9 +1640,9 @@
       "source_location": "L137",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7",
-      "target": "docs_universal_web_push_notification_service_4_maintenance_operasional",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service_4_maintenance_operasional"
     },
     {
       "relation": "contains",
@@ -1651,9 +1651,9 @@
       "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7",
-      "target": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification"
     },
     {
       "relation": "contains",
@@ -1662,9 +1662,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7",
-      "target": "docs_universal_web_push_notification_service_1_arsitektur_terpusat_central_notification_hub",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service_1_arsitektur_terpusat_central_notification_hub"
     },
     {
       "relation": "contains",
@@ -1673,9 +1673,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_agent_brain_central_context_workspace",
-      "confidence_score": 1.0
+      "target": "readme_agent_brain_central_context_workspace"
     },
     {
       "relation": "contains",
@@ -1684,31 +1684,31 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_agent_brain_central_context_workspace",
-      "target": "readme_progress_checklist_pekerjaan",
-      "confidence_score": 1.0
+      "target": "readme_progress_checklist_pekerjaan"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_agent_brain_central_context_workspace",
-      "target": "readme_ringkasan_konteks_terakhir",
-      "confidence_score": 1.0
+      "target": "readme_ringkasan_konteks_terakhir"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L49",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_agent_brain_central_context_workspace",
-      "target": "readme_indeks_dokumentasi_docs",
-      "confidence_score": 1.0
+      "target": "readme_indeks_dokumentasi_docs"
     },
     {
       "relation": "contains",
@@ -1717,9 +1717,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme_agent_brain_central_context_workspace",
-      "target": "readme_status_proyek_lingkungan_saat_ini",
-      "confidence_score": 1.0
+      "target": "readme_status_proyek_lingkungan_saat_ini"
     },
     {
       "relation": "references",
@@ -1728,9 +1728,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_arsip_imo_project",
-      "confidence_score": 1.0
+      "target": "docs_arsip_imo_project"
     },
     {
       "relation": "references",
@@ -1739,9 +1739,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_system_environment_and_ports",
-      "confidence_score": 1.0
+      "target": "docs_system_environment_and_ports"
     },
     {
       "relation": "references",
@@ -1750,9 +1750,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_safari_ios_web_push_notification",
-      "confidence_score": 1.0
+      "target": "docs_safari_ios_web_push_notification"
     },
     {
       "relation": "references",
@@ -1761,9 +1761,9 @@
       "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_mt5_docker_forex_trading_automation",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation"
     },
     {
       "relation": "references",
@@ -1772,9 +1772,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_universal_web_push_notification_service",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service"
     },
     {
       "relation": "references",
@@ -1783,9 +1783,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_agent_brain_and_graphify_synergy_guide",
-      "confidence_score": 1.0
+      "target": "docs_agent_brain_and_graphify_synergy_guide"
     },
     {
       "relation": "references",
@@ -1794,9 +1794,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_tailshare_linux_mint_installation",
-      "confidence_score": 1.0
+      "target": "docs_tailshare_linux_mint_installation"
     },
     {
       "relation": "references",
@@ -1805,64 +1805,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_drive_d_projects_catalog",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L50",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "docs_linux_mint_developer_workflow_customizations",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L51",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "docs_agent_brain_and_graphify_synergy_guide",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L52",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "docs_universal_web_push_notification_service",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L53",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "docs_mt5_docker_forex_trading_automation",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L54",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "docs_safari_ios_web_push_notification",
-      "confidence_score": 1.0
+      "target": "docs_drive_d_projects_catalog"
     },
     {
       "relation": "references",
@@ -1871,9 +1816,9 @@
       "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "docs_tailshare_linux_mint_installation",
-      "confidence_score": 1.0
+      "target": "docs_linux_mint_developer_workflow_customizations"
     },
     {
       "relation": "references",
@@ -1882,9 +1827,9 @@
       "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "docs_drive_d_projects_catalog",
-      "confidence_score": 1.0
+      "target": "docs_agent_brain_and_graphify_synergy_guide"
     },
     {
       "relation": "references",
@@ -1893,9 +1838,9 @@
       "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "docs_arsip_imo_project",
-      "confidence_score": 1.0
+      "target": "docs_universal_web_push_notification_service"
     },
     {
       "relation": "references",
@@ -1904,11 +1849,66 @@
       "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "docs_system_environment_and_ports",
-      "confidence_score": 1.0
+      "target": "docs_mt5_docker_forex_trading_automation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "docs_safari_ios_web_push_notification"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "docs_tailshare_linux_mint_installation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "docs_drive_d_projects_catalog"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "docs_arsip_imo_project"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "docs_system_environment_and_ports"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "adbff230477551c2ecc26cc289c2a3e3fa6ee584"
+  "built_at_commit": "961711efb6acc70b5af3b1c3e2e1d595c0bc9e57"
 }
