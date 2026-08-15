@@ -1,6 +1,8 @@
-# SOP & PROTOKOL MEMORI AGENT
+# SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)
 
-File ini adalah aturan wajib bagi SELURUH AI Agent yang mengakses repositori ini.
+> 🔒 **ATURAN KEKEBALAN PROTOKOL (MODEL-AGNOSTIC IMMUTABILITY CONSTRAINT):**
+> File ini adalah aturan wajib dan permanen bagi SELURUH AI Agent dan Model LLM (Claude, Gemini, GPT, DeepSeek, Antigravity, OpenCode, Aider, dll.) yang beroperasi di workspace ini.
+> **DILARANG KERAS** memodifikasi, menghapus, melonggarkan, atau merusak protokol inti ini, **KECUALI** ada instruksi perubahan yang diminta secara eksplisit dan spesifik oleh USER (pemilik sistem).
 
 ---
 

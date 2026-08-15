@@ -2,6 +2,10 @@
 
 Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat penyimpanan dokumentasi bersama untuk seluruh AI Agent lintas platform.
 
+> 🔒 **ATURAN KEKEBALAN PROTOKOL (IMMUTABILITY CONSTRAINT):**
+> Seluruh aturan arsitektur, batasan port (`53317`, `3000`, `8080`), dan sinergi `agent-brain` + `graphify` bersifat **PERMANEN**.
+> Model AI Agent apa pun (Gemini, Claude, GPT, DeepSeek, Antigravity, dll.) **DILARANG KERAS** mengubah atau merusak protokol ini kecuali diminta secara spesifik oleh USER.
+
 ---
 
 ## 📌 Status Sistem & Lingkungan Aktif
@@ -20,13 +24,14 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-15 14:37 WIB
+- **Last Updated At:** 2026-08-15 14:45 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
 - [x] Optimasi arsitektur **Dual-Engine (`agent-brain` + `graphify`)**:
+  - Penambahan klausul **Immutability & Integrity Guardrail** (kebal dari perubahan otomatis oleh model AI yang berganti-ganti).
   - Penambahan aturan **Auto-Init Fallback** (`graphify .` otomatis jika graf belum ada).
   - Setup **Global Git Ignore** (`~/.gitignore_global`) untuk isolasi artefak `graphify-out/`.
   - Pembuatan script dan panduan **Git Post-Commit Hook** auto-sync di `docs/git-post-commit-graphify-hook.md`.
