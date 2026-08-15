@@ -9,7 +9,15 @@ Dokumentasi terpusat untuk PC Server mandiri (`mentari-server`) yang terhubung d
 - **Sistem Operasi:** Debian GNU/Linux 13 (*trixie*) - Kernel `6.12.101+deb13-amd64`
 - **User Utama:** `mentari`
 - **Kapasitas RAM:** ~4.0 GiB (Total: 3.7 GiB, Available: ~2.9 GiB)
-- **Kapasitas Disk:** 113 GB (Available: ~104 GB pada partisi `/dev/sdb2`)
+- **Konfigurasi Penyimpanan (Total: ~1.1 TB):**
+  - ⚡ **SSD Sistem (`/dev/sdb` - 128 GB `PREMIUM-128GB`):**
+    - `/` (Root OS): 113 GB (*Terpakai: 3.0 GB, Sisa: 104 GB*)
+    - `/boot/efi`: 976 MB
+    - `[SWAP]`: 3.9 GB
+  - 💽 **HDD Storage (`/dev/sda` - 1 TB `TOSHIBA DT01ABA100V`):**
+    - `/cctv` (Label: `CCTV_STORAGE`): 916 GB (*Sisa: 907 GB*)
+    - Folder: `/cctv/recordings`, `/cctv/data`, `/cctv/config` (Owner: `mentari`)
+    - Persisten di `/etc/fstab` (`noatime,nodiratime,nofail`)
 - **Docker Engine:** `v29.7.2` (User `mentari` terdaftar di grup `docker` non-root)
 - **Antigravity CLI (`agy`):** `v1.1.13` (Global symlink di `/usr/local/bin/agy` dan `/home/mentari/.local/bin/agy`)
 
