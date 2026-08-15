@@ -8,7 +8,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Project Scope:** Multi-project Context & Shared Memory (`Arsip-IMO`, `SmartHome`, `SaveBuddy`, `SIMPKK-DIGITAL`, `Mentari Ecosystem`, `TailShare`, `Web Push Safari iOS`, `MT5 Docker Bot`, `Cloudflare Zero Trust`, `Infisical`, `agent-brain`)
 - **Status:** Active / Production Ready
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-15 13:00 WIB
+- **Last Updated At:** 2026-08-15 13:08 WIB
 
 ---
 
@@ -32,7 +32,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] Pembersihan seluruh branch lama di remote GitHub `alwiihsan50-lgtm/Arsip-IMO` (`feat/mobile-first-ui`, `beta`, `agent/fix-repo-audit-findings`), penghapusan repositori lokal lama, dan kloning fresh tunggal `main` stabil ke `D:\Projects\Arsip-IMO` (`/media/cuker/Data/Projects/Arsip-IMO`) lengkap dengan verifikasi build & dependency.
 - [x] Implementasi dan aktivasi penuh **Cloudflare Tunnel (`cloudflared.service` 24/7)** pada domain **`abbas.my.id`** untuk akses remote publik tak terbatas tanpa batas port (`https://dashboard.abbas.my.id`, `https://share.abbas.my.id`, `https://vnc.abbas.my.id`) lengkap dengan SSL resmi di `docs/system-environment-and-ports.md`.
 - [x] Implementasi dan aktivasi penuh **Cloudflare Zero Trust Access Application & Policy** untuk domain `*.abbas.my.id` dengan proteksi One-Time PIN email eksklusif untuk `alwiihsan50@gmail.com` dan masa aktif sesi persisten **30 Hari (730 Jam / 1x login per bulan)**.
-- [x] Instalasi dan konfigurasi **Infisical CLI (`infisical` v0.38.0)** di Linux Mint sebagai pusat Secret Management & Vault terenkripsi lintas perangkat (Mobile & Desktop).
+- [x] Instalasi dan konfigurasi **Infisical CLI (`infisical` v0.38.0)** di Linux Mint, integrasi akun `alwiihsan50@gmail.com`, serta import seluruh 13 kredensial infrastruktur terenkripsi ke project Infisical (`dev` & `prod`).
 
 ---
 
@@ -43,9 +43,10 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
    - Otentikasi eksklusif hanya untuk email pemilik (`alwiihsan50@gmail.com`) via kode PIN 6-digit.
    - **Sesi Persisten 30 Hari (730 jam):** Pengguna hanya perlu login 1 kali di browser HP/PC, dan selama 30 hari ke depan semua aplikasi langsung terbuka otomatis tanpa meminta login lagi.
    - Tailscale Funnel publik telah ditutup permanen untuk menghilangkan backdoor, sementara Tailscale VPN privat tetap aktif untuk koneksi direct IP.
-3. **Pusat Secret Management Terpusat (Infisical):**
-   - Tool `infisical` CLI v0.38.0 telah terpasang di Linux Mint (`/usr/bin/infisical`).
-   - Digunakan untuk mengelola token & kredensial terenkripsi E2EE yang dapat diakses via web, mobile iPhone, dan CLI injection.
+3. **Pusat Secret Management Terpusat (Infisical Vault):**
+   - Tool `infisical` CLI v0.38.0 telah terpasang di Linux Mint (`/usr/bin/infisical`) dan terhubung ke akun `alwiihsan50@gmail.com`.
+   - 13 Kredensial penting (Cloudflare API Token, Zone ID, Account ID, Tunnel ID, Access App ID, Web Push Endpoint, MagicDNS, Subdomain URLs) telah diunggah dan terenkripsi E2EE di Infisical (`dev` & `prod`).
+   - Dapat diakses dan dimonitor langsung dari browser iPhone via **`app.infisical.com`**.
 4. **Multi-Pair Algorithmic Trading Bot & Web Dashboard (Docker):** Berjalan aktif melalui Docker (`exness-mt5` di Port `3000` dan `mt5-dashboard` di Port `8080`) dan systemd service (`mt5-trading-bot.service`). Storage virtual ext4 berada di `/media/cuker/Data/mt5-storage.img` yang melegakan ruang SSD sistem.
 5. **Universal Web Push Notification Hub (Cloudflare Workers 24/7):** Dibangun sebagai hub notifikasi terpusat (`https://mt5-push-backend.alwiihsan50.workers.dev`) menggunakan Cloudflare KV (`SUBSCRIPTIONS`) dan `@block65/webcrypto-web-push`. Siap dipanggil oleh aplikasi mana pun cukup via 1 panggilan HTTP POST (`/trigger-notification`).
 6. **Linux Mint Developer Workflow Customization:** Sistem terminal dan shell Linux Mint 22.3 telah dioptimasi dengan Starship prompt, Zoxide smart directory jumping, FZF fuzzy finder history (`Ctrl+R`) & file (`Ctrl+T`), LazyDocker (`ld`), Btop system monitor (`top`), Bat syntax highlighter, Eza modern tree/icons, smart aliases harian (Docker, systemd bot, port checking), symlinks Drive D (`~/Data`, `~/Projects`), dan file instruksi di Desktop.
