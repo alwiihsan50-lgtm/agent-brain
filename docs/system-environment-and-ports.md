@@ -23,16 +23,24 @@ Untuk server pengujian atau server pengembang sementara lainnya, **SELALU gunaka
 
 ---
 
-## 3. Remote Access: Tailscale Serve & Funnel Mapping
+## 3. Remote Access: Tailscale Funnel Mapping (Public HTTPS)
 
-Aplikasi lokal diekspos melalui **Tailscale Serve & Funnel** pada node `cuker-h610m-hvs-m-2-r2-0` (Domain: `cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net`).
+> [!NOTE]
+> Tailscale Funnel secara teknis **hanya mendukung 3 port publik resmi**: `443`, `8443`, dan `10000`. Akses di luar port tersebut tidak dapat diterima oleh edge server Tailscale global.
 
-| Tipe | Port Publik / Tailnet | Target App Lokal | URL Akses | Keterangan |
+Aplikasi lokal diekspos melalui **Tailscale Funnel** pada node `cuker-h610m-hvs-m-2-r2-0` (Domain: `cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net`):
+
+| Tipe | Port Publik | Target App Lokal | URL Akses Remote (HTTPS) | Keterangan |
 | :--- | :---: | :---: | :--- | :--- |
-| **Funnel + Serve** | **`40506`** | `http://127.0.0.1:53317` | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:40506` | **TailShare Web UI** |
-| **Funnel + Serve** | **`40507`** | `http://127.0.0.1:8080` | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:40507` | **MT5 Live Trading Dashboard** |
-| **Funnel + Serve** | **`40508`** | `http://127.0.0.1:3000` | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:40508` | **MetaTrader 5 Web GUI (VNC)** |
-| **Root (443)** | *Kosong* | - | - | *Dikosongkan sesuai konfigurasi pengguna* |
+| **Funnel (Public HTTPS)** | **`443`** (Default) | `http://127.0.0.1:8080` | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net` | **MT5 Live Trading Dashboard** (PWA Ready) |
+| **Funnel (Public HTTPS)** | **`8443`** | `http://127.0.0.1:3000` | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:8443` | **MetaTrader 5 Web GUI (VNC)** |
+| **Funnel (Public HTTPS)** | **`10000`** | `http://127.0.0.1:53317` | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:10000` | **TailShare Web UI** |
+
+### Akses Privat via Tailscale VPN (Direct IP):
+Jika Tailscale VPN aktif di HP/laptop:
+- MT5 Dashboard: `http://100.110.205.27:8080`
+- MT5 Web GUI: `http://100.110.205.27:3000`
+- TailShare: `http://100.110.205.27:53317`
 
 ---
 
