@@ -2,6 +2,7 @@
 
 ## 1. Lingkungan Sistem (Environment)
 - **Sistem Operasi:** Linux Mint 22.3 (Primary Active Workstation) & Windows 11 (Dual-boot)
+- **Domain Utama Cloudflare:** `abbas.my.id`
 - **Akun GitHub Utama:** `alwiihsan50-lgtm`
 - **Metode Autentikasi Git:** GitHub CLI (`gh`) via HTTPS protocol
 - **Root Workspace Linux:** `/home/cuker`
@@ -23,28 +24,35 @@ Untuk server pengujian atau server pengembang sementara lainnya, **SELALU gunaka
 
 ---
 
-## 3. Remote Access: Tailscale Funnel Mapping (Public HTTPS)
+## 3. Remote Access Multi-Domain: Cloudflare Tunnel (Tanpa Batas Port)
 
-> [!NOTE]
-> Tailscale Funnel secara teknis **hanya mendukung 3 port publik resmi**: `443`, `8443`, dan `10000`. Akses di luar port tersebut tidak dapat diterima oleh edge server Tailscale global.
+Remote access utama dikonfigurasikan menggunakan **Cloudflare Tunnel (`cloudflared`)** pada domain **`abbas.my.id`**. Setiap aplikasi berjalan pada root subdomain independen tanpa batasan port, tanpa modifikasi path, dan dengan SSL Cloudflare otomatis.
 
-Aplikasi lokal diekspos melalui **Tailscale Funnel** pada node `cuker-h610m-hvs-m-2-r2-0` (Domain: `cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net`):
+| Layanan / Aplikasi | Target Port Lokal | Subdomain Publik (HTTPS) | Status |
+| :--- | :---: | :--- | :---: |
+| 📊 **MT5 Live Trading Dashboard** | `http://localhost:8080` | **`https://dashboard.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
+| 📂 **TailShare Web UI** | `http://localhost:53317` | **`https://share.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
+| 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `http://localhost:3000` | **`https://vnc.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
 
-| Tipe | Port Publik | Target App Lokal | URL Akses Remote (HTTPS) | Keterangan |
-| :--- | :---: | :---: | :--- | :--- |
-| **Funnel (Public HTTPS)** | **`443`** (Default) | `http://127.0.0.1:8080` | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net` | **MT5 Live Trading Dashboard** (PWA Ready) |
-| **Funnel (Public HTTPS)** | **`8443`** | `http://127.0.0.1:3000` | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:8443` | **MetaTrader 5 Web GUI (VNC)** |
-| **Funnel (Public HTTPS)** | **`10000`** | `http://127.0.0.1:53317` | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:10000` | **TailShare Web UI** |
-
-### Akses Privat via Tailscale VPN (Direct IP):
-Jika Tailscale VPN aktif di HP/laptop:
-- MT5 Dashboard: `http://100.110.205.27:8080`
-- MT5 Web GUI: `http://100.110.205.27:3000`
-- TailShare: `http://100.110.205.27:53317`
+### Konfigurasi Cloudflare Tunnel:
+* **Service:** `cloudflared.service` (Systemd 24/7 background)
+* **Config File:** `/etc/cloudflared/config.yml` & `/home/cuker/.cloudflared/config.yml`
+* **Tunnel Name:** `cuker-apps` (`38aa36f2-8898-4c7a-9f75-add2d18513ce`)
 
 ---
 
-## 4. Repositori & Proyek Utama dalam Sistem
+## 4. Remote Access Cadangan: Tailscale Serve & Funnel
+
+| Metode | URL / Host | Target |
+| :--- | :--- | :--- |
+| **Tailscale Funnel** | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net` | MT5 Dashboard (`:8080`) |
+| **Tailscale Funnel** | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:8443` | MT5 Web GUI (`:3000`) |
+| **Tailscale Funnel** | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:10000` | TailShare (`:53317`) |
+| **Tailscale Private IP** | `http://100.110.205.27:<PORT>` | Akses privat langsung saat Tailscale VPN aktif di HP/Laptop |
+
+---
+
+## 5. Repositori & Proyek Utama dalam Sistem
 - `agent-brain`: `https://github.com/alwiihsan50-lgtm/agent-brain` (Shared Memory System)
 - `Arsip-IMO`: `https://github.com/alwiihsan50-lgtm/Arsip-IMO` (Active branch: `main` di `D:\Projects\Arsip-IMO`)
 - `tailshare`: `https://github.com/alwiihsan50-lgtm/tailshare` (Berada di `/home/cuker/tailshare`, Storage di `/media/cuker/Data/tailshare`)

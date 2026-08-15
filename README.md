@@ -5,10 +5,10 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 ## 📌 Status Proyek & Lingkungan Saat Ini
-- **Project Scope:** Multi-project Context & Shared Memory (`Arsip-IMO`, `SmartHome`, `SaveBuddy`, `SIMPKK-DIGITAL`, `Mentari Ecosystem`, `TailShare`, `Web Push Safari iOS`, `MT5 Docker Bot`, `agent-brain`)
+- **Project Scope:** Multi-project Context & Shared Memory (`Arsip-IMO`, `SmartHome`, `SaveBuddy`, `SIMPKK-DIGITAL`, `Mentari Ecosystem`, `TailShare`, `Web Push Safari iOS`, `MT5 Docker Bot`, `Cloudflare Tunnel`, `agent-brain`)
 - **Status:** Active / Production Ready
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-15 11:39 WIB
+- **Last Updated At:** 2026-08-15 11:59 WIB
 
 ---
 
@@ -30,16 +30,16 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] Implementasi **Dynamic Flexible Pips Risk Engine berdasarkan Nilai Rupiah (Max Loss SL: Rp 25.000 / Target Win TP: Rp 50.000, 1:2 RRR)** yang secara dinamis menghitung jarak pip sesuai karakteristik setiap pair dan ukuran volume lot.
 - [x] Setup & Tuning Lingkungan **Linux Mint Developer Workflow Suite** (Starship prompt, Zoxide smart jumping, FZF fuzzy search, LazyDocker TUI, Btop system monitor, Bat, Eza, smart aliases di `~/.bash_aliases`, Desktop guide, dan symlinks Drive D) di `docs/linux-mint-developer-workflow-customizations.md`.
 - [x] Pembersihan seluruh branch lama di remote GitHub `alwiihsan50-lgtm/Arsip-IMO` (`feat/mobile-first-ui`, `beta`, `agent/fix-repo-audit-findings`), penghapusan repositori lokal lama, dan kloning fresh tunggal `main` stabil ke `D:\Projects\Arsip-IMO` (`/media/cuker/Data/Projects/Arsip-IMO`) lengkap dengan verifikasi build & dependency.
-- [x] Konfigurasi dan pengujian live **Tailscale Funnel Remote Access** (Port `443` MT5 Dashboard, Port `8443` MT5 Web GUI, Port `10000` TailShare) dengan SSL terverifikasi dari internet publik di `docs/system-environment-and-ports.md`.
+- [x] Implementasi dan aktivasi penuh **Cloudflare Tunnel (`cloudflared.service` 24/7)** pada domain **`abbas.my.id`** untuk akses remote publik tak terbatas tanpa batas port (`https://dashboard.abbas.my.id`, `https://share.abbas.my.id`, `https://vnc.abbas.my.id`) lengkap dengan SSL resmi di `docs/system-environment-and-ports.md`.
 
 ---
 
 ## 📝 Ringkasan Konteks Terakhir
 1. **Dual-Engine AI Synergy:** Sistem menggabungkan `agent-brain` sebagai memori strategis jangka panjang lintas proyek (Single Source of Truth) dan `graphify` sebagai knowledge graph AST kode lokal per-repositori.
-2. **Tailscale Remote Access (Funnel & Serve Verified):** Tailscale Funnel bekerja resmi pada 3 port publik dengan SSL otomatis dan telah diuji live:
-   - **Port `443` (Default):** MT5 Live Trading Dashboard (`https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net`)
-   - **Port `8443`:** MT5 Web GUI VNC (`https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:8443`)
-   - **Port `10000`:** TailShare Web UI (`https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:10000`)
+2. **Cloudflare Tunnel Unlimited Remote Access (`abbas.my.id`):** Dikonfigurasi penuh secara otomatis dan berjalan sebagai systemd service (`cloudflared.service`) 24/7. Seluruh aplikasi berjalan di subdomain bersih berkecepatan tinggi dengan SSL Cloudflare:
+   - **`https://dashboard.abbas.my.id`** ➡️ MT5 Live Trading Dashboard (Port `8080`)
+   - **`https://share.abbas.my.id`** ➡️ TailShare Web UI (Port `53317`)
+   - **`https://vnc.abbas.my.id`** ➡️ MT5 Web GUI VNC (Port `3000`)
 3. **Multi-Pair Algorithmic Trading Bot & Web Dashboard (Docker):** Berjalan aktif melalui Docker (`exness-mt5` di Port `3000` dan `mt5-dashboard` di Port `8080`) dan systemd service (`mt5-trading-bot.service`). Storage virtual ext4 berada di `/media/cuker/Data/mt5-storage.img` yang melegakan ruang SSD sistem.
 4. **Universal Web Push Notification Hub (Cloudflare Workers 24/7):** Dibangun sebagai hub notifikasi terpusat (`https://mt5-push-backend.alwiihsan50.workers.dev`) menggunakan Cloudflare KV (`SUBSCRIPTIONS`) dan `@block65/webcrypto-web-push`. Siap dipanggil oleh aplikasi mana pun cukup via 1 panggilan HTTP POST (`/trigger-notification`).
 5. **Linux Mint Developer Workflow Customization:** Sistem terminal dan shell Linux Mint 22.3 telah dioptimasi dengan Starship prompt, Zoxide smart directory jumping, FZF fuzzy finder history (`Ctrl+R`) & file (`Ctrl+T`), LazyDocker (`ld`), Btop system monitor (`top`), Bat syntax highlighter, Eza modern tree/icons, smart aliases harian (Docker, systemd bot, port checking), symlinks Drive D (`~/Data`, `~/Projects`), dan file instruksi di Desktop.
@@ -65,4 +65,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - 📄 [Panduan Instalasi TailShare di Linux Mint](docs/tailshare-linux-mint-installation.md) - Langkah-langkah instalasi Node.js, Tailscale, setup systemd auto-start, dan shortcut desktop di Linux Mint.
 - 📄 [Katalog Proyek Drive D](docs/drive-d-projects-catalog.md) - Pemetaan lengkap 18 repositori Git, remote URL, branch aktif, dan direktori di Drive `D:\`.
 - 📄 [Arsip-IMO Project Specification & Memory](docs/arsip-imo-project.md) - Dokumentasi lengkap proyek Arsip-IMO, batasan, arsitektur, navigasi, dan workflow delivery.
-- 📄 [System Environment, Ports & Remote Access](docs/system-environment-and-ports.md) - Informasi spesifikasi sistem Windows/Linux, aturan port terpesan, serta mapping Tailscale Funnel.
+- 📄 [System Environment, Ports & Remote Access](docs/system-environment-and-ports.md) - Informasi spesifikasi sistem Windows/Linux, aturan port terpesan, serta mapping Cloudflare Tunnel & Tailscale.
