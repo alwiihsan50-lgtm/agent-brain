@@ -30,14 +30,14 @@ Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.servi
 
 | Layanan / Aplikasi | Target Port Lokal | Subdomain Publik (HTTPS) | Status |
 | :--- | :---: | :--- | :---: |
-| 📊 **MT5 Live Trading Dashboard** | `http://localhost:8080` | **`https://dashboard.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
-| 📁 **TailShare Web UI** | `http://localhost:53317` | **`https://share.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
-| 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `http://localhost:3000` | **`https://vnc.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
+| 📊 **MT5 Live Trading Dashboard** | `http://localhost:8080` *(Linux Workstation)* | **`https://dashboard.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
+| 📁 **TailShare Web UI** | `http://localhost:53317` *(Linux Workstation)* | **`https://share.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
+| 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `http://localhost:3000` *(Linux Workstation)* | **`https://vnc.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
+| 🏠 **CasaOS Web GUI Dashboard** | `http://localhost:80` *(mentari-server)* | **`https://server.abbas.my.id`** / **`https://casa.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
 
 ### Konfigurasi Cloudflare Tunnel:
-* **Service:** `cloudflared.service` (Systemd 24/7 background)
-* **Config File:** `/etc/cloudflared/config.yml` & `/home/cuker/.cloudflared/config.yml`
-* **Tunnel Name:** `cuker-apps` (`38aa36f2-8898-4c7a-9f75-add2d18513ce`)
+* **Tunnel 1 (Linux Workstation):** `cuker-apps` (`38aa36f2-8898-4c7a-9f75-add2d18513ce`) pada host `cuker-h610m-hvs-m-2-r2-0`
+* **Tunnel 2 (mentari-server):** `mentari-tunnel` (`6cd14b2e-12e7-44f2-b138-d8c1684690a6`) pada host `mentari-server`
 * **Security Layer:** Cloudflare Zero Trust Access (Session 1 Bulan / 730 Jam).
 
 ---

@@ -33,19 +33,31 @@ Host mentari-server
 
 ---
 
-## 3. Hak Akses & Persistensi Layanan
+## 3. Web GUI & Cloudflare Tunnel (Akses Global 24/7)
+- **Aplikasi Web GUI:** CasaOS v0.4.15 (Port 80)
+- **Domain Publik HTTPS:**
+  - 🌐 **`https://server.abbas.my.id`** (HTTP 200 Live)
+  - 🌐 **`https://casa.abbas.my.id`** (HTTP 200 Live)
+- **Cloudflare Tunnel ID:** `6cd14b2e-12e7-44f2-b138-d8c1684690a6` (`mentari-tunnel`)
+- **File Konfigurasi Tunnel:** `/etc/cloudflared/config.yml`
+- **Service Systemd:** `cloudflared.service` ➔ `enabled` (Active 24/7)
+
+---
+
+## 4. Hak Akses & Persistensi Layanan
 1. **Passwordless Sudo:**
    - Konfigurasi: `/etc/sudoers.d/mentari` (`mentari ALL=(ALL) NOPASSWD:ALL`)
    - Memungkinkan otomatisasi pemeliharaan dan deploy oleh AI Agent tanpa prompt password.
 2. **Auto-Start Saat Booting:**
    - `ssh.service` ➔ `enabled` (Active)
    - `tailscaled.service` ➔ `enabled` (Active)
-   - Server otomatis pulih dan dapat di-SSH segera setelah restart / mati listrik.
+   - `cloudflared.service` ➔ `enabled` (Active)
+   - Server otomatis pulih dan dapat diakses publik maupun privat segera setelah restart / mati listrik.
 3. **Tailscale Key Expiry:** Dinonaktifkan (*Disabled*) di konsol admin Tailscale untuk menjaga koneksi permanen.
 
 ---
 
-## 4. Cara Akses & Eksekusi Perintah
+## 5. Cara Akses & Eksekusi Perintah
 ```bash
 # Akses remote langsung via alias
 ssh mentari-server
