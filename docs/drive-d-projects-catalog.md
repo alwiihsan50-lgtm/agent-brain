@@ -8,8 +8,7 @@ Dokumen ini berisi pemetaan lengkap seluruh proyek, repositori Git, lokasi direk
 
 | Nama Proyek | Lokasi Lokal | Remote URL GitHub | Active Branch | Keterangan / Deskripsi |
 | --- | --- | --- | --- | --- |
-| **Arsip-IMO** | `D:\Documents\GitHub\Arsip-IMO` | `https://github.com/alwiihsan50-lgtm/Arsip-IMO.git` | `Beta2-redesign` | Aplikasi presensi karyawan utama (React 19 + Supabase). |
-| **Arsip-IMO (Mirror/Main)** | `D:\Projects\Arsip-IMO` | `https://github.com/alwiihsan50-lgtm/Arsip-IMO.git` | `main` | Salinan branch main lokal. |
+| **Arsip-IMO** | `D:\Projects\Arsip-IMO` | `https://github.com/alwiihsan50-lgtm/Arsip-IMO.git` | `main` | Aplikasi presensi karyawan utama (React 19 + Supabase). |
 | **ADMIN-WEB-IMO** | `D:\Projects\ADMIN-WEB-IMO` | `https://github.com/alwiihsan50-lgtm/ADMIN-WEB-IMO.git` | `main` | Web admin untuk IMO. |
 | **SmartHome (Turso)** | `D:\Projects\SmartHome` | `https://github.com/alwiihsan50-lgtm/SmartHome.git` | `agent/smarthome-turso-migration` | Proyek SmartHome migrasi Turso. |
 | **SmartHome (Railway)** | `D:\buat aplikasi\SmartHome` | `https://github.com/alwiihsan50-lgtm/SmartHome.git` | `railway-deploy` | Proyek SmartHome deployment Railway. |

@@ -8,7 +8,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Project Scope:** Multi-project Context & Shared Memory (`Arsip-IMO`, `SmartHome`, `SaveBuddy`, `SIMPKK-DIGITAL`, `Mentari Ecosystem`, `TailShare`, `Web Push Safari iOS`, `MT5 Docker Bot`, `agent-brain`)
 - **Status:** Active / Production Ready
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-14 20:12 WIB
+- **Last Updated At:** 2026-08-14 20:31 WIB
 
 ---
 
@@ -29,6 +29,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] Standardisasi protokol **Dual-Engine Synergy (`agent-brain` + `graphify`)** untuk seluruh AI Agent di `.agents/rules/agent-brain-and-graphify-synergy.md` dan `docs/agent-brain-and-graphify-synergy-guide.md`.
 - [x] Implementasi **Dynamic Flexible Pips Risk Engine berdasarkan Nilai Rupiah (Max Loss SL: Rp 25.000 / Target Win TP: Rp 50.000, 1:2 RRR)** yang secara dinamis menghitung jarak pip sesuai karakteristik setiap pair dan ukuran volume lot.
 - [x] Setup & Tuning Lingkungan **Linux Mint Developer Workflow Suite** (Starship prompt, Zoxide smart jumping, FZF fuzzy search, LazyDocker TUI, Btop system monitor, Bat, Eza, smart aliases di `~/.bash_aliases`, Desktop guide, dan symlinks Drive D) di `docs/linux-mint-developer-workflow-customizations.md`.
+- [x] Pembersihan seluruh branch lama di remote GitHub `alwiihsan50-lgtm/Arsip-IMO` (`feat/mobile-first-ui`, `beta`, `agent/fix-repo-audit-findings`), penghapusan repositori lokal lama, dan kloning fresh tunggal `main` stabil ke `D:\Projects\Arsip-IMO` (`/media/cuker/Data/Projects/Arsip-IMO`) lengkap dengan verifikasi build & dependency.
 
 ---
 
@@ -40,7 +41,11 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 5. **Web Push Notification Safari iOS (iPhone & Local Server):** Menggunakan Web Push API standar, Service Worker (`sw.js`), `manifest.json` PWA Standalone, VAPID Keys, dan backend Node.js (`web-push`). Repo lokal: `safari-push-test`, Cloudflare Pages: `https://safari-push-test.pages.dev`.
 6. **TailShare Universal Suite (Windows & Linux Native GUI):** Terkoneksi langsung ke folder **Drive D `D:\tailshare`** (`/media/cuker/Data/tailshare`). Mendukung GUI Native Electron (`bin/tailshare` dengan CommonJS preload & X11 sandbox flags), auto-attach ke daemon background systemd tanpa konflik port `53317`, live folder watcher, dan web UI. Repo: `https://github.com/alwiihsan50-lgtm/tailshare`.
 7. **Pembaruan TailShare di Windows:** Repositori GitHub `alwiihsan50-lgtm/tailshare` telah dikloning dan diinstal di `C:\Users\alwii\Desktop\tailshare`. Port default telah dialihkan ke **53317**, script auto-start Startup Windows terpasang, file sharing terintegrasi ke `D:\tailshare`, dan shortcut Desktop diperbarui.
-8. **Arsip-IMO Project:** Berada di branch `Beta2-redesign` (`D:\Documents\GitHub\Arsip-IMO`). Aplikasi karyawan React 19 + Supabase + Zustand. Layout kontrol kalender menggunakan grid 2x2 dengan font `12px`.
+8. **Konsolidasi Repositori Arsip-IMO (Fresh Clone Single Main):**
+   - Branch selain `main` di GitHub (`feat/mobile-first-ui`, `beta`, `agent/fix-repo-audit-findings`) telah dihapus secara permanen.
+   - Branch `main` di GitHub tetap utuh dan stabil di commit **`9c63a0e`**.
+   - Folder repositori lama di `D:\Documents\GitHub\Arsip-IMO` dan salinan lama telah dibersihkan.
+   - Fresh clone tunggal telah ditempatkan di `D:\Projects\Arsip-IMO` (`/media/cuker/Data/Projects/Arsip-IMO`), `npm install` dan `npm run build` berhasil 100% tanpa error.
 9. **Katalog Proyek Drive D (`D:\Projects`):** Terdiri dari 18 repositori Git aktif termasuk ekosistem IMO, SmartHome, SaveBuddy, SIMPKK Digital, PRD Generator, dan Ekosistem LPKP Mentari.
 10. **Lingkungan & Reserved Ports:** Port **`53317`** (TailShare), Port **`3000`** (MT5 Web VNC GUI), Port **`8080`** (MT5 Web Dashboard). Port `3005` telah dilepas.
 

@@ -2,7 +2,8 @@
 
 ## 1. Metadata Repositori & Cabang
 - **GitHub Repo:** `alwiihsan50-lgtm/Arsip-IMO`
-- **Active Deployment Branch:** `Beta2-redesign`
+- **Active / Primary Branch:** `main` (branch tunggal stabil, seluruh branch lama telah dibersihkan)
+- **Lokasi Lokal:** `D:\Projects\Arsip-IMO` (`/media/cuker/Data/Projects/Arsip-IMO`)
 - **Tipe Aplikasi:** Aplikasi presensi / absensi karyawan utama (`src/App.jsx`)
 - **Aplikasi Web Admin:** Jangan diubah kecuali ada permintaan eksplisit dari pengguna.
 
@@ -47,7 +48,7 @@ Kontrol navigasi kalender menggunakan layout 2 baris x 2 kolom:
 
 ## 7. Workflow Pengiriman (Delivery)
 - Commit perubahan yang telah diverifikasi dengan pesan commit format *Conventional Commits*.
-- Push commit langsung ke `origin/Beta2-redesign` (kecuali pengguna minta sebaliknya).
+- Push commit langsung ke `origin/main` (kecuali pengguna minta sebaliknya).
 - Laporkan hasil build dan Commit SHA yang telah dipush ke pengguna.
 
 ## 8. Riwayat Commit Terkait
