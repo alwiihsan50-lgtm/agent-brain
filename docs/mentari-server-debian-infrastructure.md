@@ -19,7 +19,7 @@ Dokumentasi terpusat untuk PC Server mandiri (`mentari-server`) yang terhubung d
     - Folder: `/cctv/recordings`, `/cctv/data`, `/cctv/config` (Owner: `mentari`)
     - Persisten di `/etc/fstab` (`noatime,nodiratime,nofail`)
 - **Docker Engine:** `v29.7.2` (User `mentari` terdaftar di grup `docker` non-root)
-- **Antigravity CLI (`agy`):** `v1.1.13` (Global symlink di `/usr/local/bin/agy` dan `/home/mentari/.local/bin/agy`)
+- **Manajemen Agent:** Full-access via passwordless SSH dari workstation AI Agent (`ssh mentari-server`).
 
 ---
 
