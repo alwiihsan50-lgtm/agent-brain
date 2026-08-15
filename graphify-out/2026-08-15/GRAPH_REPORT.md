@@ -1,8 +1,7 @@
 # Graph Report - agent-brain  (2026-08-15)
 
 ## Corpus Check
-- 12 files · ~5,404 words
-- Verdict: corpus is large enough that graph structure adds value.
+- cluster-only mode — file stats not available
 
 ## Summary
 - 84 nodes · 89 edges · 10 communities (9 shown, 1 thin omitted)
@@ -10,7 +9,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d0059273`
+- Built from commit: `961711ef`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,15 +27,15 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `Dokumentasi Proyek: Arsip-IMO` - 9 edges
-2. `Panduan Instalasi & Konfigurasi TailShare di Linux Mint` - 6 edges
-3. `💻 2. Snippet Integrasi Pengirim (Trigger Notification)` - 6 edges
-4. `Agent Brain - Central Context & Workspace` - 5 edges
-5. `Setup & Arsitektur Automasi Trading MT5 (Docker + Exness + Cloudflare Workers Push Notification)` - 5 edges
-6. `📦 2. Komponen & Detail Konfigurasi` - 5 edges
-7. `⚡ 3. Cara Menjalankan & Menguji` - 5 edges
+2. `💻 2. Snippet Integrasi Pengirim (Trigger Notification)` - 6 edges
+3. `Panduan Instalasi & Konfigurasi TailShare di Linux Mint` - 6 edges
+4. `📦 2. Komponen & Detail Konfigurasi` - 5 edges
+5. `⚡ 3. Cara Menjalankan & Menguji` - 5 edges
+6. `Setup & Arsitektur Automasi Trading MT5 (Docker + Exness + Cloudflare Workers Push Notification)` - 5 edges
+7. `Universal Web Push Notification Service (Cloudflare Workers 24/7)` - 5 edges
 8. `Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)` - 5 edges
-9. `Universal Web Push Notification Service (Cloudflare Workers 24/7)` - 5 edges
-10. `SOP & PROTOKOL MEMORI AGENT` - 4 edges
+9. `Agent Brain - Central Context & Workspace` - 5 edges
+10. `Spesifikasi Lingkungan Sistem & Port Terpesan` - 4 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -80,7 +79,7 @@ Cohesion: 0.50
 Nodes (4): 1. PHASE READ (BOOTING), 2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION), 3. PHASE WRITE (HANDOFF / COMPLETION), SOP & PROTOKOL MEMORI AGENT
 
 ## Knowledge Gaps
-- **55 isolated node(s):** `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)`, `3. PHASE WRITE (HANDOFF / COMPLETION)`, `📌 Status Proyek & Lingkungan Saat Ini`, `🚀 Progress & Checklist Pekerjaan` (+50 more)
+- **55 isolated node(s):** `🎯 Mengapa Keduanya Diperlukan Bersama?`, `🔄 Siklus Alur Kerja Sinergis (The Synergy Lifecycle)`, `1. Repositori Utama & Proyek Aktif (Git Repositories)`, `2. Direktori Proyek & Aplikasi Non-Git / Infrastruktur Drive D:`, `1. Lingkungan Sistem (Environment)` (+50 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -89,7 +88,7 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Dokumentasi Proyek: Arsip-IMO` connect `Dokumentasi Proyek: Arsip-IMO` to `README.md`?**
   _High betweenness centrality (0.180) - this node is a cross-community bridge._
-- **What connects `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)`, `3. PHASE WRITE (HANDOFF / COMPLETION)` to the rest of the system?**
+- **What connects `🎯 Mengapa Keduanya Diperlukan Bersama?`, `🔄 Siklus Alur Kerja Sinergis (The Synergy Lifecycle)`, `1. Repositori Utama & Proyek Aktif (Git Repositories)` to the rest of the system?**
   _55 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `README.md` be split into smaller, more focused modules?**
   _Cohesion score 0.14705882352941177 - nodes in this community are weakly interconnected._
