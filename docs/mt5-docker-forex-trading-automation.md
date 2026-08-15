@@ -57,7 +57,7 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
   - `mt5-dashboard` (Python HTTP Realtime Web Dashboard Port `8080`)
 - **Volume:** `/home/mentari/mt5_storage/mt5_config` -> `/config`
 - **Environment:** `PUID=1000`, `PGID=1000`, `TZ=Asia/Jakarta`
-- **Web UI GUI MT5:** `https://vnc.abbas.my.id` / `http://100.109.208.27:3000`
+- **Web UI GUI MT5:** `https://mt5.abbas.my.id` (alias: `vnc.abbas.my.id`) / `http://100.109.208.27:3000`
 - **Web Dashboard Bot:** `https://dashboard.abbas.my.id` / `http://100.109.208.27:8080`
 
 ### B. Lingkungan Python di dalam Wine

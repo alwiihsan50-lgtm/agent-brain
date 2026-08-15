@@ -31,12 +31,12 @@ Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.servi
 | Layanan / Aplikasi | Target Port Lokal | Subdomain Publik (HTTPS) | Status |
 | :--- | :---: | :--- | :---: |
 | 📊 **MT5 Live Trading Dashboard** | `http://localhost:8080` *(mentari-server)* | **`https://dashboard.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
-| 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `https://localhost:3001` *(mentari-server)* | **`https://vnc.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
+| 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `https://localhost:3001` *(mentari-server)* | **`https://mt5.abbas.my.id`** *(alias: `vnc`)* | 🟢 **Live (HTTP 200)** |
 | 🏠 **CasaOS Web GUI Dashboard** | `http://localhost:80` *(mentari-server)* | **`https://server.abbas.my.id`** / **`https://casa.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
 | 📁 **TailShare Web UI** | `http://localhost:53317` *(Windows Workstation)* | **`https://share.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
 
 ### Konfigurasi Cloudflare Tunnel:
-* **Tunnel mentari-server:** `mentari-tunnel` (`6cd14b2e-12e7-44f2-b138-d8c1684690a6`) mengelola `dashboard`, `vnc`, `server`, dan `casa.abbas.my.id`.
+* **Tunnel mentari-server:** `mentari-tunnel` (`6cd14b2e-12e7-44f2-b138-d8c1684690a6`) mengelola `dashboard`, `mt5`, `vnc`, `server`, dan `casa.abbas.my.id`.
 * **Security Layer:** Cloudflare Zero Trust Access (PIN OTP `alwiihsan50@gmail.com`, Session 1 Bulan / 730 Jam).
 
 ---
