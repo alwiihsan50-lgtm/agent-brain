@@ -12,6 +12,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
+| **mentari-server (Debian)** | `100.109.208.27` / SSH | 🟢 Running | Dedicated Linux Server (Debian 13 Trixie, Docker v29.7.2, Passwordless Sudo). |
 | **Cloudflare Zero Trust** | `*.abbas.my.id` | 🟢 Aktif | Akses remote PIN OTP `alwiihsan50@gmail.com` & sesi persisten **30 Hari**. |
 | **TailShare** | `Port 53317` / `share.abbas.my.id` | 🟢 Running | Live sync folder Drive D (`D:\tailshare`) & GUI Native Electron. |
 | **MT5 Docker Exness** | `Port 3000` / `vnc.abbas.my.id` | 🟢 Running | Wine Python MetaTrader 5 di storage `/media/cuker/Data/mt5-storage.img`. |
@@ -24,7 +25,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-15 14:45 WIB
+- **Last Updated At:** 2026-08-15 19:46 WIB
 
 ---
 
@@ -37,12 +38,14 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
   - Pembuatan script dan panduan **Git Post-Commit Hook** auto-sync di `docs/git-post-commit-graphify-hook.md`.
   - **Memory Token-Budgeting:** Arsip milestone lampau dipindahkan ke `docs/history/completed-milestones-archive.md`.
   - Penambahan developer shortcuts di `~/.bash_aliases` (`gf`, `gfu`, `gfq`, `gf-viz`, `brain-sync`, `brain-push`).
+- [x] Onboarding & konfigurasi infrastruktur **mentari-server** (Debian 13 Trixie, Tailscale SSH, Docker v29.7.2, Passwordless Sudo, persistent auto-start).
 - [ ] *(Siap untuk task / fitur baru dari pengguna)*
 
 ---
 
 ## 📚 Indeks Dokumentasi (`docs/`)
 
+- 📄 [**Infrastruktur mentari-server Debian**](docs/mentari-server-debian-infrastructure.md) — Spesifikasi, remote SSH key, dan manajemen container.
 - 📄 [**Arsip Milestone & Riwayat Lengkap**](docs/history/completed-milestones-archive.md) — Log lengkap seluruh fitur & milestone terdahulu.
 - 📄 [**System Environment, Ports & Remote Access**](docs/system-environment-and-ports.md) — Port terpesan, Cloudflare Tunnel & Zero Trust.
 - 📄 [**Panduan Sinergi agent-brain & graphify**](docs/agent-brain-and-graphify-synergy-guide.md) — Integrasi memori makro dan knowledge graph mikro.

@@ -45,9 +45,16 @@ Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.servi
 ## 4. Remote Access Privat Cadangan: Tailscale (Jaringan Privat Saja)
 * **Status Funnel Publik:** Dinonaktifkan (Pintu publik `.ts.net` ditutup untuk keamanan).
 * **Status Tailscale VPN Privat:** Tetap aktif 100% untuk akses direct IP antar perangkat di akun Tailscale yang sama:
-  * MT5 Dashboard: `http://100.110.205.27:8080`
-  * TailShare: `http://100.110.205.27:53317`
-  * MT5 Web GUI: `http://100.110.205.27:3000`
+  * **Node Linux Workstation (`cuker-h610m-hvs-m-2-r2-0`):** `100.110.205.27`
+    * MT5 Dashboard: `http://100.110.205.27:8080`
+    * TailShare: `http://100.110.205.27:53317`
+    * MT5 Web GUI: `http://100.110.205.27:3000`
+  * **Node PC Server Mandiri (`mentari-server`):** `100.109.208.27`
+    * SSH: `ssh mentari-server` (Port 22, User: `mentari`)
+    * OS: Debian GNU/Linux 13 (*trixie*), Docker Engine v29.7.2, Passwordless Sudo.
+    * Dokumentasi lengkap: [`docs/mentari-server-debian-infrastructure.md`](mentari-server-debian-infrastructure.md)
+  * **Node Windows Workstation (`cuker`):** `100.99.188.44`
+  * **Node iPhone (`ip11`):** `100.71.123.61`
 
 ---
 
