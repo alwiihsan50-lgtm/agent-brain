@@ -49,15 +49,16 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 ## 📦 2. Komponen & Detail Konfigurasi
 
 ### A. Container Docker MT5 & Dashboard (`docker-compose.yml`)
-- **Lokasi Fisik (Drive D):** `/media/cuker/Data/mt5-storage.img` (Format ext4 30GB sparse image loop-mounted ke `/home/cuker/mt5_storage`)
-- **Lokasi Compose:** `/home/cuker/mt5_storage/docker-compose.yml`
+- **Host Server:** `mentari-server` (Debian 13 Trixie - SSD Storage)
+- **Lokasi Direktori:** `/home/mentari/mt5_storage`
+- **Lokasi Compose:** `/home/mentari/mt5_storage/docker-compose.yml`
 - **Containers:**
   - `exness-mt5` (Image: `mt5:latest` KasmVNC Port `3000` / `3001`)
   - `mt5-dashboard` (Python HTTP Realtime Web Dashboard Port `8080`)
-- **Volume:** `/home/cuker/mt5_storage/mt5_config` -> `/config`
+- **Volume:** `/home/mentari/mt5_storage/mt5_config` -> `/config`
 - **Environment:** `PUID=1000`, `PGID=1000`, `TZ=Asia/Jakarta`
-- **Web UI GUI MT5:** `http://localhost:3000`
-- **Web Dashboard Bot:** `http://localhost:8080`
+- **Web UI GUI MT5:** `https://vnc.abbas.my.id` / `http://100.109.208.27:3000`
+- **Web Dashboard Bot:** `https://dashboard.abbas.my.id` / `http://100.109.208.27:8080`
 
 ### B. Lingkungan Python di dalam Wine
 - **Path Python:** `C:\Program Files (x86)\Python39-32\python.exe` (Wine environment)
@@ -68,16 +69,16 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
   ```
 
 ### C. Bot Python Logic (`mt5_config/bot.py`)
-- Terletak di `/home/cuker/mt5_config/bot.py` (tersinkronisasi langsung ke `/config/bot.py` dalam container).
+- Terletak di `/home/mentari/mt5_storage/mt5_config/bot.py` (tersinkronisasi langsung ke `/config/bot.py` dalam container).
 - Inisialisasi koneksi IPC ke terminal MT5 (`mt5.initialize()`).
 - Mengambil info akun (Login ID, Saldo, Currency, Equity, Free Margin).
-- Berlangganan ke symbol Market Watch (contoh: `EURUSDm` di akun Exness).
+- Berlangganan ke symbol Market Watch (contoh: `EURUSDm`, `XAUUSDm`, `AUDUSDm`, dll. di akun Exness).
 - Mengambil riwayat closed deal / transaksi selesai (`mt5.history_deals_get()`) untuk kalkulasi metrik win rate, total realized profit/loss, dan data tabel riwayat transaksi.
 - Fungsi `send_push_notification(title, message)` yang mem-POST payload JSON ke endpoint Cloudflare Workers:
   `https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification`
 
 ### D. Cloudflare Worker Push Backend (`cf-push-backend`)
-- **Lokasi Source:** `/home/cuker/cf-push-backend/`
+- **Lokasi Source:** `/home/mentari/mt5_storage/cf-push-backend/`
 - **URL Publik:** `https://mt5-push-backend.alwiihsan50.workers.dev`
 - **Engine:** Cloudflare Worker (Hono + `@block65/webcrypto-web-push` + Web Crypto API)
 - **Storage:** Cloudflare KV Namespace `SUBSCRIPTIONS` (ID: `0217d87236964fb796f7988e77f29de0`)
@@ -94,10 +95,10 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 
 ### 1. Menjalankan Container MT5
 ```bash
-cd /home/cuker
+cd /home/mentari/mt5_storage
 docker compose up -d
 ```
-Akses `http://localhost:3000` di browser untuk login akun Exness.
+Akses `https://vnc.abbas.my.id` atau `http://100.109.208.27:3000` di browser untuk login akun Exness.
 
 ### 2. Mendaftarkan iPhone (PWA Push)
 1. Buka `https://mt5-push-backend.alwiihsan50.workers.dev` di Safari iPhone.
@@ -105,12 +106,12 @@ Akses `http://localhost:3000` di browser untuk login akun Exness.
 3. Buka ikon aplikasi di Home Screen, lalu tekan **Hubungkan ke Cloudflare Server** (izinkan notifikasi).
 
 ### 3. Layanan Auto-Start 24/7 (Systemd Service)
-Bot trading dan container MT5 telah dikonfigurasi untuk otomatis berjalan sendiri saat PC dihidupkan (*boot*):
+Bot trading dan container MT5 telah dikonfigurasi untuk otomatis berjalan sendiri saat server dihidupkan (*boot*):
 * **Service Unit:** `/etc/systemd/system/mt5-trading-bot.service` (`systemctl status mt5-trading-bot.service`)
-* **Runner Script:** `/home/cuker/start-bot.sh`
+* **Runner Script:** `/home/mentari/mt5_storage/start-bot.sh`
 * **Log Realtime:** `journalctl -u mt5-trading-bot.service -f`
 
-Perintah kontrol service:
+Perintah kontrol service di `mentari-server`:
 ```bash
 sudo systemctl restart mt5-trading-bot.service   # Restart bot
 sudo systemctl stop mt5-trading-bot.service      # Hentikan bot
