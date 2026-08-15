@@ -24,31 +24,30 @@ Untuk server pengujian atau server pengembang sementara lainnya, **SELALU gunaka
 
 ---
 
-## 3. Remote Access Multi-Domain: Cloudflare Tunnel (Tanpa Batas Port)
+## 3. Remote Access Utama: Cloudflare Tunnel Multi-Subdomain
 
-Remote access utama dikonfigurasikan menggunakan **Cloudflare Tunnel (`cloudflared`)** pada domain **`abbas.my.id`**. Setiap aplikasi berjalan pada root subdomain independen tanpa batasan port, tanpa modifikasi path, dan dengan SSL Cloudflare otomatis.
+Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.service` 24/7)** pada domain **`abbas.my.id`**:
 
 | Layanan / Aplikasi | Target Port Lokal | Subdomain Publik (HTTPS) | Status |
 | :--- | :---: | :--- | :---: |
 | 📊 **MT5 Live Trading Dashboard** | `http://localhost:8080` | **`https://dashboard.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
-| 📂 **TailShare Web UI** | `http://localhost:53317` | **`https://share.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
+| 📁 **TailShare Web UI** | `http://localhost:53317` | **`https://share.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
 | 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `http://localhost:3000` | **`https://vnc.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
 
 ### Konfigurasi Cloudflare Tunnel:
 * **Service:** `cloudflared.service` (Systemd 24/7 background)
 * **Config File:** `/etc/cloudflared/config.yml` & `/home/cuker/.cloudflared/config.yml`
 * **Tunnel Name:** `cuker-apps` (`38aa36f2-8898-4c7a-9f75-add2d18513ce`)
+* **Security Layer:** Cloudflare Zero Trust Access (Session 1 Bulan / 730 Jam).
 
 ---
 
-## 4. Remote Access Cadangan: Tailscale Serve & Funnel
-
-| Metode | URL / Host | Target |
-| :--- | :--- | :--- |
-| **Tailscale Funnel** | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net` | MT5 Dashboard (`:8080`) |
-| **Tailscale Funnel** | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:8443` | MT5 Web GUI (`:3000`) |
-| **Tailscale Funnel** | `https://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:10000` | TailShare (`:53317`) |
-| **Tailscale Private IP** | `http://100.110.205.27:<PORT>` | Akses privat langsung saat Tailscale VPN aktif di HP/Laptop |
+## 4. Remote Access Privat Cadangan: Tailscale (Jaringan Privat Saja)
+* **Status Funnel Publik:** Dinonaktifkan (Pintu publik `.ts.net` ditutup untuk keamanan).
+* **Status Tailscale VPN Privat:** Tetap aktif 100% untuk akses direct IP antar perangkat di akun Tailscale yang sama:
+  * MT5 Dashboard: `http://100.110.205.27:8080`
+  * TailShare: `http://100.110.205.27:53317`
+  * MT5 Web GUI: `http://100.110.205.27:3000`
 
 ---
 
