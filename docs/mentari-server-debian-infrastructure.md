@@ -11,6 +11,7 @@ Dokumentasi terpusat untuk PC Server mandiri (`mentari-server`) yang terhubung d
 - **Kapasitas RAM:** ~4.0 GiB (Total: 3.7 GiB, Available: ~2.9 GiB)
 - **Kapasitas Disk:** 113 GB (Available: ~104 GB pada partisi `/dev/sdb2`)
 - **Docker Engine:** `v29.7.2` (User `mentari` terdaftar di grup `docker` non-root)
+- **Antigravity CLI (`agy`):** `v1.1.13` (Global symlink di `/usr/local/bin/agy` dan `/home/mentari/.local/bin/agy`)
 
 ---
 
