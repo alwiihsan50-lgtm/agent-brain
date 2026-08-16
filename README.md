@@ -20,24 +20,22 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Infisical Secret Vault** | `app.infisical.com` / `infisical` CLI | 🟢 Synced | 13 kredensial infrastruktur E2EE tersimpan di environment `dev` & `prod`. |
 | **Trading Risk Engine** | `mt5_config/bot.py` | 🟢 Aktif | ATR Volatility Grid Multi-pair scanner dengan Dynamic Spacing & Circuit Breaker. |
+| **RustDesk Server** | `Port 21115-21117` / `rustdesk.abbas.my.id` | 🟢 Live | Self-hosted RustDesk relay & ID server (Docker IPv6 native). |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Single branch `main` stabil terverifikasi. |
 
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-15 22:38 WIB
+- **Last Updated At:** 2026-08-16 18:41 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
-- [x] Optimasi arsitektur **Dual-Engine (`agent-brain` + `graphify`)**:
-  - Penambahan klausul **Immutability & Integrity Guardrail** (kebal dari perubahan otomatis oleh model AI yang berganti-ganti).
-  - Penambahan aturan **Auto-Init Fallback** (`graphify .` otomatis jika graf belum ada).
-  - Setup **Global Git Ignore** (`~/.gitignore_global`) untuk isolasi artefak `graphify-out/`.
-  - Pembuatan script dan panduan **Git Post-Commit Hook** auto-sync di `docs/git-post-commit-graphify-hook.md`.
-  - **Memory Token-Budgeting:** Arsip milestone lampau dipindahkan ke `docs/history/completed-milestones-archive.md`.
-  - Penambahan developer shortcuts di `~/.bash_aliases` (`gf`, `gfu`, `gfq`, `gf-viz`, `brain-sync`, `brain-push`).
+- [x] **RustDesk Self-Hosted Server Deployment:**
+  - Setup Docker Compose `hbbs` & `hbbr` di `/home/cuker/rustdesk-server` (network mode host IPv4/IPv6).
+  - Konfigurasi Cloudflare DNS Record `AAAA` untuk `rustdesk.abbas.my.id` (Direct IPv6 bypass CGNAT).
+  - Konfigurasi local RustDesk client di PC Linux Mint terhubung ke self-hosted server.
 - [x] Onboarding & konfigurasi infrastruktur **mentari-server** (Debian 13 Trixie, Tailscale SSH, Docker v29.7.2, Passwordless Sudo, persistent auto-start).
 - [x] Setup **Cloudflare Tunnel (`mentari-tunnel`)** 24/7 untuk CasaOS Web GUI di **`https://server.abbas.my.id`** dan **`https://casa.abbas.my.id`** (Auto-SSL HTTPS, systemd persistent).
 - [x] **Migrasi Penuh MT5 Trading Bot & Dashboard ke `mentari-server`:**
@@ -45,6 +43,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
   - Transfer direktori Wine, MT5, Python 3.9, bot logic, dan realtime dashboard ke `/home/mentari/mt5_storage`.
   - Konfigurasi systemd unit 24/7 `mt5-trading-bot.service` (auto-restart saat booting server).
   - Setup Cloudflare Tunnel routing untuk `https://dashboard.abbas.my.id` (Port 8080) dan `https://vnc.abbas.my.id` (Port 3000) dengan proteksi Zero Trust PIN OTP.
+- [x] Optimasi arsitektur **Dual-Engine (`agent-brain` + `graphify`)**:
+  - Penambahan klausul **Immutability & Integrity Guardrail** (kebal dari perubahan otomatis oleh model AI yang berganti-ganti).
+  - Penambahan aturan **Auto-Init Fallback** (`graphify .` otomatis jika graf belum ada).
+  - Setup **Global Git Ignore** (`~/.gitignore_global`) untuk isolasi artefak `graphify-out/`.
+  - Pembuatan script dan panduan **Git Post-Commit Hook** auto-sync di `docs/git-post-commit-graphify-hook.md`.
+  - **Memory Token-Budgeting:** Arsip milestone lampau dipindahkan ke `docs/history/completed-milestones-archive.md`.
+  - Penambahan developer shortcuts di `~/.bash_aliases` (`gf`, `gfu`, `gfq`, `gf-viz`, `brain-sync`, `brain-push`).
 - [ ] *(Siap untuk task / fitur baru dari pengguna)*
 
 ---

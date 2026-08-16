@@ -18,15 +18,16 @@
 > - **PORT 53317**: Dipesan untuk **TailShare** (`/home/cuker/tailshare`).
 > - **PORT 3000 / 3001**: Dipesan untuk **MetaTrader 5 Web GUI VNC** (`exness-mt5` container).
 > - **PORT 8080**: Dipesan untuk **MT5 Live Trading Web Dashboard** (`mt5-dashboard` container).
+> - **PORT 21115 - 21117 (TCP) & 21116 (UDP)**: Dipesan untuk **RustDesk Server** (`/home/cuker/rustdesk-server`, domain: `rustdesk.abbas.my.id`).
 > *(Catatan: Backend Web Push Notification telah dimigrasikan ke **Cloudflare Workers (Serverless)**, sehingga Port 3005 kini bebas).*
 
 Untuk server pengujian atau server pengembang sementara lainnya, **SELALU gunakan port bebas alternatif** seperti `5173`, `3002`, `3080`, `8000`, dll.
 
 ---
 
-## 3. Remote Access Utama: Cloudflare Tunnel Multi-Subdomain
+## 3. Remote Access Utama: Cloudflare Tunnel & Direct DNS Multi-Subdomain
 
-Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.service` 24/7)** pada domain **`abbas.my.id`**:
+Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.service` 24/7)** dan **Direct IPv6 AAAA Record** pada domain **`abbas.my.id`**:
 
 | Layanan / Aplikasi | Target Port Lokal | Subdomain Publik (HTTPS) | Status |
 | :--- | :---: | :--- | :---: |
@@ -34,9 +35,11 @@ Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.servi
 | 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `https://localhost:3001` *(mentari-server)* | **`https://mt5.abbas.my.id`** *(alias: `vnc`)* | 🟢 **Live (HTTP 200)** |
 | 🏠 **CasaOS Web GUI Dashboard** | `http://localhost:80` *(mentari-server)* | **`https://server.abbas.my.id`** / **`https://casa.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
 | 📁 **TailShare Web UI** | `http://localhost:53317` *(Windows Workstation)* | **`https://share.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
+| ⚡ **RustDesk Self-Hosted Server** | `Port 21115-21117 TCP, 21116 UDP` | **`rustdesk.abbas.my.id` (DNS AAAA)** | 🟢 **Live (Direct IPv6)** |
 
-### Konfigurasi Cloudflare Tunnel:
+### Konfigurasi Cloudflare:
 * **Tunnel mentari-server:** `mentari-tunnel` (`6cd14b2e-12e7-44f2-b138-d8c1684690a6`) mengelola `dashboard`, `mt5`, `vnc`, `server`, dan `casa.abbas.my.id`.
+* **RustDesk Server DNS:** Record `AAAA` `rustdesk.abbas.my.id` mengarah ke IPv6 publik workstation (`2404:c0:9603:b053:96ee:52cc:fb96:b299`, DNS Only).
 * **Security Layer:** Cloudflare Zero Trust Access (PIN OTP `alwiihsan50@gmail.com`, Session 1 Bulan / 730 Jam).
 
 ---
