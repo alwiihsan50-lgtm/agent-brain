@@ -1,16 +1,16 @@
-# Graph Report - agent-brain  (2026-08-15)
+# Graph Report - agent-brain  (2026-08-16)
 
 ## Corpus Check
-- 12 files · ~5,894 words
+- 18 files · ~7,491 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 90 nodes · 96 edges · 10 communities (9 shown, 1 thin omitted)
+- 114 nodes · 124 edges · 15 communities (13 shown, 2 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `44350581`
+- Built from commit: `21297224`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,27 +25,35 @@
 - Agent Brain - Central Context & Workspace
 - Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access
 - docs/README.md
+- Spesifikasi Infrastruktur Server: `mentari-server`
+- Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote
+- 🧠🕸️ Panduan Sinergi: agent-brain & graphify
+- SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)
+- install-graphify-hook.sh
 
 ## God Nodes (most connected - your core abstractions)
 1. `Dokumentasi Proyek: Arsip-IMO` - 9 edges
-2. `Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access` - 6 edges
-3. `Panduan Instalasi & Konfigurasi TailShare di Linux Mint` - 6 edges
-4. `💻 2. Snippet Integrasi Pengirim (Trigger Notification)` - 6 edges
-5. `Agent Brain - Central Context & Workspace` - 5 edges
+2. `Spesifikasi Infrastruktur Server: `mentari-server`` - 6 edges
+3. `Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access` - 6 edges
+4. `Panduan Instalasi & Konfigurasi TailShare di Linux Mint` - 6 edges
+5. `💻 2. Snippet Integrasi Pengirim (Trigger Notification)` - 6 edges
 6. `Setup & Arsitektur Automasi Trading MT5 (Docker + Exness + Cloudflare Workers Push Notification)` - 5 edges
 7. `📦 2. Komponen & Detail Konfigurasi` - 5 edges
 8. `⚡ 3. Cara Menjalankan & Menguji` - 5 edges
-9. `Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)` - 5 edges
-10. `Universal Web Push Notification Service (Cloudflare Workers 24/7)` - 5 edges
+9. `Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote` - 5 edges
+10. `Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
 
-## Communities (10 total, 1 thin omitted)
+## Import Cycles
+- None detected.
+
+## Communities (15 total, 2 thin omitted)
 
 ### Community 0 - "README.md"
-Cohesion: 0.15
-Nodes (10): 1. PHASE READ (BOOTING), 2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION), 3. PHASE WRITE (HANDOFF / COMPLETION), SOP & PROTOKOL MEMORI AGENT, 🎯 Mengapa Keduanya Diperlukan Bersama?, 🧠🕸️ Panduan Sinergi: agent-brain & graphify, 🔄 Siklus Alur Kerja Sinergis (The Synergy Lifecycle), 1. Repositori Utama & Proyek Aktif (Git Repositories) (+2 more)
+Cohesion: 0.14
+Nodes (11): CLAUDE.md - Central Agent Memory & Protocols, Key Rules:, 1. Repositori Utama & Proyek Aktif (Git Repositories), 2. Direktori Proyek & Aplikasi Non-Git / Infrastruktur Drive D:, Katalog Proyek & Repositori Drive D:, 🚀 Cara Pemasangan Otomatis, 🛠️ Isi Script Hook (`.git/hooks/post-commit`), 🎯 Mengapa Memakai Hook Ini? (+3 more)
 
 ### Community 1 - "📦 2. Komponen & Detail Konfigurasi"
 Cohesion: 0.14
@@ -64,7 +72,7 @@ Cohesion: 0.22
 Nodes (9): 1. Metadata Repositori & Cabang, 2. Tech Stack, 3. Aturan & Batasan Permanen (Constraints), 4. Arsitektur Navigasi Aplikasi, 5. Tata Letak Grid Kontrol Kalender (2x2 Grid), 6. Verifikasi & Prosedur Pengujian, 7. Workflow Pengiriman (Delivery), 8. Riwayat Commit Terkait (+1 more)
 
 ### Community 5 - "Panduan Instalasi & Konfigurasi TailShare di Linux Mint"
-Cohesion: 0.33
+Cohesion: 0.29
 Nodes (6): 1. Prasyarat Sistem, 2. Clone Repositori & Install Dependensi, 3. Menjalankan Server Secara Manual (Pengujian), 4. Konfigurasi Auto-Start (Systemd Background Service), 5. Membuat Desktop Shortcut di Linux Mint (.desktop), Panduan Instalasi & Konfigurasi TailShare di Linux Mint
 
 ### Community 6 - "🐧 Linux Mint Developer Workflow Customizations & Aliases"
@@ -72,24 +80,42 @@ Cohesion: 0.40
 Nodes (4): 🛠️ 1. Paket & Utilitas CLI yang Terpasang, ⌨️ 2. Standar Aliases Sistem (`~/.bash_aliases`), 🗂️ 3. Symlink & Integrasi File Manager (Nemo), 🐧 Linux Mint Developer Workflow Customizations & Aliases
 
 ### Community 7 - "Agent Brain - Central Context & Workspace"
-Cohesion: 0.40
-Nodes (5): Agent Brain - Central Context & Workspace, 📚 Indeks Dokumentasi (`docs/`), 🚀 Progress & Checklist Pekerjaan, 📝 Ringkasan Konteks Terakhir, 📌 Status Proyek & Lingkungan Saat Ini
+Cohesion: 0.50
+Nodes (4): Agent Brain - Central Context & Workspace, 📚 Indeks Dokumentasi (`docs/`), 🚀 Progress & Task Aktif, 📌 Status Sistem & Lingkungan Aktif
 
 ### Community 8 - "Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access"
-Cohesion: 0.20
-Nodes (10): 1. Lingkungan Sistem (Environment), 2. Port Sistem Terpesan Lokal (Local Reserved Ports), 2. Port Sistem Terpesan (Reserved Ports), 3. Remote Access Utama: Cloudflare Tunnel Multi-Subdomain, 3. Repositori & Proyek Utama dalam Sistem, 4. Remote Access Privat Cadangan: Tailscale (Jaringan Privat Saja), 5. Repositori & Proyek Utama dalam Sistem, Konfigurasi Cloudflare Tunnel: (+2 more)
+Cohesion: 0.29
+Nodes (7): 1. Lingkungan Sistem (Environment), 2. Port Sistem Terpesan Lokal (Local Reserved Ports), 3. Remote Access Utama: Cloudflare Tunnel & Direct DNS Multi-Subdomain, 4. Remote Access Privat Cadangan: Tailscale (Jaringan Privat Saja), 5. Repositori & Proyek Utama dalam Sistem, Konfigurasi Cloudflare:, Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access
+
+### Community 10 - "Spesifikasi Infrastruktur Server: `mentari-server`"
+Cohesion: 0.29
+Nodes (7): 1. Spesifikasi Hardware & Sistem Operasi, 2. Jaringan & Akses Remote, 3. Web GUI & Cloudflare Tunnel (Akses Global 24/7), 4. Hak Akses & Persistensi Layanan, 5. Cara Akses & Eksekusi Perintah, Konfigurasi SSH Client (`~/.ssh/config`):, Spesifikasi Infrastruktur Server: `mentari-server`
+
+### Community 11 - "Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote"
+Cohesion: 0.33
+Nodes (5): 1. Arsitektur & Konfigurasi Server RustDesk Lokal, 2. Hasil Pengujian Konektivitas Lintas Jaringan, 3. Analisis Mengapa Solusi Tunnel Tertentu Tidak Bisa, 4. Opsi Solusi Rekomendasi Selanjutnya, Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote
+
+### Community 12 - "🧠🕸️ Panduan Sinergi: agent-brain & graphify"
+Cohesion: 0.40
+Nodes (4): 🛡️ Best Practices & Git Management, 🎯 Mengapa Keduanya Diperlukan Bersama?, 🧠🕸️ Panduan Sinergi: agent-brain & graphify, 🔄 Siklus Alur Kerja Sinergis (The Synergy Lifecycle)
+
+### Community 13 - "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)"
+Cohesion: 0.50
+Nodes (4): 1. PHASE READ (BOOTING), 2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION), 3. PHASE WRITE (HANDOFF / COMPLETION), SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)
 
 ## Knowledge Gaps
-- **58 isolated node(s):** `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)`, `3. PHASE WRITE (HANDOFF / COMPLETION)`, `📌 Status Proyek & Lingkungan Saat Ini`, `🚀 Progress & Checklist Pekerjaan` (+53 more)
+- **72 isolated node(s):** `install-graphify-hook.sh script`, `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)`, `3. PHASE WRITE (HANDOFF / COMPLETION)`, `Key Rules:` (+67 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Dokumentasi Proyek: Arsip-IMO` connect `Dokumentasi Proyek: Arsip-IMO` to `README.md`?**
-  _High betweenness centrality (0.169) - this node is a cross-community bridge._
-- **What connects `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)`, `3. PHASE WRITE (HANDOFF / COMPLETION)` to the rest of the system?**
-  _58 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.132) - this node is a cross-community bridge._
+- **What connects `install-graphify-hook.sh script`, `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)` to the rest of the system?**
+  _72 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `README.md` be split into smaller, more focused modules?**
+  _Cohesion score 0.1368421052631579 - nodes in this community are weakly interconnected._
 - **Should `📦 2. Komponen & Detail Konfigurasi` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._

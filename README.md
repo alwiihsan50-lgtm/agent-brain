@@ -20,22 +20,25 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Infisical Secret Vault** | `app.infisical.com` / `infisical` CLI | 🟢 Synced | 13 kredensial infrastruktur E2EE tersimpan di environment `dev` & `prod`. |
 | **Trading Risk Engine** | `mt5_config/bot.py` | 🟢 Aktif | ATR Volatility Grid Multi-pair scanner dengan Dynamic Spacing & Circuit Breaker. |
-| **RustDesk Server** | `Port 21115-21117` / `rustdesk.abbas.my.id` | 🟢 Live | Self-hosted RustDesk relay & ID server (Docker IPv6 native). |
+| **RustDesk Server** | `Port 21115-21117` / `100.109.208.27` | 🟢 Live | Self-hosted 24/7 RustDesk relay & ID server di `mentari-server` Docker. |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Single branch `main` stabil terverifikasi. |
 
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-16 19:33 WIB
+- **Last Updated At:** 2026-08-16 20:12 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Migrasi RustDesk Server ke `mentari-server` (24/7 Dedicated Host):**
+  - Setup Docker Compose `hbbs` & `hbbr` di `mentari-server` (`/home/mentari/rustdesk-server`, port 21115-21117).
+  - Binding Tailscale IP `100.109.208.27` dengan server key `CUodOW158...`.
+  - Re-konfigurasi local RustDesk client di workstation (`1135152995` / `100.110.205.27`) terdaftar sukses ke `mentari-server`.
 - [x] **RustDesk Self-Hosted Server Deployment & Connectivity Analysis:**
-  - Setup Docker Compose `hbbs` & `hbbr` di `/home/cuker/rustdesk-server` (network mode host IPv4/IPv6, key encryption `+Gj77z0...`).
+  - Setup Docker Compose `hbbs` & `hbbr` (network mode host IPv4/IPv6, key encryption).
   - Konfigurasi Cloudflare DNS Record `AAAA` untuk `rustdesk.abbas.my.id` (Direct IPv6 bypass CGNAT).
-  - Konfigurasi local RustDesk client di PC Linux Mint (`1135152995`).
   - Verifikasi konektivitas: 🟢 **Sukses 100% via Wi-Fi Lokal (LAN) & Tailscale VPN**.
   - Analisis kendala Paket Data Seluler (Inbound SPI Firewall modem ISP) & dokumentasi solusi lanjutan di [`docs/rustdesk-self-hosted-and-remote-access-analysis.md`](docs/rustdesk-self-hosted-and-remote-access-analysis.md).
 - [x] Onboarding & konfigurasi infrastruktur **mentari-server** (Debian 13 Trixie, Tailscale SSH, Docker v29.7.2, Passwordless Sudo, persistent auto-start).

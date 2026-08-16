@@ -15,92 +15,37 @@
       "norm_label": "agents.md"
     },
     {
-      "label": "1. PHASE READ (BOOTING)",
+      "label": "CLAUDE.md",
       "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "agents_1_phase_read_booting",
-      "community": 0,
-      "community_name": "README.md",
-      "norm_label": "1. phase read (booting)"
-    },
-    {
-      "label": "2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "agents_2_phase_code_intelligence_graphify_integration",
-      "community": 0,
-      "community_name": "README.md",
-      "norm_label": "2. phase code intelligence (graphify integration)"
-    },
-    {
-      "label": "3. PHASE WRITE (HANDOFF / COMPLETION)",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "agents_3_phase_write_handoff_completion",
-      "community": 0,
-      "community_name": "README.md",
-      "norm_label": "3. phase write (handoff / completion)"
-    },
-    {
-      "label": "SOP & PROTOKOL MEMORI AGENT",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
+      "source_file": "CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agents_sop_protokol_memori_agent",
+      "id": "claude",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "sop & protokol memori agent"
+      "norm_label": "claude.md"
     },
     {
-      "label": "agent-brain-and-graphify-synergy-guide.md",
+      "label": "CLAUDE.md - Central Agent Memory & Protocols",
       "file_type": "document",
-      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_file": "CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide",
+      "id": "claude_claude_md_central_agent_memory_protocols",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "agent-brain-and-graphify-synergy-guide.md"
+      "norm_label": "claude.md - central agent memory & protocols"
     },
     {
-      "label": "\ud83c\udfaf Mengapa Keduanya Diperlukan Bersama?",
+      "label": "Key Rules:",
       "file_type": "document",
-      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
-      "source_location": "L7",
+      "source_file": "CLAUDE.md",
+      "source_location": "L9",
       "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide_mengapa_keduanya_diperlukan_bersama",
+      "id": "claude_key_rules",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "\ud83c\udfaf mengapa keduanya diperlukan bersama?"
-    },
-    {
-      "label": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
-      "file_type": "document",
-      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
-      "community": 0,
-      "community_name": "README.md",
-      "norm_label": "\ud83e\udde0\ud83d\udd78\ufe0f panduan sinergi: agent-brain & graphify"
-    },
-    {
-      "label": "\ud83d\udd04 Siklus Alur Kerja Sinergis (The Synergy Lifecycle)",
-      "file_type": "document",
-      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide_siklus_alur_kerja_sinergis_the_synergy_lifecycle",
-      "community": 0,
-      "community_name": "README.md",
-      "norm_label": "\ud83d\udd04 siklus alur kerja sinergis (the synergy lifecycle)"
+      "norm_label": "key rules:"
     },
     {
       "label": "arsip-imo-project.md",
@@ -158,15 +103,114 @@
       "norm_label": "katalog proyek & repositori drive d:"
     },
     {
-      "label": "tailshare-linux-mint-installation.md",
+      "label": "git-post-commit-graphify-hook.md",
       "file_type": "document",
-      "source_file": "docs/tailshare-linux-mint-installation.md",
+      "source_file": "docs/git-post-commit-graphify-hook.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_tailshare_linux_mint_installation",
+      "id": "docs_git_post_commit_graphify_hook",
       "community": 0,
       "community_name": "README.md",
-      "norm_label": "tailshare-linux-mint-installation.md"
+      "norm_label": "git-post-commit-graphify-hook.md"
+    },
+    {
+      "label": "\ud83d\ude80 Cara Pemasangan Otomatis",
+      "file_type": "document",
+      "source_file": "docs/git-post-commit-graphify-hook.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "docs_git_post_commit_graphify_hook_cara_pemasangan_otomatis",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "\ud83d\ude80 cara pemasangan otomatis"
+    },
+    {
+      "label": "\ud83d\udee0\ufe0f Isi Script Hook (`.git/hooks/post-commit`)",
+      "file_type": "document",
+      "source_file": "docs/git-post-commit-graphify-hook.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "docs_git_post_commit_graphify_hook_isi_script_hook_git_hooks_post_commit",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "\ud83d\udee0\ufe0f isi script hook (`.git/hooks/post-commit`)"
+    },
+    {
+      "label": "\ud83c\udfaf Mengapa Memakai Hook Ini?",
+      "file_type": "document",
+      "source_file": "docs/git-post-commit-graphify-hook.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_git_post_commit_graphify_hook_mengapa_memakai_hook_ini",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "\ud83c\udfaf mengapa memakai hook ini?"
+    },
+    {
+      "label": "\ud83e\ude9d Panduan Git Post-Commit Hook: Auto-Sync Graphify",
+      "file_type": "document",
+      "source_file": "docs/git-post-commit-graphify-hook.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_git_post_commit_graphify_hook_panduan_git_post_commit_hook_auto_sync_graphify",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "\ud83e\ude9d panduan git post-commit hook: auto-sync graphify"
+    },
+    {
+      "label": "completed-milestones-archive.md",
+      "file_type": "document",
+      "source_file": "docs/history/completed-milestones-archive.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_history_completed_milestones_archive",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "completed-milestones-archive.md"
+    },
+    {
+      "label": "\ud83d\udcdc Arsip Milestone & Riwayat Proyek yang Telah Selesai",
+      "file_type": "document",
+      "source_file": "docs/history/completed-milestones-archive.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_history_completed_milestones_archive_arsip_milestone_riwayat_proyek_yang_telah_selesai",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "\ud83d\udcdc arsip milestone & riwayat proyek yang telah selesai"
+    },
+    {
+      "label": "\ud83d\udcc5 Selesai Per 15 Agustus 2026",
+      "file_type": "document",
+      "source_file": "docs/history/completed-milestones-archive.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_history_completed_milestones_archive_selesai_per_15_agustus_2026",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "\ud83d\udcc5 selesai per 15 agustus 2026"
+    },
+    {
+      "label": "mentari-server-debian-infrastructure.md",
+      "file_type": "document",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_mentari_server_debian_infrastructure",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "mentari-server-debian-infrastructure.md"
+    },
+    {
+      "label": "system-environment-and-ports.md",
+      "file_type": "document",
+      "source_file": "docs/system-environment-and-ports.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_system_environment_and_ports",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "system-environment-and-ports.md"
     },
     {
       "label": "README.md",
@@ -205,7 +249,7 @@
       "label": "1. Menjalankan Container MT5",
       "file_type": "document",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L95",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "docs_mt5_docker_forex_trading_automation_1_menjalankan_container_mt5",
       "community": 1,
@@ -227,7 +271,7 @@
       "label": "2. Mendaftarkan iPhone (PWA Push)",
       "file_type": "document",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L102",
+      "source_location": "L103",
       "_origin": "ast",
       "id": "docs_mt5_docker_forex_trading_automation_2_mendaftarkan_iphone_pwa_push",
       "community": 1,
@@ -238,7 +282,7 @@
       "label": "\u26a1 3. Cara Menjalankan & Menguji",
       "file_type": "document",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L93",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
       "community": 1,
@@ -249,7 +293,7 @@
       "label": "3. Layanan Auto-Start 24/7 (Systemd Service)",
       "file_type": "document",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L107",
+      "source_location": "L108",
       "_origin": "ast",
       "id": "docs_mt5_docker_forex_trading_automation_3_layanan_auto_start_24_7_systemd_service",
       "community": 1,
@@ -260,7 +304,7 @@
       "label": "4. Deploy / Update Worker (Bila ada perubahan)",
       "file_type": "document",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L120",
+      "source_location": "L121",
       "_origin": "ast",
       "id": "docs_mt5_docker_forex_trading_automation_4_deploy_update_worker_bila_ada_perubahan",
       "community": 1,
@@ -282,7 +326,7 @@
       "label": "B. Lingkungan Python di dalam Wine",
       "file_type": "document",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L62",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "docs_mt5_docker_forex_trading_automation_b_lingkungan_python_di_dalam_wine",
       "community": 1,
@@ -293,7 +337,7 @@
       "label": "C. Bot Python Logic (`mt5_config/bot.py`)",
       "file_type": "document",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L70",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "docs_mt5_docker_forex_trading_automation_c_bot_python_logic_mt5_config_bot_py",
       "community": 1,
@@ -304,7 +348,7 @@
       "label": "D. Cloudflare Worker Push Backend (`cf-push-backend`)",
       "file_type": "document",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L79",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "docs_mt5_docker_forex_trading_automation_d_cloudflare_worker_push_backend_cf_push_backend",
       "community": 1,
@@ -315,7 +359,7 @@
       "label": "\ud83d\udca1 Keuntungan Menggunakan Cloudflare Workers",
       "file_type": "document",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L128",
+      "source_location": "L129",
       "_origin": "ast",
       "id": "docs_mt5_docker_forex_trading_automation_keuntungan_menggunakan_cloudflare_workers",
       "community": 1,
@@ -332,6 +376,278 @@
       "community": 1,
       "community_name": "\ud83d\udce6 2. Komponen & Detail Konfigurasi",
       "norm_label": "setup & arsitektur automasi trading mt5 (docker + exness + cloudflare workers push notification)"
+    },
+    {
+      "label": "1. Spesifikasi Hardware & Sistem Operasi",
+      "file_type": "document",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_mentari_server_debian_infrastructure_1_spesifikasi_hardware_sistem_operasi",
+      "community": 10,
+      "community_name": "Spesifikasi Infrastruktur Server: `mentari-server`",
+      "norm_label": "1. spesifikasi hardware & sistem operasi"
+    },
+    {
+      "label": "2. Jaringan & Akses Remote",
+      "file_type": "document",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "docs_mentari_server_debian_infrastructure_2_jaringan_akses_remote",
+      "community": 10,
+      "community_name": "Spesifikasi Infrastruktur Server: `mentari-server`",
+      "norm_label": "2. jaringan & akses remote"
+    },
+    {
+      "label": "3. Web GUI & Cloudflare Tunnel (Akses Global 24/7)",
+      "file_type": "document",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "docs_mentari_server_debian_infrastructure_3_web_gui_cloudflare_tunnel_akses_global_24_7",
+      "community": 10,
+      "community_name": "Spesifikasi Infrastruktur Server: `mentari-server`",
+      "norm_label": "3. web gui & cloudflare tunnel (akses global 24/7)"
+    },
+    {
+      "label": "4. Hak Akses & Persistensi Layanan",
+      "file_type": "document",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "docs_mentari_server_debian_infrastructure_4_hak_akses_persistensi_layanan",
+      "community": 10,
+      "community_name": "Spesifikasi Infrastruktur Server: `mentari-server`",
+      "norm_label": "4. hak akses & persistensi layanan"
+    },
+    {
+      "label": "5. Cara Akses & Eksekusi Perintah",
+      "file_type": "document",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "docs_mentari_server_debian_infrastructure_5_cara_akses_eksekusi_perintah",
+      "community": 10,
+      "community_name": "Spesifikasi Infrastruktur Server: `mentari-server`",
+      "norm_label": "5. cara akses & eksekusi perintah"
+    },
+    {
+      "label": "Konfigurasi SSH Client (`~/.ssh/config`):",
+      "file_type": "document",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "docs_mentari_server_debian_infrastructure_konfigurasi_ssh_client_ssh_config",
+      "community": 10,
+      "community_name": "Spesifikasi Infrastruktur Server: `mentari-server`",
+      "norm_label": "konfigurasi ssh client (`~/.ssh/config`):"
+    },
+    {
+      "label": "Spesifikasi Infrastruktur Server: `mentari-server`",
+      "file_type": "document",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_mentari_server_debian_infrastructure_spesifikasi_infrastruktur_server_mentari_server",
+      "community": 10,
+      "community_name": "Spesifikasi Infrastruktur Server: `mentari-server`",
+      "norm_label": "spesifikasi infrastruktur server: `mentari-server`"
+    },
+    {
+      "label": "rustdesk-self-hosted-and-remote-access-analysis.md",
+      "file_type": "document",
+      "source_file": "docs/rustdesk-self-hosted-and-remote-access-analysis.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_rustdesk_self_hosted_and_remote_access_analysis",
+      "community": 11,
+      "community_name": "Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote",
+      "norm_label": "rustdesk-self-hosted-and-remote-access-analysis.md"
+    },
+    {
+      "label": "1. Arsitektur & Konfigurasi Server RustDesk Lokal",
+      "file_type": "document",
+      "source_file": "docs/rustdesk-self-hosted-and-remote-access-analysis.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_rustdesk_self_hosted_and_remote_access_analysis_1_arsitektur_konfigurasi_server_rustdesk_lokal",
+      "community": 11,
+      "community_name": "Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote",
+      "norm_label": "1. arsitektur & konfigurasi server rustdesk lokal"
+    },
+    {
+      "label": "2. Hasil Pengujian Konektivitas Lintas Jaringan",
+      "file_type": "document",
+      "source_file": "docs/rustdesk-self-hosted-and-remote-access-analysis.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "docs_rustdesk_self_hosted_and_remote_access_analysis_2_hasil_pengujian_konektivitas_lintas_jaringan",
+      "community": 11,
+      "community_name": "Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote",
+      "norm_label": "2. hasil pengujian konektivitas lintas jaringan"
+    },
+    {
+      "label": "3. Analisis Mengapa Solusi Tunnel Tertentu Tidak Bisa",
+      "file_type": "document",
+      "source_file": "docs/rustdesk-self-hosted-and-remote-access-analysis.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "docs_rustdesk_self_hosted_and_remote_access_analysis_3_analisis_mengapa_solusi_tunnel_tertentu_tidak_bisa",
+      "community": 11,
+      "community_name": "Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote",
+      "norm_label": "3. analisis mengapa solusi tunnel tertentu tidak bisa"
+    },
+    {
+      "label": "4. Opsi Solusi Rekomendasi Selanjutnya",
+      "file_type": "document",
+      "source_file": "docs/rustdesk-self-hosted-and-remote-access-analysis.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "docs_rustdesk_self_hosted_and_remote_access_analysis_4_opsi_solusi_rekomendasi_selanjutnya",
+      "community": 11,
+      "community_name": "Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote",
+      "norm_label": "4. opsi solusi rekomendasi selanjutnya"
+    },
+    {
+      "label": "Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote",
+      "file_type": "document",
+      "source_file": "docs/rustdesk-self-hosted-and-remote-access-analysis.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_rustdesk_self_hosted_and_remote_access_analysis_analisis_panduan_rustdesk_self_hosted_batasan_jaringan_solusi_remote",
+      "community": 11,
+      "community_name": "Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote",
+      "norm_label": "analisis & panduan rustdesk self-hosted, batasan jaringan, & solusi remote"
+    },
+    {
+      "label": "agent-brain-and-graphify-synergy-guide.md",
+      "file_type": "document",
+      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_agent_brain_and_graphify_synergy_guide",
+      "community": 12,
+      "community_name": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
+      "norm_label": "agent-brain-and-graphify-synergy-guide.md"
+    },
+    {
+      "label": "\ud83d\udee1\ufe0f Best Practices & Git Management",
+      "file_type": "document",
+      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "docs_agent_brain_and_graphify_synergy_guide_best_practices_git_management",
+      "community": 12,
+      "community_name": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
+      "norm_label": "\ud83d\udee1\ufe0f best practices & git management"
+    },
+    {
+      "label": "\ud83c\udfaf Mengapa Keduanya Diperlukan Bersama?",
+      "file_type": "document",
+      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_agent_brain_and_graphify_synergy_guide_mengapa_keduanya_diperlukan_bersama",
+      "community": 12,
+      "community_name": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
+      "norm_label": "\ud83c\udfaf mengapa keduanya diperlukan bersama?"
+    },
+    {
+      "label": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
+      "file_type": "document",
+      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
+      "community": 12,
+      "community_name": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
+      "norm_label": "\ud83e\udde0\ud83d\udd78\ufe0f panduan sinergi: agent-brain & graphify"
+    },
+    {
+      "label": "\ud83d\udd04 Siklus Alur Kerja Sinergis (The Synergy Lifecycle)",
+      "file_type": "document",
+      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "docs_agent_brain_and_graphify_synergy_guide_siklus_alur_kerja_sinergis_the_synergy_lifecycle",
+      "community": 12,
+      "community_name": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
+      "norm_label": "\ud83d\udd04 siklus alur kerja sinergis (the synergy lifecycle)"
+    },
+    {
+      "label": "1. PHASE READ (BOOTING)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "agents_1_phase_read_booting",
+      "community": 13,
+      "community_name": "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)",
+      "norm_label": "1. phase read (booting)"
+    },
+    {
+      "label": "2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "agents_2_phase_code_intelligence_graphify_integration",
+      "community": 13,
+      "community_name": "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)",
+      "norm_label": "2. phase code intelligence (graphify integration)"
+    },
+    {
+      "label": "3. PHASE WRITE (HANDOFF / COMPLETION)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "agents_3_phase_write_handoff_completion",
+      "community": 13,
+      "community_name": "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)",
+      "norm_label": "3. phase write (handoff / completion)"
+    },
+    {
+      "label": "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents_sop_protokol_memori_agent_permanent_immutable",
+      "community": 13,
+      "community_name": "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)",
+      "norm_label": "sop & protokol memori agent (permanent & immutable)"
+    },
+    {
+      "label": "install-graphify-hook.sh",
+      "file_type": "code",
+      "source_file": "scripts/install-graphify-hook.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_install_graphify_hook",
+      "community": 14,
+      "community_name": "install-graphify-hook.sh",
+      "norm_label": "install-graphify-hook.sh"
+    },
+    {
+      "label": "install-graphify-hook.sh script",
+      "file_type": "code",
+      "source_file": "scripts/install-graphify-hook.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_install_graphify_hook_sh__entry",
+      "community": 14,
+      "community_name": "install-graphify-hook.sh",
+      "norm_label": "install-graphify-hook.sh script"
     },
     {
       "label": "universal-web-push-notification-service.md",
@@ -675,6 +991,17 @@
       "norm_label": "dokumentasi proyek: arsip-imo"
     },
     {
+      "label": "tailshare-linux-mint-installation.md",
+      "file_type": "document",
+      "source_file": "docs/tailshare-linux-mint-installation.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_tailshare_linux_mint_installation",
+      "community": 5,
+      "community_name": "Panduan Instalasi & Konfigurasi TailShare di Linux Mint",
+      "norm_label": "tailshare-linux-mint-installation.md"
+    },
+    {
       "label": "1. Prasyarat Sistem",
       "file_type": "document",
       "source_file": "docs/tailshare-linux-mint-installation.md",
@@ -766,7 +1093,7 @@
       "label": "\u2328\ufe0f 2. Standar Aliases Sistem (`~/.bash_aliases`)",
       "file_type": "document",
       "source_file": "docs/linux-mint-developer-workflow-customizations.md",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "docs_linux_mint_developer_workflow_customizations_2_standar_aliases_sistem_bash_aliases",
       "community": 6,
@@ -777,7 +1104,7 @@
       "label": "\ud83d\uddc2\ufe0f 3. Symlink & Integrasi File Manager (Nemo)",
       "file_type": "document",
       "source_file": "docs/linux-mint-developer-workflow-customizations.md",
-      "source_location": "L79",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "docs_linux_mint_developer_workflow_customizations_3_symlink_integrasi_file_manager_nemo",
       "community": 6,
@@ -810,7 +1137,7 @@
       "label": "\ud83d\udcda Indeks Dokumentasi (`docs/`)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L66",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "readme_indeks_dokumentasi_docs",
       "community": 7,
@@ -818,48 +1145,26 @@
       "norm_label": "\ud83d\udcda indeks dokumentasi (`docs/`)"
     },
     {
-      "label": "\ud83d\ude80 Progress & Checklist Pekerjaan",
+      "label": "\ud83d\ude80 Progress & Task Aktif",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L15",
+      "source_location": "L33",
       "_origin": "ast",
-      "id": "readme_progress_checklist_pekerjaan",
+      "id": "readme_progress_task_aktif",
       "community": 7,
       "community_name": "Agent Brain - Central Context & Workspace",
-      "norm_label": "\ud83d\ude80 progress & checklist pekerjaan"
+      "norm_label": "\ud83d\ude80 progress & task aktif"
     },
     {
-      "label": "\ud83d\udcdd Ringkasan Konteks Terakhir",
+      "label": "\ud83d\udccc Status Sistem & Lingkungan Aktif",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L39",
+      "source_location": "L11",
       "_origin": "ast",
-      "id": "readme_ringkasan_konteks_terakhir",
+      "id": "readme_status_sistem_lingkungan_aktif",
       "community": 7,
       "community_name": "Agent Brain - Central Context & Workspace",
-      "norm_label": "\ud83d\udcdd ringkasan konteks terakhir"
-    },
-    {
-      "label": "\ud83d\udccc Status Proyek & Lingkungan Saat Ini",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "readme_status_proyek_lingkungan_saat_ini",
-      "community": 7,
-      "community_name": "Agent Brain - Central Context & Workspace",
-      "norm_label": "\ud83d\udccc status proyek & lingkungan saat ini"
-    },
-    {
-      "label": "system-environment-and-ports.md",
-      "file_type": "document",
-      "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_system_environment_and_ports",
-      "community": 8,
-      "community_name": "Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access",
-      "norm_label": "system-environment-and-ports.md"
+      "norm_label": "\ud83d\udccc status sistem & lingkungan aktif"
     },
     {
       "label": "1. Lingkungan Sistem (Environment)",
@@ -884,43 +1189,21 @@
       "norm_label": "2. port sistem terpesan lokal (local reserved ports)"
     },
     {
-      "label": "2. Port Sistem Terpesan (Reserved Ports)",
+      "label": "3. Remote Access Utama: Cloudflare Tunnel & Direct DNS Multi-Subdomain",
       "file_type": "document",
       "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L9",
+      "source_location": "L28",
       "_origin": "ast",
+      "id": "docs_system_environment_and_ports_3_remote_access_utama_cloudflare_tunnel_direct_dns_multi_subdomain",
       "community": 8,
       "community_name": "Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access",
-      "norm_label": "2. port sistem terpesan (reserved ports)",
-      "id": "docs_system_environment_and_ports_2_port_sistem_terpesan_reserved_ports"
-    },
-    {
-      "label": "3. Remote Access Utama: Cloudflare Tunnel Multi-Subdomain",
-      "file_type": "document",
-      "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "docs_system_environment_and_ports_3_remote_access_utama_cloudflare_tunnel_multi_subdomain",
-      "community": 8,
-      "community_name": "Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access",
-      "norm_label": "3. remote access utama: cloudflare tunnel multi-subdomain"
-    },
-    {
-      "label": "3. Repositori & Proyek Utama dalam Sistem",
-      "file_type": "document",
-      "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L18",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access",
-      "norm_label": "3. repositori & proyek utama dalam sistem",
-      "id": "docs_system_environment_and_ports_3_repositori_proyek_utama_dalam_sistem"
+      "norm_label": "3. remote access utama: cloudflare tunnel & direct dns multi-subdomain"
     },
     {
       "label": "4. Remote Access Privat Cadangan: Tailscale (Jaringan Privat Saja)",
       "file_type": "document",
       "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L45",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "docs_system_environment_and_ports_4_remote_access_privat_cadangan_tailscale_jaringan_privat_saja",
       "community": 8,
@@ -931,7 +1214,7 @@
       "label": "5. Repositori & Proyek Utama dalam Sistem",
       "file_type": "document",
       "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L54",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "docs_system_environment_and_ports_5_repositori_proyek_utama_dalam_sistem",
       "community": 8,
@@ -939,26 +1222,15 @@
       "norm_label": "5. repositori & proyek utama dalam sistem"
     },
     {
-      "label": "Konfigurasi Cloudflare Tunnel:",
+      "label": "Konfigurasi Cloudflare:",
       "file_type": "document",
       "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L37",
+      "source_location": "L40",
       "_origin": "ast",
-      "id": "docs_system_environment_and_ports_konfigurasi_cloudflare_tunnel",
+      "id": "docs_system_environment_and_ports_konfigurasi_cloudflare",
       "community": 8,
       "community_name": "Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access",
-      "norm_label": "konfigurasi cloudflare tunnel:"
-    },
-    {
-      "label": "Spesifikasi Lingkungan Sistem & Port Terpesan",
-      "file_type": "document",
-      "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access",
-      "norm_label": "spesifikasi lingkungan sistem & port terpesan",
-      "id": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan"
+      "norm_label": "konfigurasi cloudflare:"
     },
     {
       "label": "Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access",
@@ -1002,42 +1274,64 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agents",
-      "target": "agents_sop_protokol_memori_agent"
+      "target": "agents_sop_protokol_memori_agent_permanent_immutable",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
-      "source_location": "L18",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "agents_sop_protokol_memori_agent",
-      "target": "agents_2_phase_code_intelligence_graphify_integration"
+      "source": "agents_sop_protokol_memori_agent_permanent_immutable",
+      "target": "agents_2_phase_code_intelligence_graphify_integration",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
-      "source_location": "L22",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "agents_sop_protokol_memori_agent",
-      "target": "agents_3_phase_write_handoff_completion"
+      "source": "agents_sop_protokol_memori_agent_permanent_immutable",
+      "target": "agents_3_phase_write_handoff_completion",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
-      "source_location": "L5",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "agents_sop_protokol_memori_agent",
-      "target": "agents_1_phase_read_booting"
+      "source": "agents_sop_protokol_memori_agent_permanent_immutable",
+      "target": "agents_1_phase_read_booting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude",
+      "target": "claude_claude_md_central_agent_memory_protocols",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_claude_md_central_agent_memory_protocols",
+      "target": "claude_key_rules",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1046,9 +1340,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_agent_brain_and_graphify_synergy_guide",
-      "target": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify"
+      "target": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1057,9 +1351,20 @@
       "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
-      "target": "docs_agent_brain_and_graphify_synergy_guide_siklus_alur_kerja_sinergis_the_synergy_lifecycle"
+      "target": "docs_agent_brain_and_graphify_synergy_guide_siklus_alur_kerja_sinergis_the_synergy_lifecycle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
+      "target": "docs_agent_brain_and_graphify_synergy_guide_best_practices_git_management",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1068,9 +1373,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
-      "target": "docs_agent_brain_and_graphify_synergy_guide_mengapa_keduanya_diperlukan_bersama"
+      "target": "docs_agent_brain_and_graphify_synergy_guide_mengapa_keduanya_diperlukan_bersama",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1079,9 +1384,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project",
-      "target": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo"
+      "target": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1090,9 +1395,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_2_tech_stack"
+      "target": "docs_arsip_imo_project_2_tech_stack",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1101,9 +1406,9 @@
       "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_3_aturan_batasan_permanen_constraints"
+      "target": "docs_arsip_imo_project_3_aturan_batasan_permanen_constraints",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1112,9 +1417,9 @@
       "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_4_arsitektur_navigasi_aplikasi"
+      "target": "docs_arsip_imo_project_4_arsitektur_navigasi_aplikasi",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1123,9 +1428,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_1_metadata_repositori_cabang"
+      "target": "docs_arsip_imo_project_1_metadata_repositori_cabang",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1134,9 +1439,9 @@
       "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_5_tata_letak_grid_kontrol_kalender_2x2_grid"
+      "target": "docs_arsip_imo_project_5_tata_letak_grid_kontrol_kalender_2x2_grid",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1145,9 +1450,9 @@
       "source_location": "L43",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_6_verifikasi_prosedur_pengujian"
+      "target": "docs_arsip_imo_project_6_verifikasi_prosedur_pengujian",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1156,9 +1461,9 @@
       "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_7_workflow_pengiriman_delivery"
+      "target": "docs_arsip_imo_project_7_workflow_pengiriman_delivery",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1167,9 +1472,9 @@
       "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
-      "target": "docs_arsip_imo_project_8_riwayat_commit_terkait"
+      "target": "docs_arsip_imo_project_8_riwayat_commit_terkait",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1178,9 +1483,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_drive_d_projects_catalog",
-      "target": "docs_drive_d_projects_catalog_katalog_proyek_repositori_drive_d"
+      "target": "docs_drive_d_projects_catalog_katalog_proyek_repositori_drive_d",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1189,9 +1494,9 @@
       "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_drive_d_projects_catalog_katalog_proyek_repositori_drive_d",
-      "target": "docs_drive_d_projects_catalog_2_direktori_proyek_aplikasi_non_git_infrastruktur_drive_d"
+      "target": "docs_drive_d_projects_catalog_2_direktori_proyek_aplikasi_non_git_infrastruktur_drive_d",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1200,9 +1505,75 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_drive_d_projects_catalog_katalog_proyek_repositori_drive_d",
-      "target": "docs_drive_d_projects_catalog_1_repositori_utama_proyek_aktif_git_repositories"
+      "target": "docs_drive_d_projects_catalog_1_repositori_utama_proyek_aktif_git_repositories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/git-post-commit-graphify-hook.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_git_post_commit_graphify_hook",
+      "target": "docs_git_post_commit_graphify_hook_panduan_git_post_commit_hook_auto_sync_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/git-post-commit-graphify-hook.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_git_post_commit_graphify_hook_panduan_git_post_commit_hook_auto_sync_graphify",
+      "target": "docs_git_post_commit_graphify_hook_isi_script_hook_git_hooks_post_commit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/git-post-commit-graphify-hook.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_git_post_commit_graphify_hook_panduan_git_post_commit_hook_auto_sync_graphify",
+      "target": "docs_git_post_commit_graphify_hook_cara_pemasangan_otomatis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/git-post-commit-graphify-hook.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_git_post_commit_graphify_hook_panduan_git_post_commit_hook_auto_sync_graphify",
+      "target": "docs_git_post_commit_graphify_hook_mengapa_memakai_hook_ini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/history/completed-milestones-archive.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_history_completed_milestones_archive",
+      "target": "docs_history_completed_milestones_archive_arsip_milestone_riwayat_proyek_yang_telah_selesai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/history/completed-milestones-archive.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_history_completed_milestones_archive_arsip_milestone_riwayat_proyek_yang_telah_selesai",
+      "target": "docs_history_completed_milestones_archive_selesai_per_15_agustus_2026",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1211,20 +1582,20 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_linux_mint_developer_workflow_customizations",
-      "target": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases"
+      "target": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/linux-mint-developer-workflow-customizations.md",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases",
-      "target": "docs_linux_mint_developer_workflow_customizations_2_standar_aliases_sistem_bash_aliases"
+      "target": "docs_linux_mint_developer_workflow_customizations_2_standar_aliases_sistem_bash_aliases",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1233,20 +1604,97 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases",
-      "target": "docs_linux_mint_developer_workflow_customizations_1_paket_utilitas_cli_yang_terpasang"
+      "target": "docs_linux_mint_developer_workflow_customizations_1_paket_utilitas_cli_yang_terpasang",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/linux-mint-developer-workflow-customizations.md",
-      "source_location": "L79",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_linux_mint_developer_workflow_customizations_linux_mint_developer_workflow_customizations_aliases",
-      "target": "docs_linux_mint_developer_workflow_customizations_3_symlink_integrasi_file_manager_nemo"
+      "target": "docs_linux_mint_developer_workflow_customizations_3_symlink_integrasi_file_manager_nemo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_mentari_server_debian_infrastructure",
+      "target": "docs_mentari_server_debian_infrastructure_spesifikasi_infrastruktur_server_mentari_server",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_mentari_server_debian_infrastructure_2_jaringan_akses_remote",
+      "target": "docs_mentari_server_debian_infrastructure_konfigurasi_ssh_client_ssh_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_mentari_server_debian_infrastructure_spesifikasi_infrastruktur_server_mentari_server",
+      "target": "docs_mentari_server_debian_infrastructure_2_jaringan_akses_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_mentari_server_debian_infrastructure_spesifikasi_infrastruktur_server_mentari_server",
+      "target": "docs_mentari_server_debian_infrastructure_3_web_gui_cloudflare_tunnel_akses_global_24_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_mentari_server_debian_infrastructure_spesifikasi_infrastruktur_server_mentari_server",
+      "target": "docs_mentari_server_debian_infrastructure_4_hak_akses_persistensi_layanan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_mentari_server_debian_infrastructure_spesifikasi_infrastruktur_server_mentari_server",
+      "target": "docs_mentari_server_debian_infrastructure_5_cara_akses_eksekusi_perintah",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/mentari-server-debian-infrastructure.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_mentari_server_debian_infrastructure_spesifikasi_infrastruktur_server_mentari_server",
+      "target": "docs_mentari_server_debian_infrastructure_1_spesifikasi_hardware_sistem_operasi",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1255,9 +1703,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation",
-      "target": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification"
+      "target": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1266,97 +1714,97 @@
       "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi",
-      "target": "docs_mt5_docker_forex_trading_automation_a_container_docker_mt5_dashboard_docker_compose_yml"
+      "target": "docs_mt5_docker_forex_trading_automation_a_container_docker_mt5_dashboard_docker_compose_yml",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L62",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi",
-      "target": "docs_mt5_docker_forex_trading_automation_b_lingkungan_python_di_dalam_wine"
+      "target": "docs_mt5_docker_forex_trading_automation_b_lingkungan_python_di_dalam_wine",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L70",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi",
-      "target": "docs_mt5_docker_forex_trading_automation_c_bot_python_logic_mt5_config_bot_py"
+      "target": "docs_mt5_docker_forex_trading_automation_c_bot_python_logic_mt5_config_bot_py",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L79",
+      "source_location": "L80",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi",
-      "target": "docs_mt5_docker_forex_trading_automation_d_cloudflare_worker_push_backend_cf_push_backend"
+      "target": "docs_mt5_docker_forex_trading_automation_d_cloudflare_worker_push_backend_cf_push_backend",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L102",
+      "source_location": "L103",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
-      "target": "docs_mt5_docker_forex_trading_automation_2_mendaftarkan_iphone_pwa_push"
+      "target": "docs_mt5_docker_forex_trading_automation_2_mendaftarkan_iphone_pwa_push",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L107",
+      "source_location": "L108",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
-      "target": "docs_mt5_docker_forex_trading_automation_3_layanan_auto_start_24_7_systemd_service"
+      "target": "docs_mt5_docker_forex_trading_automation_3_layanan_auto_start_24_7_systemd_service",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L120",
+      "source_location": "L121",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
-      "target": "docs_mt5_docker_forex_trading_automation_4_deploy_update_worker_bila_ada_perubahan"
+      "target": "docs_mt5_docker_forex_trading_automation_4_deploy_update_worker_bila_ada_perubahan",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L95",
+      "source_location": "L96",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
-      "target": "docs_mt5_docker_forex_trading_automation_1_menjalankan_container_mt5"
+      "target": "docs_mt5_docker_forex_trading_automation_1_menjalankan_container_mt5",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L128",
+      "source_location": "L129",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification",
-      "target": "docs_mt5_docker_forex_trading_automation_keuntungan_menggunakan_cloudflare_workers"
+      "target": "docs_mt5_docker_forex_trading_automation_keuntungan_menggunakan_cloudflare_workers",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1365,9 +1813,9 @@
       "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification",
-      "target": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi"
+      "target": "docs_mt5_docker_forex_trading_automation_2_komponen_detail_konfigurasi",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1376,20 +1824,20 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification",
-      "target": "docs_mt5_docker_forex_trading_automation_1_arsitektur_keseluruhan"
+      "target": "docs_mt5_docker_forex_trading_automation_1_arsitektur_keseluruhan",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/mt5-docker-forex-trading-automation.md",
-      "source_location": "L93",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_mt5_docker_forex_trading_automation_setup_arsitektur_automasi_trading_mt5_docker_exness_cloudflare_workers_push_notification",
-      "target": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji"
+      "target": "docs_mt5_docker_forex_trading_automation_3_cara_menjalankan_menguji",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1398,9 +1846,64 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_readme",
-      "target": "docs_readme_dokumentasi_agent_brain"
+      "target": "docs_readme_dokumentasi_agent_brain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/rustdesk-self-hosted-and-remote-access-analysis.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_rustdesk_self_hosted_and_remote_access_analysis",
+      "target": "docs_rustdesk_self_hosted_and_remote_access_analysis_analisis_panduan_rustdesk_self_hosted_batasan_jaringan_solusi_remote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/rustdesk-self-hosted-and-remote-access-analysis.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_rustdesk_self_hosted_and_remote_access_analysis_analisis_panduan_rustdesk_self_hosted_batasan_jaringan_solusi_remote",
+      "target": "docs_rustdesk_self_hosted_and_remote_access_analysis_2_hasil_pengujian_konektivitas_lintas_jaringan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/rustdesk-self-hosted-and-remote-access-analysis.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_rustdesk_self_hosted_and_remote_access_analysis_analisis_panduan_rustdesk_self_hosted_batasan_jaringan_solusi_remote",
+      "target": "docs_rustdesk_self_hosted_and_remote_access_analysis_3_analisis_mengapa_solusi_tunnel_tertentu_tidak_bisa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/rustdesk-self-hosted-and-remote-access-analysis.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_rustdesk_self_hosted_and_remote_access_analysis_analisis_panduan_rustdesk_self_hosted_batasan_jaringan_solusi_remote",
+      "target": "docs_rustdesk_self_hosted_and_remote_access_analysis_4_opsi_solusi_rekomendasi_selanjutnya",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/rustdesk-self-hosted-and-remote-access-analysis.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_rustdesk_self_hosted_and_remote_access_analysis_analisis_panduan_rustdesk_self_hosted_batasan_jaringan_solusi_remote",
+      "target": "docs_rustdesk_self_hosted_and_remote_access_analysis_1_arsitektur_konfigurasi_server_rustdesk_lokal",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1409,9 +1912,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification",
-      "target": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser"
+      "target": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1420,9 +1923,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_2_arsitektur_komponen",
-      "target": "docs_safari_ios_web_push_notification_a_client_frontend_public"
+      "target": "docs_safari_ios_web_push_notification_a_client_frontend_public",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1431,9 +1934,9 @@
       "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_2_arsitektur_komponen",
-      "target": "docs_safari_ios_web_push_notification_b_server_backend_server_js"
+      "target": "docs_safari_ios_web_push_notification_b_server_backend_server_js",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1442,9 +1945,9 @@
       "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_3_contoh_implementasi_kode",
-      "target": "docs_safari_ios_web_push_notification_sw_js"
+      "target": "docs_safari_ios_web_push_notification_sw_js",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1453,9 +1956,9 @@
       "source_location": "L83",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_3_contoh_implementasi_kode",
-      "target": "docs_safari_ios_web_push_notification_server_js_node_js_backend"
+      "target": "docs_safari_ios_web_push_notification_server_js_node_js_backend",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1464,9 +1967,9 @@
       "source_location": "L130",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser",
-      "target": "docs_safari_ios_web_push_notification_4_lokasi_prototype_pengujian"
+      "target": "docs_safari_ios_web_push_notification_4_lokasi_prototype_pengujian",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1475,9 +1978,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser",
-      "target": "docs_safari_ios_web_push_notification_2_arsitektur_komponen"
+      "target": "docs_safari_ios_web_push_notification_2_arsitektur_komponen",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1486,9 +1989,9 @@
       "source_location": "L47",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser",
-      "target": "docs_safari_ios_web_push_notification_3_contoh_implementasi_kode"
+      "target": "docs_safari_ios_web_push_notification_3_contoh_implementasi_kode",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1497,20 +2000,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_safari_ios_web_push_notification_spesifikasi_panduan_implementasi_web_push_notification_safari_ios_browser",
-      "target": "docs_safari_ios_web_push_notification_1_persyaratan_khusus_ios_safari_apple_web_push"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "docs_system_environment_and_ports",
-      "target": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan"
+      "target": "docs_safari_ios_web_push_notification_1_persyaratan_khusus_ios_safari_apple_web_push",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1527,45 +2019,12 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L37",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "docs_system_environment_and_ports_3_remote_access_utama_cloudflare_tunnel_multi_subdomain",
-      "target": "docs_system_environment_and_ports_konfigurasi_cloudflare_tunnel",
+      "source": "docs_system_environment_and_ports_3_remote_access_utama_cloudflare_tunnel_direct_dns_multi_subdomain",
+      "target": "docs_system_environment_and_ports_konfigurasi_cloudflare",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L18",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan",
-      "target": "docs_system_environment_and_ports_3_repositori_proyek_utama_dalam_sistem"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan",
-      "target": "docs_system_environment_and_ports_1_lingkungan_sistem_environment"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_port_terpesan",
-      "target": "docs_system_environment_and_ports_2_port_sistem_terpesan_reserved_ports"
     },
     {
       "relation": "contains",
@@ -1582,11 +2041,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_reserved_ports_remote_access",
-      "target": "docs_system_environment_and_ports_3_remote_access_utama_cloudflare_tunnel_multi_subdomain",
+      "target": "docs_system_environment_and_ports_3_remote_access_utama_cloudflare_tunnel_direct_dns_multi_subdomain",
       "confidence_score": 1.0
     },
     {
@@ -1604,7 +2063,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L45",
+      "source_location": "L47",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_reserved_ports_remote_access",
@@ -1615,7 +2074,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/system-environment-and-ports.md",
-      "source_location": "L54",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_system_environment_and_ports_spesifikasi_lingkungan_sistem_reserved_ports_remote_access",
@@ -1629,9 +2088,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation",
-      "target": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint"
+      "target": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1640,9 +2099,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
-      "target": "docs_tailshare_linux_mint_installation_2_clone_repositori_install_dependensi"
+      "target": "docs_tailshare_linux_mint_installation_2_clone_repositori_install_dependensi",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1651,9 +2110,9 @@
       "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
-      "target": "docs_tailshare_linux_mint_installation_3_menjalankan_server_secara_manual_pengujian"
+      "target": "docs_tailshare_linux_mint_installation_3_menjalankan_server_secara_manual_pengujian",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1662,9 +2121,9 @@
       "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
-      "target": "docs_tailshare_linux_mint_installation_4_konfigurasi_auto_start_systemd_background_service"
+      "target": "docs_tailshare_linux_mint_installation_4_konfigurasi_auto_start_systemd_background_service",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1673,9 +2132,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
-      "target": "docs_tailshare_linux_mint_installation_1_prasyarat_sistem"
+      "target": "docs_tailshare_linux_mint_installation_1_prasyarat_sistem",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1684,9 +2143,9 @@
       "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_tailshare_linux_mint_installation_panduan_instalasi_konfigurasi_tailshare_di_linux_mint",
-      "target": "docs_tailshare_linux_mint_installation_5_membuat_desktop_shortcut_di_linux_mint_desktop"
+      "target": "docs_tailshare_linux_mint_installation_5_membuat_desktop_shortcut_di_linux_mint_desktop",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1695,9 +2154,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service",
-      "target": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7"
+      "target": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1706,9 +2165,9 @@
       "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_1_arsitektur_terpusat_central_notification_hub",
-      "target": "docs_universal_web_push_notification_service_detail_endpoint"
+      "target": "docs_universal_web_push_notification_service_detail_endpoint",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1717,9 +2176,9 @@
       "source_location": "L116",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
-      "target": "docs_universal_web_push_notification_service_e_shell_bash_curl_cron_job"
+      "target": "docs_universal_web_push_notification_service_e_shell_bash_curl_cron_job",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1728,9 +2187,9 @@
       "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
-      "target": "docs_universal_web_push_notification_service_a_python_requests_urllib_standar"
+      "target": "docs_universal_web_push_notification_service_a_python_requests_urllib_standar",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1739,9 +2198,9 @@
       "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
-      "target": "docs_universal_web_push_notification_service_b_javascript_typescript_node_js"
+      "target": "docs_universal_web_push_notification_service_b_javascript_typescript_node_js",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1750,9 +2209,9 @@
       "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
-      "target": "docs_universal_web_push_notification_service_c_php_laravel"
+      "target": "docs_universal_web_push_notification_service_c_php_laravel",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1761,9 +2220,9 @@
       "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
-      "target": "docs_universal_web_push_notification_service_d_golang"
+      "target": "docs_universal_web_push_notification_service_d_golang",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1772,9 +2231,9 @@
       "source_location": "L126",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7",
-      "target": "docs_universal_web_push_notification_service_3_mendaftarkan_perangkat_baru_client_pwa"
+      "target": "docs_universal_web_push_notification_service_3_mendaftarkan_perangkat_baru_client_pwa",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1783,9 +2242,9 @@
       "source_location": "L137",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7",
-      "target": "docs_universal_web_push_notification_service_4_maintenance_operasional"
+      "target": "docs_universal_web_push_notification_service_4_maintenance_operasional",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1794,9 +2253,9 @@
       "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7",
-      "target": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification"
+      "target": "docs_universal_web_push_notification_service_2_snippet_integrasi_pengirim_trigger_notification",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1805,9 +2264,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "docs_universal_web_push_notification_service_universal_web_push_notification_service_cloudflare_workers_24_7",
-      "target": "docs_universal_web_push_notification_service_1_arsitektur_terpusat_central_notification_hub"
+      "target": "docs_universal_web_push_notification_service_1_arsitektur_terpusat_central_notification_hub",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1816,53 +2275,53 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_agent_brain_central_context_workspace"
+      "target": "readme_agent_brain_central_context_workspace",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L15",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "readme_agent_brain_central_context_workspace",
-      "target": "readme_progress_checklist_pekerjaan"
+      "target": "readme_status_sistem_lingkungan_aktif",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L36",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "readme_agent_brain_central_context_workspace",
-      "target": "readme_ringkasan_konteks_terakhir"
+      "target": "readme_progress_task_aktif",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L54",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "readme_agent_brain_central_context_workspace",
-      "target": "readme_indeks_dokumentasi_docs"
+      "target": "readme_indeks_dokumentasi_docs",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L7",
+      "source_file": "scripts/install-graphify-hook.sh",
+      "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme_agent_brain_central_context_workspace",
-      "target": "readme_status_proyek_lingkungan_saat_ini"
+      "source": "scripts_install_graphify_hook",
+      "target": "scripts_install_graphify_hook_sh__entry",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1871,20 +2330,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_arsip_imo_project"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "AGENTS.md",
-      "source_location": "L11",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "agents",
-      "target": "docs_system_environment_and_ports"
+      "target": "readme",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1893,9 +2341,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_safari_ios_web_push_notification"
+      "target": "docs_system_environment_and_ports",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1904,9 +2352,9 @@
       "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_mt5_docker_forex_trading_automation"
+      "target": "docs_agent_brain_and_graphify_synergy_guide",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1915,9 +2363,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_universal_web_push_notification_service"
+      "target": "docs_universal_web_push_notification_service",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1926,97 +2374,130 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_agent_brain_and_graphify_synergy_guide"
+      "target": "docs_mt5_docker_forex_trading_automation",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
-      "source_location": "L8",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_tailshare_linux_mint_installation"
+      "target": "docs_safari_ios_web_push_notification",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
-      "source_location": "L9",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "agents",
-      "target": "docs_drive_d_projects_catalog"
+      "target": "docs_tailshare_linux_mint_installation",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L55",
+      "source_file": "AGENTS.md",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme",
-      "target": "docs_linux_mint_developer_workflow_customizations"
+      "source": "agents",
+      "target": "docs_drive_d_projects_catalog",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L56",
+      "source_file": "AGENTS.md",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme",
-      "target": "docs_agent_brain_and_graphify_synergy_guide"
+      "source": "agents",
+      "target": "docs_arsip_imo_project",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
-      "source_file": "README.md",
+      "source_file": "AGENTS.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents",
+      "target": "docs_linux_mint_developer_workflow_customizations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents",
+      "target": "docs_git_post_commit_graphify_hook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents",
+      "target": "docs_history_completed_milestones_archive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude",
+      "target": "agents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude",
+      "target": "readme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/system-environment-and-ports.md",
       "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme",
-      "target": "docs_universal_web_push_notification_service"
+      "source": "docs_system_environment_and_ports",
+      "target": "docs_mentari_server_debian_infrastructure",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L58",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "readme",
-      "target": "docs_mt5_docker_forex_trading_automation"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L59",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme",
-      "target": "docs_safari_ios_web_push_notification"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L60",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme",
-      "target": "docs_tailshare_linux_mint_installation"
+      "target": "docs_rustdesk_self_hosted_and_remote_access_analysis",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -2025,20 +2506,9 @@
       "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "readme",
-      "target": "docs_drive_d_projects_catalog"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L62",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "readme",
-      "target": "docs_arsip_imo_project"
+      "target": "docs_mentari_server_debian_infrastructure",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -2047,11 +2517,121 @@
       "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "readme",
-      "target": "docs_system_environment_and_ports"
+      "target": "docs_history_completed_milestones_archive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_system_environment_and_ports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_agent_brain_and_graphify_synergy_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_git_post_commit_graphify_hook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_universal_web_push_notification_service",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_mt5_docker_forex_trading_automation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_safari_ios_web_push_notification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_tailshare_linux_mint_installation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_drive_d_projects_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_arsip_imo_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_linux_mint_developer_workflow_customizations",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "44350581b2dd58ea0d96a1db504c7312289f2860"
+  "built_at_commit": "21297224f70196177e885ed929fd3ca717bf2154"
 }
