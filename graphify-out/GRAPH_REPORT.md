@@ -1,16 +1,16 @@
 # Graph Report - agent-brain  (2026-08-16)
 
 ## Corpus Check
-- 18 files · ~7,491 words
+- 17 files · ~6,850 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 114 nodes · 124 edges · 15 communities (13 shown, 2 thin omitted)
+- 108 nodes · 118 edges · 14 communities (12 shown, 2 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `21297224`
+- Built from commit: `66d33251`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,9 +26,8 @@
 - Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access
 - docs/README.md
 - Spesifikasi Infrastruktur Server: `mentari-server`
-- Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote
+- 🪝 Panduan Git Post-Commit Hook: Auto-Sync Graphify
 - 🧠🕸️ Panduan Sinergi: agent-brain & graphify
-- SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)
 - install-graphify-hook.sh
 
 ## God Nodes (most connected - your core abstractions)
@@ -40,8 +39,8 @@
 6. `Setup & Arsitektur Automasi Trading MT5 (Docker + Exness + Cloudflare Workers Push Notification)` - 5 edges
 7. `📦 2. Komponen & Detail Konfigurasi` - 5 edges
 8. `⚡ 3. Cara Menjalankan & Menguji` - 5 edges
-9. `Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote` - 5 edges
-10. `Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)` - 5 edges
+9. `Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)` - 5 edges
+10. `Universal Web Push Notification Service (Cloudflare Workers 24/7)` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -49,11 +48,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (15 total, 2 thin omitted)
+## Communities (14 total, 2 thin omitted)
 
 ### Community 0 - "README.md"
 Cohesion: 0.14
-Nodes (11): CLAUDE.md - Central Agent Memory & Protocols, Key Rules:, 1. Repositori Utama & Proyek Aktif (Git Repositories), 2. Direktori Proyek & Aplikasi Non-Git / Infrastruktur Drive D:, Katalog Proyek & Repositori Drive D:, 🚀 Cara Pemasangan Otomatis, 🛠️ Isi Script Hook (`.git/hooks/post-commit`), 🎯 Mengapa Memakai Hook Ini? (+3 more)
+Nodes (11): 1. PHASE READ (BOOTING), 2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION), 3. PHASE WRITE (HANDOFF / COMPLETION), SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE), CLAUDE.md - Central Agent Memory & Protocols, Key Rules:, 1. Repositori Utama & Proyek Aktif (Git Repositories), 2. Direktori Proyek & Aplikasi Non-Git / Infrastruktur Drive D: (+3 more)
 
 ### Community 1 - "📦 2. Komponen & Detail Konfigurasi"
 Cohesion: 0.14
@@ -85,26 +84,22 @@ Nodes (4): Agent Brain - Central Context & Workspace, 📚 Indeks Dokumentasi (`
 
 ### Community 8 - "Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access"
 Cohesion: 0.29
-Nodes (7): 1. Lingkungan Sistem (Environment), 2. Port Sistem Terpesan Lokal (Local Reserved Ports), 3. Remote Access Utama: Cloudflare Tunnel & Direct DNS Multi-Subdomain, 4. Remote Access Privat Cadangan: Tailscale (Jaringan Privat Saja), 5. Repositori & Proyek Utama dalam Sistem, Konfigurasi Cloudflare:, Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access
+Nodes (7): 1. Lingkungan Sistem (Environment), 2. Port Sistem Terpesan Lokal (Local Reserved Ports), 3. Remote Access Utama: Cloudflare Tunnel Multi-Subdomain, 4. Remote Access Privat: Tailscale (Direct IP & Direct LAN), 5. Repositori & Proyek Utama dalam Sistem, Konfigurasi Cloudflare Tunnel:, Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access
 
 ### Community 10 - "Spesifikasi Infrastruktur Server: `mentari-server`"
 Cohesion: 0.29
 Nodes (7): 1. Spesifikasi Hardware & Sistem Operasi, 2. Jaringan & Akses Remote, 3. Web GUI & Cloudflare Tunnel (Akses Global 24/7), 4. Hak Akses & Persistensi Layanan, 5. Cara Akses & Eksekusi Perintah, Konfigurasi SSH Client (`~/.ssh/config`):, Spesifikasi Infrastruktur Server: `mentari-server`
 
-### Community 11 - "Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote"
-Cohesion: 0.33
-Nodes (5): 1. Arsitektur & Konfigurasi Server RustDesk Lokal, 2. Hasil Pengujian Konektivitas Lintas Jaringan, 3. Analisis Mengapa Solusi Tunnel Tertentu Tidak Bisa, 4. Opsi Solusi Rekomendasi Selanjutnya, Analisis & Panduan RustDesk Self-Hosted, Batasan Jaringan, & Solusi Remote
+### Community 11 - "🪝 Panduan Git Post-Commit Hook: Auto-Sync Graphify"
+Cohesion: 0.40
+Nodes (4): 🚀 Cara Pemasangan Otomatis, 🛠️ Isi Script Hook (`.git/hooks/post-commit`), 🎯 Mengapa Memakai Hook Ini?, 🪝 Panduan Git Post-Commit Hook: Auto-Sync Graphify
 
 ### Community 12 - "🧠🕸️ Panduan Sinergi: agent-brain & graphify"
 Cohesion: 0.40
 Nodes (4): 🛡️ Best Practices & Git Management, 🎯 Mengapa Keduanya Diperlukan Bersama?, 🧠🕸️ Panduan Sinergi: agent-brain & graphify, 🔄 Siklus Alur Kerja Sinergis (The Synergy Lifecycle)
 
-### Community 13 - "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)"
-Cohesion: 0.50
-Nodes (4): 1. PHASE READ (BOOTING), 2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION), 3. PHASE WRITE (HANDOFF / COMPLETION), SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)
-
 ## Knowledge Gaps
-- **72 isolated node(s):** `install-graphify-hook.sh script`, `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)`, `3. PHASE WRITE (HANDOFF / COMPLETION)`, `Key Rules:` (+67 more)
+- **68 isolated node(s):** `install-graphify-hook.sh script`, `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)`, `3. PHASE WRITE (HANDOFF / COMPLETION)`, `Key Rules:` (+63 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -112,10 +107,10 @@ Nodes (4): 1. PHASE READ (BOOTING), 2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRA
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Dokumentasi Proyek: Arsip-IMO` connect `Dokumentasi Proyek: Arsip-IMO` to `README.md`?**
-  _High betweenness centrality (0.132) - this node is a cross-community bridge._
+  _High betweenness centrality (0.139) - this node is a cross-community bridge._
 - **What connects `install-graphify-hook.sh script`, `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)` to the rest of the system?**
-  _72 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _68 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `README.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.1368421052631579 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14035087719298245 - nodes in this community are weakly interconnected._
 - **Should `📦 2. Komponen & Detail Konfigurasi` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._

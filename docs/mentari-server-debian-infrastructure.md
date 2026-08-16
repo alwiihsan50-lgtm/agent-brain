@@ -63,11 +63,20 @@ Host mentari-server
    - `cloudflared.service` ➔ `enabled` (Active)
    - Server otomatis pulih dan dapat diakses publik maupun privat segera setelah restart / mati listrik.
 3. **Tailscale Key Expiry:** Dinonaktifkan (*Disabled*) di konsol admin Tailscale untuk menjaga koneksi permanen.
+4. **Wake-on-LAN (WoL) Persistence:**
+   - Service: `wol-enable.service` (`/etc/systemd/system/wol-enable.service`)
+   - Command: `/sbin/ethtool -s enp2s0 wol g`
+   - Status: `enabled` & `active`
 
 ---
 
-## 5. Cara Akses & Eksekusi Perintah
+## 5. Cara Akses, Wake-on-LAN & Eksekusi Perintah
 ```bash
+# Nyalakan mentari-server dari PC lokal via Wake-on-LAN (Magic Packet)
+wake-mentari
+# Atau kirim packet sekaligus cek status ping otomatis
+wake-mentari-check
+
 # Akses remote langsung via alias
 ssh mentari-server
 
