@@ -25,19 +25,29 @@ Dokumentasi terpusat untuk PC Server mandiri (`mentari-server`) yang terhubung d
 
 ## 2. Jaringan & Akses Remote
 - **Tailscale Mesh IP:** `100.109.208.27`
-- **Subnet IP LAN:** `192.168.100.7` / `192.168.101.243`
+- **Subnet IP LAN:** `192.168.101.243` (Routing via MikroTik `192.168.100.7`, latensi <0.5ms)
+- **Ethernet Interface & MAC:** `enp2s0` ➔ `00:e0:4c:bf:02:e1` (Realtek RTL8111 Gigabit)
 - **SSH Port:** `22` (OpenSSH Server)
-- **Host Alias Lokal (Windows & Linux):** `mentari-server`
+- **Host Alias Lokal (Workstation):** `mentari-server`
 - **Autentikasi Kunci:** Public key `id_termius_rsa.pub` terpasang di `~/.ssh/authorized_keys`
 
 ### Konfigurasi SSH Client (`~/.ssh/config`):
 ```ssh-config
 Host mentari-server
+    HostName 192.168.101.243
+    User mentari
+    IdentityFile ~/.ssh/id_termius_rsa
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    StrictHostKeyChecking accept-new
+
+Host mentari-tailscale
     HostName 100.109.208.27
     User mentari
     IdentityFile ~/.ssh/id_termius_rsa
     ServerAliveInterval 60
     ServerAliveCountMax 3
+    StrictHostKeyChecking accept-new
 ```
 
 ---

@@ -26,7 +26,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-16 23:54 WIB
+- **Last Updated At:** 2026-08-17 00:00 WIB
 
 ---
 
@@ -40,9 +40,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
   - Konfigurasi systemd unit 24/7 `mt5-trading-bot.service` (auto-restart saat booting server).
   - Setup Cloudflare Tunnel routing untuk `https://dashboard.abbas.my.id` (Port 8080) dan `https://vnc.abbas.my.id` (Port 3000) dengan proteksi Zero Trust PIN OTP.
 - [x] **Konfigurasi Wake-on-LAN (WoL) `mentari-server`:**
-  - Identifikasi MAC LAN `d4:01:c3:48:3f:06` (Realtek RTL8111 `enp2s0`) pada subnet LAN `192.168.100.0/24`.
+  - Identifikasi MAC LAN `00:e0:4c:bf:02:e1` (Realtek RTL8111 `enp2s0`) pada subnet LAN `192.168.101.243`.
   - Instalasi `ethtool` & pembuatan systemd unit persisten `wol-enable.service` di Debian 13 (`wol g` MagicPacket).
-  - Instalasi `wakeonlan` & penambahan alias shortcut `wake-mentari` serta health check `wake-mentari-check` di Linux Mint workstation.
+  - Instalasi `wakeonlan` & penambahan fungsi shortcut `wake-mentari` serta `wake-mentari-check` di Linux Mint workstation.
 - [x] Optimasi arsitektur **Dual-Engine (`agent-brain` + `graphify`)**:
   - Penambahan klausul **Immutability & Integrity Guardrail** (kebal dari perubahan otomatis oleh model AI yang berganti-ganti).
   - Penambahan aturan **Auto-Init Fallback** (`graphify .` otomatis jika graf belum ada).
