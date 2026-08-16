@@ -53,16 +53,7 @@ Host mentari-server
 
 ---
 
-## 4. RustDesk Self-Hosted ID & Relay Server (24/7)
-- **Direktori:** `/home/mentari/rustdesk-server`
-- **Docker Compose:** `hbbs` (Port 21115-21116) & `hbbr` (Port 21117)
-- **Host Binding IP:** `100.109.208.27`
-- **Server Public Key:** `CUodOW158bTEXHkQdWkcECHVhu9SMstTvaEAHeyRLOo=`
-- **Status:** 🟢 **Running 24/7 Active**
-
----
-
-## 5. Hak Akses & Persistensi Layanan
+## 4. Hak Akses & Persistensi Layanan
 1. **Passwordless Sudo:**
    - Konfigurasi: `/etc/sudoers.d/mentari` (`mentari ALL=(ALL) NOPASSWD:ALL`)
    - Memungkinkan otomatisasi pemeliharaan dan deploy oleh AI Agent tanpa prompt password.

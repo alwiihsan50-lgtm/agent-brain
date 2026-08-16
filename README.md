@@ -20,27 +20,18 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Infisical Secret Vault** | `app.infisical.com` / `infisical` CLI | 🟢 Synced | 13 kredensial infrastruktur E2EE tersimpan di environment `dev` & `prod`. |
 | **Trading Risk Engine** | `mt5_config/bot.py` | 🟢 Aktif | ATR Volatility Grid Multi-pair scanner dengan Dynamic Spacing & Circuit Breaker. |
-| **RustDesk Server** | `Port 21115-21117` / `100.109.208.27` | 🟢 Live | Self-hosted 24/7 RustDesk relay & ID server di `mentari-server` Docker. |
+| **RustDesk Direct Access** | `Port 21112` / `100.110.205.27` | 🟢 Ready | Direct IP & Tailscale remote access (`100.110.205.27:21112` / LAN `192.168.100.61`). |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Single branch `main` stabil terverifikasi. |
 
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-16 20:12 WIB
+- **Last Updated At:** 2026-08-16 23:28 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
-- [x] **Migrasi RustDesk Server ke `mentari-server` (24/7 Dedicated Host):**
-  - Setup Docker Compose `hbbs` & `hbbr` di `mentari-server` (`/home/mentari/rustdesk-server`, port 21115-21117).
-  - Binding Tailscale IP `100.109.208.27` dengan server key `CUodOW158...`.
-  - Re-konfigurasi local RustDesk client di workstation (`1135152995` / `100.110.205.27`) terdaftar sukses ke `mentari-server`.
-- [x] **RustDesk Self-Hosted Server Deployment & Connectivity Analysis:**
-  - Setup Docker Compose `hbbs` & `hbbr` (network mode host IPv4/IPv6, key encryption).
-  - Konfigurasi Cloudflare DNS Record `AAAA` untuk `rustdesk.abbas.my.id` (Direct IPv6 bypass CGNAT).
-  - Verifikasi konektivitas: 🟢 **Sukses 100% via Wi-Fi Lokal (LAN) & Tailscale VPN**.
-  - Analisis kendala Paket Data Seluler (Inbound SPI Firewall modem ISP) & dokumentasi solusi lanjutan di [`docs/rustdesk-self-hosted-and-remote-access-analysis.md`](docs/rustdesk-self-hosted-and-remote-access-analysis.md).
 - [x] Onboarding & konfigurasi infrastruktur **mentari-server** (Debian 13 Trixie, Tailscale SSH, Docker v29.7.2, Passwordless Sudo, persistent auto-start).
 - [x] Setup **Cloudflare Tunnel (`mentari-tunnel`)** 24/7 untuk CasaOS Web GUI di **`https://server.abbas.my.id`** dan **`https://casa.abbas.my.id`** (Auto-SSL HTTPS, systemd persistent).
 - [x] **Migrasi Penuh MT5 Trading Bot & Dashboard ke `mentari-server`:**
@@ -62,7 +53,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ## 📚 Indeks Dokumentasi (`docs/`)
 
 - 📄 [**Infrastruktur mentari-server Debian**](docs/mentari-server-debian-infrastructure.md) — Spesifikasi, remote SSH key, dan manajemen container.
-- 📄 [**Analisis RustDesk Self-Hosted & Remote Access**](docs/rustdesk-self-hosted-and-remote-access-analysis.md) — Setup Docker RustDesk, pengujian LAN/Tailscale/WAN, dan solusi remote.
 - 📄 [**Arsip Milestone & Riwayat Lengkap**](docs/history/completed-milestones-archive.md) — Log lengkap seluruh fitur & milestone terdahulu.
 - 📄 [**System Environment, Ports & Remote Access**](docs/system-environment-and-ports.md) — Port terpesan, Cloudflare Tunnel & Zero Trust.
 - 📄 [**Panduan Sinergi agent-brain & graphify**](docs/agent-brain-and-graphify-synergy-guide.md) — Integrasi memori makro dan knowledge graph mikro.
