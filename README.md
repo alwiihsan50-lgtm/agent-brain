@@ -3,7 +3,7 @@
 Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat penyimpanan dokumentasi bersama untuk seluruh AI Agent lintas platform.
 
 > 🔒 **ATURAN KEKEBALAN PROTOKOL (IMMUTABILITY CONSTRAINT):**
-> Seluruh aturan arsitektur, batasan port (`53317`, `3000`, `8080`), dan sinergi `agent-brain` + `graphify` bersifat **PERMANEN**.
+> Seluruh aturan arsitektur, batasan port (`40506`, `3000`, `8080`), dan sinergi `agent-brain` + `graphify` bersifat **PERMANEN**.
 > Model AI Agent apa pun (Gemini, Claude, GPT, DeepSeek, Antigravity, dll.) **DILARANG KERAS** mengubah atau merusak protokol ini kecuali diminta secara spesifik oleh USER.
 
 ---
@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | :--- | :--- | :--- | :--- |
 | **mentari-server (CasaOS)** | `server.abbas.my.id` / `casa.abbas.my.id` | 🟢 Live | Web GUI Dashboard (Port 80) & Debian 13 Server via Cloudflare Tunnel 24/7. |
 | **Cloudflare Zero Trust** | `*.abbas.my.id` | 🟢 Aktif | Akses remote PIN OTP `alwiihsan50@gmail.com` & sesi persisten **30 Hari**. |
-| **TailShare** | `Port 53317` / `share.abbas.my.id` | 🟢 Running | Live sync folder Drive D (`D:\tailshare`) & GUI Native Electron. |
+| **TailShare** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Live sync folder Drive D (`/media/cuker/Data/tailshare`) & GUI Native Electron. |
 | **MT5 Docker Exness** | `Port 3000` / `mt5.abbas.my.id` | 🟢 Running | Wine Python MetaTrader 5 di `mentari-server` (`/home/mentari/mt5_storage`). |
 | **MT5 Web Dashboard** | `Port 8080` / `dashboard.abbas.my.id` | 🟢 Running | Zero-flicker live monitoring & PWA Standalone Safari iOS (`mentari-server`). |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
@@ -26,12 +26,16 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-17 00:00 WIB
+- **Last Updated At:** 2026-08-17 21:30 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **TailShare Port Migration & Storage Mount Fix:**
+  - Migrasi port default TailShare dari `53317` ke `40506` (Server, Client UI, QR Code, dan Cloudflare Tunnel `share.abbas.my.id`).
+  - Pemulihan & perbaikan mount NTFS Drive D (`/dev/sda1` -> `/media/cuker/Data`) dari kondisi *read-only* (lock Windows Fast Startup) menjadi *read-write* (`ntfs-3g rw`).
+  - Persistensi entri mount di `/etc/fstab` dan pembuatan symlink `/media/cuker/Data1 -> /media/cuker/Data`.
 - [x] Onboarding & konfigurasi infrastruktur **mentari-server** (Debian 13 Trixie, Tailscale SSH, Docker v29.7.2, Passwordless Sudo, persistent auto-start).
 - [x] Setup **Cloudflare Tunnel (`mentari-tunnel`)** 24/7 untuk CasaOS Web GUI di **`https://server.abbas.my.id`** dan **`https://casa.abbas.my.id`** (Auto-SSL HTTPS, systemd persistent).
 - [x] **Migrasi Penuh MT5 Trading Bot & Dashboard ke `mentari-server`:**

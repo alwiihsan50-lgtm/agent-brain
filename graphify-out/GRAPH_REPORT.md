@@ -1,7 +1,7 @@
-# Graph Report - agent-brain  (2026-08-16)
+# Graph Report - agent-brain  (2026-08-17)
 
 ## Corpus Check
-- 17 files · ~6,850 words
+- 17 files · ~7,035 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `66d33251`
+- Built from commit: `ef2c1bc3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -88,7 +88,7 @@ Nodes (7): 1. Lingkungan Sistem (Environment), 2. Port Sistem Terpesan Lokal (Lo
 
 ### Community 10 - "Spesifikasi Infrastruktur Server: `mentari-server`"
 Cohesion: 0.29
-Nodes (7): 1. Spesifikasi Hardware & Sistem Operasi, 2. Jaringan & Akses Remote, 3. Web GUI & Cloudflare Tunnel (Akses Global 24/7), 4. Hak Akses & Persistensi Layanan, 5. Cara Akses & Eksekusi Perintah, Konfigurasi SSH Client (`~/.ssh/config`):, Spesifikasi Infrastruktur Server: `mentari-server`
+Nodes (7): 1. Spesifikasi Hardware & Sistem Operasi, 2. Jaringan & Akses Remote, 3. Web GUI & Cloudflare Tunnel (Akses Global 24/7), 4. Hak Akses & Persistensi Layanan, 5. Cara Akses, Wake-on-LAN & Eksekusi Perintah, Konfigurasi SSH Client (`~/.ssh/config`):, Spesifikasi Infrastruktur Server: `mentari-server`
 
 ### Community 11 - "🪝 Panduan Git Post-Commit Hook: Auto-Sync Graphify"
 Cohesion: 0.40

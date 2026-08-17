@@ -1,7 +1,7 @@
 # CLAUDE.md - Central Agent Memory & Protocols
 
 > 🔒 **IMMUTABILITY & INTEGRITY CONSTRAINT:**
-> All rules, architecture guidelines, reserved ports (`53317`, `3000`, `8080`), and Dual-Engine workflow protocols are permanent and binding.
+> All rules, architecture guidelines, reserved ports (`40506`, `3000`, `8080`), and Dual-Engine workflow protocols are permanent and binding.
 > Do NOT modify, bypass, or delete these rules unless explicitly requested by the USER.
 
 Refer to [`AGENTS.md`](AGENTS.md) and [`README.md`](README.md) for full operational protocols.
