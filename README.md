@@ -12,6 +12,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
+| **Cloudflare Manager & DNS** | `abbas.my.id` / Infisical | 🟢 Full Access | Token API Full Access terverifikasi (DNS, Zone, SSL, WAF, Tunnels, Zero Trust, Workers). |
 | **mentari-server (CasaOS)** | `server.abbas.my.id` / `casa.abbas.my.id` | 🟢 Live | Web GUI Dashboard (Port 80) & Debian 13 Server via Cloudflare Tunnel 24/7. |
 | **Cloudflare Zero Trust** | `*.abbas.my.id` | 🟢 Aktif | Akses remote PIN OTP `alwiihsan50@gmail.com` & sesi persisten **30 Hari**. |
 | **TailShare** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Live sync folder Drive D (`/media/cuker/Data/tailshare`) & GUI Native Electron. |
@@ -26,12 +27,16 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-17 21:30 WIB
+- **Last Updated At:** 2026-08-18 00:26 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Cloudflare Manager Role & Full API Access Onboarding:**
+  - Audit hak akses API Cloudflare di seluruh modul (DNS, Zone, Tunnels, Access, Workers, KV, WAF, SSL).
+  - Pembaruan token API Full Access tanpa batasan IP ke Infisical Secret Vault (`dev` & `prod`).
+  - Pemetaan 12 DNS records aktif domain `abbas.my.id` dan dokumentasi arsitektur di `docs/cloudflare-manager-architecture-and-dns-mapping.md`.
 - [x] **TailShare Port Migration & Storage Mount Fix:**
   - Migrasi port default TailShare dari `53317` ke `40506` (Server, Client UI, QR Code, dan Cloudflare Tunnel `share.abbas.my.id`).
   - Pemulihan & perbaikan mount NTFS Drive D (`/dev/sda1` -> `/media/cuker/Data`) dari kondisi *read-only* (lock Windows Fast Startup) menjadi *read-write* (`ntfs-3g rw`).
@@ -54,12 +59,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
   - Pembuatan script dan panduan **Git Post-Commit Hook** auto-sync di `docs/git-post-commit-graphify-hook.md`.
   - **Memory Token-Budgeting:** Arsip milestone lampau dipindahkan ke `docs/history/completed-milestones-archive.md`.
   - Penambahan developer shortcuts di `~/.bash_aliases` (`gf`, `gfu`, `gfq`, `gf-viz`, `brain-sync`, `brain-push`, `wake-mentari`).
-- [ ] *(Siap untuk task / fitur baru dari pengguna)*
+- [ ] *(Siap untuk task / konfigurasi baru dari pengguna)*
 
 ---
 
 ## 📚 Indeks Dokumentasi (`docs/`)
 
+- 📄 [**Cloudflare Manager & DNS Mapping**](docs/cloudflare-manager-architecture-and-dns-mapping.md) — Kredensial Full Access, pemetaan 12 subdomain DNS, dan arsitektur Zero Trust.
 - 📄 [**Infrastruktur mentari-server Debian**](docs/mentari-server-debian-infrastructure.md) — Spesifikasi, remote SSH key, dan manajemen container.
 - 📄 [**Arsip Milestone & Riwayat Lengkap**](docs/history/completed-milestones-archive.md) — Log lengkap seluruh fitur & milestone terdahulu.
 - 📄 [**System Environment, Ports & Remote Access**](docs/system-environment-and-ports.md) — Port terpesan, Cloudflare Tunnel & Zero Trust.
