@@ -27,12 +27,17 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 03:40 WIB
+- **Last Updated At:** 2026-08-19 03:42 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Navigasi Kursor Mouse Mengikuti Arah Swipe (Real-Time Trackpad Mouse):**
+  - Mengonfigurasi geseran 1 jari pada layar TV langsung menggerakkan kursor mouse STB secara *real-time* via `/api/mouse/move` (kernel `/dev/uinput`).
+  - **Ketukan 1 Jari (<12px)**: Menjalankan Klik Kiri (Pilih item).
+  - **Tahan 1 Jari (0.5s)**: Menjalankan Klik Kanan / Tombol Kembali (Android BACK keyevent 4).
+  - **Cubit 2 Jari**: Zoom In / Out hingga 4x dan Pan area gambar.
 - [x] **Penerapan Pure Mouse Mode (Klik Kanan = Tombol Kembali / Back):**
   - Menonaktifkan mode swipe pada layar TV agar tidak sengaja terpencet saat mengklik.
   - Mengonfigurasi **Klik Kiri (Ketuk)** untuk memilih/klik item di TV.
