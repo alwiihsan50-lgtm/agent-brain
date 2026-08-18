@@ -27,12 +27,15 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 00:43 WIB
+- **Last Updated At:** 2026-08-19 00:46 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **De-Google Total STB (Nonaktifkan GMS & GSF):**
+  - Menonaktifkan penuh `com.google.android.gms` (Google Play Services) dan `com.google.android.gsf` (Google Services Framework).
+  - Verifikasi mandiri: SmartTube, TV Bro, Aurora Store, dan UI TV berjalan 100% lancar dengan 0 crash & 0 beban background Google.
 - [x] **Instalasi TV Bro (Browser Android TV Bebas Iklan) & Penggantian Chrome:**
   - Pemasangan versi terbaru **TV Bro v2.1.6** (`com.phlox.tvwebbrowser`) yang dioptimasi khusus remote TV, built-in AdBlocker, dan video player native.
   - Pencopotan Google Chrome (`com.android.chrome`) untuk menghemat ~150 MB penyimpanan dan RAM background.
