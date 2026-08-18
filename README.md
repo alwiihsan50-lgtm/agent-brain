@@ -27,12 +27,16 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 02:14 WIB
+- **Last Updated At:** 2026-08-19 02:25 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Fitur Tombol Bersihkan RAM & Tutup Semua Aplikasi (Web Remote):**
+  - Menambahkan endpoint `POST /api/system/clean-ram` di backend daemon STB (`stb_server`).
+  - Menjalankan `am kill-all`, mematikan proses background non-esensial dengan tetap mempertahankan layanan kritis (RustDesk, Tailscale, TV Launcher, system server), dan membersihkan filesystem drop_caches (`echo 3 > /proc/sys/vm/drop_caches`).
+  - Menambahkan tombol **🧹 Bersihkan RAM** di Top Header Bar dan di baris tombol navigasi utama (Trio: Kembali, Bersihkan, Menu) lengkap dengan haptic feedback & floating toast notification.
 - [x] **Perbaikan Error Pemutaran Video SmartTube (Resolusi DNS & GPU Renderer):**
   - Menguji status Google Services: SmartTube **tidak memerlukan Google Play Services**, namun layanan GMS telah diaktifkan kembali untuk pengujian penuh.
   - Menemukan akar penyebab error pemutaran video:
