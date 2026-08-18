@@ -27,12 +27,16 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 03:55 WIB
+- **Last Updated At:** 2026-08-19 03:57 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Perbaikan Focal-Point Pinch Zoom (Zoom Tepat ke Titik Tengah Cubitan Jari):**
+  - Menghitung titik fokus (*focal center*) `(midX, midY)` dari kedua jari saat mencubit.
+  - Menyesuaikan offset `panOffsetX` dan `panOffsetY` secara dinamis sehingga area gambar yang berada tepat di antara dua jari membesar di tempat (tidak lagi lari ke pojok kiri atas).
+  - Ketika di-zoom out kembali ke 1x, tampilan kembali terpusat penuh.
 - [x] **Trackpad-Style Virtual Cursor (TERVERIFIKASI & DISETUJUI USER - PERMANEN):**
   - Kursor mouse virtual mempertahankan posisinya di layar TV secara presisi.
   - Swipe dari mana saja di layar HP menggerakkan kursor secara mulus (*relative trackpad delta*) 60 FPS tanpa me-refresh frame saat menggeser.
