@@ -27,12 +27,15 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-18 20:13 WIB
+- **Last Updated At:** 2026-08-19 00:20 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Debloat & Optimasi RAM STB RockChip V8_Max (Android 13):**
+  - Pembersihan 15 bloatware pabrik & aplikasi tidak terpakai (`com.cghs.stresstest`, `com.rockchip.devicetest`, `com.charon.rocketfly`, `com.www.intallapp`, `com.abupdate.fota_demo_iot`, `com.android.inputmethod.pinyin`, `com.hkw.simplelauncher`, `com.apkpure.aegon`, `cm.aptoidetv.pt`, `com.android.printspooler`, `com.google.android.printservice.recommendation`, `com.google.android.syncadapters.calendar`, `com.google.android.gms.supervision`, `com.ss.android.ugc.trill`, `com.google.android.youtube.tvkids`).
+  - Pembebasan RAM murni: Free RAM meningkat dari ~86 MB menjadi **~604 MB** (*~1.1 GB total siap pakai*).
 - [x] **Perbaikan Peluncur Aplikasi STB Web Remote (RockChip Android 13):**
   - Identifikasi akar masalah: Perintah `monkey` gagal mengeksekusi launcher pada daemon background Android 13 tanpa TTY dan gagal membedakan intent `LEANBACK_LAUNCHER` vs `LAUNCHER` (contohnya Spotify).
   - Implementasi Native Component Launcher di [`main.go`](file:///home/cuker/Desktop/stb-remote/main.go) menggunakan `cmd package resolve-activity` dan `cmd activity start -n <component>` dengan multi-fallback intent.
