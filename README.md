@@ -27,12 +27,19 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 03:20 WIB
+- **Last Updated At:** 2026-08-19 03:35 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Fitur Fullscreen Mouse Mode, Pinch-to-Zoom & Floating Keyboard:**
+  - Menambahkan tombol **⛶ Layar Penuh** yang memaksimalkan tampilan TV ke 100% layar HP.
+  - **Mouse Mode Terintegrasi**:
+    1. **Klik Kiri**: Ketuk 1 jari untuk klik kiri seketika dengan riak animasi biru.
+    2. **Klik Kanan / Long-Press**: Tahan layar (0.5s) untuk membuka menu konteks Android / klik kanan dengan riak animasi amber + haptic vibration.
+    3. **Pinch-to-Zoom & Pan**: Cubit 2 jari untuk zoom in hingga 4x dan geser (pan) area yang diperbesar.
+    4. **Floating Keyboard HUD**: Tombol keyboard melayang di mode fullscreen untuk mengetik langsung ke TV, tombol hapus, dan tombol navigasi instan.
 - [x] **Fitur Toggle Switch Auto-Refresh 0.5s (2 FPS Eco-Mode):**
   - Menambahkan switch toggle `⚡ Auto 0.5s` di Tab **Cuplikan Layar TV** Web Remote.
   - Memakai resolusi ringan (640x360) dan non-blocking recursive loop yang otomatis me-refresh snapshot setiap 500ms saat tab aktif.
