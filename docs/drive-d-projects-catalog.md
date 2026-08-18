@@ -16,8 +16,9 @@ Dokumen ini berisi pemetaan lengkap seluruh proyek, repositori Git, lokasi direk
 | **cloud-clipboard-file-bridge** | `D:\Projects\cloud-clipboard-file-bridge` | `https://github.com/alwiihsan50-lgtm/claudbridge.git` | `main` | Cloud bridge & clipboard file sharing. |
 | **engineering-kit-ai-prd** | `D:\Projects\engineering-kit-ai-prd-prompt-generator` | `https://github.com/alwiihsan50-lgtm/prdgenerator.git` | `main` | AI PRD Prompt Generator (Engineering Kit). |
 | **master-prompt-ai-prd** | `D:\Projects\master-prompt-ai-prd-prompt-generator` | `https://github.com/alwiihsan50-lgtm/specforge.git` | `main` | SpecForge / Master Prompt PRD Generator. |
-| **SaveBuddy** | `D:\Projects\SaveBuddy` | `https://github.com/alwiihsan50-lgtm/savebuddy.git` | `main` | Aplikasi SaveBuddy. |
-| **savebuddy-ai** | `D:\Projects\savebuddy-ai` | `https://github.com/alwiihsan50-lgtm/savebuddy-ai.git` | `main` | SaveBuddy AI backend/integration. |
+| **Catat Uang Bersama** | `https://catat-uang-bersama.vercel.app` | - | `main` | Aplikasi pencatatan keuangan bersama keluarga aktif. |
+| ~~SaveBuddy~~ | `D:\Projects\SaveBuddy` | *(Decommissioned)* | - | Digantikan oleh Catat Uang Bersama. Backup data tersimpan di folder backups. |
+| ~~savebuddy-ai~~ | `D:\Projects\savebuddy-ai` | *(Decommissioned)* | - | Decommissioned & repo/deployment dihapus. |
 | **SIMPKK-DIGITAL** | `D:\Projects\simpkk-digital` | `https://github.com/alwiihsan50-lgtm/SIMPKK-DIGITAL.git` | `main` | Sistem Informasi PKK Digital. |
 | **timemark-photo-adjustment** | `D:\Projects\timemark-photo-adjustment` | `https://github.com/alwiihsan50-lgtm/timemark-photo-adjustment.git` | `master` | Penyesuaian foto timemark. |
 | **CompAcc** | `D:\Projects\CompAcc` | `https://github.com/lpkpmentaribussiness/CompAcc.git` | `main` | Proyek Akuntansi Komputer Mentari Business. |
