@@ -27,12 +27,16 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-18 00:26 WIB
+- **Last Updated At:** 2026-08-18 13:13 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Migrasi Data Keuangan SaveBuddy -> Catat Uang Bersama:**
+  - Ekstraksi 120 transaksi dari `DompetPapaMamaAbbasTsaqiy` (Turso `savebuddy`).
+  - Pembuatan file backup arsip di SaveBuddy (`backup_*.json`, `backup_*.csv`, `backup_*.sql`).
+  - Impor dan sinkronisasi 120 transaksi lengkap dengan 18 kategori ke database `catat-uang-bersama` pada **Buku Keuangan Mama** (`https://catat-uang-bersama.vercel.app`).
 - [x] **Cloudflare Manager Role & Full API Access Onboarding:**
   - Audit hak akses API Cloudflare di seluruh modul (DNS, Zone, Tunnels, Access, Workers, KV, WAF, SSL).
   - Pembaruan token API Full Access tanpa batasan IP ke Infisical Secret Vault (`dev` & `prod`).
