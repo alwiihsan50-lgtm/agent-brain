@@ -27,12 +27,17 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 03:35 WIB
+- **Last Updated At:** 2026-08-19 03:40 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Penerapan Pure Mouse Mode (Klik Kanan = Tombol Kembali / Back):**
+  - Menonaktifkan mode swipe pada layar TV agar tidak sengaja terpencet saat mengklik.
+  - Mengonfigurasi **Klik Kiri (Ketuk)** untuk memilih/klik item di TV.
+  - Mengonfigurasi **Klik Kanan (Tahan 0.5s)** langsung mengeksekusi **Tombol Kembali (Android BACK keyevent 4)** pada STB.
+  - Mempertahankan gesture cubit 2 jari (Pinch to Zoom & Pan) dan Floating Keyboard di mode Layar Penuh.
 - [x] **Fitur Fullscreen Mouse Mode, Pinch-to-Zoom & Floating Keyboard:**
   - Menambahkan tombol **⛶ Layar Penuh** yang memaksimalkan tampilan TV ke 100% layar HP.
   - **Mouse Mode Terintegrasi**:
