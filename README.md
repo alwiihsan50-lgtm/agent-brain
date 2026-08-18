@@ -27,11 +27,20 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 04:05 WIB
+- **Last Updated At:** 2026-08-19 04:17 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
+
+- [x] **Pemulihan & Penataan Toolbar Tombol Layar Penuh & Auto FPS (0.5s):**
+  - Menyusun ulang tata letak header dan toolbar Tab **Layar TV** agar 100% responsif di seluruh ukuran layar HP (bebas terpotong/overflow).
+  - Menempatkan tombol **`⛶ Layar Penuh`** di baris atas dengan aksen gradien biru yang menonjol dan selalu terlihat.
+  - Membuat bilah toolbar dedicated 3 kolom:
+    - **`⚡ Auto 0.5s (2 FPS)`** — Switch toggle On/Off dengan feedback visual glow hijau neon saat aktif.
+    - **`🔄 Ambil Foto`** — Snapshot manual seketika dengan animasi putar.
+    - **`⇅ Scroll Pad`** — Membuka pop-up kontrol navigasi 4 arah.
+  - Menambahkan tombol kontrol **`⚡ Auto`** dan **`🔄 Foto`** langsung di dalam HUD Fullscreen mode.
 
 - [x] **Widget Pop-up Scroll 4 Arah (Floating Scroll Pad):**
   - Mengganti gesture 2 jari dengan tombol pop-up **`⇅ Scroll`** yang bersih dan bebas bug.
