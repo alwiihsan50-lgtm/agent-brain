@@ -27,12 +27,16 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 03:57 WIB
+- **Last Updated At:** 2026-08-19 04:01 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Gesture Scroll 2 Jari (1 Jari Tahan + 1 Jari Swipe untuk Scroll H/V):**
+  - Mengonfigurasi gesture scroll: 1 jari menahan layar (*anchor*), lalu 1 jari lainnya menggeser (*swipe*) secara vertikal maupun horizontal.
+  - Sinyal scroll (`REL_WHEEL` / `REL_HWHEEL`) dikirim secara *real-time* ke STB via `/api/mouse/scroll`.
+  - Jika kedua jari bergerak menjauh/mendekat secara aktif, sistem secara cerdas beralih ke mode **Pinch to Zoom & Pan**.
 - [x] **Perbaikan Focal-Point Pinch Zoom (Zoom Tepat ke Titik Tengah Cubitan Jari):**
   - Menghitung titik fokus (*focal center*) `(midX, midY)` dari kedua jari saat mencubit.
   - Menyesuaikan offset `panOffsetX` dan `panOffsetY` secara dinamis sehingga area gambar yang berada tepat di antara dua jari membesar di tempat (tidak lagi lari ke pojok kiri atas).
