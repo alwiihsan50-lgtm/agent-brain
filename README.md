@@ -27,12 +27,16 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 00:46 WIB
+- **Last Updated At:** 2026-08-19 00:52 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Tuning Kernel & Jaringan Tingkat Lanjut STB (Low-Latency 4K Streaming):**
+  - Menonaktifkan mode hemat daya Wi-Fi (`power_save off`) untuk menghilangkan latency spike & micro-buffering saat streaming video bit-rate tinggi.
+  - Optimalisasi GPU Rendering Pipeline via `SkiaGL` dan SurfaceFlinger `latch_unsignaled=1` untuk animasi UI bebas stutter.
+  - Penataan parameter kernel Linux `vm.swappiness: 60`, `vfs_cache_pressure: 50`, dan persistensi autostart di `/data/local/tmp/stb_autostart.sh`.
 - [x] **De-Google Total STB (Nonaktifkan GMS & GSF):**
   - Menonaktifkan penuh `com.google.android.gms` (Google Play Services) dan `com.google.android.gsf` (Google Services Framework).
   - Verifikasi mandiri: SmartTube, TV Bro, Aurora Store, dan UI TV berjalan 100% lancar dengan 0 crash & 0 beban background Google.
