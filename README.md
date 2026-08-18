@@ -27,16 +27,20 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 04:01 WIB
+- **Last Updated At:** 2026-08-19 04:05 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
-- [x] **Gesture Scroll 2 Jari (1 Jari Tahan + 1 Jari Swipe untuk Scroll H/V):**
-  - Mengonfigurasi gesture scroll: 1 jari menahan layar (*anchor*), lalu 1 jari lainnya menggeser (*swipe*) secara vertikal maupun horizontal.
-  - Sinyal scroll (`REL_WHEEL` / `REL_HWHEEL`) dikirim secara *real-time* ke STB via `/api/mouse/scroll`.
-  - Jika kedua jari bergerak menjauh/mendekat secara aktif, sistem secara cerdas beralih ke mode **Pinch to Zoom & Pan**.
+- [x] **Widget Pop-up Scroll 4 Arah (Floating Scroll Pad):**
+  - Mengganti gesture 2 jari dengan tombol pop-up **`⇅ Scroll`** yang bersih dan bebas bug.
+  - Membuka widget kompas 4 arah melayang di tengah layar:
+    - ⬆️ **Scroll Atas** (`REL_WHEEL +3` / DPAD_UP)
+    - ⬇️ **Scroll Bawah** (`REL_WHEEL -3` / DPAD_DOWN)
+    - ⬅️ **Scroll Kiri** (`REL_HWHEEL -3` / DPAD_LEFT)
+    - ➡️ **Scroll Kanan** (`REL_HWHEEL +3` / DPAD_RIGHT)
+  - Multi-touch 2 jari kembali 100% didedikasikan untuk **Pinch to Zoom & Pan** yang mulus tanpa konflik gesture.
 - [x] **Perbaikan Focal-Point Pinch Zoom (Zoom Tepat ke Titik Tengah Cubitan Jari):**
   - Menghitung titik fokus (*focal center*) `(midX, midY)` dari kedua jari saat mencubit.
   - Menyesuaikan offset `panOffsetX` dan `panOffsetY` secara dinamis sehingga area gambar yang berada tepat di antara dua jari membesar di tempat (tidak lagi lari ke pojok kiri atas).
