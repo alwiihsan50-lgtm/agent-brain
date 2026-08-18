@@ -27,12 +27,17 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 03:45 WIB
+- **Last Updated At:** 2026-08-19 03:48 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Trackpad-Style Virtual Cursor (Mengikuti Gerakan Swipe Tanpa Melompat):**
+  - Kursor mouse virtual mempertahankan posisinya di layar TV secara presisi.
+  - User dapat meletakkan jari di mana saja pada layar HP dan menggeser (swipe), kursor akan meluncur secara proporsional mengikuti arah gerakan jari (*relative trackpad delta*).
+  - Ketukan di mana saja mengeksekusi **Klik Kiri** tepat pada posisi kursor saat ini.
+  - Tahan 0.5s di mana saja mengeksekusi **Klik Kanan / Tombol Kembali (BACK)** pada posisi kursor saat ini.
 - [x] **Implementasi Kursor Mouse Virtual di Web (Super Smooth 60 FPS):**
   - Menambahkan elemen kursor mouse visual langsung di atas layar TV Web Remote (`#virtual-mouse-cursor`).
   - Mengeliminasi refresh layar saat menggeser/swipe mouse, sehingga pergerakan kursor 100% mulus (60 FPS) tanpa jeda loading atau kedipan layar.
