@@ -27,12 +27,16 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 03:42 WIB
+- **Last Updated At:** 2026-08-19 03:45 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Implementasi Kursor Mouse Virtual di Web (Super Smooth 60 FPS):**
+  - Menambahkan elemen kursor mouse visual langsung di atas layar TV Web Remote (`#virtual-mouse-cursor`).
+  - Mengeliminasi refresh layar saat menggeser/swipe mouse, sehingga pergerakan kursor 100% mulus (60 FPS) tanpa jeda loading atau kedipan layar.
+  - Refresh layar hanya dipicu satu kali setelah user mengetuk/klik atau menahan (Back), untuk memperlihatkan perubahan hasil aksi di TV.
 - [x] **Navigasi Kursor Mouse Mengikuti Arah Swipe (Real-Time Trackpad Mouse):**
   - Mengonfigurasi geseran 1 jari pada layar TV langsung menggerakkan kursor mouse STB secara *real-time* via `/api/mouse/move` (kernel `/dev/uinput`).
   - **Ketukan 1 Jari (<12px)**: Menjalankan Klik Kiri (Pilih item).
