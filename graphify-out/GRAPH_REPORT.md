@@ -1,16 +1,16 @@
-# Graph Report - agent-brain  (2026-08-17)
+# Graph Report - agent-brain  (2026-08-18)
 
 ## Corpus Check
-- 17 files · ~7,035 words
+- 18 files · ~7,729 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 108 nodes · 118 edges · 14 communities (12 shown, 2 thin omitted)
+- 115 nodes · 125 edges · 15 communities (13 shown, 2 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ef2c1bc3`
+- Built from commit: `45662890`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -27,20 +27,21 @@
 - docs/README.md
 - Spesifikasi Infrastruktur Server: `mentari-server`
 - 🪝 Panduan Git Post-Commit Hook: Auto-Sync Graphify
-- 🧠🕸️ Panduan Sinergi: agent-brain & graphify
+- Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS
+- SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)
 - install-graphify-hook.sh
 
 ## God Nodes (most connected - your core abstractions)
 1. `Dokumentasi Proyek: Arsip-IMO` - 9 edges
-2. `Spesifikasi Infrastruktur Server: `mentari-server`` - 6 edges
-3. `Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access` - 6 edges
-4. `Panduan Instalasi & Konfigurasi TailShare di Linux Mint` - 6 edges
-5. `💻 2. Snippet Integrasi Pengirim (Trigger Notification)` - 6 edges
-6. `Setup & Arsitektur Automasi Trading MT5 (Docker + Exness + Cloudflare Workers Push Notification)` - 5 edges
-7. `📦 2. Komponen & Detail Konfigurasi` - 5 edges
-8. `⚡ 3. Cara Menjalankan & Menguji` - 5 edges
-9. `Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)` - 5 edges
-10. `Universal Web Push Notification Service (Cloudflare Workers 24/7)` - 5 edges
+2. `Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS` - 6 edges
+3. `Spesifikasi Infrastruktur Server: `mentari-server`` - 6 edges
+4. `Spesifikasi Lingkungan Sistem, Reserved Ports, & Remote Access` - 6 edges
+5. `Panduan Instalasi & Konfigurasi TailShare di Linux Mint` - 6 edges
+6. `💻 2. Snippet Integrasi Pengirim (Trigger Notification)` - 6 edges
+7. `Setup & Arsitektur Automasi Trading MT5 (Docker + Exness + Cloudflare Workers Push Notification)` - 5 edges
+8. `📦 2. Komponen & Detail Konfigurasi` - 5 edges
+9. `⚡ 3. Cara Menjalankan & Menguji` - 5 edges
+10. `Spesifikasi & Panduan Implementasi Web Push Notification (Safari iOS & Browser)` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -48,11 +49,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (14 total, 2 thin omitted)
+## Communities (15 total, 2 thin omitted)
 
 ### Community 0 - "README.md"
 Cohesion: 0.14
-Nodes (11): 1. PHASE READ (BOOTING), 2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION), 3. PHASE WRITE (HANDOFF / COMPLETION), SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE), CLAUDE.md - Central Agent Memory & Protocols, Key Rules:, 1. Repositori Utama & Proyek Aktif (Git Repositories), 2. Direktori Proyek & Aplikasi Non-Git / Infrastruktur Drive D: (+3 more)
+Nodes (11): CLAUDE.md - Central Agent Memory & Protocols, Key Rules:, 🛡️ Best Practices & Git Management, 🎯 Mengapa Keduanya Diperlukan Bersama?, 🧠🕸️ Panduan Sinergi: agent-brain & graphify, 🔄 Siklus Alur Kerja Sinergis (The Synergy Lifecycle), 1. Repositori Utama & Proyek Aktif (Git Repositories), 2. Direktori Proyek & Aplikasi Non-Git / Infrastruktur Drive D: (+3 more)
 
 ### Community 1 - "📦 2. Komponen & Detail Konfigurasi"
 Cohesion: 0.14
@@ -94,12 +95,16 @@ Nodes (7): 1. Spesifikasi Hardware & Sistem Operasi, 2. Jaringan & Akses Remote,
 Cohesion: 0.40
 Nodes (4): 🚀 Cara Pemasangan Otomatis, 🛠️ Isi Script Hook (`.git/hooks/post-commit`), 🎯 Mengapa Memakai Hook Ini?, 🪝 Panduan Git Post-Commit Hook: Auto-Sync Graphify
 
-### Community 12 - "🧠🕸️ Panduan Sinergi: agent-brain & graphify"
-Cohesion: 0.40
-Nodes (4): 🛡️ Best Practices & Git Management, 🎯 Mengapa Keduanya Diperlukan Bersama?, 🧠🕸️ Panduan Sinergi: agent-brain & graphify, 🔄 Siklus Alur Kerja Sinergis (The Synergy Lifecycle)
+### Community 12 - "Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS"
+Cohesion: 0.29
+Nodes (6): 1. Kredensial & Autentikasi API, 2. Cakupan Hak Akses Terverifikasi (*Full Scope Audit*), 3. Pemetaan DNS Records Aktif (`abbas.my.id`), 4. Keamanan Zero Trust & Sesi, 5. Tooling & Perintah Eksekusi Otomatis, Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS
+
+### Community 13 - "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)"
+Cohesion: 0.50
+Nodes (4): 1. PHASE READ (BOOTING), 2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION), 3. PHASE WRITE (HANDOFF / COMPLETION), SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)
 
 ## Knowledge Gaps
-- **68 isolated node(s):** `install-graphify-hook.sh script`, `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)`, `3. PHASE WRITE (HANDOFF / COMPLETION)`, `Key Rules:` (+63 more)
+- **73 isolated node(s):** `install-graphify-hook.sh script`, `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)`, `3. PHASE WRITE (HANDOFF / COMPLETION)`, `Key Rules:` (+68 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -107,10 +112,10 @@ Nodes (4): 🛡️ Best Practices & Git Management, 🎯 Mengapa Keduanya Diperl
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Dokumentasi Proyek: Arsip-IMO` connect `Dokumentasi Proyek: Arsip-IMO` to `README.md`?**
-  _High betweenness centrality (0.139) - this node is a cross-community bridge._
+  _High betweenness centrality (0.131) - this node is a cross-community bridge._
 - **What connects `install-graphify-hook.sh script`, `1. PHASE READ (BOOTING)`, `2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)` to the rest of the system?**
-  _68 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _73 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `README.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.14035087719298245 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1368421052631579 - nodes in this community are weakly interconnected._
 - **Should `📦 2. Komponen & Detail Konfigurasi` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._

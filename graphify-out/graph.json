@@ -15,50 +15,6 @@
       "norm_label": "agents.md"
     },
     {
-      "label": "1. PHASE READ (BOOTING)",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "agents_1_phase_read_booting",
-      "community": 0,
-      "community_name": "README.md",
-      "norm_label": "1. phase read (booting)"
-    },
-    {
-      "label": "2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "agents_2_phase_code_intelligence_graphify_integration",
-      "community": 0,
-      "community_name": "README.md",
-      "norm_label": "2. phase code intelligence (graphify integration)"
-    },
-    {
-      "label": "3. PHASE WRITE (HANDOFF / COMPLETION)",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L33",
-      "_origin": "ast",
-      "id": "agents_3_phase_write_handoff_completion",
-      "community": 0,
-      "community_name": "README.md",
-      "norm_label": "3. phase write (handoff / completion)"
-    },
-    {
-      "label": "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "agents_sop_protokol_memori_agent_permanent_immutable",
-      "community": 0,
-      "community_name": "README.md",
-      "norm_label": "sop & protokol memori agent (permanent & immutable)"
-    },
-    {
       "label": "CLAUDE.md",
       "file_type": "document",
       "source_file": "CLAUDE.md",
@@ -90,6 +46,61 @@
       "community": 0,
       "community_name": "README.md",
       "norm_label": "key rules:"
+    },
+    {
+      "label": "agent-brain-and-graphify-synergy-guide.md",
+      "file_type": "document",
+      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_agent_brain_and_graphify_synergy_guide",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "agent-brain-and-graphify-synergy-guide.md"
+    },
+    {
+      "label": "\ud83d\udee1\ufe0f Best Practices & Git Management",
+      "file_type": "document",
+      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "docs_agent_brain_and_graphify_synergy_guide_best_practices_git_management",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "\ud83d\udee1\ufe0f best practices & git management"
+    },
+    {
+      "label": "\ud83c\udfaf Mengapa Keduanya Diperlukan Bersama?",
+      "file_type": "document",
+      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_agent_brain_and_graphify_synergy_guide_mengapa_keduanya_diperlukan_bersama",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "\ud83c\udfaf mengapa keduanya diperlukan bersama?"
+    },
+    {
+      "label": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
+      "file_type": "document",
+      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "\ud83e\udde0\ud83d\udd78\ufe0f panduan sinergi: agent-brain & graphify"
+    },
+    {
+      "label": "\ud83d\udd04 Siklus Alur Kerja Sinergis (The Synergy Lifecycle)",
+      "file_type": "document",
+      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "docs_agent_brain_and_graphify_synergy_guide_siklus_alur_kerja_sinergis_the_synergy_lifecycle",
+      "community": 0,
+      "community_name": "README.md",
+      "norm_label": "\ud83d\udd04 siklus alur kerja sinergis (the synergy lifecycle)"
     },
     {
       "label": "arsip-imo-project.md",
@@ -499,59 +510,125 @@
       "norm_label": "\ud83e\ude9d panduan git post-commit hook: auto-sync graphify"
     },
     {
-      "label": "agent-brain-and-graphify-synergy-guide.md",
+      "label": "cloudflare-manager-architecture-and-dns-mapping.md",
       "file_type": "document",
-      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide",
+      "id": "docs_cloudflare_manager_architecture_and_dns_mapping",
       "community": 12,
-      "community_name": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
-      "norm_label": "agent-brain-and-graphify-synergy-guide.md"
+      "community_name": "Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS",
+      "norm_label": "cloudflare-manager-architecture-and-dns-mapping.md"
     },
     {
-      "label": "\ud83d\udee1\ufe0f Best Practices & Git Management",
+      "label": "1. Kredensial & Autentikasi API",
       "file_type": "document",
-      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
-      "source_location": "L54",
-      "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide_best_practices_git_management",
-      "community": 12,
-      "community_name": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
-      "norm_label": "\ud83d\udee1\ufe0f best practices & git management"
-    },
-    {
-      "label": "\ud83c\udfaf Mengapa Keduanya Diperlukan Bersama?",
-      "file_type": "document",
-      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide_mengapa_keduanya_diperlukan_bersama",
+      "id": "docs_cloudflare_manager_architecture_and_dns_mapping_1_kredensial_autentikasi_api",
       "community": 12,
-      "community_name": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
-      "norm_label": "\ud83c\udfaf mengapa keduanya diperlukan bersama?"
+      "community_name": "Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS",
+      "norm_label": "1. kredensial & autentikasi api"
     },
     {
-      "label": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
+      "label": "2. Cakupan Hak Akses Terverifikasi (*Full Scope Audit*)",
       "file_type": "document",
-      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "docs_cloudflare_manager_architecture_and_dns_mapping_2_cakupan_hak_akses_terverifikasi_full_scope_audit",
+      "community": 12,
+      "community_name": "Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS",
+      "norm_label": "2. cakupan hak akses terverifikasi (*full scope audit*)"
+    },
+    {
+      "label": "3. Pemetaan DNS Records Aktif (`abbas.my.id`)",
+      "file_type": "document",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "docs_cloudflare_manager_architecture_and_dns_mapping_3_pemetaan_dns_records_aktif_abbas_my_id",
+      "community": 12,
+      "community_name": "Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS",
+      "norm_label": "3. pemetaan dns records aktif (`abbas.my.id`)"
+    },
+    {
+      "label": "4. Keamanan Zero Trust & Sesi",
+      "file_type": "document",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "docs_cloudflare_manager_architecture_and_dns_mapping_4_keamanan_zero_trust_sesi",
+      "community": 12,
+      "community_name": "Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS",
+      "norm_label": "4. keamanan zero trust & sesi"
+    },
+    {
+      "label": "5. Tooling & Perintah Eksekusi Otomatis",
+      "file_type": "document",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "docs_cloudflare_manager_architecture_and_dns_mapping_5_tooling_perintah_eksekusi_otomatis",
+      "community": 12,
+      "community_name": "Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS",
+      "norm_label": "5. tooling & perintah eksekusi otomatis"
+    },
+    {
+      "label": "Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS",
+      "file_type": "document",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide_panduan_sinergi_agent_brain_graphify",
+      "id": "docs_cloudflare_manager_architecture_and_dns_mapping_cloudflare_manager_arsitektur_kredensial_pemetaan_dns",
       "community": 12,
-      "community_name": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
-      "norm_label": "\ud83e\udde0\ud83d\udd78\ufe0f panduan sinergi: agent-brain & graphify"
+      "community_name": "Cloudflare Manager: Arsitektur, Kredensial & Pemetaan DNS",
+      "norm_label": "cloudflare manager: arsitektur, kredensial & pemetaan dns"
     },
     {
-      "label": "\ud83d\udd04 Siklus Alur Kerja Sinergis (The Synergy Lifecycle)",
+      "label": "1. PHASE READ (BOOTING)",
       "file_type": "document",
-      "source_file": "docs/agent-brain-and-graphify-synergy-guide.md",
-      "source_location": "L24",
+      "source_file": "AGENTS.md",
+      "source_location": "L9",
       "_origin": "ast",
-      "id": "docs_agent_brain_and_graphify_synergy_guide_siklus_alur_kerja_sinergis_the_synergy_lifecycle",
-      "community": 12,
-      "community_name": "\ud83e\udde0\ud83d\udd78\ufe0f Panduan Sinergi: agent-brain & graphify",
-      "norm_label": "\ud83d\udd04 siklus alur kerja sinergis (the synergy lifecycle)"
+      "id": "agents_1_phase_read_booting",
+      "community": 13,
+      "community_name": "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)",
+      "norm_label": "1. phase read (booting)"
+    },
+    {
+      "label": "2. PHASE CODE INTELLIGENCE (GRAPHIFY INTEGRATION)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "agents_2_phase_code_intelligence_graphify_integration",
+      "community": 13,
+      "community_name": "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)",
+      "norm_label": "2. phase code intelligence (graphify integration)"
+    },
+    {
+      "label": "3. PHASE WRITE (HANDOFF / COMPLETION)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "agents_3_phase_write_handoff_completion",
+      "community": 13,
+      "community_name": "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)",
+      "norm_label": "3. phase write (handoff / completion)"
+    },
+    {
+      "label": "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents_sop_protokol_memori_agent_permanent_immutable",
+      "community": 13,
+      "community_name": "SOP & PROTOKOL MEMORI AGENT (PERMANENT & IMMUTABLE)",
+      "norm_label": "sop & protokol memori agent (permanent & immutable)"
     },
     {
       "label": "install-graphify-hook.sh",
@@ -1071,7 +1148,7 @@
       "label": "\ud83d\udcda Indeks Dokumentasi (`docs/`)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L61",
+      "source_location": "L66",
       "_origin": "ast",
       "id": "readme_indeks_dokumentasi_docs",
       "community": 7,
@@ -1082,7 +1159,7 @@
       "label": "\ud83d\ude80 Progress & Task Aktif",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "readme_progress_task_aktif",
       "community": 7,
@@ -1408,6 +1485,72 @@
       "_origin": "ast",
       "source": "docs_arsip_imo_project_dokumentasi_proyek_arsip_imo",
       "target": "docs_arsip_imo_project_8_riwayat_commit_terkait",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_cloudflare_manager_architecture_and_dns_mapping",
+      "target": "docs_cloudflare_manager_architecture_and_dns_mapping_cloudflare_manager_arsitektur_kredensial_pemetaan_dns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_cloudflare_manager_architecture_and_dns_mapping_cloudflare_manager_arsitektur_kredensial_pemetaan_dns",
+      "target": "docs_cloudflare_manager_architecture_and_dns_mapping_2_cakupan_hak_akses_terverifikasi_full_scope_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_cloudflare_manager_architecture_and_dns_mapping_cloudflare_manager_arsitektur_kredensial_pemetaan_dns",
+      "target": "docs_cloudflare_manager_architecture_and_dns_mapping_3_pemetaan_dns_records_aktif_abbas_my_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_cloudflare_manager_architecture_and_dns_mapping_cloudflare_manager_arsitektur_kredensial_pemetaan_dns",
+      "target": "docs_cloudflare_manager_architecture_and_dns_mapping_4_keamanan_zero_trust_sesi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_cloudflare_manager_architecture_and_dns_mapping_cloudflare_manager_arsitektur_kredensial_pemetaan_dns",
+      "target": "docs_cloudflare_manager_architecture_and_dns_mapping_5_tooling_perintah_eksekusi_otomatis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/cloudflare-manager-architecture-and-dns-mapping.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_cloudflare_manager_architecture_and_dns_mapping_cloudflare_manager_arsitektur_kredensial_pemetaan_dns",
+      "target": "docs_cloudflare_manager_architecture_and_dns_mapping_1_kredensial_autentikasi_api",
       "confidence_score": 1.0
     },
     {
@@ -2173,7 +2316,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_agent_brain_central_context_workspace",
@@ -2184,7 +2327,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L61",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_agent_brain_central_context_workspace",
@@ -2371,66 +2514,11 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L63",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "docs_mentari_server_debian_infrastructure",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L64",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "docs_history_completed_milestones_archive",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L65",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "docs_system_environment_and_ports",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L66",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "docs_agent_brain_and_graphify_synergy_guide",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L67",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "docs_git_post_commit_graphify_hook",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
       "source_location": "L68",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "docs_universal_web_push_notification_service",
+      "target": "docs_cloudflare_manager_architecture_and_dns_mapping",
       "confidence_score": 1.0
     },
     {
@@ -2441,7 +2529,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "docs_mt5_docker_forex_trading_automation",
+      "target": "docs_mentari_server_debian_infrastructure",
       "confidence_score": 1.0
     },
     {
@@ -2452,7 +2540,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "docs_safari_ios_web_push_notification",
+      "target": "docs_history_completed_milestones_archive",
       "confidence_score": 1.0
     },
     {
@@ -2463,7 +2551,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "docs_tailshare_linux_mint_installation",
+      "target": "docs_system_environment_and_ports",
       "confidence_score": 1.0
     },
     {
@@ -2474,7 +2562,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "docs_drive_d_projects_catalog",
+      "target": "docs_agent_brain_and_graphify_synergy_guide",
       "confidence_score": 1.0
     },
     {
@@ -2485,7 +2573,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "docs_arsip_imo_project",
+      "target": "docs_git_post_commit_graphify_hook",
       "confidence_score": 1.0
     },
     {
@@ -2496,10 +2584,76 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
+      "target": "docs_universal_web_push_notification_service",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_mt5_docker_forex_trading_automation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_safari_ios_web_push_notification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_tailshare_linux_mint_installation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_drive_d_projects_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_arsip_imo_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
       "target": "docs_linux_mint_developer_workflow_customizations",
       "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ef2c1bc39e2b0a6616d9e95246642d0592d3e99e"
+  "built_at_commit": "456628905ef6502f3f1e4e123d6e1fb462e04336"
 }

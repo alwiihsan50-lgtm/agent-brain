@@ -27,12 +27,17 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-18 13:44 WIB
+- **Last Updated At:** 2026-08-18 20:13 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Perbaikan Peluncur Aplikasi STB Web Remote (RockChip Android 13):**
+  - Identifikasi akar masalah: Perintah `monkey` gagal mengeksekusi launcher pada daemon background Android 13 tanpa TTY dan gagal membedakan intent `LEANBACK_LAUNCHER` vs `LAUNCHER` (contohnya Spotify).
+  - Implementasi Native Component Launcher di [`main.go`](file:///home/cuker/Desktop/stb-remote/main.go) menggunakan `cmd package resolve-activity` dan `cmd activity start -n <component>` dengan multi-fallback intent.
+  - Penambahan parameter `data-act` pada aplikasi favorit di [`public/index.html`](file:///home/cuker/Desktop/stb-remote/public/index.html) dan pembaruan fungsi `launchApp()` di [`public/app.js`](file:///home/cuker/Desktop/stb-remote/public/app.js).
+  - Build binary ARM64 (`stb_server_arm64`) dan deployment langsung ke STB (`/vendor/bin/stb_server` & `/data/local/tmp/stb_server`). Verifikasi live berhasil 100%.
 - [x] **Migrasi Data Keuangan SaveBuddy -> Catat Uang Bersama:**
   - Ekstraksi 120 transaksi dari `DompetPapaMamaAbbasTsaqiy` (Turso `savebuddy`).
   - Pembuatan file backup arsip di SaveBuddy (`backup_*.json`, `backup_*.csv`, `backup_*.sql`).
