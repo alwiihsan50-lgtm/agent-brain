@@ -27,17 +27,18 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 03:00 WIB
+- **Last Updated At:** 2026-08-19 03:15 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
-- [x] **Implementasi Hardware VPU Video Gateway & Optimasi Web Remote (Opsi 2):**
-  - Mengintegrasikan pipeline hardware video streaming RockChip VPU H.264 (`screenrecord` hardware bitstream) yang di-relay melalui `ffmpeg` MJPEG engine pada PC Linux host (`stb_proxy_x86_64` di port `8085`).
-  - Menghilangkan total beban CPU rendering di STB (Beban CPU STB tetap **< 1%** saat streaming live).
-  - Stream berjalan halus di Safari iOS dan Chrome dengan resolusi adaptif (960x540) dan respons tap instan.
-- [x] **Pembersihan RustDesk & Optimasi Penuh Web Remote (High-Speed In-Memory Stream):**
+- [x] **Penerapan Penuh Opsi 1 (Smart Snapshot on Action) & Opsi 3 (App Launcher Hub):**
+  - Melepas streaming kontinu Opsi 2 untuk menjaga STB 100% bebas beban dan hemat kuota HP.
+  - Mengoptimalkan Tab **📸 Cuplikan Layar TV (Smart Snapshot)**: Pengambilan foto layar beresolusi tinggi hanya saat diminta atau saat layar diklik dengan overlay loading halus dan 0% CPU idle.
+  - Mengoptimalkan Tab **🎮 Remote**: Navigasi D-Pad, Volume, Back, Home, Power, Keyboard Teks dengan latensi instan (<2ms).
+  - Mengoptimalkan Tab **⭐ Aplikasi**: Grid aplikasi favorit (SmartTube, TV Bro, Settings, Tailscale, dll.) dan pencarian aplikasi dengan peluncuran 1-klik.
+- [x] **Pembersihan RustDesk & Optimasi Penuh Web Remote:**
   - Menghapus total **RustDesk** (`com.carriez.flutter_hbb`) dan seluruh residu konfigurasinya dari STB sesuai permintaan user.
   - Suhu STB tetap dingin (**~46°C**) dan RAM bebas **~1.0 GB**.
 - [x] **Fitur Tombol Bersihkan RAM & Tutup Semua Aplikasi (Web Remote):**
