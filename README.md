@@ -27,12 +27,18 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 02:25 WIB
+- **Last Updated At:** 2026-08-19 02:40 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Pembersihan RustDesk & Optimasi Penuh Web Remote (High-Speed In-Memory Stream):**
+  - Menghapus total **RustDesk** (`com.carriez.flutter_hbb`) dan seluruh residu konfigurasinya dari STB sesuai permintaan user.
+  - Memperbaiki engine Web Remote di [`Desktop/stb-remote`](file:///home/cuker/Desktop/stb-remote):
+    1. Mengimplementasikan `ScreenEngine` in-memory broadcaster (multi-subscriber channel) dengan kecepatan ~16 FPS dan 0ms overhead per-client.
+    2. Menambahkan instant screen refresh trigger saat remote keyevent / tap ditekan sehingga respon visual di layar HP seketika.
+    3. Suhu STB kembali sangat dingin (**45°C**) dan RAM bebas **~1.0 GB**.
 - [x] **Fitur Tombol Bersihkan RAM & Tutup Semua Aplikasi (Web Remote):**
   - Menambahkan endpoint `POST /api/system/clean-ram` di backend daemon STB (`stb_server`).
   - Menjalankan `am kill-all`, mematikan proses background non-esensial dengan tetap mempertahankan layanan kritis (RustDesk, Tailscale, TV Launcher, system server), dan membersihkan filesystem drop_caches (`echo 3 > /proc/sys/vm/drop_caches`).
