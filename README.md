@@ -27,12 +27,17 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 01:11 WIB
+- **Last Updated At:** 2026-08-19 01:21 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Instalasi RustDesk & Tailscale di STB (Remote Desktop 60 FPS Native):**
+  - Memasang **RustDesk v1.4.9 ARM64** (`com.carriez.flutter_hbb`) dan **Tailscale v1.102.2** (`com.tailscale.ipn`).
+  - Mengaktifkan permission Overlay (`SYSTEM_ALERT_WINDOW`) dan Input Accessibility Service (`InputService`).
+  - STB RustDesk Device ID: **`810123690`**.
+  - Hasil audit resource STB: `MemAvailable` tetap melimpah **> 1.02 GB** dan suhu stabil dingin di **46°C**.
 - [x] **Remote Desktop Visual & Tailscale Proxy STB (Zero-Overhead di STB):**
   - Mengimplementasikan endpoint `/api/screen/frame`, `/api/screen/stream` (MJPEG ~3 FPS), `/api/screen/tap`, dan `/api/screen/swipe` di [`Desktop/stb-remote`](file:///home/cuker/Desktop/stb-remote).
   - Menambahkan Tab **Layar TV** di Web Remote dengan viewport interaktif (klik langsung di layar untuk navigasi, swipe untuk scroll) dan quick control bar.
