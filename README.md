@@ -27,16 +27,18 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 01:54 WIB
+- **Last Updated At:** 2026-08-19 02:14 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
-- [x] **Perbaikan Error Pemutaran Video SmartTube (Resolusi DNS Tailscale VPN):**
-  - Mendiagnosis penyebab error pemutaran: konflik antara `Private DNS` (DoT) dan interface `tun1` Tailscale yang menyebabkan `PrivateDnsBroken` & `UnknownHostException` pada host `www.youtube.com`.
-  - Memperbaiki setelan `private_dns_mode: off` dan melakukan persistensi pada `/data/local/tmp/stb_autostart.sh`.
-  - Menguji pemutaran video langsung di SmartTube: `PlaybackActivity` berjalan normal dan lancar dengan latensi DNS 17ms.
+- [x] **Perbaikan Error Pemutaran Video SmartTube (Resolusi DNS & GPU Renderer):**
+  - Menguji status Google Services: SmartTube **tidak memerlukan Google Play Services**, namun layanan GMS telah diaktifkan kembali untuk pengujian penuh.
+  - Menemukan akar penyebab error pemutaran video:
+    1. Konflik `Private DNS` dengan VPN Tailscale -> Diperbaiki dengan `private_dns_mode: off`.
+    2. Properti `debug.hwui.renderer skiagl` tidak kompatibel dengan GPU Mali-450 -> Dikembalikan ke renderer native `opengl`.
+  - SmartTube berjalan lancar dan video teruji diputar normal.
 - [x] **Instalasi & Koneksi RustDesk + Tailscale di STB (Remote Desktop 60 FPS Native):**
   - Memasang **RustDesk v1.4.9 ARM64** (`com.carriez.flutter_hbb`) dan **Tailscale v1.102.2** (`com.tailscale.ipn`).
   - STB terhubung penuh ke jaringan Tailscale dengan IP: **`100.104.214.122`** (node name: `erza`).
