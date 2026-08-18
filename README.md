@@ -27,12 +27,15 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 00:52 WIB
+- **Last Updated At:** 2026-08-19 01:02 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Pembuatan Shortcut Pengaturan Lengkap (Full Android Settings):**
+  - Mengintegrasikan package **SettingsShortcut** (`com.basti564.settingsshortcut`) agar menu Pengaturan Lengkap AOSP Android 13 (`com.android.settings/.Settings`) dapat diakses langsung dari beranda TV dan App Drawer.
+  - Memperbarui susunan slot shortcut beranda pada `HCY Launcher` (`spUtils.xml`) dan tombol Pengaturan pada Web Remote UI ([`Desktop/stb-remote`](file:///home/cuker/Desktop/stb-remote)).
 - [x] **Tuning Kernel & Jaringan Tingkat Lanjut STB (Low-Latency 4K Streaming):**
   - Menonaktifkan mode hemat daya Wi-Fi (`power_save off`) untuk menghilangkan latency spike & micro-buffering saat streaming video bit-rate tinggi.
   - Optimalisasi GPU Rendering Pipeline via `SkiaGL` dan SurfaceFlinger `latch_unsignaled=1` untuk animasi UI bebas stutter.
