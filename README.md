@@ -27,11 +27,15 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 04:20 WIB
+- **Last Updated At:** 2026-08-19 04:30 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
+
+- [x] **Scroll Pad Melayang Dapat Digeser (Draggable) & Auto-Tutup:**
+  - **Draggable:** Pop-up kontrol scroll 4 arah (`#floating-scroll-pad`) kini dapat disentuh/ditahan pada bilah header (`⋮⋮ 📜 Scroll Navigasi`) dan digeser bebas ke posisi mana pun di layar.
+  - **Auto-Dismiss:** Pop-up scroll otomatis langsung tertutup saat pengguna mengetuk/klik di luar area scroll pad (misal di layar TV, background, atau kontrol lain).
 
 - [x] **Auto-Fullscreen Otomatis Saat Membuka Tab Layar TV:**
   - Menghubungkan aktivasi tab **Layar TV** (`tab-screen`) langsung ke mode Fullscreen (`toggleFullscreen(true)`).
