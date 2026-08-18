@@ -38,3 +38,15 @@
   * Jaga [`README.md`](README.md) tetap ringkas (<100 baris) demi efisiensi token. Pindahkan milestone yang telah selesai ke [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md).
 - Jika membuat dokumentasi teknis, kode, atau skema baru, simpan file-nya di dalam direktori `docs/` (contoh: `docs/api-spec.md`) lalu tautkan/link file tersebut di `README.md`.
 - Lakukan `git add`, `git commit -m "..."`, dan `git push` ke repositori `alwiihsan50-lgtm/agent-brain`.
+
+---
+
+### 4. PROTOKOL PERSISTENSI KREDENSIAL & CLI TOKEN (INFISICAL + AGENT-BRAIN)
+- **Auto-Sync ke Secret Vault:** Kapan pun USER menambahkan token baru, API key baru, atau login CLI baru (misal: Cloudflare, Turso, Vercel, Supabase, GitHub, Fly.io, HuggingFace, OpenAI, Anthropic, dll.):
+  1. AI Agent **WAJIB LANGSUNG** menyimpannya ke Infisical Secret Vault untuk kedua environment (`dev` & `prod`):
+     ```bash
+     infisical secrets set KEY_NAME="<token_value>" --env=dev && infisical secrets set KEY_NAME="<token_value>" --env=prod
+     ```
+  2. AI Agent **WAJIB** memperbarui jumlah & status kredensial di tabel [`README.md`](README.md) (kolom Infisical Secret Vault) dan dokumen terkait.
+  3. Lakukan `git add`, `git commit -m "..."`, dan `git push` ke repositori `agent-brain` agar memori tersinkronisasi lintas platform.
+
