@@ -19,7 +19,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **MT5 Docker Exness** | `Port 3000` / `mt5.abbas.my.id` | 🟢 Running | Wine Python MetaTrader 5 di `mentari-server` (`/home/mentari/mt5_storage`). |
 | **MT5 Web Dashboard** | `Port 8080` / `dashboard.abbas.my.id` | 🟢 Running | Zero-flicker live monitoring & PWA Standalone Safari iOS (`mentari-server`). |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
-| **Infisical Secret Vault** | `app.infisical.com` / `infisical` CLI | 🟢 Synced | 13 kredensial infrastruktur E2EE tersimpan di environment `dev` & `prod`. |
+| **Infisical Secret Vault** | `app.infisical.com` / `infisical` CLI | 🟢 Synced | 14 kredensial infrastruktur E2EE (termasuk Turso API Token) tersimpan di `dev` & `prod`. |
 | **Trading Risk Engine** | `mt5_config/bot.py` | 🟢 Aktif | ATR Volatility Grid Multi-pair scanner dengan Dynamic Spacing & Circuit Breaker. |
 | **RustDesk Direct Access** | `Port 21112` / `100.110.205.27` | 🟢 Ready | Direct IP & Tailscale remote access (`100.110.205.27:21112` / LAN `192.168.100.61`). |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Single branch `main` stabil terverifikasi. |
