@@ -27,12 +27,17 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 01:02 WIB
+- **Last Updated At:** 2026-08-19 01:11 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Remote Desktop Visual & Tailscale Proxy STB (Zero-Overhead di STB):**
+  - Mengimplementasikan endpoint `/api/screen/frame`, `/api/screen/stream` (MJPEG ~3 FPS), `/api/screen/tap`, dan `/api/screen/swipe` di [`Desktop/stb-remote`](file:///home/cuker/Desktop/stb-remote).
+  - Menambahkan Tab **Layar TV** di Web Remote dengan viewport interaktif (klik langsung di layar untuk navigasi, swipe untuk scroll) dan quick control bar.
+  - Memasang service proxy background di PC Linux ini (`stb_proxy_x86_64` di port `8085` via `stb-remote-proxy.service`) dan meng-advertise Tailscale Subnet Router `192.168.100.0/24`.
+  - Akses remote visual dari luar rumah via Tailscale: `http://100.110.205.27:8085`.
 - [x] **Pembuatan Shortcut Pengaturan Lengkap (Full Android Settings):**
   - Mengintegrasikan package **SettingsShortcut** (`com.basti564.settingsshortcut`) agar menu Pengaturan Lengkap AOSP Android 13 (`com.android.settings/.Settings`) dapat diakses langsung dari beranda TV dan App Drawer.
   - Memperbarui susunan slot shortcut beranda pada `HCY Launcher` (`spUtils.xml`) dan tombol Pengaturan pada Web Remote UI ([`Desktop/stb-remote`](file:///home/cuker/Desktop/stb-remote)).
