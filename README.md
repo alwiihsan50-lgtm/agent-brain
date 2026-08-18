@@ -27,11 +27,16 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 04:17 WIB
+- **Last Updated At:** 2026-08-19 04:20 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
+
+- [x] **Auto-Fullscreen Otomatis Saat Membuka Tab Layar TV:**
+  - Menghubungkan aktivasi tab **Layar TV** (`tab-screen`) langsung ke mode Fullscreen (`toggleFullscreen(true)`).
+  - Saat tab Layar TV diklik, tampilan seketika membesar 100% layar penuh dengan HUD overlay interaktif, virtual cursor 60 FPS, pinch-to-zoom focal point, dan pop-up 4-way scroll pad.
+  - Ketika berpindah ke tab Remote atau Aplikasi, mode fullscreen dinonaktifkan otomatis.
 
 - [x] **Pemulihan & Penataan Toolbar Tombol Layar Penuh & Auto FPS (0.5s):**
   - Menyusun ulang tata letak header dan toolbar Tab **Layar TV** agar 100% responsif di seluruh ukuran layar HP (bebas terpotong/overflow).
