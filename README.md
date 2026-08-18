@@ -27,12 +27,16 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 03:15 WIB
+- **Last Updated At:** 2026-08-19 03:20 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Fitur Toggle Switch Auto-Refresh 0.5s (2 FPS Eco-Mode):**
+  - Menambahkan switch toggle `⚡ Auto 0.5s` di Tab **Cuplikan Layar TV** Web Remote.
+  - Memakai resolusi ringan (640x360) dan non-blocking recursive loop yang otomatis me-refresh snapshot setiap 500ms saat tab aktif.
+  - Dilengkapi *Smart Auto-Pause*: otomatis berhenti total (CPU 0%) saat berpindah ke tab Remote/Aplikasi atau saat layar HP terkunci/background.
 - [x] **Penerapan Penuh Opsi 1 (Smart Snapshot on Action) & Opsi 3 (App Launcher Hub):**
   - Melepas streaming kontinu Opsi 2 untuk menjaga STB 100% bebas beban dan hemat kuota HP.
   - Mengoptimalkan Tab **📸 Cuplikan Layar TV (Smart Snapshot)**: Pengambilan foto layar beresolusi tinggi hanya saat diminta atau saat layar diklik dengan overlay loading halus dan 0% CPU idle.
