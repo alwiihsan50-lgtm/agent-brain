@@ -15,6 +15,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Infisical | 🟢 Full Access | Token API Full Access terverifikasi (DNS, Zone, SSL, WAF, Tunnels, Zero Trust, Workers). |
 | **mentari-server (CasaOS)** | `server.abbas.my.id` / `casa.abbas.my.id` | 🟢 Live | Web GUI Dashboard (Port 80) & Debian 13 Server via Cloudflare Tunnel 24/7. |
 | **Cloudflare Zero Trust** | `*.abbas.my.id` | 🟢 Aktif | Akses remote PIN OTP `alwiihsan50@gmail.com` & sesi persisten **30 Hari**. |
+| **PNPM Global Store** | `~/.local/share/pnpm/store/v11` | 🟢 Aktif | Standardisasi Node.js Package Manager: Shared disk space & hard-linked virtual store. |
 | **TailShare** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Live sync folder Drive D (`/media/cuker/Data/tailshare`) & GUI Native Electron. |
 | **MT5 Docker Exness** | `Port 3000` / `mt5.abbas.my.id` | 🟢 Running | Wine Python MetaTrader 5 di `mentari-server` (`/home/mentari/mt5_storage`). |
 | **MT5 Web Dashboard** | `Port 8080` / `dashboard.abbas.my.id` | 🟢 Running | Zero-flicker live monitoring & PWA Standalone Safari iOS (`mentari-server`). |
@@ -28,12 +29,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 19:12 WIB
+- **Last Updated At:** 2026-08-19 21:00 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Standardisasi PNPM & Optimasi Shared node_modules Global Store:** Memasang PNPM v11 global dan memigrasi seluruh repositori lokal (`tailshare`, `SIMPKK-DIGITAL`, `push-backend`, `cf-push-backend`, `mt5_storage/cf-push-backend`, `bot_push_server/backend`) ke Global Content-Addressable Store (`~/.local/share/pnpm/store/v11`) guna menghemat ratusan megabyte/gigabyte ruang penyimpanan. Dokumentasi lengkap di `docs/pnpm-global-store-node-modules-optimization.md`.
 - [x] **Standarisasi Repositori LPKP Mentari (Web 1 & Web 2):** Mengonfigurasi `AGENTS.md`, Git Hook Auto-Sync Graphify (`post-commit`/`post-checkout`), AST Knowledge Graph (`graphify-out/`), runtime Linux `esbuild` global di Linux Mint, dan menyusun dokumentasi arsitektur di `docs/lpkp-mentari-ecosystem.md`.
 - [x] **Pemasangan AI Browser Automation Suite Selesai:** Menginstal dan mengonfigurasi `@playwright/mcp` (MCP Server Antigravity), `crawl4ai` (AI Web Scraping & Clean Markdown Engine), dan `browser-use` (Autonomous Web Navigation Agent) di virtualenv terisolasi `/home/cuker/.ai-browser-tools`.
 - [x] **Protokol Konfirmasi Task Belum Selesai (Pending Task Confirmation):** Menambahkan aturan wajib bagi seluruh AI Agent untuk meminta konfirmasi ke USER di awal sesi jika menemukan task belum selesai (`- [ ]`) di `README.md` (apakah ingin dilanjutkan atau diarsip).
@@ -44,6 +46,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 📚 Indeks Dokumentasi (`docs/`)
 
+- 📄 [**Standardisasi PNPM & Shared node_modules**](docs/pnpm-global-store-node-modules-optimization.md) — Konfigurasi global store, hard links, dan panduan dependensi Node.js.
 - 📄 [**Ekosistem Digital LPKP Mentari**](docs/lpkp-mentari-ecosystem.md) — Arsitektur Web 1 (Astro 7), Web 2 (Next.js 16 LMS), Supabase, & kurikulum pelatihan.
 - 📄 [**AI Browser Automation Tools**](docs/ai-browser-automation-tools.md) — Panduan Playwright MCP Server, Crawl4AI, dan Browser-Use.
 - 📄 [**STB RockChip Web Remote Architecture**](docs/stb-rockchip-web-remote-architecture.md) — Arsitektur daemon uinput, virtual cursor 60 FPS, draggable scroll pad, and system tuning.
@@ -60,5 +63,3 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - 📄 [**Katalog Proyek Drive D**](docs/drive-d-projects-catalog.md) — Pemetaan 18 repositori Git aktif di Drive `D:\Projects`.
 - 📄 [**Arsip-IMO Specification**](docs/arsip-imo-project.md) — Dokumentasi arsitektur dan UI/UX proyek Arsip-IMO.
 - 📄 [**Kustomisasi Workflow Linux Mint**](docs/linux-mint-developer-workflow-customizations.md) — Starship, Zoxide, FZF, LazyDocker, Btop, aliases.
-
-
