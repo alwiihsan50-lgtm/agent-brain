@@ -27,18 +27,19 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 08:47 WIB
+- **Last Updated At:** 2026-08-19 08:50 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
-- [x] **Optimasi Sistem PC Linux Mint, Deep Storage Cleanup & Kernel Tuning Selesai:**
-  - Storage partisi root dibersihkan (Free space naik dari 2.2 GB ke 12 GB, +10 GB reclaimed).
-  - Virtual memory & swap dioptimasi (`vm.swappiness=10`, `vfs_cache_pressure=50`) memaksimalkan 16 GB RAM & menghemat umur SSD.
-  - Limit Inotify dinaikkan ke `524288` (bebas error file watcher di IDE / AST Graphify).
-  - Service installer Live ISO usang (`casper-md5check`) di-mask (0 failed systemd unit).
-  - SSD TRIM (`14.1 GiB trimmed`) selesai dieksekusi.
+- [x] **Tuning Sistem Tingkat Lanjut (I/O SSD, Limits, Git & Boot Speed) Selesai:**
+  - Mount root SSD `/etc/fstab` dioptimasi dengan `noatime,commit=60` (menghilangkan write overhead saat baca file & scan AST).
+  - Batas File Descriptor dinaikkan ke `65536` (`limits.d/99-nofile.conf` & systemd manager).
+  - Ukuran log systemd dikunci permanen ke `100M` (`journald.conf.d/00-journal-size.conf`).
+  - Git Multi-Core Engine diaktifkan (`core.preloadindex`, `core.fscache`, `fetch.prune`, `gc.auto 256`).
+  - Boot delay `NetworkManager-wait-online` dipangkas (-2.6 detik startup).
+- [x] **Optimasi Sistem PC Linux Mint, Deep Storage Cleanup & Kernel Tuning Selesai.**
 - [x] **Universal Tailscale MagicDNS untuk Seluruh Web App Tuntas.**
 - [x] **STB RockChip Android 13 Web Remote & Input Engine Selesai Penuh.**
 - [ ] *(Siap untuk task / instruksi baru dari pengguna)*
