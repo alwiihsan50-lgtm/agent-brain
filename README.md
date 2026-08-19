@@ -27,19 +27,23 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 08:50 WIB
+- **Last Updated At:** 2026-08-19 08:54 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Pembersihan Mendalam Disk & Purge Kernel Lama Selesai:**
+  - Free space partisi root melonjak dari 2.2 GB ke **18 GB** (penggunaan turun drastis dari 96% ke **61%**, total **+16 GB** reclaimed).
+  - Kernel lama `6.14.0-37` di-purge tuntas beserta initramfs & entri bootloader Grub.
+  - Cache developer (Playwright, UV, NPX, Go, Electron), file dump video, installer ISO Downloads, dan duplikat `Desktop/mt5-docker` (2.4 GB) dibersihkan.
 - [x] **Tuning Sistem Tingkat Lanjut (I/O SSD, Limits, Git & Boot Speed) Selesai:**
-  - Mount root SSD `/etc/fstab` dioptimasi dengan `noatime,commit=60` (menghilangkan write overhead saat baca file & scan AST).
-  - Batas File Descriptor dinaikkan ke `65536` (`limits.d/99-nofile.conf` & systemd manager).
-  - Ukuran log systemd dikunci permanen ke `100M` (`journald.conf.d/00-journal-size.conf`).
+  - Mount root SSD `/etc/fstab` dioptimasi dengan `noatime,commit=60`.
+  - Batas File Descriptor dinaikkan ke `65536`.
+  - Ukuran log systemd dikunci permanen ke `100M`.
   - Git Multi-Core Engine diaktifkan (`core.preloadindex`, `core.fscache`, `fetch.prune`, `gc.auto 256`).
-  - Boot delay `NetworkManager-wait-online` dipangkas (-2.6 detik startup).
-- [x] **Optimasi Sistem PC Linux Mint, Deep Storage Cleanup & Kernel Tuning Selesai.**
+  - Boot delay `NetworkManager-wait-online` dipangkas.
+- [x] **Optimasi Sistem PC Linux Mint & Kernel Tuning Selesai.**
 - [x] **Universal Tailscale MagicDNS untuk Seluruh Web App Tuntas.**
 - [x] **STB RockChip Android 13 Web Remote & Input Engine Selesai Penuh.**
 - [ ] *(Siap untuk task / instruksi baru dari pengguna)*
