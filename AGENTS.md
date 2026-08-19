@@ -54,3 +54,32 @@
   2. AI Agent **WAJIB** memperbarui jumlah & status kredensial di tabel [`README.md`](README.md) (kolom Infisical Secret Vault) dan dokumen terkait.
   3. Lakukan `git add`, `git commit -m "..."`, dan `git push` ke repositori `agent-brain` agar memori tersinkronisasi lintas platform.
 
+---
+
+### 5. PROTOKOL SUITE BROWSER AUTOMATION (UNTUK SELURUH AI AGENT)
+Seluruh AI Agent yang beroperasi di workstation ini memiliki akses penuh ke **AI Browser Automation Suite**:
+- **Environment Python Terpusat:**
+  ```bash
+  /home/cuker/.ai-browser-tools/bin/python
+  ```
+  *(Sudah terpasang `crawl4ai`, `browser-use`, `playwright`, Chromium Headless Shell, dan library LLM).*
+
+- **Panduan Pemilihan & Eksekusi Tool:**
+  1. **Scraping / Membaca Web Modern (JS-Heavy / SPA) ➔ Gunakan `crawl4ai`:**
+     Untuk membaca dokumentasi atau halaman dinamis menjadi Markdown bersih secara instan:
+     ```bash
+     /home/cuker/.ai-browser-tools/bin/python -c "
+     import asyncio
+     from crawl4ai import AsyncWebCrawler
+     async def run():
+         async with AsyncWebCrawler() as c:
+             res = await c.arun('<TARGET_URL>')
+             print(res.markdown)
+     asyncio.run(run())
+     "
+     ```
+  2. **Interaksi Native & Verifikasi UI / Screenshot ➔ Gunakan `@playwright/mcp`:**
+     Konfigurasi MCP Server aktif di [`.agents/plugins/playwright-browser/mcp_config.json`](../.agents/plugins/playwright-browser/mcp_config.json). Agent dengan kapabilitas MCP dapat memanggil tools browser langsung untuk klik tombol, isi form, dan screenshot localhost.
+  3. **Navigasi Otonom Multi-Langkah & Vision ➔ Gunakan `browser-use`:**
+     Gunakan untuk workflow penjelajahan web mandiri. Panduan lengkap dan script template tersedia di [`docs/ai-browser-automation-tools.md`](docs/ai-browser-automation-tools.md).
+

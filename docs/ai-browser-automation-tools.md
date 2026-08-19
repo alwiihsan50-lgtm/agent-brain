@@ -34,30 +34,51 @@ Dokumen ini mencatat instalasi, konfigurasi, dan cara penggunaan 3 tools automas
 ## 💻 3. Contoh Penggunaan Singkat
 
 ### A. Ekstraksi Web Cepat dengan `crawl4ai` (Python)
-```python
-import asyncio
-from crawl4ai import AsyncWebCrawler
+* **One-Liner Ekstraksi Cepat ke Konsol / Markdown:**
+  ```bash
+  /home/cuker/.ai-browser-tools/bin/python -c "
+  import asyncio
+  from crawl4ai import AsyncWebCrawler
+  async def run():
+      async with AsyncWebCrawler() as crawler:
+          res = await crawler.arun('https://example.com')
+          print(res.markdown)
+  asyncio.run(run())
+  "
+  ```
 
-async def main():
-    async with AsyncWebCrawler() as crawler:
-        result = await crawler.arun("https://example.com")
-        print(result.markdown)  # Markdown bersih siap olah LLM
+* **Script Lengkap:**
+  ```python
+  import asyncio
+  from crawl4ai import AsyncWebCrawler
 
-if __name__ == "__main__":
-    asyncio.run(main())
-```
-*Eksekusi:* `/home/cuker/.ai-browser-tools/bin/python script.py`
+  async def main():
+      async with AsyncWebCrawler() as crawler:
+          result = await crawler.arun("https://example.com")
+          print(result.markdown)  # Markdown bersih siap olah LLM
+
+  if __name__ == "__main__":
+      asyncio.run(main())
+  ```
+  *Eksekusi:* `/home/cuker/.ai-browser-tools/bin/python script.py`
 
 ### B. Automasi Tugas Otonom dengan `browser-use` (Python)
+Dapat menggunakan model dari Google Gemini, OpenAI, Anthropic, atau Ollama:
+
 ```python
 import asyncio
-from browser_use import Agent
-from langchain_openai import ChatOpenAI  # atau provider LLM lainnya
+from browser_use import Agent, BrowserProfile, BrowserSession
+# Pilih salah satu provider LLM:
+from browser_use.llm import ChatGoogle  # atau ChatOpenAI, ChatAnthropic, ChatOllama
 
 async def main():
+    # Menggunakan Gemini atau OpenAI
+    llm = ChatGoogle(model="gemini-2.0-flash")  # Membutuhkan GEMINI_API_KEY
+    # llm = ChatOpenAI(model="gpt-4o")         # Membutuhkan OPENAI_API_KEY
+    
     agent = Agent(
         task="Buka halaman Wikipedia tentang Linux dan cari versi kernel pertama.",
-        llm=ChatOpenAI(model="gpt-4o"),
+        llm=llm,
     )
     result = await agent.run()
     print(result)
