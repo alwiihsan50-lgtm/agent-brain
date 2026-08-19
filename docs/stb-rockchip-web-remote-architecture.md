@@ -85,10 +85,12 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
 
 ## 🚀 4. Optimalisasi Sistem & Kernel STB (Android 13)
 
-1. **Deep Debloat:**
-   - Pencopotan 23 paket streaming berat, Google Play Store (`com.android.vending`), Google Play Services (`com.google.android.gms`), Google Services Framework (`com.google.android.gsf`), AdServices, serta telemetri.
+1. **Deep Debloat & Background Services Cleaning:**
+   - Pencopotan/Penonaktifan paket Google: GSF (`com.google.android.gsf`), GMS (`com.google.android.gms`), Play Store (`com.android.vending`), AdServices, & Telemetri.
+   - Penonaktifan layanan non-TV: CTS Testing Shim (`cts.ctsshim`), Sinkronisasi Kontak/Kalender (`providers.contacts`, `providers.calendar`), Companion Manager (`companiondevicemanager`), Cloud Backup (`sharedstoragebackup`, `backupconfirm`, `wallpaperbackup`), SIM/NFC Secure Element (`com.android.se`), Hotspot OSU (`hotspot2.osulogin`), dan Stock MediaCenter.
    - Sisa penyimpanan internal lega **~6.8 GB** (sebelumnya 3.2 GB).
-   - RAM bebas melonjak stabil menjadi **~880 MB – 1.1 GB** (Suhu idle dingin: **~46°C**).
+   - RAM bebas melonjak stabil menjadi **~900 MB – 1.1 GB** (Suhu idle dingin: **~46°C**).
+   - **Mekanisme Rollback/Restore:** Skrip pemulihan instan tersedia di STB (`/data/local/tmp/restore_bloatware.sh`) dan di PC Mint (`/home/cuker/.local/bin/stb-restore.sh`). Menjalankan perintah `stb-restore.sh` akan mengembalikan seluruh paket ke status aktif seketika tanpa perlu restart.
 
 2. **Network & Display Tuning:**
    - Wi-Fi Power Save: `disabled` (mencegah spike latency saat streaming bitrate tinggi).
