@@ -22,39 +22,28 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **STB Web Remote** | `Port 8085` / Tailscale `erza` | 🟢 Running | Remote TV: Virtual cursor 60 FPS, draggable 4-way scroll, focal zoom, clean RAM daemon. |
 | **Infisical Secret Vault** | `app.infisical.com` / `infisical` CLI | 🟢 Synced | 10 kredensial infrastruktur E2EE tersimpan di `dev` & `prod`. |
 | **Trading Risk Engine** | `mt5_config/bot.py` | 🟢 Aktif | ATR Volatility Grid Multi-pair scanner dengan Dynamic Spacing & Circuit Breaker. |
+| **AI Browser Suite** | `~/.ai-browser-tools` & MCP | 🟢 Terpasang | `@playwright/mcp` Server, `crawl4ai` Async Extractor, dan `browser-use` Agent. |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Single branch `main` stabil terverifikasi. |
 
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 18:45 WIB
+- **Last Updated At:** 2026-08-19 19:02 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Pemasangan AI Browser Automation Suite Selesai:** Menginstal dan mengonfigurasi `@playwright/mcp` (MCP Server Antigravity), `crawl4ai` (AI Web Scraping & Clean Markdown Engine), dan `browser-use` (Autonomous Web Navigation Agent) di virtualenv terisolasi `/home/cuker/.ai-browser-tools`.
 - [x] **Protokol Konfirmasi Task Belum Selesai (Pending Task Confirmation):** Menambahkan aturan wajib bagi seluruh AI Agent untuk meminta konfirmasi ke USER di awal sesi jika menemukan task belum selesai (`- [ ]`) di `README.md` (apakah ingin dilanjutkan atau diarsip).
-- [x] **Perbaikan Bug MT5 Trading Bot & Anti-Spam Push Notification:** Memperbaiki infinite loop & spam notifikasi pada mode NEUTRAL Dual Grid di `bot.py` (menambahkan status `DUAL_GRID_WAITING`) serta menambahkan proteksi deduplication dan rate-limiting cooldown 30 detik pada `send_push_notification`.
-- [x] **DNS Reset:** DNS kustom (1.1.1.1 / 8.8.8.8) dibersihkan; resolver diarahkan langsung ke DHCP kabel LAN (192.168.100.1) dan Tailscale MagicDNS (`100.100.100.100`).
-- [x] **Pembersihan Mendalam Disk & Purge Kernel Lama Selesai:**
-  - Free space partisi root melonjak dari 2.2 GB ke **18 GB** (penggunaan turun drastis dari 96% ke **61%**, total **+16 GB** reclaimed).
-  - Kernel lama `6.14.0-37` di-purge tuntas beserta initramfs & entri bootloader Grub.
-  - Cache developer (Playwright, UV, NPX, Go, Electron), file dump video, installer ISO Downloads, dan duplikat `Desktop/mt5-docker` (2.4 GB) dibersihkan.
-- [x] **Tuning Sistem Tingkat Lanjut (I/O SSD, Limits, Git & Boot Speed) Selesai:**
-  - Mount root SSD `/etc/fstab` dioptimasi dengan `noatime,commit=60`.
-  - Batas File Descriptor dinaikkan ke `65536`.
-  - Ukuran log systemd dikunci permanen ke `100M`.
-  - Git Multi-Core Engine diaktifkan (`core.preloadindex`, `core.fscache`, `fetch.prune`, `gc.auto 256`).
-  - Boot delay `NetworkManager-wait-online` dipangkas.
-- [x] **Optimasi Sistem PC Linux Mint & Kernel Tuning Selesai.**
-- [x] **Universal Tailscale MagicDNS untuk Seluruh Web App Tuntas.**
-- [x] **STB RockChip Android 13 Web Remote & Input Engine Selesai Penuh.**
-
+- [x] **Perbaikan Bug MT5 Trading Bot & Anti-Spam Push Notification:** Memperbaiki infinite loop & spam notifikasi pada mode NEUTRAL Dual Grid di `bot.py` serta proteksi deduplication dan rate-limiting cooldown 30 detik pada `send_push_notification`.
+- [x] **Pembersihan Disk & Kernel Purge (+16 GB Reclaimed) & Advanced System Tuning.**
 
 ---
 
 ## 📚 Indeks Dokumentasi (`docs/`)
 
+- 📄 [**AI Browser Automation Tools**](docs/ai-browser-automation-tools.md) — Panduan Playwright MCP Server, Crawl4AI, dan Browser-Use.
 - 📄 [**STB RockChip Web Remote Architecture**](docs/stb-rockchip-web-remote-architecture.md) — Arsitektur daemon uinput, virtual cursor 60 FPS, draggable scroll pad, and system tuning.
 - 📄 [**Cloudflare Manager & DNS Mapping**](docs/cloudflare-manager-architecture-and-dns-mapping.md) — Kredensial Full Access, pemetaan 12 subdomain DNS, dan arsitektur Zero Trust.
 - 📄 [**Infrastruktur mentari-server Debian**](docs/mentari-server-debian-infrastructure.md) — Spesifikasi, remote SSH key, dan manajemen container.
@@ -69,3 +58,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - 📄 [**Katalog Proyek Drive D**](docs/drive-d-projects-catalog.md) — Pemetaan 18 repositori Git aktif di Drive `D:\Projects`.
 - 📄 [**Arsip-IMO Specification**](docs/arsip-imo-project.md) — Dokumentasi arsitektur dan UI/UX proyek Arsip-IMO.
 - 📄 [**Kustomisasi Workflow Linux Mint**](docs/linux-mint-developer-workflow-customizations.md) — Starship, Zoxide, FZF, LazyDocker, Btop, aliases.
+

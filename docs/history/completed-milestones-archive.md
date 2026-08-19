@@ -35,5 +35,8 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 - [x] **STB Native Component Launcher:** Memperbaiki eksekusi aplikasi Android 13 via `cmd package resolve-activity` dan `cmd activity start -n`.
 - [x] **SaveBuddy Financial Data Migration:** Migrasi 120 transaksi dan 18 kategori ke Catat Uang Bersama (`https://catat-uang-bersama.vercel.app`).
 - [x] **Cloudflare Manager Role & Full API Access:** Audit dan integrasi API token Full Access tanpa limitasi IP untuk DNS, Zone, Tunnel, Access, Workers, KV ke Infisical Vault.
-- [x] **TailShare Port Migration (Port 40506) & NTFS Fix:** Migrasi port 53317 ke 40506 dan pemulihan mount NTFS Drive D (`ntfs-3g rw`).
-- [x] **mentari-server (Debian 13 CasaOS) Deployment:** Setup Cloudflare Tunnel 24/7 di `server.abbas.my.id`, migrasi MT5 Docker bot, realtime dashboard port 8080, dan Wake-on-LAN persisten.
+- [x] **DNS Reset:** DNS kustom (1.1.1.1 / 8.8.8.8) dibersihkan; resolver diarahkan langsung ke DHCP kabel LAN (192.168.100.1) dan Tailscale MagicDNS (`100.100.100.100`).
+- [x] **Pembersihan Mendalam Disk & Purge Kernel Lama Selesai:** Free space root melonjak ke 18 GB (+16 GB reclaimed), purge kernel lama 6.14.0-37, cache dev, video dump, installer ISO, dan duplikat mt5-docker.
+- [x] **Tuning Sistem Tingkat Lanjut (I/O SSD, Limits, Git & Boot Speed) Selesai:** Mount root SSD dioptimasi (`noatime,commit=60`), File Descriptors 65536, log systemd 100M, Git multi-core engine.
+- [x] **Protokol Konfirmasi Task Belum Selesai (Pending Task Confirmation):** Menambahkan aturan wajib bagi seluruh AI Agent untuk meminta konfirmasi ke USER di awal sesi jika menemukan task belum selesai (`- [ ]`) di `README.md` (apakah ingin dilanjutkan atau diarsip).
+- [x] **STB RockChip Android 13 Web Remote & Input Engine Selesai Penuh.**
