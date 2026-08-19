@@ -27,18 +27,18 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 07:15 WIB
+- **Last Updated At:** 2026-08-19 07:37 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
-- [x] **STB RockChip Android 13 Web Remote & Input Engine Selesai Penuh:**
-  - Virtual Cursor 60 FPS (Relative Trackpad Mode) terverifikasi mulus & permanen.
-  - Floating 4-Way Scroll Pad kini *draggable* (dapat digeser bebas) dan *auto-dismiss* (menutup otomatis saat klik luar).
-  - Auto-Fullscreen mode saat aktivasi tab Layar TV dengan HUD overlay & focal-point pinch-to-zoom.
-  - Deep de-bloat: Google Services Framework (`gsf`), Play Services (`gms`), telemetry & ad services tuntas dibersihkan (RAM bebas melonjak ke ~900 MB - 1.1 GB).
-  - *(Detail lengkap diarsipkan di [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md) & [`docs/stb-rockchip-web-remote-architecture.md`](docs/stb-rockchip-web-remote-architecture.md))*.
+- [x] **Universal Tailscale MagicDNS untuk Seluruh Web App Tuntas:**
+  - TailShare memprioritaskan domain MagicDNS (`http://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:40506`), dynamic QR Code, dan System Tray.
+  - STB Web Remote Proxy & Watchdog dimigrasikan ke target MagicDNS STB (`http://erza:8080` & `erza:5555`).
+  - MT5 Dashboard & Web GUI siap diakses via MagicDNS (`cuker-h610m-hvs-m-2-r2-0:8080` & `:3000`).
+  - Bebas akses di rumah (LAN) maupun di luar rumah (Cellular / Public Wi-Fi) tanpa perlu ubah IP.
+- [x] **STB RockChip Android 13 Web Remote & Input Engine Selesai Penuh.**
 - [ ] *(Siap untuk task / instruksi baru dari pengguna)*
 
 ---

@@ -41,18 +41,18 @@ Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.servi
 
 ---
 
-## 4. Remote Access Privat: Tailscale (Direct IP & Direct LAN)
-* **Status Funnel Publik:** Dinonaktifkan (Pintu publik `.ts.net` ditutup untuk keamanan).
-* **Status Tailscale VPN Privat:** Aktif 100% untuk akses direct IP antar perangkat di akun Tailscale yang sama:
-  * **Node Linux Workstation (`cuker-h610m-hvs-m-2-r2-0`):** `100.110.205.27`
-    * RustDesk Direct IP: `100.110.205.27:21112` (atau LAN `192.168.100.61:21112`)
-    * TailShare: `http://100.110.205.27:40506` (atau LAN `http://192.168.100.61:40506`)
-  * **Node PC Server Mandiri (`mentari-server`):** `100.109.208.27`
-    * SSH: `ssh mentari-server` (Port 22, User: `mentari`)
-    * OS: Debian GNU/Linux 13 (*trixie*), Docker Engine v29.7.2, Passwordless Sudo.
-    * Dokumentasi lengkap: [`docs/mentari-server-debian-infrastructure.md`](mentari-server-debian-infrastructure.md)
-  * **Node Windows Workstation (`cuker`):** `100.99.188.44`
-  * **Node iPhone (`ip11`):** `100.71.123.61`
+## 4. Remote Access Privat: Tailscale MagicDNS & Direct Mesh
+* **MagicDNS Tailnet Suffix:** `tail474821.ts.net` (Aktif 100%)
+* **Keunggulan MagicDNS:** Resolusi nama domain otomatis antar-perangkat baik saat di rumah (LAN) maupun di luar rumah (Cellular / Public Wi-Fi) tanpa perlu menghafal atau mengubah IP address.
+
+### 🌐 Pemetaan Domain MagicDNS & Port Aplikasi:
+| Perangkat (Node) | Hostname / FQDN MagicDNS | IP Tailscale | Aplikasi / Service & URL Akses |
+| :--- | :--- | :--- | :--- |
+| **Linux Workstation** | `cuker-h610m-hvs-m-2-r2-0`<br>`cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net` | `100.110.205.27` | - **TailShare:** `http://cuker-h610m-hvs-m-2-r2-0:40506`<br>- **MT5 Dashboard:** `http://cuker-h610m-hvs-m-2-r2-0:8080`<br>- **MT5 GUI (VNC):** `http://cuker-h610m-hvs-m-2-r2-0:3000`<br>- **STB Remote Proxy:** `http://cuker-h610m-hvs-m-2-r2-0:8085`<br>- **SSH:** `ssh cuker@cuker-h610m-hvs-m-2-r2-0` |
+| **STB Android 13** | `erza`<br>`erza.tail474821.ts.net` | `100.104.214.122` | - **STB Remote Server:** `http://erza:8080`<br>- **ADB Remote:** `adb connect erza:5555` |
+| **Server Debian** | `mentari-server`<br>`mentari-server.tail474821.ts.net` | `100.109.208.27` | - **CasaOS Dashboard:** `http://mentari-server`<br>- **SSH:** `ssh mentari@mentari-server` |
+| **iPhone** | `ip11`<br>`ip11.tail474821.ts.net` | `100.71.123.61` | - Akses client / PWA Safari ke seluruh MagicDNS URL |
+| **Windows Workstation**| `cuker`<br>`cuker.tail474821.ts.net` | `100.99.188.44` | - Dual-boot Windows node |
 
 ---
 
