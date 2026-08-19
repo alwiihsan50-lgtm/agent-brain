@@ -10,6 +10,7 @@
 - **Storage Drive D:** `/media/cuker/Data` (Symlink: `~/Data`)
 - **Virtual Storage ext4 Image:** `/media/cuker/Data/mt5-storage.img` (Mount: `/home/cuker/mt5_storage`)
 - **Root Workspace Windows:** `C:\Users\alwii\Desktop` & `D:\Projects`
+- **Network Interface Utama:** `enp1s0` (Profil: `Wired-enp1s0`, Priority: 100 Autoconnect, DNS: `1.1.1.1`, `8.8.8.8`, `1.0.0.1`)
 
 ---
 
