@@ -34,6 +34,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Standarisasi Repositori LPKP Mentari (Web 1 & Web 2):** Mengonfigurasi `AGENTS.md`, Git Hook Auto-Sync Graphify (`post-commit`/`post-checkout`), AST Knowledge Graph (`graphify-out/`), runtime Linux `esbuild` global di Linux Mint, dan menyusun dokumentasi arsitektur di `docs/lpkp-mentari-ecosystem.md`.
 - [x] **Pemasangan AI Browser Automation Suite Selesai:** Menginstal dan mengonfigurasi `@playwright/mcp` (MCP Server Antigravity), `crawl4ai` (AI Web Scraping & Clean Markdown Engine), dan `browser-use` (Autonomous Web Navigation Agent) di virtualenv terisolasi `/home/cuker/.ai-browser-tools`.
 - [x] **Protokol Konfirmasi Task Belum Selesai (Pending Task Confirmation):** Menambahkan aturan wajib bagi seluruh AI Agent untuk meminta konfirmasi ke USER di awal sesi jika menemukan task belum selesai (`- [ ]`) di `README.md` (apakah ingin dilanjutkan atau diarsip).
 - [x] **Perbaikan Bug MT5 Trading Bot & Anti-Spam Push Notification:** Memperbaiki infinite loop & spam notifikasi pada mode NEUTRAL Dual Grid di `bot.py` serta proteksi deduplication dan rate-limiting cooldown 30 detik pada `send_push_notification`.
@@ -43,6 +44,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 📚 Indeks Dokumentasi (`docs/`)
 
+- 📄 [**Ekosistem Digital LPKP Mentari**](docs/lpkp-mentari-ecosystem.md) — Arsitektur Web 1 (Astro 7), Web 2 (Next.js 16 LMS), Supabase, & kurikulum pelatihan.
 - 📄 [**AI Browser Automation Tools**](docs/ai-browser-automation-tools.md) — Panduan Playwright MCP Server, Crawl4AI, dan Browser-Use.
 - 📄 [**STB RockChip Web Remote Architecture**](docs/stb-rockchip-web-remote-architecture.md) — Arsitektur daemon uinput, virtual cursor 60 FPS, draggable scroll pad, and system tuning.
 - 📄 [**Cloudflare Manager & DNS Mapping**](docs/cloudflare-manager-architecture-and-dns-mapping.md) — Kredensial Full Access, pemetaan 12 subdomain DNS, dan arsitektur Zero Trust.
@@ -58,4 +60,5 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - 📄 [**Katalog Proyek Drive D**](docs/drive-d-projects-catalog.md) — Pemetaan 18 repositori Git aktif di Drive `D:\Projects`.
 - 📄 [**Arsip-IMO Specification**](docs/arsip-imo-project.md) — Dokumentasi arsitektur dan UI/UX proyek Arsip-IMO.
 - 📄 [**Kustomisasi Workflow Linux Mint**](docs/linux-mint-developer-workflow-customizations.md) — Starship, Zoxide, FZF, LazyDocker, Btop, aliases.
+
 
