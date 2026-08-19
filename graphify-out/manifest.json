@@ -1,116 +1,122 @@
 {
   ".github/workflows/graphify.yml": {
     "mtime": 1786660381.2081208,
-    "seen": 1786987620.7835038,
+    "seen": 1787139283.4178452,
     "ast_hash": "47456252bd1f187c10e189c6801bb602",
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1786779875.002753,
-    "seen": 1786987620.7835052,
-    "ast_hash": "6f2394e14c5aad87bad37321724479b0",
+    "mtime": 1787035065.613399,
+    "seen": 1787139283.4178462,
+    "ast_hash": "099ecce00db1431b5ac6b23f60b06556",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786987608.277406,
-    "seen": 1786987620.7835064,
-    "ast_hash": "9f6bf784ca6c2271c24b40e1a4ff2d44",
+    "mtime": 1787139275.0762017,
+    "seen": 1787139283.4178479,
+    "ast_hash": "f78b3bd157c320d0a8a4922da137373c",
     "semantic_hash": ""
   },
   "docs/README.md": {
     "mtime": 1786645741.060382,
-    "seen": 1786987620.783507,
+    "seen": 1787139283.4178483,
     "ast_hash": "3489b6fc76517078e2e4c812b4787a26",
     "semantic_hash": ""
   },
   "docs/agent-brain-and-graphify-synergy-guide.md": {
     "mtime": 1786779400.6582747,
-    "seen": 1786987620.7835078,
+    "seen": 1787139283.417849,
     "ast_hash": "3fa89559de3a9c41da125a65a8f0c19e",
     "semantic_hash": ""
   },
   "docs/arsip-imo-project.md": {
     "mtime": 1786714229.0924985,
-    "seen": 1786987620.7835085,
+    "seen": 1787139283.4178498,
     "ast_hash": "607c6a6acb2780534683c587e5f0d4de",
     "semantic_hash": ""
   },
   "docs/drive-d-projects-catalog.md": {
-    "mtime": 1786714221.0393286,
-    "seen": 1786987620.7835097,
-    "ast_hash": "7a5705b01d0497c4c23f7e1bca17abad",
+    "mtime": 1787034235.7030492,
+    "seen": 1787139283.4178514,
+    "ast_hash": "c5be909579d1e7574812fc221ce700b6",
     "semantic_hash": ""
   },
   "docs/linux-mint-developer-workflow-customizations.md": {
     "mtime": 1786779426.164881,
-    "seen": 1786987620.7835116,
+    "seen": 1787139283.417853,
     "ast_hash": "abfb1f053369f8ed8ceabc0e1113a1a1",
     "semantic_hash": ""
   },
   "docs/mt5-docker-forex-trading-automation.md": {
-    "mtime": 1786880501.9030488,
-    "seen": 1786987620.783513,
-    "ast_hash": "c4dc77cccda512058ea1eee8b753fb74",
+    "mtime": 1787139268.6891704,
+    "seen": 1787139283.4178543,
+    "ast_hash": "2a371fdd42e84da7e4bc1e6beec5d548",
     "semantic_hash": ""
   },
   "docs/safari-ios-web-push-notification.md": {
     "mtime": 1786654608.5585558,
-    "seen": 1786987620.7835135,
+    "seen": 1787139283.4178548,
     "ast_hash": "d991087fd02bea2d1f0c6f9c92051026",
     "semantic_hash": ""
   },
   "docs/system-environment-and-ports.md": {
-    "mtime": 1786976967.8427002,
-    "seen": 1786987620.783514,
-    "ast_hash": "ad87b365c1bfcfc2bd55f34cf1ac0bf0",
+    "mtime": 1787103499.8505344,
+    "seen": 1787139283.4178565,
+    "ast_hash": "7f3fdf7c7a0886d7f26cb5621580572a",
     "semantic_hash": ""
   },
   "docs/tailshare-linux-mint-installation.md": {
     "mtime": 1786645741.061149,
-    "seen": 1786987620.7835147,
+    "seen": 1787139283.417857,
     "ast_hash": "8f324817d2404e634027f28b02529220",
     "semantic_hash": ""
   },
   "docs/universal-web-push-notification-service.md": {
     "mtime": 1786656311.901909,
-    "seen": 1786987620.7835152,
+    "seen": 1787139283.4178576,
     "ast_hash": "49ab848cdbd2c22e7745dc31690fb646",
     "semantic_hash": ""
   },
   "scripts/install-graphify-hook.sh": {
     "mtime": 1786779413.9505906,
-    "seen": 1786987620.7835002,
+    "seen": 1787139283.4178424,
     "ast_hash": "e47ae5ba32585885fd0c61516b6294f1",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
     "mtime": 1786976964.084608,
-    "seen": 1786987620.783506,
+    "seen": 1787139283.4178472,
     "ast_hash": "b10ff49eb5992360b6f163e720f60d02",
     "semantic_hash": ""
   },
   "docs/git-post-commit-graphify-hook.md": {
     "mtime": 1786779411.0725222,
-    "seen": 1786987620.7835102,
+    "seen": 1787139283.4178522,
     "ast_hash": "8d7d8b9416d0de4f670a89b279078b56",
     "semantic_hash": ""
   },
   "docs/history/completed-milestones-archive.md": {
-    "mtime": 1786779406.9424238,
-    "seen": 1786987620.783511,
-    "ast_hash": "89389db6356969c0a070c509a9534f3d",
+    "mtime": 1787097729.3966632,
+    "seen": 1787139283.4178526,
+    "ast_hash": "d90f61d981a11c522e63af1dedb2c7b6",
     "semantic_hash": ""
   },
   "docs/mentari-server-debian-infrastructure.md": {
     "mtime": 1786899614.0049207,
-    "seen": 1786987620.7835124,
+    "seen": 1787139283.4178536,
     "ast_hash": "0e789bfcaf351c8fd2bf97c031d5700e",
     "semantic_hash": ""
   },
   "docs/cloudflare-manager-architecture-and-dns-mapping.md": {
     "mtime": 1786987598.464087,
-    "seen": 1786987620.783509,
+    "seen": 1787139283.417851,
     "ast_hash": "a01f601927e0ffabb73b7946e17969f9",
+    "semantic_hash": ""
+  },
+  "docs/stb-rockchip-web-remote-architecture.md": {
+    "mtime": 1787098689.8261225,
+    "seen": 1787139283.4178553,
+    "ast_hash": "5506815e475ded812816e4b104442e29",
     "semantic_hash": ""
   }
 }

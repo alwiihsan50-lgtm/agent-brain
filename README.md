@@ -27,12 +27,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 16:48 WIB
+- **Last Updated At:** 2026-08-19 18:35 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Perbaikan Bug MT5 Trading Bot & Anti-Spam Push Notification:** Memperbaiki infinite loop & spam notifikasi pada mode NEUTRAL Dual Grid di `bot.py` (menambahkan status `DUAL_GRID_WAITING`) serta menambahkan proteksi deduplication dan rate-limiting cooldown 30 detik pada `send_push_notification`.
 - [x] **DNS Reset:** DNS kustom (1.1.1.1 / 8.8.8.8) dibersihkan; resolver diarahkan langsung ke DHCP kabel LAN (192.168.100.1) dan Tailscale MagicDNS (`100.100.100.100`).
 - [x] **Pembersihan Mendalam Disk & Purge Kernel Lama Selesai:**
   - Free space partisi root melonjak dari 2.2 GB ke **18 GB** (penggunaan turun drastis dari 96% ke **61%**, total **+16 GB** reclaimed).

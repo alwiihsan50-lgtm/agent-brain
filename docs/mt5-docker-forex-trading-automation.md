@@ -69,12 +69,13 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
   ```
 
 ### C. Bot Python Logic (`mt5_config/bot.py`)
-- Terletak di `/home/mentari/mt5_storage/mt5_config/bot.py` (tersinkronisasi langsung ke `/config/bot.py` dalam container).
+- Terletak di `/home/cuker/mt5_storage/mt5_config/bot.py` (tersinkronisasi langsung ke `/config/bot.py` dalam container).
 - Inisialisasi koneksi IPC ke terminal MT5 (`mt5.initialize()`).
 - Mengambil info akun (Login ID, Saldo, Currency, Equity, Free Margin).
 - Berlangganan ke symbol Market Watch (contoh: `EURUSDm`, `XAUUSDm`, `AUDUSDm`, dll. di akun Exness).
 - Mengambil riwayat closed deal / transaksi selesai (`mt5.history_deals_get()`) untuk kalkulasi metrik win rate, total realized profit/loss, dan data tabel riwayat transaksi.
-- Fungsi `send_push_notification(title, message)` yang mem-POST payload JSON ke endpoint Cloudflare Workers:
+- **Dual Grid State Machine:** Pada kondisi `NEUTRAL` (Ranging ADX < 25), bot memasang limit order dua arah dan berada pada status `DUAL_GRID_WAITING` hingga salah satu limit terpicu (mencegah false cycle complete / cancel loop).
+- **Proteksi Anti-Spam Notifikasi:** Fungsi `send_push_notification(title, message, cooldown_seconds=30)` dilengkapi deduplication & 30-second cooldown timer untuk mencegah loop pesan ke Cloudflare Workers:
   `https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification`
 
 ### D. Cloudflare Worker Push Backend (`cf-push-backend`)
