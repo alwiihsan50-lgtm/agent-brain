@@ -19,171 +19,33 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **MT5 Docker Exness** | `Port 3000` / `mt5.abbas.my.id` | 🟢 Running | Wine Python MetaTrader 5 di `mentari-server` (`/home/mentari/mt5_storage`). |
 | **MT5 Web Dashboard** | `Port 8080` / `dashboard.abbas.my.id` | 🟢 Running | Zero-flicker live monitoring & PWA Standalone Safari iOS (`mentari-server`). |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
-| **Infisical Secret Vault** | `app.infisical.com` / `infisical` CLI | 🟢 Synced | 10 kredensial infrastruktur E2EE tersimpan di `dev` & `prod` (Cloudflare Full Access, Turso, Vercel, dll.). |
+| **STB Web Remote** | `Port 8085` / Tailscale `erza` | 🟢 Running | Remote TV: Virtual cursor 60 FPS, draggable 4-way scroll, focal zoom, clean RAM daemon. |
+| **Infisical Secret Vault** | `app.infisical.com` / `infisical` CLI | 🟢 Synced | 10 kredensial infrastruktur E2EE tersimpan di `dev` & `prod`. |
 | **Trading Risk Engine** | `mt5_config/bot.py` | 🟢 Aktif | ATR Volatility Grid Multi-pair scanner dengan Dynamic Spacing & Circuit Breaker. |
-| **RustDesk Direct Access** | `Port 21112` / `100.110.205.27` | 🟢 Ready | Direct IP & Tailscale remote access (`100.110.205.27:21112` / LAN `192.168.100.61`). |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Single branch `main` stabil terverifikasi. |
 
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 04:30 WIB
+- **Last Updated At:** 2026-08-19 07:05 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
-- [x] **Scroll Pad Melayang Dapat Digeser (Draggable) & Auto-Tutup:**
-  - **Draggable:** Pop-up kontrol scroll 4 arah (`#floating-scroll-pad`) kini dapat disentuh/ditahan pada bilah header (`⋮⋮ 📜 Scroll Navigasi`) dan digeser bebas ke posisi mana pun di layar.
-  - **Auto-Dismiss:** Pop-up scroll otomatis langsung tertutup saat pengguna mengetuk/klik di luar area scroll pad (misal di layar TV, background, atau kontrol lain).
-
-- [x] **Auto-Fullscreen Otomatis Saat Membuka Tab Layar TV:**
-  - Menghubungkan aktivasi tab **Layar TV** (`tab-screen`) langsung ke mode Fullscreen (`toggleFullscreen(true)`).
-  - Saat tab Layar TV diklik, tampilan seketika membesar 100% layar penuh dengan HUD overlay interaktif, virtual cursor 60 FPS, pinch-to-zoom focal point, dan pop-up 4-way scroll pad.
-  - Ketika berpindah ke tab Remote atau Aplikasi, mode fullscreen dinonaktifkan otomatis.
-
-- [x] **Pemulihan & Penataan Toolbar Tombol Layar Penuh & Auto FPS (0.5s):**
-  - Menyusun ulang tata letak header dan toolbar Tab **Layar TV** agar 100% responsif di seluruh ukuran layar HP (bebas terpotong/overflow).
-  - Menempatkan tombol **`⛶ Layar Penuh`** di baris atas dengan aksen gradien biru yang menonjol dan selalu terlihat.
-  - Membuat bilah toolbar dedicated 3 kolom:
-    - **`⚡ Auto 0.5s (2 FPS)`** — Switch toggle On/Off dengan feedback visual glow hijau neon saat aktif.
-    - **`🔄 Ambil Foto`** — Snapshot manual seketika dengan animasi putar.
-    - **`⇅ Scroll Pad`** — Membuka pop-up kontrol navigasi 4 arah.
-  - Menambahkan tombol kontrol **`⚡ Auto`** dan **`🔄 Foto`** langsung di dalam HUD Fullscreen mode.
-
-- [x] **Widget Pop-up Scroll 4 Arah (Floating Scroll Pad):**
-  - Mengganti gesture 2 jari dengan tombol pop-up **`⇅ Scroll`** yang bersih dan bebas bug.
-  - Membuka widget kompas 4 arah melayang di tengah layar:
-    - ⬆️ **Scroll Atas** (`REL_WHEEL +3` / DPAD_UP)
-    - ⬇️ **Scroll Bawah** (`REL_WHEEL -3` / DPAD_DOWN)
-    - ⬅️ **Scroll Kiri** (`REL_HWHEEL -3` / DPAD_LEFT)
-    - ➡️ **Scroll Kanan** (`REL_HWHEEL +3` / DPAD_RIGHT)
-  - Multi-touch 2 jari kembali 100% didedikasikan untuk **Pinch to Zoom & Pan** yang mulus tanpa konflik gesture.
-- [x] **Perbaikan Focal-Point Pinch Zoom (Zoom Tepat ke Titik Tengah Cubitan Jari):**
-  - Menghitung titik fokus (*focal center*) `(midX, midY)` dari kedua jari saat mencubit.
-  - Menyesuaikan offset `panOffsetX` dan `panOffsetY` secara dinamis sehingga area gambar yang berada tepat di antara dua jari membesar di tempat (tidak lagi lari ke pojok kiri atas).
-  - Ketika di-zoom out kembali ke 1x, tampilan kembali terpusat penuh.
-- [x] **Trackpad-Style Virtual Cursor (TERVERIFIKASI & DISETUJUI USER - PERMANEN):**
-  - Kursor mouse virtual mempertahankan posisinya di layar TV secara presisi.
-  - Swipe dari mana saja di layar HP menggerakkan kursor secara mulus (*relative trackpad delta*) 60 FPS tanpa me-refresh frame saat menggeser.
-  - Ketukan mengeksekusi **Klik Kiri** pada posisi kursor.
-  - Tahan (0.5s) mengeksekusi **Klik Kanan / Tombol Kembali (BACK)** pada posisi kursor.
-  - Cubit 2 jari untuk **Zoom In / Out** hingga 4x.
-  - Konfigurasi ini sudah pas dan dipertahankan permanen.
-- [x] **Implementasi Kursor Mouse Virtual di Web (Super Smooth 60 FPS):**
-  - Menambahkan elemen kursor mouse visual langsung di atas layar TV Web Remote (`#virtual-mouse-cursor`).
-  - Mengeliminasi refresh layar saat menggeser/swipe mouse, sehingga pergerakan kursor 100% mulus (60 FPS) tanpa jeda loading atau kedipan layar.
-  - Refresh layar hanya dipicu satu kali setelah user mengetuk/klik atau menahan (Back), untuk memperlihatkan perubahan hasil aksi di TV.
-- [x] **Navigasi Kursor Mouse Mengikuti Arah Swipe (Real-Time Trackpad Mouse):**
-  - Mengonfigurasi geseran 1 jari pada layar TV langsung menggerakkan kursor mouse STB secara *real-time* via `/api/mouse/move` (kernel `/dev/uinput`).
-  - **Ketukan 1 Jari (<12px)**: Menjalankan Klik Kiri (Pilih item).
-  - **Tahan 1 Jari (0.5s)**: Menjalankan Klik Kanan / Tombol Kembali (Android BACK keyevent 4).
-  - **Cubit 2 Jari**: Zoom In / Out hingga 4x dan Pan area gambar.
-- [x] **Penerapan Pure Mouse Mode (Klik Kanan = Tombol Kembali / Back):**
-  - Menonaktifkan mode swipe pada layar TV agar tidak sengaja terpencet saat mengklik.
-  - Mengonfigurasi **Klik Kiri (Ketuk)** untuk memilih/klik item di TV.
-  - Mengonfigurasi **Klik Kanan (Tahan 0.5s)** langsung mengeksekusi **Tombol Kembali (Android BACK keyevent 4)** pada STB.
-  - Mempertahankan gesture cubit 2 jari (Pinch to Zoom & Pan) dan Floating Keyboard di mode Layar Penuh.
-- [x] **Fitur Fullscreen Mouse Mode, Pinch-to-Zoom & Floating Keyboard:**
-  - Menambahkan tombol **⛶ Layar Penuh** yang memaksimalkan tampilan TV ke 100% layar HP.
-  - **Mouse Mode Terintegrasi**:
-    1. **Klik Kiri**: Ketuk 1 jari untuk klik kiri seketika dengan riak animasi biru.
-    2. **Klik Kanan / Long-Press**: Tahan layar (0.5s) untuk membuka menu konteks Android / klik kanan dengan riak animasi amber + haptic vibration.
-    3. **Pinch-to-Zoom & Pan**: Cubit 2 jari untuk zoom in hingga 4x dan geser (pan) area yang diperbesar.
-    4. **Floating Keyboard HUD**: Tombol keyboard melayang di mode fullscreen untuk mengetik langsung ke TV, tombol hapus, dan tombol navigasi instan.
-- [x] **Fitur Toggle Switch Auto-Refresh 0.5s (2 FPS Eco-Mode):**
-  - Menambahkan switch toggle `⚡ Auto 0.5s` di Tab **Cuplikan Layar TV** Web Remote.
-  - Memakai resolusi ringan (640x360) dan non-blocking recursive loop yang otomatis me-refresh snapshot setiap 500ms saat tab aktif.
-  - Dilengkapi *Smart Auto-Pause*: otomatis berhenti total (CPU 0%) saat berpindah ke tab Remote/Aplikasi atau saat layar HP terkunci/background.
-- [x] **Penerapan Penuh Opsi 1 (Smart Snapshot on Action) & Opsi 3 (App Launcher Hub):**
-  - Melepas streaming kontinu Opsi 2 untuk menjaga STB 100% bebas beban dan hemat kuota HP.
-  - Mengoptimalkan Tab **📸 Cuplikan Layar TV (Smart Snapshot)**: Pengambilan foto layar beresolusi tinggi hanya saat diminta atau saat layar diklik dengan overlay loading halus dan 0% CPU idle.
-  - Mengoptimalkan Tab **🎮 Remote**: Navigasi D-Pad, Volume, Back, Home, Power, Keyboard Teks dengan latensi instan (<2ms).
-  - Mengoptimalkan Tab **⭐ Aplikasi**: Grid aplikasi favorit (SmartTube, TV Bro, Settings, Tailscale, dll.) dan pencarian aplikasi dengan peluncuran 1-klik.
-- [x] **Pembersihan RustDesk & Optimasi Penuh Web Remote:**
-  - Menghapus total **RustDesk** (`com.carriez.flutter_hbb`) dan seluruh residu konfigurasinya dari STB sesuai permintaan user.
-  - Suhu STB tetap dingin (**~46°C**) dan RAM bebas **~1.0 GB**.
-- [x] **Fitur Tombol Bersihkan RAM & Tutup Semua Aplikasi (Web Remote):**
-  - Menambahkan endpoint `POST /api/system/clean-ram` di backend daemon STB (`stb_server`).
-  - Menjalankan `am kill-all`, mematikan proses background non-esensial dengan tetap mempertahankan layanan kritis (RustDesk, Tailscale, TV Launcher, system server), dan membersihkan filesystem drop_caches (`echo 3 > /proc/sys/vm/drop_caches`).
-  - Menambahkan tombol **🧹 Bersihkan RAM** di Top Header Bar dan di baris tombol navigasi utama (Trio: Kembali, Bersihkan, Menu) lengkap dengan haptic feedback & floating toast notification.
-- [x] **Perbaikan Error Pemutaran Video SmartTube (Resolusi DNS & GPU Renderer):**
-  - Menguji status Google Services: SmartTube **tidak memerlukan Google Play Services**, namun layanan GMS telah diaktifkan kembali untuk pengujian penuh.
-  - Menemukan akar penyebab error pemutaran video:
-    1. Konflik `Private DNS` dengan VPN Tailscale -> Diperbaiki dengan `private_dns_mode: off`.
-    2. Properti `debug.hwui.renderer skiagl` tidak kompatibel dengan GPU Mali-450 -> Dikembalikan ke renderer native `opengl`.
-  - SmartTube berjalan lancar dan video teruji diputar normal.
-- [x] **Instalasi & Koneksi RustDesk + Tailscale di STB (Remote Desktop 60 FPS Native):**
-  - Memasang **RustDesk v1.4.9 ARM64** (`com.carriez.flutter_hbb`) dan **Tailscale v1.102.2** (`com.tailscale.ipn`).
-  - STB terhubung penuh ke jaringan Tailscale dengan IP: **`100.104.214.122`** (node name: `erza`).
-  - RustDesk ID: **`1811189838`**, Direct Access Port: **`21118`**, Kata Sandi Permanen: **`Cuker1234`**.
-  - Opsi: `verification-method = 'use-permanent-password'` dan Direct IP Access aktif.
-  - Ping latency langsung via Tailscale: **4.4 ms**, Sisa RAM Bebas STB: **> 1.02 GB**, Suhu: **46°C**.
-- [x] **Remote Desktop Visual & Tailscale Proxy STB (Zero-Overhead di STB):**
-  - Mengimplementasikan endpoint `/api/screen/frame`, `/api/screen/stream` (MJPEG ~3 FPS), `/api/screen/tap`, dan `/api/screen/swipe` di [`Desktop/stb-remote`](file:///home/cuker/Desktop/stb-remote).
-  - Menambahkan Tab **Layar TV** di Web Remote dengan viewport interaktif (klik langsung di layar untuk navigasi, swipe untuk scroll) dan quick control bar.
-  - Memasang service proxy background di PC Linux ini (`stb_proxy_x86_64` di port `8085` via `stb-remote-proxy.service`) dan meng-advertise Tailscale Subnet Router `192.168.100.0/24`.
-  - Akses remote visual dari luar rumah via Tailscale: `http://100.110.205.27:8085`.
-- [x] **Pembuatan Shortcut Pengaturan Lengkap (Full Android Settings):**
-  - Mengintegrasikan package **SettingsShortcut** (`com.basti564.settingsshortcut`) agar menu Pengaturan Lengkap AOSP Android 13 (`com.android.settings/.Settings`) dapat diakses langsung dari beranda TV dan App Drawer.
-  - Memperbarui susunan slot shortcut beranda pada `HCY Launcher` (`spUtils.xml`) dan tombol Pengaturan pada Web Remote UI ([`Desktop/stb-remote`](file:///home/cuker/Desktop/stb-remote)).
-- [x] **Tuning Kernel & Jaringan Tingkat Lanjut STB (Low-Latency 4K Streaming):**
-  - Menonaktifkan mode hemat daya Wi-Fi (`power_save off`) untuk menghilangkan latency spike & micro-buffering saat streaming video bit-rate tinggi.
-  - Optimalisasi GPU Rendering Pipeline via `SkiaGL` dan SurfaceFlinger `latch_unsignaled=1` untuk animasi UI bebas stutter.
-  - Penataan parameter kernel Linux `vm.swappiness: 60`, `vfs_cache_pressure: 50`, dan persistensi autostart di `/data/local/tmp/stb_autostart.sh`.
-- [x] **De-Google Total STB (Nonaktifkan GMS & GSF):**
-  - Menonaktifkan penuh `com.google.android.gms` (Google Play Services) dan `com.google.android.gsf` (Google Services Framework).
-  - Verifikasi mandiri: SmartTube, TV Bro, Aurora Store, dan UI TV berjalan 100% lancar dengan 0 crash & 0 beban background Google.
-- [x] **Instalasi TV Bro (Browser Android TV Bebas Iklan) & Penggantian Chrome:**
-  - Pemasangan versi terbaru **TV Bro v2.1.6** (`com.phlox.tvwebbrowser`) yang dioptimasi khusus remote TV, built-in AdBlocker, dan video player native.
-  - Pencopotan Google Chrome (`com.android.chrome`) untuk menghemat ~150 MB penyimpanan dan RAM background.
-  - Pembaruan Web Remote UI ([`Desktop/stb-remote`](file:///home/cuker/Desktop/stb-remote)): Shortcut browser otomatis mengarah ke **TV Bro**.
-- [x] **Deep Debloat & Minimalist Setup STB RockChip V8_Max (Android 13):**
-  - Pembersihan menyeluruh 23 paket streaming yang tidak digunakan, telemetri Google, dan layanan non-TV (Amazon Prime, Netflix, Vidio, Spotify, TikTok, WeTV, iQIYI, Viki, HBO GO, Hotstar, Viu, Perfect Player, YouTube Official, Katniss Assistant, Android System Intelligence, Google TTS, Restore, Cell Broadcast, Calculator, Sound Picker, Shortcut Maker).
-  - Pembersihan cache sisa: Storage internal `/data` bertambah lega **3.6 GB** (Free storage dari 3.2 GB menjadi **6.8 GB**).
-  - Lonjakan performa memori: Free RAM meningkat drastis menjadi **~830 MB** (*Used RAM terpangkas dari 1.9 GB menjadi 1.1 GB*).
-  - Refresh Web Remote UI ([`Desktop/stb-remote`](file:///home/cuker/Desktop/stb-remote)): Tab Aplikasi Favorit disederhanakan khusus untuk **SmartTube, TV Bro, Aurora Store, Pengaturan TV, Miracast, dan Media Center**.
-- [x] **Perbaikan Peluncur Aplikasi STB Web Remote (RockChip Android 13):**
-  - Identifikasi akar masalah: Perintah `monkey` gagal mengeksekusi launcher pada daemon background Android 13 tanpa TTY dan gagal membedakan intent `LEANBACK_LAUNCHER` vs `LAUNCHER` (contohnya Spotify).
-  - Implementasi Native Component Launcher di [`main.go`](file:///home/cuker/Desktop/stb-remote/main.go) menggunakan `cmd package resolve-activity` dan `cmd activity start -n <component>` dengan multi-fallback intent.
-  - Penambahan parameter `data-act` pada aplikasi favorit di [`public/index.html`](file:///home/cuker/Desktop/stb-remote/public/index.html) dan pembaruan fungsi `launchApp()` di [`public/app.js`](file:///home/cuker/Desktop/stb-remote/public/app.js).
-  - Build binary ARM64 (`stb_server_arm64`) dan deployment langsung ke STB (`/vendor/bin/stb_server` & `/data/local/tmp/stb_server`). Verifikasi live berhasil 100%.
-- [x] **Migrasi Data Keuangan SaveBuddy -> Catat Uang Bersama:**
-  - Ekstraksi 120 transaksi dari `DompetPapaMamaAbbasTsaqiy` (Turso `savebuddy`).
-  - Pembuatan file backup arsip di SaveBuddy (`backup_*.json`, `backup_*.csv`, `backup_*.sql`).
-  - Impor dan sinkronisasi 120 transaksi lengkap dengan 18 kategori ke database `catat-uang-bersama` pada **Buku Keuangan Mama** (`https://catat-uang-bersama.vercel.app`).
-- [x] **Cloudflare Manager Role & Full API Access Onboarding:**
-  - Audit hak akses API Cloudflare di seluruh modul (DNS, Zone, Tunnels, Access, Workers, KV, WAF, SSL).
-  - Pembaruan token API Full Access tanpa batasan IP ke Infisical Secret Vault (`dev` & `prod`).
-  - Pemetaan 12 DNS records aktif domain `abbas.my.id` dan dokumentasi arsitektur di `docs/cloudflare-manager-architecture-and-dns-mapping.md`.
-- [x] **TailShare Port Migration & Storage Mount Fix:**
-  - Migrasi port default TailShare dari `53317` ke `40506` (Server, Client UI, QR Code, dan Cloudflare Tunnel `share.abbas.my.id`).
-  - Pemulihan & perbaikan mount NTFS Drive D (`/dev/sda1` -> `/media/cuker/Data`) dari kondisi *read-only* (lock Windows Fast Startup) menjadi *read-write* (`ntfs-3g rw`).
-  - Persistensi entri mount di `/etc/fstab` dan pembuatan symlink `/media/cuker/Data1 -> /media/cuker/Data`.
-- [x] Onboarding & konfigurasi infrastruktur **mentari-server** (Debian 13 Trixie, Tailscale SSH, Docker v29.7.2, Passwordless Sudo, persistent auto-start).
-- [x] Setup **Cloudflare Tunnel (`mentari-tunnel`)** 24/7 untuk CasaOS Web GUI di **`https://server.abbas.my.id`** dan **`https://casa.abbas.my.id`** (Auto-SSL HTTPS, systemd persistent).
-- [x] **Migrasi Penuh MT5 Trading Bot & Dashboard ke `mentari-server`:**
-  - Build image Docker `mt5:latest` (Wine32 + Wine64 + Openbox KasmVNC) di `mentari-server`.
-  - Transfer direktori Wine, MT5, Python 3.9, bot logic, dan realtime dashboard ke `/home/mentari/mt5_storage`.
-  - Konfigurasi systemd unit 24/7 `mt5-trading-bot.service` (auto-restart saat booting server).
-  - Setup Cloudflare Tunnel routing untuk `https://dashboard.abbas.my.id` (Port 8080) dan `https://vnc.abbas.my.id` (Port 3000) dengan proteksi Zero Trust PIN OTP.
-- [x] **Konfigurasi Wake-on-LAN (WoL) `mentari-server`:**
-  - Identifikasi MAC LAN `00:e0:4c:bf:02:e1` (Realtek RTL8111 `enp2s0`) pada subnet LAN `192.168.101.243`.
-  - Instalasi `ethtool` & pembuatan systemd unit persisten `wol-enable.service` di Debian 13 (`wol g` MagicPacket).
-  - Instalasi `wakeonlan` & penambahan fungsi shortcut `wake-mentari` serta `wake-mentari-check` di Linux Mint workstation.
-- [x] Optimasi arsitektur **Dual-Engine (`agent-brain` + `graphify`)**:
-  - Penambahan klausul **Immutability & Integrity Guardrail** (kebal dari perubahan otomatis oleh model AI yang berganti-ganti).
-  - Penambahan aturan **Auto-Init Fallback** (`graphify .` otomatis jika graf belum ada).
-  - Setup **Global Git Ignore** (`~/.gitignore_global`) untuk isolasi artefak `graphify-out/`.
-  - Pembuatan script dan panduan **Git Post-Commit Hook** auto-sync di `docs/git-post-commit-graphify-hook.md`.
-  - **Memory Token-Budgeting:** Arsip milestone lampau dipindahkan ke `docs/history/completed-milestones-archive.md`.
-  - Penambahan developer shortcuts di `~/.bash_aliases` (`gf`, `gfu`, `gfq`, `gf-viz`, `brain-sync`, `brain-push`, `wake-mentari`).
-- [ ] *(Siap untuk task / konfigurasi baru dari pengguna)*
+- [x] **STB RockChip Android 13 Web Remote & Input Engine Selesai Penuh:**
+  - Virtual Cursor 60 FPS (Relative Trackpad Mode) terverifikasi mulus & permanen.
+  - Floating 4-Way Scroll Pad kini *draggable* (dapat digeser bebas) dan *auto-dismiss* (menutup otomatis saat klik luar).
+  - Auto-Fullscreen mode saat aktivasi tab Layar TV dengan HUD overlay & focal-point pinch-to-zoom.
+  - De-bloat sistem, pembersihan RAM daemon (`/api/system/clean-ram`), dan tuning jaringan STB.
+  - *(Detail lengkap diarsipkan di [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md) & [`docs/stb-rockchip-web-remote-architecture.md`](docs/stb-rockchip-web-remote-architecture.md))*.
+- [ ] *(Siap untuk task / instruksi baru dari pengguna)*
 
 ---
 
 ## 📚 Indeks Dokumentasi (`docs/`)
 
+- 📄 [**STB RockChip Web Remote Architecture**](docs/stb-rockchip-web-remote-architecture.md) — Arsitektur daemon uinput, virtual cursor 60 FPS, draggable scroll pad, and system tuning.
 - 📄 [**Cloudflare Manager & DNS Mapping**](docs/cloudflare-manager-architecture-and-dns-mapping.md) — Kredensial Full Access, pemetaan 12 subdomain DNS, dan arsitektur Zero Trust.
 - 📄 [**Infrastruktur mentari-server Debian**](docs/mentari-server-debian-infrastructure.md) — Spesifikasi, remote SSH key, dan manajemen container.
 - 📄 [**Arsip Milestone & Riwayat Lengkap**](docs/history/completed-milestones-archive.md) — Log lengkap seluruh fitur & milestone terdahulu.

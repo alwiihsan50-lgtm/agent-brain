@@ -22,3 +22,18 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 - [x] **Cloudflare Zero Trust & Tunnel:** Aktivasi tunnel 24/7 pada domain `abbas.my.id` (`dashboard.abbas.my.id`, `share.abbas.my.id`, `vnc.abbas.my.id`) dengan proteksi PIN OTP email `alwiihsan50@gmail.com` dan sesi persisten **30 Hari**.
 - [x] **Infisical Secret Management:** Setup Infisical CLI v0.38.0 di Linux Mint dan enkripsi 13 kredensial infrastruktur ke vault `dev` & `prod`.
 - [x] **Dual-Engine Synergy Protocol Optimization:** Standardisasi alur kerja `agent-brain` + `graphify`, penambahan Auto-Init Fallback, global `.gitignore`, git post-commit hook, dan developer shortcuts.
+
+## 📅 Selesai Per 19 Agustus 2026
+
+- [x] **STB Web Remote - Draggable & Auto-Dismiss Scroll Pad:** Pop-up kontrol scroll 4 arah (`#floating-scroll-pad`) dapat disentuh/ditahan pada bilah header dan digeser bebas ke posisi mana pun di layar serta otomatis langsung tertutup saat pengguna mengetuk/klik di luar area scroll pad.
+- [x] **STB Web Remote - Auto-Fullscreen Tab Layar TV:** Menghubungkan aktivasi tab Layar TV langsung ke mode Fullscreen dengan HUD overlay interaktif, virtual cursor 60 FPS, pinch-to-zoom focal point, dan pop-up 4-way scroll pad.
+- [x] **STB Web Remote - Trackpad-Style Virtual Cursor 60 FPS:** Kursor mouse virtual mempertahankan posisi di layar TV. Geseran jari di layar HP menggerakkan kursor halus tanpa me-refresh snapshot. Ketukan mengeksekusi Klik Kiri, tahan 0.5s mengeksekusi Klik Kanan / BACK.
+- [x] **STB Web Remote - Pure Mouse Mode & Android Key Navigation:** Menghilangkan konflik swipe gesture, tombol Kembali (BACK keyevent 4), cubit 2 jari (Pinch-to-Zoom hingga 4x & Pan) dengan perhitungan *focal-point* `(midX, midY)`.
+- [x] **STB Web Remote - Eco-Mode 2 FPS Auto Refresh:** Mode snapshot 640x360 500ms dengan Smart Auto-Pause saat layar background atau tab berpindah.
+- [x] **STB System - Clean RAM Daemon & Memory Optimizer:** Endpoint `/api/system/clean-ram`, `am kill-all`, dan pembersihan cache kernel (`drop_caches: 3`) dengan tombol cepat di UI.
+- [x] **STB System - Deep Debloat & Network Tuning:** Pencopotan 23 paket streaming berat & Google Services. Free RAM ~1.0 GB, Free Storage 6.8 GB, Suhu ~46°C, dan Wi-Fi Power Save disabled.
+- [x] **STB Native Component Launcher:** Memperbaiki eksekusi aplikasi Android 13 via `cmd package resolve-activity` dan `cmd activity start -n`.
+- [x] **SaveBuddy Financial Data Migration:** Migrasi 120 transaksi dan 18 kategori ke Catat Uang Bersama (`https://catat-uang-bersama.vercel.app`).
+- [x] **Cloudflare Manager Role & Full API Access:** Audit dan integrasi API token Full Access tanpa limitasi IP untuk DNS, Zone, Tunnel, Access, Workers, KV ke Infisical Vault.
+- [x] **TailShare Port Migration (Port 40506) & NTFS Fix:** Migrasi port 53317 ke 40506 dan pemulihan mount NTFS Drive D (`ntfs-3g rw`).
+- [x] **mentari-server (Debian 13 CasaOS) Deployment:** Setup Cloudflare Tunnel 24/7 di `server.abbas.my.id`, migrasi MT5 Docker bot, realtime dashboard port 8080, dan Wake-on-LAN persisten.
