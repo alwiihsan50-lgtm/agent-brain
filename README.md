@@ -27,17 +27,19 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 07:37 WIB
+- **Last Updated At:** 2026-08-19 08:47 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
-- [x] **Universal Tailscale MagicDNS untuk Seluruh Web App Tuntas:**
-  - TailShare memprioritaskan domain MagicDNS (`http://cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net:40506`), dynamic QR Code, dan System Tray.
-  - STB Web Remote Proxy & Watchdog dimigrasikan ke target MagicDNS STB (`http://erza:8080` & `erza:5555`).
-  - MT5 Dashboard & Web GUI siap diakses via MagicDNS (`cuker-h610m-hvs-m-2-r2-0:8080` & `:3000`).
-  - Bebas akses di rumah (LAN) maupun di luar rumah (Cellular / Public Wi-Fi) tanpa perlu ubah IP.
+- [x] **Optimasi Sistem PC Linux Mint, Deep Storage Cleanup & Kernel Tuning Selesai:**
+  - Storage partisi root dibersihkan (Free space naik dari 2.2 GB ke 12 GB, +10 GB reclaimed).
+  - Virtual memory & swap dioptimasi (`vm.swappiness=10`, `vfs_cache_pressure=50`) memaksimalkan 16 GB RAM & menghemat umur SSD.
+  - Limit Inotify dinaikkan ke `524288` (bebas error file watcher di IDE / AST Graphify).
+  - Service installer Live ISO usang (`casper-md5check`) di-mask (0 failed systemd unit).
+  - SSD TRIM (`14.1 GiB trimmed`) selesai dieksekusi.
+- [x] **Universal Tailscale MagicDNS untuk Seluruh Web App Tuntas.**
 - [x] **STB RockChip Android 13 Web Remote & Input Engine Selesai Penuh.**
 - [ ] *(Siap untuk task / instruksi baru dari pengguna)*
 
