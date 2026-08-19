@@ -86,9 +86,9 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
 ## 🚀 4. Optimalisasi Sistem & Kernel STB (Android 13)
 
 1. **Deep Debloat:**
-   - Pencopotan 23 paket streaming berat, Google Play Services (`com.google.android.gms`), dan framework telemetri.
+   - Pencopotan 23 paket streaming berat, Google Play Store (`com.android.vending`), Google Play Services (`com.google.android.gms`), Google Services Framework (`com.google.android.gsf`), AdServices, serta telemetri.
    - Sisa penyimpanan internal lega **~6.8 GB** (sebelumnya 3.2 GB).
-   - RAM bebas meningkat stabil menjadi **~1.0 GB – 1.1 GB** (Suhu idle dingin: **~46°C**).
+   - RAM bebas melonjak stabil menjadi **~880 MB – 1.1 GB** (Suhu idle dingin: **~46°C**).
 
 2. **Network & Display Tuning:**
    - Wi-Fi Power Save: `disabled` (mencegah spike latency saat streaming bitrate tinggi).

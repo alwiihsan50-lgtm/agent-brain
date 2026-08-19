@@ -27,7 +27,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 07:05 WIB
+- **Last Updated At:** 2026-08-19 07:15 WIB
 
 ---
 
@@ -37,7 +37,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
   - Virtual Cursor 60 FPS (Relative Trackpad Mode) terverifikasi mulus & permanen.
   - Floating 4-Way Scroll Pad kini *draggable* (dapat digeser bebas) dan *auto-dismiss* (menutup otomatis saat klik luar).
   - Auto-Fullscreen mode saat aktivasi tab Layar TV dengan HUD overlay & focal-point pinch-to-zoom.
-  - De-bloat sistem, pembersihan RAM daemon (`/api/system/clean-ram`), dan tuning jaringan STB.
+  - Deep de-bloat: Google Services Framework (`gsf`), Play Services (`gms`), telemetry & ad services tuntas dibersihkan (RAM bebas melonjak ke ~900 MB - 1.1 GB).
   - *(Detail lengkap diarsipkan di [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md) & [`docs/stb-rockchip-web-remote-architecture.md`](docs/stb-rockchip-web-remote-architecture.md))*.
 - [ ] *(Siap untuk task / instruksi baru dari pengguna)*
 
