@@ -100,3 +100,14 @@ alias cls='clear'
   - `file:///media/cuker/Data` (Data Drive D)
   - `file:///media/cuker/Data/Projects` (Projects)
   - `file:///home/cuker/agent-brain` (Agent Brain)
+
+---
+
+## ⚡ 4. Optimasi Memori & Kernel Tuning (16 GB RAM)
+
+- **`preload` Daemon:** Layanan LSB adaptive readahead yang memantau aplikasi sering dibuka dan melakukan prefetching otomatis ke RAM cache.
+- **`tmpfs` untuk `/tmp` (`/etc/systemd/system/tmp.mount`):** Folder sementara berkapasitas 50% RAM (~7.7 GB) dipasang di RAM, mempercepat I/O file sementara dan mengurangi siklus tulis pada SSD.
+- **Sysctl Virtual Memory (`/etc/sysctl.d/99-performance-tuning.conf`):**
+  - `vm.swappiness=10`: Mengutamakan penggunaan RAM dan meminimalisir swap.
+  - `vm.vfs_cache_pressure=50`: Menahan cache direktori/file di RAM lebih lama.
+

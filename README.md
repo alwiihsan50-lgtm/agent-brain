@@ -29,12 +29,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 21:00 WIB
+- **Last Updated At:** 2026-08-19 21:12 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Optimasi Memori & Prefetching Linux Mint (16 GB RAM):** Memasang daemon `preload` untuk adaptive application prefetching, mengaktifkan `tmpfs` pada `/tmp` (~7.7 GB RAM) via `tmp.mount`, serta mengonfigurasi sysctl kernel `vm.swappiness=10` dan `vm.vfs_cache_pressure=50` di `/etc/sysctl.d/99-performance-tuning.conf`.
 - [x] **Standardisasi PNPM & Optimasi Shared node_modules Global Store:** Memasang PNPM v11 global dan memigrasi seluruh repositori lokal (`tailshare`, `SIMPKK-DIGITAL`, `push-backend`, `cf-push-backend`, `mt5_storage/cf-push-backend`, `bot_push_server/backend`) ke Global Content-Addressable Store (`~/.local/share/pnpm/store/v11`) guna menghemat ratusan megabyte/gigabyte ruang penyimpanan. Dokumentasi lengkap di `docs/pnpm-global-store-node-modules-optimization.md`.
 - [x] **Standarisasi Repositori LPKP Mentari (Web 1 & Web 2):** Mengonfigurasi `AGENTS.md`, Git Hook Auto-Sync Graphify (`post-commit`/`post-checkout`), AST Knowledge Graph (`graphify-out/`), runtime Linux `esbuild` global di Linux Mint, dan menyusun dokumentasi arsitektur di `docs/lpkp-mentari-ecosystem.md`.
 - [x] **Pemasangan AI Browser Automation Suite Selesai:** Menginstal dan mengonfigurasi `@playwright/mcp` (MCP Server Antigravity), `crawl4ai` (AI Web Scraping & Clean Markdown Engine), dan `browser-use` (Autonomous Web Navigation Agent) di virtualenv terisolasi `/home/cuker/.ai-browser-tools`.
