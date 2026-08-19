@@ -20,6 +20,10 @@
   - [`docs/linux-mint-developer-workflow-customizations.md`](docs/linux-mint-developer-workflow-customizations.md) untuk konfigurasi terminal dan produktivitas Linux Mint.
   - [`docs/git-post-commit-graphify-hook.md`](docs/git-post-commit-graphify-hook.md) untuk panduan auto-sync graphify via Git Hook.
 - Jangan mengulang pekerjaan yang sudah dicentang selesai di `README.md` atau diarsipkan di [`docs/history/`](docs/history/).
+- **Konfirmasi Task Belum Selesai (Pending Task Confirmation):**
+  Jika saat membaca `README.md` ditemukan item pekerjaan yang belum selesai (`- [ ]`), AI Agent **WAJIB langsung meminta konfirmasi kepada USER di awal sesi**:
+  1. Apakah pekerjaan tersebut ingin dilanjutkan sekarang, ATAU
+  2. Apakah pekerjaan tersebut sebenarnya sudah selesai sehingga boleh dicentang (`[x]`) dan dipindahkan/diarsip ke [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md).
 
 ---
 

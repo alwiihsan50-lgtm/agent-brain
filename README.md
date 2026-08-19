@@ -27,12 +27,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-19 18:35 WIB
+- **Last Updated At:** 2026-08-19 18:45 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Protokol Konfirmasi Task Belum Selesai (Pending Task Confirmation):** Menambahkan aturan wajib bagi seluruh AI Agent untuk meminta konfirmasi ke USER di awal sesi jika menemukan task belum selesai (`- [ ]`) di `README.md` (apakah ingin dilanjutkan atau diarsip).
 - [x] **Perbaikan Bug MT5 Trading Bot & Anti-Spam Push Notification:** Memperbaiki infinite loop & spam notifikasi pada mode NEUTRAL Dual Grid di `bot.py` (menambahkan status `DUAL_GRID_WAITING`) serta menambahkan proteksi deduplication dan rate-limiting cooldown 30 detik pada `send_push_notification`.
 - [x] **DNS Reset:** DNS kustom (1.1.1.1 / 8.8.8.8) dibersihkan; resolver diarahkan langsung ke DHCP kabel LAN (192.168.100.1) dan Tailscale MagicDNS (`100.100.100.100`).
 - [x] **Pembersihan Mendalam Disk & Purge Kernel Lama Selesai:**
@@ -48,7 +49,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] **Optimasi Sistem PC Linux Mint & Kernel Tuning Selesai.**
 - [x] **Universal Tailscale MagicDNS untuk Seluruh Web App Tuntas.**
 - [x] **STB RockChip Android 13 Web Remote & Input Engine Selesai Penuh.**
-- [ ] *(Siap untuk task / instruksi baru dari pengguna)*
+
 
 ---
 

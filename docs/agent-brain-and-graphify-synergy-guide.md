@@ -24,7 +24,7 @@ Dokumen ini menjelaskan integrasi sinergi antara **`agent-brain`** (Penyimpanan 
 ## 🔄 Siklus Alur Kerja Sinergis (The Synergy Lifecycle)
 
 1. **Phase 1: Orientasi Konteks Makro (`agent-brain`)**
-   Agent membuka `agent-brain/README.md` dan dokumen terkait di `agent-brain/docs/` untuk memahami batasan, aturan port (`docs/system-environment-and-ports.md`), dan riwayat pekerjaan.
+   Agent membuka `agent-brain/README.md` dan dokumen terkait di `agent-brain/docs/` untuk memahami batasan, aturan port (`docs/system-environment-and-ports.md`), dan riwayat pekerjaan. Jika terdapat item pekerjaan yang belum selesai (`- [ ]`), Agent wajib meminta konfirmasi ke user apakah ingin dilanjutkan atau diarsip.
 
 2. **Phase 2: Eksplorasi Kode Mikro (`graphify`)**
    - **Auto-Init:** Jika `graphify-out/graph.json` belum ada di repositori target, jalankan `graphify .` (0 token API cost, AST engine).
