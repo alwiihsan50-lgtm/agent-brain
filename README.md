@@ -24,7 +24,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Infisical Secret Vault** | `app.infisical.com` / `infisical` CLI | 🟢 Synced | 10 kredensial infrastruktur E2EE tersimpan di `dev` & `prod`. |
 | **Trading Risk Engine** | `mt5_config/bot.py` | 🟢 Aktif | ATR Volatility Grid Multi-pair scanner dengan Dynamic Spacing & Circuit Breaker. |
 | **AI Browser Suite** | `~/.ai-browser-tools` & MCP | 🟢 Terpasang | `@playwright/mcp` Server, `crawl4ai` Async Extractor, dan `browser-use` Agent. |
-| **Marketing Agent FB** | `/media/cuker/Data/marketing agent` | 🟢 Siap | CLI `mkt`, auto 1:1 image optimizer, listing generator, CRM leads, FB SOP. |
+| **Marketing Agents** | `/media/cuker/Data/marketing agent` | 🟢 Siap | `fbagent/` (FB Marketplace Suite, CLI `mkt`, auto-poster) & `ttagent/` (TikTok Agent). |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Single branch `main` stabil terverifikasi. |
 
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).

@@ -41,4 +41,4 @@ Dokumen ini berisi pemetaan lengkap seluruh proyek, repositori Git, lokasi direk
 | `D:\immich` & `D:\immich-backup` | Instance photo/video self-hosted Immich & backup data. |
 | `D:\AnythingLLM` & `D:\OllamaModels` | Model LLM lokal & AnythingLLM workspace. |
 | `D:\HermesModelGuide` | Panduan & konfigurasi model Hermes. |
-| `D:\marketing agent` | Workplace & marketing tools suite khusus Facebook Marketplace (CLI `mkt`, auto 1:1 image optimizer, listing generator, CRM leads). |
+| `D:\marketing agent` | Workplace & tools marketing: `fbagent/` (Facebook Marketplace suite & CLI `mkt`) dan `ttagent/` (TikTok marketing). |
