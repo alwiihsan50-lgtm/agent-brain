@@ -137,3 +137,12 @@ Jika kamu ingin mendaftarkan iPhone baru atau browser lain untuk menerima notifi
 ## 🛡️ 4. Maintenance & Operasional
 - **Biaya:** $0 / Bulan (Free Tier Cloudflare Workers mencakup 100.000 request/hari).
 - **Auto Cleanup:** Cloudflare Worker secara otomatis mendeteksi status `410 Gone` atau `404 Not Found` dari Apple/Google Push Service saat user meng-uninstall PWA atau mencabut izin notifikasi, dan menghapus subscription tersebut dari KV database tanpa intervensi manual.
+
+---
+
+## 💻 5. Notifikasi Startup/Boot & Idle PC Linux Mint
+Tersedia skrip daemon `boot-ready-notify.py` di `~/.local/bin/` yang dijalankan otomatis via `systemd --user` (`boot-ready-notify.service`):
+- **Deteksi:** Menunggu jaringan online & load CPU stabil (idle < 35%).
+- **Info Payload:** Waktu boot (`systemd-analyze`), penggunaan RAM, IP LAN & Tailscale, serta status container Docker (MT5 Bot/Dashboard).
+- **Service Status:** `systemctl --user status boot-ready-notify.service`.
+
