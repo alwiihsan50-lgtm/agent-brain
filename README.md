@@ -24,17 +24,19 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Infisical Secret Vault** | `app.infisical.com` / `infisical` CLI | 🟢 Synced | 10 kredensial infrastruktur E2EE tersimpan di `dev` & `prod`. |
 | **Trading Risk Engine** | `mt5_config/bot.py` | 🟢 Aktif | ATR Volatility Grid Multi-pair scanner dengan Dynamic Spacing & Circuit Breaker. |
 | **AI Browser Suite** | `~/.ai-browser-tools` & MCP | 🟢 Terpasang | `@playwright/mcp` Server, `crawl4ai` Async Extractor, dan `browser-use` Agent. |
+| **Marketing Agent FB** | `/media/cuker/Data/marketing agent` | 🟢 Siap | CLI `mkt`, auto 1:1 image optimizer, listing generator, CRM leads, FB SOP. |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Single branch `main` stabil terverifikasi. |
 
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-20 11:24 WIB
+- **Last Updated At:** 2026-08-20 13:20 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Setup Workspace & Suite Marketing Agent Facebook Marketplace:** Membangun workplace lengkap di `/media/cuker/Data/marketing agent`, virtual environment Python dengan dependencies (`pillow`, `rich`, `typer`, `jinja2`, `pandas`, `openpyxl`, `playwright`), tool optimizer foto 1:1 square + clean EXIF + trust badge, generator listing SEO spintax, CRM leads & renewals SQLite, script closing chat, dan perintah global CLI `mkt`.
 - [x] **Notifikasi Otomatis Boot & Idle PC ke Smartphone:** Membuat skrip daemon `boot-ready-notify.py` dan systemd service `boot-ready-notify.service` yang otomatis mendeteksi koneksi internet dan stabilisasi idle sistem saat PC baru menyala, lalu mengirim ringkasan status boot (durasi, CPU load, RAM, IP LAN/Tailscale, status Docker MT5) via Cloudflare Web Push Hub ke iPhone.
 - [x] **Optimasi Memori & Prefetching Linux Mint (16 GB RAM):** Memasang daemon `preload` untuk adaptive application prefetching, mengaktifkan `tmpfs` pada `/tmp` (~7.7 GB RAM) via `tmp.mount`, serta mengonfigurasi sysctl kernel `vm.swappiness=10` dan `vm.vfs_cache_pressure=50` di `/etc/sysctl.d/99-performance-tuning.conf`.
 - [x] **Standardisasi PNPM & Optimasi Shared node_modules Global Store:** Memasang PNPM v11 global dan memigrasi seluruh repositori lokal (`tailshare`, `SIMPKK-DIGITAL`, `push-backend`, `cf-push-backend`, `mt5_storage/cf-push-backend`, `bot_push_server/backend`) ke Global Content-Addressable Store (`~/.local/share/pnpm/store/v11`) guna menghemat ratusan megabyte/gigabyte ruang penyimpanan. Dokumentasi lengkap di `docs/pnpm-global-store-node-modules-optimization.md`.
