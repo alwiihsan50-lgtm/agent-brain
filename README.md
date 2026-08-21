@@ -45,7 +45,10 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] **Standarisasi Repositori LPKP Mentari (Web 1 & Web 2):** Mengonfigurasi `AGENTS.md`, Git Hook Auto-Sync Graphify (`post-commit`/`post-checkout`), AST Knowledge Graph (`graphify-out/`), runtime Linux `esbuild` global di Linux Mint, dan menyusun dokumentasi arsitektur di `docs/lpkp-mentari-ecosystem.md`.
 - [x] **Pemasangan AI Browser Automation Suite Selesai:** Menginstal dan mengonfigurasi `@playwright/mcp` (MCP Server Antigravity), `crawl4ai` (AI Web Scraping & Clean Markdown Engine), dan `browser-use` (Autonomous Web Navigation Agent) di virtualenv terisolasi `/home/cuker/.ai-browser-tools`.
 - [x] **Protokol Konfirmasi Task Belum Selesai (Pending Task Confirmation):** Menambahkan aturan wajib bagi seluruh AI Agent untuk meminta konfirmasi ke USER di awal sesi jika menemukan task belum selesai (`- [ ]`) di `README.md` (apakah ingin dilanjutkan atau diarsip).
-- [x] **Arsitektur In-Memory RAM MT5 Trading Bot & Dashboard:** Mengintegrasikan volume RAM `tmpfs` (`ram_buffer` 64 MB) lintas container Docker (`exness-mt5` & `mt5-dashboard`), merutekan export status dan pembacaan `/api/status` 100% di RAM (`/ram_data/bot_status.json`) untuk Zero Disk I/O dan latensi ultra-rendah, serta memasang mount `tmpfs` untuk `/tmp` dan `/dev/shm`.
+- [x] **Arsitektur In-Memory RAM MT5, AI Browser & Media Engine:**
+  - MT5 & Web Dashboard: Shared volume `tmpfs` (`ram_buffer` 64 MB) lintas container Docker untuk Zero Disk I/O status 6s.
+  - AI Browser Suite: Mengarahkan `TMPDIR` & `PLAYWRIGHT_TMPDIR` ke `/tmp/playwright-ram` (`tmpfs` RAM) untuk zero-wear fast scraping.
+  - Media Engine (`ttagent`/`fbagent`): Staging frame extraction & video transcode di `/tmp/media-staging/` serta SQLite In-Memory PRAGMA tuning (WAL, MEMORY temp_store, 64 MB RAM cache, 256 MB MMAP).
 - [x] **Pembersihan Disk & Kernel Purge (+16 GB Reclaimed) & Advanced System Tuning.**
 
 ---
