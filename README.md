@@ -49,6 +49,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
   - MT5 & Web Dashboard: Shared volume `tmpfs` (`ram_buffer` 64 MB) lintas container Docker untuk Zero Disk I/O status 6s.
   - AI Browser Suite: Mengarahkan `TMPDIR` & `PLAYWRIGHT_TMPDIR` ke `/tmp/playwright-ram` (`tmpfs` RAM) untuk zero-wear fast scraping.
   - Media Engine (`ttagent`/`fbagent`): Staging frame extraction & video transcode di `/tmp/media-staging/` serta SQLite In-Memory PRAGMA tuning (WAL, MEMORY temp_store, 64 MB RAM cache, 256 MB MMAP).
+- [x] **Monetisasi Otomatis: Multi-Account MT5 Scaling & TikTok Affiliate Factory:**
+  - Multi-Account MT5: Dukungan agregasi portofolio multi-akun di RAM (`/api/accounts`), template container Prop Firm di `docker-compose.yml`, dan dynamic status routing.
+  - Content Factory CLI (`tt factory`): Generator batch video 9:16 otomatis (Script Hook Psikologis, Edge-TTS AI Voiceover, In-Memory FFmpeg render, SQLite auto-tracking, dan Apple Web Push).
 - [x] **Pembersihan Disk & Kernel Purge (+16 GB Reclaimed) & Advanced System Tuning.**
 
 ---
