@@ -26,6 +26,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **AI Browser Suite** | `~/.ai-browser-tools` & MCP | 🟢 Terpasang | `@playwright/mcp` Server, `crawl4ai` Async Extractor, dan `browser-use` Agent. |
 | **Marketing Agents** | `/media/cuker/Data/marketing agent` | 🟢 Aktif | `fbagent/` (FB Suite, `mkt`) & `ttagent/` (TikTok Suite, `tt`). |
 | **TikTok Web Dashboard** | `Port 8090` / `192.168.101.2:8090` | 🟢 Running | Mobile-First Web Studio: Script generator, AI Voiceover, 9:16 Video render, CRM. |
+| **MoneyPrinterTurbo** | `Port 8501` (Web) / `8095` (API) | 🟢 Ready | AI Short Video Factory: Hybrid local asset bank, Impact viral subtitle, Edge-TTS. |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Single branch `main` stabil terverifikasi. |
 
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
@@ -52,12 +53,14 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] **Monetisasi Otomatis: Multi-Account MT5 Scaling & TikTok Affiliate Factory:**
   - Multi-Account MT5: Dukungan agregasi portofolio multi-akun di RAM (`/api/accounts`), template container Prop Firm di `docker-compose.yml`, dan dynamic status routing.
   - Content Factory CLI (`tt factory`): Generator batch video 9:16 otomatis (Script Hook Psikologis, Edge-TTS AI Voiceover, In-Memory FFmpeg render, SQLite auto-tracking, dan Apple Web Push).
+- [x] **Setup & Kustomisasi MoneyPrinterTurbo "Naik Kelas":** Memasang MoneyPrinterTurbo di `/media/cuker/Data/Projects/MoneyPrinterTurbo` dengan virtual environment Linux `/home/cuker/.virtualenvs/moneyprinterturbo`, mengonfigurasi Port aman `8095` (REST API) & `8501` (WebUI), default rasio 9:16 vertikal, font viral `impact.ttf`, subtitle kuning kontras (`#FFFF00`), Edge-TTS `id-ID-ArdiNeural` (1.08x rate), serta integrasi folder aset lokal `storage/local_videos`. Dokumentasi lengkap di `docs/moneyprinterturbo-hybrid-architecture.md`.
 - [x] **Pembersihan Disk & Kernel Purge (+16 GB Reclaimed) & Advanced System Tuning.**
 
 ---
 
 ## 📚 Indeks Dokumentasi (`docs/`)
 
+- 📄 [**MoneyPrinterTurbo Hybrid Architecture**](docs/moneyprinterturbo-hybrid-architecture.md) — Setup pabrik video AI, port 8095/8501, local asset bank, & kinetic subtitle.
 - 📄 [**TikTok Marketing Agent Suite**](docs/tiktok-marketing-agent-suite.md) — Panduan arsitektur ttagent, CLI `tt`, video 9:16, live selling, & CRM SQLite.
 - 📄 [**Standardisasi PNPM & Shared node_modules**](docs/pnpm-global-store-node-modules-optimization.md) — Konfigurasi global store, hard links, dan panduan dependensi Node.js.
 - 📄 [**Ekosistem Digital LPKP Mentari**](docs/lpkp-mentari-ecosystem.md) — Arsitektur Web 1 (Astro 7), Web 2 (Next.js 16 LMS), Supabase, & kurikulum pelatihan.

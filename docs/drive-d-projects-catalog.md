@@ -26,6 +26,7 @@ Dokumen ini berisi pemetaan lengkap seluruh proyek, repositori Git, lokasi direk
 | **MentariAcc** | `D:\Projects\MentariAcc` | `https://github.com/lpkpmentaribussiness/MentariAcc.git` | `main` | Aplikasi Akuntansi Mentari Business. |
 | **MentariOnlineCourse** | `D:\Projects\MentariOnlineCourse` | `https://github.com/lpkpmentaribussiness/MentariOnlineCourse.git` | `main` | Platform Kursus Online LPKP Mentari. |
 | **taste-skill** | `D:\Projects\taste-skill` | `https://github.com/Leonxlnx/taste-skill.git` | `main` | Taste Skill repository. |
+| **MoneyPrinterTurbo** | `D:\Projects\MoneyPrinterTurbo` | `https://github.com/harry0703/MoneyPrinterTurbo.git` | `main` | AI short video automated production factory (WebUI: 8501, API: 8095). |
 
 ---
 
