@@ -32,12 +32,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-20 13:52 WIB
+- **Last Updated At:** 2026-08-22 19:56 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Integrasi Shortcut Klik Kanan TailShare di Nemo File Manager (Linux Mint):** Memasang aksi menu konteks Nemo (`tailshare-send.nemo_action`, `tailshare-open-web.nemo_action`, `tailshare-open-folder.nemo_action`), helper CLI `tailshare-send` untuk pengiriman instan multi-file/folder via REST API (Port 40506) / storage sync Drive D (`/media/cuker/Data/tailshare`), ikon sistem hicolor TailShare, dan desktop notification `notify-send`.
 - [x] **Setup Partisi VM_Storage (127 GB ext4) & KVM/Virt-Manager Virtualization Hub:** Berhasil membuat partisi baru `/dev/sda2` (127.5 GB ext4, label `VM_Storage`) di `/media/cuker/VM_Storage` dengan fstab automount, mengonfigurasi KVM, QEMU, Virt-Manager, OVMF UEFI, virtual network default, dan storage pool (`vm-images` & `vm-iso`) dengan data partisi NTFS (`sda1`) 100% aman dan utuh.
 - [x] **Setup Workspace & Suite Marketing Agent TikTok (ttagent):** Membangun workplace lengkap di `/media/cuker/Data/marketing agent/ttagent`, engine olah video/foto 9:16 vertikal (1080x1920, EXIF/metadata stripper, cover high-CTR headline), generator naskah video 15s/30s/60s dengan bank 100+ viral hooks psikologis, generator rundown TikTok Live Selling 60 menit, riset tagar SEO, CRM leads & affiliate creator tracker SQLite, SOP algoritma FYP, dan perintah global CLI `tt`.
 - [x] **Setup Workspace & Suite Marketing Agent Facebook Marketplace:** Membangun workplace lengkap di `/media/cuker/Data/marketing agent`, virtual environment Python dengan dependencies (`pillow`, `rich`, `typer`, `jinja2`, `pandas`, `openpyxl`, `playwright`), tool optimizer foto 1:1 square + clean EXIF + trust badge, generator listing SEO spintax, CRM leads & renewals SQLite, script closing chat, dan perintah global CLI `mkt`.

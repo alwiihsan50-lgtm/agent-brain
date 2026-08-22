@@ -118,3 +118,19 @@ Buat file shortcut di desktop Linux Mint agar bisa diklik 2x:
    ```bash
    chmod +x ~/Desktop/TailShare.desktop
    ```
+
+---
+
+## 6. Menu Klik Kanan Nemo File Manager (Nemo Actions)
+
+Integrasi menu klik kanan di Linux Mint (Nemo) agar dapat langsung membagikan file/folder ke TailShare:
+
+1. **Helper CLI:** `~/.local/bin/tailshare-send`
+   - Mengirim file via TailShare REST API (`http://127.0.0.1:40506/api/files/upload`) dengan metadata pengirim dan push notifikasi instan.
+   - Fallback otomatis ke copy direktori `/media/cuker/Data/tailshare` jika offline.
+   - Notifikasi desktop via `notify-send`.
+2. **Nemo Actions:**
+   - `~/.local/share/nemo/actions/tailshare-send.nemo_action`: Muncul saat memilih file/folder ("Kirim ke TailShare").
+   - `~/.local/share/nemo/actions/tailshare-open-web.nemo_action`: Muncul saat klik kanan area kosong ("Buka TailShare Web").
+   - `~/.local/share/nemo/actions/tailshare-open-folder.nemo_action`: Muncul saat klik kanan area kosong ("Buka Folder Penyimpanan TailShare").
+
