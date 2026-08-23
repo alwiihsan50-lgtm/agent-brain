@@ -52,6 +52,7 @@ Kontrol navigasi kalender menggunakan layout 2 baris x 2 kolom:
 - Laporkan hasil build dan Commit SHA yang telah dipush ke pengguna.
 
 ## 8. Riwayat Commit Terkait
+- `a64c20c` - Natural tight inpainting with dynamic bounding box, cosine edge feathering, and camera grain noise synthesis.
 - `9f086c8` - Anchor Timemark date coordinates and inpainting precisely to detected vertical yellow line margin and height.
 - `0ceb90f` - Fix React hook order (remove early return before useEffect in AbsensiInputModal) causing modal failure when opening dates.
 - `47b4dd8` - Calibrate Timemark 3:4 date coordinates, preserve vertical yellow line, add live in-browser edited photo preview with lightbox zoom.
