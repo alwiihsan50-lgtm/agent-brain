@@ -32,12 +32,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-23 13:48 WIB
+- **Last Updated At:** 2026-08-23 13:58 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Isolasi Microservice AI & Hosting Murni Vercel:** Menghapus fungsi serverless proxy Vercel dan membatasi fitur rahasia edit tanggal AI otomatis hanya pada *local development* (`localhost`). Web online di Vercel kini menjadi static SPA murni yang 100% independen tanpa ketergantungan pada PC lokal.
 - [x] **Auto-Generate Jadwal Dinas Bulanan Otomatis (Pre-Populated Schedule):** Menambahkan sistem auto-provisioning baris jadwal bulanan di `src/features/absensi/absensiService.js` (`ensureMonthlyAbsensiRows`). Setiap bulan aktif yang dibuka langsung membuat baris jadwal dinas untuk seluruh karyawan secara instan via bulk upsert `ignoreDuplicates: true` (aman tanpa menimpa data yang sudah ada), sehingga alur database menjadi sangat sederhana (pure `UPDATE`).
 - [x] **Upload Foto Serah Terima Mandiri (Tanpa Wajib Absensi):** Mengizinkan user mengunggah foto serah terima pada tanggal lampau dan hari ini secara mandiri meski belum mengisi data/foto absensi utama (menggunakan database upsert otomatis). Hanya tanggal di masa depan yang terkunci (`abu-abu`). Serta memastikan absensi utama tetap akurat dan tidak terpengaruh jika hanya foto serah terima yang diunggah.
 - [x] **Fleksibilitas Upload Foto Kerja Arsip-IMO (1 atau 2 Foto):** Mengizinkan user mengunggah foto kerja secara bertahap (minimal 1 foto tersimpan dulu, foto kedua bisa disusulkan kemudian) dengan manajemen slot mandiri (Tersimpan/Ganti/Hapus/Batal), smart delta upload tanpa re-upload foto lama, pembersihan otomatis storage tak terpakai, dan indikator visual status kalender (`(1 FOTO)` vs `Lengkap ✅`).
