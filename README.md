@@ -32,7 +32,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-23 10:21 WIB
+- **Last Updated At:** 2026-08-23 10:51 WIB
 
 ---
 
