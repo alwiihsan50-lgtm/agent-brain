@@ -52,6 +52,8 @@ Kontrol navigasi kalender menggunakan layout 2 baris x 2 kolom:
 - Laporkan hasil build dan Commit SHA yang telah dipush ke pengguna.
 
 ## 8. Riwayat Commit Terkait
+- `cdbc759` - Restore pure in-browser Timemark date adjustment (HTML5 Canvas + EXIF piexifjs) without PC backend dependency.
+- `9c63a0e` - Add graphify knowledge graph and automated GitHub Actions workflow.
 - `853dde9` - Restored Serah Terima navigation.
 - `4ceb0d6` - Reorganized calendar navigation into a 2x2 grid.
 - `a7adc4f` - Set navigation grid text to `12px`.
