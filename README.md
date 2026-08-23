@@ -26,13 +26,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **AI Browser Suite** | `~/.ai-browser-tools` & MCP | 🟢 Terpasang | `@playwright/mcp` Server, `crawl4ai` Async Extractor, dan `browser-use` Agent. |
 | **Marketing Agents** | `/media/cuker/Data/marketing agent` | 🟢 Aktif | `fbagent/` (FB Suite, `mkt`) & `ttagent/` (TikTok Suite, `tt`). |
 | **TikTok Web Dashboard** | `Port 8090` / `192.168.101.2:8090` | 🟢 Running | Mobile-First Web Studio: Script generator, AI Voiceover, 9:16 Video render, CRM. |
-| **MoneyPrinterTurbo** | `Port 8501` (Web) / `8095` (API) | 🟢 Ready | AI Short Video Factory: Hybrid local asset bank, Impact viral subtitle, Edge-TTS. |
+| **Timemark Lab Studio** | `Port 3005` (Web) / `3003` (API) | 🟢 Running | SOTA AI Inpainting (LaMa ONNX 198 MB), dynamic anchor, and pixel-perfect Roboto font. |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Single branch `main` stabil terverifikasi. |
 
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-23 11:36 WIB
+- **Last Updated At:** 2026-08-23 12:02 WIB
 
 ---
 
