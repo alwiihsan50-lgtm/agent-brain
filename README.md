@@ -32,12 +32,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-23 13:58 WIB
+- **Last Updated At:** 2026-08-23 19:37 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
+- [x] **Diagnostik & Perkakas Hardware Unbrick STB RockChip RK3528:** Berhasil mengidentifikasi motherboard STB V8_Max (`RK3528_DDR3_8X4_V12`, Samsung eMMC 16GB `KLMAG1JENB`), memetakan test point PCB (UART Header `DEBUG`, Pad `AV`, eMMC clock vias), membuat panduan visual TailShare (`testpoint_guide.jpg`), menyiapkan kartu MicroSD penyelamat (`STB_RESCUE_PAKET` & partisi asli `recovery.img`/`boot.img`), memasang modul serial (`picocom`, `minicom`, `python3-serial`), mengonfigurasi dongle CH340 (`/dev/ttyUSB*`), serta membuat skrip otomatis 1-klik (`flash-maskrom.sh`, `rockchip_robust_serial.py`, `uart_unbrick.py`). Dokumentasi lengkap di `docs/stb-rockchip-web-remote-architecture.md`.
 - [x] **Isolasi Microservice AI & Hosting Murni Vercel:** Menghapus fungsi serverless proxy Vercel dan membatasi fitur rahasia edit tanggal AI otomatis hanya pada *local development* (`localhost`). Web online di Vercel kini menjadi static SPA murni yang 100% independen tanpa ketergantungan pada PC lokal.
 - [x] **Auto-Generate Jadwal Dinas Bulanan Otomatis (Pre-Populated Schedule):** Menambahkan sistem auto-provisioning baris jadwal bulanan di `src/features/absensi/absensiService.js` (`ensureMonthlyAbsensiRows`). Setiap bulan aktif yang dibuka langsung membuat baris jadwal dinas untuk seluruh karyawan secara instan via bulk upsert `ignoreDuplicates: true` (aman tanpa menimpa data yang sudah ada), sehingga alur database menjadi sangat sederhana (pure `UPDATE`).
 - [x] **Upload Foto Serah Terima Mandiri (Tanpa Wajib Absensi):** Mengizinkan user mengunggah foto serah terima pada tanggal lampau dan hari ini secara mandiri meski belum mengisi data/foto absensi utama (menggunakan database upsert otomatis). Hanya tanggal di masa depan yang terkunci (`abu-abu`). Serta memastikan absensi utama tetap akurat dan tidak terpengaruh jika hanya foto serah terima yang diunggah.

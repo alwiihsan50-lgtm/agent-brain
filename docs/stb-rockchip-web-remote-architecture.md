@@ -104,3 +104,32 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
 - **Node Name:** `erza` (`100.104.214.122`)
 - **Proxy Endpoint Linux Mint:** `http://100.110.205.27:8085`
 - **Local LAN STB:** `http://192.168.100.61:8085`
+
+---
+
+## 🛠️ 6. Hardware Unbrick, PCB Test Points & UART Console (`RK3528_DDR3_8X4_V12`)
+
+### A. Spesifikasi Hardware PCB
+- **Motherboard:** Round Blue PCB bertuliskan `RK3528_DDR3_8X4_V12`
+- **SoC:** RockChip RK3528 Quad-Core ARM64
+- **eMMC:** Samsung 16 GB eMMC 5.1 BGA-153 (`KLMAG1JENB-B031`)
+- **RAM:** 4x DDR3 BGA chips (`SEC`)
+- **Wi-Fi:** `LB800D-S HCY Wifi6`
+
+### B. Pemetaan Test Point PCB & Akses Root Hardware
+1. **Header `DEBUG` (UART Serial Console):**
+   - **Lokasi:** Di samping slot kartu MicroSD (TF).
+   - **Pinout (3 Pin):** `GND` | `TX` | `RX` (Tegangan logika: **`3.3V`**).
+   - **Koneksi USB-to-TTL (CH340):** `GND` ➡️ `GND`, `RX` Dongle ➡️ `TX` STB, `TX` Dongle ➡️ `RX` STB *(VCC tidak dihubungkan)*.
+   - **Baudrate:** **`1500000` (1.5 Mbps)** & fallback **`115200`**.
+   - **Skrip Pemantau:** [`/home/cuker/Desktop/stb-remote/rockchip_robust_serial.py`](file:///home/cuker/Desktop/stb-remote/rockchip_robust_serial.py).
+2. **Titik Pad `AV` (Recovery Key):**
+   - **Lokasi:** Di antara colokan `SPDIF` dan `DCIN`, tepat di samping elco `100 10V VT`.
+   - **Fungsi:** Short ke Ground (bodi seng DCIN/USB) saat colok adaptor daya untuk memicu mode Android Recovery.
+3. **Titik eMMC Test Point (MaskROM Hardware Override):**
+   - **Lokasi:** Deretan titik solder bundar (via) di bawah chip Samsung `KLMAG1JENB` bertuliskan angka `1-14`.
+   - **Fungsi:** Menghubungkan pinset di baris titik eMMC saat power masuk memblokir boot eMMC dan memaksa SoC RK3528 masuk ke **Mode MaskROM USB 2.0 (Port Hitam)**.
+4. **Alat Otomasi Flasher PC:**
+   - Skrip 1-Klik: [`/home/cuker/Desktop/stb-remote/flash-maskrom.sh`](file:///home/cuker/Desktop/stb-remote/flash-maskrom.sh) (Flash otomatis via `rkdeveloptool` untuk partisi asli `recovery.img`, `boot.img`, `dtbo.img`, `vbmeta.img`).
+   - Panduan Visual PCB: [`/media/cuker/Data/tailshare/testpoint_guide.jpg`](file:///media/cuker/Data/tailshare/testpoint_guide.jpg) & [`emmc_testpoints_zoom.jpg`](file:///media/cuker/Data/tailshare/emmc_testpoints_zoom.jpg).
+
