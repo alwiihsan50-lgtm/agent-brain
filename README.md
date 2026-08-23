@@ -32,13 +32,14 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - **Dual-Engine Protocol:** `agent-brain` (Global Strategy) + `graphify` (Local AST Code Intelligence).
 - **Global Excludes:** `graphify-out/` dan `.graphify_*` di-ignore secara global via `~/.gitignore_global`.
 - **Last Updated By:** Antigravity AI Agent (Google DeepMind)
-- **Last Updated At:** 2026-08-23 13:05 WIB
+- **Last Updated At:** 2026-08-23 13:33 WIB
 
 ---
 
 ## 🚀 Progress & Task Aktif
 
-- [x] **Fleksibilitas Upload Foto Kerja Arsip-IMO (1 atau 2 Foto):** Mengizinkan user mengunggah foto kerja secara bertahap (minimal 1 foto tersimpan dulu, foto kedua bisa disusulkan kemudian) dengan manajemen slot mandiri (Tersimpan/Ganti/Hapus/Batal), smart delta upload tanpa re-upload foto lama, pembersihan otomatis storage tak terpakai, dan indikator visual status kalender (`(1 FOTO) ⚠️` vs `Lengkap ✅`).
+- [x] **Upload Foto Serah Terima Mandiri (Tanpa Wajib Absensi):** Mengizinkan user mengunggah foto serah terima pada tanggal lampau dan hari ini secara mandiri meski belum mengisi data/foto absensi utama (menggunakan database upsert otomatis). Hanya tanggal di masa depan yang terkunci (`abu-abu`). Serta memastikan absensi utama tetap akurat dan tidak terpengaruh jika hanya foto serah terima yang diunggah.
+- [x] **Fleksibilitas Upload Foto Kerja Arsip-IMO (1 atau 2 Foto):** Mengizinkan user mengunggah foto kerja secara bertahap (minimal 1 foto tersimpan dulu, foto kedua bisa disusulkan kemudian) dengan manajemen slot mandiri (Tersimpan/Ganti/Hapus/Batal), smart delta upload tanpa re-upload foto lama, pembersihan otomatis storage tak terpakai, dan indikator visual status kalender (`(1 FOTO)` vs `Lengkap ✅`).
 - [x] **Desktop Launcher Timemark AI Backend:** Membuat pintasan desktop interaktif [`Timemark-AI-Backend.desktop`](file:///home/cuker/Desktop/Timemark-AI-Backend.desktop) dan runner script [`timemark-backend-launcher.sh`](file:///home/cuker/.local/bin/timemark-backend-launcher.sh) di Linux Mint. Menyediakan live terminal logs, auto-detect IP Tailscale, notifikasi desktop `notify-send`, auto-restart port 3003 jika ada konflik PID, serta auto-start Web Arsip-IMO (Port 3004) dalam sekali klik.
 - [x] **Integrasi AI Inpainting LaMa SOTA ke Web Arsip-IMO:** Berhasil menghubungkan alur kerja upload foto absensi di [`Arsip-IMO`](file:///media/cuker/Data/Projects/Arsip-IMO) langsung ke backend microservice **FastAPI LaMa ONNX (Port 3003)**. Modul `src/lib/timemarkAdjuster.js` di-upgrade menggunakan deteksi anchor dinamis garis kuning, tipografi Roboto Bold asli, fallback 2D Laplacian inpainting, dan update EXIF timestamp digital sebelum upload ke Supabase Storage.
 - [x] **Release Stable: Integrasi SOTA LaMa ONNX Neural Inpainting di Timemark Photo Adjustment:** Model AI deep inpainting **LaMa (Fast Fourier Convolutions, 198 MB)** resmi dijadikan rilis stabil di backend FastAPI (`backend/app.py`) dan frontend Vite React Studio (`port 3005`). Menyediakan penghapusan tanggal 100% fotorealistis dan seamless, deteksi kolom anchor dinamis, multi-engine switcher, dan lolos seluruh unit test backend.
