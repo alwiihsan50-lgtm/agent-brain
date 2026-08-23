@@ -133,3 +133,17 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
    - Skrip 1-Klik: [`/home/cuker/Desktop/stb-remote/flash-maskrom.sh`](file:///home/cuker/Desktop/stb-remote/flash-maskrom.sh) (Flash otomatis via `rkdeveloptool` untuk partisi asli `recovery.img`, `boot.img`, `dtbo.img`, `vbmeta.img`).
    - Panduan Visual PCB: [`/media/cuker/Data/tailshare/testpoint_guide.jpg`](file:///media/cuker/Data/tailshare/testpoint_guide.jpg) & [`emmc_testpoints_zoom.jpg`](file:///media/cuker/Data/tailshare/emmc_testpoints_zoom.jpg).
 
+### C. Jalur MicroSD Bootable Rescue (SD_Firmware_Tool Method)
+1. **Prioritas Boot Silikon RK3528:**
+   - Slot Kartu MicroSD (TF) adalah **Prioritas #1** pada silikon BootROM SoC RK3528.
+   - Kerusakan partisi `recovery` di eMMC diabaikan saat MicroSD bootable terpasang.
+2. **Binari Bootloader Resmi RK3528 Terkompilasi:**
+   - Direktori Perkakas: [`/home/cuker/Desktop/stb-remote/rk3528_binaries/`](file:///home/cuker/Desktop/stb-remote/rk3528_binaries/)
+   - `idblock.img` (317 KB) — Dibuat via `boot_merger` resmi RockChip dengan DDR3 memory training `rk3528_ddr_1056MHz_D3_LP3_eyescan_v1.13.bin` & `rk3528_spl_v1.06.bin`.
+   - `rk3528_loader.bin` (471 KB) — USB download miniloader untuk `rkdeveloptool db` / `upgrade_tool DB`.
+   - `upgrade_tool` (Linux x86_64) — Utilitas resmi pabrik RockChip untuk flashing tingkat rendah.
+3. **Format Layout MicroSD:**
+   - Sektor 64 (Offset 32 KB): `idblock.img` (disuntikkan via `dd if=idblock.img of=/dev/sdX seek=64`).
+   - Partisi 1: MBR FAT32 (Offset 16 MB) berisi paket firmware / partisi asli.
+
+
