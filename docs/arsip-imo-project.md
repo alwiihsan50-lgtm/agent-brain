@@ -52,6 +52,7 @@ Kontrol navigasi kalender menggunakan layout 2 baris x 2 kolom:
 - Laporkan hasil build dan Commit SHA yang telah dipush ke pengguna.
 
 ## 8. Riwayat Commit Terkait
+- `0ceb90f` - Fix React hook order (remove early return before useEffect in AbsensiInputModal) causing modal failure when opening dates.
 - `47b4dd8` - Calibrate Timemark 3:4 date coordinates, preserve vertical yellow line, add live in-browser edited photo preview with lightbox zoom.
 - `cdbc759` - Restore pure in-browser Timemark date adjustment (HTML5 Canvas + EXIF piexifjs) without PC backend dependency.
 - `9c63a0e` - Add graphify knowledge graph and automated GitHub Actions workflow.
