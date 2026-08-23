@@ -63,3 +63,15 @@ Kontrol navigasi kalender menggunakan layout 2 baris x 2 kolom:
 - `853dde9` - Restored Serah Terima navigation.
 - `4ceb0d6` - Reorganized calendar navigation into a 2x2 grid.
 - `a7adc4f` - Set navigation grid text to `12px`.
+
+## 9. Timemark AI Inpainting Lab (Lingkungan Uji Coba Terisolasi)
+Untuk menguji coba berbagai engine pembersihan (inpainting) foto tanpa mengganggu repositori produksi `Arsip-IMO`:
+- **Lokasi Project:** `/media/cuker/Data/Projects/timemark-photo-adjustment/frontend`
+- **Port Aktif:** `Port 3005` (Akses HP: `http://192.168.20.254:3005` atau Tailscale: `http://100.110.205.27:3005`).
+- **Engine yang Diuji:**
+  1. `2D Laplacian Diffusion` — Difusi harmonik isotropik 2D ($\nabla^2 I = 0$) pada goresan teks.
+  2. `PatchMatch Synthesizer` — Sintesis mikro-tekstur ala Adobe Content-Aware.
+  3. `Telea Fast Marching` — Rekonstruksi kontur gradien inverse-distance.
+- **Acuan Koordinat:** Terkunci presisi pada Garis Kuning Vertikal di margin kiri (`X: 19..24`, `Y: 1310..1490`). Posisi teks tanggal: `X = lineXMax + 0.0225 * width`, `Y = lineYTop + 0.0210 * height` (baseline).
+- **Langkah Handoff:** Setelah user mengonfirmasi pilihan engine terbaik di lab, pindahkan logika engine terpilih dari `timemark-photo-adjustment/frontend/src/lib/inpaintingEngines.js` ke `Arsip-IMO/src/lib/timemarkAdjuster.js`.
+
