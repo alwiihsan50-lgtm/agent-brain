@@ -20,12 +20,12 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **MT5 Docker Exness** | `Port 3000` / `mt5.abbas.my.id` | 🟢 Running | Wine Python MetaTrader 5 di `mentari-server` (`/home/mentari/mt5_storage`). |
 | **MT5 Web Dashboard** | `Port 8080` / `dashboard.abbas.my.id` | 🟢 Running | Zero-flicker live monitoring & PWA Standalone Safari iOS (`mentari-server`). |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
-| **STB Web Remote** | `Port 8085` / Tailscale `erza` | 🟢 Running | Remote TV: Virtual cursor 60 FPS, draggable 4-way scroll, focal zoom, clean RAM daemon. |
+| **STB Web Remote** | `Port 8085` / Tailscale `erza-1` | 🟢 Running | Remote TV: Virtual cursor 60 FPS, draggable 4-way scroll, focal zoom, clean RAM daemon. |
 | **Infisical Secret Vault** | `app.infisical.com` / `infisical` CLI | 🟢 Synced | 10 kredensial infrastruktur E2EE tersimpan di `dev` & `prod`. |
 | **Trading Risk Engine** | `mt5_config/bot.py` | 🟢 Aktif | ATR Volatility Grid Multi-pair scanner dengan Dynamic Spacing & Circuit Breaker. |
 | **AI Browser Suite** | `~/.ai-browser-tools` & MCP | 🟢 Terpasang | `@playwright/mcp` Server, `crawl4ai` Async Extractor, dan `browser-use` Agent. |
 | **Marketing Agents** | `/media/cuker/Data/marketing agent` | 🟢 Aktif | `fbagent/` (FB Suite, `mkt`) & `ttagent/` (TikTok Suite, `tt`). |
-| **TikTok Web Dashboard** | `Port 8090` / `192.168.101.2:8090` | 🟢 Running | Mobile-First Web Studio: Script generator, AI Voiceover, 9:16 Video render, CRM. |
+| **TikTok Web Dashboard** | `Port 8090` / `100.122.66.85:8090` | 🟢 Running | **Tailscale STB Node:** `100.122.66.85` (Hostname: `erza-1` / `v8-max`) — *Always-On VPN Active* |
 | **Timemark Lab Studio** | `Port 3005` (Web) / `3003` (API) | 🟢 Running | SOTA AI Inpainting (LaMa ONNX 198 MB), dynamic anchor, and pixel-perfect Roboto font. |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Single branch `main` stabil terverifikasi. |
 
