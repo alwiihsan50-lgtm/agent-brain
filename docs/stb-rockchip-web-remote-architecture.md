@@ -146,4 +146,14 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
    - Sektor 64 (Offset 32 KB): `idblock.img` (disuntikkan via `dd if=idblock.img of=/dev/sdX seek=64`).
    - Partisi 1: MBR FAT32 (Offset 16 MB) berisi paket firmware / partisi asli.
 
+### D. Resolusi Akhir & Prosedur Unbrick Teruji (100% Verified)
+1. **Pemicu MaskROM Tercepat:**
+   - Sambungkan kabel USB Male-to-Male dari PC ke STB (Port Hitam/Biru).
+   - Tempelkan pinset dari **Pad `AV` ke Ground (bodi seng)** saat kabel USB dicolokkan ke STB (tahan 2 detik lalu lepas).
+2. **Proses Penulisan Otomatis:**
+   - Terdeteksi sebagai `Vid=0x2207, Pid=0x350c Loader`.
+   - Menggunakan skrip [`fast_flash_maskrom.py`](file:///home/cuker/Desktop/stb-remote/fast_flash_maskrom.py) untuk menulis partisi asli `recovery.img` (96 MB) dan `boot.img` (50 MB) via `rkdeveloptool write-partition`.
+   - STB me-reboot normal dan 100% pulih ke menu desktop Android 13 bawaan pabrik.
+
+
 
