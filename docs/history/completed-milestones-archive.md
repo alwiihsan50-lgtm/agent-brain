@@ -40,3 +40,19 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 - [x] **Tuning Sistem Tingkat Lanjut (I/O SSD, Limits, Git & Boot Speed) Selesai:** Mount root SSD dioptimasi (`noatime,commit=60`), File Descriptors 65536, log systemd 100M, Git multi-core engine.
 - [x] **Protokol Konfirmasi Task Belum Selesai (Pending Task Confirmation):** Menambahkan aturan wajib bagi seluruh AI Agent untuk meminta konfirmasi ke USER di awal sesi jika menemukan task belum selesai (`- [ ]`) di `README.md` (apakah ingin dilanjutkan atau diarsip).
 - [x] **STB RockChip Android 13 Web Remote & Input Engine Selesai Penuh.**
+
+## 📅 Selesai Per 24 Agustus 2026
+
+- [x] **STB RockChip RK3528 (V8_Max Android 13) Unbrick & Recovery:** Memulihkan STB yang bootloop via RockChip MaskROM hardware trigger (Short Pad AV ke Ground). Menulis ulang seluruh partisi asli (`recovery.img` 96MB & `boot.img` 50MB) via `rkdeveloptool`.
+- [x] **STB Optimization & Mass Debloat:** Tuning CPU governor `schedutil`, GPU renderer OpenGL Mali, eMMC readahead 512KB, TCP FastOpen 3, Private DNS AdGuard, animation scale 0.5x, dan debloat 18 aplikasi streaming (Free Storage 7.8 GB, Suhu ~42°C).
+- [x] **STB Web Remote 4-Tab Hub & Settings Suite:** Redesign Web Remote menjadi 4 tab terorganisir (Remote, Layar TV, Aplikasi, Pengaturan). Menambahkan kontrol Aspek Rasio HDMI 1080p/720p 60Hz/50Hz, DPI Screen Density Scale (160-280), Live System HUD (CPU, RAM, Suhu), dan Tombol Pembersih RAM 1-klik.
+- [x] **STB Tailscale Integration:** Menghubungkan STB ke jaringan Tailscale (`100.122.66.85`, hostname `erza-1`) dengan mode Always-On VPN, memungkinkan akses Web Remote global dari luar rumah.
+- [x] **Isolasi Microservice AI & Hosting Murni Vercel:** Menghapus serverless proxy Vercel dan membatasi fitur rahasia edit tanggal AI otomatis hanya pada *local development* (`localhost`).
+- [x] **Auto-Generate Jadwal Dinas Bulanan Otomatis (Arsip-IMO):** Sistem auto-provisioning baris jadwal bulanan di `src/features/absensi/absensiService.js` (`ensureMonthlyAbsensiRows`) via bulk upsert `ignoreDuplicates: true`.
+- [x] **Upload Foto Serah Terima Mandiri & Fleksibilitas Foto Kerja (Arsip-IMO):** Upload foto serah terima mandiri dan bertahap (1 atau 2 foto) dengan slot mandiri dan smart delta upload.
+- [x] **Desktop Launcher Timemark AI Backend & LaMa ONNX SOTA Inpainting:** Pintasan desktop interaktif `Timemark-AI-Backend.desktop` dan rilis stabil LaMa ONNX Inpainting (198 MB) di port 3003.
+- [x] **Integrasi Shortcut Klik Kanan TailShare di Nemo File Manager (Linux Mint):** Context menu actions, CLI `tailshare-send`, auto-sync Drive D, dan notifikasi desktop.
+- [x] **Setup Partisi VM_Storage (127 GB ext4) & KVM/Virt-Manager:** Partisi `/dev/sda2` di `/media/cuker/VM_Storage` dengan fstab automount dan setup virtualization stack.
+- [x] **Setup Workspace & Suite Marketing Agent TikTok & Facebook:** Setup workplace `ttagent/` & `fbagent/` di `/media/cuker/Data/marketing agent`, generator video 9:16, CRM SQLite, and CLI `tt` / `mkt`.
+- [x] **MoneyPrinterTurbo "Naik Kelas" Hybrid Architecture:** Pemasangan di Port 8095/8501, 9:16 vertikal, subtitle kuning, Edge-TTS Ardi, dan bank aset lokal.
+
