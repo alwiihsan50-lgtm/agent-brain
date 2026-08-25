@@ -40,9 +40,9 @@ Dokumentasi ini merangkum arsitektur teknis, daemon kontrol backend, virtual inp
 
 Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk arsitektur Linux ARM64 (`aarch64`):
 
-- **Lokasi Eksekusi:** `/vendor/bin/stb_server` (dengan symlink/fallback di `/data/local/tmp/stb_server`)
-- **Port Layanan:** `8085` (HTTP REST API + Static Web Assets)
-- **Persistensi Autostart:** Dijalankan saat booting via `/data/local/tmp/stb_autostart.sh` dan init daemon.
+- **Lokasi Eksekusi:** `/vendor/bin/stb_server` & `/data/local/tmp/stb_server`
+- **Port Layanan:** `8080` (HTTP REST API + Static 4-Tab Web Assets)
+- **Persistensi Autostart:** Diinisialisasi secara native via `/vendor/etc/init/stb_server.rc`, `/vendor/etc/init/stb_autostart.rc`, dan skrip `/data/local/tmp/stb_autostart.sh` saat `sys.boot_completed=1`.
 
 ### Endpoint API Utama:
 
