@@ -54,5 +54,6 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 - [x] **Integrasi Shortcut Klik Kanan TailShare di Nemo File Manager (Linux Mint):** Context menu actions, CLI `tailshare-send`, auto-sync Drive D, dan notifikasi desktop.
 - [x] **Setup Partisi VM_Storage (127 GB ext4) & KVM/Virt-Manager:** Partisi `/dev/sda2` di `/media/cuker/VM_Storage` dengan fstab automount dan setup virtualization stack.
 - [x] **Setup Workspace & Suite Marketing Agent TikTok & Facebook:** Setup workplace `ttagent/` & `fbagent/` di `/media/cuker/Data/marketing agent`, generator video 9:16, CRM SQLite, and CLI `tt` / `mkt`.
-- [x] **MoneyPrinterTurbo "Naik Kelas" Hybrid Architecture:** Pemasangan di Port 8095/8501, 9:16 vertikal, subtitle kuning, Edge-TTS Ardi, dan bank aset lokal.
+## 📅 Selesai Per 25 Agustus 2026
 
+- [x] **STB Systemless Ad, Adult Content, & Gambling Filter (167k+ Domains):** Mengatasi isu `PrivateDnsBroken` akibat konflik Private DNS Android dengan Tailscale VPN. Mengimplementasikan filter berbasis `/system/etc/hosts` bind-mount (StevenBlack Unified + Family + Porn + Gambling) dengan zero-latency (0.2 ms) dan persistensi autostart di `/data/local/tmp/stb_autostart.sh`.
