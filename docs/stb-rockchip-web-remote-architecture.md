@@ -98,17 +98,22 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
    - Kernel memory swappiness di-tune untuk low memory footprint.
 
 3. **Systemless DNS Filter (Blokir Iklan, Pornografi, & Judi Online):**
-   - **Database Domain:** StevenBlack Unified + Porn + Gambling + Fake News (~167.388 domain di `/data/local/tmp/hosts_family.txt`).
-   - **Mekanisme:** Bind mount langsung ke `/system/etc/hosts` saat boot via `/data/local/tmp/stb_autostart.sh`.
+   - **Database Domain:** StevenBlack Unified + Porn + Gambling + Fake News (~174.264 baris / 167.388 domain di `/vendor/etc/hosts_family.txt` & `/data/local/tmp/hosts_family.txt`).
+   - **Mekanisme:** Bind mount langsung ke `/system/etc/hosts` yang diinisialisasi secara otomatis oleh fungsi `initDNSFilter()` di dalam daemon Go `stb_server` dan `/vendor/bin/stb_autostart.sh`.
    - **Keunggulan:** Zero latency (0.2 ms), 0% CPU/RAM overhead, memblokir iklan & konten dewasa di seluruh aplikasi/browser tanpa merusak koneksi Tailscale VPN (Private DNS diset `off`).
 
 ---
 
-## 🌐 5. Akses Remote Jarak Jauh (Tailscale)
+## 🌐 5. Akses Remote Jarak Jauh & Arsitektur Keamanan
 
-- **Node Name:** `erza` (`100.104.214.122`)
-- **Proxy Endpoint Linux Mint:** `http://100.110.205.27:8085`
-- **Local LAN STB:** `http://192.168.100.61:8085`
+- **Tailscale Node:** `erza-1` (`100.122.66.85`) — Enkripsi *End-to-End* WireGuard (ChaCha20-Poly1305).
+- **Web Remote URL:**
+  - Jaringan Lokal: `http://192.168.100.75:8080`
+  - Tailscale Global: `http://100.122.66.85:8080`
+- **Keamanan & Isolasi Akses:**
+  - **Zero Trust Mesh:** Hanya perangkat yang login di tailnet privat `alwiihsan50@gmail.com` yang dapat mengakses STB.
+  - **No Public Exposure:** Port 8080 dan port 5555 berada di balik NAT router lokal tanpa *port forwarding*, kebal dari serangan internet publik.
+  - **Privileged Management:** Akses kontrol ADB Wireless root terkunci hanya pada PC Mint (`100.110.205.27` / `192.168.100.x`).
 
 ---
 
