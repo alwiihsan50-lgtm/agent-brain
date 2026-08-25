@@ -97,6 +97,11 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
    - GPU Renderer: Menggunakan native `opengl` (kompatibel penuh Mali-450 GPU).
    - Kernel memory swappiness di-tune untuk low memory footprint.
 
+3. **Systemless DNS Filter (Blokir Iklan, Pornografi, & Judi Online):**
+   - **Database Domain:** StevenBlack Unified + Porn + Gambling + Fake News (~167.388 domain di `/data/local/tmp/hosts_family.txt`).
+   - **Mekanisme:** Bind mount langsung ke `/system/etc/hosts` saat boot via `/data/local/tmp/stb_autostart.sh`.
+   - **Keunggulan:** Zero latency (0.2 ms), 0% CPU/RAM overhead, memblokir iklan & konten dewasa di seluruh aplikasi/browser tanpa merusak koneksi Tailscale VPN (Private DNS diset `off`).
+
 ---
 
 ## 🌐 5. Akses Remote Jarak Jauh (Tailscale)
