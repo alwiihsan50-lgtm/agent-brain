@@ -9,28 +9,20 @@ Dokumentasi ini merangkum arsitektur teknis, daemon kontrol backend, virtual inp
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                      PENGGUNA (HP / Web Browser)            │
-│  - Virtual Cursor 60 FPS (Relative Trackpad Mode)           │
-│  - Draggable & Auto-Dismiss 4-Way Scroll Pad                │
-│  - True Focal-Point Pinch-to-Zoom & Pan (hingga 4x)         │
-│  - Fullscreen HUD & Direct Keyboard Typing                  │
+│  - Streamlined 3-Tab Hub: Remote, Aplikasi, Pengaturan      │
+│  - Trackpad Virtual Mouse (/dev/uinput Linux kernel)        │
+│  - Dynamic Power Button State (Emerald Active vs Red Pulse) │
+│  - Real-time Hardware Telemetry (CPU %, Temp, RAM Usage)    │
 └──────────────────────────────┬──────────────────────────────┘
-                               │ HTTP REST / WebSocket (Port 8085)
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│           LINUX WORKSTATION PROXY (PC Mint)                 │
-│  - Service: `stb-remote-proxy.service` (Port 8085)          │
-│  - Tailscale Subnet Routing: `192.168.100.0/24`             │
-│  - URL Akses Remote: `http://100.110.205.27:8085`           │
-└──────────────────────────────┬──────────────────────────────┘
-                               │ LAN HTTP (Port 8085 -> STB:8085)
+                               │ HTTP REST (Port 8080)
                                ▼
 ┌─────────────────────────────────────────────────────────────┐
 │          STB ROCKCHIP V8_MAX (Android 13 ARM64)             │
 │  - Binary: `/vendor/bin/stb_server` & `/data/local/tmp/`    │
 │  - Kernel Emulation: Linux `/dev/uinput` (Mouse & Wheel)    │
-│  - Screen Capture: Zero-overhead optimized capture loop     │
+│  - IPC Binder: `service call power 16` for Wakefulness      │
 │  - RAM Cleaner: `am kill-all` + kernel `drop_caches`        │
-│  - Tailscale IP: `100.104.214.122` (node: `erza`)           │
+│  - Tailscale IP: `100.122.66.85` (node: `erza-1`)           │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -41,44 +33,43 @@ Dokumentasi ini merangkum arsitektur teknis, daemon kontrol backend, virtual inp
 Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk arsitektur Linux ARM64 (`aarch64`):
 
 - **Lokasi Eksekusi:** `/vendor/bin/stb_server` & `/data/local/tmp/stb_server`
-- **Port Layanan:** `8080` (HTTP REST API + Static 4-Tab Web Assets)
+- **Port Layanan:** `8080` (HTTP REST API + Static 3-Tab Web Assets)
 - **Persistensi Autostart:** Diinisialisasi secara native via `/vendor/etc/init/stb_server.rc`, `/vendor/etc/init/stb_autostart.rc`, dan skrip `/data/local/tmp/stb_autostart.sh` saat `sys.boot_completed=1`.
 
 ### Endpoint API Utama:
 
 | Endpoint | Method | Fungsi |
 | :--- | :--- | :--- |
-| `/api/screen/frame` | `GET` | Mengambil snapshot layar tunggal beresolusi tinggi (JPEG non-cache). |
-| `/api/screen/stream` | `GET` | Streaming snapshot ringan (~2 FPS eco-mode). |
+| `/api/status` | `GET` | Telemetri sistem (CPU %, Suhu, RAM MB, `is_screen_on`, `power_state`). |
 | `/api/mouse/move` | `POST` | Mengirim pergerakan kursor mouse relatif `(dx, dy)` via `/dev/uinput`. |
 | `/api/mouse/click` | `POST` | Eksekusi klik kiri (`BTN_LEFT`) pada posisi kursor saat ini. |
 | `/api/mouse/scroll`| `POST` | Eksekusi scroll wheel (`REL_WHEEL` / `REL_HWHEEL`) 4 arah. |
 | `/api/key` | `POST` | Mengirim keycode Android (Home, Back, D-Pad, Vol+, Vol-, Power). |
 | `/api/text` | `POST` | Mengirim teks langsung ke input box yang aktif di TV via `input text`. |
 | `/api/app/launch` | `POST` | Membuka aplikasi via *Native Component Launcher* (`cmd package resolve-activity`). |
+| `/api/apps/installed` | `GET` | Mengambil daftar aplikasi TV terpasang beserta icon & launch activity. |
 | `/api/system/clean-ram` | `POST` | Membersihkan memori RAM, `am kill-all`, dan flush pagecache kernel (`drop_caches: 3`). |
+| `/api/system/dpi` | `POST` | Mengubah kerapatan layar (*density*) TV secara on-the-fly (`wm density`). |
+| `/api/system/reboot` | `POST` | Reboot sistem normal atau boot ke menu Recovery. |
 
 ---
 
-## 🖱️ 3. Kontrol Kursor Mouse & Gesture (Web UI)
+## 🖱️ 3. Fitur Utama Web Remote Hub (3 Tabs)
 
-### A. Trackpad-Style Virtual Cursor (60 FPS)
-- Elemen kursor visual (`#virtual-mouse-cursor`) dirender langsung di atas canvas/gambar TV di browser pengguna.
-- Geseran 1 jari di layar HP bertindak sebagai *touchpad delta*, menggerakkan kursor secara instan tanpa perlu me-refresh snapshot TV saat jari bergerak.
-- Refresh frame TV hanya dipicu 1 kali setelah ketukan/klik selesai dieksekusi.
+### A. Tab 1: Remote & Virtual Trackpad
+- **D-Pad Directional Grid:** Tombol Atas, Bawah, Kiri, Kanan, OK, Back, Home, Menu, Del.
+- **Unified Trackpad / Mouse Mode:** Mengemulasikan mouse hardware via kernel `/dev/uinput` dengan haptic feedback.
+- **Giant Volume Strip & Quick Input:** Kontrol volume TV besar dan input teks langsung.
 
-### B. Gestur Interaktif
-1. **Ketukan 1 Jari (<12px delta):** Klik Kiri (`BTN_LEFT`) pada posisi kursor di TV dengan animasi gelombang (*ripple*) biru.
-2. **Tahan 1 Jari (0.5 detik):** Tombol Kembali / Klik Kanan (`Android BACK keyevent 4`) dengan animasi gelombang amber dan haptic feedback.
-3. **Cubit 2 Jari (Pinch to Zoom):** Memperbesar viewport hingga 4x dengan perhitungan *focal-point* `(midX, midY)` tepat di antara dua jari.
+### B. Tab 2: Aplikasi (Launcher Hub)
+- **Aplikasi Favorit:** Pintasan instan SmartTube, TV Bro, Play Store, dan Settings TV.
+- **Katalog Lengkap & Pencarian Cepat:** Menampilkan seluruh aplikasi Android terpasang dengan filter pencarian real-time.
 
-### C. Floating 4-Way Scroll Pad
-- Widget pop-up kompas navigasi 4 arah:
-  - ⬆️ **Atas:** `REL_WHEEL +3`
-  - ⬇️ **Bawah:** `REL_WHEEL -3`
-  - ⬅️ **Kiri:** `REL_HWHEEL -3`
-  - ➡️ **Kanan:** `REL_HWHEEL +3`
-- **Fitur Draggable:** Dapat disentuh pada header dan digeser bebas ke posisi mana pun di layar.
+### C. Tab 3: Pengaturan & Pemeliharaan Sistem
+- **Quick RAM Cleaner:** Membebaskan cache dan menutup background task dengan feedback toast real-time.
+- **DPI Quick Tuner:** Pilihan preset DPI (160, 213, 240, 280, 320) dengan 1 klik.
+- **Shortcuts Sistem & Reboot:** Akses menu Android Settings asli, Reboot Normal, dan Reboot Recovery.
+
 ### D. Dynamic Power & Standby State Engine
 - **Hardware Wakefulness Polling:** Memanfaatkan IPC Android Binder `service call power 16` (0.02ms latency) untuk mendeteksi status layar interaktif secara real-time (`is_screen_on` & `power_state`).
 - **Visual State Diferensiasi:**

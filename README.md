@@ -12,7 +12,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
-| **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | 4-Tab Hub: Remote, Layar TV, Apps, Settings (Tailscale `erza-1`, Systemless Ad & Adult Filter 167k+ domains, HDMI 1080p). |
+| **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps, Settings (Tailscale `erza-1`, Systemless Ad & Adult Filter 167k+ domains, Dynamic Power State, HDMI 1080p). |
 | **mentari-server (CasaOS)** | `server.abbas.my.id` / `casa.abbas.my.id` | 🟢 Live | Dashboard Web GUI (Port 80) & Debian 13 Server via Cloudflare Tunnel 24/7. |
 | **MT5 Docker Exness** | `Port 3000` / `mt5.abbas.my.id` | 🟢 Running | Wine Python MetaTrader 5 di `mentari-server` (`/home/mentari/mt5_storage`). |
 | **MT5 Web Dashboard** | `Port 8080` / `dashboard.abbas.my.id` | 🟢 Running | Zero-flicker live monitoring & PWA Standalone Safari iOS (`mentari-server`). |
