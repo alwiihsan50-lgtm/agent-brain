@@ -102,6 +102,10 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
    - **Mekanisme:** Bind mount langsung ke `/system/etc/hosts` yang diinisialisasi secara otomatis oleh fungsi `initDNSFilter()` di dalam daemon Go `stb_server` dan `/vendor/bin/stb_autostart.sh`.
    - **Keunggulan:** Zero latency (0.2 ms), 0% CPU/RAM overhead, memblokir iklan & konten dewasa di seluruh aplikasi/browser tanpa merusak koneksi Tailscale VPN (Private DNS diset `off`).
 
+4. **SmartTube Streaming & Hardware Codec Tuning:**
+   - **Hardware Codec Affinity:** RK3528 tidak memiliki decoder hardware AV1. Preset video diset ke **1080p 60fps AVC (H.264)** / **VP9** via `c2.rk.avc.decoder` & `c2.rk.vp9.decoder` (0% CPU software decode load).
+   - **Anti-Throttling Buffer:** Video buffer diatur ke **High** (~100 MB RAM cache) & Network Engine menggunakan **Cronet** (Chromium stack) untuk mengeliminasi stutter/buffering akibat YouTube chunk rate-limiting.
+
 ---
 
 ## 🌐 5. Akses Remote Jarak Jauh & Arsitektur Keamanan
