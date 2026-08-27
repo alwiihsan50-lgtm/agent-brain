@@ -79,7 +79,12 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
   - ⬅️ **Kiri:** `REL_HWHEEL -3`
   - ➡️ **Kanan:** `REL_HWHEEL +3`
 - **Fitur Draggable:** Dapat disentuh pada header dan digeser bebas ke posisi mana pun di layar.
-- **Auto-Dismiss:** Otomatis tertutup saat pengguna menyentuh/klik area di luar kotak scroll pad.
+### D. Dynamic Power & Standby State Engine
+- **Hardware Wakefulness Polling:** Memanfaatkan IPC Android Binder `service call power 16` (0.02ms latency) untuk mendeteksi status layar interaktif secara real-time (`is_screen_on` & `power_state`).
+- **Visual State Diferensiasi:**
+  - 🟢 **STB HIDUP (Active/Awake):** Tombol Power memancarkan pendar hijau emerald (`rgba(16, 185, 129)`), dot status hijau, badge status `HIDUP`, dan tooltip *"Klik untuk Standby"*.
+  - 🔴 **STB STANDBY (Layar Mati/Asleep):** Tombol Power memancarkan animasi denyut/pulsing merah koral (`rgba(239, 68, 68)`), dot merah, badge status `STANDBY`, dan tooltip *"Klik untuk Hidupkan Layar"*.
+- **Zero-Latency Optimistic Feedback:** Eksekusi tombol Power langsung memperbarui status visual seketika saat disentuh dan disinkronkan otomatis oleh background monitor `/api/status`.
 
 ---
 
