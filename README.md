@@ -25,21 +25,18 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **MoneyPrinterTurbo** | `Port 8095` (API) / `8501` (WebUI) | 🟢 Running | AI Video Factory 9:16 vertikal, Edge-TTS Ardi, & subtitle kuning. |
 | **PNPM Global Store** | `~/.local/share/pnpm/store/v11` | 🟢 Aktif | Standardisasi Node.js Package Manager: Shared disk space & hard-linked virtual store. |
 | **AI Browser Suite** | `~/.ai-browser-tools` & MCP | 🟢 Terpasang | `@playwright/mcp` Server, `crawl4ai` Async Extractor, dan `browser-use` Agent. |
-| **Master Obsidian Vault** | `/media/cuker/Data/ObsidianVault` | 🟢 Aktif | Central Graphify × Agent-Brain Master Vault (23 Proyek Drive D, auto-sync, persistent). |
 
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
 - [x] **Seluruh milestone aktif STB RockChip (Unbrick, Optimization, Web Remote 4-Tab Hub, Tailscale Always-On) telah selesai 100%.**
-- [x] **Integrasi Master Obsidian × Graphify Vault terpasang di `/media/cuker/Data/ObsidianVault` & auto-sync 23 proyek.**
 - 📂 *Riwayat lengkap seluruh milestone terdahulu telah diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
 
 ## 📚 Indeks Dokumentasi (`docs/`)
 
-- 📄 [**Master Obsidian × Graphify Vault Guide**](docs/obsidian-and-graphify-master-vault.md) — Panduan Master Vault, navigasi graph view, ecosystem canvas, & auto-sync.
 - 📄 [**STB RockChip Web Remote Architecture**](docs/stb-rockchip-web-remote-architecture.md) — Arsitektur daemon uinput, 4-Tab Hub, HDMI resolution tuner, Tailscale IP, dan optimasi kernel.
 - 📄 [**System Environment, Ports & Remote Access**](docs/system-environment-and-ports.md) — Port terpesan, Cloudflare Tunnel & Zero Trust.
 - 📄 [**Panduan Sinergi agent-brain & graphify**](docs/agent-brain-and-graphify-synergy-guide.md) — Integrasi memori makro dan knowledge graph mikro.
