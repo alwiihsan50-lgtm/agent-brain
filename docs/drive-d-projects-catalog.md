@@ -35,7 +35,7 @@ Dokumen ini berisi pemetaan lengkap seluruh proyek, repositori Git, lokasi direk
 | Direktori | Keterangan / Fungsi |
 | --- | --- |
 | `D:\Projects\GT-N8000 Remote Desktop` | Proyek remote desktop untuk GT-N8000. |
-| `D:\Projects\Monitor-Sistem-Desktop-v1.1` | Aplikasi desktop pemantau sistem (v1.1). |
+| `D:\Projects\Monitor-Sistem-Desktop-v1.1` | Native Linux desktop system monitor widget (CPU, RAM, Disk, Net). Fitur: Auto Adaptive Background Contrast, 50% opacity halo shadow, auto-dodge, single-instance. |
 | `D:\Projects\pc-app-dashboard` | Dashboard aplikasi PC. |
 | `D:\Projects\web-absensi` | Folder aplikasi web absensi. |
 | `D:\IMO\` | Berisi data/file operasional IMO (`IMO KAPM`, `IMO STASIUN - ALWI`, `IMO STASIUN - PJL LAIN`). |
