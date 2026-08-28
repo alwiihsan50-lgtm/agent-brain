@@ -85,7 +85,16 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 - **Proteksi Anti-Spam Notifikasi:** Fungsi `send_push_notification(title, message, cooldown_seconds=30)` dilengkapi deduplication & 30-second cooldown timer untuk mencegah loop pesan ke Cloudflare Workers:
   `https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification`
 
-### D. Cloudflare Worker Push Backend (`cf-push-backend`)
+### D. Bot Martingale Logic Akun 2 (`mt5_config_prop1/bot.py`)
+- Terletak di `/home/cuker/mt5_storage/mt5_config_prop1/bot.py` (tersinkronisasi ke `/config/bot.py` container `propfirm-mt5`).
+- **Adaptive Trend Martingale Engine:**
+  - **Filter Tren & Entry Trigger:** RSI(14) M15 + EMA(50/200) Pullback.
+  - **Averaging Step:** ATR(14) M15 * 1.2x (menyesuaikan volatilitas).
+  - **Multiplier:** Progressive 1.5x (Level 1: 0.01, L2: 0.01, L3: 0.02, L4: 0.03, L5: 0.05, L6: 0.08) — jauh lebih aman dari 2.0x konvensional.
+  - **Basket Take Profit:** Seluruh posisi dalam keranjang ditutup simultan saat Total Net Profit mencapai target (Rp 20.000 IDR / dinamis).
+  - **Circuit Breaker:** Hard Equity Drawdown Cap 25% untuk mengamankan sisa modal.
+
+### E. Cloudflare Worker Push Backend (`cf-push-backend`)
 - **Lokasi Source:** `/home/mentari/mt5_storage/cf-push-backend/`
 - **URL Publik:** `https://mt5-push-backend.alwiihsan50.workers.dev`
 - **Engine:** Cloudflare Worker (Hono + `@block65/webcrypto-web-push` + Web Crypto API)

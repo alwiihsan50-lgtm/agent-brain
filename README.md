@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps, Settings (Tailscale `erza-1`, Systemless Ad & Adult Filter 167k+ domains, Dynamic Power State, HDMI 1080p). |
 | **mentari-server (CasaOS)** | `server.abbas.my.id` / `casa.abbas.my.id` | 🟢 Live | Dashboard Web GUI (Port 80) & Debian 13 Server via Cloudflare Tunnel 24/7. |
-| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3002` (Acc 2) | 🟢 Running | Dual-instance Smart Money Concepts (SMC) Trading Bots di Wine Python MT5 (`exness-mt5` & `propfirm-mt5`). |
+| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3002` (Acc 2) | 🟢 Running | Dual-instance trading bots: SMC & Liquidity Sweep (Akun 1) + Adaptive Martingale & Basket TP (Akun 2). |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
 | **TailShare** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Live sync folder Drive D (`/media/cuker/Data/tailshare`) & GUI Native Electron. |
@@ -61,6 +61,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.7 Flash)  
-**Last Updated At:** 2026-08-28 15:30 WIB
+**Last Updated At:** 2026-08-28 15:45 WIB
 
 
