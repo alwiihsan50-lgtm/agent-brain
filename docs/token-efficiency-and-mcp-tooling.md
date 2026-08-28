@@ -31,9 +31,39 @@ Dokumen ini mencatat standarisasi utility dan MCP Server penghemat token yang te
 
 ---
 
-## 📜 3. Aturan Token Efficiency untuk AI Agent
+## 📜 3. Aturan Standar Token Efficiency (Primary Workflow)
 
-1. **Browsing Dokumen:** Gunakan `web2md` dibanding HTTP raw scrape biasa.
-2. **Log & Testing Output:** Bungkus eksekusi test/build panjang dengan `tokcut` atau tail parameter.
-3. **Database Inspection:** Gunakan `sqlite-utils schema` atau tool MCP SQLite daripada membaca seluruh baris data.
-4. **Code Navigation:** Selalu gunakan `graphify query` / AST parser sebelum membaca file source code secara utuh.
+Seluruh AI Agent yang bekerja di workstation ini **WAJIB** mematuhi 5 pilar efisiensi token berikut sebagai workflow utama:
+
+### 1. Web & Documentation Browsing (Hemat 80–90% Token)
+- **Aturan:** Dilarang melakukan fetch mentah (raw HTML/dump) yang menghabiskan ribuan baris token tidak perlu.
+- **Workflow:**
+  * Dokumen standar / artikel / web umum: Gunakan `web2md "<URL>" -m 50`
+  * Halaman dinamis / JS-heavy / SPA: Gunakan `crawl4ai` via environment Python terpusat (`/home/cuker/.ai-browser-tools/bin/python`).
+
+### 2. Terminal Execution & Build Output
+- **Aturan:** Dilarang membiarkan command dengan output ratusan/ribuan baris mencemari context window.
+- **Workflow:**
+  * Bungkus command berisiko output panjang dengan `tokcut`:
+    ```bash
+    tokcut npm run build
+    tokcut cargo test
+    cat large_file.log | tokcut -n 30
+    ```
+  * Hanya header, error tail, dan ringkasan penting yang disajikan ke LLM.
+
+### 3. Database & Schema Inspection
+- **Aturan:** Dilarang melakukan dump SQL atau query `SELECT *` tanpa batas pada database besar.
+- **Workflow:**
+  * Inspeksi struktur: `sqlite-utils schema <path_to_db>` atau gunakan MCP `sqlite-marketing`.
+  * Query terarah: `sqlite-utils tables <path_to_db> --counts` atau `sqlite3 <db> "SELECT ... LIMIT 10;"`.
+
+### 4. Code Intelligence & Navigation
+- **Aturan:** Hindari membaca seluruh file kode berukuran ratusan/ribuan baris sekaligus.
+- **Workflow:**
+  * Navigasi arsitektur: `graphify query "<pertanyaan>"`, `graphify explain "<simbol>"`, atau `graphify path <source> <target>`.
+  * Pembacaan file: Selalu gunakan pembacaan range baris spesifik (`StartLine`, `EndLine`).
+
+### 5. Shared Memory & Status Preservation
+- **Aturan:** Simpan konteks yang selesai di `docs/history/` dan jaga `README.md` tetap ringkas (<100 baris) agar booting agent tetap instan dan hemat token.
+

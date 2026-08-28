@@ -10,6 +10,7 @@
 - Sebelum memulai pekerjaan apa pun, WAJIB membaca [`README.md`](README.md) untuk memahami konteks, riwayat pekerjaan, dan status proyek terkini.
 - Bacalah indeks dokumentasi di [`docs/`](docs/):
   - [`docs/system-environment-and-ports.md`](docs/system-environment-and-ports.md) untuk batasan port dan lingkungan sistem.
+  - [`docs/token-efficiency-and-mcp-tooling.md`](docs/token-efficiency-and-mcp-tooling.md) untuk standarisasi utility penghemat token (`web2md`, `tokcut`, `sqlite-utils`, MCP SQLite).
   - [`docs/agent-brain-and-graphify-synergy-guide.md`](docs/agent-brain-and-graphify-synergy-guide.md) untuk panduan sinergi antara **agent-brain** (memori global) dan **graphify** (knowledge graph kode).
   - [`docs/universal-web-push-notification-service.md`](docs/universal-web-push-notification-service.md) untuk panduan integrasi notifikasi push ke aplikasi & bot lain.
   - [`docs/mt5-docker-forex-trading-automation.md`](docs/mt5-docker-forex-trading-automation.md) untuk arsitektur, setup Docker MT5 Exness, Wine Python, dan risk engine.
@@ -82,4 +83,22 @@ Seluruh AI Agent yang beroperasi di workstation ini memiliki akses penuh ke **AI
      Konfigurasi MCP Server aktif di [`.agents/plugins/playwright-browser/mcp_config.json`](../.agents/plugins/playwright-browser/mcp_config.json). Agent dengan kapabilitas MCP dapat memanggil tools browser langsung untuk klik tombol, isi form, dan screenshot localhost.
   3. **Navigasi Otonom Multi-Langkah & Vision ➔ Gunakan `browser-use`:**
      Gunakan untuk workflow penjelajahan web mandiri. Panduan lengkap dan script template tersedia di [`docs/ai-browser-automation-tools.md`](docs/ai-browser-automation-tools.md).
+
+---
+
+### 6. PROTOKOL UTAMA EFISIENSI TOKEN (TOKEN EFFICIENCY FIRST WORKFLOW)
+Seluruh AI Agent **WAJIB** menerapkan prinsip hemat token sebagai workflow utama dalam setiap tugas:
+1. **Web & Documentation Browsing:**
+   - Gunakan `web2md "<URL>"` (Jina Reader markdown converter) dibanding HTTP raw fetch / HTML dump mentah untuk menghemat 80-90% token.
+   - Contoh: `web2md "https://docs.example.com" -m 50`
+2. **Terminal Execution & Logs Output:**
+   - Bungkus eksekusi test/build/log panjang dengan `tokcut` atau pipe `| tokcut -n 30` untuk membatasi output hanya pada header dan tail error relevan.
+   - Contoh: `tokcut npm run build` atau `cat large.log | tokcut -n 40`
+3. **Database & SQLite Inspection:**
+   - Gunakan `sqlite-utils schema <db>` atau tool MCP SQLite (`sqlite-marketing`) untuk inspeksi struktur tabel.
+   - Hindari dump SQL mentah atau query `SELECT *` tanpa filter `LIMIT`.
+4. **Code Navigation & Selective Reading:**
+   - Gunakan `graphify query "<tanya>"`, `graphify explain "<konsep>"`, atau `graphify path` sebelum membuka file source code mentah.
+   - Gunakan pembacaan baris spesifik (slice line range `StartLine`/`EndLine`) dan hindari membaca ribuan baris kode sekaligus jika hanya membutuhkan bagian tertentu.
+
 
