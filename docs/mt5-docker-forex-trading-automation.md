@@ -76,9 +76,12 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 - Terletak di `/home/cuker/mt5_storage/mt5_config/bot.py` (tersinkronisasi langsung ke `/config/bot.py` dalam container).
 - Inisialisasi koneksi IPC ke terminal MT5 (`mt5.initialize()`).
 - Mengambil info akun (Login ID, Saldo, Currency, Equity, Free Margin).
-- Berlangganan ke symbol Market Watch (contoh: `EURUSDm`, `XAUUSDm`, `AUDUSDm`, dll. di akun Exness).
-- Mengambil riwayat closed deal / transaksi selesai (`mt5.history_deals_get()`) untuk kalkulasi metrik win rate, total realized profit/loss, dan data tabel riwayat transaksi.
-- **Dual Grid State Machine:** Pada kondisi `NEUTRAL` (Ranging ADX < 25), bot memasang limit order dua arah dan berada pada status `DUAL_GRID_WAITING` hingga salah satu limit terpicu (mencegah false cycle complete / cancel loop).
+- **Smart Money Concepts (SMC) & Multi-Pair Engine:**
+  - **Market Structure Mapping:** 5-Bar Fractal Swings pada M15 & H1, mendeteksi Break of Structure (BOS) dan Change of Character (CHoCH).
+  - **Liquidity Sweep Detection (BSL & SSL):** Mengidentifikasi manipulasi likuiditas institusional (wick rejection di atas swing high / di bawah swing low).
+  - **Institutional Order Block (OB) & Fair Value Gap (FVG):** Memetakan area supply & demand terdekat serta imbalance harga.
+  - **Equilibrium 50% Filter:** Mengharuskan BUY hanya pada zona Discount (< 50% swing range) dan SELL hanya pada zona Premium (> 50% swing range).
+  - **Strict Risk Controls:** Wajib Stop Loss di luar batas Order Block / Swing Rejection, minimal Risk-to-Reward 1:2.0, Auto Break-Even (BE) otomatis saat trade mencapai 1.0x R:R, hard equity drawdown cap 10%, dan max 3 open positions total.
 - **Proteksi Anti-Spam Notifikasi:** Fungsi `send_push_notification(title, message, cooldown_seconds=30)` dilengkapi deduplication & 30-second cooldown timer untuk mencegah loop pesan ke Cloudflare Workers:
   `https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification`
 
