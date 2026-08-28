@@ -15,7 +15,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps, Settings (Tailscale `erza-1`, Systemless Ad & Adult Filter 167k+ domains, Dynamic Power State, HDMI 1080p). |
 | **mentari-server (CasaOS)** | `server.abbas.my.id` / `casa.abbas.my.id` | 🟢 Live | Dashboard Web GUI (Port 80) & Debian 13 Server via Cloudflare Tunnel 24/7. |
 | **MT5 Docker Exness** | `Port 3000` / `mt5.abbas.my.id` | 🟢 Running | Smart Money Concepts (SMC) & Multi-Pair Trading Bot di Wine Python MT5 (`/home/mentari/mt5_storage`). |
-| **MT5 Web Dashboard** | `Port 8080` / `dashboard.abbas.my.id` | 🟢 Running | Zero-flicker SMC live monitoring & PWA Standalone Safari iOS (`mentari-server`). |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
 | **TailShare** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Live sync folder Drive D (`/media/cuker/Data/tailshare`) & GUI Native Electron. |

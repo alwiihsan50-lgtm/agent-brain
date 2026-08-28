@@ -48,21 +48,18 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 
 ## 📦 2. Komponen & Detail Konfigurasi
 
-### A. Container Docker MT5 & Dashboard (`docker-compose.yml`)
+### A. Container Docker MT5 (`docker-compose.yml`)
 - **Host Server:** `mentari-server` / Local Linux Mint
 - **Lokasi Direktori:** `/home/mentari/mt5_storage` (`/home/cuker/mt5_storage`)
 - **Lokasi Compose:** `/home/mentari/mt5_storage/docker-compose.yml`
 - **In-Memory RAM Architecture:**
-  - **Shared RAM Volume (`ram_buffer`):** Driver `tmpfs` berukuran 64 MB di-mount ke `/ram_data` di kedua container (`exness-mt5` & `mt5-dashboard`).
-  - **Zero Disk I/O:** `bot.py` mengekspor telemetry langsung ke `/ram_data/bot_status.json` di RAM setiap 6 detik. Dashboard HTTP server (`server.py`) menyajikan data langsung dari RAM tanpa jeda disk I/O.
+  - **Shared RAM Volume (`ram_buffer`):** Driver `tmpfs` berukuran 64 MB di-mount ke `/ram_data` di container MT5.
   - **Container tmpfs Mounts:** `/tmp` (512M) dan `/dev/shm` (512M) berjalan di RAM.
-- **Containers:**
+- **Container:**
   - `exness-mt5` (Image: `mt5:latest` KasmVNC Port `3000` / `3001`)
-  - `mt5-dashboard` (Python HTTP Realtime Web Dashboard Port `8080`)
 - **Volume Persisten:** `./mt5_config` -> `/config` (hanya untuk akun & kredensial Wine MT5)
 - **Environment:** `PUID=1000`, `PGID=1000`, `TZ=Asia/Jakarta`
 - **Web UI GUI MT5:** `https://mt5.abbas.my.id` (alias: `vnc.abbas.my.id`) / `http://100.109.208.27:3000`
-- **Web Dashboard Bot:** `https://dashboard.abbas.my.id` / `http://100.109.208.27:8080`
 
 ### B. Lingkungan Python di dalam Wine
 - **Path Python:** `C:\Program Files (x86)\Python39-32\python.exe` (Wine environment)
