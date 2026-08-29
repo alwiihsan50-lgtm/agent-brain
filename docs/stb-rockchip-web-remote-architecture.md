@@ -99,8 +99,10 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
    - **Keunggulan:** Zero latency (0.2 ms), 0% CPU/RAM overhead, memblokir iklan & konten dewasa di seluruh aplikasi/browser tanpa merusak koneksi Tailscale VPN (Private DNS diset `off`).
 
 4. **SmartTube Streaming & Hardware Codec Tuning:**
-   - **Hardware Codec Affinity:** RK3528 tidak memiliki decoder hardware AV1. Preset video diset ke **1080p 60fps AVC (H.264)** / **VP9** via `c2.rk.avc.decoder` & `c2.rk.vp9.decoder` (0% CPU software decode load).
+   - **Hardware Codec Affinity:** RK3528 tidak memiliki decoder hardware AV1. Preset video diset ke **1080p 60fps AVC (H.264)** via `c2.rk.avc.decoder` (0% CPU software decode load, prefer AVC over VP9 diaktifkan).
    - **Anti-Throttling Buffer:** Video buffer diatur ke **High** (~100 MB RAM cache) & Network Engine menggunakan **Cronet** (Chromium stack) untuk mengeliminasi stutter/buffering akibat YouTube chunk rate-limiting.
+   - **Anti-403 & PoToken Stream Fix:** Menggunakan build SmartTube Beta v32.22+ (`org.smarttube.beta`) dengan MediaServiceCore terbaru yang mengatasi error 403 Forbidden dan buffering macet dari server YouTube.
+   - **DNS Bypass Prevention:** Opsi *"Prefer IPv4 DNS"* & *"Prefer Google DNS"* di dalam SmartTube dimatikan (disabled) agar tidak memicu hang/freeze saat berinteraksi dengan Tailscale dan systemless DNS filter.
 
 ---
 
