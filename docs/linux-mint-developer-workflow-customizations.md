@@ -115,12 +115,10 @@ alias cls='clear'
 
 ## 🎨 5. Desktop GUI Customization (macOS WhiteSur Style)
 
-- **GTK & Cinnamon Theme:** `WhiteSur-Dark` (macOS Big Sur/Sonoma glass style)
-- **Icon Theme:** `WhiteSur-dark` (Apple rounded aesthetic icons)
-- **Cursor Theme:** `WhiteSur-cursors`
-- **Panel Layout:** Top bar kompak (`height: 28px`), button layout traffic lights kiri (`close,minimize,maximize:`)
-- **Dock:** `plank` (autostart di `~/.config/autostart/plank.desktop`, theme `WhiteSur-Dark`, icon size 48px, zoom 150%)
-- **Typography:** `Inter 10` (UI), `Inter Bold 10` (Titlebar), `JetBrains Mono 10` (Monospace)
-- **Wallpaper:** 4K macOS Dark Wallpaper (`~/Pictures/macOS-WhiteSur-dark.jpg`)
+- **Desktop Environments:**
+  - **KDE Plasma (X11):** Default session (`startplasma-x11`), Global Theme `WhiteSur-Dark`, Aurorae Window Decoration (Traffic Lights kiri), Blur + Magic Lamp (Genie effect), Floating Panel, Inter & JetBrains Mono Fonts.
+  - **Cinnamon (X11):** Fallback session, GTK & Cinnamon Theme `WhiteSur-Dark`, Icon Theme `WhiteSur-dark`, Cursor `WhiteSur-cursors`.
+- **Remote Access (RustDesk):** Wajib menggunakan sesi **X11** (hindari Wayland untuk remote desktop capture & input emulation).
+- **Wallpaper:** 4K macOS Dark Wallpaper (`~/Pictures/macOS-WhiteSur-dark.jpg`).
 
 
