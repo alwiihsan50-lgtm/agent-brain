@@ -111,3 +111,16 @@ alias cls='clear'
   - `vm.swappiness=10`: Mengutamakan penggunaan RAM dan meminimalisir swap.
   - `vm.vfs_cache_pressure=50`: Menahan cache direktori/file di RAM lebih lama.
 
+---
+
+## 🎨 5. Desktop GUI Customization (macOS WhiteSur Style)
+
+- **GTK & Cinnamon Theme:** `WhiteSur-Dark` (macOS Big Sur/Sonoma glass style)
+- **Icon Theme:** `WhiteSur-dark` (Apple rounded aesthetic icons)
+- **Cursor Theme:** `WhiteSur-cursors`
+- **Panel Layout:** Top bar kompak (`height: 28px`), button layout traffic lights kiri (`close,minimize,maximize:`)
+- **Dock:** `plank` (autostart di `~/.config/autostart/plank.desktop`, theme `WhiteSur-Dark`, icon size 48px, zoom 150%)
+- **Typography:** `Inter 10` (UI), `Inter Bold 10` (Titlebar), `JetBrains Mono 10` (Monospace)
+- **Wallpaper:** 4K macOS Dark Wallpaper (`~/Pictures/macOS-WhiteSur-dark.jpg`)
+
+
