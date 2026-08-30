@@ -51,7 +51,8 @@ Kontrol navigasi kalender menggunakan layout 2 baris x 2 kolom:
 - Push commit langsung ke `origin/main` (kecuali pengguna minta sebaliknya).
 - Laporkan hasil build dan Commit SHA yang telah dipush ke pengguna.
 
-## 8. Riwayat Commit Terkait
+- `77072b2` - Add +1 Day option (default inactive) for photo date editing during night shift (Dinas Malam) on Foto 1 & Foto 2.
+- `0906879` - Fix 5x click secret trigger for photo date editing in local web environment.
 - `db6d0bd` - 2D Isotropic Laplacian harmonic diffusion inpainting (eliminating vertical streak artifacts across letter strokes).
 - `dedcfc5` - Selective pixel-level text mask inpainting (stroke-level dilation and nearest clean neighbor interpolation) to preserve 100% original photo texture without blur boxes.
 - `a64c20c` - Natural tight inpainting with dynamic bounding box, cosine edge feathering, and camera grain noise synthesis.
