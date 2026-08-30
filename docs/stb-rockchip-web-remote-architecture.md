@@ -98,11 +98,10 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
    - **Mekanisme:** Bind mount langsung ke `/system/etc/hosts` yang diinisialisasi secara otomatis oleh fungsi `initDNSFilter()` di dalam daemon Go `stb_server` dan `/vendor/bin/stb_autostart.sh`.
    - **Keunggulan:** Zero latency (0.2 ms), 0% CPU/RAM overhead, memblokir iklan & konten dewasa di seluruh aplikasi/browser tanpa merusak koneksi Tailscale VPN (Private DNS diset `off`).
 
-4. **SmartTube Streaming & Hardware Codec Tuning:**
-   - **Hardware Codec Affinity:** RK3528 tidak memiliki decoder hardware AV1. Preset video diset ke **1080p 60fps AVC (H.264)** via `c2.rk.avc.decoder` (0% CPU software decode load, prefer AVC over VP9 diaktifkan).
-   - **Anti-Throttling Buffer:** Video buffer diatur ke **High** (~100 MB RAM cache) & Network Engine menggunakan **Cronet** (Chromium stack) untuk mengeliminasi stutter/buffering akibat YouTube chunk rate-limiting.
-   - **Anti-403 & PoToken Stream Fix:** Menggunakan build SmartTube Beta v32.22+ (`org.smarttube.beta`) dengan MediaServiceCore terbaru yang mengatasi error 403 Forbidden dan buffering macet dari server YouTube.
-   - **DNS Bypass Prevention:** Opsi *"Prefer IPv4 DNS"* & *"Prefer Google DNS"* di dalam SmartTube dimatikan (disabled) agar tidak memicu hang/freeze saat berinteraksi dengan Tailscale dan systemless DNS filter.
+4. **Official YouTube TV (`com.google.android.youtube.tv`):**
+   - **Kompilasi AOT Performa:** Telah dikompilasi secara penuh dengan `cmd package compile -m speed -f com.google.android.youtube.tv` untuk startup instan dan pemutaran video bebas lag.
+   - **Kompatibilitas Layanan Google:** Berjalan mulus berdampingan dengan Google Play Services (`com.google.android.gms`) dan Google Services Framework (`com.google.android.gsf`).
+   - **Integrasi Web Remote Hub:** Pintasan YouTube resmi tersedia langsung di Tab Aplikasi Web Remote Hub (`Port 8080`).
 
 ---
 
@@ -169,42 +168,24 @@ Daemon ditulis dalam **Go (Golang)** dan dikompilasi secara cross-compile untuk 
 
 ---
 
-## ⚡ 7. SmartTube Permanent Playbook & Self-Healing Engine
+## ⚡ 7. Konfigurasi Aplikasi YouTube Resmi Android TV
 
-### A. Tiga Akar Masalah (Root Causes) & Solusi Permanen
-1. **YouTube Chunk Throttling & HTTP 403 Forbidden:**
-   - **Penyebab:** YouTube memperbarui cipher PoToken/tv-player JavaScript, membuat cache lama (`MediaServiceCache.xml` & `yt_cache_service2*`) kedaluwarsa.
-   - **Solusi Permanen:** Gunakan build SmartTube Beta v32.22+ (`org.smarttube.beta`) dengan engine MediaServiceCore terbaru.
-2. **Overload Resolusi 4K (2160p VP9/AV1):**
-   - **Penyebab:** RK3528 DDR3 kehabisan buffer GPU saat decoding 4K 2160p.
-   - **Solusi Permanen:** Golden Config mengunci resolusi ke **1080p 60fps** dan mengaktifkan **Prefer AVC over VP9** via hardware decoder native `c2.rk.avc.decoder` (0% beban CPU).
-3. **DNS Hang / Freeze:**
-   - **Penyebab:** Opsi *"Prefer IPv4 DNS"* & *"Prefer Google DNS"* di Developer options memicu stall/timeout ketika berjalan bersama Tailscale dan DNS filter lokal.
-   - **Solusi Permanen:** Opsi ini dimatikan permanen di template golden config.
+### A. Setup & Optimasi
+- **Paket:** `com.google.android.youtube.tv` (Activity: `com.google.android.apps.youtube.tv.activity.ShellActivity` / `MainActivity`).
+- **Kompilasi AOT Performa:** Telah dikompilasi secara penuh dengan `cmd package compile -m speed -f com.google.android.youtube.tv` agar pemutaran video langsung lancar tanpa JIT overhead.
+- **Dukungan GMS & GSF:** Google Play Services (`com.google.android.gms`) dan GSF aktif untuk otentikasi akun Google & sinkronisasi rekomendasi.
+- **SmartTube:** Telah dicopot secara permanen (`org.smarttube.beta` & `org.smarttube.stable`) beserta skrip auto-fix boot untuk memastikan stabilitas sistem.
 
 ---
 
-### B. Arsitektur Self-Healing & Perkakas 1-Klik
-Sistem ini dilengkapi 3 lapis perlindungan mandiri agar tidak perlu troubleshooting manual jika kumat:
-
-| Layer | Lokasi / Perintah | Cara Kerja & Manfaat |
-| :--- | :--- | :--- |
-| **1. Boot Self-Healing** | `/data/local/tmp/stb_autostart.sh` (Step 12) | Menjalankan `/data/local/tmp/smarttube_autofix.sh` otomatis setiap kali STB menyala. Menyinkronkan golden config & membersihkan cache rusak. |
-| **2. PC CLI 1-Klik** | `stb-fix-smarttube` di terminal PC Mint | Script otomatis di `~/.local/bin/stb-fix-smarttube`: deteksi IP ADB STB, purge cache, restore golden prefs, compile speed profile, & restart app. |
-| **3. Web Remote Hub** | `http://100.122.66.85:8080` (Tab 3: Settings) | Tombol 1-klik *"Perbaiki SmartTube (Anti-Macet)"* atau endpoint REST API `POST /api/smarttube/fix`. |
-
----
-
-### C. Panduan Cepat untuk AI Agent Masa Depan (Fast Cheat Sheet)
-Jika user melaporkan SmartTube macet / buffering lagi, AI Agent cukup menjalankan salah satu dari perintah instan berikut:
-
+### B. Kontrol & Peluncuran Cepat
+1. **Via Web Remote Hub:** Buka Tab 2 (Aplikasi) ➡️ Klik icon **YouTube**.
+2. **Via REST API:**
 ```bash
-# Opsi 1: Jalankan CLI 1-Klik dari PC (Selesai dalam 2 detik)
-stb-fix-smarttube
-
-# Opsi 2: Eksekusi API Web Remote Hub
-curl -s -X POST http://100.122.66.85:8080/api/smarttube/fix
-
-# Opsi 3: Eksekusi langsung via ADB root di STB
-adb connect 100.122.66.85:5555 && adb shell "/data/local/tmp/smarttube_autofix.sh"
+curl -s -X POST http://100.122.66.85:8080/api/app -H "Content-Type: application/json" -d '{"package":"com.google.android.youtube.tv","activity":"com.google.android.apps.youtube.tv.activity.ShellActivity"}'
 ```
+3. **Via ADB:**
+```bash
+adb -s 100.122.66.85:5555 shell "am start -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity"
+```
+
