@@ -12,7 +12,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
-| **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps, Settings (Tailscale `erza-1`, SmartTube Golden Self-Healing Engine `stb-fix-smarttube`, Ad & Adult Filter 167k+ domains, HDMI 1080p). |
+| **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps, Settings (Tailscale `erza-1`, SmartTube Golden Self-Healing Engine `stb-fix-smarttube`, Ad & Adult Filter 167k+ domains, HDMI 1080p, Aria2 24/7 Engine `Port 6800` & `stb-torrent`). |
 | **mentari-server (CasaOS)** | `server.abbas.my.id` / `casa.abbas.my.id` | 🟢 Live | Dashboard Web GUI (Port 80) & Debian 13 Server via Cloudflare Tunnel 24/7. |
 | **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3002` (Acc 2) | 🟢 Running | Dual-instance trading bots: SMC & Liquidity Sweep (Akun 1) + Adaptive Martingale & Basket TP (Akun 2). |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
