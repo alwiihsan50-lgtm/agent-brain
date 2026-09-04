@@ -134,3 +134,18 @@ Integrasi menu klik kanan di Linux Mint (Nemo) agar dapat langsung membagikan fi
    - `~/.local/share/nemo/actions/tailshare-open-web.nemo_action`: Muncul saat klik kanan area kosong ("Buka TailShare Web").
    - `~/.local/share/nemo/actions/tailshare-open-folder.nemo_action`: Muncul saat klik kanan area kosong ("Buka Folder Penyimpanan TailShare").
 
+---
+
+## 7. Optimasi Transfer Kecepatan Tinggi (LAN Direct vs Tailscale)
+
+Ketika perangkat HP (iPhone/Android) dan PC berada di satu lokasi/kantor:
+- **SSID `RUANG DEPAN(KANTOR(`**: Wi-Fi direct provider dengan IP subnet `192.168.100.x`.
+- **Fitur Multi-Network Selector di TailShare Web UI**:
+  - Menyediakan pill/tab pemilihan mode koneksi instan:
+    1. **⚡ Wi-Fi Direct (`192.168.100.67:40506`)**: Menghubungkan langsung socket lokal HTTP tanpa enkripsi VPN WireGuard & tanpa melalui internet publik. Sangat dianjurkan untuk transfer video/file besar (>500MB).
+    2. **⚡ LAN Kabel (`192.168.10.239:40506`)**: Kecepatan Gigabit lokal via router MikroTik.
+    3. **🔒 Tailscale MagicDNS (`ts.net:40506`)**: Akses privat aman saat berada di luar jaringan lokal (misal paket data seluler).
+    4. **☁️ Cloudflare Tunnel (`share.abbas.my.id`)**: Akses publik tanpa perlu instal aplikasi VPN.
+- **Dynamic QR Generator**: Memindai QR code akan otomatis menyajikan URL yang sesuai dengan mode koneksi yang dipilih di antarmuka web.
+
+

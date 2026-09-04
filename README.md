@@ -17,7 +17,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3002` (Acc 2) | 🟢 Running | Dual-instance trading bots: SMC & Liquidity Sweep (Akun 1) + Adaptive Martingale & Basket TP (Akun 2). |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
-| **TailShare** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Live sync folder Drive D (`/media/cuker/Data/tailshare`) & GUI Native Electron. |
+| **TailShare** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
 | **AI Photo Eraser (PWA)** | `Port 3005` (Web) / `3003` (API) | 🟢 Running | Mobile-first AI Magic Object Remover with Virtual Mouse Trackpad & LaMa ONNX Inpainting. |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Production web absensi & schedule system (branch `main`). |
 | **Marketing Agents** | `/media/cuker/Data/marketing agent` | 🟢 Aktif | `fbagent/` (FB Marketplace, `mkt`) & `ttagent/` (TikTok Suite, `tt`). |
@@ -30,7 +30,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Adopsi Tooling Efisiensi Token sebagai Primary Workflow AI Agent selesai & terstandardisasi.**
+- [x] **Optimasi kecepatan transfer TailShare & implementasi LAN Direct + dynamic QR multi-network selector selesai.**
 - 📂 *Riwayat lengkap seluruh milestone terdahulu telah diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -60,7 +60,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ---
 
-**Last Updated By:** Antigravity (Gemini 3.7 Flash)  
-**Last Updated At:** 2026-08-31 10:28 WIB
+**Last Updated By:** Antigravity (Gemini 3.8 Flash)  
+**Last Updated At:** 2026-09-04 09:05 WIB
 
 
