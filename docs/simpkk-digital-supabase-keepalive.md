@@ -23,10 +23,9 @@ Untuk menjamin Supabase tidak pernah ter-pause meski ditinggal lama:
   3. **Supabase Storage Service:** `GET /storage/v1/bucket` (memastikan service bucket aktif).
 - **Secrets:** `SUPABASE_URL` & `SUPABASE_ANON_KEY` diset via GitHub Actions Secrets.
 
-### 2. Local Fallback Layer (Linux Mint Crontab)
-- **Script:** `/home/cuker/.local/bin/simpkk-keepalive.sh`
-- **Crontab:** `@reboot` dan setiap hari pukul 10:00 WIB (`0 10 * * *`).
-- **Fungsi:** Mengambil URL & key secara dinamis dari `.env.local` dan mem-ping kueri database lokal setiap kali komputer dinyalakan.
+### 2. Local Fallback Layer (Dihapus atas permintaan User)
+- Script lokal dan entri crontab di sistem Linux Mint telah dibersihkan/dihapus agar tidak membebani sistem lokal.
+- Pengawasan keep-alive difokuskan pada Cloud Layer (GitHub Actions) dan layanan cloud independen (cron-job.org).
 
 ---
 
@@ -36,7 +35,4 @@ Untuk menjamin Supabase tidak pernah ter-pause meski ditinggal lama:
    gh workflow run "supabase-keep-alive.yml" --repo alwiihsan50-lgtm/SIMPKK-DIGITAL
    gh run list --workflow=supabase-keep-alive.yml --repo alwiihsan50-lgtm/SIMPKK-DIGITAL
    ```
-2. **Local Script:**
-   ```bash
-   /home/cuker/.local/bin/simpkk-keepalive.sh
-   ```
+
