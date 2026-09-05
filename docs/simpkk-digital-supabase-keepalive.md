@@ -23,14 +23,25 @@ Untuk menjamin Supabase tidak pernah ter-pause meski ditinggal lama:
   3. **Supabase Storage Service:** `GET /storage/v1/bucket` (memastikan service bucket aktif).
 - **Secrets:** `SUPABASE_URL` & `SUPABASE_ANON_KEY` diset via GitHub Actions Secrets.
 
-### 2. Local Fallback Layer (Dihapus atas permintaan User)
-- Script lokal dan entri crontab di sistem Linux Mint telah dibersihkan/dihapus agar tidak membebani sistem lokal.
-- Pengawasan keep-alive difokuskan pada Cloud Layer (GitHub Actions) dan layanan cloud independen (cron-job.org).
+### 2. Cloudflare Workers Cron Trigger (24/7 Enterprise-Grade)
+- **Worker Name:** `simpkk-keepalive`
+- **Source Code:** `/home/cuker/simpkk-keepalive/`
+- **Live Endpoint:** `https://simpkk-keepalive.alwiihsan50.workers.dev`
+- **Jadwal Cron Trigger:** `0 2 * * *` (Setiap hari pukul 09:00 WIB).
+- **Fitur:**
+  1. **Automasi 24/7:** Berjalan di edge network Cloudflare global tanpa bergantung pada PC lokal atau GitHub.
+  2. **Bebas Suspensi:** Tidak terkena aturan auto-disable 60 hari GitHub.
+  3. **Multi-Target:** Melakukan query PostgreSQL `dusuns?select=id&limit=1`, Auth Service `/settings`, dan Storage Service `/bucket`.
+  4. **Live Health Check:** Bisa diakses langsung di browser untuk melihat JSON status terkini.
 
 ---
 
 ## 🔍 Cara Verifikasi Manual
-1. **GitHub Actions:**
+1. **Cloudflare Worker (Instant Web Check):**
+   ```bash
+   curl -s https://simpkk-keepalive.alwiihsan50.workers.dev
+   ```
+2. **GitHub Actions:**
    ```bash
    gh workflow run "supabase-keep-alive.yml" --repo alwiihsan50-lgtm/SIMPKK-DIGITAL
    gh run list --workflow=supabase-keep-alive.yml --repo alwiihsan50-lgtm/SIMPKK-DIGITAL
