@@ -44,3 +44,25 @@ Untuk menyambungkan tool (Cursor, Claude Code, Cline, RooCode, dll.) ke 9Router:
 - **Base URL / Endpoint:** `http://localhost:20128/v1`
 - **API Key:** Dapatkan dari Web Dashboard (`http://localhost:20128/dashboard`)
 - **Model:** Sesuaikan dengan provider yang diaktifkan (misal: `kr/claude-sonnet-4.5`, Kiro AI, OpenCode Free, dll.)
+
+---
+
+## ⚡ 4. Token Saver: Integrasi Headroom (Context Optimization)
+
+Headroom (`headroom-ai`) adalah layer kompresi context pintar untuk LLM. Bekerja dengan cara mengompresi pesan/prompt via endpoint `/v1/compress` sebelum dialihkan ke provider model:
+
+- **Versi Terpasang:** `headroom-ai v0.37.0` (Extras: `[proxy,code]`)
+- **Binary Path:** `/home/cuker/.local/bin/headroom`
+- **Proxy Port:** `8787` (`http://localhost:8787`)
+- **Headroom Dashboard:** `http://localhost:8787/dashboard` atau via 9Router proxy: `http://localhost:20128/api/headroom/proxy/dashboard`
+- **9Router Token Saver Settings:** `http://localhost:20128/dashboard/token-saver`
+- **Fitur Aktif:**
+  - `SmartCrusher`: Kompresi struktur JSON, tool outputs, dan whitespace tanpa menghilangkan makna semantik.
+  - `Code-Aware (Tree-Sitter)`: AST-based compression untuk bahasa pemrograman (Python, JS, TS, Go, Rust, Java, C, C++, dll.).
+- **Pengaturan Environment:**
+  - File `~/.config/pip/pip.conf` dikonfigurasi `break-system-packages = true` agar 9Router UI dapat mengelola extras pip secara seamless di Linux Mint 22 (PEP 668).
+- **Process Management:**
+  - PID file: `~/.9router/headroom/proxy.pid`
+  - Log file: `~/.9router/headroom/proxy.log`
+  - Kontrol via 9Router: tombol **Start/Stop/Manage Headroom** di tab `Token Saver`.
+

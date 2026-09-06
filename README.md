@@ -26,14 +26,14 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **PNPM Global Store** | `~/.local/share/pnpm/store/v11` | 🟢 Aktif | Standardisasi Node.js Package Manager: Shared disk space & hard-linked virtual store. |
 | **AI Browser Suite** | `~/.ai-browser-tools` & MCP | 🟢 Terpasang | `@playwright/mcp` Server, `crawl4ai` Async Extractor, dan `browser-use` Agent. |
 | **SIMPKK Keep-Alive** | `simpkk-keepalive.alwiihsan50.workers.dev` | 🟢 Live | Cloudflare Worker Cron 24/7 (09:00 WIB daily) menjaga Supabase SIMPKK-DIGITAL tetap aktif. |
-| **9Router** | `Port 20128` / `localhost:20128` | 🟢 Terpasang | AI Routing Gateway & Token Saver (v0.5.69, Next.js + SQLite). |
+| **9Router & Headroom** | `Port 20128` & `8787` | 🟢 Live | AI Routing Gateway + Headroom v0.37.0 Context Optimizer (Code-Aware AST Compression). |
 
 ---
 
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Instalasi 9Router (v0.5.69) AI Routing Gateway & Token Saver di sistem.**
+- [x] **Setup & integrasi Headroom (v0.37.0) context compression di 9Router (Port 8787 & 20128).**
 - 📂 *Riwayat lengkap seluruh milestone terdahulu telah diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -66,7 +66,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)  
-**Last Updated At:** 2026-09-07 00:43 WIB
+**Last Updated At:** 2026-09-07 03:36 WIB
+
 
 
 
