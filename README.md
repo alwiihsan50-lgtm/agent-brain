@@ -26,13 +26,14 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **PNPM Global Store** | `~/.local/share/pnpm/store/v11` | 🟢 Aktif | Standardisasi Node.js Package Manager: Shared disk space & hard-linked virtual store. |
 | **AI Browser Suite** | `~/.ai-browser-tools` & MCP | 🟢 Terpasang | `@playwright/mcp` Server, `crawl4ai` Async Extractor, dan `browser-use` Agent. |
 | **SIMPKK Keep-Alive** | `simpkk-keepalive.alwiihsan50.workers.dev` | 🟢 Live | Cloudflare Worker Cron 24/7 (09:00 WIB daily) menjaga Supabase SIMPKK-DIGITAL tetap aktif. |
+| **9Router** | `Port 20128` / `localhost:20128` | 🟢 Terpasang | AI Routing Gateway & Token Saver (v0.5.69, Next.js + SQLite). |
 
 ---
 
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Optimasi kecepatan transfer TailShare & implementasi LAN Direct + dynamic QR multi-network selector selesai.**
+- [x] **Instalasi 9Router (v0.5.69) AI Routing Gateway & Token Saver di sistem.**
 - 📂 *Riwayat lengkap seluruh milestone terdahulu telah diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -59,11 +60,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - 📄 [**Kustomisasi Workflow Linux Mint**](docs/linux-mint-developer-workflow-customizations.md) — Starship, Zoxide, FZF, LazyDocker, Btop, aliases.
 - 📄 [**Katalog Proyek Drive D**](docs/drive-d-projects-catalog.md) — Pemetaan 18 repositori Git aktif di Drive `D:\Projects`.
 - 📄 [**SIMPKK-DIGITAL Supabase Keep-Alive**](docs/simpkk-digital-supabase-keepalive.md) — Solusi dual-layer keepalive Supabase Free Tier (GitHub Actions + local crontab).
+- 📄 [**9Router AI Gateway**](docs/9router-ai-gateway.md) — Panduan integrasi AI proxy gateway & token saver (Port 20128).
 - 📄 [**Arsip Milestone & Riwayat Lengkap**](docs/history/completed-milestones-archive.md) — Log lengkap seluruh fitur & milestone terdahulu.
 
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)  
-**Last Updated At:** 2026-09-05 10:08 WIB
+**Last Updated At:** 2026-09-07 00:43 WIB
+
 
 
