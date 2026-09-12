@@ -1,0 +1,321 @@
+#!/usr/bin/env python3
+import sys
+import os
+import re
+import socket
+import subprocess
+from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor
+
+BRAIN_DIR = "/home/cuker/agent-brain"
+README_PATH = os.path.join(BRAIN_DIR, "README.md")
+SESSION_PATH = os.path.join(BRAIN_DIR, "ACTIVE_SESSION.md")
+ARCHIVE_PATH = os.path.join(BRAIN_DIR, "docs/history/completed-milestones-archive.md")
+
+PORTS_CONFIG = [
+    {"name": "STB Remote Hub", "host": "127.0.0.1", "port": 8080, "desc": "Port 8080 (Hub)"},
+    {"name": "MT5 Acc 1 (SMC)", "host": "127.0.0.1", "port": 3000, "desc": "Port 3000"},
+    {"name": "MT5 Acc 2 (Martingale)", "host": "127.0.0.1", "port": 3002, "desc": "Port 3002"},
+    {"name": "TailShare (Original)", "host": "127.0.0.1", "port": 40506, "desc": "Port 40506"},
+    {"name": "TailShare (Clean)", "host": "127.0.0.1", "port": 40507, "desc": "Port 40507"},
+    {"name": "AI Photo Eraser (Web)", "host": "127.0.0.1", "port": 3005, "desc": "Port 3005"},
+    {"name": "AI Photo Eraser (API)", "host": "127.0.0.1", "port": 3003, "desc": "Port 3003"},
+    {"name": "9Router AI Gateway", "host": "127.0.0.1", "port": 20128, "desc": "Port 20128"},
+    {"name": "Headroom Compressor", "host": "127.0.0.1", "port": 8787, "desc": "Port 8787"},
+    {"name": "MoneyPrinter API", "host": "127.0.0.1", "port": 8095, "desc": "Port 8095"},
+    {"name": "MoneyPrinter WebUI", "host": "127.0.0.1", "port": 8501, "desc": "Port 8501"},
+]
+
+def check_port(service):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(0.35)
+    try:
+        res = s.connect_ex((service["host"], service["port"]))
+        is_up = (res == 0)
+    except Exception:
+        is_up = False
+    finally:
+        s.close()
+    return {**service, "up": is_up}
+
+def get_ports_health():
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        results = list(ex.map(check_port, PORTS_CONFIG))
+    return results
+
+def print_health():
+    print("\n\033[1;36m=== 🌐 Agent Brain: Service Ports Health ===\033[0m")
+    results = get_ports_health()
+    for r in results:
+        status_str = "\033[32m🟢 UP\033[0m" if r["up"] else "\033[90m⚪ DOWN (on-demand)\033[0m"
+        print(f"  {r['name']:<26} {r['desc']:<14} : {status_str}")
+    print()
+
+def get_tasks_from_readme():
+    if not os.path.exists(README_PATH):
+        return []
+    with open(README_PATH, "r", encoding="utf-8") as f:
+        content = f.read()
+    
+    # Match tasks under Work in Progress
+    tasks = []
+    lines = content.splitlines()
+    in_wip = False
+    for line in lines:
+        if "## 🚀 Status Tugas Aktif" in line:
+            in_wip = True
+            continue
+        if in_wip and line.startswith("## "):
+            break
+        if in_wip and (line.strip().startswith("- [ ]") or line.strip().startswith("- [x]")):
+            tasks.append(line.strip())
+    return tasks
+
+def list_tasks():
+    print("\n\033[1;34m=== 📋 Status Tugas Aktif (Work in Progress) ===\033[0m")
+    tasks = get_tasks_from_readme()
+    if not tasks:
+        print("  (Tidak ada tugas aktif di README.md)")
+        return
+    for i, t in enumerate(tasks, 1):
+        if t.startswith("- [x]"):
+            print(f"  \033[32m[{i}] {t}\033[0m")
+        else:
+            print(f"  \033[33m[{i}] {t} ⚠️ [MENUNGGU KONFIRMASI USER]\033[0m")
+    print()
+
+def add_task(desc):
+    if not desc:
+        print("Error: Task description cannot be empty.")
+        sys.exit(1)
+    if not os.path.exists(README_PATH):
+        print(f"Error: {README_PATH} not found.")
+        sys.exit(1)
+    
+    with open(README_PATH, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+    
+    new_lines = []
+    inserted = False
+    task_line = f"- [ ] **{desc}**\n"
+    for line in lines:
+        new_lines.append(line)
+        if "## 🚀 Status Tugas Aktif" in line and not inserted:
+            new_lines.append("\n" + task_line)
+            inserted = True
+    
+    if not inserted:
+        new_lines.append("\n## 🚀 Status Tugas Aktif (Work in Progress)\n\n" + task_line)
+        
+    with open(README_PATH, "w", encoding="utf-8") as f:
+        f.writelines(new_lines)
+    print(f"\033[32m✓ Task added:\033[0m {task_line.strip()}")
+
+def complete_task(target, confirm=False):
+    if not confirm:
+        print("\033[1;31m⚠️ PERINGATAN PROTOKOL:\033[0m")
+        print("Sesuai aturan agent-brain, tugas TIDAK BOLEH dianggap selesai tanpa konfirmasi langsung dari USER.")
+        print("Jika USER sudah mengonfirmasi di chat, jalankan kembali dengan argumen: --confirm-user")
+        sys.exit(1)
+        
+    with open(README_PATH, "r", encoding="utf-8") as f:
+        content = f.read()
+        
+    lines = content.splitlines()
+    tasks = [l for l in lines if l.strip().startswith("- [ ]")]
+    target_line = None
+    
+    # Check if target is index number
+    if target.isdigit():
+        idx = int(target)
+        if 1 <= idx <= len(tasks):
+            target_line = tasks[idx - 1]
+    else:
+        for t in tasks:
+            if target.lower() in t.lower():
+                target_line = t
+                break
+                
+    if not target_line:
+        print(f"Error: Task matching '{target}' not found in pending tasks.")
+        sys.exit(1)
+        
+    updated_line = target_line.replace("- [ ]", "- [x]", 1)
+    content = content.replace(target_line, updated_line, 1)
+    
+    with open(README_PATH, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"\033[32m✓ Task marked completed:\033[0m {updated_line}")
+
+def show_session():
+    print("\n\033[1;35m=== 📝 Active Session Scratchpad ===\033[0m")
+    if not os.path.exists(SESSION_PATH):
+        print("  (ACTIVE_SESSION.md belum dibuat)")
+        return
+    with open(SESSION_PATH, "r", encoding="utf-8") as f:
+        print(f.read().strip())
+    print()
+
+def set_session(project=None, task=None, files=None, verify=None, notes=None, status="IN_PROGRESS", agent="AI Agent"):
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M WIB")
+    content = f"""# Active Session Scratchpad
+
+> ℹ️ File ini berfungsi sebagai jembatan memori real-time antar AI Agent lintas sesi ketika ada pekerjaan yang sedang berjalan.
+> Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
+
+- **Status:** {status}
+- **Active Project:** {project or "-"}
+- **Current Task:** {task or "-"}
+- **Modified Files:** {files or "-"}
+- **Verification Command / URL:** {verify or "-"}
+- **Next Steps / Notes:** {notes or "-"}
+- **Last Updated By:** {agent}
+- **Last Updated At:** {now_str}
+"""
+    with open(SESSION_PATH, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"\033[32m✓ Active session updated to {status}\033[0m")
+
+def clear_session():
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M WIB")
+    content = f"""# Active Session Scratchpad
+
+> ℹ️ File ini berfungsi sebagai jembatan memori real-time antar AI Agent lintas sesi ketika ada pekerjaan yang sedang berjalan.
+> Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
+
+- **Status:** IDLE
+- **Active Project:** -
+- **Current Task:** -
+- **Modified Files:** -
+- **Verification Command / URL:** -
+- **Next Steps / Notes:** -
+- **Last Updated By:** AI Agent
+- **Last Updated At:** {now_str}
+"""
+    with open(SESSION_PATH, "w", encoding="utf-8") as f:
+        f.write(content)
+    print("\033[32m✓ Active session scratchpad reset to IDLE\033[0m")
+
+def print_review_template():
+    print("""\033[1;33m=== 🎯 Standard Ready for Review Protocol ===\033[0m
+Gunakan template berikut saat melaporkan pekerjaan ke USER:
+
+---
+### 🔍 Ready for Review: [Judul Fitur / Perbaikan]
+
+1. **Perubahan yang Dilakukan (What Changed):**
+   - [Ringkasan file dan logic yang diubah]
+
+2. **Bukti Pengujian (Proof of Work):**
+   - [Output run test / HTTP 200 / screenshot / curl result]
+
+3. **Cara Verifikasi Cepat (One-Liner Verification):**
+   - `[Command verifikasi untuk user]` atau URL browser
+
+4. **Konfirmasi User (Call to Action):**
+   *Mohon review hasil di atas. Jika sudah sesuai, beri tahu saya agar status tugas dapat saya tandai selesai (`[x]`) dan disinkronkan ke agent-brain.*
+---
+""")
+
+def push_brain(commit_msg, agent_name="AI Agent"):
+    if not commit_msg:
+        print("Error: Commit message required. Example: brain push 'feat: my update'")
+        sys.exit(1)
+        
+    # Check README line limit (<100 lines)
+    if os.path.exists(README_PATH):
+        with open(README_PATH, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+        if len(lines) > 100:
+            print(f"\033[33m⚠️ Peringatan: README.md memiliki {len(lines)} baris (>100 baris). Pertimbangkan mengarsipkan task lama.\033[0m")
+            
+        # Update metadata timestamp
+        now_str = datetime.now().strftime("%Y-%m-%d %H:%M WIB")
+        content = "".join(lines)
+        content = re.sub(r"\*\*Last Updated At:\*\*.*", f"**Last Updated At:** {now_str}", content)
+        if agent_name:
+            content = re.sub(r"\*\*Last Updated By:\*\*.*", f"**Last Updated By:** {agent_name}", content)
+        with open(README_PATH, "w", encoding="utf-8") as f:
+            f.write(content)
+
+    print(f"\033[34m→ Committing & pushing agent-brain...\033[0m")
+    subprocess.run(["git", "-C", BRAIN_DIR, "add", "."], check=True)
+    subprocess.run(["git", "-C", BRAIN_DIR, "commit", "-m", commit_msg], check=True)
+    subprocess.run(["git", "-C", BRAIN_DIR, "push", "origin", "main"], check=True)
+    print("\033[32m✓ agent-brain pushed successfully to GitHub!\033[0m")
+
+def main():
+    if len(sys.argv) < 2:
+        print_help()
+        sys.exit(0)
+        
+    cmd = sys.argv[1]
+    
+    if cmd == "status":
+        list_tasks()
+        show_session()
+        print_health()
+    elif cmd in ("health", "ports"):
+        print_health()
+    elif cmd == "task":
+        if len(sys.argv) < 3:
+            list_tasks()
+            sys.exit(0)
+        sub = sys.argv[2]
+        if sub == "list":
+            list_tasks()
+        elif sub == "add":
+            desc = " ".join(sys.argv[3:])
+            add_task(desc)
+        elif sub == "done":
+            confirm = "--confirm-user" in sys.argv
+            args = [a for a in sys.argv[3:] if a != "--confirm-user"]
+            target = " ".join(args)
+            complete_task(target, confirm=confirm)
+        else:
+            print(f"Unknown task command: {sub}")
+    elif cmd == "session":
+        if len(sys.argv) < 3 or sys.argv[2] == "show":
+            show_session()
+        elif sys.argv[2] == "clear":
+            clear_session()
+        elif sys.argv[2] == "set":
+            # parse simple args
+            import argparse
+            parser = argparse.ArgumentParser()
+            parser.add_argument("--project", default="-")
+            parser.add_argument("--task", default="-")
+            parser.add_argument("--files", default="-")
+            parser.add_argument("--verify", default="-")
+            parser.add_argument("--notes", default="-")
+            parser.add_argument("--status", default="IN_PROGRESS")
+            parser.add_argument("--agent", default="AI Agent")
+            parsed, _ = parser.parse_known_args(sys.argv[3:])
+            set_session(project=parsed.project, task=parsed.task, files=parsed.files,
+                        verify=parsed.verify, notes=parsed.notes, status=parsed.status, agent=parsed.agent)
+    elif cmd == "review":
+        print_review_template()
+    elif cmd == "push":
+        msg = sys.argv[2] if len(sys.argv) > 2 else "chore: update agent brain"
+        agent = "Antigravity (Gemini 3.8 Flash)"
+        push_brain(msg, agent_name=agent)
+    else:
+        print_help()
+
+def print_help():
+    print("""\033[1;36m🧠 Agent Brain CLI Helper (brain)\033[0m
+Usage:
+  brain status                 Tampilkan tugas aktif, active session, dan health port
+  brain health                 Cek status konektivitas seluruh reserved ports & endpoints
+  brain task list              Tampilkan daftar tugas (Work in Progress)
+  brain task add "<deskripsi>" Tambah tugas baru berstatus [ ]
+  brain task done <id|nama> --confirm-user   Tandai tugas selesai [x] (WAJIB konfirmasi user)
+  brain session show           Lihat isi ACTIVE_SESSION.md scratchpad
+  brain session set --project "X" --task "Y" --notes "Z"  Catat context sesi aktif
+  brain session clear          Reset scratchpad sesi ke IDLE
+  brain review                 Tampilkan format standar template Ready for Review
+  brain push "<commit-msg>"    Validasi, perbarui timestamp, commit & push ke GitHub
+""")
+
+if __name__ == "__main__":
+    main()

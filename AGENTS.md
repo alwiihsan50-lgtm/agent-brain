@@ -35,18 +35,32 @@
 
 ---
 
-### 3. PHASE WRITE (HANDOFF & ATURAN MUTLAK PENYELESAIAN TUGAS)
+### 3. PHASE WRITE (HANDOFF, VERIFIKASI & ATURAN MUTLAK PENYELESAIAN TUGAS)
 - ⚠️ **ATURAN MUTLAK PENYELESAIAN TUGAS (NO AUTO-COMPLETION):**
   * AI Agent **DILARANG KERAS** menganggap selesai atau mencentang checklist (`[x]`) secara mandiri/sepihak, baik untuk **pekerjaan baru** maupun **pekerjaan lama yang belum selesai**.
   * Seluruh pekerjaan baru atau pekerjaan yang sedang berjalan **WAJIB tetap berstatus belum selesai (`- [ ]`)** sampai USER secara langsung dan eksplisit mengonfirmasi bahwa pekerjaan tersebut benar-benar tuntas.
   * Hanya setelah mendapatkan konfirmasi eksplisit dari USER:
     1. Item pekerjaan boleh diubah menjadi dicentang (`[x]`).
     2. Milestone yang selesai dipindahkan/diarsipkan ke [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md) agar `README.md` tetap ringkas (<100 baris).
-- **Prosedur Handoff & Pembaruan:**
-  * Catat tugas baru atau progress yang berjalan ke antrean *Work in Progress* di [`README.md`](README.md) dengan status `- [ ]`.
-  * Update kolom `Last Updated By` (nama/platform kamu) dan `Last Updated At` (tanggal & waktu UTC/WIB saat ini).
-  * Jika membuat dokumentasi teknis, kode, atau skema baru, simpan file-nya di dalam direktori `docs/` (contoh: `docs/api-spec.md`) lalu tautkan/link file tersebut di `README.md`.
-  * Lakukan `git add`, `git commit -m "..."`, dan `git push` ke repositori `alwiihsan50-lgtm/agent-brain`.
+
+- 🔍 **PROTOKOL STANDAR "READY FOR REVIEW" (VERIFIABLE HANDOFF):**
+  Ketika AI Agent selesai mengimplementasikan tugas dan siap diverifikasi USER, AI Agent **WAJIB** menyajikan laporan dengan format:
+  1. **Perubahan yang Dilakukan (What Changed):** Ringkasan file, endpoint, atau fungsi yang dimodifikasi.
+  2. **Bukti Pengujian (Proof of Work):** Output eksekusi test terminal, respon status curl HTTP 200, atau verifikasi browser/screenshot.
+  3. **Cara Verifikasi Cepat (One-Liner Verification):** Perintah CLI 1 baris atau URL yang bisa langsung diuji oleh USER dalam hitungan detik.
+  4. **Call to Action Konfirmasi:** Meminta persetujuan eksplisit dari USER: *"Mohon review hasil di atas. Jika sudah sesuai, beri tahu saya agar status tugas dapat saya tandai selesai (`[x]`) di agent-brain."*
+
+- 🛠️ **STANDARISASI CLI HELPER (`brain`):**
+  Tersedia utility terpusat `brain` di `~/.local/bin/brain` untuk menjaga integritas memori:
+  * `brain status` : Cek daftar tugas aktif, active session, dan status port real-time.
+  * `brain health` : Healthcheck konektivitas seluruh reserved ports & endpoints.
+  * `brain task add "<deskripsi>"` : Tambah tugas baru berstatus `- [ ]` ke `README.md`.
+  * `brain task done <id> --confirm-user` : Tandai tugas selesai `[x]` hanya jika USER telah konfirmasi.
+  * `brain session set ...` & `brain session clear` : Kelola [`ACTIVE_SESSION.md`](ACTIVE_SESSION.md).
+  * `brain push "<pesan-commit>"` : Validasi batas baris `README.md`, update timestamp, commit, dan push otomatis ke GitHub.
+
+- 📝 **ACTIVE SESSION SCRATCHPAD (`ACTIVE_SESSION.md`):**
+  Untuk pekerjaan multi-tahap yang belum selesai atau sebelum terjadi pergantian agent, catat konteks aktif (project, task, modified files, blockers) ke [`ACTIVE_SESSION.md`](ACTIVE_SESSION.md) menggunakan `brain session set`. Setelah tugas tuntas divalidasi USER, reset ke IDLE via `brain session clear`.
 
 ---
 
