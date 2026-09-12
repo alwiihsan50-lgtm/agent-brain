@@ -24,7 +24,7 @@
 - **Konfirmasi Task Belum Selesai (Pending Task Confirmation):**
   Jika saat membaca `README.md` ditemukan item pekerjaan yang belum selesai (`- [ ]`), AI Agent **WAJIB langsung meminta konfirmasi kepada USER di awal sesi**:
   1. Apakah pekerjaan tersebut ingin dilanjutkan sekarang, ATAU
-  2. Apakah pekerjaan tersebut sebenarnya sudah selesai sehingga boleh dicentang (`[x]`) dan dipindahkan/diarsip ke [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md).
+  2. Apakah pekerjaan tersebut sudah divalidasi tuntas oleh USER sehingga boleh dicentang (`[x]`) dan dipindahkan/diarsip ke [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md). (*Ingat: DILARANG mengasumsikan atau mencentang selesai tanpa persetujuan langsung USER*).
 
 ---
 
@@ -35,14 +35,18 @@
 
 ---
 
-### 3. PHASE WRITE (HANDOFF / COMPLETION)
-- Setelah selesai mengerjakan tugas, WAJIB memperbarui [`README.md`](README.md):
-  * Centang checklist tugas yang selesai (`[x]`).
-  * Tambahkan tugas baru di daftar jika ada.
+### 3. PHASE WRITE (HANDOFF & ATURAN MUTLAK PENYELESAIAN TUGAS)
+- ⚠️ **ATURAN MUTLAK PENYELESAIAN TUGAS (NO AUTO-COMPLETION):**
+  * AI Agent **DILARANG KERAS** menganggap selesai atau mencentang checklist (`[x]`) secara mandiri/sepihak, baik untuk **pekerjaan baru** maupun **pekerjaan lama yang belum selesai**.
+  * Seluruh pekerjaan baru atau pekerjaan yang sedang berjalan **WAJIB tetap berstatus belum selesai (`- [ ]`)** sampai USER secara langsung dan eksplisit mengonfirmasi bahwa pekerjaan tersebut benar-benar tuntas.
+  * Hanya setelah mendapatkan konfirmasi eksplisit dari USER:
+    1. Item pekerjaan boleh diubah menjadi dicentang (`[x]`).
+    2. Milestone yang selesai dipindahkan/diarsipkan ke [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md) agar `README.md` tetap ringkas (<100 baris).
+- **Prosedur Handoff & Pembaruan:**
+  * Catat tugas baru atau progress yang berjalan ke antrean *Work in Progress* di [`README.md`](README.md) dengan status `- [ ]`.
   * Update kolom `Last Updated By` (nama/platform kamu) dan `Last Updated At` (tanggal & waktu UTC/WIB saat ini).
-  * Jaga [`README.md`](README.md) tetap ringkas (<100 baris) demi efisiensi token. Pindahkan milestone yang telah selesai ke [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md).
-- Jika membuat dokumentasi teknis, kode, atau skema baru, simpan file-nya di dalam direktori `docs/` (contoh: `docs/api-spec.md`) lalu tautkan/link file tersebut di `README.md`.
-- Lakukan `git add`, `git commit -m "..."`, dan `git push` ke repositori `alwiihsan50-lgtm/agent-brain`.
+  * Jika membuat dokumentasi teknis, kode, atau skema baru, simpan file-nya di dalam direktori `docs/` (contoh: `docs/api-spec.md`) lalu tautkan/link file tersebut di `README.md`.
+  * Lakukan `git add`, `git commit -m "..."`, dan `git push` ke repositori `alwiihsan50-lgtm/agent-brain`.
 
 ---
 

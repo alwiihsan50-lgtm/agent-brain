@@ -10,4 +10,4 @@ Refer to [`AGENTS.md`](AGENTS.md) and [`README.md`](README.md) for full operatio
 1. **Booting:** Read [`README.md`](README.md) and relevant docs in [`docs/`](docs/) before starting any task.
 2. **Code Intelligence:** Use `graphify query` / `explain` / `path` for token-efficient AST navigation. Auto-run `graphify .` if `graphify-out/graph.json` is missing.
 3. **Graph Sync:** Run `graphify update .` after code edits.
-4. **Handoff:** Update [`README.md`](README.md), keep it concise (<100 lines), archive old tasks to [`docs/history/`](docs/history/), and push to `alwiihsan50-lgtm/agent-brain`.
+4. **Task Completion & Handoff:** **STRICT USER CONFIRMATION**: Never mark tasks as complete (`[x]`) or archive them autonomously—all new and ongoing tasks remain `- [ ]` until directly and explicitly confirmed by the USER. Update [`README.md`](README.md), keep it concise (<100 lines), and push to `alwiihsan50-lgtm/agent-brain`.

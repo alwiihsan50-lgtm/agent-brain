@@ -47,7 +47,7 @@ Dokumen ini menjelaskan integrasi sinergi antara **`agent-brain`** (Penyimpanan 
    *(Opsional: pasang Git Post-Commit Hook agar langkah ini berjalan otomatis di background).*
 
 5. **Phase 5: Pencatatan Memori Permanen (`agent-brain`)**
-   Agent memperbarui `agent-brain/README.md` (checklist, status aktif), mengarsipkan riwayat lama ke `docs/history/`, mencatat dokumen baru jika ada, lalu melakukan `git commit` dan `git push` ke repositori `alwiihsan50-lgtm/agent-brain`.
+   Agent memperbarui `agent-brain/README.md` (mencatat tugas aktif `- [ ]` atau checklist yang telah divalidasi tuntas oleh USER), mengarsipkan riwayat yang telah dikonfirmasi selesai oleh USER ke `docs/history/`, mencatat dokumen baru jika ada, lalu melakukan `git commit` dan `git push` ke repositori `alwiihsan50-lgtm/agent-brain`.
 
 ---
 
