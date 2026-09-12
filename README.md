@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Penyempurnaan Web App: Tampilan sinopsis lengkap, deskripsi teks film, dan rincian spesifikasi teknis torrent (audio, codec, durasi, trailer)**
+
 - [ ] **Pembuatan Web App Mobile-Friendly (Port 6888) untuk cari-film & manajemen unduhan PC Aria2 via Tailscale**
 
 - [ ] **Pembuatan CLI tool pencari torrent film (cari-film & pc-torrent search) otomatis terintegrasi Aria2 RPC Port 6801 (Drive Data)**
@@ -77,7 +79,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-12 19:12 WIB
+**Last Updated At:** 2026-09-12 20:06 WIB
 
 
 

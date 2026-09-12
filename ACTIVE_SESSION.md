@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** PC-Torrent-Suite
-- **Current Task:** Pembuatan Web App Mobile-Friendly (Port 6888) untuk cari-film & manajemen unduhan PC Aria2 via Tailscale
+- **Current Task:** Penyempurnaan Web App: Tampilan sinopsis lengkap, deskripsi teks film, dan rincian spesifikasi teknis torrent (audio, codec, durasi, trailer)
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** FastAPI web server di Port 6888 terintegrasi Aria2 RPC Port 6801 dan Tailscale
+- **Next Steps / Notes:** Menambahkan Detail Modal/Bottom Sheet, deskripsi sinopsis alur cerita, durasi, audio channel, video codec, dan trailer
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-09-12 19:08 WIB
+- **Last Updated At:** 2026-09-12 20:05 WIB
