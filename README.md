@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Integrasi tautan klik untuk membuka halaman asal torrent di browser (source web page & direct .torrent link)**
+
 - [ ] **Penyempurnaan Web App: Tampilan sinopsis lengkap, deskripsi teks film, dan rincian spesifikasi teknis torrent (audio, codec, durasi, trailer)**
 
 - [ ] **Pembuatan Web App Mobile-Friendly (Port 6888) untuk cari-film & manajemen unduhan PC Aria2 via Tailscale**
@@ -79,7 +81,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-12 20:14 WIB
+**Last Updated At:** 2026-09-12 20:23 WIB
 
 
 

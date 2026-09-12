@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** PC-Torrent-Suite
-- **Current Task:** Penyempurnaan Web App: Tampilan sinopsis lengkap, deskripsi teks film, dan rincian spesifikasi teknis torrent (audio, codec, durasi, trailer)
+- **Current Task:** Integrasi tautan klik untuk membuka halaman asal torrent di browser (source web page & direct .torrent link)
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Menambahkan Detail Modal/Bottom Sheet, deskripsi sinopsis alur cerita, durasi, audio channel, video codec, dan trailer
+- **Next Steps / Notes:** Menambahkan tombol/link clickable untuk membuka halaman asal web dan download file .torrent langsung di browser
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-09-12 20:05 WIB
+- **Last Updated At:** 2026-09-12 20:22 WIB
