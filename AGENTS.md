@@ -119,4 +119,11 @@ Seluruh AI Agent **WAJIB** menerapkan prinsip hemat token sebagai workflow utama
    - Gunakan `graphify query "<tanya>"`, `graphify explain "<konsep>"`, atau `graphify path` sebelum membuka file source code mentah.
    - Gunakan pembacaan baris spesifik (slice line range `StartLine`/`EndLine`) dan hindari membaca ribuan baris kode sekaligus jika hanya membutuhkan bagian tertentu.
 
-
+### 7. PROTOKOL SENTRALISASI UNDUHAN TORRENT (PC-ONLY POLICY)
+- ⚠️ **Mandat Mutlak:** Seluruh task, job background, dan eksekusi pengunduhan torrent (`aria2`, `transmission`, atau client torrent lainnya) **HANYA BOLEH DILAKUKAN DI PC WORKSTATION INI**.
+- **Direktori Penyimpanan Wajib:** Seluruh unduhan file torrent diarahkan ke Drive Data PC: `/media/cuker/Data/Downloads/`.
+- **Larangan Keras pada Node Edge & Server:**
+  - **DILARANG KERAS** mengunduh, mengonfigurasi, atau menjalankan proses torrent downloader di **STB Android (`erza`)** maupun **`mentari-server` (CasaOS)**.
+  - Resource STB dikhususkan untuk Web Remote Hub (Port 8080) & TV playback tanpa beban I/O flash memory.
+  - Resource `mentari-server` dikhususkan untuk CCTV 24/7 dan Cloudflare Tunnel.
+- **Monitoring & Status:** Gunakan script `pc-torrent` (`~/.local/bin/pc-torrent`) untuk monitoring Aria2 RPC (Port 6801) dan cek via `brain health`.

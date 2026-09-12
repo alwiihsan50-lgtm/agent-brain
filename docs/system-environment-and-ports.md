@@ -19,7 +19,8 @@
 > - **PORT 40506**: Dipesan untuk **TailShare** (`/home/cuker/tailshare`).
 > - **PORT 3000 / 3001**: Dipesan untuk **MetaTrader 5 Web GUI VNC** (`exness-mt5` container).
 > - **PORT 8080**: Dipesan untuk **STB RockChip Web Remote Hub** (`erza` node).
-> *(Catatan: Backend Web Push Notification telah dimigrasikan ke **Cloudflare Workers (Serverless)**).*
+> - **PORT 6801**: Dipesan untuk **PC Torrent Aria2 RPC** (`pc-torrent`, lokasi unduhan: `/media/cuker/Data/Downloads/`).
+> *(Catatan: Seluruh task torrent sentral di PC Workstation, dilarang di STB / mentari-server).*
 
 Untuk server pengujian atau server pengembang sementara lainnya, **SELALU gunakan port bebas alternatif** seperti `5173`, `3002`, `3080`, `8000`, dll.
 
