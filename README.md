@@ -30,12 +30,14 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **AI Browser Suite** | `~/.ai-browser-tools` & MCP | 🟢 Terpasang | `@playwright/mcp` Server, `crawl4ai` Async Extractor, dan `browser-use` Agent. |
 | **SIMPKK Keep-Alive** | `simpkk-keepalive.alwiihsan50.workers.dev` | 🟢 Live | Cloudflare Worker Cron 24/7 (09:00 WIB daily) menjaga Supabase SIMPKK-DIGITAL tetap aktif. |
 | **9Router & Headroom** | `Port 20128` & `8787` | 🟢 Live | AI Routing Gateway + Headroom v0.37.0 Context Optimizer (Code-Aware AST Compression). |
-| **Torrent PC Suite** | `Port 6801` / `/media/cuker/Data/Downloads` | 🟢 Standby | Sentralisasi unduhan torrent eksklusif PC (`pc-torrent` / Aria2 / Transmission). Dilarang di STB / mentari-server. |
+| **Torrent PC Suite** | `Port 6801` (RPC) & `6888` (Web UI) | 🟢 Live | Sentralisasi torrent eksklusif PC (`cari-film` / `pc-torrent` / Web App). Akses via Tailscale. |
 
 ---
 
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
+
+- [ ] **Pembuatan Web App Mobile-Friendly (Port 6888) untuk cari-film & manajemen unduhan PC Aria2 via Tailscale**
 
 - [ ] **Pembuatan CLI tool pencari torrent film (cari-film & pc-torrent search) otomatis terintegrasi Aria2 RPC Port 6801 (Drive Data)**
 
@@ -75,7 +77,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-12 19:00 WIB
+**Last Updated At:** 2026-09-12 19:12 WIB
 
 
 

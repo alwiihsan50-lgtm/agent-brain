@@ -25,6 +25,7 @@ PORTS_CONFIG = [
     {"name": "MoneyPrinter API", "host": "127.0.0.1", "port": 8095, "desc": "Port 8095"},
     {"name": "MoneyPrinter WebUI", "host": "127.0.0.1", "port": 8501, "desc": "Port 8501"},
     {"name": "PC Torrent (Aria2)", "host": "127.0.0.1", "port": 6801, "desc": "Port 6801"},
+    {"name": "PC Torrent (Web UI)", "host": "127.0.0.1", "port": 6888, "desc": "Port 6888"},
 ]
 
 def check_port(service):

@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** PC-Torrent-Suite
-- **Current Task:** Pembuatan CLI tool cari-film & integrasi pencarian torrent ke PC Aria2 Port 6801
+- **Current Task:** Pembuatan Web App Mobile-Friendly (Port 6888) untuk cari-film & manajemen unduhan PC Aria2 via Tailscale
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Implementasi pencarian film via YTS/Apibay API dan auto-dispatch ke Aria2 RPC
+- **Next Steps / Notes:** FastAPI web server di Port 6888 terintegrasi Aria2 RPC Port 6801 dan Tailscale
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-09-12 18:57 WIB
+- **Last Updated At:** 2026-09-12 19:08 WIB
