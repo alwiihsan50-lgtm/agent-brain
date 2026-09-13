@@ -80,7 +80,7 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
   - **Liquidity Sweep Detection (BSL & SSL):** Mengidentifikasi manipulasi likuiditas institusional (wick rejection di atas swing high / di bawah swing low).
   - **Institutional Order Block (OB) & Fair Value Gap (FVG):** Memetakan area supply & demand terdekat serta imbalance harga.
   - **Equilibrium 50% Filter:** Mengharuskan BUY hanya pada zona Discount (< 50% swing range) dan SELL hanya pada zona Premium (> 50% swing range).
-  - **Strict Risk Controls:** Wajib Stop Loss di luar batas Order Block / Swing Rejection, minimal Risk-to-Reward 1:2.0, Auto Break-Even (BE) otomatis saat trade mencapai 1.0x R:R, hard equity drawdown cap 10%, dan max 3 open positions total.
+  - **Strict Risk Controls:** Wajib Stop Loss di luar batas Order Block / Swing Rejection, Risk FLAT Rp 50.000 per trade, Risk-to-Reward 1:3.0 (Target +Rp 150.000), Auto Break-Even (BE) otomatis saat trade mencapai +1.0R (Risk-Free), hard equity drawdown cap 25%, dan max 1 order per pair (No Averaging / Single Order).
 - **Proteksi Anti-Spam Notifikasi:** Fungsi `send_push_notification(title, message, cooldown_seconds=30)` dilengkapi deduplication & 30-second cooldown timer untuk mencegah loop pesan ke Cloudflare Workers:
   `https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification`
 
