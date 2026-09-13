@@ -55,9 +55,8 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 - **In-Memory RAM Architecture:**
   - **Shared RAM Volume (`ram_buffer`):** Driver `tmpfs` berukuran 64 MB di-mount ke `/ram_data` di container MT5.
   - **Container tmpfs Mounts:** `/tmp` (512M) dan `/dev/shm` (512M) berjalan di RAM.
-- **Containers:**
-  - `exness-mt5` (Akun Utama: `434073017` Exness, KasmVNC Port `3000` / `3001`)
-  - `propfirm-mt5` (Akun ke-2: `463880423` Exness, KasmVNC Port `3002` / `3003`)
+  - `exness-mt5` (Akun Utama: `434073017` Exness, KasmVNC Port `3000` / `3001` - **AKTIF / RUNNING**)
+  - `propfirm-mt5` (Akun ke-2: `463880423` Exness, KasmVNC Port `3006` / `3007` - **NONAKTIF / STOPPED**)
 - **Volume Persisten:** `./mt5_config` -> `/config` (Akun 1) dan `./mt5_config_prop1` -> `/config` (Akun 2)
 - **Environment:** `PUID=1000`, `PGID=1000`, `TZ=Asia/Jakarta`
 - **Web UI GUI MT5:**
