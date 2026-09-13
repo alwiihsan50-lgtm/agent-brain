@@ -40,8 +40,8 @@ Berdasarkan audit live probing API, token memiliki hak akses berikut:
 | `dashboard.abbas.my.id` | CNAME | `6cd14b2e-...cfargotunnel.com` | 🟠 True | **MT5 Live Trading Dashboard** (`mentari-server` Port 8080) |
 | `mt5.abbas.my.id` | CNAME | `6cd14b2e-...cfargotunnel.com` | 🟠 True | **MetaTrader 5 GUI VNC** (`mentari-server` Port 3001) |
 | `vnc.abbas.my.id` | CNAME | `6cd14b2e-...cfargotunnel.com` | 🟠 True | **Alias VNC MT5** (`mentari-server` Port 3001) |
-| `server.abbas.my.id` | CNAME | `6cd14b2e-...cfargotunnel.com` | 🟠 True | **CasaOS Web GUI** (`mentari-server` Port 80) |
-| `casa.abbas.my.id` | CNAME | `6cd14b2e-...cfargotunnel.com` | 🟠 True | **Alias CasaOS Dashboard** (`mentari-server` Port 80) |
+| `server.abbas.my.id` | CNAME | `6cd14b2e-...cfargotunnel.com` | 🟠 True | ⚪ **Inactive** (mentari-server offline, CasaOS dihapus) |
+| `casa.abbas.my.id` | CNAME | `6cd14b2e-...cfargotunnel.com` | 🟠 True | ⚪ **Inactive** (mentari-server offline, CasaOS dihapus) |
 | `share.abbas.my.id` | CNAME | `38aa36f2-...cfargotunnel.com` | 🟠 True | **TailShare File Transfer** (`workstation` Port 40506) |
 | `desk.abbas.my.id` | CNAME | `38aa36f2-...cfargotunnel.com` | 🟠 True | **RustDesk Web Client** (`workstation`) |
 | `relay.abbas.my.id` | CNAME | `38aa36f2-...cfargotunnel.com` | 🟠 True | **RustDesk Relay Server** |

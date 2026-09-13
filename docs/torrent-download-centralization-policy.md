@@ -7,7 +7,7 @@ Dokumen ini menetapkan aturan permanen mengenai manajemen pengunduhan torrent di
 ## 🔒 1. Mandat & Aturan Mutlak
 > ⚠️ **ATURAN MUTLAK USER:**  
 > **SELURUH TASK PENGUNDUHAN TORRENT HANYA BOLEH DILAKUKAN DI PC WORKSTATION INI.**  
-> Seluruh AI Agent (Gemini, Claude, GPT, Antigravity, OpenCode, dll.) **DILARANG KERAS** mendelegasikan, mengonfigurasi, atau menjalankan daemon/proses torrent downloader di perangkat lain seperti **STB Android (`erza`)** atau **`mentari-server` (CasaOS)**.
+> Seluruh AI Agent (Gemini, Claude, GPT, Antigravity, OpenCode, dll.) **DILARANG KERAS** mendelegasikan, mengonfigurasi, atau menjalankan daemon/proses torrent downloader di perangkat lain seperti **STB Android (`erza`)** atau **`mentari-server`**.
 
 ---
 
@@ -17,7 +17,7 @@ Dokumen ini menetapkan aturan permanen mengenai manajemen pengunduhan torrent di
 2. **Integritas Perangkat Edge / STB:**
    - STB Android (`erza`) memiliki memori flash internal terbatas (NAND eMMC). Menjalankan torrent di STB menyebabkan keausan flash disk (*disk wear*), storage cepat penuh (*insufficient storage*), dan membebani RAM yang dibutuhkan untuk daemon uinput Remote Hub dan video playback.
 3. **Stabilitas Server (`mentari-server`):**
-   - `mentari-server` didedikasikan untuk perekaman CCTV 24/7, CasaOS, dan Cloudflare Tunnel. Aktivitas P2P torrent dapat menghabiskan koneksi routing LAN / bandwidth upload-download yang mengganggu transmisi stream CCTV.
+   - `mentari-server` didedikasikan untuk perekaman CCTV 24/7 dan Cloudflare Tunnel (saat aktif). Aktivitas P2P torrent dapat menghabiskan koneksi routing LAN / bandwidth upload-download yang mengganggu transmisi stream CCTV.
 
 ---
 
@@ -41,5 +41,5 @@ Dokumen ini menetapkan aturan permanen mengenai manajemen pengunduhan torrent di
 ## 📋 4. Checklist Kepatuhan AI Agent
 - [x] Pastikan path tujuan unduhan selalu mengarah ke `/media/cuker/Data/Downloads/`.
 - [x] Tidak memasang `aria2` atau torrent client di STB via ADB.
-- [x] Tidak memasang container torrent downloader di `mentari-server` via CasaOS/Docker tanpa izin eksplisit.
+- [x] Tidak memasang container torrent downloader di `mentari-server` tanpa izin eksplisit.
 - [x] Monitor status berkala menggunakan `pc-torrent` atau `brain health`.

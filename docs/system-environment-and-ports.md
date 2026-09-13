@@ -33,12 +33,11 @@ Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.servi
 
 | Layanan / Aplikasi | Target Port Lokal | Subdomain Publik (HTTPS) | Status |
 | :--- | :---: | :--- | :---: |
-| 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `https://localhost:3001` *(mentari-server)* | **`https://mt5.abbas.my.id`** *(alias: `vnc`)* | 🟢 **Live (HTTP 200)** |
-| 🏠 **CasaOS Web GUI Dashboard** | `http://localhost:80` *(mentari-server)* | **`https://server.abbas.my.id`** / **`https://casa.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
+| 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `https://localhost:3001` *(mentari-server)* | **`https://mt5.abbas.my.id`** *(alias: `vnc`)* | ⚪ **Offline (mentari-server tidak aktif)** |
 | 📁 **TailShare Web UI** | `http://localhost:40506` *(Windows Workstation / Linux)* | **`https://share.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
 
 ### Konfigurasi Cloudflare Tunnel:
-* **Tunnel mentari-server:** `mentari-tunnel` (`6cd14b2e-12e7-44f2-b138-d8c1684690a6`) mengelola `dashboard`, `mt5`, `vnc`, `server`, dan `casa.abbas.my.id`.
+* **Tunnel mentari-server:** `mentari-tunnel` (`6cd14b2e-12e7-44f2-b138-d8c1684690a6`) *(Status: Offline/Tidak Dijalankan, CasaOS telah didekomisi)*.
 * **Security Layer:** Cloudflare Zero Trust Access (PIN OTP `alwiihsan50@gmail.com`, Session 1 Bulan / 730 Jam).
 
 ---
@@ -52,7 +51,7 @@ Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.servi
 | :--- | :--- | :--- | :--- |
 | **Linux Workstation** | `cuker-h610m-hvs-m-2-r2-0`<br>`cuker-h610m-hvs-m-2-r2-0.tail474821.ts.net` | `100.110.205.27` | - **TailShare:** `http://cuker-h610m-hvs-m-2-r2-0:40506`<br>- **MT5 GUI (VNC):** `http://cuker-h610m-hvs-m-2-r2-0:3000`<br>- **PC Torrent Web:** `http://cuker-h610m-hvs-m-2-r2-0:6888`<br>- **STB Remote Proxy:** `http://cuker-h610m-hvs-m-2-r2-0:8085`<br>- **SSH:** `ssh cuker@cuker-h610m-hvs-m-2-r2-0` |
 | **STB Android 13** | `erza`<br>`erza.tail474821.ts.net` | `100.104.214.122` | - **STB Remote Server:** `http://erza:8080`<br>- **ADB Remote:** `adb connect erza:5555` |
-| **Server Debian** | `mentari-server`<br>`mentari-server.tail474821.ts.net` | `100.109.208.27` | - **CasaOS Dashboard:** `http://mentari-server`<br>- **SSH:** `ssh mentari@mentari-server` |
+| **Server Debian** | `mentari-server`<br>`mentari-server.tail474821.ts.net` | `100.109.208.27` | - **Status:** ⚪ Offline / Tidak Dijalankan (CasaOS dihapus)<br>- **SSH:** `ssh mentari@mentari-server` |
 | **iPhone** | `ip11`<br>`ip11.tail474821.ts.net` | `100.71.123.61` | - Akses client / PWA Safari ke seluruh MagicDNS URL |
 | **Windows Workstation**| `cuker`<br>`cuker.tail474821.ts.net` | `100.99.188.44` | - Dual-boot Windows node |
 

@@ -1,6 +1,6 @@
 # Universal Web Push Notification Service (Cloudflare Workers 24/7)
 
-Dokumentasi standar integrasi sistem **Universal Web Push Notification** terpusat untuk seluruh aplikasi dan bot dalam ekosistem (MT5, Arsip-IMO, SmartHome, SaveBuddy, Server Monitoring, cron jobs, dll).
+Dokumentasi standar integrasi sistem **Universal Web Push Notification** terpusat untuk seluruh aplikasi dan bot dalam ekosistem (MT5, Arsip-IMO, SaveBuddy, Server Monitoring, cron jobs, dll).
 
 ---
 
@@ -11,7 +11,7 @@ Semua aplikasi pengirim (baik yang berjalan di Docker, server lokal, VM, maupun 
 ```
 [Aplikasi 1: MT5 Bot (Docker)] ------+
 [Aplikasi 2: Arsip-IMO Backend] ----+
-[Aplikasi 3: SmartHome System] -----+---> [Cloudflare Workers Hub] ---> [Apple Push Service] ---> [iPhone User]
+[Aplikasi 3: TailShare / PC Suite] -+---> [Cloudflare Workers Hub] ---> [Apple Push Service] ---> [iPhone User]
 [Aplikasi 4: Server Cron/Monitor] --+      (https://mt5-push-backend...       (web.push.apple.com)
 [Aplikasi N: Custom App] -----------+           .alwiihsan50.workers.dev)
 ```
@@ -88,7 +88,7 @@ function sendPushAlert(string $title, string $message): bool {
 }
 
 // Contoh Pemanggilan:
-sendPushAlert('🏠 SmartHome', 'Pintu garasi terbuka pada pukul ' . date('H:i:s'));
+sendPushAlert('⚡ Workstation Monitor', 'Penyimpanan Drive D mencapai 85% pada pukul ' . date('H:i:s'));
 ```
 
 ### D. Golang

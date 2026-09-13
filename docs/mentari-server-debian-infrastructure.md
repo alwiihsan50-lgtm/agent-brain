@@ -52,14 +52,14 @@ Host mentari-tailscale
 
 ---
 
-## 3. Web GUI & Cloudflare Tunnel (Akses Global 24/7)
-- **Aplikasi Web GUI:** CasaOS v0.4.15 (Port 80)
+## 3. Status Layanan & Decommissioning CasaOS
+> [!NOTE]
+> **Status Terkini:** Saat ini `mentari-server` tidak dijalankan (offline). Layanan CasaOS telah didekomisi dan dihapus dari arsitektur aktif.
+- **Aplikasi Web GUI Sebelumnya:** CasaOS v0.4.15 (Port 80) — *Decommissioned*
 - **Domain Publik HTTPS:**
-  - 🌐 **`https://server.abbas.my.id`** (HTTP 200 Live)
-  - 🌐 **`https://casa.abbas.my.id`** (HTTP 200 Live)
+  - `https://server.abbas.my.id` (Inactive)
+  - `https://casa.abbas.my.id` (Inactive)
 - **Cloudflare Tunnel ID:** `6cd14b2e-12e7-44f2-b138-d8c1684690a6` (`mentari-tunnel`)
-- **File Konfigurasi Tunnel:** `/etc/cloudflared/config.yml`
-- **Service Systemd:** `cloudflared.service` ➔ `enabled` (Active 24/7)
 
 ---
 
