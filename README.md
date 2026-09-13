@@ -31,11 +31,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **9Router & Headroom** | `Port 20128` & `8787` | 🟢 Live | AI Routing Gateway + Headroom v0.37.0 Context Optimizer (Code-Aware AST Compression). |
 | **AGY OpenAI Bridge** | `Port 5050` / `localhost:5050` | 🟢 Running | Local OpenAI-Compatible Bridge bertenaga `agy -p` (16 models: Gemini 3.8 Flash, Claude Sonnet 4.6, Opus, GPT-OSS) + integrasi 9Router prefix `agy/`. |
 | **Torrent PC Suite** | `Port 6801` (RPC) & `6888` (Web UI) | 🟢 Live | Sentralisasi torrent eksklusif PC (`cari-film` / `pc-torrent` / Web App). Akses via Tailscale. |
+| **MT5 MCP Server** | `mcp-mt5` / `mcp_config.json` | 🟢 Terpasang | Integrasi native MetaTrader 5 dengan Antigravity AI (`agy`): cek akun, posisi, analisa SMC M5, dan emergency close. |
 
 ---
 
-
 ## 🚀 Status Tugas Aktif (Work in Progress)
+
+- [x] **Implementasi Strategi Pure SMC (5M, Flat Risk Rp 50.000, R:R 1:2.0) & MT5 MCP Server untuk Antigravity (agy)**
 
 - [x] **Pembuatan Hub & Shortcut Desktop Provider AI Video & Image Gratis**
 
@@ -89,7 +91,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-13 17:10 WIB
+**Last Updated At:** 2026-09-13 22:51 WIB
 
 
 

@@ -147,3 +147,26 @@ npx wrangler deploy
 1. **100% Gratis & Serverless:** Tidak memerlukan port lokal di host Linux dan tidak memakan RAM.
 2. **24/7 Siap Sedia:** Backend selalu aktif di jaringan edge global Cloudflare.
 3. **Bebas Tunnel:** Tidak perlu lagi menjalankan proses tunneling `cloudflared` atau `pinggy` untuk push notification.
+
+---
+
+## 🎯 4. Strategi Pure SMC (5M) & Integrasi Antigravity MCP
+
+### A. Strategi Pure SMC Sniper (Non-Martingale)
+* **Timeframe:** 5-Menit (M5) untuk identifikasi *Bullish Order Block (OB)* & *Break of Structure (BOS)* + H1 Trend Filter (EMA-50).
+* **Flat Risk Sizing:** Risiko per trade dipatok flat **Rp 50.000** (lot dihitung otomatis dari jarak SL ke bawah OB).
+* **Target Risk-to-Reward:** **1:2.0** (+Rp 100.000 saat TP vs -Rp 50.000 saat SL).
+* **Auto Break-Even (BE):** Begitu profit menyentuh +1.0R (+Rp 50.000), SL digeser ke titik impas (Entry + Spread) untuk mengunci posisi bebas risiko.
+* **Auto News & Spread Filter:** Membekukan entri jika spread XAUUSDm > 60 pips atau jam berita US (NFP/CPI/FOMC).
+
+### B. MT5 MCP Server untuk Antigravity (`agy`)
+* **Executable Wrapper:** `/home/cuker/.local/bin/mcp-mt5`
+* **Server Script:** `/home/cuker/mt5_storage/mt5_mcp_server.py`
+* **Konfigurasi Global:** Terdaftar di `~/.gemini/config/mcp_config.json` di bawah key `"mt5"`.
+* **Tools Tersedia:**
+  - `mt5_get_account_status`: Saldo, equity, margin, floating PnL real-time.
+  - `mt5_get_open_positions`: Melihat tiket posisi aktif, lot, SL, TP, profit berjalan.
+  - `mt5_get_smc_analysis`: Meminta AI menganalisis kondisi pasar M5 saat ini (OB, BOS, Discount, Sinyal).
+  - `mt5_get_trade_history`: Riwayat transaksi tertutup dan statistik win rate.
+  - `mt5_emergency_close_all`: Perintah darurat untuk menutup seluruh posisi trading terbuka sekaligus.
+
