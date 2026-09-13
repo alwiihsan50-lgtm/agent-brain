@@ -52,3 +52,4 @@ Untuk menghindari konten bernuansa *spam / low-effort stock video*, konfigurasi 
    * **Posisi Aman (Safe Zone):** `68%` dari atas layar (menghindari tumpang tindih dengan caption bawah dan tombol interaksi TikTok di sebelah kanan).
 4. **Local Asset Bank Priority:** Memanfaatkan `storage/local_videos` untuk memasukkan footage produk real dan b-roll autentik.
 5. **Local AI Model Engine (AGY OpenAI Bridge):** Terintegrasi langsung dengan AGY Bridge Port `5050` (`http://127.0.0.1:5050/v1`) menggunakan model `gemini-3.8-flash-high` untuk scriptwriting & naskah video tanpa biaya token komersial.
+6. **Kling AI Video Generator MCP:** Terintegrasi dengan server MCP (`/home/cuker/.local/bin/mcp-kling`) bertenaga API resmi Kling AI. AI Agent dapat men-generate klip video gerak sinematik 9:16 otomatis dan langsung mengunduhnya ke folder `storage/local_videos`.
