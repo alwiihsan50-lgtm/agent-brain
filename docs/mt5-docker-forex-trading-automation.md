@@ -149,14 +149,21 @@ npx wrangler deploy
 
 ---
 
-## 🎯 4. Strategi Pure SMC (5M) & Integrasi Antigravity MCP
+## 🎯 4. Strategi Pure SMC Multi-Pair (v4.1-HYBRID-SMC) & Integrasi Antigravity MCP
 
-### A. Strategi Pure SMC Sniper (Non-Martingale)
+### A. Strategi Pure SMC Multi-Pair (Non-Martingale)
 * **Timeframe:** 5-Menit (M5) untuk identifikasi *Bullish Order Block (OB)* & *Break of Structure (BOS)* + H1 Trend Filter (EMA-50).
-* **Flat Risk Sizing:** Risiko per trade dipatok flat **Rp 50.000** (lot dihitung otomatis dari jarak SL ke bawah OB).
-* **Target Risk-to-Reward:** **1:2.0** (+Rp 100.000 saat TP vs -Rp 50.000 saat SL).
-* **Auto Break-Even (BE):** Begitu profit menyentuh +1.0R (+Rp 50.000), SL digeser ke titik impas (Entry + Spread) untuk mengunci posisi bebas risiko.
-* **Auto News & Spread Filter:** Membekukan entri jika spread XAUUSDm > 60 pips atau jam berita US (NFP/CPI/FOMC).
+* **Instrumen Aktif:** `XAUUSDm` (Gold), `EURUSDm`, dan `GBPUSDm` (Exness Raw/Standard).
+* **Flat Risk Sizing:** Risiko per trade dipatok flat **Rp 50.000** (lot dihitung dinamis via native broker `mt5.order_calc_profit`).
+* **Hybrid Risk-to-Reward (R:R):**
+  - **`XAUUSDm` (Gold):** **1:3.0** (+Rp 150.000 saat TP vs -Rp 50.000 saat SL).
+  - **`EURUSDm` & `GBPUSDm`:** **1:2.0** (+Rp 100.000 saat TP vs -Rp 50.000 saat SL).
+* **Batas Toleransi SL Teknikal:**
+  - `XAUUSDm`: 1.50 – 3.50 ($1.50 - $3.50).
+  - `EURUSDm`: 3 – 12 pips (0.0003 – 0.0012).
+  - `GBPUSDm`: 4 – 15 pips (0.0004 – 0.0015).
+* **Auto Break-Even (BE):** Begitu profit menyentuh +1.0R (+Rp 50.000), SL digeser otomatis ke titik impas (Entry + Spread Buffer) untuk mengunci posisi bebas risiko.
+* **Auto News & Spread Filter:** Membekukan entri saat spread melebar atau pada jendela rilis berita US (12:25-13:15 UTC & 14:00-14:45 UTC) dan Market Rollover (20:50-22:10 UTC).
 
 ### B. MT5 MCP Server untuk Antigravity (`agy`)
 * **Executable Wrapper:** `/home/cuker/.local/bin/mcp-mt5`
@@ -168,4 +175,51 @@ npx wrangler deploy
   - `mt5_get_smc_analysis`: Meminta AI menganalisis kondisi pasar M5 saat ini (OB, BOS, Discount, Sinyal).
   - `mt5_get_trade_history`: Riwayat transaksi tertutup dan statistik win rate.
   - `mt5_emergency_close_all`: Perintah darurat untuk menutup seluruh posisi trading terbuka sekaligus.
+
+---
+
+## 📈 5. Hasil Validasi Backtesting Penuh YTD 2026 (Januari – September 2026)
+
+Pengujian komprehensif dijalankan menggunakan **153.536 bar data M5 riil Exness** dari 1 Januari s/d 11 September 2026 dengan perlakuan spread dinamis, slippage, dan pembatasan volume lot:
+
+| Metrik Kinerja | Hasil Portofolio Gabungan |
+| :--- | :--- |
+| **Periode Data** | 1 Januari 2026 – 11 September 2026 (~8,5 Bulan) |
+| **Total Trade Dieksekusi** | **835 Trade** |
+| **Menang Penuh (Win / TP)** | **460 Trade (55.1%)** |
+| **Impas (Break-Even @ 1R)** | **186 Trade (22.3%)** |
+| **Kalah (Loss / SL)** | **189 Trade (22.6%)** |
+| **Tingkat Bebas Rugi (Win + BE)**| **77.4%** |
+| **Profit Factor (PF)** | **5.87** |
+| **Ekspektansi per Trade** | **+Rp 48.516 / trade** |
+| **Max Consecutive Losses** | **4x kerugian beruntun** |
+| **Max Drawdown Terburuk** | **Rp 209.889 (42.0% dari modal awal Rp 500rb)** |
+| **Saldo Akhir (Final Balance)** | **Rp 41.010.783** |
+| **Profit Bersih (Net Profit)** | **+Rp 40.510.783 (+8.102,2% ROI)** |
+| **Konsistensi Bulanan** | **9 dari 9 Bulan Profit Positif** (Jan +4.6M, Feb +4.0M, Mar +8.6M, Apr +3.6M, Mei +4.9M, Jun +5.5M, Jul +4.5M, Agu +3.8M, Sep +0.88M) |
+| **Kontribusi per Pair** | Gold: +Rp 23.25M (PF 6.24) \| EUR/USD: +Rp 8.57M (PF 4.90) \| GBP/USD: +Rp 8.68M (PF 6.14) |
+| **Laporan Visual Interaktif** | [`ytd_2026_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/ytd_2026_backtest_report.html) |
+
+---
+
+## 📝 6. Sistem Audit Logging & Monitoring Real-Time
+
+Bot dilengkapi sistem pencatatan persisten berlapis untuk debugging dan monitoring jangka panjang:
+
+1. **Log Aktivitas Persisten (`/config/bot_activity.log`):**
+   * Lokasi di Host: `/home/cuker/mt5_storage/mt5_config/bot_activity.log`
+   * Format: `[YYYY-MM-DD HH:MM:SS] [LEVEL] <Pesan>` dengan immediate auto-flush ke disk.
+   * Auto-rotation otomatis saat ukuran file melebihi 20 MB.
+2. **Jurnal Transaksi CSV (`/config/bot_trades.csv`):**
+   * Lokasi di Host: `/home/cuker/mt5_storage/mt5_config/bot_trades.csv`
+   * Mencatat setiap lifecycle order: `OPEN`, `AUTO_BE`, `CLOSE`, `REJECT`, dan `CIRCUIT_BREAKER`.
+3. **Pelacakan Penutupan Deal & Push Notification:**
+   * Mendeteksi deal penutupan secara real-time via `mt5.history_deals_get()`.
+   * Otomatis mengklasifikasikan hasil (`🎯 TP`, `🛑 SL`, `🛡️ BE`) dan memicu Web Push Notification ke iPhone.
+4. **Heartbeat Bersih (Bebas Binary Blob Systemd):**
+   * Menghilangkan karakter `\r` stdout agar tidak terbaca sebagai `[blob data]` oleh `journald`.
+   * Heartbeat status bersih dicatat setiap 60 detik (Saldo, Equity, Posisi Aktif, Status Scan Pair).
+   * Perubahan status sinyal dicatat seketika saat terdeteksi.
+5. **Telemetri RAM Dashboard (Port 3000):**
+   * Streaming RAM tmpfs pada `/ram_data/bot_status.json` tetap berjalan setiap 4 detik untuk Web Dashboard ultra-cepat tanpa disk wear.
 

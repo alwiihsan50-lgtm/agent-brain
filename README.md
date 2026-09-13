@@ -37,7 +37,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Implementasi Strategi Pure SMC (5M, Flat Risk Rp 50.000, R:R 1:2.0) & MT5 MCP Server untuk Antigravity (agy)**
+- [x] **Pure SMC Multi-Pair Bot (v4.1-HYBRID-SMC): Gold R:R 1:3, FX 1:2, Full YTD 2026 Backtest (+Rp 40.5M, PF 5.87, 835 Trades), Persistent Logging & Trade Audit Ledger**
 
 - [x] **Pembuatan Hub & Shortcut Desktop Provider AI Video & Image Gratis**
 
@@ -91,7 +91,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-13 22:51 WIB
+**Last Updated At:** 2026-09-14 02:25 WIB
 
 
 
