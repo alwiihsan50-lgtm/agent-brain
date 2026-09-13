@@ -37,13 +37,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Integrasi tautan klik untuk membuka halaman asal torrent di browser (source web page & direct .torrent link)**
+- [x] **Integrasi tautan klik untuk membuka halaman asal torrent di browser (source web page & direct .torrent link)**
 
-- [ ] **Penyempurnaan Web App: Tampilan sinopsis lengkap, deskripsi teks film, dan rincian spesifikasi teknis torrent (audio, codec, durasi, trailer)**
+- [x] **Penyempurnaan Web App: Tampilan sinopsis lengkap, deskripsi teks film, dan rincian spesifikasi teknis torrent (audio, codec, durasi, trailer)**
 
-- [ ] **Pembuatan Web App Mobile-Friendly (Port 6888) untuk cari-film & manajemen unduhan PC Aria2 via Tailscale**
+- [x] **Pembuatan Web App Mobile-Friendly (Port 6888) untuk cari-film & manajemen unduhan PC Aria2 via Tailscale**
 
-- [ ] **Pembuatan CLI tool pencari torrent film (cari-film & pc-torrent search) otomatis terintegrasi Aria2 RPC Port 6801 (Drive Data)**
+- [x] **Pembuatan CLI tool pencari torrent film (cari-film & pc-torrent search) otomatis terintegrasi Aria2 RPC Port 6801 (Drive Data)**
 
 - [x] **Implementasi 5 Pilar Peningkatan Workflow Agent Brain: Strict User Confirmation, Ready for Review Protocol, brain CLI Helper, Live Healthcheck, dan ACTIVE_SESSION.md.**
 - [x] **Setup & integrasi Headroom (v0.37.0) context compression di 9Router (Port 8787 & 20128).**
@@ -81,7 +81,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-12 20:23 WIB
+**Last Updated At:** 2026-09-13 09:43 WIB
 
 
 
