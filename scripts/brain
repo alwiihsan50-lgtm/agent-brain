@@ -21,6 +21,7 @@ PORTS_CONFIG = [
     {"name": "AI Photo Eraser (Web)", "host": "127.0.0.1", "port": 3005, "desc": "Port 3005"},
     {"name": "AI Photo Eraser (API)", "host": "127.0.0.1", "port": 3003, "desc": "Port 3003"},
     {"name": "9Router AI Gateway", "host": "127.0.0.1", "port": 20128, "desc": "Port 20128"},
+    {"name": "AGY OpenAI Bridge", "host": "127.0.0.1", "port": 5050, "desc": "Port 5050"},
     {"name": "Headroom Compressor", "host": "127.0.0.1", "port": 8787, "desc": "Port 8787"},
     {"name": "MoneyPrinter API", "host": "127.0.0.1", "port": 8095, "desc": "Port 8095"},
     {"name": "MoneyPrinter WebUI", "host": "127.0.0.1", "port": 8501, "desc": "Port 8501"},
