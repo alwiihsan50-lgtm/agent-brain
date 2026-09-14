@@ -223,3 +223,20 @@ Bot dilengkapi sistem pencatatan persisten berlapis untuk debugging dan monitori
 5. **Telemetri RAM Dashboard (Port 3000):**
    * Streaming RAM tmpfs pada `/ram_data/bot_status.json` tetap berjalan setiap 4 detik untuk Web Dashboard ultra-cepat tanpa disk wear.
 
+---
+
+## 🖥️ 7. Analisis Spesifikasi Cloud / VPS untuk Deployment Mandiri
+
+Berdasarkan audit telemetri riil container `exness-mt5` (Wine 64-bit, MetaTrader 5, Python bot runtime, dan KasmVNC Web GUI):
+
+| Komponen | Konsumsi Riil Sistem | Kebutuhan Minimum VPS | Analisis Paket Rendah (1 vCPU / 1 GB RAM / 10 GB SSD) |
+| :--- | :--- | :--- | :--- |
+| **Penyimpanan (SSD)** | **~13 – 15 GB** (OS ~3GB, Docker Image `mt5:latest` ~6.7GB, `/config` volume ~3.9GB) | **20 GB – 25 GB SSD** | ❌ **10 GB SSD Pasti Gagal (`Disk Full`)** saat ekstraksi layer docker atau pull image. |
+| **Memori (RAM)** | **~840 MB Idle** (`exness-mt5` ~637 MB + OS ~200 MB) | **2 GB RAM** (+ Swap 2 GB) | ⚠️ **1 GB RAM Sangat Berisiko OOM Killer** saat lonjakan tick pasar padat atau pembukaan Web VNC. |
+| **Processor (CPU)** | **~5% – 10%** saat scanning M5 rutin | **1 Core – 2 Cores** | 🟡 **1 vCPU Cukup**, tetapi akan spike 100% saat initial chart sync / Wine boot. |
+
+**Rekomendasi Paket VPS Ekonomis Terbaik:**
+- **Spesifikasi Standar:** 1–2 vCPU, 2 GB RAM (+ 2 GB Swap File), 25–30 GB NVMe/SSD.
+- **Provider Acuan (~$3 – $4/bulan):** Hetzner Cloud (CX22), Contabo (Cloud VPS 1), atau DigitalOcean / Vultr.
+
+

@@ -14,6 +14,7 @@ Dokumentasi standarisasi lingkungan terminal, alat produktivitas, dan konfiguras
 - **Eza (`/usr/bin/eza`):** Pengganti modern `ls` dengan ikon dan git integration (`ls`, `ll`, `lt`, `tree`).
 - **Bat (`/usr/bin/batcat` -> `~/.local/bin/bat`):** Pengganti `cat` dengan syntax highlighting.
 - **Graphify CLI (`~/.local/bin/graphify`):** Knowledge graph & AST engine (`gf`, `gfu`, `gfq`, `gfp`, `gfe`, `gf-status`, `gf-viz`).
+- **VLC Media Player (`/usr/bin/vlc`):** Pemutar multimedia universal (`vlc 3.0.20 Vetinari`) terpasang via native apt.
 
 ---
 
