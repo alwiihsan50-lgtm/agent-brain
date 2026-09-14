@@ -80,17 +80,20 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 
 ### D. Bot Python Logic Akun 2 - M1 Timeframe (`mt5_config_prop1/bot.py`)
 - Terletak di `/home/cuker/mt5_storage/mt5_config_prop1/bot.py` (tersinkronisasi ke `/config/bot.py` container `propfirm-mt5`).
-- **Pure SMC M1 Scalper Engine (Eksperimen Timeframe 1-Menit):**
-  - **Timeframe Eksekusi:** M1 (1-Menit) untuk fractal swings, BOS, unmitigated Bullish Order Block, dan discount zone.
-  - **Higher Timeframe Bias:** M15 EMA-50 (15x rasio terhadap M1).
-  - **Kalibrasi Jarak SL M1:**
-    - `XAUUSDm`: 0.80 - 2.50 ($0.80 - $2.50) | Target R:R 1:3.0 (+Rp 150rb).
-    - `EURUSDm`: 1.5 - 8.0 pips (0.00015 - 0.00080) | Target R:R 1:2.0 (+Rp 100rb).
-    - `GBPUSDm`: 2.0 - 10.0 pips (0.00020 - 0.00100) | Target R:R 1:2.0 (+Rp 100rb).
-  - **Auto Break-Even (BE @ +1.0R):** Geser SL otomatis ke Entry + Spread saat profit mencapai 1.0R.
-  - **Flat Risk Sizing:** Tetap flat Rp 50.000 per posisi (lot dihitung dinamis).
+- **Pure SMC M1 Scalper Engine (Khusus XAUUSDm / Gold Only - Dual-Direction v4.3-M1-GOLD-DUAL):**
+  - **Pair:** Khusus `XAUUSDm` (Gold Only).
+  - **Arah Trading:** Dual-Direction (BUY & SELL) dengan filter bias HTF M15 EMA-50.
+  - **Timeframe Eksekusi:** M1 (1-Menit) untuk fractal swings, BOS, unmitigated Order Blocks (Bullish OB & Bearish OB).
+  - **Higher Timeframe Bias:** M15 EMA-50 (15x rasio terhadap M1) untuk menentukan arah Bullish vs Bearish.
+  - **Kalibrasi Jarak SL M1 Gold:** Min SL $0.80, Max SL $2.50.
+  - **Target Rasio R:R:** 1:3.0 (+Rp 150.000 target profit vs Rp 50.000 max risk).
+  - **Spread Buffer Take Profit:**
+    - BUY TP: `Ask + (SL_dist * 3.0) - (Spread * 0.5)`
+    - SELL TP: `Bid - (SL_dist * 3.0) + Spread` (mengatasi Ask spread gap).
+  - **Auto Break-Even (BE @ +1.0R):** Geser SL otomatis ke Entry +/- Spread Buffer saat floating profit mencapai +1.0R (+Rp 50.000).
+  - **Flat Risk Sizing:** Tetap flat Rp 50.000 per posisi (lot dihitung dinamis via `order_calc_profit`).
   - **Service Systemd:** `mt5-trading-bot-prop1.service` (Runner: `/home/cuker/start-bot-prop1.sh`).
-  - **Audit Logging:** `/config/bot_activity_m1.log` & `/config/bot_trades_m1.csv`.
+  - **Audit Logging & Status:** `/config/bot_activity_m1.log`, `/config/bot_trades_m1.csv`, dan `/ram_data/bot_status_prop1.json`.
 
 ### E. Cloudflare Worker Push Backend (`cf-push-backend`)
 - **Lokasi Source:** `/home/mentari/mt5_storage/cf-push-backend/`
