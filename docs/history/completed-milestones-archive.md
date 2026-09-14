@@ -8,6 +8,12 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 - [x] **Implementasi 5 Pilar Peningkatan Workflow Agent Brain:** Strict User Confirmation, Ready for Review Protocol, brain CLI Helper, Live Healthcheck, dan ACTIVE_SESSION.md.
 - [x] **Setup & Integrasi Headroom (v0.37.0):** Context compression di 9Router (Port 8787 & 20128).
+- [x] **Decommission & hapus CasaOS, Catat-Duit-Voice, SmartHome, SpecForge PRD Generator, dan Timemark Photo Adjustment dari folder lokal, GitHub, dan dokumentasi workspace.**
+- [x] **Membangun Local OpenAI Bridge (Port 5050) bertenaga agy -p dan integrasi provider ke 9Router (Port 20128).**
+- [x] **Integrasi tautan klik untuk membuka halaman asal torrent di browser (source web page & direct .torrent link).**
+- [x] **Penyempurnaan Web App: Tampilan sinopsis lengkap, deskripsi teks film, dan rincian spesifikasi teknis torrent (audio, codec, durasi, trailer).**
+- [x] **Pembuatan Web App Mobile-Friendly (Port 6888) untuk cari-film & manajemen unduhan PC Aria2 via Tailscale.**
+- [x] **Pembuatan CLI tool pencari torrent film (cari-film & pc-torrent search) otomatis terintegrasi Aria2 RPC Port 6801 (Drive Data).**
 
 ## 📅 Selesai Per 15 Agustus 2026
 

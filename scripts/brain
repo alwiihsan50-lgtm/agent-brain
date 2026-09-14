@@ -15,7 +15,7 @@ ARCHIVE_PATH = os.path.join(BRAIN_DIR, "docs/history/completed-milestones-archiv
 PORTS_CONFIG = [
     {"name": "STB Remote Hub", "host": "127.0.0.1", "port": 8080, "desc": "Port 8080 (Hub)"},
     {"name": "MT5 Acc 1 (SMC)", "host": "127.0.0.1", "port": 3000, "desc": "Port 3000"},
-    {"name": "MT5 Acc 2 (Martingale)", "host": "127.0.0.1", "port": 3002, "desc": "Port 3002"},
+    {"name": "MT5 Acc 2 (M1 Gold)", "host": "127.0.0.1", "port": 3006, "desc": "Port 3006"},
     {"name": "TailShare (Original)", "host": "127.0.0.1", "port": 40506, "desc": "Port 40506"},
     {"name": "TailShare (Clean)", "host": "127.0.0.1", "port": 40507, "desc": "Port 40507"},
     {"name": "AI Photo Eraser (Web)", "host": "127.0.0.1", "port": 3005, "desc": "Port 3005"},

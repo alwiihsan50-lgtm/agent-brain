@@ -37,23 +37,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [x] **Konfigurasi Akun 2 (propfirm-mt5 / Login: 463880423) Khusus Pair XAUUSDm Timeframe M1 Dual-Direction (v4.3-M1-GOLD-DUAL) dengan Kalibrasi TP Spread Buffer & R:R 1:3**
+
 - [x] **Upgrade Pure SMC Bot MT5 ke Versi Dual-Direction (v4.2-DUAL-SMC: BUY & SELL dua arah, Full YTD Backtest Net +Rp 87.7M PF 7.06, Auto BE, dan live deployment di Akun 1 & 2)**
 
 - [x] **Pure SMC Multi-Pair Bot (v4.1-HYBRID-SMC): Gold R:R 1:3, FX 1:2, Full YTD 2026 Backtest (+Rp 40.5M, PF 5.87, 835 Trades), Persistent Logging & Trade Audit Ledger**
 
 - [x] **Pembuatan Hub & Shortcut Desktop Provider AI Video & Image Gratis**
-
-- [x] **Decommission & hapus CasaOS, Catat-Duit-Voice, SmartHome, SpecForge PRD Generator, dan Timemark Photo Adjustment dari folder lokal, GitHub, dan dokumentasi workspace**
-
-- [x] **Membangun Local OpenAI Bridge (Port 5050) bertenaga agy -p dan integrasi provider ke 9Router (Port 20128)**
-
-- [x] **Integrasi tautan klik untuk membuka halaman asal torrent di browser (source web page & direct .torrent link)**
-
-- [x] **Penyempurnaan Web App: Tampilan sinopsis lengkap, deskripsi teks film, dan rincian spesifikasi teknis torrent (audio, codec, durasi, trailer)**
-
-- [x] **Pembuatan Web App Mobile-Friendly (Port 6888) untuk cari-film & manajemen unduhan PC Aria2 via Tailscale**
-
-- [x] **Pembuatan CLI tool pencari torrent film (cari-film & pc-torrent search) otomatis terintegrasi Aria2 RPC Port 6801 (Drive Data)**
 
 - 📂 *Riwayat lengkap seluruh milestone terdahulu telah diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -91,7 +81,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-14 18:03 WIB
+**Last Updated At:** 2026-09-14 18:08 WIB
 
 
 
