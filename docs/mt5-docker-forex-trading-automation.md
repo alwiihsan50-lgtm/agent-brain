@@ -148,13 +148,16 @@ npx wrangler deploy
 
 ---
 
-## 🎯 4. Strategi Pure SMC Multi-Pair Dual-Direction (v4.2-DUAL-SMC) & Integrasi Antigravity MCP
+## 🎯 4. Strategi Pure SMC Multi-Pair Dual-Direction (v4.3-DUAL-SPREAD-BUFFER) & Integrasi Antigravity MCP
 
 ### A. Strategi Pure SMC Multi-Pair Dual-Direction (BUY & SELL)
 * **Timeframe:** 5-Menit (M5) untuk identifikasi *Order Block (OB)* & *Break of Structure (BOS)* dua arah + H1 Trend Filter (EMA-50).
 * **Mode Operasional:**
   - **Sinyal BUY:** Terpicu saat harga berada di atas H1 EMA-50 (BULLISH) dan memitigasi *Bullish Order Block* (Demand) setelah terjadi *Bullish BOS*.
   - **Sinyal SELL:** Terpicu saat harga berada di bawah H1 EMA-50 (BEARISH) dan memitigasi *Bearish Order Block* (Supply) setelah terjadi *Bearish BOS*.
+* **Spread Buffer Calibration pada Take Profit:**
+  - **SELL TP:** `Entry - (SL_dist * RR) + Spread` ➔ Mengangkat titik TP sebesar 1 spread agar harga Ask langsung menyentuh TP saat jarum candlestick (Bid) mencium target.
+  - **BUY TP:** `Entry + (SL_dist * RR) - (Spread * 0.5)` ➔ Menurunkan sedikit target TP agar harga Bid mudah melibas TP tanpa terganjal spread.
 * **Instrumen Aktif:** `XAUUSDm` (Gold), `EURUSDm`, dan `GBPUSDm` (Exness Raw/Standard).
 * **Flat Risk Sizing:** Risiko per trade dipatok flat **Rp 50.000** (lot dihitung dinamis via native broker `mt5.order_calc_profit`).
 * **Hybrid Risk-to-Reward (R:R):**
