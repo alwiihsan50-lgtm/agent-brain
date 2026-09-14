@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Upgrade Pure SMC Bot MT5 ke Versi Dual-Direction (v4.2-DUAL-SMC: BUY & SELL dua arah, Full YTD Backtest Net +Rp 87.7M PF 7.06, Auto BE, dan live deployment di Akun 1 & 2)**
+
 - [x] **Pure SMC Multi-Pair Bot (v4.1-HYBRID-SMC): Gold R:R 1:3, FX 1:2, Full YTD 2026 Backtest (+Rp 40.5M, PF 5.87, 835 Trades), Persistent Logging & Trade Audit Ledger**
 
 - [x] **Pembuatan Hub & Shortcut Desktop Provider AI Video & Image Gratis**
@@ -91,7 +93,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-14 10:26 WIB
+**Last Updated At:** 2026-09-14 14:49 WIB
 
 
 

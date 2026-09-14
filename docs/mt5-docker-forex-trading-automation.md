@@ -148,10 +148,13 @@ npx wrangler deploy
 
 ---
 
-## 🎯 4. Strategi Pure SMC Multi-Pair (v4.1-HYBRID-SMC) & Integrasi Antigravity MCP
+## 🎯 4. Strategi Pure SMC Multi-Pair Dual-Direction (v4.2-DUAL-SMC) & Integrasi Antigravity MCP
 
-### A. Strategi Pure SMC Multi-Pair (Non-Martingale)
-* **Timeframe:** 5-Menit (M5) untuk identifikasi *Bullish Order Block (OB)* & *Break of Structure (BOS)* + H1 Trend Filter (EMA-50).
+### A. Strategi Pure SMC Multi-Pair Dual-Direction (BUY & SELL)
+* **Timeframe:** 5-Menit (M5) untuk identifikasi *Order Block (OB)* & *Break of Structure (BOS)* dua arah + H1 Trend Filter (EMA-50).
+* **Mode Operasional:**
+  - **Sinyal BUY:** Terpicu saat harga berada di atas H1 EMA-50 (BULLISH) dan memitigasi *Bullish Order Block* (Demand) setelah terjadi *Bullish BOS*.
+  - **Sinyal SELL:** Terpicu saat harga berada di bawah H1 EMA-50 (BEARISH) dan memitigasi *Bearish Order Block* (Supply) setelah terjadi *Bearish BOS*.
 * **Instrumen Aktif:** `XAUUSDm` (Gold), `EURUSDm`, dan `GBPUSDm` (Exness Raw/Standard).
 * **Flat Risk Sizing:** Risiko per trade dipatok flat **Rp 50.000** (lot dihitung dinamis via native broker `mt5.order_calc_profit`).
 * **Hybrid Risk-to-Reward (R:R):**
@@ -161,7 +164,7 @@ npx wrangler deploy
   - `XAUUSDm`: 1.50 – 3.50 ($1.50 - $3.50).
   - `EURUSDm`: 3 – 12 pips (0.0003 – 0.0012).
   - `GBPUSDm`: 4 – 15 pips (0.0004 – 0.0015).
-* **Auto Break-Even (BE):** Begitu profit menyentuh +1.0R (+Rp 50.000), SL digeser otomatis ke titik impas (Entry + Spread Buffer) untuk mengunci posisi bebas risiko.
+* **Auto Break-Even (BE @ +1.0R):** Begitu profit menyentuh +1.0R (+Rp 50.000), SL digeser otomatis ke titik impas (Entry +/- Spread Buffer) untuk mengunci posisi bebas risiko pada BUY maupun SELL.
 * **Auto News & Spread Filter:** Membekukan entri saat spread melebar atau pada jendela rilis berita US (12:25-13:15 UTC & 14:00-14:45 UTC) dan Market Rollover (20:50-22:10 UTC).
 
 ### B. MT5 MCP Server untuk Antigravity (`agy`)
@@ -171,33 +174,30 @@ npx wrangler deploy
 * **Tools Tersedia:**
   - `mt5_get_account_status`: Saldo, equity, margin, floating PnL real-time.
   - `mt5_get_open_positions`: Melihat tiket posisi aktif, lot, SL, TP, profit berjalan.
-  - `mt5_get_smc_analysis`: Meminta AI menganalisis kondisi pasar M5 saat ini (OB, BOS, Discount, Sinyal).
+  - `mt5_get_smc_analysis`: Meminta AI menganalisis kondisi pasar M5 saat ini (OB, BOS, Trend H1, Sinyal).
   - `mt5_get_trade_history`: Riwayat transaksi tertutup dan statistik win rate.
   - `mt5_emergency_close_all`: Perintah darurat untuk menutup seluruh posisi trading terbuka sekaligus.
 
 ---
 
-## 📈 5. Hasil Validasi Backtesting Penuh YTD 2026 (Januari – September 2026)
+## 📈 5. Hasil Validasi Backtesting Penuh YTD 2026: BUY-ONLY vs DUAL-DIRECTION (BUY & SELL)
 
-Pengujian komprehensif dijalankan menggunakan **153.536 bar data M5 riil Exness** dari 1 Januari s/d 11 September 2026 dengan perlakuan spread dinamis, slippage, dan pembatasan volume lot:
+Pengujian komprehensif dijalankan menggunakan **153.536 bar data M5 riil Exness** dari 1 Januari s/d 11 September 2026:
 
-| Metrik Kinerja | Hasil Portofolio Gabungan |
-| :--- | :--- |
-| **Periode Data** | 1 Januari 2026 – 11 September 2026 (~8,5 Bulan) |
-| **Total Trade Dieksekusi** | **835 Trade** |
-| **Menang Penuh (Win / TP)** | **460 Trade (55.1%)** |
-| **Impas (Break-Even @ 1R)** | **186 Trade (22.3%)** |
-| **Kalah (Loss / SL)** | **189 Trade (22.6%)** |
-| **Tingkat Bebas Rugi (Win + BE)**| **77.4%** |
-| **Profit Factor (PF)** | **5.87** |
-| **Ekspektansi per Trade** | **+Rp 48.516 / trade** |
-| **Max Consecutive Losses** | **4x kerugian beruntun** |
-| **Max Drawdown Terburuk** | **Rp 209.889 (42.0% dari modal awal Rp 500rb)** |
-| **Saldo Akhir (Final Balance)** | **Rp 41.010.783** |
-| **Profit Bersih (Net Profit)** | **+Rp 40.510.783 (+8.102,2% ROI)** |
-| **Konsistensi Bulanan** | **9 dari 9 Bulan Profit Positif** (Jan +4.6M, Feb +4.0M, Mar +8.6M, Apr +3.6M, Mei +4.9M, Jun +5.5M, Jul +4.5M, Agu +3.8M, Sep +0.88M) |
-| **Kontribusi per Pair** | Gold: +Rp 23.25M (PF 6.24) \| EUR/USD: +Rp 8.57M (PF 4.90) \| GBP/USD: +Rp 8.68M (PF 6.14) |
-| **Laporan Visual Interaktif** | [`ytd_2026_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/ytd_2026_backtest_report.html) |
+| Metrik Kinerja | 🟡 BUY-ONLY (Versi Lama) | 🟢 DUAL-DIRECTION (BUY & SELL v4.2) |
+| :--- | :--- | :--- |
+| **Periode Data** | 1 Januari 2026 – 11 September 2026 | 1 Januari 2026 – 11 September 2026 |
+| **Total Trade Dieksekusi** | 835 Trade | **1.708 Trade** |
+| **Menang Penuh (Win / TP)** | 460 Trade (55.1%) | **963 Trade (56.4%)** |
+| **Impas (Break-Even @ 1R)** | 186 Trade (22.3%) | **417 Trade (24.4%)** |
+| **Kalah (Loss / SL)** | 189 Trade (22.6%) | **328 Trade (19.2%)** |
+| **Tingkat Bebas Rugi (Win + BE)**| 77.4% | **80.8%** |
+| **Profit Factor (PF)** | 5.87 | **7.06** |
+| **Profit dari Posisi BUY** | +Rp 40.510.783 | **+Rp 40.510.783** |
+| **Profit dari Posisi SELL** | Rp 0 | **+Rp 47.191.862** |
+| **Profit Bersih (Net Profit)** | **+Rp 40.510.783 (+8.102% ROI)** | **+Rp 87.702.645 (+17.540% ROI)** |
+| **Kontribusi per Pair (Dual)** | - | Gold: +Rp 50.4M (PF 7.37) \| EUR/USD: +Rp 18.9M (PF 6.26) \| GBP/USD: +Rp 18.3M (PF 7.55) |
+| **Laporan Visual Interaktif** | [`ytd_2026_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/ytd_2026_backtest_report.html) | [`dual_direction_smc_report.html`](file:///media/cuker/Data/Projects/trading-backtest/dual_direction_smc_report.html) |
 
 ---
 
