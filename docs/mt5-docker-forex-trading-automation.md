@@ -55,43 +55,42 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 - **In-Memory RAM Architecture:**
   - **Shared RAM Volume (`ram_buffer`):** Driver `tmpfs` berukuran 64 MB di-mount ke `/ram_data` di container MT5.
   - **Container tmpfs Mounts:** `/tmp` (512M) dan `/dev/shm` (512M) berjalan di RAM.
-  - `exness-mt5` (Akun Utama: `434073017` Exness, KasmVNC Port `3000` / `3001` - **AKTIF / RUNNING**)
-  - `propfirm-mt5` (Akun ke-2: `463880423` Exness, KasmVNC Port `3006` / `3007` - **NONAKTIF / STOPPED**)
+  - `exness-mt5` (Akun Utama: `434073017` Exness, KasmVNC Port `3000` / `3001` - **AKTIF / RUNNING: Pure SMC M5 v4.1-HYBRID-SMC**)
+  - `propfirm-mt5` (Akun ke-2: `463880423` Exness, KasmVNC Port `3006` / `3007` - **AKTIF / RUNNING: Pure SMC M1 Scalper Experiment**)
 - **Volume Persisten:** `./mt5_config` -> `/config` (Akun 1) dan `./mt5_config_prop1` -> `/config` (Akun 2)
 - **Environment:** `PUID=1000`, `PGID=1000`, `TZ=Asia/Jakarta`
 - **Web UI GUI MT5:**
-  - Akun 1: `https://mt5.abbas.my.id` / `http://localhost:3000`
-  - Akun 2: `http://localhost:3002` *(HTTPS: `3003`)*
+  - Akun 1 (M5): `https://mt5.abbas.my.id` / `http://localhost:3000`
+  - Akun 2 (M1): `http://localhost:3006`
 
 ### B. Lingkungan Python di dalam Wine
 - **Path Python:** `C:\Program Files (x86)\Python39-32\python.exe` (Wine environment)
 - **Modul Kunci:** `MetaTrader5` (v5.0.36), `numpy` (versi `1.26.4` - wajib `numpy<2`)
 - **Catatan Penting:** Library `MetaTrader5` merupakan modul C-Extension Windows, sehingga script Python **harus dieksekusi di dalam Wine** container yang sama dengan terminal MT5:
   ```bash
-  docker exec --user abc exness-mt5 wine python -u /config/bot.py
+  docker exec --user abc exness-mt5 wine python -u /config/bot.py        # Akun 1
+  docker exec --user abc propfirm-mt5 wine python -u /config/bot.py      # Akun 2
   ```
 
-### C. Bot Python Logic (`mt5_config/bot.py`)
-- Terletak di `/home/cuker/mt5_storage/mt5_config/bot.py` (tersinkronisasi langsung ke `/config/bot.py` dalam container).
-- Inisialisasi koneksi IPC ke terminal MT5 (`mt5.initialize()`).
-- Mengambil info akun (Login ID, Saldo, Currency, Equity, Free Margin).
-- **Smart Money Concepts (SMC) & Multi-Pair Engine:**
-  - **Market Structure Mapping:** 5-Bar Fractal Swings pada M15 & H1, mendeteksi Break of Structure (BOS) dan Change of Character (CHoCH).
-  - **Liquidity Sweep Detection (BSL & SSL):** Mengidentifikasi manipulasi likuiditas institusional (wick rejection di atas swing high / di bawah swing low).
-  - **Institutional Order Block (OB) & Fair Value Gap (FVG):** Memetakan area supply & demand terdekat serta imbalance harga.
-  - **Equilibrium 50% Filter:** Mengharuskan BUY hanya pada zona Discount (< 50% swing range) dan SELL hanya pada zona Premium (> 50% swing range).
-  - **Strict Risk Controls:** Wajib Stop Loss di luar batas Order Block / Swing Rejection, Risk FLAT Rp 50.000 per trade, batas SL terukur per instrumen (`XAUUSDm`: 1.50 - 3.50; `EURUSDm`: 3 - 12 pips; `GBPUSDm`: 4 - 15 pips untuk mencegah kerugian melebihi ~Rp 50rb-60rb pada minimal lot 0.01), konfirmasi Break of Structure (BOS menembus Swing High) sebelum mitigasi OB, Hybrid Risk-to-Reward (`XAUUSDm`: 1:3.0 [+Rp 150rb]; `EURUSDm` & `GBPUSDm`: 1:2.0 [+Rp 100rb]), Auto Break-Even (BE) otomatis saat trade mencapai +1.0R (Risk-Free), hard equity drawdown cap 25%, dan max 1 order per pair (No Averaging / Single Order).
-- **Proteksi Anti-Spam Notifikasi:** Fungsi `send_push_notification(title, message, cooldown_seconds=30)` dilengkapi deduplication & 30-second cooldown timer untuk mencegah loop pesan ke Cloudflare Workers:
-  `https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification`
+### C. Bot Python Logic Akun 1 - M5 Timeframe (`mt5_config/bot.py`)
+- Terletak di `/home/cuker/mt5_storage/mt5_config/bot.py` (tersinkronisasi langsung ke `/config/bot.py` container `exness-mt5`).
+- Multi-Pair SMC M5 Engine: XAUUSDm (Gold 1:3.0), EURUSDm (1:2.0), GBPUSDm (1:2.0).
+- Auto Break-Even @ +1.0R, H1 EMA-50 Trend Bias, Flat Risk Rp 50.000.
+- Service: `mt5-trading-bot.service` (Runner: `/home/cuker/start-bot.sh`).
 
-### D. Bot Martingale Logic Akun 2 (`mt5_config_prop1/bot.py`)
+### D. Bot Python Logic Akun 2 - M1 Timeframe (`mt5_config_prop1/bot.py`)
 - Terletak di `/home/cuker/mt5_storage/mt5_config_prop1/bot.py` (tersinkronisasi ke `/config/bot.py` container `propfirm-mt5`).
-- **Adaptive Trend Martingale Engine:**
-  - **Filter Tren & Entry Trigger:** RSI(14) M15 + EMA(50/200) Pullback.
-  - **Averaging Step:** ATR(14) M15 * 1.2x (menyesuaikan volatilitas).
-  - **Multiplier:** Progressive 1.5x (Level 1: 0.01, L2: 0.01, L3: 0.02, L4: 0.03, L5: 0.05, L6: 0.08) — jauh lebih aman dari 2.0x konvensional.
-  - **Basket Take Profit:** Seluruh posisi dalam keranjang ditutup simultan saat Total Net Profit mencapai target (Rp 20.000 IDR / dinamis).
-  - **Circuit Breaker:** Hard Equity Drawdown Cap 25% untuk mengamankan sisa modal.
+- **Pure SMC M1 Scalper Engine (Eksperimen Timeframe 1-Menit):**
+  - **Timeframe Eksekusi:** M1 (1-Menit) untuk fractal swings, BOS, unmitigated Bullish Order Block, dan discount zone.
+  - **Higher Timeframe Bias:** M15 EMA-50 (15x rasio terhadap M1).
+  - **Kalibrasi Jarak SL M1:**
+    - `XAUUSDm`: 0.80 - 2.50 ($0.80 - $2.50) | Target R:R 1:3.0 (+Rp 150rb).
+    - `EURUSDm`: 1.5 - 8.0 pips (0.00015 - 0.00080) | Target R:R 1:2.0 (+Rp 100rb).
+    - `GBPUSDm`: 2.0 - 10.0 pips (0.00020 - 0.00100) | Target R:R 1:2.0 (+Rp 100rb).
+  - **Auto Break-Even (BE @ +1.0R):** Geser SL otomatis ke Entry + Spread saat profit mencapai 1.0R.
+  - **Flat Risk Sizing:** Tetap flat Rp 50.000 per posisi (lot dihitung dinamis).
+  - **Service Systemd:** `mt5-trading-bot-prop1.service` (Runner: `/home/cuker/start-bot-prop1.sh`).
+  - **Audit Logging:** `/config/bot_activity_m1.log` & `/config/bot_trades_m1.csv`.
 
 ### E. Cloudflare Worker Push Backend (`cf-push-backend`)
 - **Lokasi Source:** `/home/mentari/mt5_storage/cf-push-backend/`
