@@ -4,6 +4,11 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 14 September 2026
+
+- [x] **Implementasi 5 Pilar Peningkatan Workflow Agent Brain:** Strict User Confirmation, Ready for Review Protocol, brain CLI Helper, Live Healthcheck, dan ACTIVE_SESSION.md.
+- [x] **Setup & Integrasi Headroom (v0.37.0):** Context compression di 9Router (Port 8787 & 20128).
+
 ## 📅 Selesai Per 15 Agustus 2026
 
 - [x] **Inisialisasi & Fondasi Shared Memory:** Inisialisasi repositori `agent-brain` dan SOP `AGENTS.md` untuk sinkronisasi antar AI Agent.

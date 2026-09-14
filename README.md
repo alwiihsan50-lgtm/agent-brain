@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Running | Dual-instance trading bots: Pure SMC M5 Bot (Akun 1: 434073017) + Pure SMC M1 Scalper Experiment (Akun 2: 463880423). |
+| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Running | Dual-instance trading bots v4.2-DUAL-SMC: BUY & SELL dua arah, Flat Risk Rp 50rb, R:R Gold 1:3, FX 1:2. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -37,7 +37,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Upgrade Pure SMC Bot MT5 ke Versi Dual-Direction (v4.2-DUAL-SMC: BUY & SELL dua arah, Full YTD Backtest Net +Rp 87.7M PF 7.06, Auto BE, dan live deployment di Akun 1 & 2)**
+- [x] **Upgrade Pure SMC Bot MT5 ke Versi Dual-Direction (v4.2-DUAL-SMC: BUY & SELL dua arah, Full YTD Backtest Net +Rp 87.7M PF 7.06, Auto BE, dan live deployment di Akun 1 & 2)**
 
 - [x] **Pure SMC Multi-Pair Bot (v4.1-HYBRID-SMC): Gold R:R 1:3, FX 1:2, Full YTD 2026 Backtest (+Rp 40.5M, PF 5.87, 835 Trades), Persistent Logging & Trade Audit Ledger**
 
@@ -55,8 +55,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [x] **Pembuatan CLI tool pencari torrent film (cari-film & pc-torrent search) otomatis terintegrasi Aria2 RPC Port 6801 (Drive Data)**
 
-- [x] **Implementasi 5 Pilar Peningkatan Workflow Agent Brain: Strict User Confirmation, Ready for Review Protocol, brain CLI Helper, Live Healthcheck, dan ACTIVE_SESSION.md.**
-- [x] **Setup & integrasi Headroom (v0.37.0) context compression di 9Router (Port 8787 & 20128).**
 - 📂 *Riwayat lengkap seluruh milestone terdahulu telah diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -93,7 +91,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-14 14:49 WIB
+**Last Updated At:** 2026-09-14 14:54 WIB
 
 
 
