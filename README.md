@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 Live / ⚪ Acc 2 Off | Acc 1 M5 Multi-Pair aktif (v4.4 Optimized Multi-OB Lookback, R:R Gold 1:3, FX 1:2). Acc 2 dinonaktifkan sementara. |
+| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 Live / ⚪ Acc 2 Off | Acc 1 M5 Solo Gold aktif (v4.5 Solo Gold Optimized, Touch Buffer 0.5x Spread, R:R 1:3). Acc 2 dinonaktifkan sementara. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -36,6 +36,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
+
+- [ ] **Optimasi Akun 1 MT5: Transisi ke Solo Gold XAUUSDm (v4.5-SOLO-GOLD-OPTIMIZED) dengan Front-Running Touch Buffer (0.5x Spread), 60-Bar OB Lookback, R:R 1:3, dan Flat Risk Rp 50.000**
 
 - [x] **Konfigurasi Akun 2 (propfirm-mt5 / Login: 463880423) Khusus Pair XAUUSDm Timeframe M1 Dual-Direction (v4.3-M1-GOLD-DUAL) dengan Kalibrasi TP Spread Buffer & R:R 1:3**
 
