@@ -151,32 +151,26 @@ npx wrangler deploy
 
 ---
 
-## 🎯 4. Strategi Pure SMC Multi-Pair Dual-Direction (v4.4-OPTIMIZED-OB-LOOKBACK) & Integrasi Antigravity MCP
+## 🎯 4. Strategi Pure SMC Solo Gold Dual-Direction (v4.5-SOLO-GOLD-OPTIMIZED) & Integrasi Antigravity MCP
 
-### A. Strategi Pure SMC Multi-Pair Dual-Direction (BUY & SELL)
+### A. Strategi Pure SMC Solo Gold Focus (BUY & SELL)
 * **Timeframe:** 5-Menit (M5) untuk identifikasi *Order Block (OB)* & *Break of Structure (BOS)* dua arah + H1 Trend Filter (EMA-50).
-* **Multi-OB Lookback Engine (v4.4):**
-  - Lookback diperlebar hingga 60 candle M5 (5 jam riil pasar).
-  - Mengumpulkan seluruh *unmitigated Order Blocks* aktif (memvalidasi mitigasi antar-candle).
-  - Mengurutkan dan memprioritaskan OB terdekat ke harga saat ini (*Nearest OB*).
-  - Telemetri live `setup_reason` menampilkan zona Supply/Demand terdekat beserta jarak poin real-time (contoh: `Nearest Supply: 4287.644 (+1.189)`).
+* **Multi-OB Lookback & Front-Running Touch Buffer Engine (v4.5):**
+  - Lookback aktif 60 candle M5 (5 jam riil pasar) unmitigated.
+  - **Front-Running Touch Buffer:** Toleransi mitigasi `0.5 * spread` (~$0.12 - $0.15) di bibir Order Block agar entri terpicu presisi saat likuiditas institusional berbalik tipis.
+  - Telemetri live `setup_reason` menampilkan zona Supply/Demand terdekat beserta jarak poin real-time (contoh: `Nearest Supply: 4286.496 (+0.345)`).
 * **Mode Operasional:**
-  - **Sinyal BUY:** Terpicu saat harga berada di atas H1 EMA-50 (BULLISH) dan memitigasi *Bullish Order Block* (Demand) setelah terjadi *Bullish BOS*.
-  - **Sinyal SELL:** Terpicu saat harga berada di bawah H1 EMA-50 (BEARISH) dan memitigasi *Bearish Order Block* (Supply) setelah terjadi *Bearish BOS*.
+  - **Sinyal BUY:** Terpicu saat harga berada di atas H1 EMA-50 (BULLISH) dan memitigasi *Bullish Demand OB* setelah terjadi *Bullish BOS*.
+  - **Sinyal SELL:** Terpicu saat harga berada di bawah H1 EMA-50 (BEARISH) dan memitigasi *Bearish Supply OB* setelah terjadi *Bearish BOS*.
 * **Spread Buffer Calibration pada Take Profit:**
   - **SELL TP:** `Entry - (SL_dist * RR) + Spread` ➔ Mengangkat titik TP sebesar 1 spread agar harga Ask langsung menyentuh TP saat jarum candlestick (Bid) mencium target.
   - **BUY TP:** `Entry + (SL_dist * RR) - (Spread * 0.5)` ➔ Menurunkan sedikit target TP agar harga Bid mudah melibas TP tanpa terganjal spread.
-* **Instrumen Aktif:** `XAUUSDm` (Gold), `EURUSDm`, dan `GBPUSDm` (Exness Raw/Standard).
+* **Instrumen Aktif:** `XAUUSDm` (Gold Solo Focus) pada Akun 1.
 * **Flat Risk Sizing:** Risiko per trade dipatok flat **Rp 50.000** (lot dihitung dinamis via native broker `mt5.order_calc_profit`).
-* **Hybrid Risk-to-Reward (R:R):**
-  - **`XAUUSDm` (Gold):** **1:3.0** (+Rp 150.000 saat TP vs -Rp 50.000 saat SL).
-  - **`EURUSDm` & `GBPUSDm`:** **1:2.0** (+Rp 100.000 saat TP vs -Rp 50.000 saat SL).
-* **Batas Toleransi SL Teknikal:**
-  - `XAUUSDm`: 1.50 – 3.50 ($1.50 - $3.50).
-  - `EURUSDm`: 3 – 12 pips (0.0003 – 0.0012).
-  - `GBPUSDm`: 4 – 15 pips (0.0004 – 0.0015).
+* **Strict Risk-to-Reward (R:R):** **1:3.0** (+Rp 150.000 saat TP vs -Rp 50.000 saat SL).
+* **Batas Toleransi SL Teknikal:** $1.50 – $3.50 (15 s/d 35 pips).
 * **Auto Break-Even (BE @ +1.0R):** Begitu profit menyentuh +1.0R (+Rp 50.000), SL digeser otomatis ke titik impas (Entry +/- Spread Buffer) untuk mengunci posisi bebas risiko pada BUY maupun SELL.
-* **Auto News & Spread Filter:** Membekukan entri saat spread melebar atau pada jendela rilis berita US (12:25-13:15 UTC & 14:00-14:45 UTC) dan Market Rollover (20:50-22:10 UTC).
+* **Auto News & Spread Filter:** Membekukan entri saat spread melebar (> $0.60) atau pada jendela rilis berita US (12:25-13:15 UTC & 14:00-14:45 UTC) dan Market Rollover (20:50-22:10 UTC).
 
 ### B. MT5 MCP Server untuk Antigravity (`agy`)
 * **Executable Wrapper:** `/home/cuker/.local/bin/mcp-mt5`
@@ -191,26 +185,24 @@ npx wrangler deploy
 
 ---
 
-## 📈 5. Hasil Validasi Backtesting Penuh YTD 2026: Konfigurasi Bot Live Saat Ini (v4.4)
+## 📈 5. Hasil Validasi Backtesting Penuh YTD 2026: Konfigurasi Bot Live Saat Ini (v4.5 Solo Gold)
 
-Pengujian komprehensif dijalankan menggunakan **153.536 bar data M5 riil Exness** dari 1 Januari s/d 11 September 2026:
+Pengujian komprehensif dijalankan menggunakan **51.178 bar data M5 riil Exness Gold** dari 1 Januari s/d 11 September 2026:
 
-| Metrik Kinerja | 🟢 v4.4 LIVE CONFIG (Lookback 60 M5 + Spread Buffer) |
-| :--- | :--- |
-| **Periode Data** | 1 Januari 2026 – 11 September 2026 (YTD) |
-| **Total Trade Dieksekusi** | **1.076 Trade** |
-| **Menang Penuh (Win / TP)** | **505 Trade (46.9%)** |
-| **Impas (Break-Even @ 1R)** | **319 Trade (29.6%)** |
-| **Kalah (Loss / SL)** | **252 Trade (23.4%)** |
-| **Tingkat Bebas Rugi (Win + BE)**| **76.6%** |
-| **Profit Factor (PF)** | **4.33** |
-| **Profit Bersih (Net Profit)** | **+Rp 40.085.518,16 (+8.017,1% ROI)** |
-| **Max Drawdown Terburuk** | **Rp 306.441 (8.25%)** |
-| **Konsistensi Bulanan** | **9 dari 9 Bulan Profit Positif (100% Bulan Hijau)** |
-| **Kontribusi XAUUSDm (Gold)** | 516 Trade \| Win 59.7% \| **+Rp 31.666.865 IDR** \| **PF 9.37** (BUY: +Rp 16.3M \| SELL: +Rp 15.3M) |
-| **Kontribusi GBPUSDm** | 287 Trade \| Win 37.6% (BE 39.4%) \| **+Rp 5.231.141 IDR** \| **PF 2.37** (BUY: +Rp 2.4M \| SELL: +Rp 2.8M) |
-| **Kontribusi EURUSDm** | 273 Trade \| Win 32.6% (BE 43.2%) \| **+Rp 3.187.511 IDR** \| **PF 1.72** (BUY: +Rp 1.6M \| SELL: +Rp 1.5M) |
-| **Laporan Visual Interaktif** | [`v4_4_current_config_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/v4_4_current_config_backtest_report.html) |
+| Metrik Kinerja | 🟡 v4.4 Multi-Pair (Emas + Forex) | 🟢 v4.5 SOLO GOLD LIVE (Touch Buffer + R:R 1:3) |
+| :--- | :--- | :--- |
+| **Periode Data** | 1 Januari 2026 – 11 September 2026 | 1 Januari 2026 – 11 September 2026 |
+| **Total Trade Dieksekusi** | 1.076 Trade | **413 Trade** (Fokus Kualitas Tinggi) |
+| **Menang Penuh (Win / TP)** | 505 Trade (46.9%) | **281 Trade (68.0%)** 🚀 |
+| **Impas (Break-Even @ 1R)** | 319 Trade (29.6%) | **106 Trade (25.7%)** |
+| **Kalah (Loss / SL)** | 252 Trade (23.4%) | **Hanya 26 Trade (6.3%)** 🛡️ |
+| **Tingkat Bebas Rugi (Win + BE)**| 76.6% | **93.7% Bebas Rugi** |
+| **Profit Factor (PF)** | 4.33 | **30.00** 🏆 |
+| **Profit Bersih (Net Profit)** | +Rp 40.085.518 | **+Rp 31.476.741,29 (+6.295% ROI)** |
+| **Max Drawdown Terburuk** | Rp 306.441 (8.25%) | **Hanya Rp 62.885 (7.27%)** |
+| **Konsistensi Bulanan** | 9 dari 9 Bulan Profit Positif | **9 dari 9 Bulan Profit Positif (100% Hijau)** |
+| **Arah Transaksi (BUY vs SELL)**| - | BUY: **+Rp 16.7M** (216 trd) \| SELL: **+Rp 14.8M** (197 trd) |
+| **Laporan Visual Interaktif** | [`v4_4_current_config_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/v4_4_current_config_backtest_report.html) | [`v4_5_solo_gold_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/v4_5_solo_gold_backtest_report.html) |
 
 ---
 
