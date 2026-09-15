@@ -151,10 +151,15 @@ npx wrangler deploy
 
 ---
 
-## 🎯 4. Strategi Pure SMC Multi-Pair Dual-Direction (v4.3-DUAL-SPREAD-BUFFER) & Integrasi Antigravity MCP
+## 🎯 4. Strategi Pure SMC Multi-Pair Dual-Direction (v4.4-OPTIMIZED-OB-LOOKBACK) & Integrasi Antigravity MCP
 
 ### A. Strategi Pure SMC Multi-Pair Dual-Direction (BUY & SELL)
 * **Timeframe:** 5-Menit (M5) untuk identifikasi *Order Block (OB)* & *Break of Structure (BOS)* dua arah + H1 Trend Filter (EMA-50).
+* **Multi-OB Lookback Engine (v4.4):**
+  - Lookback diperlebar hingga 60 candle M5 (5 jam riil pasar).
+  - Mengumpulkan seluruh *unmitigated Order Blocks* aktif (memvalidasi mitigasi antar-candle).
+  - Mengurutkan dan memprioritaskan OB terdekat ke harga saat ini (*Nearest OB*).
+  - Telemetri live `setup_reason` menampilkan zona Supply/Demand terdekat beserta jarak poin real-time (contoh: `Nearest Supply: 4287.644 (+1.189)`).
 * **Mode Operasional:**
   - **Sinyal BUY:** Terpicu saat harga berada di atas H1 EMA-50 (BULLISH) dan memitigasi *Bullish Order Block* (Demand) setelah terjadi *Bullish BOS*.
   - **Sinyal SELL:** Terpicu saat harga berada di bawah H1 EMA-50 (BEARISH) dan memitigasi *Bearish Order Block* (Supply) setelah terjadi *Bearish BOS*.
@@ -186,24 +191,26 @@ npx wrangler deploy
 
 ---
 
-## 📈 5. Hasil Validasi Backtesting Penuh YTD 2026: BUY-ONLY vs DUAL-DIRECTION (BUY & SELL)
+## 📈 5. Hasil Validasi Backtesting Penuh YTD 2026: Konfigurasi Bot Live Saat Ini (v4.4)
 
 Pengujian komprehensif dijalankan menggunakan **153.536 bar data M5 riil Exness** dari 1 Januari s/d 11 September 2026:
 
-| Metrik Kinerja | 🟡 BUY-ONLY (Versi Lama) | 🟢 DUAL-DIRECTION (BUY & SELL v4.2) |
-| :--- | :--- | :--- |
-| **Periode Data** | 1 Januari 2026 – 11 September 2026 | 1 Januari 2026 – 11 September 2026 |
-| **Total Trade Dieksekusi** | 835 Trade | **1.708 Trade** |
-| **Menang Penuh (Win / TP)** | 460 Trade (55.1%) | **963 Trade (56.4%)** |
-| **Impas (Break-Even @ 1R)** | 186 Trade (22.3%) | **417 Trade (24.4%)** |
-| **Kalah (Loss / SL)** | 189 Trade (22.6%) | **328 Trade (19.2%)** |
-| **Tingkat Bebas Rugi (Win + BE)**| 77.4% | **80.8%** |
-| **Profit Factor (PF)** | 5.87 | **7.06** |
-| **Profit dari Posisi BUY** | +Rp 40.510.783 | **+Rp 40.510.783** |
-| **Profit dari Posisi SELL** | Rp 0 | **+Rp 47.191.862** |
-| **Profit Bersih (Net Profit)** | **+Rp 40.510.783 (+8.102% ROI)** | **+Rp 87.702.645 (+17.540% ROI)** |
-| **Kontribusi per Pair (Dual)** | - | Gold: +Rp 50.4M (PF 7.37) \| EUR/USD: +Rp 18.9M (PF 6.26) \| GBP/USD: +Rp 18.3M (PF 7.55) |
-| **Laporan Visual Interaktif** | [`ytd_2026_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/ytd_2026_backtest_report.html) | [`dual_direction_smc_report.html`](file:///media/cuker/Data/Projects/trading-backtest/dual_direction_smc_report.html) |
+| Metrik Kinerja | 🟢 v4.4 LIVE CONFIG (Lookback 60 M5 + Spread Buffer) |
+| :--- | :--- |
+| **Periode Data** | 1 Januari 2026 – 11 September 2026 (YTD) |
+| **Total Trade Dieksekusi** | **1.076 Trade** |
+| **Menang Penuh (Win / TP)** | **505 Trade (46.9%)** |
+| **Impas (Break-Even @ 1R)** | **319 Trade (29.6%)** |
+| **Kalah (Loss / SL)** | **252 Trade (23.4%)** |
+| **Tingkat Bebas Rugi (Win + BE)**| **76.6%** |
+| **Profit Factor (PF)** | **4.33** |
+| **Profit Bersih (Net Profit)** | **+Rp 40.085.518,16 (+8.017,1% ROI)** |
+| **Max Drawdown Terburuk** | **Rp 306.441 (8.25%)** |
+| **Konsistensi Bulanan** | **9 dari 9 Bulan Profit Positif (100% Bulan Hijau)** |
+| **Kontribusi XAUUSDm (Gold)** | 516 Trade \| Win 59.7% \| **+Rp 31.666.865 IDR** \| **PF 9.37** (BUY: +Rp 16.3M \| SELL: +Rp 15.3M) |
+| **Kontribusi GBPUSDm** | 287 Trade \| Win 37.6% (BE 39.4%) \| **+Rp 5.231.141 IDR** \| **PF 2.37** (BUY: +Rp 2.4M \| SELL: +Rp 2.8M) |
+| **Kontribusi EURUSDm** | 273 Trade \| Win 32.6% (BE 43.2%) \| **+Rp 3.187.511 IDR** \| **PF 1.72** (BUY: +Rp 1.6M \| SELL: +Rp 1.5M) |
+| **Laporan Visual Interaktif** | [`v4_4_current_config_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/v4_4_current_config_backtest_report.html) |
 
 ---
 
