@@ -185,24 +185,23 @@ npx wrangler deploy
 
 ---
 
-## 📈 5. Hasil Validasi Backtesting Penuh YTD 2026: Konfigurasi Bot Live Saat Ini (v4.5 Solo Gold)
+## 📈 5. Hasil Validasi Backtesting Penuh YTD 2026: Konfigurasi Bot Live (v4.7 Proper SL)
 
-Pengujian komprehensif dijalankan menggunakan **51.178 bar data M5 riil Exness Gold** dari 1 Januari s/d 11 September 2026:
+Pengujian komprehensif dijalankan menggunakan **49.453 bar data M5 riil Exness Gold** dari 1 Januari s/d 11 September 2026 (dengan validasi silang resolusi M1 intra-bar 100.000 candle):
 
-| Metrik Kinerja | 🟡 v4.4 Multi-Pair (Emas + Forex) | 🟢 v4.5 SOLO GOLD LIVE (Touch Buffer + R:R 1:3) |
+| Metrik Kinerja | 🟡 v4.6 (Capped SL $2.85 / Max Rp 50rb) | 🟢 v4.7 PROPER STRUCTURAL SL LIVE (0.01 Lot Flat) |
 | :--- | :--- | :--- |
-| **Periode Data** | 1 Januari 2026 – 11 September 2026 | 1 Januari 2026 – 11 September 2026 |
-| **Total Trade Dieksekusi** | 1.076 Trade | **413 Trade** (Fokus Kualitas Tinggi) |
-| **Menang Penuh (Win / TP)** | 505 Trade (46.9%) | **281 Trade (68.0%)** 🚀 |
-| **Impas (Break-Even @ 1R)** | 319 Trade (29.6%) | **106 Trade (25.7%)** |
-| **Kalah (Loss / SL)** | 252 Trade (23.4%) | **Hanya 26 Trade (6.3%)** 🛡️ |
-| **Tingkat Bebas Rugi (Win + BE)**| 76.6% | **93.7% Bebas Rugi** |
-| **Profit Factor (PF)** | 4.33 | **30.00** 🏆 |
-| **Profit Bersih (Net Profit)** | +Rp 40.085.518 | **+Rp 31.476.741,29 (+6.295% ROI)** |
-| **Max Drawdown Terburuk** | Rp 306.441 (8.25%) | **Hanya Rp 62.885 (7.27%)** |
-| **Konsistensi Bulanan** | 9 dari 9 Bulan Profit Positif | **9 dari 9 Bulan Profit Positif (100% Hijau)** |
-| **Arah Transaksi (BUY vs SELL)**| - | BUY: **+Rp 16.7M** (216 trd) \| SELL: **+Rp 14.8M** (197 trd) |
-| **Laporan Visual Interaktif** | [`v4_4_current_config_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/v4_4_current_config_backtest_report.html) | [`v4_5_solo_gold_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/v4_5_solo_gold_backtest_report.html) |
+| **Metode & Eksekusi** | Intrabar Worst-Case + Rejection Filter | **Proper Structural SL + Rejection Filter (No BEP)** |
+| **Periode Data** | 1 Januari 2026 – 11 September 2026 | **1 Januari 2026 – 11 September 2026 (Full YTD)** |
+| **Total Trade Dieksekusi** | 249 Trade | **549 Trade** (Ruang nafas penuh, OB tebal tereksekusi) |
+| **Menang Penuh (Win / TP 1:3)**| 155 Trade (62.2%) | **332 Trade (60.5%)** 🚀 |
+| **Impas (Break-Even / BEP)** | 0 Trade (0.0%) | **0 Trade (0.0%)** 🚫 *(100% Bebas BEP Prematur)* |
+| **Kalah (Loss / SL)** | 94 Trade (37.8%) | **217 Trade (39.5%)** |
+| **Profit Factor (PF)** | 4.72 | **4.39** 🏆 |
+| **Profit Bersih (Net Profit)** | +Rp 13.536.032 | **+Rp 47.189.849 (+248% kenaikan profit)** 💰 |
+| **Max Drawdown Terburuk** | Rp 167.147 | **Hanya Rp 402.877 (0.85% dari total profit)** |
+| **Karakteristik Stop Loss** | Hard-cap $\le$ $2.85 (Rp 51.630) | **Rata-rata $3.55 (Rp 62.391) \| Kasus Terburuk $9.71 (Rp 172.599)** |
+| **Laporan Visual Interaktif** | [`ytd_bep_vs_no_bep_report.html`](file:///media/cuker/Data/Projects/trading-backtest/ytd_bep_vs_no_bep_report.html) | [`proper_sl_fixed_lot_report.html`](file:///media/cuker/Data/Projects/trading-backtest/proper_sl_fixed_lot_report.html) |
 
 ---
 
