@@ -37,7 +37,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Adaptasi Bot MT5 Pure SMC v5.1 ke Akun Cent Exness (XAUUSDc): Sizing Dinamis Flat Risk Rp 50.000 (~303 USC), Koreksi Suffix Simbol & Currency Display**
+- [x] **Adaptasi Bot MT5 Pure SMC v5.1 ke Akun Cent Exness (XAUUSDc): Sizing Dinamis Flat Risk Rp 50.000 (~303 USC), Koreksi Suffix Simbol & Currency Display**
 
 - [x] **Deployment Akun 1 MT5 Solo Gold (v5.1-RR3-TWO-STAGE-GUARD): Target R:R 1:3.0 dengan Two-Stage Smart Guard (Soft Cut -0.5R @ +1.0R -> Lock +0.3R @ +1.5R, Max SL Clamp Rp 100rb, Validasi Net +Rp 14.25M Win Rate 76.7%, PF 7.26, Max DD Rp 272rb)**
 
@@ -91,7 +91,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-16 23:37 WIB
+**Last Updated At:** 2026-09-16 23:46 WIB
 
 
 
