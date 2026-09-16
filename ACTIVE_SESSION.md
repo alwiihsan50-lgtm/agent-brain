@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** MT5 Akun 1 Solo Gold
-- **Current Task:** Deploy v5.0-RR15-SOFT-CUT: Model C (TP 1:1.5 dengan Soft Risk Halving -0.5R @ +1.0R)
+- **Current Task:** Deploy v5.1-RR3-TWO-STAGE-GUARD: Target R:R 1:3 + Two-Stage Guard (Soft -0.5R @ +1R -> Lock +0.3R @ +1.5R)
 - **Modified Files:** /home/cuker/mt5_storage/mt5_config/bot.py
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Model C aktif di container exness-mt5: Target R:R 1:1.5, saat running +1.0R geser SL ke -0.5R (memotong risiko 50%), Max SL Clamp Rp 100rb. Validasi Net +Rp 10.8M, Max DD Rp 228rb. Menunggu konfirmasi USER.
+- **Next Steps / Notes:** Two-Stage Smart Guard aktif di container exness-mt5: Target TP R:R 1:3, running +1.0R geser SL ke -0.5R (cut 50%), running +1.5R kunci SL ke +0.3R (bebas rugi). Max SL Clamp Rp 100rb. Validasi Net +Rp 14.25M, PF 7.26, Max DD Rp 272rb. Menunggu konfirmasi USER.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-09-16 13:37 WIB
+- **Last Updated At:** 2026-09-16 14:14 WIB
