@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Audit Backtest YTD 2026 & Upgrade Akun 1 MT5 Solo Gold ke v5.2-PURE-RR3: Evaluasi Kritis Bias Metodologi Backtest Lama (Overfitting & Lookahead), Eliminasi Two-Stage Guard, dan Deployment Mode Murni R:R 1:3 (Net +Rp 383K, PF 1.14)**
+
 - [x] **Adaptasi Bot MT5 Pure SMC v5.1 ke Akun Cent Exness (XAUUSDc): Sizing Dinamis Flat Risk Rp 50.000 (~303 USC), Koreksi Suffix Simbol & Currency Display**
 
 - [x] **Deployment Akun 1 MT5 Solo Gold (v5.1-RR3-TWO-STAGE-GUARD): Target R:R 1:3.0 dengan Two-Stage Smart Guard (Soft Cut -0.5R @ +1.0R -> Lock +0.3R @ +1.5R, Max SL Clamp Rp 100rb, Validasi Net +Rp 14.25M Win Rate 76.7%, PF 7.26, Max DD Rp 272rb)**
@@ -46,14 +48,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] **Deployment Akun 1 MT5 Solo Gold (v4.7-PROPER-SL-PURE-RR): Murni R:R 1:3 (No BEP), Rejection Candle Filter, Proper Structural SL (Maks $10.00), Fixed 0.01 Lot Murni, Validasi YTD 2026 Net +Rp 47.1M Win Rate 60.5%**
 
 - [x] **Deployment Akun 1 MT5 Solo Gold (v4.6-PURE-RR-REJECTION): Murni R:R 1:3 (Bebas BEP), Rejection Candle Filter, Hard-Cap SL <= $2.85 (Risiko <= Rp 50.000), Validasi Realistis YTD 2026 Net +Rp 13.5M Win Rate 62.2%**
-
-- [x] **Konfigurasi Akun 2 (propfirm-mt5 / Login: 463880423) Khusus Pair XAUUSDm Timeframe M1 Dual-Direction (v4.3-M1-GOLD-DUAL) dengan Kalibrasi TP Spread Buffer & R:R 1:3**
-
-- [x] **Upgrade Pure SMC Bot MT5 ke Versi Dual-Direction (v4.2-DUAL-SMC: BUY & SELL dua arah, Full YTD Backtest Net +Rp 87.7M PF 7.06, Auto BE, dan live deployment di Akun 1 & 2)**
-
-- [x] **Pure SMC Multi-Pair Bot (v4.1-HYBRID-SMC): Gold R:R 1:3, FX 1:2, Full YTD 2026 Backtest (+Rp 40.5M, PF 5.87, 835 Trades), Persistent Logging & Trade Audit Ledger**
-
-- [x] **Pembuatan Hub & Shortcut Desktop Provider AI Video & Image Gratis**
 
 - 📂 *Riwayat lengkap seluruh milestone terdahulu telah diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -91,8 +85,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-17 01:24 WIB
-
-
-
-
+**Last Updated At:** 2026-09-17 01:52 WIB

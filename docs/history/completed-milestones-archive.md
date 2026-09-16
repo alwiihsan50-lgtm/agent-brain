@@ -4,6 +4,13 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 16 September 2026
+
+- [x] **Konfigurasi Akun 2 (propfirm-mt5 / Login: 463880423) Khusus Pair XAUUSDm Timeframe M1 Dual-Direction (v4.3-M1-GOLD-DUAL) dengan Kalibrasi TP Spread Buffer & R:R 1:3**
+- [x] **Upgrade Pure SMC Bot MT5 ke Versi Dual-Direction (v4.2-DUAL-SMC: BUY & SELL dua arah, Full YTD Backtest Net +Rp 87.7M PF 7.06, Auto BE, dan live deployment di Akun 1 & 2)**
+- [x] **Pure SMC Multi-Pair Bot (v4.1-HYBRID-SMC): Gold R:R 1:3, FX 1:2, Full YTD 2026 Backtest (+Rp 40.5M, PF 5.87, 835 Trades), Persistent Logging & Trade Audit Ledger**
+- [x] **Pembuatan Hub & Shortcut Desktop Provider AI Video & Image Gratis**
+
 ## 📅 Selesai Per 14 September 2026
 
 - [x] **Implementasi 5 Pilar Peningkatan Workflow Agent Brain:** Strict User Confirmation, Ready for Review Protocol, brain CLI Helper, Live Healthcheck, dan ACTIVE_SESSION.md.

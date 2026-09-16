@@ -55,7 +55,7 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 - **In-Memory RAM Architecture:**
   - **Shared RAM Volume (`ram_buffer`):** Driver `tmpfs` berukuran 64 MB di-mount ke `/ram_data` di container MT5.
   - **Container tmpfs Mounts:** `/tmp` (512M) dan `/dev/shm` (512M) berjalan di RAM.
-  - `exness-mt5` (Akun Utama: `263301611` Exness-MT5Real37 Cent USC, KasmVNC Port `3000` / `3001` - **AKTIF / RUNNING: Pure SMC Solo Gold v5.1-RR3-TWO-STAGE-GUARD (XAUUSDc)**)
+  - `exness-mt5` (Akun Utama: `263301611` Exness-MT5Real37 Cent USC, KasmVNC Port `3000` / `3001` - **AKTIF / RUNNING: Pure SMC Solo Gold v5.2-PURE-RR3 (XAUUSDc)**)
   - `propfirm-mt5` (Akun ke-2: `463880423` Exness, KasmVNC Port `3006` / `3007` - **STANDBY / OFF**: Dinonaktifkan sementara)
 - **Volume Persisten:** `./mt5_config` -> `/config` (Akun 1) dan `./mt5_config_prop1` -> `/config` (Akun 2)
 - **Environment:** `PUID=1000`, `PGID=1000`, `TZ=Asia/Jakarta`
@@ -75,8 +75,7 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 ### C. Bot Python Logic Akun 1 - M5 Timeframe (`mt5_config/bot.py`)
 - Terletak di `/home/cuker/mt5_storage/mt5_config/bot.py` (tersinkronisasi langsung ke `/config/bot.py` container `exness-mt5`).
 - Solo Gold SMC M5 Engine: XAUUSDc (Exness Cent Account - Trade Contract Size: 1.0 oz).
-- Sizing Dinamis: Flat Risk Rp 50.000 (~303 USC), dihitung presisi via `calculate_flat_risk_lot()`.
-- Two-Stage Smart Guard: Soft Risk Halving (-0.5R @ +1.0R) -> Lock Win Bebas Rugi (+0.3R @ +1.5R) dengan target TP 1:3.0.
+- Pure R:R Strategy: Strict 1:3.0 (+Rp 150.000 vs Flat Risk Rp 50.000) tanpa trailing guard/Auto BE.
 - Service: `mt5-trading-bot.service` (Runner: `/home/cuker/start-bot.sh`).
 
 ### D. Bot Python Logic Akun 2 - M1 Timeframe (`mt5_config_prop1/bot.py`)
@@ -243,5 +242,30 @@ Berdasarkan audit telemetri riil container `exness-mt5` (Wine 64-bit, MetaTrader
 **Rekomendasi Paket VPS Ekonomis Terbaik:**
 - **Spesifikasi Standar:** 1–2 vCPU, 2 GB RAM (+ 2 GB Swap File), 25–30 GB NVMe/SSD.
 - **Provider Acuan (~$3 – $4/bulan):** Hetzner Cloud (CX22), Contabo (Cloud VPS 1), atau DigitalOcean / Vultr.
+
+---
+
+## 🔬 8. Audit Validasi Backtest YTD 2026 & Evolusi ke v5.2 Pure R:R
+
+Pada 17 September 2026, dilakukan evaluasi kritis menyeluruh terhadap klaim backtest historis (+Rp 14.25M) vs pengujian riil YTD 2026 menggunakan dataset 50.247 bar M5 XAUUSDc (1 Jan s/d 16 Sep 2026).
+
+### A. Temuan Bias Metodologis Backtest Lama
+1. **Bias Periode (Cherry-Picked):** Data 100k M1 lama hanya mencakup Juni–September 2026 (fase trending naik kencang). Melewatkan Januari 2026 yang choppy dan menyumbang drawdown terbesar.
+2. **Lookahead Leak pada Resampling H1:** Resampling Pandas `1h` membocorkan penutupan jam ke bar menit awal melalui default left-edge indexing.
+3. **M1 vs M5 Rejection:** Konfirmasi rejection dievaluasi di candle 1 menit (terpicu 210x), sedangkan bot live menunggu candle 5 menit (hanya 76 trade riil).
+
+### B. Komparasi 4 Model Proteksi Modal (50k Bar M5 YTD 2026)
+| Variant | Konfigurasi | Net Profit | PF | Win Rate | Keterangan |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| **v5.1 (Two-Stage)** | Lock +0.3R @ +1.5R | -Rp 206.327 | 0.88 | 46.1% | ❌ Guard memotong 77% pemenang di +0.3R (Rp 15rb) vs SL penuh (-Rp 50rb). |
+| **Variant A** | Lock +1.0R @ +1.5R | -Rp 25.005 | 0.99 | 46.1% | ⚪ Breakeven marginal. |
+| **v5.2 (Pure R:R)** | **Murni 1:3 (Tanpa Guard)** | **+Rp 383.726** | **1.14** | **28.0%** | 🏆 **PEMENANG**: 21 trade menyentuh full TP (+Rp 150rb). Asymmetric reward 3:1. |
+| **Variant D** | Murni 1:2 (Tanpa Guard) | +Rp 222.111 | 1.09 | 36.0% | ✅ Profit positif tapi net lebih rendah dari 1:3. |
+
+### C. Konfigurasi Aktif Live (v5.2-PURE-RR3)
+- **Engine:** `STAGE1_TRIGGER_RR = 0.0`, `STAGE2_TRIGGER_RR = 0.0`, `AUTO_BE_TRIGGER_RR = 0.0`.
+- **Target R:R:** Strict 1:3.0 (+Rp 150.000 vs Flat Risk Rp 50.000).
+- **Akun:** Exness Cent `263301611` (`XAUUSDc`).
+
 
 
