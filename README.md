@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] ****Deployment Akun 1 MT5 Solo Gold (v4.9-RR4-LOCK-HALF-R): Target R:R 1:4.0, Dynamic Lock Win +0.5R @ +2.0R, Rejection Filter, Max SL Clamp Rp 100rb, Validasi Net +Rp 16.2M Win Rate 71.4%** ⚠️ [MENUNGGU KONFIRMASI USER]**
+
 - [x] **Deployment Akun 1 MT5 Solo Gold (v4.8-CLAMP-100K-PURE-RR): Murni R:R 1:3, Rejection Filter, Max SL Clamp Rp 100rb ($5.68), Fixed 0.01 Lot, Validasi M1 Intra-Bar Net +Rp 18.2M**
 
 - [x] **Deployment Akun 1 MT5 Solo Gold (v4.7-PROPER-SL-PURE-RR): Murni R:R 1:3 (No BEP), Rejection Candle Filter, Proper Structural SL (Maks $10.00), Fixed 0.01 Lot Murni, Validasi YTD 2026 Net +Rp 47.1M Win Rate 60.5%**
@@ -87,7 +89,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-16 11:17 WIB
+**Last Updated At:** 2026-09-16 12:45 WIB
 
 
 
