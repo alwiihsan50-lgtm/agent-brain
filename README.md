@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 Live / ⚪ Acc 2 Off | Acc 1 M5 Solo Gold aktif (v4.5 Solo Gold Optimized, Touch Buffer 0.5x Spread, R:R 1:3). Acc 2 dinonaktifkan sementara. |
+| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 Live / ⚪ Acc 2 Off | Acc 1 M5 Solo Gold aktif (v4.8 Clamp Max SL Rp 100rb, Rejection Filter, R:R 1:3). Acc 2 dinonaktifkan sementara. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -36,6 +36,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
+
+- [ ] **Deployment Akun 1 MT5 Solo Gold (v4.8-CLAMP-100K-PURE-RR): Murni R:R 1:3, Rejection Filter, Max SL Clamp Rp 100rb ($5.68), Fixed 0.01 Lot, Validasi M1 Intra-Bar Net +Rp 18.2M**
 
 - [x] **Deployment Akun 1 MT5 Solo Gold (v4.7-PROPER-SL-PURE-RR): Murni R:R 1:3 (No BEP), Rejection Candle Filter, Proper Structural SL (Maks $10.00), Fixed 0.01 Lot Murni, Validasi YTD 2026 Net +Rp 47.1M Win Rate 60.5%**
 
@@ -85,7 +87,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-16 10:20 WIB
+**Last Updated At:** 2026-09-16 10:51 WIB
 
 
 

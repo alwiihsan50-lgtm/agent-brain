@@ -185,23 +185,24 @@ npx wrangler deploy
 
 ---
 
-## 📈 5. Hasil Validasi Backtesting Penuh YTD 2026: Konfigurasi Bot Live (v4.7 Proper SL)
+## 📈 5. Hasil Validasi Backtesting: Konfigurasi Bot Live (v4.8 Max SL Clamp Rp 100k)
 
-Pengujian komprehensif dijalankan menggunakan **49.453 bar data M5 riil Exness Gold** dari 1 Januari s/d 11 September 2026 (dengan validasi silang resolusi M1 intra-bar 100.000 candle):
+Pengujian komprehensif dijalankan menggunakan **49.453 bar data M5 riil Exness Gold** (Full YTD) dan divalidasi silang menggunakan **100.000 candle resolusi M1 intra-bar riil**:
 
-| Metrik Kinerja | 🟡 v4.6 (Capped SL $2.85 / Max Rp 50rb) | 🟢 v4.7 PROPER STRUCTURAL SL LIVE (0.01 Lot Flat) |
-| :--- | :--- | :--- |
-| **Metode & Eksekusi** | Intrabar Worst-Case + Rejection Filter | **Proper Structural SL + Rejection Filter (No BEP)** |
-| **Periode Data** | 1 Januari 2026 – 11 September 2026 | **1 Januari 2026 – 11 September 2026 (Full YTD)** |
-| **Total Trade Dieksekusi** | 249 Trade | **549 Trade** (Ruang nafas penuh, OB tebal tereksekusi) |
-| **Menang Penuh (Win / TP 1:3)**| 155 Trade (62.2%) | **332 Trade (60.5%)** 🚀 |
-| **Impas (Break-Even / BEP)** | 0 Trade (0.0%) | **0 Trade (0.0%)** 🚫 *(100% Bebas BEP Prematur)* |
-| **Kalah (Loss / SL)** | 94 Trade (37.8%) | **217 Trade (39.5%)** |
-| **Profit Factor (PF)** | 4.72 | **4.39** 🏆 |
-| **Profit Bersih (Net Profit)** | +Rp 13.536.032 | **+Rp 47.189.849 (+248% kenaikan profit)** 💰 |
-| **Max Drawdown Terburuk** | Rp 167.147 | **Hanya Rp 402.877 (0.85% dari total profit)** |
-| **Karakteristik Stop Loss** | Hard-cap $\le$ $2.85 (Rp 51.630) | **Rata-rata $3.55 (Rp 62.391) \| Kasus Terburuk $9.71 (Rp 172.599)** |
-| **Laporan Visual Interaktif** | [`ytd_bep_vs_no_bep_report.html`](file:///media/cuker/Data/Projects/trading-backtest/ytd_bep_vs_no_bep_report.html) | [`proper_sl_fixed_lot_report.html`](file:///media/cuker/Data/Projects/trading-backtest/proper_sl_fixed_lot_report.html) |
+| Metrik Kinerja | 🟡 v4.6 (Cap SL $2.85 / Max Rp 50rb) | 🔴 v4.7 Proper SL (Uncapped / Max $10) | 🟢 v4.8 MAX SL CLAMP RP 100K LIVE ($5.68) |
+| :--- | :--- | :--- | :--- |
+| **Metode & Eksekusi** | Intrabar Worst-Case + Rejection Filter | Proper Structural SL + Rejection Filter | **Proper SL + Clamp Max $5.68 + Rejection Filter** |
+| **Resolusi Validasi M1** | 100.000 Candle M1 Intra-Bar | 100.000 Candle M1 Intra-Bar | **100.000 Candle M1 Intra-Bar (3.5 Bulan)** |
+| **Total Trade (M1 Resolusi)**| 103 Trade | 210 Trade | **210 Trade** |
+| **Menang Penuh (Win / TP 1:3)**| 67 Trade (65.0%) | 133 Trade (63.3%) | **135 Trade (64.3%)** 🚀 |
+| **Impas (Break-Even / BEP)** | 0 Trade (0.0%) | 0 Trade (0.0%) | **0 Trade (0.0%)** 🚫 *(Murni R:R 1:3)* |
+| **Kalah (Loss / SL)** | 36 Trade (35.0%) | 77 Trade (36.7%) | **75 Trade (35.7%)** |
+| **Profit Factor (PF)** | 5.03 | 5.22 | **5.27** 🏆 |
+| **Profit Bersih (Net Profit)** | +Rp 5.860.584 | +Rp 18.494.812 | **+Rp 18.250.395 (+211% dibanding v4.6)** 💰 |
+| **Max Drawdown Terburuk** | Rp 203.619 | Rp 352.513 | **Rp 352.513** |
+| **Kerugian Terburuk 1 Trade** | **Rp 51.226** ($2.81) | Rp 113.776 ($6.37) ⚠️ | **Rp 101.759** ($5.69) 🛡️ *(Strictly capped)* |
+| **Rata-rata Kerugian SL** | Rp 40.445 | Rp 56.857 | **Rp 56.940** |
+| **Laporan Visual Interaktif** | [`ytd_bep_vs_no_bep_report.html`](file:///media/cuker/Data/Projects/trading-backtest/ytd_bep_vs_no_bep_report.html) | [`proper_sl_fixed_lot_report.html`](file:///media/cuker/Data/Projects/trading-backtest/proper_sl_fixed_lot_report.html) | [`m5_analysis_m1_execution_report.html`](file:///media/cuker/Data/Projects/trading-backtest/m5_analysis_m1_execution_report.html) |
 
 ---
 
