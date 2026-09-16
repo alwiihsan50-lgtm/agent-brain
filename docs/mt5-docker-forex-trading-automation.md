@@ -55,12 +55,12 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 - **In-Memory RAM Architecture:**
   - **Shared RAM Volume (`ram_buffer`):** Driver `tmpfs` berukuran 64 MB di-mount ke `/ram_data` di container MT5.
   - **Container tmpfs Mounts:** `/tmp` (512M) dan `/dev/shm` (512M) berjalan di RAM.
-  - `exness-mt5` (Akun Utama: `434073017` Exness, KasmVNC Port `3000` / `3001` - **AKTIF / RUNNING: Pure SMC M5 v4.1-HYBRID-SMC**)
-  - `propfirm-mt5` (Akun ke-2: `463880423` Exness, KasmVNC Port `3006` / `3007` - **AKTIF / RUNNING: Pure SMC M1 Scalper Experiment**)
+  - `exness-mt5` (Akun Utama: `263301611` Exness-MT5Real37 Cent USC, KasmVNC Port `3000` / `3001` - **AKTIF / RUNNING: Pure SMC Solo Gold v5.1-RR3-TWO-STAGE-GUARD (XAUUSDc)**)
+  - `propfirm-mt5` (Akun ke-2: `463880423` Exness, KasmVNC Port `3006` / `3007` - **STANDBY / OFF**: Dinonaktifkan sementara)
 - **Volume Persisten:** `./mt5_config` -> `/config` (Akun 1) dan `./mt5_config_prop1` -> `/config` (Akun 2)
 - **Environment:** `PUID=1000`, `PGID=1000`, `TZ=Asia/Jakarta`
 - **Web UI GUI MT5:**
-  - Akun 1 (M5): `https://mt5.abbas.my.id` / `http://localhost:3000`
+  - Akun 1 (M5 Cent): `https://mt5.abbas.my.id` / `http://localhost:3000`
   - Akun 2 (M1): `http://localhost:3006`
 
 ### B. Lingkungan Python di dalam Wine
@@ -74,8 +74,9 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
 
 ### C. Bot Python Logic Akun 1 - M5 Timeframe (`mt5_config/bot.py`)
 - Terletak di `/home/cuker/mt5_storage/mt5_config/bot.py` (tersinkronisasi langsung ke `/config/bot.py` container `exness-mt5`).
-- Multi-Pair SMC M5 Engine: XAUUSDm (Gold 1:3.0), EURUSDm (1:2.0), GBPUSDm (1:2.0).
-- Auto Break-Even @ +1.0R, H1 EMA-50 Trend Bias, Flat Risk Rp 50.000.
+- Solo Gold SMC M5 Engine: XAUUSDc (Exness Cent Account - Trade Contract Size: 1.0 oz).
+- Sizing Dinamis: Flat Risk Rp 50.000 (~303 USC), dihitung presisi via `calculate_flat_risk_lot()`.
+- Two-Stage Smart Guard: Soft Risk Halving (-0.5R @ +1.0R) -> Lock Win Bebas Rugi (+0.3R @ +1.5R) dengan target TP 1:3.0.
 - Service: `mt5-trading-bot.service` (Runner: `/home/cuker/start-bot.sh`).
 
 ### D. Bot Python Logic Akun 2 - M1 Timeframe (`mt5_config_prop1/bot.py`)
