@@ -37,7 +37,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Optimasi Akun 1 MT5: Transisi ke Solo Gold XAUUSDm (v4.5-SOLO-GOLD-OPTIMIZED) dengan Front-Running Touch Buffer (0.5x Spread), 60-Bar OB Lookback, R:R 1:3, dan Flat Risk Rp 50.000**
+- [ ] **Deployment Akun 1 MT5 Solo Gold (v4.6-PURE-RR-REJECTION): Murni R:R 1:3 (Bebas BEP), Rejection Candle Filter, Hard-Cap SL <= $2.85 (Risiko <= Rp 50.000), Validasi Realistis YTD 2026 Net +Rp 13.5M Win Rate 62.2%**
 
 - [x] **Konfigurasi Akun 2 (propfirm-mt5 / Login: 463880423) Khusus Pair XAUUSDm Timeframe M1 Dual-Direction (v4.3-M1-GOLD-DUAL) dengan Kalibrasi TP Spread Buffer & R:R 1:3**
 
@@ -83,7 +83,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-15 07:02 WIB
+**Last Updated At:** 2026-09-16 09:52 WIB
 
 
 
