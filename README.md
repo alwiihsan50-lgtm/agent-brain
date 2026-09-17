@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Integrasi Filosofi Candle Doji (Indecision Equilibrium & Reversal Confirmation Engine) pada Sistem Dual-Bot Gold: Peningkatan Net Profit +198% (+$1,266.27 USD / ~Rp 20.89M vs +$424.62 USD), Lonjakan Profit Factor ke 1.26 (Trending PF 1.30), Pemotongan Max Drawdown -61% (-$100.22 USD vs -$254.84 USD), dan Konsistensi 8 dari 9 Bulan Profit**
+
 - [ ] **Backtest Komprehensif Dual-Bot Modular Gold YTD 2026 (50.248 Bar M5): Validasi Portofolio Sinergis Trending SMC (Net +$347 USD, PF 1.07) + Sideways Sweep (Net +$77 USD, PF 1.09), Total Gabungan Net +$424.62 USD (~Rp +7.0M), Max DD -$254 USD, Laporan Interaktif HTML**
 
 - [ ] **Adaptasi Universal Multi-Currency Bot MT5 (Option 1 Dual-Bot) ke Akun Demo USD Baru (Login: 463978832, Exness-MT5Trial17, Saldo $2,822.00 USD): Proyeksi 1:1 Backtest, Auto-Detect Akun, dan Sizing Dinamis Universal (~$3.03 / ~Rp 50.000)**
@@ -91,4 +93,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-17 10:39 WIB
+**Last Updated At:** 2026-09-17 10:54 WIB

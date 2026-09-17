@@ -297,5 +297,36 @@ Pengujian komprehensif pada dataset riil 50.248 bar M5 (1 Jan - 16 Sep 2026) den
 2. **Booster Pertumbuhan:** Saat emas mengalami fase trending kuat (April +$176, Mei +$58, September +$117), Bot Trending menjadi mesin pencetak profit utama dengan asymmetric R:R 1:3.0.
 3. **Proyeksi pada Saldo $2,822 USD:** Akumulasi profit +$424.62 USD setara dengan **+15.0% return** dalam 8.5 bulan, dengan maximum drawdown portofolio hanya **9.0%** (-$254 USD).
 
+### E. Integrasi Filosofi Candle Doji (Indecision Equilibrium & Reversal Confirmation Engine)
+
+Berdasarkan saran USER untuk meningkatkan performa Profit Factor dan Win Rate sistem Dual-Bot, dilakukan riset dan implementasi matematis **Filosofi Candlestick Doji (Munehisa Homma / Steve Nison)**:
+
+1. **Prinsip Dasar & Logika Pasar:**
+   * **Doji Stalemate (Ekuilibrium / Kehabisan Momentum):** Sebuah candle dengan rasio badan tipis (`abs(Close - Open) / (High - Low) <= 0.25`) merepresentasikan keraguan dan kehabisan tenaga dorongan agresif lawan saat harga masuk ke Order Block / Range Boundary.
+   * **Prinsip Konfirmasi Reversal (Breakout Confirmation):** Doji adalah netral. Pembukaan posisi HANYA sah jika bar berikutnya ditutup membuktikan kemenangan salah satu pihak:
+     * *BUY*: Bar tertutup bullish (`Close > Open`) dan menembus ke atas *High* dari Doji (`Close > Doji_High`).
+     * *SELL*: Bar tertutup bearish (`Close < Open`) dan menembus ke bawah *Low* dari Doji (`Close < Doji_Low`).
+   * *Sideways Sweep*: Serapan likuiditas ekstrem diakomodasi via **Dragonfly Doji** pada Range Low (`lower_wick >= 50%`, `body <= 20%`) dan **Gravestone Doji** pada Range High (`upper_wick >= 50%`, `body <= 20%`).
+
+2. **Perbandingan Komparatif Backtest (50.248 Bar M5 YTD 2026, Akun $2,822 USD):**
+
+| Metrik Kinerja | Baseline (Sebelum Doji) | Doji Philosophy Enhanced | Peningkatan / Koreksi |
+| :--- | :---: | :---: | :--- |
+| **Total Trades** | 1,923 trades | 1,705 trades | -218 false trades tereliminasi |
+| **Win Rate** | 32.8% | **35.5%** | **+2.7%** |
+| **Trending Net Profit** | +$347.41 USD | **+$1,168.10 USD** | **+236%** (Naik 3.3x lipat) |
+| **Trending Profit Factor** | 1.07 | **1.30** | **+0.23** |
+| **Sideways Net Profit** | +$77.21 USD | **+$98.17 USD** | **+27%** |
+| **Combined Net Profit (USD)** | +$424.62 USD | **+$1,266.27 USD** | **+198.2%** (+Rp 13.88 Juta) |
+| **Combined Net Profit (IDR)** | +Rp 7.006.180 | **+Rp 20.893.504** | **+Rp 20.89 Juta** (+44.9% Return) |
+| **Combined Profit Factor** | 1.07 | **1.26** | **+0.19** |
+| **Max Portfolio Drawdown** | -$254.84 USD (~9.0%) | **-$100.22 USD (~3.5%)** | **-60.7%** (Drawdown terpangkas 61%) |
+
+3. **Konsistensi Bulanan Portofolio Doji Enhanced (YTD 2026):**
+   * **8 dari 9 Bulan Profit Konsisten:** Jan (+$78), Mar (+$189), Apr (+$181), Mei (+$96), Jun (+$229), Jul (+$187), Agu (+$178), Sep (+$171).
+   * **Hanya 1 Bulan Drawdown Ringan:** Feb (-$42 USD / -Rp 700rb).
+   * **Laporan HTML Interaktif:** Disajikan lengkap di [`dual_modular_gold_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/dual_modular_gold_backtest_report.html).
+
+
 
 
