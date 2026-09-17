@@ -5,15 +5,13 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** MT5 Akun 1 Solo Gold (Universal Multi-Currency Dual-Bot)
-- **Current Task:** Adaptasi Universal Bot ke Akun Demo USD Baru (Login: 463978832, Exness-MT5Trial17, Saldo: $2,822.00 USD) untuk Proyeksi Backtest 1:1 Tanpa Perlu Ubah Bot saat Ganti Akun
+- **Current Task:** Pelaksanaan Backtest Komprehensif YTD 2026 (1 Jan - 16 Sep 2026, 50.248 Bar M5 XAUUSD) untuk Sistem Modular Dual-Bot (Trending SMC R:R 1:3 + Sideways Sweep R:R 1:2)
 - **Modified Files:**
-  - `/home/cuker/mt5_storage/mt5_config/bot_trending.py` (Universal sizing, auto account switch, dual USD/IDR logging)
-  - `/home/cuker/mt5_storage/mt5_config/bot_sideways.py` (Universal sizing, auto account switch, dual USD/IDR logging)
-  - `/home/cuker/mt5_storage/mt5_config/bot.py` (Synced to bot_trending.py)
-  - `/home/cuker/.local/bin/bot-control` (Multi-currency formatted status: USD / USC / IDR)
+  - `/media/cuker/Data/Projects/trading-backtest/backtest_dual_modular_gold.py` (Script simulasi walkforward tanpa lookahead)
+  - `/media/cuker/Data/Projects/trading-backtest/dual_modular_gold_backtest_report.html` (Laporan visual interaktif HTML)
   - `/home/cuker/agent-brain/README.md`
   - `/home/cuker/agent-brain/docs/mt5-docker-forex-trading-automation.md`
-- **Verification Command / URL:** `bot-control status`
+- **Verification Command / URL:** `uv run --with pandas --with numpy python3 /media/cuker/Data/Projects/trading-backtest/backtest_dual_modular_gold.py`
 - **Next Steps / Notes:** Menunggu konfirmasi dan validasi dari USER sebelum menandai task selesai.
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-09-17 10:16 WIB
+- **Last Updated At:** 2026-09-17 10:38 WIB

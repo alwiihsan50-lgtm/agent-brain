@@ -279,7 +279,23 @@ Pada 17 September 2026, dilakukan evaluasi kritis menyeluruh terhadap klaim back
 ### C. Konfigurasi Aktif Live (v5.2-PURE-RR3)
 - **Engine:** `STAGE1_TRIGGER_RR = 0.0`, `STAGE2_TRIGGER_RR = 0.0`, `AUTO_BE_TRIGGER_RR = 0.0`.
 - **Target R:R:** Strict 1:3.0 (+Rp 150.000 vs Flat Risk Rp 50.000).
-- **Akun:** Exness Cent `263301611` (`XAUUSDc`).
+- **Akun:** Exness Cent `263301611` (`XAUUSDc`) / Demo USD `463978832` (`XAUUSDm`).
+
+### D. Validasi Backtest Dual-Bot Modular (Trending SMC + Sideways Sweep YTD 2026)
+Pengujian komprehensif pada dataset riil 50.248 bar M5 (1 Jan - 16 Sep 2026) dengan flat risk $3.03 USD (~Rp 50.000) per trade:
+- **Laporan Visual Interaktif:** [`dual_modular_gold_backtest_report.html`](file:///media/cuker/Data/Projects/trading-backtest/dual_modular_gold_backtest_report.html)
+- **Script Backtest:** [`backtest_dual_modular_gold.py`](file:///media/cuker/Data/Projects/trading-backtest/backtest_dual_modular_gold.py)
+
+| Strategi / Modul | Target R:R | Total Trade | Win Rate | Net Profit (USD) | Net Profit (IDR) | Profit Factor | Max Drawdown |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Module 1: Trending SMC** | 1:3.0 | 1,533 | 31.7% | +$347.41 | +Rp 5,732,232 | 1.07 | -$236.37 (~Rp 3.9M) |
+| **Module 2: Sideways Sweep** | 1:2.0 | 390 | **37.2%** | +$77.21 | +Rp 1,273,948 | **1.09** | **-$77.38** (~Rp 1.2M) |
+| **Combined Portfolio** | **Hybrid** | **1,923** | **32.8%** | **+$424.62** | **+Rp 7,006,180** | **1.07** | **-$254.84** (~Rp 4.2M) |
+
+**Temuan Kunci Sinergi Dual-Regime:**
+1. **Stabilizer Alami:** Pada bulan-bulan di mana pasar emas berkonsolidasi dan tren gagal berlanjut (Februari +$18, Juni +$50, Agustus +$43), Bot Sideways menghasilkan profit positif yang menambal penurunan (*cushioning drawdown*) Bot Trending.
+2. **Booster Pertumbuhan:** Saat emas mengalami fase trending kuat (April +$176, Mei +$58, September +$117), Bot Trending menjadi mesin pencetak profit utama dengan asymmetric R:R 1:3.0.
+3. **Proyeksi pada Saldo $2,822 USD:** Akumulasi profit +$424.62 USD setara dengan **+15.0% return** dalam 8.5 bulan, dengan maximum drawdown portofolio hanya **9.0%** (-$254 USD).
 
 
 
