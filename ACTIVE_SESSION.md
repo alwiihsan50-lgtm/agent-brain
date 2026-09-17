@@ -4,16 +4,16 @@
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
 - **Status:** READY_FOR_REVIEW
-- **Active Project:** MT5 Akun 1 Solo Gold (Modular Dual-Bot Architecture)
-- **Current Task:** Implementasi Pendekatan Modular Opsi 1: Bot Trending (SMC M5 R:R 1:3) & Bot Sideways (Asian Range Sweep / Turtle Soup R:R 1:2)
+- **Active Project:** MT5 Akun 1 Solo Gold (Universal Multi-Currency Dual-Bot)
+- **Current Task:** Adaptasi Universal Bot ke Akun Demo USD Baru (Login: 463978832, Exness-MT5Trial17, Saldo: $2,822.00 USD) untuk Proyeksi Backtest 1:1 Tanpa Perlu Ubah Bot saat Ganti Akun
 - **Modified Files:**
-  - `/home/cuker/mt5_storage/mt5_config/bot_trending.py` (Modular Trending Bot, Magic 889911, ADX M15 >= 18)
-  - `/home/cuker/mt5_storage/mt5_config/bot_sideways.py` (Modular Sideways Bot, Magic 889922, Asian Range Sweep, ADX M15 <= 25, R:R 1:2)
-  - `/home/cuker/mt5_storage/mt5_config/bot_supervisor.py` (Dual-process lifecycle manager & telemetry aggregator)
-  - `/home/cuker/start-bot.sh` (Runner systemd launching supervisor)
-  - `/home/cuker/.local/bin/bot-control` (CLI control tool: status, logs, restart, test)
-  - `/home/cuker/mt5_storage/mt5_mcp_server.py` (Fallback support for Gold symbols)
+  - `/home/cuker/mt5_storage/mt5_config/bot_trending.py` (Universal sizing, auto account switch, dual USD/IDR logging)
+  - `/home/cuker/mt5_storage/mt5_config/bot_sideways.py` (Universal sizing, auto account switch, dual USD/IDR logging)
+  - `/home/cuker/mt5_storage/mt5_config/bot.py` (Synced to bot_trending.py)
+  - `/home/cuker/.local/bin/bot-control` (Multi-currency formatted status: USD / USC / IDR)
+  - `/home/cuker/agent-brain/README.md`
+  - `/home/cuker/agent-brain/docs/mt5-docker-forex-trading-automation.md`
 - **Verification Command / URL:** `bot-control status`
 - **Next Steps / Notes:** Menunggu konfirmasi dan validasi dari USER sebelum menandai task selesai.
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-09-17 10:08 WIB
+- **Last Updated At:** 2026-09-17 10:16 WIB
