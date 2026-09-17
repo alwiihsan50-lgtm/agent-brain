@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Deployment Live Strategi Doji + H1 EMA 50 + MACD Momentum (R:R 1:3.0) pada MT5 Akun Cent Exness (XAUUSDc) dengan Sizing Dinamis Flat Risk Rp 20.000 (~121 USC)**
+
 - [ ] **Integrasi Filosofi Candle Doji (Indecision Equilibrium & Reversal Confirmation Engine) pada Sistem Dual-Bot Gold: Peningkatan Net Profit +198% (+$1,266.27 USD / ~Rp 20.89M vs +$424.62 USD), Lonjakan Profit Factor ke 1.26 (Trending PF 1.30), Pemotongan Max Drawdown -61% (-$100.22 USD vs -$254.84 USD), dan Konsistensi 8 dari 9 Bulan Profit**
 
 - [ ] **Backtest Komprehensif Dual-Bot Modular Gold YTD 2026 (50.248 Bar M5): Validasi Portofolio Sinergis Trending SMC (Net +$347 USD, PF 1.07) + Sideways Sweep (Net +$77 USD, PF 1.09), Total Gabungan Net +$424.62 USD (~Rp +7.0M), Max DD -$254 USD, Laporan Interaktif HTML**
@@ -93,4 +95,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-17 10:54 WIB
+**Last Updated At:** 2026-09-17 15:30 WIB
