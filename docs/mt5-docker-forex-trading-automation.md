@@ -72,11 +72,25 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
   docker exec --user abc propfirm-mt5 wine python -u /config/bot.py      # Akun 2
   ```
 
-### C. Bot Python Logic Akun 1 - M5 Timeframe (`mt5_config/bot.py`)
-- Terletak di `/home/cuker/mt5_storage/mt5_config/bot.py` (tersinkronisasi langsung ke `/config/bot.py` container `exness-mt5`).
-- Solo Gold SMC M5 Engine: XAUUSDc (Exness Cent Account - Trade Contract Size: 1.0 oz).
-- Pure R:R Strategy: Strict 1:3.0 (+Rp 150.000 vs Flat Risk Rp 50.000) tanpa trailing guard/Auto BE.
-- Service: `mt5-trading-bot.service` (Runner: `/home/cuker/start-bot.sh`).
+### C. Bot Python Logic Akun 1 - Modular Dual-Bot (`mt5_config/`)
+- **Arsitektur Modular (Option 1):** Satu terminal MT5 menjalankan 2 bot independen dengan `magic_number` berbeda:
+  1. **`bot_trending.py` (Magic `889911`):**
+     - Strategi: Pure SMC M5 (BOS + FVG/OB unmitigated + H1 EMA-50 trend alignment).
+     - Filter Rejim: ADX(14) M15 >= 18 (hanya aktif saat ada momentum tren sehat).
+     - Target: R:R Strict 1:3.0 (+Rp 150.000 vs -Rp 50.000).
+     - Log & Telemetri: `/config/bot_trending.log` & `/ram_data/bot_status_trending.json`.
+  2. **`bot_sideways.py` (Magic `889922`):**
+     - Strategi: Asian Range Liquidity Sweep / Turtle Soup (Fakeout Reversal).
+     - Filter Rejim: ADX(14) M15 <= 25 & Box Range $3.00 - $18.00 (mencegah false sweep saat trending).
+     - Setup: Sweep wick di luar box range + rejection candle >= 35% masuk kembali ke dalam range.
+     - Target: R:R Strict 1:2.0 (+Rp 100.000 vs -Rp 50.000).
+     - Log & Telemetri: `/config/bot_sideways.log` & `/ram_data/bot_status_sideways.json`.
+  3. **`bot_supervisor.py` (Process Manager & Aggregator):**
+     - Mengawasi lifecycle kedua bot (auto-restart jika salah satu crash).
+     - Menggabungkan telemetri kedua bot ke `/ram_data/bot_status.json` dan `/config/bot_status.json`.
+- **Sizing:** Dinamis Flat Risk Rp 50.000 per posisi (~303 USC pada Cent account / Rp 50.000 Standard).
+- **Service:** `mt5-trading-bot.service` (Runner: `/home/cuker/start-bot.sh`).
+- **CLI Helper:** `bot-control` (`status`, `logs`, `restart`, `test`).
 
 ### D. Bot Python Logic Akun 2 - M1 Timeframe (`mt5_config_prop1/bot.py`)
 - Terletak di `/home/cuker/mt5_storage/mt5_config_prop1/bot.py` (tersinkronisasi ke `/config/bot.py` container `propfirm-mt5`).

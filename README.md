@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Implementasi Modular Dual-Bot MT5 Solo Gold (Option 1): Pemisahan Bot Trending (SMC M5 BOS + FVG/OB R:R 1:3, Magic 889911) dan Bot Sideways (Asian Range Sweep / Turtle Soup R:R 1:2, Magic 889922), Supervisor Proses, CLI Helper `bot-control`, dan Sizing Dinamis Flat Risk Rp 50.000**
+
 - [ ] **Audit Backtest YTD 2026 & Upgrade Akun 1 MT5 Solo Gold ke v5.2-PURE-RR3: Evaluasi Kritis Bias Metodologi Backtest Lama (Overfitting & Lookahead), Eliminasi Two-Stage Guard, dan Deployment Mode Murni R:R 1:3 (Net +Rp 383K, PF 1.14)**
 
 - [x] **Adaptasi Bot MT5 Pure SMC v5.1 ke Akun Cent Exness (XAUUSDc): Sizing Dinamis Flat Risk Rp 50.000 (~303 USC), Koreksi Suffix Simbol & Currency Display**
@@ -85,4 +87,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-17 01:52 WIB
+**Last Updated At:** 2026-09-17 10:08 WIB
