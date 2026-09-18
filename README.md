@@ -38,6 +38,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Deployment Bot Mandiri Daily Sniper D1 (1-Bar Exit, Magic 889933) pada MT5 Exness untuk Pasangan XAUUSDc & USDJPYc dengan Supervisi Multi-Timeframe**
 - [ ] **Upgrade Ukuran Doji & Integrasi Rejection Wick Filter (Dragonfly/Gravestone) pada Bot Trending Gold MT5: Peningkatan Profit Factor ke 1.75, Net Profit +Rp 8.47M (+51,329 USC), Win Rate 37.1%, Max DD 15.3 R, dan 9/9 Bulan Hijau**
 
 - [x] **Deployment Live Strategi Doji + H1 EMA 50 + MACD Momentum (R:R 1:3.0) pada MT5 Akun Cent Exness (XAUUSDc) dengan Sizing Dinamis Flat Risk Rp 20.000 (~121 USC)**
@@ -80,4 +81,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-18 11:15 WIB
+**Last Updated At:** 2026-09-18 16:32 WIB
