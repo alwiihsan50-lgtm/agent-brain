@@ -38,29 +38,11 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Deployment Live Strategi Doji + H1 EMA 50 + MACD Momentum (R:R 1:3.0) pada MT5 Akun Cent Exness (XAUUSDc) dengan Sizing Dinamis Flat Risk Rp 20.000 (~121 USC)**
+- [x] **Deployment Live Strategi Doji + H1 EMA 50 + MACD Momentum (R:R 1:3.0) pada MT5 Akun Cent Exness (XAUUSDc) dengan Sizing Dinamis Flat Risk Rp 20.000 (~121 USC)**
+- [x] **Integrasi Candle Doji & Optimalisasi Dual-Bot Gold (Net +198%, PF 1.26/1.30, Max DD -61%, 8/9 Bulan Profit)**
+- [x] **Audit, Kalibrasi Parameter (Doji 0.30, MACD 16/38/9, Rem 3x SL), dan Deployment Toolkit `xau-backtest`**
 
-- [ ] **Integrasi Filosofi Candle Doji (Indecision Equilibrium & Reversal Confirmation Engine) pada Sistem Dual-Bot Gold: Peningkatan Net Profit +198% (+$1,266.27 USD / ~Rp 20.89M vs +$424.62 USD), Lonjakan Profit Factor ke 1.26 (Trending PF 1.30), Pemotongan Max Drawdown -61% (-$100.22 USD vs -$254.84 USD), dan Konsistensi 8 dari 9 Bulan Profit**
-
-- [ ] **Backtest Komprehensif Dual-Bot Modular Gold YTD 2026 (50.248 Bar M5): Validasi Portofolio Sinergis Trending SMC (Net +$347 USD, PF 1.07) + Sideways Sweep (Net +$77 USD, PF 1.09), Total Gabungan Net +$424.62 USD (~Rp +7.0M), Max DD -$254 USD, Laporan Interaktif HTML**
-
-- [ ] **Adaptasi Universal Multi-Currency Bot MT5 (Option 1 Dual-Bot) ke Akun Demo USD Baru (Login: 463978832, Exness-MT5Trial17, Saldo $2,822.00 USD): Proyeksi 1:1 Backtest, Auto-Detect Akun, dan Sizing Dinamis Universal (~$3.03 / ~Rp 50.000)**
-
-- [ ] **Implementasi Modular Dual-Bot MT5 Solo Gold (Option 1): Pemisahan Bot Trending (SMC M5 BOS + FVG/OB R:R 1:3, Magic 889911) dan Bot Sideways (Asian Range Sweep / Turtle Soup R:R 1:2, Magic 889922), Supervisor Proses, CLI Helper `bot-control`, dan Sizing Dinamis Flat Risk Rp 50.000**
-
-- [ ] **Audit Backtest YTD 2026 & Upgrade Akun 1 MT5 Solo Gold ke v5.2-PURE-RR3: Evaluasi Kritis Bias Metodologi Backtest Lama (Overfitting & Lookahead), Eliminasi Two-Stage Guard, dan Deployment Mode Murni R:R 1:3 (Net +Rp 383K, PF 1.14)**
-
-- [x] **Adaptasi Bot MT5 Pure SMC v5.1 ke Akun Cent Exness (XAUUSDc): Sizing Dinamis Flat Risk Rp 50.000 (~303 USC), Koreksi Suffix Simbol & Currency Display**
-
-- [x] **Deployment Akun 1 MT5 Solo Gold (v5.1-RR3-TWO-STAGE-GUARD): Target R:R 1:3.0 dengan Two-Stage Smart Guard (Soft Cut -0.5R @ +1.0R -> Lock +0.3R @ +1.5R, Max SL Clamp Rp 100rb, Validasi Net +Rp 14.25M Win Rate 76.7%, PF 7.26, Max DD Rp 272rb)**
-
-- [x] **Deployment Akun 1 MT5 Solo Gold (v4.8-CLAMP-100K-PURE-RR): Murni R:R 1:3, Rejection Filter, Max SL Clamp Rp 100rb ($5.68), Fixed 0.01 Lot, Validasi M1 Intra-Bar Net +Rp 18.2M**
-
-- [x] **Deployment Akun 1 MT5 Solo Gold (v4.7-PROPER-SL-PURE-RR): Murni R:R 1:3 (No BEP), Rejection Candle Filter, Proper Structural SL (Maks $10.00), Fixed 0.01 Lot Murni, Validasi YTD 2026 Net +Rp 47.1M Win Rate 60.5%**
-
-- [x] **Deployment Akun 1 MT5 Solo Gold (v4.6-PURE-RR-REJECTION): Murni R:R 1:3 (Bebas BEP), Rejection Candle Filter, Hard-Cap SL <= $2.85 (Risiko <= Rp 50.000), Validasi Realistis YTD 2026 Net +Rp 13.5M Win Rate 62.2%**
-
-- 📂 *Riwayat lengkap seluruh milestone terdahulu telah diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
+- 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
 
@@ -96,4 +78,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-18 10:31 WIB
+**Last Updated At:** 2026-09-18 10:45 WIB
