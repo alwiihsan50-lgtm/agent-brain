@@ -5,15 +5,17 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** MT5 Akun 1 Solo Gold (Universal Multi-Currency Solo Bot Doji + MACD(16, 38, 9) + ADX + Golden Cross Engine)
-- **Current Task:** Full Gold Calibration: Penyetelan Variabel Doji Body Ratio (0.30) & Lookback Window (5 bar) + MACD(16, 38, 9) + HTF Golden Cross pada [`bot_trending.py`](file:///home/cuker/mt5_storage/mt5_config/bot_trending.py) (Flat Risk Rp 20.000 / ~121 USC, R:R 1:3.0)
+- **Current Task:** Kalibrasi Lengkap & Optimalisasi Bot Trending Gold: Validasi Setup Terbaik (H1 EMA50/200 + ADX 20 + MACD 16/38/9 + Doji 0.30 + Flat Risk Rp 20.000 + R:R 1:3.0) & Analisis Rem Harian 3x vs 5x SL
 - **Modified Files:**
-  - [`/home/cuker/mt5_storage/mt5_config/bot_trending.py`](file:///home/cuker/mt5_storage/mt5_config/bot_trending.py) (`MAX_DOJI_BODY_RATIO=0.30`, `lookback range(3, 8)`, `MACD_FAST=16`, `MACD_SLOW=38`, `MACD_SIGNAL=9`, `USE_HTF_GOLDEN_CROSS=True`)
+  - [`/home/cuker/mt5_storage/mt5_config/bot_trending.py`](file:///home/cuker/mt5_storage/mt5_config/bot_trending.py) (Setup Optimal Golden Stack aktif berjalan)
   - [`/home/cuker/agent-brain/ACTIVE_SESSION.md`](file:///home/cuker/agent-brain/ACTIVE_SESSION.md)
 - **Verification Command / URL:** `bot-control status`
 - **Proof of Work:**
-  - Bot live online & aktif berjalan di container `exness-mt5` (PID 3898).
-  - Telemetri real-time: `[TRENDING_DOJI_MACD] XAUUSDc @ 4353.679 ➔ HOLD (Scan Doji+MACD: HTF DEATH CROSS (BEARISH) (EMA50 4327.44 vs EMA200 4346.46) | ADX 73.9 (Trend OK) | MACD Bull | Scanning Doji)`
-  - Backtest 9 bulan: Win Rate naik ke **35.8%**, Profit Factor melonjak ke **1.66**, Net Profit **+Rp 7.553.248 (+45.779 USC)**, Max Drawdown terpangkas ke **15.1 R (Rp 303.615)**.
-- **Next Steps / Notes:** Menunggu konfirmasi dan validasi dari USER.
+  - Bot live online & aktif berjalan di container `exness-mt5` (PID 3855 supervisor, PID 3898 child process).
+  - Akun: Exness Cent `263301611`, Server `Exness-MT5Real37`, Balance `3,348.4 USC` (~$33.48 / ~Rp 552.486).
+  - Telemetri real-time: `[TRENDING_DOJI_MACD] XAUUSDc @ 4338.919 ➔ HOLD` (Scanning aktif tanpa error).
+  - Hasil Backtest Final 9 Bulan: Win Rate **35.8%**, Profit Factor **1.66**, Net Profit **+Rp 7.553.248 (+45.779 USC)**, Max Drawdown **15.1 R (Rp 303.615 / 1.840 USC)**, 9 bulan konsisten hijau tanpa bulan minus.
+  - Dokumentasi empiris karakteristik SL beruntun (sideways vs trending whipsaw) & perbandingan rem 3x vs 5x SL lengkap.
+- **Next Steps / Notes:** Sesi selesai. Menunggu konfirmasi user untuk menandai tugas [1] selesai (`[x]`).
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-09-18 08:37 WIB
+- **Last Updated At:** 2026-09-18 10:21 WIB
