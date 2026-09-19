@@ -46,11 +46,11 @@ Dokumen ini menjelaskan integrasi sinergi antara **`agent-brain`** (Penyimpanan 
    ```
    *(Opsional: pasang Git Post-Commit Hook agar langkah ini berjalan otomatis di background).*
 
-5. **Phase 5: Pencatatan Memori Permanen (`agent-brain`)**
-   Agent menyajikan laporan format standar *"Ready for Review"* (What Changed, Proof of Work, One-liner verification) ke USER. Semua tugas baru/aktif tetap berstatus `- [ ]` sampai divalidasi langsung oleh USER. Gunakan utilitas CLI `brain` (`brain status`, `brain task`, `brain session`, dan `brain push "<msg>"`) untuk sinkronisasi otomatis ke repositori `alwiihsan50-lgtm/agent-brain`.
+5. **Phase 5: Pencatatan Memori Permanen & Auto-Archival (`agent-brain`)**
+   Agent menyajikan laporan format standar *"Ready for Review"* (What Changed, Proof of Work, One-liner verification) ke USER. Semua tugas baru/aktif tetap berstatus `- [ ]` sampai divalidasi langsung oleh USER. Setelah divalidasi dan diubah ke `[x]`, sistem (`brain`) secara otomatis mengarsipkan tugas selesai terdahulu ke `docs/history/completed-milestones-archive.md` dan HANYA menyisakan 2 catatan pekerjaan selesai terakhir di `README.md`. Gunakan utilitas CLI `brain` (`brain status`, `brain task`, `brain archive`, `brain session`, dan `brain push "<msg>"`) untuk sinkronisasi otomatis ke repositori `alwiihsan50-lgtm/agent-brain`.
 
 ---
 
 ## 🛡️ Best Practices & Git Management
 - `graphify-out/` dan `.graphify_*` secara global telah di-ignore melalui `~/.gitignore_global` sehingga tidak akan mencemari commit kode aplikasi.
-- `agent-brain/README.md` dijaga ringkas (<100 baris) agar fase Booting AI Agent selalu cepat dan hemat token.
+- `agent-brain/README.md` dijaga ringkas (<100 baris) melalui kebijakan auto-archival (hanya menyimpan 2 riwayat task selesai terakhir) agar fase Booting AI Agent selalu cepat dan hemat token.

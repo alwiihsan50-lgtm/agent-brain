@@ -149,6 +149,105 @@ def complete_task(target, confirm=False):
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(content)
     print(f"\033[32m✓ Task marked completed:\033[0m {updated_line}")
+    auto_archive_tasks(keep_recent=2)
+
+MONTH_NAMES_ID = {
+    1: "Januari", 2: "Februari", 3: "Maret", 4: "April", 5: "Mei", 6: "Juni",
+    7: "Juli", 8: "Agustus", 9: "September", 10: "Oktober", 11: "November", 12: "Desember"
+}
+
+def get_current_date_id():
+    now = datetime.now()
+    month_name = MONTH_NAMES_ID.get(now.month, now.strftime("%B"))
+    return f"{now.day} {month_name} {now.year}"
+
+def auto_archive_tasks(keep_recent=2):
+    if not os.path.exists(README_PATH):
+        return 0
+    with open(README_PATH, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    lines = content.splitlines()
+    wip_start = -1
+    wip_end = len(lines)
+    for i, l in enumerate(lines):
+        if "## 🚀 Status Tugas Aktif" in l:
+            wip_start = i
+            continue
+        if wip_start != -1 and l.startswith("## "):
+            wip_end = i
+            break
+
+    if wip_start == -1:
+        return 0
+
+    wip_lines = lines[wip_start:wip_end]
+
+    completed_indices = []
+    completed_tasks = []
+    for idx, l in enumerate(wip_lines):
+        if l.strip().startswith("- [x]"):
+            completed_indices.append(idx)
+            completed_tasks.append(l.strip())
+
+    if len(completed_tasks) <= keep_recent:
+        return 0
+
+    tasks_to_keep = completed_tasks[:keep_recent]
+    tasks_to_archive = completed_tasks[keep_recent:]
+    indices_to_remove = set(completed_indices[keep_recent:])
+
+    new_wip_lines = []
+    for idx, l in enumerate(wip_lines):
+        if idx in indices_to_remove:
+            continue
+        new_wip_lines.append(l)
+
+    # Clean multiple consecutive blank lines in wip
+    cleaned_wip = []
+    prev_blank = False
+    for l in new_wip_lines:
+        if not l.strip():
+            if not prev_blank:
+                cleaned_wip.append(l)
+            prev_blank = True
+        else:
+            cleaned_wip.append(l)
+            prev_blank = False
+
+    new_lines = lines[:wip_start] + cleaned_wip + lines[wip_end:]
+    new_content = "\n".join(new_lines) + "\n"
+
+    with open(README_PATH, "w", encoding="utf-8") as f:
+        f.write(new_content)
+
+    # Append tasks_to_archive to ARCHIVE_PATH
+    if os.path.exists(ARCHIVE_PATH):
+        with open(ARCHIVE_PATH, "r", encoding="utf-8") as f:
+            archive_content = f.read()
+    else:
+        archive_content = "# 📜 Arsip Milestone & Riwayat Proyek yang Telah Selesai\n\n---\n\n"
+
+    today_str = get_current_date_id()
+    header_target = f"## 📅 Selesai Per {today_str}"
+    task_block = "\n".join(tasks_to_archive)
+
+    if header_target in archive_content:
+        parts = archive_content.split(header_target, 1)
+        archive_content = parts[0] + header_target + "\n\n" + task_block + "\n" + parts[1].lstrip("\n")
+    else:
+        if "---" in archive_content:
+            parts = archive_content.split("---", 1)
+            archive_content = parts[0] + "---\n\n" + header_target + "\n\n" + task_block + "\n\n" + parts[1].lstrip("\n")
+        else:
+            archive_content = archive_content.rstrip() + "\n\n" + header_target + "\n\n" + task_block + "\n"
+
+    with open(ARCHIVE_PATH, "w", encoding="utf-8") as f:
+        f.write(archive_content)
+
+    print(f"\033[32m✓ Auto-Archived {len(tasks_to_archive)} tasks to docs/history/ (menyisakan {keep_recent} task terakhir di README.md).\033[0m")
+    return len(tasks_to_archive)
+
 
 def show_session():
     print("\n\033[1;35m=== 📝 Active Session Scratchpad ===\033[0m")
@@ -225,6 +324,9 @@ def push_brain(commit_msg, agent_name="AI Agent"):
         print("Error: Commit message required. Example: brain push 'feat: my update'")
         sys.exit(1)
         
+    # Auto-archive older completed tasks (keep 2 most recent)
+    auto_archive_tasks(keep_recent=2)
+
     # Check README line limit (<100 lines)
     if os.path.exists(README_PATH):
         with open(README_PATH, "r", encoding="utf-8") as f:
@@ -260,6 +362,11 @@ def main():
         print_health()
     elif cmd in ("health", "ports"):
         print_health()
+    elif cmd in ("archive", "task-archive"):
+        keep = 2
+        if len(sys.argv) > 2 and sys.argv[2].isdigit():
+            keep = int(sys.argv[2])
+        auto_archive_tasks(keep_recent=keep)
     elif cmd == "task":
         if len(sys.argv) < 3:
             list_tasks()
@@ -275,6 +382,11 @@ def main():
             args = [a for a in sys.argv[3:] if a != "--confirm-user"]
             target = " ".join(args)
             complete_task(target, confirm=confirm)
+        elif sub == "archive":
+            keep = 2
+            if len(sys.argv) > 3 and sys.argv[3].isdigit():
+                keep = int(sys.argv[3])
+            auto_archive_tasks(keep_recent=keep)
         else:
             print(f"Unknown task command: {sub}")
     elif cmd == "session":
@@ -313,11 +425,12 @@ Usage:
   brain task list              Tampilkan daftar tugas (Work in Progress)
   brain task add "<deskripsi>" Tambah tugas baru berstatus [ ]
   brain task done <id|nama> --confirm-user   Tandai tugas selesai [x] (WAJIB konfirmasi user)
+  brain archive [keep=2]       Arsipkan tugas [x] lama otomatis (default: sisakan 2 terakhir)
   brain session show           Lihat isi ACTIVE_SESSION.md scratchpad
   brain session set --project "X" --task "Y" --notes "Z"  Catat context sesi aktif
   brain session clear          Reset scratchpad sesi ke IDLE
   brain review                 Tampilkan format standar template Ready for Review
-  brain push "<commit-msg>"    Validasi, perbarui timestamp, commit & push ke GitHub
+  brain push "<commit-msg>"    Auto-archive [x], validasi, update timestamp, commit & push
 """)
 
 if __name__ == "__main__":

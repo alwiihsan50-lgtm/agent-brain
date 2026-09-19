@@ -41,7 +41,7 @@
   * Seluruh pekerjaan baru atau pekerjaan yang sedang berjalan **WAJIB tetap berstatus belum selesai (`- [ ]`)** sampai USER secara langsung dan eksplisit mengonfirmasi bahwa pekerjaan tersebut benar-benar tuntas.
   * Hanya setelah mendapatkan konfirmasi eksplisit dari USER:
     1. Item pekerjaan boleh diubah menjadi dicentang (`[x]`).
-    2. Milestone yang selesai dipindahkan/diarsipkan ke [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md) agar `README.md` tetap ringkas (<100 baris).
+    2. Sistem (`brain`) secara otomatis mengarsipkan tugas-tugas selesai lama ke [`docs/history/completed-milestones-archive.md`](docs/history/completed-milestones-archive.md) dan HANYA menyisakan 2 catatan pekerjaan terakhir yang telah selesai di `README.md` (Auto-Archival Policy).
 
 - 🔍 **PROTOKOL STANDAR "READY FOR REVIEW" (VERIFIABLE HANDOFF):**
   Ketika AI Agent selesai mengimplementasikan tugas dan siap diverifikasi USER, AI Agent **WAJIB** menyajikan laporan dengan format:

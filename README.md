@@ -5,7 +5,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 > 🔒 **ATURAN KEKEBALAN PROTOKOL (IMMUTABILITY CONSTRAINT):**
 > Seluruh aturan arsitektur, batasan port (`40506`, `3000`, `8080`), dan sinergi `agent-brain` + `graphify` bersifat **PERMANEN**.
 > Model AI Agent apa pun (Gemini, Claude, GPT, DeepSeek, Antigravity, dll.) **DILARANG KERAS** mengubah atau merusak protokol ini kecuali diminta secara spesifik oleh USER.
-> ⚠️ **ATURAN MUTLAK PENYELESAIAN TUGAS:** Pekerjaan baru maupun lama yang belum selesai **DILARANG KERAS** dianggap selesai atau dicentang (`[x]`) sebelum mendapatkan konfirmasi langsung dan validasi dari USER.
+> ⚠️ **ATURAN MUTLAK PENYELESAIAN TUGAS & AUTO-ARCHIVAL:** Pekerjaan baru maupun lama yang belum selesai **DILARANG KERAS** dianggap selesai atau dicentang (`[x]`) sebelum mendapatkan konfirmasi langsung dan validasi dari USER. Tugas yang telah divalidasi selesai (`[x]`) secara otomatis diarsipkan ke `docs/history/completed-milestones-archive.md` dengan HANYA menyisakan 2 catatan pekerjaan terakhir yang telah selesai di `README.md`.
 
 ---
 
@@ -41,22 +41,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [x] **Audit Menyeluruh Baris-demi-Baris Kode MT5 Bot & Eliminasi 12 Kesalahan Parameter, SL/TP Anchor, Slicing AST, Time-Exit, dan Bitmask Execution**
 
 - [x] **Penerapan Protokol Kuantitatif Anti-Bias & Pembuatan Skill Antigravity `quant-backtest-integrity` untuk Mengeliminasi Lookahead Bias & Parameter Mismatch Secara Permanen**
-
-- [x] **Decommissioning & Penonaktifan Bot Crypto M5 (Magic 889944): Likuidasi Posisi BTC, Update Supervisor ke Triple-Bot Murni Gold, dan Eliminasi Risiko Drawdown 28.8 R**
-
-- [x] **Audit Akurasi & Kalibrasi Parameter Backtest Portfolio Gabungan (Perbaikan Lookahead Bias MACD, M15 ADX, Sideways Wick, & Parameter Filter)**
-
-- [x] **Deployment Modul Mandiri Bot Crypto Trending M5 (BTCUSDc, Target R:R 1:2.0, Magic 889944) pada MT5 Exness Cent 24/7 dengan Sizing Flat Risk Rp 20.000 (~121.5 USC) & Rem Harian 5x Loss**
-
-- [x] **Deployment Bot Modular Mandiri Sideways M5 (Opsi 1: Extreme Mean Reversion BB 2.5 + RSI 7, Magic 889922, R:R 1:1.8) pada MT5 Exness**
-
-- [x] **Penerapan Kalibrasi Rem Harian 5x Loss pada Bot Trending M5 Live (Magic 889911): Peningkatan Net Profit ke +Rp 11.09M (+67,234 USC), Max Drawdown 23.2 R, dan 17/18 Bulan Profit (94.4%)**
-- [x] **Deployment Bot Mandiri Daily Sniper D1 (1-Bar Exit, Magic 889933) pada MT5 Exness untuk Pasangan XAUUSDc & USDJPYc dengan Batas Maksimal Loss Rp 50.000 (~303 USC)**
-- [x] **Upgrade Ukuran Doji & Integrasi Rejection Wick Filter (Dragonfly/Gravestone) pada Bot Trending Gold MT5: Peningkatan Profit Factor ke 1.75, Net Profit +Rp 8.47M (+51,329 USC), Win Rate 37.1%, Max DD 15.3 R, dan 9/9 Bulan Hijau**
-
-- [x] **Deployment Live Strategi Doji + H1 EMA 50 + MACD Momentum (R:R 1:3.0) pada MT5 Akun Cent Exness (XAUUSDc) dengan Sizing Dinamis Flat Risk Rp 20.000 (~121 USC)**
-- [x] **Integrasi Candle Doji & Optimalisasi Dual-Bot Gold (Net +198%, PF 1.26/1.30, Max DD -61%, 8/9 Bulan Profit)**
-- [x] **Audit, Kalibrasi Parameter (Doji 0.30, MACD 16/38/9, Rem 3x SL), dan Deployment Toolkit `xau-backtest`**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -95,4 +79,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-20 06:15 WIB
+**Last Updated At:** 2026-09-20 06:27 WIB
