@@ -4,10 +4,10 @@
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
 - **Status:** READY_FOR_REVIEW
-- **Active Project:** MT5 Exness Trading Bot / Quant Framework
-- **Current Task:** Standarisasi Protokol Kuantitatif Anti-Bias & Pembuatan Skill Antigravity `quant-backtest-integrity`
-- **Modified Files:** /home/cuker/.gemini/config/skills/quant-backtest-integrity/SKILL.md, /home/cuker/agent-brain/docs/quantitative-bot-development-and-zero-bias-backtesting-protocol.md, /home/cuker/agent-brain/README.md
-- **Verification Command / URL:** ls -la /home/cuker/.gemini/config/skills/quant-backtest-integrity/SKILL.md
-- **Next Steps / Notes:** Panduan 7 Pilar Zero-Bias Protocol dan Skill Antigravity telah diimplementasikan secara permanen. Menunggu konfirmasi user.
-- **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-09-20 03:24 WIB
+- **Active Project:** MT5 Trading Bot
+- **Current Task:** Eliminasi 12 Kesalahan Parameter & Arsitektur MT5 Bot
+- **Modified Files:** bot_sideways.py, bot_daily_doji.py, bot_trending.py, bot_supervisor.py
+- **Verification Command / URL:** bot-control status
+- **Next Steps / Notes:** 12 kesalahan diperbaiki & diverifikasi live di MT5. Menunggu validasi user.
+- **Last Updated By:** Antigravity
+- **Last Updated At:** 2026-09-20 03:48 WIB
