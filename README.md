@@ -36,6 +36,10 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ---
 
+## 🚀 Status Tugas Aktif (Work in Progress)
+
+- [ ] **Penerapan Protokol Kuantitatif Anti-Bias & Pembuatan Skill Antigravity `quant-backtest-integrity` untuk Mengeliminasi Lookahead Bias & Parameter Mismatch Secara Permanen** ⚠️ [MENUNGGU KONFIRMASI USER]
+
 - [x] **Decommissioning & Penonaktifan Bot Crypto M5 (Magic 889944): Likuidasi Posisi BTC, Update Supervisor ke Triple-Bot Murni Gold, dan Eliminasi Risiko Drawdown 28.8 R**
 
 - [x] **Audit Akurasi & Kalibrasi Parameter Backtest Portfolio Gabungan (Perbaikan Lookahead Bias MACD, M15 ADX, Sideways Wick, & Parameter Filter)**
@@ -59,6 +63,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ## 📚 Indeks Dokumentasi (`docs/`)
 
 - 📝 [**Active Session Scratchpad**](ACTIVE_SESSION.md) — Jembatan memori real-time antar agent saat pengerjaan tugas aktif.
+- 📄 [**Protokol Bot & Backtest Anti-Bias**](docs/quantitative-bot-development-and-zero-bias-backtesting-protocol.md) — Standar wajib 7 pilar kuantitatif eliminasi lookahead bias, spread drag, & validasi out-of-sample.
 - 📄 [**Tooling Efisiensi Token & MCP Server**](docs/token-efficiency-and-mcp-tooling.md) — Panduan `web2md`, `tokcut`, `sqlite-utils`, dan MCP SQLite.
 - 📄 [**STB RockChip Web Remote Architecture**](docs/stb-rockchip-web-remote-architecture.md) — Arsitektur daemon uinput, 4-Tab Hub, HDMI resolution tuner, Tailscale IP, dan optimasi kernel.
 - 📄 [**System Environment, Ports & Remote Access**](docs/system-environment-and-ports.md) — Port terpesan, Cloudflare Tunnel & Zero Trust.
@@ -88,4 +93,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-20 03:21 WIB
+**Last Updated At:** 2026-09-20 03:24 WIB
