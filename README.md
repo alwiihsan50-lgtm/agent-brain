@@ -38,6 +38,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Deployment Bot Modular Mandiri Sideways M5 (Opsi 1: Extreme Mean Reversion BB 2.5 + RSI 7, Magic 889922, R:R 1:1.8) pada MT5 Exness**
+
 - [ ] **Penerapan Kalibrasi Rem Harian 5x Loss pada Bot Trending M5 Live (Magic 889911): Peningkatan Net Profit ke +Rp 11.09M (+67,234 USC), Max Drawdown 23.2 R, dan 17/18 Bulan Profit (94.4%)** ⚠️ [MENUNGGU KONFIRMASI USER]
 - [ ] **Deployment Bot Mandiri Daily Sniper D1 (1-Bar Exit, Magic 889933) pada MT5 Exness untuk Pasangan XAUUSDc & USDJPYc dengan Batas Maksimal Loss Rp 50.000 (~303 USC)**
 - [ ] **Upgrade Ukuran Doji & Integrasi Rejection Wick Filter (Dragonfly/Gravestone) pada Bot Trending Gold MT5: Peningkatan Profit Factor ke 1.75, Net Profit +Rp 8.47M (+51,329 USC), Win Rate 37.1%, Max DD 15.3 R, dan 9/9 Bulan Hijau**
@@ -82,4 +84,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-18 22:37 WIB
+**Last Updated At:** 2026-09-19 08:30 WIB
