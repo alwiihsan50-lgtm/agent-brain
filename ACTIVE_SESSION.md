@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** MT5 Exness Trading Bot
-- **Current Task:** Deployment Modul Mandiri Bot Crypto Trending M5 (BTCUSDc, R:R 1:2.0, Magic 889944)
-- **Modified Files:** /home/cuker/mt5_storage/mt5_config/bot_crypto_trending.py, /home/cuker/mt5_storage/mt5_config/bot_supervisor.py, /home/cuker/.local/bin/bot-control
-- **Verification Command / URL:** bot-control status
-- **Next Steps / Notes:** Modul M5 Crypto 24/7 R:R 1:2.0 online dan aktif memindai BTCUSDc di container MT5.
+- **Current Task:** Stress Test & Backtest Portfolio Gabungan (4 Modul Simultan)
+- **Modified Files:** /home/cuker/mt5_storage/mt5_config/backtest_portfolio_combined.py
+- **Verification Command / URL:** docker exec -u abc exness-mt5 wine python /config/backtest_portfolio_combined.py
+- **Next Steps / Notes:** Backtest 1 tahun sinkron 4 bot selesai: Net +Rp 23.03M, 12/12 bulan profit, Combined Max DD Rp 641k (efek diversifikasi pangkas DD 65.7%).
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-09-19 16:09 WIB
+- **Last Updated At:** 2026-09-19 16:23 WIB
