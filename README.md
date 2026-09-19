@@ -36,7 +36,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ---
 
-- [ ] **Decommissioning & Penonaktifan Bot Crypto M5 (Magic 889944): Likuidasi Posisi BTC, Update Supervisor ke Triple-Bot Murni Gold, dan Eliminasi Risiko Drawdown 28.8 R** ⚠️ [MENUNGGU KONFIRMASI USER]
+- [x] **Decommissioning & Penonaktifan Bot Crypto M5 (Magic 889944): Likuidasi Posisi BTC, Update Supervisor ke Triple-Bot Murni Gold, dan Eliminasi Risiko Drawdown 28.8 R**
 
 - [x] **Audit Akurasi & Kalibrasi Parameter Backtest Portfolio Gabungan (Perbaikan Lookahead Bias MACD, M15 ADX, Sideways Wick, & Parameter Filter)**
 
@@ -88,4 +88,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-20 03:20 WIB
+**Last Updated At:** 2026-09-20 03:21 WIB

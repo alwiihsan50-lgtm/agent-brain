@@ -3,11 +3,11 @@
 > ℹ️ File ini berfungsi sebagai jembatan memori real-time antar AI Agent lintas sesi ketika ada pekerjaan yang sedang berjalan.
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
-- **Status:** READY_FOR_REVIEW
+- **Status:** IDLE
 - **Active Project:** MT5 Exness Trading Bot
-- **Current Task:** Decommissioning & Penonaktifan Bot Crypto M5 (Magic 889944)
-- **Modified Files:** /home/cuker/mt5_storage/mt5_config/bot_supervisor.py, /home/cuker/agent-brain/README.md
+- **Current Task:** -
+- **Modified Files:** -
 - **Verification Command / URL:** bot-control status
-- **Next Steps / Notes:** Bot Crypto M5 (BTCUSDc) telah di-stop permanen via ENABLE_CRYPTO = False di bot_supervisor.py. Seluruh posisi crypto telah dilikuidasi bersih. Portofolio kini murni fokus pada Triple-Bot Gold (Trending, Daily Sniper, Sideways). Menunggu konfirmasi user.
+- **Next Steps / Notes:** Bot Crypto M5 berhasil dinonaktifkan. Portofolio MT5 kini beroperasi sebagai Triple-Bot Gold murni (Trending, Sideways, Daily Sniper).
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-09-20 03:20 WIB
+- **Last Updated At:** 2026-09-20 03:21 WIB
