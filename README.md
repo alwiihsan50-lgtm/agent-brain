@@ -38,6 +38,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Audit Akurasi & Kalibrasi Parameter Backtest Portfolio Gabungan (Perbaikan Lookahead Bias MACD, M15 ADX, Sideways Wick, & Parameter Filter)**
+
 - [ ] **Deployment Modul Mandiri Bot Crypto Trending M5 (BTCUSDc, Target R:R 1:2.0, Magic 889944) pada MT5 Exness Cent 24/7 dengan Sizing Flat Risk Rp 20.000 (~121.5 USC) & Rem Harian 5x Loss**
 
 - [x] **Deployment Bot Modular Mandiri Sideways M5 (Opsi 1: Extreme Mean Reversion BB 2.5 + RSI 7, Magic 889922, R:R 1:1.8) pada MT5 Exness**
@@ -86,4 +88,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-19 16:23 WIB
+**Last Updated At:** 2026-09-19 16:46 WIB
