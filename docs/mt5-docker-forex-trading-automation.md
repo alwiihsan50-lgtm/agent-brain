@@ -330,3 +330,20 @@ Berdasarkan saran USER untuk meningkatkan performa Profit Factor dan Win Rate si
 
 
 
+
+## 🔄 9. Arsitektur Walk-Forward Analysis (WFA) - Auto-Tuning Dinamis
+Berdasarkan uji komprehensif pada September 2026, optimasi parameter statis selama 1 tahun penuh terbukti rentan terhadap *Curve-Fitting* (Hindsight Bias). Oleh karena itu, arsitektur bot live wajib menerapkan **Walk-Forward Analysis (WFA)** dengan spesifikasi:
+
+1. **Jendela Waktu WFA (The 90/30 Rule):**
+   * **In-Sample (Train): 90 Hari (3 Bulan)** -> Siklus ideal untuk merekam *Macro Market Regime* tanpa noise.
+   * **Out-of-Sample (Test): 30 Hari (1 Bulan)** -> Rentang eksekusi blind test / trading live yang stabil sebelum di-kalibrasi ulang.
+2. **Kinerja WFA Universal (Terbukti di Crypto M5 & Gold M5):**
+   * Menggeser parameter secara otomatis tiap bulan terbukti:
+     * **Meningkatkan Win Rate:** Crypto (37% -> 43%), Gold (29% -> 35%).
+     * **Meningkatkan Profit Factor:** Mengamankan keuntungan lebih efisien.
+     * **Menekan Max Drawdown hingga -35%:** Bot menjadi sangat defensif (Wick lebih ketat, R:R diperkecil) saat mendeteksi market choppy di bulan sebelumnya.
+3. **Mekanisme Eksekusi Live (Cron Auto-Tuner):**
+   * Di awal setiap bulan, skrip `wfa_tuner.py` akan dijalankan via crontab.
+   * Skrip akan menarik data riil MT5 dari 90 hari terakhir.
+   * Skrip menyimulasikan ratusan kombinasi R:R (1.5 - 4.0), Wick Rejection (20% - 35%), dan ADX Threshold.
+   * Parameter terbaik akan ditulis langsung ke file JSON config yang dibaca secara *real-time* oleh `bot_trending.py`, `bot_sideways.py`, dan `bot_crypto.py`.
