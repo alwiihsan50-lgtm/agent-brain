@@ -8,6 +8,6 @@
 - **Current Task:** -
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Eksplorasi Forex H1 Extreme Sideways selesai & dibatalkan deployment-nya sesuai keputusan USER (frekuensi trade terlalu rendah, ~5-6 trade/bulan, turn-over profit terlalu lambat dibanding Gold M5). Bot eksisting MT5 Triple-Bot Gold tetap dipertahankan penuh.
+- **Next Steps / Notes:** Eksplorasi Forex M15 Sideways Doji resmi dibatalkan sesuai keputusan USER setelah audit empiris 8 pair (50k bar, 2 tahun) membuktikan rasio serapan spread (spread drag 8.6-10.8%) dan momentum overhang membuat M15 forex tidak memiliki edge yang cukup kuat. Bot live MT5 Triple-Bot Gold M5 tetap dipertahankan penuh sebagai konfigurasi utama.
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-09-20 19:21 WIB
+- **Last Updated At:** 2026-09-20 19:42 WIB
