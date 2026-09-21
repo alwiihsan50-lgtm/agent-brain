@@ -38,6 +38,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Tambah Notifikasi Web Push saat Circuit Breaker Aktif (Trigger & Restore) di bot_sideways.py & bot_trending.py — menunggu validasi USER**
+
 - [x] **Sinkronisasi Konfigurasi & Formula Bot Live vs Backtest Kanonik (ADX Wilder, Closed-Bar Trend Filter M5, R:R Trending 3.0, BB ddof=1, D1 Spike Filter) + Restart 3 Modul Live**
 
 - [x] **Audit Menyeluruh Baris-demi-Baris Kode MT5 Bot & Eliminasi 12 Kesalahan Parameter, SL/TP Anchor, Slicing AST, Time-Exit, dan Bitmask Execution**
@@ -79,4 +81,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-21 13:22 WIB
+**Last Updated At:** 2026-09-21 13:43 WIB
