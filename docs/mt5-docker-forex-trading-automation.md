@@ -73,22 +73,26 @@ Sistem automasi trading ini menggunakan arsitektur hybrid modern:
   ```
 
 ### C. Bot Python Logic Akun 1 - Modular Dual-Bot (`mt5_config/`)
-- **Arsitektur Modular (Option 1):** Satu terminal MT5 menjalankan 2 bot independen dengan `magic_number` berbeda:
-  1. **`bot_trending.py` (Magic `889911`):**
-     - Strategi: Pure SMC M5 (BOS + FVG/OB unmitigated + H1 EMA-50 trend alignment).
-     - Filter Rejim: ADX(14) M15 >= 18 (hanya aktif saat ada momentum tren sehat).
-     - Target: R:R Strict 1:3.0 (+Rp 150.000 vs -Rp 50.000).
+- **Arsitektur Modular (Option 1):** Satu terminal MT5 menjalankan 3 bot independen dengan `magic_number` berbeda, dijalankan & diawasi oleh `bot_supervisor.py`:
+  1. **`bot_trending.py` (Magic `889911`, M5):**
+     - Strategi: Doji Stalemate Breakout + H1 EMA-50/200 (Golden/Death Cross) + MACD(16,38,9) + SMC Fractal-3 Market Structure.
+     - Filter Rejim: ADX(14) H1 >= 20.0 (Wilder) + circuit breaker 5x loss beruntun/hari.
+     - Target: R:R Strict **1:3.0** (Flat Risk **Rp 20.000**).
      - Log & Telemetri: `/config/bot_trending.log` & `/ram_data/bot_status_trending.json`.
-  2. **`bot_sideways.py` (Magic `889922`):**
-     - Strategi: Asian Range Liquidity Sweep / Turtle Soup (Fakeout Reversal).
-     - Filter Rejim: ADX(14) M15 <= 25 & Box Range $3.00 - $18.00 (mencegah false sweep saat trending).
-     - Setup: Sweep wick di luar box range + rejection candle >= 35% masuk kembali ke dalam range.
-     - Target: R:R Strict 1:2.0 (+Rp 100.000 vs -Rp 50.000).
+  2. **`bot_sideways.py` (Magic `889922`, M5):**
+     - Strategi: Extreme Mean Reversion Bollinger Bands(20, 2.5 SD, ddof=1) + Fast RSI(7) + Rejection Wick >= 35%.
+     - Filter Rejim: ADX(14) M15 <= 22.0 + sesi London/NY (07:00-22:00 UTC) + rem 5x loss/hari.
+     - Target: R:R Strict **1:1.8** (Flat Risk **Rp 20.000**).
      - Log & Telemetri: `/config/bot_sideways.log` & `/ram_data/bot_status_sideways.json`.
-  3. **`bot_supervisor.py` (Process Manager & Aggregator):**
-     - Mengawasi lifecycle kedua bot (auto-restart jika salah satu crash).
-     - Menggabungkan telemetri kedua bot ke `/ram_data/bot_status.json` dan `/config/bot_status.json`.
-- **Sizing:** Dinamis Flat Risk Rp 50.000 per posisi (~303 USC pada Cent account / Rp 50.000 Standard).
+  3. **`bot_daily_doji.py` (Magic `889933`, D1):**
+     - Strategi: Doji Pullback Reversal D1 (EMA 50/200 + pullback + rejection wick >= 20%) + filter spike abnormal > 3.5x ATR.
+     - Exit: 1-Bar Exit + Safety TP 1:4. Bar Sunday (stub) di-merge ke Monday agar identik dengan backtest.
+     - Flat Risk **Rp 50.000**. Aset: `XAUUSDc`, `USDJPYc`.
+     - Log & Telemetri: `/config/bot_daily_doji.log` & `/ram_data/bot_status_daily.json`.
+  4. **`bot_supervisor.py` (Process Manager & Aggregator):**
+     - Mengawasi lifecycle seluruh bot anak (auto-restart jika salah satu crash).
+     - Menggabungkan telemetri ke `/ram_data/bot_status.json` dan `/config/bot_status.json`.
+- **Sizing:** Dinamis Flat Risk **M5 Rp 20.000** dan **D1 Rp 50.000** per posisi (lot via native `mt5.order_calc_profit`; otomatis menyesuaikan akun USD/USC/IDR).
 - **Service:** `mt5-trading-bot.service` (Runner: `/home/cuker/start-bot.sh`).
 - **CLI Helper:** `bot-control` (`status`, `logs`, `restart`, `test`).
 
@@ -331,19 +335,16 @@ Berdasarkan saran USER untuk meningkatkan performa Profit Factor dan Win Rate si
 
 
 
-## 🔄 9. Arsitektur Walk-Forward Analysis (WFA) - Auto-Tuning Dinamis
-Berdasarkan uji komprehensif pada September 2026, optimasi parameter statis selama 1 tahun penuh terbukti rentan terhadap *Curve-Fitting* (Hindsight Bias). Oleh karena itu, arsitektur bot live wajib menerapkan **Walk-Forward Analysis (WFA)** dengan spesifikasi:
+## 🔄 9. Walk-Forward Analysis (WFA) - DINONAKTIFKAN/DIPINDAHKAN (2026-09-21)
+> ⚠️ **STATUS: WFA DIHAPUS DARI JALUR LIVE.** Jalur auto-tuning dinamis dimatikan untuk mencegah *parameter drift* antara bot live dan backtest kanonik.
 
-1. **Jendela Waktu WFA (The 90/30 Rule):**
-   * **In-Sample (Train): 90 Hari (3 Bulan)** -> Siklus ideal untuk merekam *Macro Market Regime* tanpa noise.
-   * **Out-of-Sample (Test): 30 Hari (1 Bulan)** -> Rentang eksekusi blind test / trading live yang stabil sebelum di-kalibrasi ulang.
-2. **Kinerja WFA Universal (Terbukti di Crypto M5 & Gold M5):**
-   * Menggeser parameter secara otomatis tiap bulan terbukti:
-     * **Meningkatkan Win Rate:** Crypto (37% -> 43%), Gold (29% -> 35%).
-     * **Meningkatkan Profit Factor:** Mengamankan keuntungan lebih efisien.
-     * **Menekan Max Drawdown hingga -35%:** Bot menjadi sangat defensif (Wick lebih ketat, R:R diperkecil) saat mendeteksi market choppy di bulan sebelumnya.
-3. **Mekanisme Eksekusi Live (Cron Auto-Tuner):**
-   * Di awal setiap bulan, skrip `wfa_tuner.py` akan dijalankan via crontab.
-   * Skrip akan menarik data riil MT5 dari 90 hari terakhir.
-   * Skrip menyimulasikan ratusan kombinasi R:R (1.5 - 4.0), Wick Rejection (20% - 35%), dan ADX Threshold.
-   * Parameter terbaik akan ditulis langsung ke file JSON config yang dibaca secara *real-time* oleh `bot_trending.py`, `bot_sideways.py`, dan `bot_crypto.py`.
+**Alasan penghapusan:**
+- `wfa_tuner.py` melakukan grid-search in-sample (R:R 2.0-4.0, ADX 15-25) lalu menulis hasil ke `wfa_config.json` yang dibaca **real-time** oleh bot live. Backtest kanonik (`engine.py` / `portfolio_triple_backtest.py`) memakai parameter **tetap** (R:R 3.0, ADX 20.0).
+- Terbukti pada 2026-09-21: bot live sempat tereksekusi dengan R:R **2.5** (bukan 3.0) karena file config ter-overwrite, sehingga hasil live menyimpang dari backtest tervalidasi.
+
+**Kondisi saat ini:**
+- Seluruh parameter strategi **hardcoded** di masing-masing bot, identik dengan backtest kanonik (`TARGET_RR = 3.0`, `MIN_ADX_H1 = 20.0`, `MIN_DOJI_REJECTION_WICK = 0.20`, BB 2.5 ddof=1, dst.).
+- File `wfa_tuner.py`, `inject_config.py`, `fix_injector.py`, dan `wfa_config.json` telah dipindahkan ke `/home/cuker/mt5_storage/_disabled_wfa/` (tidak lagi berada di `/config`).
+- `bot_trending.py` **tidak lagi** membaca `wfa_config.json`.
+
+**Kebijakan ke depan:** Setiap perubahan parameter harus melewati backtest kanonik + validasi USER terlebih dahulu, bukan auto-tuning saat runtime.
