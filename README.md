@@ -38,6 +38,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Sinkronisasi Konfigurasi & Formula Bot Live vs Backtest Kanonik (ADX Wilder, Closed-Bar Trend Filter M5, R:R Trending 3.0, BB ddof=1, D1 Spike Filter) + Restart 3 Modul Live**
+
 - [x] **Audit Menyeluruh Baris-demi-Baris Kode MT5 Bot & Eliminasi 12 Kesalahan Parameter, SL/TP Anchor, Slicing AST, Time-Exit, dan Bitmask Execution**
 
 - [x] **Penerapan Protokol Kuantitatif Anti-Bias & Pembuatan Skill Antigravity `quant-backtest-integrity` untuk Mengeliminasi Lookahead Bias & Parameter Mismatch Secara Permanen**
@@ -79,4 +81,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-20 19:41 WIB
+**Last Updated At:** 2026-09-21 12:46 WIB

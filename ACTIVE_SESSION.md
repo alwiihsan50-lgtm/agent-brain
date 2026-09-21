@@ -3,11 +3,11 @@
 > ℹ️ File ini berfungsi sebagai jembatan memori real-time antar AI Agent lintas sesi ketika ada pekerjaan yang sedang berjalan.
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
-- **Status:** IDLE
-- **Active Project:** -
-- **Current Task:** -
+- **Status:** IN_PROGRESS
+- **Active Project:** MT5 Live Bot (exness-mt5)
+- **Current Task:** Sinkronisasi live vs backtest: ADX Wilder, closed-bar trend filter, R:R 3.0, BB ddof=1, D1 spike filter
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Eksplorasi Forex M15 Sideways Doji resmi dibatalkan sesuai keputusan USER setelah audit empiris 8 pair (50k bar, 2 tahun) membuktikan rasio serapan spread (spread drag 8.6-10.8%) dan momentum overhang membuat M15 forex tidak memiliki edge yang cukup kuat. Bot live MT5 Triple-Bot Gold M5 tetap dipertahankan penuh sebagai konfigurasi utama.
-- **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-09-20 19:42 WIB
+- **Next Steps / Notes:** Patch bot_trending.py/bot_sideways.py/bot_daily_doji.py + wfa_config.json(2.5->3.0). Verified parity vs engine.py (ADX diff 0.000000) & portfolio_triple_backtest.calc_adx_m15 (diff 0.003). Backtest portofolio 17.5bln: 2673 trades, WR 35.8%, PF 1.41, Net +Rp14.33jt, DD 28.2R, 16/18 bulan hijau. Bot di-restart via systemctl mt5-trading-bot, 3 modul RUNNING dengan kode baru. Menunggu validasi USER.
+- **Last Updated By:** AI Agent
+- **Last Updated At:** 2026-09-21 12:46 WIB
