@@ -4,10 +4,11 @@
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
 - **Status:** READY_FOR_REVIEW
-- **Active Project:** arsip-imo-2025 (/media/cuker/Data/Projects/arsip-imo-2025)
-- **Current Task:** Distribusi Acak Adil Sepanjang Jam Dinas Tanpa Menambah Kontrol Dropdown Jam
-- **Modified Files:** src/utils/timestampBurner.js, src/components/UploadModal.jsx
-- **Verification Command / URL:** curl -I http://localhost:3040 && curl -I https://arsip.abbas.my.id (Buka di browser https://arsip.abbas.my.id)
-- **Next Steps / Notes:** Menunggu konfirmasi dan validasi dari USER.
-- **Last Updated By:** Antigravity
-- **Last Updated At:** 2026-09-23 17:40 WIB
+- **Active Project:** arsip-imo-2025 & Arsip-IMO & ADMIN-WEB-IMO
+- **Current Task:** Migrasi Pembuatan Excel Absensi_foto.xlsx ke Workflow Resmi GitHub Actions & Sinkronisasi Engine Resmi
+- **Modified Files:** arsip-imo-2025/server/index.js, arsip-imo-2025/server/templates/Absensi-template.xlsx, arsip-imo-2025/server/excel-engine/generate_excel.py, Arsip-IMO/scripts/sync-absensi-to-sheets.mjs
+- **Verification Command / URL:** curl -I http://localhost:3040/api/export/excel/download/2025-01 && gh run view 35851247950 --repo alwiihsan50-lgtm/Arsip-IMO
+- **Next Steps / Notes:** Engine resmi ADMIN-WEB-IMO telah disinkronkan ke arsip-imo-2025 (menghasilkan tanggal datetime asli tanpa formula rusak), dan bridge API telah berhasil diuji pada GitHub Action Sync Absensi to Sheets (Run ID: 35851247950, Status: Success).
+- **Last Updated By:** Antigravity (Gemini 3.8 Flash)
+- **Last Updated At:** 2026-09-23 17:58 WIB
+
