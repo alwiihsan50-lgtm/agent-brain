@@ -6,6 +6,7 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 23 September 2026
 
+- [x] **Sinkronisasi Konfigurasi & Formula Bot Live vs Backtest Kanonik (ADX Wilder, Closed-Bar Trend Filter M5, R:R Trending 3.0, BB ddof=1, D1 Spike Filter) + Restart 3 Modul Live**
 - [x] **Audit Menyeluruh Baris-demi-Baris Kode MT5 Bot & Eliminasi 12 Kesalahan Parameter, SL/TP Anchor, Slicing AST, Time-Exit, dan Bitmask Execution**
 
 ## 📅 Selesai Per 21 September 2026

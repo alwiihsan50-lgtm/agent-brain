@@ -9,6 +9,7 @@ Dokumen ini berisi pemetaan lengkap seluruh proyek, repositori Git, lokasi direk
 | Nama Proyek | Lokasi Lokal | Remote URL GitHub | Active Branch | Keterangan / Deskripsi |
 | --- | --- | --- | --- | --- |
 | **Arsip-IMO** | `D:\Projects\Arsip-IMO` | `https://github.com/alwiihsan50-lgtm/Arsip-IMO.git` | `main` | Aplikasi presensi karyawan utama (React 19 + Supabase). |
+| **arsip-imo-2025** | `D:\Projects\arsip-imo-2025` | - | `main` | Web khusus arsip IMO 2025 (Bulan 1-4). Port 3040, Cloudflare Tunnel `arsip.abbas.my.id`, SQLite lokal, kamera 3s, rasio 3:4, kompresi <=200KB. |
 | **ADMIN-WEB-IMO** | `D:\Projects\ADMIN-WEB-IMO` | `https://github.com/alwiihsan50-lgtm/ADMIN-WEB-IMO.git` | `main` | Web admin untuk IMO. |
 | **cloud-clipboard-file-bridge** | `D:\Projects\cloud-clipboard-file-bridge` | `https://github.com/alwiihsan50-lgtm/claudbridge.git` | `main` | Cloud bridge & clipboard file sharing. |
 | **Catat Uang Bersama** | `https://catat-uang-bersama.vercel.app` | - | `main` | Aplikasi pencatatan keuangan bersama keluarga aktif. |
