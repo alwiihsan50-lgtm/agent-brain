@@ -21,7 +21,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **TailShare Clean** | `Port 40507` | 🟢 Running | Minimal file-transfer-only version, same storage `/media/cuker/Data/tailshare`, no clipboard/WS/QR/electron. |
 | **AI Photo Eraser (PWA)** | `Port 3005` (Web) / `3003` (API) | 🟢 Running | Mobile-first AI Magic Object Remover with Virtual Mouse Trackpad & LaMa ONNX Inpainting. |
 | **Arsip-IMO** | `/media/cuker/Data/Projects/Arsip-IMO` | 🟢 Synced | Production web absensi & schedule system + self-contained LaMa AI inpainting backend (Port 3003). |
-| **Arsip IMO 2025** | `Port 3040` / `arsip.abbas.my.id` | 🟢 Live | Web mandiri arsip presensi IMO 2025 (Bulan 1-4), kamera 3s, rasio 3:4 portrait, SQLite lokal, Cloudflare Tunnel. |
+| **Arsip IMO 2025** | `Port 3040` (Lokal) | 🟢 Live | Web mandiri arsip presensi IMO 2025 (Bulan 1-4), kamera 3s, rasio 3:4 portrait, SQLite lokal, generator Excel kanonik resmi lokal (Port 3040). |
 | **Marketing Agents** | `/media/cuker/Data/marketing agent` | 🟢 Aktif | `fbagent/` (FB Marketplace, `mkt`) & `ttagent/` (TikTok Suite, `tt`). |
 | **MoneyPrinterTurbo & Kling AI** | Port 8095 / 8501 / CLI | 🟢 Running | Pabrik video AI otomatis + AGY Bridge Port 5050 + CLI `kling-video` (Playwright Chromium 720p). |
 | **Token-Efficiency Suite** | `~/.local/bin/` & MCP | ⚡ **Primary Workflow** | Standardisasi hemat token: `web2md` (Jina reader), `tokcut` (smart output truncator), `sqlite-utils`, & `mcp-server-sqlite`. |
@@ -39,7 +39,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Web Khusus Pengumpulan Data Arsip IMO 2025 (Bulan 1-4) di /media/cuker/Data/Projects/arsip-imo-2025 (Port 3040) — menunggu validasi USER**
+- [x] **Web Khusus Pengumpulan Data Arsip IMO 2025 (Bulan 1-4) di /media/cuker/Data/Projects/arsip-imo-2025 (Port 3040, Generator Excel Kanonik Lokal)**
 
 - [x] **Bangun aplikasi jualan sederhana (buku kas 1 akun saldo) di /home/cuker/Projects/aplikasi-jualan (Port 3030) + Deploy Cloudflare D1 (jualan.abbas.my.id) — menunggu validasi USER**
 
@@ -82,4 +82,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-23 17:58 WIB
+**Last Updated At:** 2026-09-23 18:10 WIB
