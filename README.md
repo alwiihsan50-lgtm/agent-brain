@@ -41,8 +41,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [x] **Bangun aplikasi jualan sederhana (buku kas 1 akun saldo) di /home/cuker/Projects/aplikasi-jualan (Port 3030) + Deploy Cloudflare D1 (jualan.abbas.my.id) — menunggu validasi USER**
 
-- [ ] **Tambah Notifikasi Web Push saat Circuit Breaker Aktif (Trigger & Restore) di bot_sideways.py & bot_trending.py — menunggu validasi USER**
-
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -80,4 +78,4 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-24 00:14 WIB
+**Last Updated At:** 2026-09-24 10:04 WIB

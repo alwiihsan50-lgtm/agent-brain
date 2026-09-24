@@ -4,6 +4,10 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 24 September 2026
+
+- [x] **Tambah Notifikasi Web Push saat Circuit Breaker Aktif (Trigger & Restore) di bot_sideways.py & bot_trending.py — menunggu validasi USER**
+
 ## 📅 Selesai Per 23 September 2026
 
 - [x] **Sinkronisasi Konfigurasi & Formula Bot Live vs Backtest Kanonik (ADX Wilder, Closed-Bar Trend Filter M5, R:R Trending 3.0, BB ddof=1, D1 Spike Filter) + Restart 3 Modul Live**
