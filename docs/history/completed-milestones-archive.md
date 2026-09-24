@@ -6,6 +6,7 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 24 September 2026
 
+- [x] **Web Khusus Pengumpulan Data Arsip IMO 2025 (Bulan 1-4) di /media/cuker/Data/Projects/arsip-imo-2025 (Port 3040, Generator Excel Kanonik Lokal)**
 - [x] **Bangun aplikasi jualan sederhana (buku kas 1 akun saldo) di /home/cuker/Projects/aplikasi-jualan (Port 3030) + Deploy Cloudflare D1 (jualan.abbas.my.id)**
 - [x] **Tambah Notifikasi Web Push saat Circuit Breaker Aktif (Trigger & Restore) di bot_sideways.py & bot_trending.py**
 

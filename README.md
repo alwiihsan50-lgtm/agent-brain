@@ -37,12 +37,11 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Pengujian & Evaluasi Mendalam Bot Sideways M5 Menggunakan Ekosistem Quant Stack Baru (Optuna, QuantStats, Polars, VectorBT) + Kalibrasi Parameter Live (BB 2.7, RSI 21/79, R:R 1:1.9, ADX <= 21) — Menunggu Validasi USER**
+- [ ] **Rangkaian Backtest Kuantitatif Komprehensif Bot Trending M5 (QuantStats Tearsheet, Optuna 12-Core Multi-Parameter Sweep, & Validasi Out-of-Sample)**
 
+- [x] **Pengujian & Evaluasi Mendalam Bot Sideways M5 Menggunakan Ekosistem Quant Stack Baru (Optuna, QuantStats, Polars, VectorBT) + Kalibrasi Parameter Live (BB 2.7, RSI 21/79, R:R 1:1.9, ADX <= 21)**
 
 - [x] **Penerapan 4 Pola Seleksi Pasar Bot MT5 Live (D1 ATR >= $40, H1 ADX <= 50, London Lunch Pause 17-19 WIB, Cutoff Sideways 00:00 WIB) + Sinkronisasi Backtest Portofolio (17/18 Bulan Hijau, PF 1.50, DD -22%)**
-
-- [x] **Web Khusus Pengumpulan Data Arsip IMO 2025 (Bulan 1-4) di /media/cuker/Data/Projects/arsip-imo-2025 (Port 3040, Generator Excel Kanonik Lokal)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -81,5 +80,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-24 19:50 WIB
+**Last Updated At:** 2026-09-24 20:04 WIB
+
 
