@@ -3,15 +3,15 @@
 > ℹ️ File ini berfungsi sebagai jembatan memori real-time antar AI Agent lintas sesi ketika ada pekerjaan yang sedang berjalan.
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
-- **Status:** READY FOR REVIEW
+- **Status:** IN_PROGRESS
 - **Active Project:** MT5 Forex/Gold Trading Bots (Exness Cent)
-- **Current Task:** Penerapan 4 Pola Seleksi Pasar (D1 ATR Floor, H1 ADX Cap, London Lunch Pause, Sideways Session Cutoff)
+- **Current Task:** Pengujian & Evaluasi Bot Sideways M5 Menggunakan Ekosistem Quant Stack Baru (QuantStats, Optuna, Polars, VectorBT)
 - **Modified Files:**
-  - `/home/cuker/mt5_storage/mt5_config/bot_trending.py`
-  - `/home/cuker/mt5_storage/mt5_config/bot_sideways.py`
-  - `/home/cuker/mt5_storage/mt5_backtest/engine.py`
-  - `/home/cuker/mt5_storage/mt5_backtest/portfolio_triple_backtest.py`
-- **Verification Command / URL:** `/home/cuker/.venvs/trading-backtest/bin/python /home/cuker/mt5_storage/mt5_backtest/portfolio_triple_backtest.py`
-- **Next Steps / Notes:** Menunggu review & konfirmasi USER. Container `exness-mt5` sudah di-reload dan kedua bot live online.
+  - `/home/cuker/mt5_storage/mt5_backtest/test_sideways_quant_stack.py`
+  - `/home/cuker/agent-brain/README.md`
+  - `/home/cuker/agent-brain/ACTIVE_SESSION.md`
+- **Verification Command / URL:** `/home/cuker/.venvs/trading-backtest/bin/python /home/cuker/mt5_storage/mt5_backtest/test_sideways_quant_stack.py`
+- **Next Steps / Notes:** Menjalankan evaluasi mendalam performa Bot Sideways (M5 Gold BB 2.5 + RSI 7), generate institutional HTML tearsheet via QuantStats, dan jalankan optimasi parameter Bayesian via Optuna di 12 core.
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-09-24 17:39 WIB
+- **Last Updated At:** 2026-09-24 19:35 WIB
+

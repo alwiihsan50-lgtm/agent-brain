@@ -37,11 +37,11 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Penerapan 4 Pola Seleksi Pasar Bot MT5 Live (D1 ATR >= $40, H1 ADX <= 50, London Lunch Pause 17-19 WIB, Cutoff Sideways 00:00 WIB) + Sinkronisasi Backtest Portofolio (17/18 Bulan Hijau, PF 1.50, DD -22%) — Menunggu Validasi USER**
+- [ ] **Pengujian & Evaluasi Mendalam Bot Sideways M5 Menggunakan Ekosistem Quant Stack Baru (Optuna, QuantStats, Polars, VectorBT)**
+
+- [x] **Penerapan 4 Pola Seleksi Pasar Bot MT5 Live (D1 ATR >= $40, H1 ADX <= 50, London Lunch Pause 17-19 WIB, Cutoff Sideways 00:00 WIB) + Sinkronisasi Backtest Portofolio (17/18 Bulan Hijau, PF 1.50, DD -22%)**
 
 - [x] **Web Khusus Pengumpulan Data Arsip IMO 2025 (Bulan 1-4) di /media/cuker/Data/Projects/arsip-imo-2025 (Port 3040, Generator Excel Kanonik Lokal)**
-
-- [x] **Bangun aplikasi jualan sederhana (buku kas 1 akun saldo) di /home/cuker/Projects/aplikasi-jualan (Port 3030) + Deploy Cloudflare D1 (jualan.abbas.my.id) — menunggu validasi USER**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -80,4 +80,5 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-24 17:39 WIB
+**Last Updated At:** 2026-09-24 19:35 WIB
+
