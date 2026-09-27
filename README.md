@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Pengembangan Aplikasi Native iOS TailShare Menggunakan React Native & Expo (Clipboard Sync, File Sharing, Tailscale Discovery)**
+
 - [x] **Eksplorasi & Uji Multi-Variabel Bot Daily Doji D1 (Holding Duration 1-5 Bar, Rejection Wick, Filter ADX/RSI, Keranjang Multi-Asset, dan Optimasi Optuna 12-Core)**
 
 - [ ] **Rangkaian Backtest Kuantitatif Komprehensif Bot Trending M5 (QuantStats Tearsheet, Optuna 12-Core Multi-Parameter Sweep, & Validasi Out-of-Sample)**
@@ -80,6 +82,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-24 21:12 WIB
+**Last Updated At:** 2026-09-28 06:29 WIB
 
 

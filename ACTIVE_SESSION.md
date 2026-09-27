@@ -3,11 +3,11 @@
 > ℹ️ File ini berfungsi sebagai jembatan memori real-time antar AI Agent lintas sesi ketika ada pekerjaan yang sedang berjalan.
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
-- **Status:** IN_PROGRESS
-- **Active Project:** MT5 Forex/Gold Trading Bots (Exness Cent)
-- **Current Task:** Implementasi Opsi C Bot Daily Doji D1 (2-Bar Exit, Wick 25%, RSI 40-65)
-- **Modified Files:** -
-- **Verification Command / URL:** -
-- **Next Steps / Notes:** Opsi C aktif live di exness-mt5: 2-Bar holding exit (~48h), Doji wick >= 25%, RSI corridor 40-65. Telemetri terverifikasi, export_d1_trades.py disinkronkan, portfolio_triple_backtest.py menghasilkan PF 1.44, Net Rp 9.67M, Ret/DD 20.77x.
+- **Status:** READY_FOR_REVIEW
+- **Active Project:** mt5-trading-bot
+- **Current Task:** Integrasi 5-Lapis Anti-Double Entry & Backtest Portofolio Triple-Bot MT5
+- **Modified Files:** `/home/cuker/mt5_storage/mt5_config/bot_trending.py`, `/home/cuker/mt5_storage/mt5_backtest/run_unified_portfolio_backtest.py`
+- **Verification Command / URL:** `docker exec exness-mt5 cat /ram_data/bot_status_trending.json`
+- **Next Steps / Notes:** 5-Lapis Atomic Guards terpasang (active pos check, same-bar guard, anti-recycle doji, max signal age 120s, disk state persistence). Backtest single bot & portfolio 3 bot selesai 100% bebas bug. Menunggu konfirmasi review USER.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-09-24 20:53 WIB
+- **Last Updated At:** 2026-09-28 06:30 WIB
