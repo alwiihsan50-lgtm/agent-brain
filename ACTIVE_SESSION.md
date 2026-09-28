@@ -5,11 +5,12 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** MT5 Trading Suite
-- **Current Task:** Pemulihan & Deployment Live MT5 Bot Trending Doji Breakout + H1 EMA 50/200 + MACD + SMC (R:R 1:2.5, Flat Risk Rp 20.000 / math.floor, Magic 889911)
+- **Current Task:** Implementasi Dynamic Compounding 1.25% Equity & Strict R:R 1:3.0 pada Bot Trending Live MT5 (XAUUSDc Cent, Bounded SL $2.50-$4.50, math.floor Sizing, Magic 889911)
 - **Modified Files:**
   - `mt5_storage/mt5_config/bot_trending.py`
-  - `mt5_storage/mt5_config/bot_supervisor.py`
+  - `agent-brain/README.md`
+  - `agent-brain/ACTIVE_SESSION.md`
 - **Verification Command / URL:** `curl -s http://localhost:8088/api/status` & `http://100.110.205.27:8088/`
-- **Next Steps / Notes:** Bot trending live MT5 berhasil dikembalikan ke strategi Doji Breakout kanonik (identik dengan `engine.py`): (1) Target R:R 1:2.5, (2) Doji lookback breakout k=2..7, (3) Bounded SL $2.50-$4.50, (4) HTF H1 EMA50/200 Golden Cross + ADX 20-50, (5) SMC Fractal-3 + MACD Momentum, (6) Position sizing konservatif math.floor. Live status: RUNNING di port 8088.
+- **Next Steps / Notes:** Dynamic Compounding 1.25% equity per trade (`RISK_PCT_EQUITY = 0.0125`) dan strict R:R 1:3.0 (`TARGET_RR = 3.0`) telah aktif di live bot MT5 (`XAUUSDc` Cent #263301611). Sizing menggunakan `calculate_dynamic_compounding_lot` dengan `math.floor` down to 0.01 lot resolution (risk selalu <= 1.25%). Sanity check anti-inverted SL/TP aktif. Live bot telah di-restart dan verified RUNNING via supervisor.
 - **Last Updated By:** Antigravity AI
-- **Last Updated At:** 2026-09-28 21:30 WIB
+- **Last Updated At:** 2026-09-28 23:28 WIB
