@@ -38,13 +38,11 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Implementasi Live Interactive Decision Flow & State Inspector di MT5 Dashboard (Arsitektur Universal 4 Gerbang)**
+- [x] **Pengembangan & Deployment Bot Trending MT5 Pure FVG CE 50% Pullback (R:R 1:2.5, Dynamic Compounding 1.25% Equity, & Smart Calendar ForexFactory)**
+
+- [x] **Implementasi Live Interactive Decision Flow & State Inspector di MT5 Dashboard (Arsitektur Universal 4 Gerbang)**
 
 - [ ] **Pengembangan Aplikasi Native iOS TailShare Menggunakan React Native & Expo (Clipboard Sync, File Sharing, Tailscale Discovery)**
-
-- [x] **Eksplorasi & Uji Multi-Variabel Bot Daily Doji D1 (Holding Duration 1-5 Bar, Rejection Wick, Filter ADX/RSI, Keranjang Multi-Asset, dan Optimasi Optuna 12-Core)**
-
-- [x] **Rangkaian Backtest Kuantitatif Komprehensif Bot Trending M5 (QuantStats Tearsheet, Optuna 12-Core Multi-Parameter Sweep, & Validasi Out-of-Sample)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -83,6 +81,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-28 19:01 WIB
+**Last Updated At:** 2026-09-28 19:18 WIB
 
 

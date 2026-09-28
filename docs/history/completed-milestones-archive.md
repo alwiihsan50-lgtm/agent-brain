@@ -6,6 +6,8 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 28 September 2026
 
+- [x] **Eksplorasi & Uji Multi-Variabel Bot Daily Doji D1 (Holding Duration 1-5 Bar, Rejection Wick, Filter ADX/RSI, Keranjang Multi-Asset, dan Optimasi Optuna 12-Core)**
+- [x] **Rangkaian Backtest Kuantitatif Komprehensif Bot Trending M5 (QuantStats Tearsheet, Optuna 12-Core Multi-Parameter Sweep, & Validasi Out-of-Sample)**
 - [x] **Pengujian & Evaluasi Mendalam Bot Sideways M5 Menggunakan Ekosistem Quant Stack Baru (Optuna, QuantStats, Polars, VectorBT) + Kalibrasi Parameter Live (BB 2.7, RSI 21/79, R:R 1:1.9, ADX <= 21)**
 
 ## 📅 Selesai Per 24 September 2026
