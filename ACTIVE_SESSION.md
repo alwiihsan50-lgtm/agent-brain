@@ -5,9 +5,9 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** mt5-trading-bot
-- **Current Task:** Deploy Bot Pure SMC M1 Gold Scalper v5.0 ke Live Akun 2 (Port 3006)
-- **Modified Files:** `/home/cuker/mt5_storage/mt5_config_prop1/bot.py`, `/home/cuker/start-bot.sh`, `/home/cuker/mt5_storage/start-bot.sh`
-- **Verification Command / URL:** `docker exec propfirm-mt5 cat /ram_data/bot_status_prop1.json`
-- **Next Steps / Notes:** Bot Pure SMC M1 Gold v5.0 aktif di container `propfirm-mt5` (Port 3006). Menggunakan Fractal 7 Swings, Prime Sessions (London 07-11 UTC & NY 12-17 UTC), Spread Guard $0.30, Min SL $1.50, R:R 1:3.0, serta 5-Lapis Atomic Anti-Double Entry Defense Guards (/config/bot_state_m1.json). Menunggu review USER.
+- **Current Task:** Pembatalan Bot M1 di Akun 2 (Port 3006) & Restorasi Status Standby
+- **Modified Files:** `/home/cuker/start-bot.sh`, `/home/cuker/mt5_storage/start-bot.sh`
+- **Verification Command / URL:** `docker ps`
+- **Next Steps / Notes:** Bot Pure SMC M1 di Akun 2 (`propfirm-mt5`) telah dihentikan total dan container dimatikan sesuai instruksi USER (karena drawdown M1 tidak sesuai untuk saldo modal kecil). Akun 1 (`exness-mt5`, Port 3000) Triple-Bot (Trending M5 + Sideways M5 + Daily D1) tetap berjalan aktif dan aman. Menunggu arahan lanjutan USER.
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-09-28 07:13 WIB
+- **Last Updated At:** 2026-09-28 08:34 WIB
