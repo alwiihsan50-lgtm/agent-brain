@@ -5,9 +5,9 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** mt5-trading-bot
-- **Current Task:** Pembatalan Bot M1 di Akun 2 (Port 3006) & Restorasi Status Standby
-- **Modified Files:** `/home/cuker/start-bot.sh`, `/home/cuker/mt5_storage/start-bot.sh`
-- **Verification Command / URL:** `docker ps`
-- **Next Steps / Notes:** Bot Pure SMC M1 di Akun 2 (`propfirm-mt5`) telah dihentikan total dan container dimatikan sesuai instruksi USER (karena drawdown M1 tidak sesuai untuk saldo modal kecil). Akun 1 (`exness-mt5`, Port 3000) Triple-Bot (Trending M5 + Sideways M5 + Daily D1) tetap berjalan aktif dan aman. Menunggu arahan lanjutan USER.
-- **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-09-28 08:34 WIB
+- **Current Task:** Implementasi & Live Deploy SMC Trend-Pullback FVG (R:R 1:3.0) di Bot Trending M5
+- **Modified Files:** /home/cuker/mt5_storage/mt5_config/bot_trending.py
+- **Verification Command / URL:** docker exec exness-mt5 python3 -c "import json; print(json.load(open('/config/bot_status.json'))['pairs'][0]['setup_reason'])"
+- **Next Steps / Notes:** Engine baru SMC Pullback FVG aktif menggantikan Doji Breakout. Anti-chasing aktif, R:R 1:3.0, 0 open position, scanning FVG.
+- **Last Updated By:** Antigravity (Gemini)
+- **Last Updated At:** 2026-09-28 14:00 WIB

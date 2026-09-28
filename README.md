@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 Live / ⚪ Acc 2 Off | **Acc 1 (Port 3000):** Triple-Bot aktif (Demo USD `463978832` / Cent `263301611` - `XAUUSDm/c`): **Trending** Doji+MACD R:R 1:3.0 (D1 ATR >= $40, ADX 20-50, pause London Lunch 17-19 WIB), **Sideways** BB 2.7 + RSI7 (21/79) R:R 1:1.9 (Sesi Prima 14-00 WIB, ADX M15 <= 21), **Daily** Doji D1 2-Bar Exit (Opsi C: Hold 48 Jam, Wick >= 25%, RSI 40-65). Sizing Flat Risk M5 **Rp 20.000** & D1 **Rp 50.000**. Portofolio backtest 17.5 bulan: 16/18 bulan hijau (88.9%), PF 1.44, Net Rp 9.67M, DD Rp 465k (Ret/DD 20.77x). **Acc 2 (Port 3006):** Dinonaktifkan sesuai arahan user. |
+| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 Live / ⚪ Acc 2 Off | **Acc 1 (Port 3000):** Triple-Bot aktif (Cent `263301611` - `XAUUSDc`): **Trending** SMC Trend-Pullback FVG R:R 1:3.0 (Anti-chasing / Retest Window 25 bar, Rejection wick >= 20%, SL diluar FVG $1.50-$4.50), **Sideways** BB 2.7 + RSI7 (21/79) R:R 1:1.9 (Sesi Prima 14-00 WIB, ADX M15 <= 21), **Daily** Doji D1 2-Bar Exit (Opsi C: Hold 48 Jam, Wick >= 25%, RSI 40-65). Sizing Flat Risk M5 **Rp 20.000** & D1 **Rp 50.000**. Portofolio backtest 17.5 bulan: PF 1.43, Net Rp 7.86M (Trending SMC FVG R:R 1:3.0). **Acc 2 (Port 3006):** Dinonaktifkan sesuai arahan user. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -82,6 +82,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-28 08:33 WIB
+**Last Updated At:** 2026-09-28 14:01 WIB
 
 
