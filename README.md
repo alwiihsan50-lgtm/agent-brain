@@ -41,9 +41,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [x] **Eksplorasi & Uji Multi-Variabel Bot Daily Doji D1 (Holding Duration 1-5 Bar, Rejection Wick, Filter ADX/RSI, Keranjang Multi-Asset, dan Optimasi Optuna 12-Core)**
 
-- [ ] **Rangkaian Backtest Kuantitatif Komprehensif Bot Trending M5 (QuantStats Tearsheet, Optuna 12-Core Multi-Parameter Sweep, & Validasi Out-of-Sample)**
-
-- [x] **Pengujian & Evaluasi Mendalam Bot Sideways M5 Menggunakan Ekosistem Quant Stack Baru (Optuna, QuantStats, Polars, VectorBT) + Kalibrasi Parameter Live (BB 2.7, RSI 21/79, R:R 1:1.9, ADX <= 21)**
+- [x] **Rangkaian Backtest Kuantitatif Komprehensif Bot Trending M5 (QuantStats Tearsheet, Optuna 12-Core Multi-Parameter Sweep, & Validasi Out-of-Sample)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -82,6 +80,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-28 14:01 WIB
+**Last Updated At:** 2026-09-28 14:07 WIB
 
 

@@ -4,6 +4,10 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 28 September 2026
+
+- [x] **Pengujian & Evaluasi Mendalam Bot Sideways M5 Menggunakan Ekosistem Quant Stack Baru (Optuna, QuantStats, Polars, VectorBT) + Kalibrasi Parameter Live (BB 2.7, RSI 21/79, R:R 1:1.9, ADX <= 21)**
+
 ## 📅 Selesai Per 24 September 2026
 
 - [x] **Penerapan 4 Pola Seleksi Pasar Bot MT5 Live (D1 ATR >= $40, H1 ADX <= 50, London Lunch Pause 17-19 WIB, Cutoff Sideways 00:00 WIB) + Sinkronisasi Backtest Portofolio (17/18 Bulan Hijau, PF 1.50, DD -22%)**
