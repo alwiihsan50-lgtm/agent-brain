@@ -5,12 +5,11 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** MT5 Trading Suite
-- **Current Task:** Kalibrasi Institusional SL ($3.50-$5.50 Skip Rule) & Position Sizing Konservatif (math.floor & Cap 0.10 Lot)
+- **Current Task:** Pemulihan & Deployment Live MT5 Bot Trending Doji Breakout + H1 EMA 50/200 + MACD + SMC (R:R 1:2.5, Flat Risk Rp 20.000 / math.floor, Magic 889911)
 - **Modified Files:**
   - `mt5_storage/mt5_config/bot_trending.py`
   - `mt5_storage/mt5_config/bot_supervisor.py`
-  - `mt5_dashboard/decision_flow.html`
 - **Verification Command / URL:** `curl -s http://localhost:8088/api/status` & `http://100.110.205.27:8088/`
-- **Next Steps / Notes:** Kalibrasi telah diterapkan dan diuji: (1) Jarak SL wajib berada di luar struktur FVG/wick, jika jarak > $5.50 trade di-skip (tidak dipotong paksa ke dalam struktur), (2) Dynamic lot sizing menggunakan pembulatan ke bawah (`math.floor`) agar risiko riil selalu <= 1.25%, (3) Sanity checks SL/TP aktif sebelum order_send.
+- **Next Steps / Notes:** Bot trending live MT5 berhasil dikembalikan ke strategi Doji Breakout kanonik (identik dengan `engine.py`): (1) Target R:R 1:2.5, (2) Doji lookback breakout k=2..7, (3) Bounded SL $2.50-$4.50, (4) HTF H1 EMA50/200 Golden Cross + ADX 20-50, (5) SMC Fractal-3 + MACD Momentum, (6) Position sizing konservatif math.floor. Live status: RUNNING di port 8088.
 - **Last Updated By:** Antigravity AI
-- **Last Updated At:** 2026-09-28 20:48 WIB
+- **Last Updated At:** 2026-09-28 21:30 WIB
