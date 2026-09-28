@@ -5,12 +5,12 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** MT5 Trading Suite
-- **Current Task:** Penonaktifan Modul Sideways & Daily Doji (Single-Strategy Pure FVG CE 50%)
+- **Current Task:** Kalibrasi Institusional SL ($3.50-$5.50 Skip Rule) & Position Sizing Konservatif (math.floor & Cap 0.10 Lot)
 - **Modified Files:**
-  - `mt5_storage/mt5_config/bot_supervisor.py`
   - `mt5_storage/mt5_config/bot_trending.py`
+  - `mt5_storage/mt5_config/bot_supervisor.py`
   - `mt5_dashboard/decision_flow.html`
 - **Verification Command / URL:** `curl -s http://localhost:8088/api/status` & `http://100.110.205.27:8088/`
-- **Next Steps / Notes:** Modul Sideways (889922) dan Daily Doji (889933) telah dimatikan. Bot supervisor dan container MT5 hanya menjalankan Pure FVG CE 50% Trending Bot (889911). Bug `min_lot` pada kalkulasi dynamic lot telah diperbaiki.
+- **Next Steps / Notes:** Kalibrasi telah diterapkan dan diuji: (1) Jarak SL wajib berada di luar struktur FVG/wick, jika jarak > $5.50 trade di-skip (tidak dipotong paksa ke dalam struktur), (2) Dynamic lot sizing menggunakan pembulatan ke bawah (`math.floor`) agar risiko riil selalu <= 1.25%, (3) Sanity checks SL/TP aktif sebelum order_send.
 - **Last Updated By:** Antigravity AI
-- **Last Updated At:** 2026-09-28 20:35 WIB
+- **Last Updated At:** 2026-09-28 20:48 WIB
