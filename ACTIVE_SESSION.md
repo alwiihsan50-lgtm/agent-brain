@@ -5,9 +5,9 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** mt5-trading-bot
-- **Current Task:** Integrasi 5-Lapis Anti-Double Entry & Backtest Portofolio Triple-Bot MT5
-- **Modified Files:** `/home/cuker/mt5_storage/mt5_config/bot_trending.py`, `/home/cuker/mt5_storage/mt5_backtest/run_unified_portfolio_backtest.py`
-- **Verification Command / URL:** `docker exec exness-mt5 cat /ram_data/bot_status_trending.json`
-- **Next Steps / Notes:** 5-Lapis Atomic Guards terpasang (active pos check, same-bar guard, anti-recycle doji, max signal age 120s, disk state persistence). Backtest single bot & portfolio 3 bot selesai 100% bebas bug. Menunggu konfirmasi review USER.
-- **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-09-28 06:30 WIB
+- **Current Task:** Deploy Bot Pure SMC M1 Gold Scalper v5.0 ke Live Akun 2 (Port 3006)
+- **Modified Files:** `/home/cuker/mt5_storage/mt5_config_prop1/bot.py`, `/home/cuker/start-bot.sh`, `/home/cuker/mt5_storage/start-bot.sh`
+- **Verification Command / URL:** `docker exec propfirm-mt5 cat /ram_data/bot_status_prop1.json`
+- **Next Steps / Notes:** Bot Pure SMC M1 Gold v5.0 aktif di container `propfirm-mt5` (Port 3006). Menggunakan Fractal 7 Swings, Prime Sessions (London 07-11 UTC & NY 12-17 UTC), Spread Guard $0.30, Min SL $1.50, R:R 1:3.0, serta 5-Lapis Atomic Anti-Double Entry Defense Guards (/config/bot_state_m1.json). Menunggu review USER.
+- **Last Updated By:** Antigravity (Gemini 3.8 Flash)
+- **Last Updated At:** 2026-09-28 07:13 WIB
