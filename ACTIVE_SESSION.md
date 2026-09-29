@@ -5,15 +5,15 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** MT5 Trading Suite
-- **Current Task:** Pemasangan & Aktivasi Bot Juara 1 (Pure SMC FVG Retest M5, R:R 1:2.5, Dynamic Compounding 1.25%, Magic 889955) pada Akun 2 (Port 3006)
+- **Current Task:** Upgrade Bot Akun 2 ke Formula Juara 1 "The 88.9% Consistency King" (True SMC + FVG Retest M5, H1 ZLEMA 50, Deep Buffer Zone 45/55%, Strict R:R 1:2.0, Magic 889966)
 - **Modified Files:**
   - `mt5_storage/mt5_config_prop1/bot.py`
-  - `mt5_storage/mt5_config_prop1/supervisor.py`
-  - `start-bot-prop1.sh`
-  - `mt5_dashboard/server.py`
+  - `mt5_storage/mt5_config_prop1/bot_state_fvg.json`
+  - `mt5_storage/mt5_backtest/test_true_smc_fvg_formula.py`
+  - `mt5_storage/mt5_backtest/deep_smc_fvg_optimization_suite.py`
   - `agent-brain/README.md`
   - `agent-brain/ACTIVE_SESSION.md`
 - **Verification Command / URL:** `curl -s http://localhost:8088/api/status?account=463880423` & Web VNC `http://100.110.205.27:3006/`
-- **Next Steps / Notes:** Bot Juara 1 (Pure SMC FVG Retest M5 dari Zero-Lag Suite) berhasil diimplementasikan 1:1 identik dengan backtest engine pada Akun 2 (`463880423` Exness Trial 17 IDR). Sizing otomatis Dynamic Compounding 1.25% equity (math.floor ke 0.01 lot) sehingga saat saldo ditambah oleh user, lot akan otomatis menyesuaikan. Status live: RUNNING di bawah supervisor, terintegrasi di port 3006 & port 8088.
+- **Next Steps / Notes:** Bot Akun 2 (`463880423` Exness Trial 17 IDR) berhasil di-upgrade ke formula True SMC + FVG Retest M5. Mengintegrasikan 4 pilar institusional (H1 ZLEMA 50 Trend, Deep Buffer Zone Discount < 45% & Premium > 55%, Freshness Window 12 bar & CE 50%, Strict R:R 1:2.0, Magic 889966). Saldo aktif Rp 5.000.000, streak 0/5, live status RUNNING di port 3006 & port 8088.
 - **Last Updated By:** Antigravity AI
-- **Last Updated At:** 2026-09-28 23:38 WIB
+- **Last Updated At:** 2026-09-29 12:40 WIB

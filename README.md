@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Dual Live | **Acc 1 (Port 3000):** Cent `263301611` (`XAUUSDc`): **Trending** Doji Breakout + H1 EMA 50/200 + MACD + SMC R:R 1:3.0 (Dynamic Compounding 1.25% Equity, Bounded SL $2.50-$4.50, Lookback k=2..7, Position sizing `math.floor` $\le 1.25\%$, Spread Guard $\le \$0.65$, Anti-Recycle Doji, SL Cooldown 15m). **Acc 2 (Port 3006):** IDR `463880423` (`XAUUSDm`): **Pure SMC FVG Retest M5 (Juara 1 Zero-Lag Suite)** R:R 1:2.5 (Dynamic Compounding 1.25% Equity, Bounded SL $1.50-$4.50, Freshness Window 15 bars, Wick Rejection $\ge 20\%$, Magic `889955`). |
+| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Dual Live | **Acc 1 (Port 3000):** Cent `263301611` (`XAUUSDc`): **Trending** Doji Breakout + H1 EMA 50/200 + MACD + SMC R:R 1:3.0 (Dynamic Compounding 1.25% Equity, Bounded SL $2.50-$4.50, Lookback k=2..7, Position sizing `math.floor` $\le 1.25\%$, Spread Guard $\le \$0.65$, Anti-Recycle Doji, SL Cooldown 15m). **Acc 2 (Port 3006):** IDR `463880423` (`XAUUSDm`): **True SMC + FVG Retest M5 (88.9% Consistency King)** R:R 1:2.0 (Dynamic Compounding 1.25% Equity, H1 ZLEMA 50 Trend, Deep Buffer Zone Disc < 45% & Prem > 55%, Freshness Window 12 bars & CE 50%, Magic `889966`). |
 | **MT5 Live Decision Flow** | `Port 8088` / `100.110.205.27:8088` | 🟢 Live (Tailscale) | Live Decision Flow & State Inspector MT5 (4 Gerbang Universal). Layanan systemd user 24/7. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
@@ -38,7 +38,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Pemasangan & Aktivasi Bot Juara 1 (Pure SMC FVG Retest M5, R:R 1:2.5, Dynamic Compounding 1.25%, Magic 889955) pada Akun 2 (Port 3006)** ⚠️ [MENUNGGU KONFIRMASI USER]
+- [ ] **Implementasi & Aktivasi Formula True SMC + FVG Retest M5 (88.9% Consistency King, H1 ZLEMA 50, Buffer 45/55%, R:R 1:2.0, Magic 889966) pada Akun 2 (Port 3006)** ⚠️ [MENUNGGU KONFIRMASI USER]
 
 - [x] **Implementasi Dynamic Compounding 1.25% Equity & Strict R:R 1:3.0 pada Bot Trending Live MT5 (XAUUSDc Cent, Bounded SL $2.50-$4.50, math.floor Sizing, Magic 889911)**
 
@@ -83,6 +83,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-28 23:38 WIB
+**Last Updated At:** 2026-09-29 12:39 WIB
 
 
