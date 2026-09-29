@@ -5,15 +5,13 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** MT5 Trading Suite
-- **Current Task:** Upgrade Bot Akun 2 ke Formula Juara 1 "The 88.9% Consistency King" (True SMC + FVG Retest M5, H1 ZLEMA 50, Deep Buffer Zone 45/55%, Strict R:R 1:2.0, Magic 889966)
+- **Current Task:** Pemasangan Bot Aggressive XAUUSD Grid Harvester M5 (Metode 3 Cycle Harvesting, Step Dinamis ATR, 8 Levels Smooth Multiplier, Basket TP Scalp, Magic 556677) pada Akun 2 Demo (Exness Trial 17 IDR, Port 3006)
 - **Modified Files:**
   - `mt5_storage/mt5_config_prop1/bot.py`
-  - `mt5_storage/mt5_config_prop1/bot_state_fvg.json`
-  - `mt5_storage/mt5_backtest/test_true_smc_fvg_formula.py`
-  - `mt5_storage/mt5_backtest/deep_smc_fvg_optimization_suite.py`
-  - `agent-brain/README.md`
+  - `mt5_storage/mt5_config_prop1/bot_smc_backup_20260929.py`
+  - `mt5_storage/.graphifyignore`
   - `agent-brain/ACTIVE_SESSION.md`
 - **Verification Command / URL:** `curl -s http://localhost:8088/api/status?account=463880423` & Web VNC `http://100.110.205.27:3006/`
-- **Next Steps / Notes:** Bot Akun 2 (`463880423` Exness Trial 17 IDR) berhasil di-upgrade ke formula True SMC + FVG Retest M5. Mengintegrasikan 4 pilar institusional (H1 ZLEMA 50 Trend, Deep Buffer Zone Discount < 45% & Premium > 55%, Freshness Window 12 bar & CE 50%, Strict R:R 1:2.0, Magic 889966). Saldo aktif Rp 5.000.000, streak 0/5, live status RUNNING di port 3006 & port 8088.
+- **Next Steps / Notes:** Bot Grid Agresif telah online dan langsung aktif mengeksekusi siklus perdagangan Gold (XAUUSDm) pada Akun 2 Demo (Saldo Rp 5.000.000 IDR). Siklus perdana langsung terbuka (Level 1) dan terpantau live di Decision Flow API & Dashboard Port 8088. Menunggu pantauan performa basket panen dari USER.
 - **Last Updated By:** Antigravity AI
-- **Last Updated At:** 2026-09-29 12:40 WIB
+- **Last Updated At:** 2026-09-29 17:18 WIB
