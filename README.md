@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Dual Live | **Acc 1 (Port 3000):** Cent `263301611` (`XAUUSDc`): **Trending** Doji Breakout + H1 EMA 50/200 + MACD + SMC R:R 1:3.0 (Dynamic Compounding 1.25% Equity, Bounded SL $2.50-$4.50, Lookback k=2..7, Position sizing `math.floor` $\le 1.25\%$, Spread Guard $\le \$0.65$, Anti-Recycle Doji, SL Cooldown 15m). **Acc 2 (Port 3006):** IDR `463880423` (`XAUUSDm` Demo Trial 17): **Aggressive XAUUSD Grid Harvester M5 (Metode 3 Cycle Harvesting)** (Dynamic ATR Step $1.50-$3.50, 8 Levels Smooth Multiplier 0.01-0.27, Scalping Basket TP Rp 25k-75k IDR, Circuit Breaker 50% DD, Magic `556677`). |
+| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Dual Live | **Acc 1 (Port 3000):** Cent `263301611` (`XAUUSDc`): **Optimal XAUUSD Grid Harvester M5** (Sweet Spot 4 Levels `[0.01, 0.02, 0.03, 0.05]`, Mandatory Cut-Loss L4, Ultra-Fast Parallel Close, H1 EMA 200 + ADX $\le 28$ Shield, Step Dinamis ATR $3-$6 USD, Basket TP 20+10 USC, Magic `778811`). Trending Bot (Magic `889911`) di-pause. **Acc 2 (Port 3006):** IDR `463880423` (`XAUUSDm` Demo Trial 17): **Aggressive XAUUSD Grid Harvester M5 (Metode 3 Cycle Harvesting)** (Dynamic ATR Step $1.50-$3.50, 8 Levels Smooth Multiplier 0.01-0.27, Scalping Basket TP Rp 25k-75k IDR, Circuit Breaker 50% DD, Magic `556677`). |
 | **MT5 Live Decision Flow** | `Port 8088` / `100.110.205.27:8088` | 🟢 Live (Tailscale) | Live Decision Flow & State Inspector MT5 (4 Gerbang Universal). Layanan systemd user 24/7. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
+
+- [ ] **Pemasangan & Aktivasi Bot Optimal XAUUSD Grid Harvester M5 (Sweet Spot 4-Level Averaging, Mandatory Cut-Loss L4, Ultra-Fast Parallel Close, H1 EMA 200 + ADX Shield, Magic 778811) pada Akun 1 Cent (Exness Real 37, Login 263301611, Port 3000) & Nonaktifkan Bot Trending**
 
 - [ ] **Pemasangan & Aktivasi Bot Aggressive XAUUSD Grid Harvester M5 (Metode 3 Cycle Harvesting, Dynamic ATR Step, 8 Levels Smooth Multiplier, Basket TP Rp 25k-75k IDR, Magic 556677) pada Akun 2 Demo (Exness Trial 17 IDR, Port 3006)** ⚠️ [MENUNGGU KONFIRMASI USER]
 
@@ -85,6 +87,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-29 17:18 WIB
+**Last Updated At:** 2026-09-30 13:59 WIB
 
 
