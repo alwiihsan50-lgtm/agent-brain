@@ -104,6 +104,11 @@ Berbeda secara radikal dari bot grid/martingale biasa di internet yang selalu be
 * Jarak step antar level adaptif mengikuti volatilitas pasar M5: `step = clamp($2.50, $5.00, ATR_M5)`.
 * Jeda inisiasi siklus baru jika **H1 ADX > 28.0** (menghindari badai tren meledak).
 
+#### Pilar 8: Weekend Gap Shield (Anti-Holding Akhir Pekan)
+* **Soft Cutoff Buka Siklus Baru (Sabtu 00:00 WIB / Jumat 17:00 UTC):** Dilarang membuka siklus baru Level 1. Menikmati sesi New York penuh dan memberi jeda 4-5 jam bagi keranjang aktif untuk panen TP sebelum pasar tutup.
+* **Hard Emergency Flat (Sabtu 03:45 WIB / Jumat 20:45 UTC):** 15 menit sebelum pasar resmi libur, sisa keranjang dilikuidasi seketika agar saldo 100% Cash (Zero Weekend Gap Risk).
+* **Monday Re-Open Buffer (Senin 07:00 WIB / Senin 00:00 UTC):** Bot baru kembali berburu setelah spread pasar normal dan tenang di bawah $0.30.
+
 ---
 
 ## 📊 3. Hasil Validasi Kuantitatif Backtest (17,5 Bulan, 100.013 Bar M5)
