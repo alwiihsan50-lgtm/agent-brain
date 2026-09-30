@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Dual Live | **Acc 1 (Port 3000):** Cent `263301611` (`XAUUSDc`): **Optimal XAUUSD Grid Harvester M5** (Opsi C: 4 Levels `[0.03, 0.06, 0.09, 0.15]`, Benteng Step `[5, 8, 12, 18 USD]`, Escape Buffer `[5, 3, 1.8, 1 USD]`, Mandatory Cut-Loss L4, Ultra-Fast Parallel Close, H1 ZLEMA 100 + ADX $\le 28$, Dynamic ATR scaling, Perisai 5 NFP/CPI High-Impact Shield, Magic `778811`, `v3.0-OPTION-C-NFP-CPI`). Trending Bot (Magic `889911`) di-pause. **Acc 2 (Port 3006):** IDR `463880423` (`XAUUSDm` Demo Trial 17): **Aggressive XAUUSD Grid Harvester M5 (Metode 3 Cycle Harvesting)** (Dynamic ATR Step $1.50-$3.50, 8 Levels Smooth Multiplier 0.01-0.27, Scalping Basket TP Rp 25k-75k IDR, Circuit Breaker 50% DD, Magic `556677`). |
+| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Dual Live | **Acc 1 (Port 3000):** Cent `263301611` (`XAUUSDc`): **Optimal XAUUSD Grid Harvester M5** (Opsi C: 4 Levels `[0.03, 0.06, 0.09, 0.15]`, Benteng Step `[5, 8, 12, 18 USD]`, Escape Buffer `[5, 3, 1.8, 1 USD]`, Anti-Pucuk Wick Guard `Wick <= 2x Body`, Mandatory Cut-Loss L4, Ultra-Fast Parallel Close, H1 ZLEMA 100 + ADX $\le 28$, Dynamic ATR scaling, Perisai 5 NFP/CPI High-Impact Shield, Magic `778811`, `v3.1-OPTION-C-ANTI-PUCUK`). Trending Bot (Magic `889911`) di-pause. **Acc 2 (Port 3006):** IDR `463880423` (`XAUUSDm` Demo Trial 17): **Aggressive XAUUSD Grid Harvester M5 (Metode 3 Cycle Harvesting)** (Dynamic ATR Step $1.50-$3.50, 8 Levels Smooth Multiplier 0.01-0.27, Scalping Basket TP Rp 25k-75k IDR, Circuit Breaker 50% DD, Magic `556677`). |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -37,9 +37,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Deploy Opsi C (Base 0.03L Cent, Tangga Step [5, 8, 12, 18 USD], Escape Buffer [5, 3, 1.8, 1 USD], & Perisai 5 NFP/CPI High-Impact Shield v3.0-OPTION-C-NFP-CPI) pada Bot Akun 1 Real Cent Exness**
+- [ ] **Implementasi Anti-Pucuk Wick Guard (No Pinbar Ekstrim: Wick <= 2.0x Body, +68% Profit, Net +5.113 USC, v3.1-OPTION-C-ANTI-PUCUK) pada Bot Akun 1 Real Cent Exness**
 
-- [x] **Upgrade Filter Tren Makro & Perisai 3 dari H1 EMA 200 ke H1 ZLEMA 100 (Zero-Lag Trend Anchor v2.6-DYNAMIC-ATR-ZLEMA100) pada Bot Optimal XAUUSD Grid Harvester Akun 1 Real Cent**
+- [x] **Deploy Opsi C (Base 0.03L Cent, Tangga Step [5, 8, 12, 18 USD], Escape Buffer [5, 3, 1.8, 1 USD], & Perisai 5 NFP/CPI High-Impact Shield v3.0-OPTION-C-NFP-CPI) pada Bot Akun 1 Real Cent Exness**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -79,6 +79,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-01 04:47 WIB
+**Last Updated At:** 2026-10-01 05:15 WIB
 
 
