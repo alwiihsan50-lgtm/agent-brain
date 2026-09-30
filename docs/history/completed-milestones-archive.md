@@ -4,6 +4,13 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 30 September 2026
+
+- [x] **Pengembangan Aplikasi Native iOS TailShare Menggunakan React Native & Expo (Clipboard Sync, File Sharing, Tailscale Discovery)**
+- [x] **Modularisasi Arsitektur Bot MT5 & Upgrade H1 ZLEMA 50 + EMA 200 GC + M5 MACD (core/indicators.py, core/risk_manager.py, strategies/doji_zlema_macd.py, execution/mt5_executor.py, notifier.py, Runner Ramping v4.3, Magic 889911)**
+- [x] **Implementasi Dynamic Compounding 1.25% Equity & Strict R:R 1:3.0 pada Bot Trending Live MT5 (XAUUSDc Cent, Bounded SL $2.50-$4.50, math.floor Sizing, Magic 889911)**
+- [x] **Implementasi Live Interactive Decision Flow & State Inspector di MT5 Dashboard (Arsitektur Universal 4 Gerbang)**
+
 ## 📅 Selesai Per 28 September 2026
 
 - [x] **Eksplorasi & Uji Multi-Variabel Bot Daily Doji D1 (Holding Duration 1-5 Bar, Rejection Wick, Filter ADX/RSI, Keranjang Multi-Asset, dan Optimasi Optuna 12-Core)**
