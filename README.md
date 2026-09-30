@@ -38,7 +38,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Aktivasi Setup 2 The Golden Sweet Spot pada Bot Optimal XAUUSD Grid Harvester Akun 1 Cent (Base Lot 0.02, Progresi [0.02, 0.04, 0.06, 0.10], Basket TP +5.0 USC, Step .50-.00, Magic 778811, v2.0-SWEET-SPOT-CENT)**
+- [ ] **Aktivasi Setup 2 Golden Sweet Spot + Pure Candle Flow Momentum pada Bot Optimal XAUUSD Grid Harvester Akun 1 Cent (Base Lot 0.02, Two Consecutive Candles Entry, Basket TP +5.0 USC, Step $2.50-$5.00, Magic 778811, v2.1-CANDLE-FLOW-CENT)**
 
 - [x] **Pemasangan & Aktivasi Bot Optimal XAUUSD Grid Harvester M5 (Sweet Spot 4-Level Averaging, Mandatory Cut-Loss L4, Ultra-Fast Parallel Close, H1 EMA 200 + ADX Shield, Magic 778811) pada Akun 1 Cent (Exness Real 37, Login 263301611, Port 3000) & Nonaktifkan Bot Trending**
 
@@ -81,6 +81,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-30 15:28 WIB
+**Last Updated At:** 2026-09-30 15:40 WIB
 
 
