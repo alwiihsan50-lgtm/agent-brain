@@ -38,11 +38,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Integrasi Fitur ATR Dynamic Step Scaling (Langkah Adaptif Volatilitas M5 + Dynamic TP + Broker Hard SL $35 USD) pada Bot Optimal XAUUSD Grid Harvester Akun 1 Real Cent (v2.5-DYNAMIC-ATR-VARIAN-B)**
+- [x] **Integrasi Fitur ATR Dynamic Step Scaling (Langkah Adaptif Volatilitas M5 + Dynamic TP + Broker Hard SL $35 USD) pada Bot Optimal XAUUSD Grid Harvester Akun 1 Real Cent (v2.5-DYNAMIC-ATR-VARIAN-B)**
 
 - [x] **Aktivasi Bot 4-Perisai Varian B (High-Frequency Candle Flow M5 + 4 Perisai: Momentum Delay M1, Volatility Spike Pause 15m, Trend Invalidation Early Cut H1 EMA 200, Weekend Hard Flat, Step 4-6-9-13 USD, Version 2.4-4SHIELDS-VARIAN-B) pada Akun 1 Real Cent Exness**
-
-- [x] **Aktivasi Setup 2 Golden Sweet Spot + Pure Candle Flow Momentum + Catastrophic Hard SL Shield pada Bot Optimal XAUUSD Grid Harvester Akun 1 Cent (Base Lot 0.02, Two Consecutive Candles Entry, Hard SL $18 USD di Broker, Basket TP +5.0 USC, v2.2-DISASTER-SL-SHIELD)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -82,6 +80,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-09-30 23:34 WIB
+**Last Updated At:** 2026-09-30 23:36 WIB
 
 
