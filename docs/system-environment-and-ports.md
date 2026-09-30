@@ -61,4 +61,4 @@ Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.servi
 - `agent-brain`: `https://github.com/alwiihsan50-lgtm/agent-brain` (Shared Memory System)
 - `Arsip-IMO`: `https://github.com/alwiihsan50-lgtm/Arsip-IMO` (Active branch: `main` di `D:\Projects\Arsip-IMO`)
 - `tailshare`: `https://github.com/alwiihsan50-lgtm/tailshare` (Berada di `/home/cuker/tailshare`, Storage di `/media/cuker/Data/tailshare`)
-- `MT5 Docker Bot & Dashboard`: Berada di `/home/cuker/mt5_config`, `/home/cuker/mt5_dashboard`, `/home/cuker/cf-push-backend`, dan `/home/cuker/bot_web_docs`
+- `MT5 Docker Bot`: Berada di `/home/cuker/mt5_storage/mt5_config`, `/home/cuker/cf-push-backend`, dan `/home/cuker/bot_web_docs`

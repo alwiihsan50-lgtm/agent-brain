@@ -136,7 +136,7 @@ Hasil uji empiris komprehensif pada data riil XAUUSD April 2025 s/d September 20
 * **Script Runner / Supervisor:** `/home/cuker/mt5_storage/mt5_config/runner.py`.
 * **Log Aktivitas:** `/home/cuker/mt5_storage/mt5_config/bot_activity_grid_cent.log`.
 * **Audit CSV Trade:** `/home/cuker/mt5_storage/mt5_config/bot_trades_grid_cent.csv`.
-* **Status RAM Telemetri:** `/var/lib/docker/volumes/mt5_storage_ram_buffer/_data/bot_status.json` (dipantau Port 8088).
+* **Status RAM Telemetri:** `/var/lib/docker/volumes/mt5_storage_ram_buffer/_data/bot_status.json`.
 
 ### B. Aturan Menjalankan & Restart Bot (SANGAT PENTING):
 > ⚠️ **PERINGATAN WINE PERMISSION:**
@@ -151,8 +151,8 @@ Hasil uji empiris komprehensif pada data riil XAUUSD April 2025 s/d September 20
 
 ### C. Cara Cek Status & Telemetri:
 ```bash
-# Cek telemetri via API dashboard (Port 8088):
-curl -s 'http://localhost:8088/api/status?account=263301611' | python3 -m json.tool
+# Cek telemetri via JSON file:
+cat /var/lib/docker/volumes/mt5_storage_ram_buffer/_data/bot_status.json | python3 -m json.tool
 
 # Cek proses berjalan di container:
 docker exec exness-mt5 ps aux | grep -i bot_grid

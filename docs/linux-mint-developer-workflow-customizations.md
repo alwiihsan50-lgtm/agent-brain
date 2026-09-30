@@ -24,7 +24,6 @@ Dokumentasi standarisasi lingkungan terminal, alat produktivitas, dan konfiguras
 # Navigasi Cepat
 alias ddata='cd /media/cuker/Data'
 alias dproj='cd /media/cuker/Data/Projects'
-alias dbot='cd /home/cuker/mt5_dashboard'
 alias dbrain='cd /home/cuker/agent-brain'
 alias dtail='cd /home/cuker/tailshare'
 alias dhome='cd /home/cuker'
