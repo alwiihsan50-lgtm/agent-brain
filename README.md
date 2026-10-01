@@ -49,6 +49,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - 📝 [**Active Session Scratchpad**](ACTIVE_SESSION.md) — Jembatan memori real-time antar agent saat pengerjaan tugas aktif.
 - 🏆 [**Katalog Bot Trading Berperforma Unggul (Hall of Fame)**](docs/high-performance-trading-bots-catalog.md) — Etalase terpusat seluruh bot trading kuantitatif teruji (Cent Grid v3.2, Hybrid Grid Engulfing, M5 Trend Sniper, D1 Multi-Pair Doji, Forex SMC).
+- 🏛️ [**Kerangka Trading Makro-Kuantitatif Institusional**](docs/institutional-macro-quant-trading-framework.md) — Alur kerja Top-Down Tri-Pillar (Makro/Fundamental + Sentimen Intermarket + Struktur SMC + Eksekusi Asimetris R:R 1:3).
 - 📄 [**Arsitektur Cent Grid Harvester (Anti-MC & Anti-Mati Lampu)**](docs/optimal-xauusd-cent-grid-harvester-architecture.md) — Panduan kanonikal resmi bot grid Akun 1 Cent v2.2 (Sizing, Mandatory Cut-Loss L4, Hard SL Broker, Pure Candle Flow).
 - 📄 [**Protokol Bot & Backtest Anti-Bias**](docs/quantitative-bot-development-and-zero-bias-backtesting-protocol.md) — Standar wajib 7 pilar kuantitatif eliminasi lookahead bias, spread drag, & validasi out-of-sample.
 - 📄 [**Tooling Efisiensi Token & MCP Server**](docs/token-efficiency-and-mcp-tooling.md) — Panduan `web2md`, `tokcut`, `sqlite-utils`, dan MCP SQLite.
@@ -80,6 +81,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-01 22:15 WIB
+**Last Updated At:** 2026-10-01 23:05 WIB
 
 
