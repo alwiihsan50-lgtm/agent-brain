@@ -37,9 +37,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Implementasi Anti-Pucuk Wick Guard & Kalibrasi Trend Invalidation Cut ke $5.00 USD (Net +7.075 USC, ROI +353%, PF 1.16, v3.2-OPTION-C-TREND-CUT-5USD) pada Bot Akun 1 Real Cent Exness**
+- [x] **Audit Backtest 2 Tahun M1 & Restorasi Formula Juara v3.2 (Net +6.995 USC, PF 1.16, ROI +350% - Menolak Usulan Strict Wick yang Terbukti Rugi -3.536 USC)**
 
-- [x] **Deploy Opsi C (Base 0.03L Cent, Tangga Step [5, 8, 12, 18 USD], Escape Buffer [5, 3, 1.8, 1 USD], & Perisai 5 NFP/CPI High-Impact Shield v3.0-OPTION-C-NFP-CPI) pada Bot Akun 1 Real Cent Exness**
+- [x] **Implementasi Anti-Pucuk Wick Guard & Kalibrasi Trend Invalidation Cut ke $5.00 USD (Net +7.075 USC, ROI +353%, PF 1.16, v3.2-OPTION-C-TREND-CUT-5USD) pada Bot Akun 1 Real Cent Exness**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -79,6 +79,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-01 05:30 WIB
+**Last Updated At:** 2026-10-01 18:24 WIB
 
 
