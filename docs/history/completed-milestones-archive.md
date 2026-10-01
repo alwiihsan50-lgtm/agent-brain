@@ -6,6 +6,7 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 1 Oktober 2026
 
+- [x] **Implementasi Anti-Pucuk Wick Guard & Kalibrasi Trend Invalidation Cut ke $5.00 USD (Net +7.075 USC, ROI +353%, PF 1.16, v3.2-OPTION-C-TREND-CUT-5USD) pada Bot Akun 1 Real Cent Exness**
 - [x] **Deploy Opsi C (Base 0.03L Cent, Tangga Step [5, 8, 12, 18 USD], Escape Buffer [5, 3, 1.8, 1 USD], & Perisai 5 NFP/CPI High-Impact Shield v3.0-OPTION-C-NFP-CPI) pada Bot Akun 1 Real Cent Exness**
 - [x] **Integrasi Fitur ATR Dynamic Step Scaling (Langkah Adaptif Volatilitas M5 + Dynamic TP + Broker Hard SL $35 USD) pada Bot Optimal XAUUSD Grid Harvester Akun 1 Real Cent (v2.5-DYNAMIC-ATR-VARIAN-B)**
 - [x] **Aktivasi Bot 4-Perisai Varian B (High-Frequency Candle Flow M5 + 4 Perisai: Momentum Delay M1, Volatility Spike Pause 15m, Trend Invalidation Early Cut H1 EMA 200, Weekend Hard Flat, Step 4-6-9-13 USD, Version 2.4-4SHIELDS-VARIAN-B) pada Akun 1 Real Cent Exness**
