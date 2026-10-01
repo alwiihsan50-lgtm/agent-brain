@@ -54,6 +54,9 @@
   * **Profit Factor:** **`1.10`** | **Win Rate:** **`90,2%`**
   * **Total Panen TP:** **2.127 kali** (~4.5x panen per hari)
   * **Max Drawdown:** **`2.092 USC (51.3%)`** *(Turun drastis hampir separuh dari baseline 90%!)*
+* **Target Akun:** Akun 1 Real Cent (`Login 263301611 - Exness Real 37`)
+* **Progresi Lot:** 4 Level Tangga: `[0.01, 0.02, 0.03, 0.05]` (Base 0.01L, Rasio Proporsional 1:2:3:5)
+* **File Script Kode:** [`/home/cuker/mt5_storage/mt5_config/bot_grid_cent.py`](file:///home/cuker/mt5_storage/mt5_config/bot_grid_cent.py)
 * **File Backtest:** [`/home/cuker/mt5_storage/mt5_backtest/test_high_engulfing_sweep.py`](file:///home/cuker/mt5_storage/mt5_backtest/test_high_engulfing_sweep.py)
 
 ---
