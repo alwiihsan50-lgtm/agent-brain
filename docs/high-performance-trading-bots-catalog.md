@@ -10,8 +10,8 @@
 
 | Kategori & Nama Bot | Pair / Aset | Timeframe | Karakteristik Utama | Net PnL / ROI | Profit Factor (PF) | Max Drawdown | Status & Lokasi Script |
 | :--- | :--- | :---: | :--- | :---: | :---: | :---: | :--- |
-| **1. Cent Grid Harvester v3.2** | `XAUUSDc` | M5 | High-Frequency Basket Harvest (4 Levels), Trend Cut $5 | **`+7.075 USC` (+353%)** | **`1.16`** | 99% Peak | 🟢 **LIVE DI AKUN 1**<br>`mt5_config/bot_grid_cent.py` |
-| **2. Hybrid Grid + Full Engulfing** | `XAUUSDc` | M5 | 2-Candle Flow + Outer Bar Reversal Synergy | **`+4.233 USC` (+211%)** | **`1.10`** | **51.3%** | 🧪 **VERIFIED READY**<br>`mt5_backtest/test_high_engulfing_sweep.py` |
+| **1. Cent Grid Harvester v3.2** | `XAUUSDc` | M5 | High-Frequency Basket Harvest (4 Levels), Trend Cut $5 | **`+7.075 USC` (+353%)** | **`1.16`** | 99% Peak | 📦 **BASELINE FORMULA**<br>`mt5_config/bot_grid_cent.py` |
+| **2. Hybrid Grid + Full Engulfing** | `XAUUSDc` | M5 | 2-Candle Flow + Outer Bar Reversal Synergy | **`+4.233 USC` (+211%)** | **`1.10`** | **51.3%** | 🟢 **LIVE DI AKUN 1 (v3.3)**<br>`mt5_config/bot_grid_cent.py` |
 | **3. Standalone Outer Bar Engulfing**| `XAUUSDc` | M5 | Sinyal Reversal Murni (Outer Bar) searah H1 ZLEMA | **`+2.929 USC` (+146%)** | **`1.25`** ⭐ | **50.8%** ⭐ | 🧪 **VERIFIED READY**<br>`mt5_backtest/test_engulfing_rule.py` |
 | **4. Golden Stack M5 Trend Sniper** | `XAUUSD` | M5 + H1 | Doji Stalemate + Gold MACD (16,38,9) + R:R 1:3.0 | **`+Rp 7.55 Juta`** | **`1.66`** | 15.1 R | 🟢 **STANDBY AKUN 1**<br>`mt5_config/bot_trending.py` |
 | **5. D1 Multi-Pair Doji Sniper** | Multi-Pair | D1 | Daily Doji Key S/R + MACD Histogram Divergence | **`WinRate 62%`** | **`1.45 - 1.82`** | **< 12%** | 📄 **VERIFIED PORTFOLIO**<br>`mt5_backtest/backtest_daily_doji_bot.py` |
