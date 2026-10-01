@@ -13,7 +13,7 @@
 | **1. Cent Grid Harvester v3.2** | `XAUUSDc` | M5 | High-Frequency Basket Harvest (4 Levels), Trend Cut $5 | **`+7.075 USC` (+353%)** | **`1.16`** | 99% Peak | 📦 **BASELINE FORMULA**<br>`mt5_config/bot_grid_cent.py` |
 | **2. Hybrid Grid + Full Engulfing** | `XAUUSDc` | M5 | 2-Candle Flow + Outer Bar Reversal Synergy | **`+4.233 USC` (+211%)** | **`1.10`** | **51.3%** | 🟢 **LIVE DI AKUN 1 (v3.3)**<br>`mt5_config/bot_grid_cent.py` |
 | **3. Standalone Outer Bar Engulfing**| `XAUUSDc` | M5 | Sinyal Reversal Murni (Outer Bar) searah H1 ZLEMA | **`+2.929 USC` (+146%)** | **`1.25`** ⭐ | **50.8%** ⭐ | 🧪 **VERIFIED READY**<br>`mt5_backtest/test_engulfing_rule.py` |
-| **4. Golden Stack M5 Trend Sniper** | `XAUUSD` | M5 + H1 | Doji Stalemate + Gold MACD (16,38,9) + R:R 1:3.0 | **`+Rp 7.55 Juta`** | **`1.66`** | 15.1 R | 🟢 **STANDBY AKUN 1**<br>`mt5_config/bot_trending.py` |
+| **4. Golden Stack M5 Trend Sniper** | `XAUUSD` | M5 + H1 | Doji Stalemate + Gold MACD (16,38,9) + R:R 1:3.0 | **`+Rp 7.55 Juta`** | **`1.66`** | 15.1 R | 🟢 **LIVE CO-RUNNING DI AKUN 1**<br>`Flat 0.05L` (`bot_trending.py`) |
 | **5. D1 Multi-Pair Doji Sniper** | Multi-Pair | D1 | Daily Doji Key S/R + MACD Histogram Divergence | **`WinRate 62%`** | **`1.45 - 1.82`** | **< 12%** | 📄 **VERIFIED PORTFOLIO**<br>`mt5_backtest/backtest_daily_doji_bot.py` |
 | **6. Forex SMC FVG Scalper** | EUR/GBP | M15 + H1 | H1 Trend + M15 FVG Retest + Asian Range Trap | **`WinRate 68%`** | **`1.35 - 1.52`** | 18% | 📄 **VERIFIED FOREX**<br>`mt5_backtest/backtest_eurusd_smc_deep.py` |
 
@@ -76,8 +76,8 @@
 ## 🎯 Kategori 2: Trend Sniper & Swing Portfolio (Risk-to-Reward Tinggi)
 
 ### 🏹 4. The Optimal Golden Stack M5 Trend Sniper (bot_trending.py)
-* **Target Akun:** Akun Standar / Cent Multi-Setup (`Login Exness Real / PropFirm`)
-* **Pair:** `XAUUSD` | **Timeframe:** M5 Dual-Engine (Macro Filter H1)
+* **Target Akun:** Akun 1 Real Cent (`Login 263301611 - Exness Real 37`) & Standar / PropFirm
+* **Pair:** `XAUUSD` / `XAUUSDc` | **Timeframe:** M5 Dual-Engine (Macro Filter H1)
 * **Arsitektur Parameter:**
   * **Filter Tren Makro:** H1 Golden Cross (EMA 50 > EMA 200 untuk BUY / EMA 50 < EMA 200 untuk SELL)
   * **Filter Kekuatan Tren:** H1 ADX $\ge$ 20.0 (Mematikan bot saat pasar mati / sideways Asia)
@@ -85,8 +85,8 @@
   * **Pemicu Entri:** Doji Stalemate Compression (`MIN_RANGE = $0.50`, `BODY_RATIO <= 30%`, Lookback 5 bar)
   * **Stop Loss Boundary:** Dinamis `$1.50 - $4.50 USD` mengikuti ekor Doji + buffer
   * **Target Profit:** **R:R Murni 1:3.0 (TANPA BEP)** *(Menyalakan BEP memotong profit sebesar -60%)*
-  * **Money Management:** Universal Flat Risk Rp 20.000 / trade (`Lot = Risk / (SL * 100)`)
-  * **Circuit Breaker:** Rem 3x SL Harian berturut-turut (Maks rugi Rp 60.000 / hari)
+  * **Money Management:** **Flat 0.05 Lot** (Single-Order Strict Risk, Magic `889911`)
+  * **Circuit Breaker:** Rem 5x SL Harian berturut-turut (Maks rugi harian terkunci)
 * **Bukti Backtest (YTD Data M5):**
   * **Net Profit:** **`+45.779 USC` (+Rp 7.553.248)** dari modal awal Rp 552.000
   * **Profit Factor (PF):** **`1.66`** | **Win Rate:** **`35,8%`** (Asimetris R:R 1:3)
