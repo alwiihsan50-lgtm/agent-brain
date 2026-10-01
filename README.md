@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Implementasi Closed-Bar Law (Entry L1 Wajib Menunggu Candle ke-2 Resmi Closed & Anti-Mid-Bar Chasing)**
+
 - [x] **Audit Backtest 2 Tahun M1 & Restorasi Formula Juara v3.2 (Net +6.995 USC, PF 1.16, ROI +350% - Menolak Usulan Strict Wick yang Terbukti Rugi -3.536 USC)**
 
 - [x] **Implementasi Anti-Pucuk Wick Guard & Kalibrasi Trend Invalidation Cut ke $5.00 USD (Net +7.075 USC, ROI +353%, PF 1.16, v3.2-OPTION-C-TREND-CUT-5USD) pada Bot Akun 1 Real Cent Exness**
@@ -79,6 +81,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-01 18:24 WIB
+**Last Updated At:** 2026-10-01 18:27 WIB
 
 

@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** MT5 Cent Grid Harvester
-- **Current Task:** Audit Backtest 2 Tahun M1 & Restorasi Formula Juara v3.2
+- **Current Task:** Enforce Closed-Bar Law (Entry L1 Hanya Saat Candle ke-2 Resmi Closed)
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Backtest 732k M1 membuktikan v3.2 (+6.995 USC, PF 1.16) jauh lebih unggul dibanding strict wick (-3.536 USC). Bot telah dipulihkan ke v3.2 dan berjalan stabil.
+- **Next Steps / Notes:** Bot diproteksi agar tidak pernah masuk di tengah candle yang sedang terbentuk (sec_into_bar <= 45s pada bar baru). c1 & c2 wajib 100% closed.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-01 18:23 WIB
+- **Last Updated At:** 2026-10-01 18:27 WIB
