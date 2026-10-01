@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Dual Live | **Acc 1 (Port 3000):** Cent `263301611` (`XAUUSDc`): **Dual Modular Co-Execution (Grid + Trending)**: (1) **Hybrid XAUUSD Cent Grid Harvester M5** (`bot_grid_cent.py`, Magic `778811`, Base 0.01L `[0.01, 0.02, 0.03, 0.05]`, 2-Candle Flow + Full Outer Bar Engulfing, Closed-Bar Law). (2) **Golden Stack M5 Trend Sniper (PF 1.66)** (`bot_trending.py`, Magic `889911`, Flat 0.05L, Doji Stalemate + Gold MACD [16,38,9], Strict R:R 1:3.0). Kedua bot berjalan berdampingan secara independen via `runner.py`. **Acc 2 (Port 3006):** IDR `463880423` (`XAUUSDm` Demo Trial 17): **Aggressive XAUUSD Grid Harvester M5 (Metode 3 Cycle Harvesting)** (Dynamic ATR Step $1.50-$3.50, 8 Levels Smooth Multiplier 0.01-0.27, Scalping Basket TP Rp 25k-75k IDR, Circuit Breaker 50% DD, Magic `556677`). |
+| **MT5 Dual Container & AI Supervisor** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) / `Port 5050` (AI) | 🟢 Multi-Pair Live | **Acc 1 (Port 3000):** Cent `263301611`: **Multi-Pair Portfolio Trending Bot v5.0** (`bot_trending.py`, Magic `889911`, Basket 4 Aset: `XAUUSDc`, `EURUSDc`, `GBPUSDc`, `USDJPYc`, Flat 0.01L, Risk 1% Equity, Strict R:R 1:3.0) berdampingan dengan **Hybrid Cent Grid Harvester M5** (`bot_grid_cent.py`, Magic `778811`). Diawasi otomatis 24/7 oleh **MT5 AI Macro Supervisor Daemon** (`mt5-ai-supervisor.service`, bertenaga Antigravity LLM Gemini 3.8 Flash via Port 5050, audit rejim pasar 30m & push notification). **Acc 2 (Port 3006):** IDR `463880423` (`XAUUSDm` Demo Trial 17): Grid Harvester M5. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -37,9 +37,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Aktivasi Bersamaan Bot Trending (Golden Stack PF 1.66, Flat Lot 0.05, Magic 889911) Berdampingan dengan Bot Grid (Base 0.01L, Magic 778811) Secara Modular via Dual Runner**
+- [x] **Implementasi Mandat Otonom AI Portfolio Manager: Multi-Pair Basket (XAUUSDc, EURUSDc, GBPUSDc, USDJPYc, Flat 0.01L, Risk 1%, R:R 1:3) & Deployment MT5 AI Macro Supervisor Daemon (Gemini 3.8 Flash via Port 5050 & Web Push Digest)**
 
-- [x] **Audit Backtest 2 Tahun M1 & Restorasi Formula Juara v3.2 (Net +6.995 USC, PF 1.16, ROI +350% - Menolak Usulan Strict Wick yang Terbukti Rugi -3.536 USC)**
+- [x] **Aktivasi Bersamaan Bot Trending (Golden Stack PF 1.66, Flat Lot 0.05, Magic 889911) Berdampingan dengan Bot Grid (Base 0.01L, Magic 778811) Secara Modular via Dual Runner**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -80,6 +80,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-01 19:24 WIB
+**Last Updated At:** 2026-10-01 22:09 WIB
 
 

@@ -141,17 +141,38 @@ Akses `https://vnc.abbas.my.id` atau `http://100.109.208.27:3000` di browser unt
 2. Tekan tombol **Share** -> **Add to Home Screen**.
 3. Buka ikon aplikasi di Home Screen, lalu tekan **Hubungkan ke Cloudflare Server** (izinkan notifikasi).
 
-### 3. Layanan Auto-Start 24/7 (Systemd Service)
-Bot trading dan container MT5 telah dikonfigurasi untuk otomatis berjalan sendiri saat server dihidupkan (*boot*):
-* **Service Unit:** `/etc/systemd/system/mt5-trading-bot.service` (`systemctl status mt5-trading-bot.service`)
-* **Runner Script:** `/home/mentari/mt5_storage/start-bot.sh`
-* **Log Realtime:** `journalctl -u mt5-trading-bot.service -f`
+### 3. Layanan Auto-Start 24/7 (Systemd Service) & Interactive Terminal Controller
+Bot trading dan container MT5 telah dikonfigurasi untuk otomatis berjalan sendiri saat workstation dihidupkan (*boot*):
+* **Service Unit Akun 1:** `/etc/systemd/system/mt5-trading-bot.service` (`systemctl status mt5-trading-bot.service`)
+* **Runner Script Akun 1:** `/home/cuker/start-bot.sh` -> `/config/runner.py`
+* **Service Unit Akun 2:** `/etc/systemd/system/mt5-trading-bot-prop1.service`
+* **Runner Script Akun 2:** `/home/cuker/start-bot-prop1.sh` -> `/config/supervisor.py`
 
-Perintah kontrol service di `mentari-server`:
+#### 🎮 Interactive Terminal Controller (`mt5` / `bot`):
+Ketik salah satu perintah berikut di terminal mana saja untuk membuka menu interaktif:
 ```bash
-sudo systemctl restart mt5-trading-bot.service   # Restart bot
-sudo systemctl stop mt5-trading-bot.service      # Hentikan bot
-sudo systemctl status mt5-trading-bot.service    # Cek status
+mt5                # Buka menu interaktif TUI
+mt5 status         # Buka pemilih akun interaktif -> Cek status & Toggle ON/OFF
+bot                # Alias interaktif langsung
+```
+
+Alur Interaktif:
+1. **Menu Utama:** Pilih Akun 1 (Exness Real Cent), Akun 2 (Exness Trial IDR), atau Ringkasan Semua Akun.
+2. **Sub-Menu Akun:**
+   - `[1]` Cek status lengkap (Container, Service, Sub-proses, Saldo/Equity, Floating PnL, Sinyal, Posisi Terbuka).
+   - `[2]` Toggle OFF/ON Bot (dengan proteksi safety posisi terbuka & clean kill).
+   - `[3]` Restart Bot.
+   - `[4]` Streaming Logs real-time.
+
+#### ⚡ Shortcut Cepat Terminal (One-Liner / Non-Interaktif):
+```bash
+mt5 status 1       # Cek status Akun 1
+mt5 toggle 1       # Toggle ON/OFF Akun 1
+mt5 on 1 / bot-on  # Hidupkan algo bot Akun 1
+mt5 off 1 / bot-off# Matikan algo bot Akun 1 (Aman terhadap open positions)
+mt5 status 2       # Cek status Akun 2
+mt5 toggle 2       # Toggle ON/OFF Akun 2
+mt5 status all     # Ringkasan cepat seluruh akun
 ```
 
 ### 4. Deploy / Update Worker (Bila ada perubahan)
