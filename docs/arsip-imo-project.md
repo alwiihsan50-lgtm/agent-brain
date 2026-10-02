@@ -77,3 +77,11 @@ Kontrol navigasi kalender menggunakan layout 2 baris x 2 kolom:
   - Desktop Entry: `/home/cuker/Desktop/Timemark-AI-Backend.desktop`
 - **Acuan Koordinat:** Terkunci presisi pada Garis Kuning Vertikal di margin kiri (`X: 19..24`, `Y: 1310..1490`). Posisi teks tanggal: `X = lineXMax + 0.0225 * width`, `Y = lineYTop + 0.0210 * height` (baseline).
 
+## 10. Prosedur Operasional Bulk Upload Foto Bulanan (TailShare to Database)
+Panduan lengkap otomasi upload foto bulanan via file ZIP TailShare tanpa login antarmuka web didokumentasikan di:
+👉 [**SOP Bulk Upload Foto Absensi TailShare**](sop-bulk-upload-foto-absensi-tailshare.md)
+- Akses administratif langsung via Supabase `service_role` key (bypass RLS).
+- Kompresi foto target `<= 150 KB` berbasis Pillow / browser-image-compression.
+- Sinkronisasi rotasi shift 8 hari dan penanganan hari libur/rest otomatis.
+
+
