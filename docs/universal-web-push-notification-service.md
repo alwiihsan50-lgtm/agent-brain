@@ -18,9 +18,10 @@ Semua aplikasi pengirim (baik yang berjalan di Docker, server lokal, VM, maupun 
 
 ### Detail Endpoint:
 * **Service URL:** `https://mt5-push-backend.alwiihsan50.workers.dev`
-* **Trigger Endpoint:** `POST https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification`
+* **Trigger Endpoint:** `POST https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification` (Payload: `{ "topic": "mt5_trading" | "system_boot" | "general_alerts", "title": "...", "message": "..." }`)
 * **Registration Endpoint:** `POST https://mt5-push-backend.alwiihsan50.workers.dev/subscribe`
-* **PWA Web UI (Client):** `GET https://mt5-push-backend.alwiihsan50.workers.dev/`
+* **Preferences Endpoint:** `GET /preferences?endpoint=...` & `POST /preferences`
+* **PWA Web UI (Client & Toggle Settings):** `GET https://mt5-push-backend.alwiihsan50.workers.dev/`
 * **Database Subscription:** Cloudflare KV Namespace `SUBSCRIPTIONS` (ID: `0217d87236964fb796f7988e77f29de0`)
 * **VAPID Public Key:** `BDrLwaIpW32cMuH3t3CSr_rxSirYALcj9BOepAeFtSi9mHtO1IsNgU0hfvgCVJXQO7l6xQKTwsXEuTpU5JS2oXs`
 
@@ -123,19 +124,19 @@ curl -s -X POST \
 
 ---
 
-## 📱 3. Mendaftarkan Perangkat Baru (Client PWA)
+## 📱 3. Pendaftaran & Kebijakan Single-Device (1 HP Eksklusif)
 
-Jika kamu ingin mendaftarkan iPhone baru atau browser lain untuk menerima notifikasi:
-
-1. Buka URL: **`https://mt5-push-backend.alwiihsan50.workers.dev`** di Safari.
-2. Lakukan **Share ➡️ Add to Home Screen**.
-3. Buka ikon dari Home Screen, lalu tekan **"Hubungkan ke Cloudflare Server"**.
-4. Perangkat baru akan otomatis tersimpan di Cloudflare KV (`SUBSCRIPTIONS`) dan otomatis menerima seluruh notifikasi broadcast berikutnya.
+Sistem ini menerapkan **Strict Single-Device Architecture** (hanya 1 smartphone aktif terdaftar):
+1. Setiap kali user menghubungkan perangkat baru atau menginstal ulang PWA di HP:
+   - Endpoint baru akan **menggantikan (*overwrite*)** seluruh data langganan lama di Cloudflare KV (`SUBSCRIPTIONS`).
+   - Tidak akan terjadi penumpukan token atau duplikasi notifikasi.
+2. Status di header PWA akan menampilkan **"● Terhubung (1 HP Aktif)"**.
 
 ---
 
 ## 🛡️ 4. Maintenance & Operasional
 - **Biaya:** $0 / Bulan (Free Tier Cloudflare Workers mencakup 100.000 request/hari).
+- **Single-Device Retention:** Cloudflare KV selalu menahan tepat 1 objek langganan aktif pengguna.
 - **Auto Cleanup:** Cloudflare Worker secara otomatis mendeteksi status `410 Gone` atau `404 Not Found` dari Apple/Google Push Service saat user meng-uninstall PWA atau mencabut izin notifikasi, dan menghapus subscription tersebut dari KV database tanpa intervensi manual.
 
 ---

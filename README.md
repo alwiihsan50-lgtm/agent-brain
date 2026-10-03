@@ -37,11 +37,11 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [x] **Implementasi Sistem Pemilih Kategori Notifikasi PWA (MT5 Trading, System Boot, General Alerts) & Sinkronisasi Preferensi Cloudflare KV**
+
 - [ ] **Upgrade MT5 AI Supervisor Engine v3.0: Continuous Dual-Engine Oversight (6s Fast Reflex Position Defense + 10m Asynchronous Cognitive LLM + 0-Latency Event Triggers)**
 
 - [x] **Implementasi Mandat Otonom AI Portfolio Manager: Multi-Pair Basket (XAUUSDc, EURUSDc, GBPUSDc, USDJPYc, Flat 0.01L, Risk 1%, R:R 1:3) & Deployment MT5 AI Macro Supervisor Daemon (Gemini 3.8 Flash via Port 5050 & Web Push Digest)**
-
-- [x] **Aktivasi Bersamaan Bot Trending (Golden Stack PF 1.66, Flat Lot 0.05, Magic 889911) Berdampingan dengan Bot Grid (Base 0.01L, Magic 778811) Secara Modular via Dual Runner**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -84,6 +84,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-02 21:27 WIB
+**Last Updated At:** 2026-10-03 22:47 WIB
 
 
