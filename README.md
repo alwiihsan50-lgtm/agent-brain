@@ -16,7 +16,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
 | **MT5 Dual Container & AI Supervisor** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) / `Port 5050` (AI) | 🟢 Multi-Pair Live | **Acc 1 (Port 3000):** Cent `263301611`: **Multi-Pair Portfolio Trending Bot v5.0** (`bot_trending.py`, Magic `889911`, Basket 4 Aset: `XAUUSDc`, `EURUSDc`, `GBPUSDc`, `USDJPYc`, Flat 0.01L, Risk 1% Equity, Strict R:R 1:3.0) berdampingan dengan **Hybrid Cent Grid Harvester M5** (`bot_grid_cent.py`, Magic `778811`). Diawasi otomatis 24/7 oleh **MT5 AI Macro Supervisor Daemon** (`mt5-ai-supervisor.service`, bertenaga Antigravity LLM Gemini 3.8 Flash via Port 5050, audit rejim pasar 30m & push notification). **Acc 2 (Port 3006):** IDR `463880423` (`XAUUSDm` Demo Trial 17): Grid Harvester M5. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
-| **Cloudflare Manager & DNS** | `abbas.my.id` / Zero Trust | 🟢 Full Access | Token API Full Access, 12 Subdomain DNS, PIN OTP `alwiihsan50@gmail.com` (Sesi 30 Hari). |
+| **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
 | **TailShare Clean** | `Port 40507` | 🟢 Running | Minimal file-transfer-only version, same storage `/media/cuker/Data/tailshare`, no clipboard/WS/QR/electron. |
 | **Arsip IMO 2025** | `arsip.abbas.my.id` | 🟢 Live (Cloudflare) | Web mandiri arsip presensi IMO 2025 (Bulan 1-4) 100% Cloudflare (Pages + D1 + KV), 24/7 uptime tanpa PC. PC workstation hanya digunakan saat generate file Excel resmi. |
@@ -37,11 +37,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [x] **Migrasi Otoritas DNS lpkpmentari.id ke Cloudflare (Anti-Lepas Hostinger) & Stabilisasi Pointing Vercel Astro 7 (Live)**
+
+- [ ] **Sub-Tab Khusus Clipboard Disematkan (Pinned) & Perbaikan Sorting Prioritas Pinned di TailShare Web UI**
+
 - [x] **Implementasi Sistem Pemilih Kategori Notifikasi PWA (MT5 Trading, System Boot, General Alerts) & Sinkronisasi Preferensi Cloudflare KV**
 
 - [ ] **Upgrade MT5 AI Supervisor Engine v3.0: Continuous Dual-Engine Oversight (6s Fast Reflex Position Defense + 10m Asynchronous Cognitive LLM + 0-Latency Event Triggers)**
-
-- [x] **Implementasi Mandat Otonom AI Portfolio Manager: Multi-Pair Basket (XAUUSDc, EURUSDc, GBPUSDc, USDJPYc, Flat 0.01L, Risk 1%, R:R 1:3) & Deployment MT5 AI Macro Supervisor Daemon (Gemini 3.8 Flash via Port 5050 & Web Push Digest)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -84,6 +86,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-03 22:47 WIB
+**Last Updated At:** 2026-10-05 19:22 WIB
 
 
