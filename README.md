@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container & AI Supervisor** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) / `Port 5050` (AI) | 🟢 Multi-Pair Live | **Acc 1 (Port 3000):** Cent `263301611`: **Multi-Pair Portfolio Trending Bot v5.0** (`bot_trending.py`, Magic `889911`, Basket 4 Aset: `XAUUSDc`, `EURUSDc`, `GBPUSDc`, `USDJPYc`, Flat 0.01L, Risk 1% Equity, Strict R:R 1:3.0) berdampingan dengan **Hybrid Cent Grid Harvester M5** (`bot_grid_cent.py`, Magic `778811`). Diawasi otomatis 24/7 oleh **MT5 AI Macro Supervisor Daemon** (`mt5-ai-supervisor.service`, bertenaga Antigravity LLM Gemini 3.8 Flash via Port 5050, audit rejim pasar 30m & push notification). **Acc 2 (Port 3006):** IDR `463880423` (`XAUUSDm` Demo Trial 17): Grid Harvester M5. |
+| **MT5 Single Container & News Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Grid XAU Live | **Acc 1 (Port 3000):** Cent `263301611`: **Hybrid Cent Grid Harvester M5** (`bot_grid_cent.py`, Magic `778811`, Base 0.01L, Safe Window Shield) berjalan tunggal (Trending Bot dinonaktifkan). Diawasi oleh **MT5 Event Sentinel & News Defense Supervisor** (`mt5-ai-supervisor.service`, push notifikasi murni open/TP/SL & jeda otomatis saat rilis High-Impact News). **Acc 2 (Port 3006):** IDR `463880423` (Demo Trial 17). |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -82,6 +82,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-07 09:43 WIB
+**Last Updated At:** 2026-10-07 10:10 WIB
 
 
