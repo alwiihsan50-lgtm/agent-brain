@@ -8,6 +8,6 @@
 - **Current Task:** Evaluasi Performa Live Akun 2 Demo (Hedged Breakout Staircase Grid)
 - **Modified Files:** `/home/cuker/mt5_storage/mt5_config_prop1/bot.py`, `/home/cuker/mt5_storage/start-bot.sh`
 - **Verification Command / URL:** `cat /home/cuker/mt5_storage/mt5_config_prop1/bot_status_prop1.json | jq .`
-- **Next Steps / Notes:** Upgrade ke v1.1-TIERED-PROFIT: Layer 1 s/d 3 target profit penuh 10 pips (~Rp 15.000 IDR) + Pullback Lock protection (amankan Rp 3.000 - 6.000 jika harga retrace). Layer 4+ target BEP + Safety Buffer (+Rp 3.000 IDR). Saldo demo naik menjadi Rp 1.160.972 (+16.1% dari modal awal Rp 1.000.000). Bot live berjalan di container propfirm-mt5.
+- **Next Steps / Notes:** Upgrade ke v1.2-ASYMMETRIC-COUNTER-HEDGE: Mencegah penambahan layer searah breakout pemenang. Saat net BUY aktif, hanya pasang SELL STOP 0.04 di bawah (pengaman reversal) dan TP di atas; saat net SELL aktif, hanya pasang BUY STOP 0.04 di atas dan TP di bawah. Terbukti live di MT5: SELL 0.02 aktif, pending order HANYA BUY STOP 0.04 di atas (zero order di bawah). Saldo demo naik menjadi Rp 1.296.117 (+29.6% dari modal Rp 1.000.000).
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-10-07 13:08 WIB
+- **Last Updated At:** 2026-10-07 13:54 WIB
