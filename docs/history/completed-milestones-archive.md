@@ -4,6 +4,11 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 7 Oktober 2026
+
+- [x] **Implementasi Sistem Pemilih Kategori Notifikasi PWA (MT5 Trading, System Boot, General Alerts) & Sinkronisasi Preferensi Cloudflare KV**
+- [x] **Upgrade MT5 AI Supervisor Engine v3.0: Continuous Dual-Engine Oversight (6s Fast Reflex Position Defense + 10m Asynchronous Cognitive LLM + 0-Latency Event Triggers)**
+
 ## 📅 Selesai Per 5 Oktober 2026
 
 - [x] **Implementasi Mandat Otonom AI Portfolio Manager: Multi-Pair Basket (XAUUSDc, EURUSDc, GBPUSDc, USDJPYc, Flat 0.01L, Risk 1%, R:R 1:3) & Deployment MT5 AI Macro Supervisor Daemon (Gemini 3.8 Flash via Port 5050 & Web Push Digest)**

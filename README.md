@@ -39,11 +39,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [x] **Migrasi Otoritas DNS lpkpmentari.id ke Cloudflare (Anti-Lepas Hostinger) & Stabilisasi Pointing Vercel Astro 7 (Live)**
 
-- [ ] **Sub-Tab Khusus Clipboard Disematkan (Pinned) & Perbaikan Sorting Prioritas Pinned di TailShare Web UI**
-
-- [x] **Implementasi Sistem Pemilih Kategori Notifikasi PWA (MT5 Trading, System Boot, General Alerts) & Sinkronisasi Preferensi Cloudflare KV**
-
-- [ ] **Upgrade MT5 AI Supervisor Engine v3.0: Continuous Dual-Engine Oversight (6s Fast Reflex Position Defense + 10m Asynchronous Cognitive LLM + 0-Latency Event Triggers)**
+- [x] **Sub-Tab Khusus Clipboard Disematkan (Pinned) & Perbaikan Sorting Prioritas Pinned di TailShare Web UI**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -86,6 +82,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-05 19:22 WIB
+**Last Updated At:** 2026-10-07 09:43 WIB
 
 
