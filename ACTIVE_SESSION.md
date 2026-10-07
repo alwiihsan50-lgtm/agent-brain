@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** MT5 Trading Automation
-- **Current Task:** Evaluasi Performa Live Akun 2 Demo (Hedged Breakout Staircase Grid)
-- **Modified Files:** `/home/cuker/mt5_storage/mt5_config_prop1/bot.py`, `/home/cuker/mt5_storage/start-bot.sh`
+- **Current Task:** Evaluasi Live Bot Akun 2 Demo (v2.1 Flat Jarak 20 Pips & Hard Cap Layer 4)
+- **Modified Files:** `/home/cuker/mt5_storage/mt5_config_prop1/bot.py`
 - **Verification Command / URL:** `cat /home/cuker/mt5_storage/mt5_config_prop1/bot_status_prop1.json | jq .`
-- **Next Steps / Notes:** Upgrade ke v2.0-QUICK-EXIT-HARD-CAP: (1) Quick TP Layer 1 diperpendek ke 6 pips ($0.60), jarak hedge tetap 10 pips ($1.00) agar asimetris mudah TP; (2) Quick Basket Exit di Rp 4.000 IDR (3-5 pips di atas BEP); (3) Hard Max Layer Cap di Layer 4 (0.04 lot); (4) Emergency Basket SL di Rp 150.000 IDR (Anti-MC 100%). Reset saldo Rp 1.000.000, Cycle 1 langsung HIT TP dalam 29 detik (+Rp 10.713), saldo sekarang Rp 1.010.713.
+- **Next Steps / Notes:** Bot ditingkatkan ke v2.1-FLAT-20PIPS-COUNTER-HEDGE: GRID_STEP_USD = 2.00 (20 pips), TP 20 pips ($2.00 / ~Rp 32.500 IDR), Max Layer = 4 (Hard Cap Anti-Overleverage), Emergency Basket SL = Rp 200.000 (Anti-MC 100%), Quick Exit Buffer = Rp 5.000 IDR. Siklus 1 aktif live di MT5 (BUY 0.01 @ 4098.434, TP 4100.434, SELL STOP 0.01 @ 4096.434).
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-10-07 14:45 WIB
+- **Last Updated At:** 2026-10-07 21:24 WIB
