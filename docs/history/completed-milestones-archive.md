@@ -4,6 +4,10 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 8 Oktober 2026
+
+- [x] **Sub-Tab Khusus Clipboard Disematkan (Pinned) & Perbaikan Sorting Prioritas Pinned di TailShare Web UI**
+
 ## 📅 Selesai Per 7 Oktober 2026
 
 - [x] **Implementasi Sistem Pemilih Kategori Notifikasi PWA (MT5 Trading, System Boot, General Alerts) & Sinkronisasi Preferensi Cloudflare KV**

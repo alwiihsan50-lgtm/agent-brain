@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Single Container & News Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **Graceful Wind-Down SELESAI** (`bot.py`, Magic `778899`, XAUUSDc). 100% Bersih Total (0 posisi aktif), saldo bertambah menjadi 2.491,05 USC (+137,5 USC profit tunai). Bot standby. **Acc 2 (Port 3006):** IDR `463880423` (Demo Trial 17): **Simultaneous Hedged Martingale Harvester v2.1 Triad Edition** (`bot.py`, Magic `556677`, XAUUSDm). 3 Solusi aktif: Tail Pruning via Siphon Pool (Rp 164rb+ pool), Dynamic Decay Escape, & Trend Booster + Volume-Max Relative Ladder. |
+| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **Triad v2.2 Cent Zero-Anxiety Edition Live** (`bot.py`, Magic `778899`, XAUUSDc). Base Step $2.00 (20 pips), Hard TP $1.00 (genap +1.0 USC), Dynamic Decay USC (+4.0 ➔ +0.5 USC), Max Spread $0.45, Emergency Prune $\ge$L5, 50-50 Profit Share. Diawasi otonom tiap 30m via `audit_bot_anomaly.py` & Alarm Darurat DD $\ge$20%. Saldo bertambah: 2.508+ USC. **Acc 2 (Port 3006):** IDR `463880423`: **Triad v2.2 Profit Growth Edition** (`bot.py`, Magic `556677`, XAUUSDm). Base Step $1.50, Anti Double-Counting, Siphon Pool Rp 784rb+, Saldo tembus Rp 100,5+ Juta IDR. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -37,11 +37,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Deploy Triad Non-Stop Solutions di Akun 2 Demo (463880423) & Graceful Wind-Down di Akun 1 Real Cent (263301611)** (Akun 1 selesai bersih & divalidasi user; Akun 2 live testing Triad v2.1)
+- [x] **Deploy Triad Non-Stop Solutions di Akun 2 Demo (463880423) & Graceful Wind-Down di Akun 1 Real Cent (263301611)** (Akun 1 selesai bersih & divalidasi user; Akun 2 live testing Triad v2.1)
 
 - [x] **Migrasi Otoritas DNS lpkpmentari.id ke Cloudflare (Anti-Lepas Hostinger) & Stabilisasi Pointing Vercel Astro 7 (Live)**
-
-- [x] **Sub-Tab Khusus Clipboard Disematkan (Pinned) & Perbaikan Sorting Prioritas Pinned di TailShare Web UI**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -85,6 +83,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-08 14:52 WIB
+**Last Updated At:** 2026-10-08 19:17 WIB
 
 
