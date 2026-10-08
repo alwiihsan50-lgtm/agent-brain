@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Single Container & News Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | ⏸️ Acc 1 Stopped | **Acc 1 (Port 3000):** Cent `263301611`: Terminal MT5 aktif, Bot Cent Grid (`bot_grid_cent.py`, Magic `778811`) **DINONAKTIFKAN** sementara atas arahan USER. **Acc 2 (Port 3006):** IDR `463880423` (Demo Trial 17): **Hedged Breakout Staircase Grid Bot** (`bot.py`, Magic `445566`, Step $1.00 / 10 pips, Base 0.01L, Exit BEP `PnL >= 0`, Zero Ping-Pong Martingale, Live). |
+| **MT5 Single Container & News Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 2 Standby | **Acc 1 (Port 3000):** Cent `263301611`: Terminal MT5 aktif, Bot Cent Grid (`bot_grid_cent.py`, Magic `778811`) **DINONAKTIFKAN** sementara. **Acc 2 (Port 3006):** IDR `463880423` (Demo Trial 17): **Simultaneous Hedged Martingale Harvester v1.0** (`bot.py`, Magic `556677`, Step $1.00 / 10 pips, Base 0.01L, Moderate 1.5x Martingale, Basket Exit +Rp 5.000 IDR, Standby Menunggu Top-up Saldo). |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -37,7 +37,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Eksperimen & Evaluasi Akun 2 Demo (463880423): Hedged Breakout Staircase Grid (Target BEP Exit & Anti-Martingale Ping-Pong)**
+- [ ] **Deploy & Uji Coba Bot Baru Akun 2 Demo (463880423): Simultaneous Hedged Martingale Harvester v1.0 (XAUUSDm, Step $1.00, Moderate 1.5x, Basket Recovery +Rp 5rb)**
 
 - [x] **Migrasi Otoritas DNS lpkpmentari.id ke Cloudflare (Anti-Lepas Hostinger) & Stabilisasi Pointing Vercel Astro 7 (Live)**
 
@@ -84,6 +84,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-08 09:14 WIB
+**Last Updated At:** 2026-10-08 09:36 WIB
 
 
