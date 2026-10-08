@@ -57,6 +57,10 @@ Dokumen ini memuat arsitektur lengkap, pemetaan repositori, basis data, alur bis
 ### C. Paket Kursus Online Bersertifikat (Web 2 - Daring / LMS)
 1. **Microsoft Office Dasar (Rp 500.000):** 18 materi video fondasi + 6 ujian praktik Word, Excel, PowerPoint + sertifikat resmi.
 2. **Microsoft Office Lanjutan (Rp 500.000):** 18 materi video tingkat lanjut + 6 ujian praktik Word, Excel, PowerPoint + sertifikat resmi.
+3. **Paket Photoshop dan Corel Draw (Rp 900.000):** 24x pertemuan @ 2 jam (120 menit), desain grafis profesional, manipulasi foto & vektor, sertifikat resmi.
+4. **Paket RPL / Web Desain Dasar (Rp 900.000):** 24x pertemuan @ 2 jam (120 menit), dasar web coding, HTML, CSS, JavaScript, layout responsif, sertifikat resmi.
+5. **Paket RPL / Web Desain Terampil (Rp 900.000):** 24x pertemuan @ 2 jam (120 menit), pengembangan web lanjutan, logika interaktif, pembuatan website siap publikasi, sertifikat resmi.
+6. **Paket Komputer Akuntansi MYOB & Accurate (Rp 750.000):** 24x pertemuan @ 2 jam (120 menit), pembukuan digital, siklus akuntansi perusahaan dagang/jasa, laporan keuangan otomatis, sertifikat resmi.
 
 ---
 

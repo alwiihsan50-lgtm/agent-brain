@@ -37,9 +37,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Implementasi Program Unggulan Profesional 1 Tahun Komputer (Fasilitas Asrama & Makan 3x Sehari) di LPKPMentariWebsite (Live di lpkpmentari.id)**
+- [x] **Penambahan 4 Paket Kursus Online Baru (Photoshop & CorelDraw, Web Desain Dasar, Web Desain Terampil, Komputer Akuntansi) di MentariOnlineCourse**
 
-- [x] **Pembaruan 12 Program Keterampilan Vokasi di Web LPKP Mentari (LPKPMentariWebsite Live di lpkpmentari.id)**
+- [x] **Implementasi Program Unggulan Profesional 1 Tahun Komputer (Fasilitas Asrama & Makan 3x Sehari) di LPKPMentariWebsite (Live di lpkpmentari.id)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -83,6 +83,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-09 03:21 WIB
+**Last Updated At:** 2026-10-09 03:59 WIB
 
 
