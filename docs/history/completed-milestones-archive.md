@@ -6,6 +6,7 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 8 Oktober 2026
 
+- [x] **Migrasi Otoritas DNS lpkpmentari.id ke Cloudflare (Anti-Lepas Hostinger) & Stabilisasi Pointing Vercel Astro 7 (Live)**
 - [x] **Sub-Tab Khusus Clipboard Disematkan (Pinned) & Perbaikan Sorting Prioritas Pinned di TailShare Web UI**
 
 ## 📅 Selesai Per 7 Oktober 2026
