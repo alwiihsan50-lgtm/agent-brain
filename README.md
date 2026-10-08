@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **Triad v2.2 Cent Zero-Anxiety Edition Live** (`bot.py`, Magic `778899`, XAUUSDc). Base Step $2.00 (20 pips), Hard TP $1.00 (genap +1.0 USC), Dynamic Decay USC (+4.0 ➔ +0.5 USC), Max Spread $0.45, Emergency Prune $\ge$L5, 50-50 Profit Share. Diawasi otonom tiap 30m via `audit_bot_anomaly.py` & Alarm Darurat DD $\ge$20%. Saldo bertambah: 2.508+ USC. **Acc 2 (Port 3006):** IDR `463880423`: **Triad v2.2 Profit Growth Edition** (`bot.py`, Magic `556677`, XAUUSDm). Base Step $1.50, Anti Double-Counting, Siphon Pool Rp 784rb+, Saldo tembus Rp 100,5+ Juta IDR. |
+| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **Triad v2.4 Cent Fortress Edition Live** (`bot.py`, Magic `778899`, XAUUSDc). Base Step $5.00 (50 pips, Benteng Baja tahan 1.600 pips), Hard TP $2.00 (genap +2.0 USC), Expanding 1.5x, Session Filter 07:00-19:00 WIB, Dynamic Decay USC (+4.0 ➔ +0.5 USC), Max Spread $0.45, Emergency Prune $\ge$L5, Siphon Pool 66 USC (6x gunting ekor), Alarm Darurat DD $\ge$20%. Saldo bertambah: 2.672+ USC. **Acc 2 (Port 3006):** IDR `463880423`: **Triad v2.2 Profit Growth Edition** (`bot.py`, Magic `556677`, XAUUSDm). Base Step $1.50, Anti Double-Counting, Siphon Pool Rp 3,1+ Juta IDR, Saldo tembus Rp 107,1+ Juta IDR. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -83,6 +83,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-09 03:59 WIB
+**Last Updated At:** 2026-10-09 05:52 WIB
 
 
