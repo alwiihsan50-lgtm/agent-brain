@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Single Container & News Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **Graceful Wind-Down** aktif (`bot.py`, Magic `778899`, XAUUSDc). Menghentikan siklus baru, mengawal posisi keranjang aktif hingga TP/close bersih (BUY sudah TP & tutup, SELL 4L dikawal). **Acc 2 (Port 3006):** IDR `463880423` (Demo Trial 17): **Simultaneous Hedged Martingale Harvester v2.0 Triad Edition** (`bot.py`, Magic `556677`, XAUUSDm). 3 Solusi aktif: Tail Pruning via Siphon Pool, Dynamic Decay Escape, & Trend-Riding Booster. |
+| **MT5 Single Container & News Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **Graceful Wind-Down SELESAI** (`bot.py`, Magic `778899`, XAUUSDc). 100% Bersih Total (0 posisi aktif), saldo bertambah menjadi 2.491,05 USC (+137,5 USC profit tunai). Bot standby. **Acc 2 (Port 3006):** IDR `463880423` (Demo Trial 17): **Simultaneous Hedged Martingale Harvester v2.1 Triad Edition** (`bot.py`, Magic `556677`, XAUUSDm). 3 Solusi aktif: Tail Pruning via Siphon Pool (Rp 164rb+ pool), Dynamic Decay Escape, & Trend Booster + Volume-Max Relative Ladder. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -37,7 +37,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Deploy Triad Non-Stop Solutions di Akun 2 Demo (463880423) & Graceful Wind-Down di Akun 1 Real Cent (263301611)**
+- [ ] **Deploy Triad Non-Stop Solutions di Akun 2 Demo (463880423) & Graceful Wind-Down di Akun 1 Real Cent (263301611)** (Akun 1 selesai bersih & divalidasi user; Akun 2 live testing Triad v2.1)
 
 - [x] **Migrasi Otoritas DNS lpkpmentari.id ke Cloudflare (Anti-Lepas Hostinger) & Stabilisasi Pointing Vercel Astro 7 (Live)**
 
@@ -50,6 +50,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ## 📚 Indeks Dokumentasi (`docs/`)
 
 - 📝 [**Active Session Scratchpad**](ACTIVE_SESSION.md) — Jembatan memori real-time antar agent saat pengerjaan tugas aktif.
+- 🏛️ [**Arsitektur Triad Hedged Martingale Non-Stop**](docs/triad-hedged-martingale-nonstop-architecture.md) — Panduan kanonikal 3 solusi cerdas non-stop (Tail Pruning via Siphon Pool, Dynamic Decay Escape, Trend Booster, & Sizing Anti-Duplicate).
 - 🏆 [**Katalog Bot Trading Berperforma Unggul (Hall of Fame)**](docs/high-performance-trading-bots-catalog.md) — Etalase terpusat seluruh bot trading kuantitatif teruji (Cent Grid v3.2, Hybrid Grid Engulfing, M5 Trend Sniper, D1 Multi-Pair Doji, Forex SMC).
 - 🏛️ [**Kerangka Trading Makro-Kuantitatif Institusional**](docs/institutional-macro-quant-trading-framework.md) — Alur kerja Top-Down Tri-Pillar (Makro/Fundamental + Sentimen Intermarket + Struktur SMC + Eksekusi Asimetris R:R 1:3).
 - 📄 [**Arsitektur Cent Grid Harvester (Anti-MC & Anti-Mati Lampu)**](docs/optimal-xauusd-cent-grid-harvester-architecture.md) — Panduan kanonikal resmi bot grid Akun 1 Cent v2.2 (Sizing, Mandatory Cut-Loss L4, Hard SL Broker, Pure Candle Flow).
@@ -84,6 +85,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-08 14:45 WIB
+**Last Updated At:** 2026-10-08 14:52 WIB
 
 
