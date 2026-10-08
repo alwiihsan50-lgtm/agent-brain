@@ -5,9 +5,11 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** MT5 Trading Automation (Akun 1 Cent Real & Akun 2 Demo)
-- **Current Task:** Deploy Simultaneous Hedged Martingale Harvester v1.1 di Akun 1 Real Cent (263301611)
-- **Modified Files:** `/home/cuker/mt5_storage/mt5_config/bot.py`, `/home/cuker/mt5_storage/mt5_config/bot_status.json`, `/home/cuker/mt5_storage/mt5_config/runner.py`
-- **Verification Command / URL:** `tail -n 20 /home/cuker/mt5_storage/mt5_config/bot_activity_cent.log` | Web MT5: `http://localhost:3000`
-- **Next Steps / Notes:** Bot v1.1 resmi live di Akun 1 Cent Real (`exness-mt5`, XAUUSDc). Order awal BUY 0.01L & SELL 0.01L sudah terbuka. Parameter: Base Step $1.00, Expanding 1.5x Step, Base Lot 0.01L Cent, Basket Exit +2.5 USC.
+- **Current Task:** Deploy Triad Non-Stop Solutions di Akun 2 Demo & Graceful Wind-Down di Akun 1 Real Cent
+- **Modified Files:** `/home/cuker/mt5_storage/mt5_config/bot.py`, `/home/cuker/mt5_storage/mt5_config/bot_status.json`, `/home/cuker/mt5_storage/mt5_config_prop1/bot.py`, `/home/cuker/mt5_storage/mt5_config_prop1/bot_status_prop1.json`
+- **Verification Command / URL:** `tail -n 20 /home/cuker/mt5_storage/mt5_config/bot_activity_cent.log` | `tail -n 20 /home/cuker/mt5_storage/mt5_config_prop1/bot_activity_prop1.log`
+- **Next Steps / Notes:** 
+  1. Akun 1 Real Cent (`exness-mt5`, XAUUSDc): Graceful Wind-Down aktif. Sisi BUY telah sukses TP (+2.70 USC) dan berhenti membuka siklus baru. Sisa SELL 4 layer dikawal sampai TP/close.
+  2. Akun 2 Demo (`propfirm-mt5`, XAUUSDm): Triad Solutions v2.0 aktif (1. Tail Pruning via Siphon Pool, 2. Dynamic Decay Escape, 3. Trend-Riding Booster). Bot standby menunggu saldo demo.
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-10-08 12:04 WIB
+- **Last Updated At:** 2026-10-08 14:18 WIB
