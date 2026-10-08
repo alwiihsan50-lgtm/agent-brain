@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** MT5 Trading Automation (Akun 2 Demo)
-- **Current Task:** Deploy Bot Baru: Simultaneous Hedged Martingale Harvester v1.0
+- **Current Task:** Uji Coba Live Bot: Simultaneous Hedged Martingale Harvester v1.0
 - **Modified Files:** `/home/cuker/mt5_storage/mt5_config_prop1/bot.py`, `/home/cuker/mt5_storage/mt5_config_prop1/bot_status_prop1.json`
 - **Verification Command / URL:** `tail -n 20 /home/cuker/mt5_storage/mt5_config_prop1/bot_activity_prop1.log` | Web MT5: `http://localhost:3006`
-- **Next Steps / Notes:** Bot baru telah online di container `propfirm-mt5` dalam status WAITING_DEPOSIT. Menunggu USER melakukan deposit saldo demo via Exness Personal Area ke akun `463880423`. Begitu saldo terisi >= Rp 50.000 IDR, bot akan otomatis mengeksekusi order BUY & SELL perdana.
+- **Next Steps / Notes:** Saldo deposit Rp 1.000.000 IDR berhasil terdeteksi. Bot langsung aktif membuka BUY & SELL. Sisi BUY telah 2x TP berturut-turut (Balance naik ke Rp 1.033.039 IDR). Sisi SELL aktif me-manage 3 layer Martingale Moderat (0.01 + 0.02 + 0.03L) menunggu retrace untuk Basket Close +Rp 5rb.
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-10-08 09:36 WIB
+- **Last Updated At:** 2026-10-08 09:43 WIB
