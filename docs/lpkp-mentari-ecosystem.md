@@ -20,7 +20,7 @@ Dokumen ini memuat arsitektur lengkap, pemetaan repositori, basis data, alur bis
 
 | Nama Proyek | Direktori Lokal | Remote GitHub | Tech Stack & DNS | Keterangan / Peran |
 | :--- | :--- | :--- | :--- | :--- |
-| **Web 1: LPKPMentariWebsite** | `/media/cuker/Data/Projects/LPKPMentariWebsite` | `lpkpmentaribussiness/LPKPMentariWebsite` | Astro 7 + TS + Vercel (DNS: Cloudflare `76.76.21.21`) | Website profil resmi (`lpkpmentari.id`), legalitas, galeri prestasi, & katalog 6 program luring. |
+| **Web 1: LPKPMentariWebsite** | `/media/cuker/Data/Projects/LPKPMentariWebsite` | `lpkpmentaribussiness/LPKPMentariWebsite` | Astro 7 + TS + Vercel (DNS: Cloudflare `76.76.21.21`) | Website profil resmi (`lpkpmentari.id`), legalitas, galeri prestasi, & katalog 12 program vokasi. |
 | **Web 2: MentariOnlineCourse** | `/media/cuker/Data/Projects/MentariOnlineCourse` | `lpkpmentaribussiness/MentariOnlineCourse` | Next.js 16 + React 19 + Tailwind 4 + Supabase | Platform LMS daring, pemutar video, upload 6 ujian, grading instruktur, & verifikasi sertifikat digital. |
 | **CompAcc** | `/media/cuker/Data/Projects/CompAcc` | `lpkpmentaribussiness/CompAcc` | Vite + React + TypeScript + Supabase | Platform aplikasi komputer akuntansi Mentari. |
 | **MentariAcc** | `/media/cuker/Data/Projects/MentariAcc` | `lpkpmentaribussiness/MentariAcc` | Vite + React + Supabase | Aplikasi manajemen keuangan & akuntansi internal. |
@@ -33,10 +33,16 @@ Dokumen ini memuat arsitektur lengkap, pemetaan repositori, basis data, alur bis
 ### A. Program Pelatihan Vokasi Lembaga (Web 1 - Luring)
 1. **Komputer Office:** Keterampilan aplikasi perkantoran (Word, Excel, PowerPoint) untuk administrasi kerja.
 2. **Teknisi Komputer:** Perawatan, instalasi, perakitan, dan troubleshooting hardware/software.
-3. **Desain Grafis:** Komunikasi visual, manipulasi grafis, dan aset promosi digital.
-4. **Akuntansi MYOB:** Pembukuan dan penyusunan laporan keuangan terkomputerisasi.
-5. **Tata Boga:** Pengolahan kuliner dan wirausaha makanan.
-6. **Menjahit:** Pembuatan pola dan teknik menjahit garmen.
+3. **Teknik Jaringan:** Instalasi, konfigurasi jaringan komputer LAN/WLAN, dan infrastruktur konektivitas.
+4. **Desain Grafis:** Komunikasi visual, manipulasi grafis, dan aset promosi digital kreatif.
+5. **Multimedia:** Produksi konten audio-visual, video, fotografi, dan media interaktif.
+6. **Programer Web Desain:** Perancangan tampilan website responsif, antarmuka UX/UI, dan dasar web coding.
+7. **Akuntansi Myob-Accurate:** Pencatatan dan pembukuan terkomputerisasi sistem MYOB & Accurate.
+8. **Tata Boga:** Pengolahan kuliner komersial dan wirausaha makanan mandiri.
+9. **Tata Busana:** Pembuatan pola pakaian, teknik menjahit, dan produksi garmen siap pakai.
+10. **Salon Tata Rias:** Tata rias wajah, perawatan kecantikan, dan penataan rambut profesional.
+11. **Pengelasan:** Teknik las listrik/SMAW, keselamatan kerja bengkel, dan fabrikasi logam.
+12. **Barista Kopi:** Seni racik kopi, teknik manual brewing, mesin espresso, dan manajemen coffee bar.
 
 ### B. Paket Kursus Online Bersertifikat (Web 2 - Daring / LMS)
 1. **Microsoft Office Dasar (Rp 500.000):** 18 materi video fondasi + 6 ujian praktik Word, Excel, PowerPoint + sertifikat resmi.
