@@ -30,7 +30,17 @@ Dokumen ini memuat arsitektur lengkap, pemetaan repositori, basis data, alur bis
 
 ## 📚 3. Katalog Program Pelatihan
 
-### A. Program Pelatihan Vokasi Lembaga (Web 1 - Luring)
+### A. Program Unggulan: Profesional 1 Tahun Komputer (Luring Terpadu)
+* **Fasilitas Spesial:** Disediakan **Tempat Tinggal (Asrama)** dan **Makan 3x Sehari** secara gratis untuk peserta pelatihan.
+* **Target Output:** Tenaga ahli vokasi siap kerja industri dan kemandirian wirausaha digital dengan portofolio teruji.
+* **5 Klaster Kompetensi Vokasi:**
+  1. **Dasar Komputer dan Sistem Operasi:** Hardware & Software (CPU, RAM, Storage), Sistem Operasi GUI & Text/CLI (Manajemen File), Sistem Jaringan Dasar (LAN/WAN).
+  2. **Aplikasi Perkantoran:** Microsoft Word, Microsoft Excel, Microsoft PowerPoint.
+  3. **Desain Grafis & Multimedia:** CorelDraw, Adobe Photoshop, Multimedia & Konten Kreator.
+  4. **Pemrograman dan Pengembangan Web:** Logika Program Dasar, Pemrograman Web & Mobile (HTML, CSS, JavaScript).
+  5. **Keahlian Wirausaha & Portofolio:** Digital Marketing (Pemasaran Online & Media Sosial), Komputer Akuntansi (MYOB / Accurate), Praktek Kerja Lapangan (PKL di dunia usaha & portofolio karya).
+
+### B. Program Pelatihan Vokasi Lembaga (12 Program Kursus Reguler)
 1. **Komputer Office:** Keterampilan aplikasi perkantoran (Word, Excel, PowerPoint) untuk administrasi kerja.
 2. **Teknisi Komputer:** Perawatan, instalasi, perakitan, dan troubleshooting hardware/software.
 3. **Teknik Jaringan:** Instalasi, konfigurasi jaringan komputer LAN/WLAN, dan infrastruktur konektivitas.
@@ -44,7 +54,7 @@ Dokumen ini memuat arsitektur lengkap, pemetaan repositori, basis data, alur bis
 11. **Pengelasan:** Teknik las listrik/SMAW, keselamatan kerja bengkel, dan fabrikasi logam.
 12. **Barista Kopi:** Seni racik kopi, teknik manual brewing, mesin espresso, dan manajemen coffee bar.
 
-### B. Paket Kursus Online Bersertifikat (Web 2 - Daring / LMS)
+### C. Paket Kursus Online Bersertifikat (Web 2 - Daring / LMS)
 1. **Microsoft Office Dasar (Rp 500.000):** 18 materi video fondasi + 6 ujian praktik Word, Excel, PowerPoint + sertifikat resmi.
 2. **Microsoft Office Lanjutan (Rp 500.000):** 18 materi video tingkat lanjut + 6 ujian praktik Word, Excel, PowerPoint + sertifikat resmi.
 
