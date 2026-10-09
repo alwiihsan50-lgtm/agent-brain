@@ -4,10 +4,10 @@
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
 - **Status:** IN_PROGRESS
-- **Active Project:** Dual-Track Harvester MT5
-- **Current Task:** Stress-Test Bug Fixes Deployed
-- **Modified Files:** -
-- **Verification Command / URL:** -
-- **Next Steps / Notes:** Bug 1 (Tail Prune Extremum Open Price) & Bug 2 (Anti-Cannibalization Runner Safeguard) fixed & verified on Akun 2 Demo. Total Runner Wins: 7x.
+- **Active Project:** -
+- **Current Task:** -
+- **Modified Files:** /home/cuker/mt5_storage/mt5_config/bot.py
+- **Verification Command / URL:** docker exec exness-mt5 ps aux | grep python.exe && tail -n 15 /home/cuker/mt5_storage/mt5_config/bot_activity_cent.log
+- **Next Steps / Notes:** -
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-09 21:09 WIB
+- **Last Updated At:** 2026-10-09 23:16 WIB
