@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **Triad v2.5 Cent Fortress Edition Live** (`bot.py`, Magic `778899`, XAUUSDc). Base Step $5.00, Hard TP $2.00, Expanding 1.5x, Subsidized Force-Prune $\ge$L5, Session Filter 07:00-19:00 WIB (**Soft Sleep Aktif**). Seluruh keranjang SELL & BUY sukses TP bersih! **Saldo: 2.711,74 USC, Equity 100% Utuh (Floating DD 0,0%)**, Siphon Pool rekor **110,70 USC** (7x gunting). **Acc 2 (Port 3006):** IDR `463880423`: **M5 Pullback Engulfing Sniper v1.1 Live** (`bot.py`, Magic `889911`, XAUUSDm). Pure High/Low-Break Engulfing (No Trend Filter) + 50% Body Pullback Limit, Multi-Order (Max 5), Lot 0.05, R:R $\ge$1:1, Trailing BE +$1.20, Expired Cancel 5-bar (25m). Saldo bersih: Rp 71,88+ Juta IDR. |
+| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **Triad v2.5 Cent Fortress Edition Live** (`bot.py`, Magic `778899`, XAUUSDc). Base Step $5.00, Hard TP $2.00, Expanding 1.5x, Subsidized Force-Prune $\ge$L5, Session Filter 07:00-19:00 WIB (**Soft Sleep Aktif**). Seluruh keranjang SELL & BUY sukses TP bersih! **Saldo: 2.711,74 USC, Equity 100% Utuh (Floating DD 0,0%)**, Siphon Pool rekor **110,70 USC** (7x gunting). **Acc 2 (Port 3006):** IDR `463880423`: **Dual Bot Running Paralel**: 1) **M5 Pullback Engulfing Sniper v1.1** (`bot.py`, Magic `889911`, Lot 0.05). 2) **Dual-Track Harvester v1.0 Prototype** (`bot_dual_track.py`, Magic `992200` [Scalper] & `992201` [Runner], XAUUSDm). Saldo bersih: Rp 72,57+ Juta IDR. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -36,6 +36,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
+
+- [ ] **Pengujian Dual-Track Harvester v1.0 (Scalper + Trend Runner, Magic 992200 & 992201) di MT5 Akun 2 Demo**
 
 - [ ] **Implementasi Subsidized Force-Prune Triad v2.5 di Bot MT5 Akun 1 Real Cent (Gunting Posisi Terburuk Wajib Saat Basket >= 5 Layer)**
 
@@ -85,6 +87,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-09 20:21 WIB
+**Last Updated At:** 2026-10-09 20:41 WIB
 
 
