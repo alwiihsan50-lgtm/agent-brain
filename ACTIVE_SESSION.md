@@ -8,6 +8,6 @@
 - **Current Task:** Subsidized Force-Prune v2.5 Deployment
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Opsi 1 diimplementasikan: Force-prune posisi terburuk wajib saat basket >= 5 layer. Siphon Pool 81.8 USC + sisa ditambal modal akun. Bot running aktif di port 3000.
+- **Next Steps / Notes:** Semua basket SELL & BUY berhasil exit TP bersih. Saldo: 2,711.74 USC, Equity 100% flat (DD 0%), Siphon Pool: 110.70 USC. Mode Soft Sleep aktif malam ini.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-09 15:38 WIB
+- **Last Updated At:** 2026-10-09 20:21 WIB
