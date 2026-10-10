@@ -43,9 +43,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [ ] **Implementasi Dual-Track Harvester v2.7 di Bot MT5 Akun 1 Real Cent (Step $3.50, TP $1.80, Unshakable Backup Runner No-BEP + Direct Force-Pruning L5)**
 
-- [x] **Penambahan 4 Paket Kursus Online Baru (Photoshop & CorelDraw, Web Desain Dasar, Web Desain Terampil, Komputer Akuntansi) di MentariOnlineCourse**
+- [x] **Implementasi Halaman & Menu Pelatihan Vokasi (11 Kejuruan) serta Pembaruan Teks Profil di LPKPMentariWebsite (Live di lpkpmentari.id)**
 
-- [x] **Implementasi Program Unggulan Profesional 1 Tahun Komputer (Fasilitas Asrama & Makan 3x Sehari) di LPKPMentariWebsite (Live di lpkpmentari.id)**
+- [x] **Penambahan 4 Paket Kursus Online Baru (Photoshop & CorelDraw, Web Desain Dasar, Web Desain Terampil, Komputer Akuntansi) di MentariOnlineCourse**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -90,6 +90,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-10 09:04 WIB
+**Last Updated At:** 2026-10-10 12:46 WIB
 
 

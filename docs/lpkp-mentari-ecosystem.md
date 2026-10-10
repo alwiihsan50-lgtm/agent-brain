@@ -40,19 +40,18 @@ Dokumen ini memuat arsitektur lengkap, pemetaan repositori, basis data, alur bis
   4. **Pemrograman dan Pengembangan Web:** Logika Program Dasar, Pemrograman Web & Mobile (HTML, CSS, JavaScript).
   5. **Keahlian Wirausaha & Portofolio:** Digital Marketing (Pemasaran Online & Media Sosial), Komputer Akuntansi (MYOB / Accurate), Praktek Kerja Lapangan (PKL di dunia usaha & portofolio karya).
 
-### B. Program Pelatihan Vokasi Lembaga (12 Program Kursus Reguler)
+### B. Program Pelatihan Vokasi Lembaga (11 Program Kejuruan Resmi)
 1. **Komputer Office:** Keterampilan aplikasi perkantoran (Word, Excel, PowerPoint) untuk administrasi kerja.
-2. **Teknisi Komputer:** Perawatan, instalasi, perakitan, dan troubleshooting hardware/software.
-3. **Teknik Jaringan:** Instalasi, konfigurasi jaringan komputer LAN/WLAN, dan infrastruktur konektivitas.
-4. **Desain Grafis:** Komunikasi visual, manipulasi grafis, dan aset promosi digital kreatif.
-5. **Multimedia:** Produksi konten audio-visual, video, fotografi, dan media interaktif.
-6. **Programer Web Desain:** Perancangan tampilan website responsif, antarmuka UX/UI, dan dasar web coding.
-7. **Akuntansi Myob-Accurate:** Pencatatan dan pembukuan terkomputerisasi sistem MYOB & Accurate.
-8. **Tata Boga:** Pengolahan kuliner komersial dan wirausaha makanan mandiri.
-9. **Tata Busana:** Pembuatan pola pakaian, teknik menjahit, dan produksi garmen siap pakai.
-10. **Salon Tata Rias:** Tata rias wajah, perawatan kecantikan, dan penataan rambut profesional.
-11. **Pengelasan:** Teknik las listrik/SMAW, keselamatan kerja bengkel, dan fabrikasi logam.
-12. **Barista Kopi:** Seni racik kopi, teknik manual brewing, mesin espresso, dan manajemen coffee bar.
+2. **Teknisi Akuntansi:** Pencatatan dan pembukuan terkomputerisasi sistem MYOB & Accurate untuk laporan keuangan.
+3. **Tata Boga:** Pengolahan kuliner komersial dan wirausaha makanan mandiri.
+4. **Menjahit:** Pembuatan pola pakaian, teknik menjahit busana, dan produksi garmen siap pakai.
+5. **Salon Rias Kecantikan:** Tata rias wajah, perawatan kecantikan kulit, dan penataan rambut profesional.
+6. **Pengelasan:** Teknik las listrik/SMAW, keselamatan kerja bengkel, dan fabrikasi logam.
+7. **Teknisi Komputer:** Perawatan, perakitan perangkat keras (hardware), instalasi sistem operasi, dan troubleshooting.
+8. **Teknisi Hand Phone:** Perbaikan hardware smartphone, penggantian komponen, flashing firmware, dan servis hp.
+9. **Teknisi Jaringan:** Instalasi, konfigurasi jaringan komputer LAN/WLAN, routing, dan infrastruktur konektivitas.
+10. **Web Desain:** Perancangan tampilan website responsif, antarmuka UX/UI modern, dan dasar web coding.
+11. **Desain Grafis:** Komunikasi visual, manipulasi grafis vektor dan bitmap (CorelDraw & Photoshop) untuk promosi digital.
 
 ### C. Paket Kursus Online Bersertifikat (Web 2 - Daring / LMS)
 1. **Microsoft Office Dasar (Rp 500.000):** 18 materi video fondasi + 6 ujian praktik Word, Excel, PowerPoint + sertifikat resmi.

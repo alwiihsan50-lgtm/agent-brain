@@ -6,6 +6,7 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 9 Oktober 2026
 
+- [x] **Implementasi Program Unggulan Profesional 1 Tahun Komputer (Fasilitas Asrama & Makan 3x Sehari) di LPKPMentariWebsite (Live di lpkpmentari.id)**
 - [x] **Pembaruan 12 Program Keterampilan Vokasi di Web LPKP Mentari (LPKPMentariWebsite Live di lpkpmentari.id)**
 
 ## 📅 Selesai Per 8 Oktober 2026
