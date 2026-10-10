@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Pengujian Bot Reverse Martingale Paroli 2-Way Crypto (Opsi 1: BTCUSDm, Magic 667788) di MT5 Akun 2 Demo**
+
 - [ ] **Pengujian Dual-Track Harvester v1.0 (Scalper + Trend Runner, Magic 992200 & 992201) di MT5 Akun 2 Demo**
 
 - [ ] **Implementasi Dual-Track Harvester v2.7 di Bot MT5 Akun 1 Real Cent (Step $3.50, TP $1.80, Unshakable Backup Runner No-BEP + Direct Force-Pruning L5)**
@@ -87,6 +89,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-10 00:11 WIB
+**Last Updated At:** 2026-10-10 08:46 WIB
 
 

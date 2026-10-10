@@ -4,10 +4,10 @@
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
 - **Status:** IN_PROGRESS
-- **Active Project:** -
-- **Current Task:** -
-- **Modified Files:** /home/cuker/mt5_storage/mt5_config/bot.py
-- **Verification Command / URL:** docker exec exness-mt5 ps aux | grep python.exe && tail -n 15 /home/cuker/mt5_storage/mt5_config/bot_activity_cent.log
-- **Next Steps / Notes:** -
+- **Active Project:** MT5 Reverse Martingale Paroli Crypto
+- **Current Task:** Uji Coba Opsi 1 BTCUSDm di Akun 2 Demo
+- **Modified Files:** -
+- **Verification Command / URL:** -
+- **Next Steps / Notes:** Bot berjalan di propfirm-mt5 PID 4027, Magic 667788, 1 pos per sisi. Pantau eksekusi win streak.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-10 00:11 WIB
+- **Last Updated At:** 2026-10-10 08:46 WIB
