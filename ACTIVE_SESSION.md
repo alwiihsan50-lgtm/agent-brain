@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** MT5 Reverse Martingale Paroli Crypto
-- **Current Task:** Kalibrasi Cepat Responsif 5 USD (v1.2)
+- **Current Task:** Pengujian Bot Reverse Martingale Paroli 2-Way Crypto (v1.2 Fast-Paroli 5 USD, BTCUSDm)
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Target dirapatkan ke 5 USD. Siklus terbukti bekerja live: BUY menang 0.01L, melipat ke 0.02L dalam 7 detik.
+- **Next Steps / Notes:** Bot live di propfirm-mt5 PID 4208, Magic 667788. Status saat ini: BUY 0.02L (Streak 1), SELL 0.01L (Streak 0). Evaluasi performa win streak & atomic sync reset.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-10 09:02 WIB
+- **Last Updated At:** 2026-10-10 09:04 WIB

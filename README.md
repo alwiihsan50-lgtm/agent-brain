@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **v2.7 Dual-Track Hedged Harvester Live** (`bot.py`, Magic `778899` [Scalper] & `778898` [Runner], XAUUSDc). Track A: Grid Step $3.50 x 1.5, Hard TP $1.80, Direct Force-Prune $\ge$L5. Track B: Unshakable Trend Runner 0.02L (No-BEP Backup Mode) saat lawan $\ge$L3, Hard SL $4.00 (max risk 8 USC / 0.29%), Anti-Cannibalization Safeguard. Session Filter 07:00-19:00 WIB (**Soft Sleep Aktif**). **Saldo: 2.711,74 USC, Equity 100% Utuh (0 active pos)**. **Acc 2 (Port 3006):** IDR `463880423`: **Dual Bot Running Paralel**: 1) **M5 Pullback Engulfing Sniper v1.1** (`bot.py`, Magic `889911`, Lot 0.05). 2) **Dual-Track Harvester v1.0 Patched** (`bot_dual_track.py`, Magic `992200` [Scalper] & `992201` [Runner], XAUUSDm). 19x Runner Wins. Saldo bersih: Rp 73,82+ Juta IDR. |
+| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **v2.7 Dual-Track Hedged Harvester Live** (`bot.py`, Magic `778899` [Scalper] & `778898` [Runner], XAUUSDc). Track A: Grid Step $3.50 x 1.5, Hard TP $1.80, Direct Force-Prune $\ge$L5. Track B: Unshakable Trend Runner 0.02L (No-BEP Backup Mode) saat lawan $\ge$L3, Hard SL $4.00, Anti-Cannibalization Safeguard. Session Filter 07:00-19:00 WIB (**Soft Sleep Aktif**). **Saldo: 2.711,74 USC, Equity 100% Utuh (0 active pos)**. **Acc 2 (Port 3006):** IDR `463880423`: **3 Bot Running Paralel**: 1) **M5 Pullback Engulfing Sniper v1.1** (`bot.py`, Magic `889911`). 2) **Dual-Track Harvester v1.0** (`bot_dual_track.py`, Magic `992200` & `992201`, 19x wins). 3) **Reverse Martingale Paroli 2-Way Crypto v1.2** (`bot_reverse_martingale_crypto.py`, Magic `667788`, BTCUSDm, Tangga [0.01, 0.02, 0.03], Target $25 USD, Spread-Compensated TP, Atomic Sync Close). Saldo bersih: Rp 74,83+ Juta IDR. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -37,7 +37,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Pengujian Bot Reverse Martingale Paroli 2-Way Crypto (Opsi 1: BTCUSDm, Magic 667788) di MT5 Akun 2 Demo**
+- [ ] **Pengujian Bot Reverse Martingale Paroli 2-Way Crypto (Opsi 1: BTCUSDm, Magic 667788, v1.2 Fast-Paroli $25 USD) di MT5 Akun 2 Demo**
 
 - [ ] **Pengujian Dual-Track Harvester v1.0 (Scalper + Trend Runner, Magic 992200 & 992201) di MT5 Akun 2 Demo**
 
@@ -54,6 +54,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ## 📚 Indeks Dokumentasi (`docs/`)
 
 - 📝 [**Active Session Scratchpad**](ACTIVE_SESSION.md) — Jembatan memori real-time antar agent saat pengerjaan tugas aktif.
+- 🏛️ [**Arsitektur Reverse Martingale Paroli 2-Way Trading**](docs/reverse-martingale-paroli-2way-architecture.md) — Panduan kanonikal sistem Paroli 2 arah anti-martingale, kalibrasi eliminasi spread asymmetry drag, dan atomic sync counterpart reset.
 - 🏛️ [**Arsitektur Triad Hedged Martingale Non-Stop**](docs/triad-hedged-martingale-nonstop-architecture.md) — Panduan kanonikal 3 solusi cerdas non-stop (Tail Pruning via Siphon Pool, Dynamic Decay Escape, Trend Booster, & Sizing Anti-Duplicate).
 - 🏆 [**Katalog Bot Trading Berperforma Unggul (Hall of Fame)**](docs/high-performance-trading-bots-catalog.md) — Etalase terpusat seluruh bot trading kuantitatif teruji (Cent Grid v3.2, Hybrid Grid Engulfing, M5 Trend Sniper, D1 Multi-Pair Doji, Forex SMC).
 - 🏛️ [**Kerangka Trading Makro-Kuantitatif Institusional**](docs/institutional-macro-quant-trading-framework.md) — Alur kerja Top-Down Tri-Pillar (Makro/Fundamental + Sentimen Intermarket + Struktur SMC + Eksekusi Asimetris R:R 1:3).
@@ -89,6 +90,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-10 09:02 WIB
+**Last Updated At:** 2026-10-10 09:04 WIB
 
 
