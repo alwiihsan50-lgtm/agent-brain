@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** MT5 Reverse Martingale Paroli Crypto
-- **Current Task:** Uji Coba Opsi 1 BTCUSDm di Akun 2 Demo
+- **Current Task:** Implementasi Spread-Compensated TP & Synchronized Pair Reset (v1.1)
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Bot berjalan di propfirm-mt5 PID 4027, Magic 667788, 1 pos per sisi. Pantau eksekusi win streak.
+- **Next Steps / Notes:** Bot v1.1 live di propfirm-mt5 PID 4139. TP didiskon 2.2x spread, BUY TP kena duluan sebelum SELL SL.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-10 08:46 WIB
+- **Last Updated At:** 2026-10-10 08:56 WIB
