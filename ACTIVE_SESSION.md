@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** MT5 Reverse Martingale Paroli Crypto
-- **Current Task:** Implementasi Spread-Compensated TP & Synchronized Pair Reset (v1.1)
+- **Current Task:** Kalibrasi Cepat Responsif 5 USD (v1.2)
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Bot v1.1 live di propfirm-mt5 PID 4139. TP didiskon 2.2x spread, BUY TP kena duluan sebelum SELL SL.
+- **Next Steps / Notes:** Target dirapatkan ke 5 USD. Siklus terbukti bekerja live: BUY menang 0.01L, melipat ke 0.02L dalam 7 detik.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-10 08:56 WIB
+- **Last Updated At:** 2026-10-10 09:02 WIB
