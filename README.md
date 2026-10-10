@@ -45,7 +45,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [ ] **Implementasi Dual-Track Harvester v2.7 di Bot MT5 Akun 1 Real Cent (Step $3.50, TP $1.80, Unshakable Backup Runner No-BEP + Direct Force-Pruning L5)**
 
-- [x] **Implementasi Halaman & Menu Pelatihan Vokasi (11 Kejuruan) serta Pembaruan Teks Profil di LPKPMentariWebsite (Live di lpkpmentari.id)**
+- [x] **Implementasi Halaman & Menu Pelatihan Vokasi (11 Kejuruan), Pembaruan Teks Profil, & Tautan Resmi NPSN Kemendikdasmen di LPKPMentariWebsite (Live di lpkpmentari.id)**
 
 - [x] **Penambahan 4 Paket Kursus Online Baru (Photoshop & CorelDraw, Web Desain Dasar, Web Desain Terampil, Komputer Akuntansi) di MentariOnlineCourse**
 
@@ -92,6 +92,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-10 14:40 WIB
+**Last Updated At:** 2026-10-10 17:46 WIB
 
 
