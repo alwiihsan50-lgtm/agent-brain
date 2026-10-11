@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Implementasi Bot M5 Pullback Sniper v1.0 (XAUUSDc, Magic 881100, Lot 0.01 Single Position) di MT5 Akun 1 Real Cent** ⚠️ [MENUNGGU KONFIRMASI USER]
+
 - [ ] **Implementasi M5 Dual-Engine Reversal Marubozu & Pullback Sniper v2.0 (Market Order Marubozu 1.2x TP + EMA 50, Magic 889911) di MT5 Akun 2 Demo** ⚠️ [MENUNGGU KONFIRMASI USER]
 
 - [ ] **Pengujian Bot Reverse Martingale Paroli 2-Way Crypto (Opsi 1: BTCUSDm, Magic 667788, v1.2 Fast-Paroli $25 USD) di MT5 Akun 2 Demo**
@@ -92,6 +94,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-10 21:37 WIB
+**Last Updated At:** 2026-10-11 09:35 WIB
 
 
