@@ -4,6 +4,10 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 11 Oktober 2026
+
+- [x] **Penambahan 4 Paket Kursus Online Baru (Photoshop & CorelDraw, Web Desain Dasar, Web Desain Terampil, Komputer Akuntansi) di MentariOnlineCourse**
+
 ## 📅 Selesai Per 9 Oktober 2026
 
 - [x] **Implementasi Program Unggulan Profesional 1 Tahun Komputer (Fasilitas Asrama & Makan 3x Sehari) di LPKPMentariWebsite (Live di lpkpmentari.id)**

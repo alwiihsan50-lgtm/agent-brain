@@ -37,7 +37,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Implementasi Bot M5 Pullback Sniper v1.0 (XAUUSDc, Magic 881100, Lot 0.01 Single Position) di MT5 Akun 1 Real Cent** ⚠️ [MENUNGGU KONFIRMASI USER]
+- [x] **Implementasi Bot M5 Pullback Sniper v1.0 (XAUUSDc, Magic 881100, Lot 0.01 Single Position) di MT5 Akun 1 Real Cent** ⚠️ [MENUNGGU KONFIRMASI USER]
 
 - [ ] **Implementasi M5 Dual-Engine Reversal Marubozu & Pullback Sniper v2.0 (Market Order Marubozu 1.2x TP + EMA 50, Magic 889911) di MT5 Akun 2 Demo** ⚠️ [MENUNGGU KONFIRMASI USER]
 
@@ -48,8 +48,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [ ] **Implementasi Dual-Track Harvester v2.7 di Bot MT5 Akun 1 Real Cent (Step $3.50, TP $1.80, Unshakable Backup Runner No-BEP + Direct Force-Pruning L5)**
 
 - [x] **Implementasi Halaman & Menu Pelatihan Vokasi (11 Kejuruan), Pembaruan Teks Profil, & Tautan Resmi NPSN Kemendikdasmen di LPKPMentariWebsite (Live di lpkpmentari.id)**
-
-- [x] **Penambahan 4 Paket Kursus Online Baru (Photoshop & CorelDraw, Web Desain Dasar, Web Desain Terampil, Komputer Akuntansi) di MentariOnlineCourse**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -94,6 +92,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-11 10:09 WIB
+**Last Updated At:** 2026-10-11 10:13 WIB
 
 
