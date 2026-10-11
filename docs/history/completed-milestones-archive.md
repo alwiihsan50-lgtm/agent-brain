@@ -6,6 +6,8 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 11 Oktober 2026
 
+- [x] **Implementasi Partial Take Profit 70% (Halfway Target + BEP Lock) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
+- [x] **Implementasi Toleransi Ekor 3% Range (MAX_CLOSING_WICK_RATIO = 0.03, Mode Sangat Aktif) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent**
 - [x] **Pelepasan Batasan Posisi Tunggal pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (Concurrent Multi-Setup Mode)**
 - [x] **Pengujian Dual-Track Harvester v1.0 (Scalper + Trend Runner, Magic 992200 & 992201) di MT5 Akun 2 Demo**
 - [x] **Implementasi Dual-Track Harvester v2.7 di Bot MT5 Akun 1 Real Cent (Step $3.50, TP $1.80, Unshakable Backup Runner No-BEP + Direct Force-Pruning L5)**

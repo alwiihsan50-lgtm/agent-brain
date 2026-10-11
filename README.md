@@ -37,13 +37,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Pelepasan Hard Cap SL $4.00 ke True Structural SL di Luar Pangkal Lilin (True Low/High Price Action + Auto-Scaling Lot 2% Risk, Win Rate 89.0%) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
+- [x] **Pelepasan Hard Cap SL $4.00 ke True Structural SL di Luar Pangkal Lilin (True Low/High Price Action + Auto-Scaling Lot 2% Risk, Win Rate 89.0%) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
 
-- [ ] **Implementasi Arsitektur Split-Ticket Twin Orders (100% Native Hard TP Broker untuk Partial 70%) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
-
-- [x] **Implementasi Partial Take Profit 70% (Halfway Target + BEP Lock) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
-
-- [x] **Implementasi Toleransi Ekor 3% Range (MAX_CLOSING_WICK_RATIO = 0.03, Mode Sangat Aktif) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent**
+- [x] **Implementasi Arsitektur Split-Ticket Twin Orders (100% Native Hard TP Broker untuk Partial 70%) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -88,6 +84,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-11 20:54 WIB
+**Last Updated At:** 2026-10-11 21:02 WIB
 
 
