@@ -4,10 +4,10 @@
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
 - **Status:** READY_FOR_REVIEW
-- **Active Project:** MT5 Akun 1 Real Cent (Exness 263301611)
-- **Current Task:** Implementasi Perlindungan Batas Atas Lilin (Max Range $10.00 & Helm Pengaman SL Cap $4.00 USD) pada Bot M5 Pullback Sniper v1.0
-- **Modified Files:** `/home/cuker/mt5_storage/mt5_config/bot_pullback_sniper.py`
-- **Verification Command / URL:** `docker exec exness-mt5 ps -ef | grep -i python` dan `cat /home/cuker/mt5_storage/mt5_config/bot_status_pullback_sniper.json`
-- **Next Steps / Notes:** Bot online (PID 9067). Batas atas rentang lilin ($10 USD) dan Helm Pengaman Max SL Cap ($4.00 USD / 400 USC) aktif. Akun 100% terlindungi dari risiko Margin Call saat lilin berita ekstrem.
-- **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-10-11 10:49 WIB
+- **Active Project:** MT5 Akun 1 Real Cent (XAUUSDc)
+- **Current Task:** Backtest Mendalam Setup M5 + M1 Tick Tracking Bot Pullback Sniper: Detail Frekuensi & Proporsi SL, BEP, TP
+- **Modified Files:** /home/cuker/mt5_storage/mt5_backtest/audit_deep_dive_sl_bep_tp.py
+- **Verification Command / URL:** /home/cuker/.venvs/trading-backtest/bin/python /home/cuker/mt5_storage/mt5_backtest/audit_deep_dive_sl_bep_tp.py
+- **Next Steps / Notes:** Audit mendalam frekuensi eksekusi selesai pada 1,035 trade M1 (2 tahun). Hasil: TP 544 kali (52.56%, rata-rata +206.9 USC, durasi 3.9m), BEP 258 kali (24.93%, rata-rata -5 USC, durasi 3.2m), SL Total 232 kali (22.42%, rata-rata -345.2 USC, durasi 6.2m), Timeout 1 kali (0.1%). Net Profit akumulatif: +31,176.5 USC (+311.76 USD), Max Drawdown -2,815 USC (-8.15 USD), Return to Drawdown 11.08x.
+- **Last Updated By:** AI Agent
+- **Last Updated At:** 2026-10-11 11:34 WIB

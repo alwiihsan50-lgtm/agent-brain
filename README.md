@@ -37,17 +37,15 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Implementasi Bot M5 Pullback Sniper v1.0 (XAUUSDc, Magic 881100, Lot 0.01 Single Position) di MT5 Akun 1 Real Cent** ⚠️ [MENUNGGU KONFIRMASI USER]
+- [ ] **Backtest Mendalam Setup M5 + M1 Tick Tracking Bot Pullback Sniper: Detail Frekuensi & Proporsi SL, BEP, TP**
 
-- [ ] **Implementasi M5 Dual-Engine Reversal Marubozu & Pullback Sniper v2.0 (Market Order Marubozu 1.2x TP + EMA 50, Magic 889911) di MT5 Akun 2 Demo** ⚠️ [MENUNGGU KONFIRMASI USER]
+- [x] **Implementasi Opsi B (MIN_RANGE_USD = 3.50, Payoff RR 1:1.24) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent**
 
-- [ ] **Pengujian Bot Reverse Martingale Paroli 2-Way Crypto (Opsi 1: BTCUSDm, Magic 667788, v1.2 Fast-Paroli $25 USD) di MT5 Akun 2 Demo**
+- [x] **Audit Backtest Kuantitatif Presisi M5 Setup + M1 Tick Tracking Bot Pullback Sniper (2 Tahun Dataset Riil XAUUSD)**
 
 - [ ] **Pengujian Dual-Track Harvester v1.0 (Scalper + Trend Runner, Magic 992200 & 992201) di MT5 Akun 2 Demo**
 
 - [ ] **Implementasi Dual-Track Harvester v2.7 di Bot MT5 Akun 1 Real Cent (Step $3.50, TP $1.80, Unshakable Backup Runner No-BEP + Direct Force-Pruning L5)**
-
-- [x] **Implementasi Halaman & Menu Pelatihan Vokasi (11 Kejuruan), Pembaruan Teks Profil, & Tautan Resmi NPSN Kemendikdasmen di LPKPMentariWebsite (Live di lpkpmentari.id)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -92,6 +90,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-11 10:49 WIB
+**Last Updated At:** 2026-10-11 11:34 WIB
 
 
