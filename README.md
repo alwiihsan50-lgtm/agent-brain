@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Penerapan Live Bot M5 Pullback Sniper v1.0 dengan Dynamic Compounding Model 3 di MT5 Akun 1 Real Cent (XAUUSDc)**
+
 - [ ] **Backtest Mendalam Setup M5 + M1 Tick Tracking Bot Pullback Sniper: Detail Frekuensi & Proporsi SL, BEP, TP**
 
 - [x] **Implementasi Opsi B (MIN_RANGE_USD = 3.50, Payoff RR 1:1.24) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent**
@@ -90,6 +92,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-11 13:36 WIB
+**Last Updated At:** 2026-10-11 13:51 WIB
 
 
