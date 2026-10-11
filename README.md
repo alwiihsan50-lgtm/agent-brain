@@ -37,13 +37,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Penerapan Live Bot M5 Pullback Sniper v1.0 dengan Dynamic Risk Management Flat 2.0% Per Trade di MT5 Akun 1 Real Cent (XAUUSDc)**
+- [x] **Penerapan Live Bot M5 Pullback Sniper v1.0 dengan Dynamic Risk Management Flat 2.0% Per Trade di MT5 Akun 1 Real Cent (XAUUSDc)**
 
-- [ ] **Backtest Mendalam Setup M5 + M1 Tick Tracking Bot Pullback Sniper: Detail Frekuensi & Proporsi SL, BEP, TP**
-
-- [x] **Implementasi Opsi B (MIN_RANGE_USD = 3.50, Payoff RR 1:1.24) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent**
-
-- [x] **Audit Backtest Kuantitatif Presisi M5 Setup + M1 Tick Tracking Bot Pullback Sniper (2 Tahun Dataset Riil XAUUSD)**
+- [x] **Backtest Mendalam Setup M5 + M1 Tick Tracking Bot Pullback Sniper: Detail Frekuensi & Proporsi SL, BEP, TP**
 
 - [ ] **Pengujian Dual-Track Harvester v1.0 (Scalper + Trend Runner, Magic 992200 & 992201) di MT5 Akun 2 Demo**
 
@@ -92,6 +88,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-11 14:52 WIB
+**Last Updated At:** 2026-10-11 15:26 WIB
 
 

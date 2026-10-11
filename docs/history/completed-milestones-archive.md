@@ -6,9 +6,11 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 11 Oktober 2026
 
-- [x] **Implementasi Bot M5 Pullback Sniper v1.0 (XAUUSDc, Magic 881100, Lot 0.01 Single Position) di MT5 Akun 1 Real Cent** ⚠️ [MENUNGGU KONFIRMASI USER]
+- [x] **Implementasi Opsi B (MIN_RANGE_USD = 3.50, Payoff RR 1:1.24) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent**
+- [x] **Audit Backtest Kuantitatif Presisi M5 Setup + M1 Tick Tracking Bot Pullback Sniper (2 Tahun Dataset Riil XAUUSD)**
+- [x] **Implementasi Bot M5 Pullback Sniper v1.0 (XAUUSDc, Magic 881100, Lot 0.01 Single Position) di MT5 Akun 1 Real Cent**
 - [x] **Pengujian Bot Reverse Martingale Paroli 2-Way Crypto (Opsi 1: BTCUSDm, Magic 667788, v1.2 Fast-Paroli $25 USD) di MT5 Akun 2 Demo**
-- [x] **Implementasi M5 Dual-Engine Reversal Marubozu & Pullback Sniper v2.0 (Market Order Marubozu 1.2x TP + EMA 50, Magic 889911) di MT5 Akun 2 Demo** ⚠️ [MENUNGGU KONFIRMASI USER]
+- [x] **Implementasi M5 Dual-Engine Reversal Marubozu & Pullback Sniper v2.0 (Market Order Marubozu 1.2x TP + EMA 50, Magic 889911) di MT5 Akun 2 Demo**
 - [x] **Implementasi Halaman & Menu Pelatihan Vokasi (11 Kejuruan), Pembaruan Teks Profil, & Tautan Resmi NPSN Kemendikdasmen di LPKPMentariWebsite (Live di lpkpmentari.id)**
 - [x] **Penambahan 4 Paket Kursus Online Baru (Photoshop & CorelDraw, Web Desain Dasar, Web Desain Terampil, Komputer Akuntansi) di MentariOnlineCourse**
 
