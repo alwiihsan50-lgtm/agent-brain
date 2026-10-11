@@ -6,6 +6,11 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 11 Oktober 2026
 
+- [x] **Pelepasan Batasan Posisi Tunggal pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (Concurrent Multi-Setup Mode)**
+- [x] **Pengujian Dual-Track Harvester v1.0 (Scalper + Trend Runner, Magic 992200 & 992201) di MT5 Akun 2 Demo**
+- [x] **Implementasi Dual-Track Harvester v2.7 di Bot MT5 Akun 1 Real Cent (Step $3.50, TP $1.80, Unshakable Backup Runner No-BEP + Direct Force-Pruning L5)**
+- [x] **Penerapan Live Bot M5 Pullback Sniper v1.0 dengan Dynamic Risk Management Flat 2.0% Per Trade di MT5 Akun 1 Real Cent (XAUUSDc)**
+- [x] **Backtest Mendalam Setup M5 + M1 Tick Tracking Bot Pullback Sniper: Detail Frekuensi & Proporsi SL, BEP, TP**
 - [x] **Implementasi Opsi B (MIN_RANGE_USD = 3.50, Payoff RR 1:1.24) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent**
 - [x] **Audit Backtest Kuantitatif Presisi M5 Setup + M1 Tick Tracking Bot Pullback Sniper (2 Tahun Dataset Riil XAUUSD)**
 - [x] **Implementasi Bot M5 Pullback Sniper v1.0 (XAUUSDc, Magic 881100, Lot 0.01 Single Position) di MT5 Akun 1 Real Cent**

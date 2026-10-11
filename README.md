@@ -37,19 +37,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Implementasi Partial Take Profit 70% (Halfway Target + BEP Lock) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
+- [x] **Implementasi Partial Take Profit 70% (Halfway Target + BEP Lock) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
 
-- [ ] **Implementasi Toleransi Ekor 3% Range (MAX_CLOSING_WICK_RATIO = 0.03, Mode Sangat Aktif) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent**
-
-- [ ] **Pelepasan Batasan Posisi Tunggal pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (Concurrent Multi-Setup Mode)**
-
-- [x] **Penerapan Live Bot M5 Pullback Sniper v1.0 dengan Dynamic Risk Management Flat 2.0% Per Trade di MT5 Akun 1 Real Cent (XAUUSDc)**
-
-- [x] **Backtest Mendalam Setup M5 + M1 Tick Tracking Bot Pullback Sniper: Detail Frekuensi & Proporsi SL, BEP, TP**
-
-- [ ] **Pengujian Dual-Track Harvester v1.0 (Scalper + Trend Runner, Magic 992200 & 992201) di MT5 Akun 2 Demo**
-
-- [ ] **Implementasi Dual-Track Harvester v2.7 di Bot MT5 Akun 1 Real Cent (Step $3.50, TP $1.80, Unshakable Backup Runner No-BEP + Direct Force-Pruning L5)**
+- [x] **Implementasi Toleransi Ekor 3% Range (MAX_CLOSING_WICK_RATIO = 0.03, Mode Sangat Aktif) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -94,6 +84,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-11 19:44 WIB
+**Last Updated At:** 2026-10-11 19:51 WIB
 
 
