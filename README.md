@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Implementasi Partial Take Profit 70% (Halfway Target + BEP Lock) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
+
 - [ ] **Implementasi Toleransi Ekor 3% Range (MAX_CLOSING_WICK_RATIO = 0.03, Mode Sangat Aktif) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent**
 
 - [ ] **Pelepasan Batasan Posisi Tunggal pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (Concurrent Multi-Setup Mode)**
@@ -92,6 +94,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-11 18:21 WIB
+**Last Updated At:** 2026-10-11 19:44 WIB
 
 
