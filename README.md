@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **M5 Pullback Sniper v1.0 Live** (`bot_pullback_sniper.py`, Magic `881100`, XAUUSDc, Sesi 06:00-23:00 WIB). Setup Reversal M5 Range $\ge \$3.50$ tanpa ekor close + Order Limit Diskon 38.2% + Trailing BEP +5 sen saat profit $\ge +\$1.50$ USD. Sizing: **Dynamic Risk Flat 2.0% Per Trade (~0.14L @ $3.80 SL, Cap 1.00L)**. *(Bot Martingale `bot.py` resmi dinonaktifkan/dimatikan)*. **Saldo: 2.711,74 USC, Equity 100% Utuh (0 active pos)**. **Acc 2 (Port 3006):** IDR `463880423`: **3 Bot Running Paralel**: 1) **M5 Dual-Engine Reversal Marubozu & Pullback Sniper v2.0** (`bot.py`, Magic `889911`, Engine 1 Market Order Marubozu 1.2x TP + EMA 50, Engine 2 Pullback 50% Limit, XAUUSDm). 2) **Dual-Track Harvester v1.0** (`bot_dual_track.py`, Magic `992200` & `992201`, 19x wins). 3) **Reverse Martingale Paroli 2-Way Crypto v1.2** (`bot_reverse_martingale_crypto.py`, Magic `667788`, BTCUSDm, Tangga [0.01, 0.02, 0.03], Target $25 USD, Spread-Compensated TP, Atomic Sync Close). Saldo bersih: Rp 74,10+ Juta IDR. |
+| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **M5 Pullback Sniper v1.0 Live** (`bot_pullback_sniper.py`, Magic `881100`, XAUUSDc, Sesi 06:00-23:00 WIB). Setup Reversal M5 Range $\ge \$3.50$ tanpa ekor close + Order Limit Diskon 38.2% + Trailing BEP +5 sen saat profit $\ge +\$1.50$ USD. Sizing: **Dynamic Risk Flat 2.0% Per Trade (~0.14L @ $3.80 SL, Cap 1.00L)**. **Multi-Setup Concurrent Mode Aktif** (Single-position lock dilepas, bebas buka posisi baru tiap setup valid muncul + proteksi Free Margin). *(Bot Martingale `bot.py` resmi dinonaktifkan/dimatikan)*. **Saldo: 2.711,74 USC, Equity 100% Utuh (0 active pos)**. **Acc 2 (Port 3006):** IDR `463880423`: **3 Bot Running Paralel**: 1) **M5 Dual-Engine Reversal Marubozu & Pullback Sniper v2.0** (`bot.py`, Magic `889911`, Engine 1 Market Order Marubozu 1.2x TP + EMA 50, Engine 2 Pullback 50% Limit, XAUUSDm). 2) **Dual-Track Harvester v1.0** (`bot_dual_track.py`, Magic `992200` & `992201`, 19x wins). 3) **Reverse Martingale Paroli 2-Way Crypto v1.2** (`bot_reverse_martingale_crypto.py`, Magic `667788`, BTCUSDm, Tangga [0.01, 0.02, 0.03], Target $25 USD, Spread-Compensated TP, Atomic Sync Close). Saldo bersih: Rp 74,10+ Juta IDR. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -36,6 +36,10 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
+
+- [ ] **Implementasi Toleransi Ekor 3% Range (MAX_CLOSING_WICK_RATIO = 0.03, Mode Sangat Aktif) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent**
+
+- [ ] **Pelepasan Batasan Posisi Tunggal pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (Concurrent Multi-Setup Mode)**
 
 - [x] **Penerapan Live Bot M5 Pullback Sniper v1.0 dengan Dynamic Risk Management Flat 2.0% Per Trade di MT5 Akun 1 Real Cent (XAUUSDc)**
 
@@ -88,6 +92,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-11 15:26 WIB
+**Last Updated At:** 2026-10-11 18:21 WIB
 
 
