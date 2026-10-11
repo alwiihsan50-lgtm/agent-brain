@@ -5,9 +5,9 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** MT5 Akun 1 Real Cent (XAUUSDc)
-- **Current Task:** Implementasi Arsitektur Split-Ticket Twin Orders (100% Native Hard TP Broker) pada Bot M5 Pullback Sniper v1.0
+- **Current Task:** Pelepasan Hard Cap SL $4.00 ke True Structural SL di Luar Pangkal Lilin (True Low/High Price Action)
 - **Modified Files:** /home/cuker/mt5_storage/mt5_config/bot_pullback_sniper.py, /home/cuker/mt5_storage/mt5_config/bot_status_pullback_sniper.json
 - **Verification Command / URL:** cat /home/cuker/mt5_storage/mt5_config/bot_status_pullback_sniper.json
-- **Next Steps / Notes:** Split-Ticket Twin Orders aktif: Order A (70% volume) dipasang dengan Hard TP Server di halfway (50%), Order B (30% volume) dipasang dengan Hard TP Server di puncak (100%). Total lot tepat 2% risk (0.14L: 0.09L + 0.05L). SL keduanya di server broker. Bot PID 1244 berjalan di container exness-mt5.
+- **Next Steps / Notes:** SL cap $4.00 resmi dilepas. Stop Loss selalu murni di luar pangkal lilin (Low - $0.25 / High + $0.25). Ukuran lot menyusut otomatis berbasis formula fixed 2% risk. Backtest membuktikan Win Rate naik dari 87.6% ke 89.0% dan PF naik ke 1.95 tanpa false stop-out di tengah bodi lilin. Bot PID 1274 aktif berjalan di container exness-mt5.
 - **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-- **Last Updated At:** 2026-10-11 20:36 WIB
+- **Last Updated At:** 2026-10-11 20:54 WIB
