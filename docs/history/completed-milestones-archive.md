@@ -6,6 +6,7 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 12 Oktober 2026
 
+- [x] **Implementasi Pure Dynamic Compounding 2% Risk, Kalender News Red Folder USD, Toleransi Ekor 8.0%, dan Expiry 3 Bar (15 Menit) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
 - [x] **Pelepasan Hard Cap SL $4.00 ke True Structural SL di Luar Pangkal Lilin (True Low/High Price Action + Auto-Scaling Lot 2% Risk, Win Rate 89.0%) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
 - [x] **Implementasi Arsitektur Split-Ticket Twin Orders (100% Native Hard TP Broker untuk Partial 70%) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
 
