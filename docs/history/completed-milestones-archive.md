@@ -4,6 +4,10 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 12 Oktober 2026
+
+- [x] **Implementasi Arsitektur Split-Ticket Twin Orders (100% Native Hard TP Broker untuk Partial 70%) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
+
 ## 📅 Selesai Per 11 Oktober 2026
 
 - [x] **Implementasi Partial Take Profit 70% (Halfway Target + BEP Lock) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
