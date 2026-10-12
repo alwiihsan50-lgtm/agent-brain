@@ -37,9 +37,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Implementasi Pure Dynamic Compounding 2% Risk, Kalender News Red Folder USD, Toleransi Ekor 8.0%, dan Expiry 3 Bar (15 Menit) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
+- [x] **Pelonggaran Toleransi Ekor Close (Wick Ratio) ke 20.0% pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
 
-- [x] **Pelepasan Hard Cap SL $4.00 ke True Structural SL di Luar Pangkal Lilin (True Low/High Price Action + Auto-Scaling Lot 2% Risk, Win Rate 89.0%) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
+- [x] **Implementasi Pure Dynamic Compounding 2% Risk, Kalender News Red Folder USD, Toleransi Ekor 8.0%, dan Expiry 3 Bar (15 Menit) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -84,6 +84,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-12 13:15 WIB
+**Last Updated At:** 2026-10-12 17:38 WIB
 
 
