@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Investigasi & Eliminasi Cacat BEP Prematur Order B (TP2) pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent**
+
 - [x] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 30 Menit pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-471)**
 
 - [x] **Perbaikan Arsitektur Trailing BEP pada Bot M5 Pullback Sniper v1.0 Akun 1 Cent: Proteksi Order A dari premature choke, Kunci BEP Order B murni berbasis Halfway lilin (+0.05 buffer), dan sinkronisasi kapasitas konkurensi 6 tiket (3 pasang)**
@@ -84,6 +86,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-13 16:20 WIB
+**Last Updated At:** 2026-10-13 23:39 WIB
 
 
