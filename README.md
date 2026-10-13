@@ -37,6 +37,10 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 30 Menit pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-471)**
+
+- [ ] **Perbaikan Arsitektur Trailing BEP pada Bot M5 Pullback Sniper v1.0 Akun 1 Cent: Proteksi Order A dari premature choke, Kunci BEP Order B murni berbasis Halfway lilin (+0.05 buffer), dan sinkronisasi kapasitas konkurensi 6 tiket (3 pasang)**
+
 - [x] **Implementasi Jadwal Sesi 23 Jam Cerdas Nonstop (05:00 - 04:00 WIB, jeda rollover bank 04:00 - 05:00 WIB) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
 
 - [x] **Pelonggaran Toleransi Ekor Close (Wick Ratio) ke 20.0% pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
@@ -84,6 +88,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-12 19:15 WIB
+**Last Updated At:** 2026-10-13 16:05 WIB
 
 
