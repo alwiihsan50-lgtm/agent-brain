@@ -4,6 +4,11 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 13 Oktober 2026
+
+- [x] **Implementasi Jadwal Sesi 23 Jam Cerdas Nonstop (05:00 - 04:00 WIB, jeda rollover bank 04:00 - 05:00 WIB) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
+- [x] **Pelonggaran Toleransi Ekor Close (Wick Ratio) ke 20.0% pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
+
 ## 📅 Selesai Per 12 Oktober 2026
 
 - [x] **Implementasi Pure Dynamic Compounding 2% Risk, Kalender News Red Folder USD, Toleransi Ekor 8.0%, dan Expiry 3 Bar (15 Menit) pada Bot M5 Pullback Sniper v1.0 di MT5 Akun 1 Real Cent (XAUUSDc)**
