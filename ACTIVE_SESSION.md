@@ -8,6 +8,6 @@
 - **Current Task:** Pemantauan Tiap 2 Jam pada Bot M5 Pullback Sniper Akun 1 Real Cent (task-1222)
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Audit Iterasi 4 (20:00 WIB): Saldo akun 0.14 USC akibat transfer internal/penarikan 2.367,00 USC pada 18:01 WIB (deal #1915583005). Bot dan runner.py berstatus STOPPED sejak 17:15 WIB (USER_REQUEST_OFF). Posisi aktif: 0, pending: 0.
+- **Next Steps / Notes:** Audit Iterasi 5 (22:00 WIB): Terminal MT5 kini login ke akun baru: 443003218 (Exness-MT5Real44, Saldo: 32.261.320,66 USC). 1 posisi manual terbuka (0.01 lot XAUUSDc @ 4090.50, profit +14k USC). Bot pullback sniper tetap berstatus STOPPED.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-14 20:00 WIB
+- **Last Updated At:** 2026-10-14 22:00 WIB
