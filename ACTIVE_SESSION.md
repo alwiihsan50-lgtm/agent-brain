@@ -8,6 +8,6 @@
 - **Current Task:** Pemantauan Otomatis & Audit Mikrostruktur Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent
 - **Modified Files:** /home/cuker/mt5_storage/mt5_config/bot_pullback_sniper.py
 - **Verification Command / URL:** tail -n 25 /home/cuker/mt5_storage/mt5_config/bot_activity_pullback_sniper.log
-- **Next Steps / Notes:** Filter sesi statis Asia (08:15-09:15) & NY (20:00-23:00) resmi dimatikan sesuai instruksi user & validasi data backtest 100 hari (+35% profit boost). Bot berjalan 23 jam nonstop cerdas dengan jeda rollover 04:00-05:00 WIB dan Rolling Circuit Breaker 3x SL jeda 45 menit aktif. Saldo live: 2,452.14 USC.
+- **Next Steps / Notes:** Skema Ratchet High-Water Mark (HWM) Compounding (2.0% Risk per trade) resmi aktif live. Sizing terkunci pada Peak HWM 2,711.74 USC (~0.14 Lot, Anti-Shrink DD <= 10%), memulihkan saldo 35% lebih cepat tanpa recovery drag. Sesi 23 Jam Nonstop + Cooldown 3x SL aktif stabil pada saldo 2,452.14 USC.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-14 15:56 WIB
+- **Last Updated At:** 2026-10-14 16:10 WIB
