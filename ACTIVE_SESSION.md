@@ -7,7 +7,8 @@
 - **Active Project:** /home/cuker/mt5_storage/mt5_config
 - **Current Task:** Pemantauan Otomatis & Audit Mikrostruktur Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent
 - **Modified Files:** /home/cuker/mt5_storage/mt5_config/bot_pullback_sniper.py
+- **Backup File:** /home/cuker/mt5_storage/mt5_config/bot_pullback_sniper.py.bak.twin_orders_70_30
 - **Verification Command / URL:** tail -n 25 /home/cuker/mt5_storage/mt5_config/bot_activity_pullback_sniper.log
-- **Next Steps / Notes:** Skema Ratchet High-Water Mark (HWM) Compounding (2.0% Risk per trade) resmi aktif live. Sizing terkunci pada Peak HWM 2,711.74 USC (~0.14 Lot, Anti-Shrink DD <= 10%), memulihkan saldo 35% lebih cepat tanpa recovery drag. Sesi 23 Jam Nonstop + Cooldown 3x SL aktif stabil pada saldo 2,452.14 USC.
+- **Next Steps / Notes:** Single Order 100% Volume di Halfway (50% TP Hard Broker) resmi aktif live (meningkatkan profit +15.9%, PF 2.17). Backup file lama twin orders 70/30 tersimpan aman. Ratchet HWM Compounding (~0.14L) + 23 Jam Nonstop + Cooldown 3x SL aktif stabil. Saldo live: 2,452.14 USC.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-14 16:10 WIB
+- **Last Updated At:** 2026-10-14 16:20 WIB
