@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** /home/cuker/mt5_storage/mt5_config
-- **Current Task:** Implementasi Jeda Buka Asia & Rolling Cooldown 3x SL
+- **Current Task:** Implementasi Multi-Window Session Filter (Asia 08:15-09:15 & NY 20:00-23:00) & Rolling Cooldown 3x SL
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Jeda Pembukaan Asia (08:15-09:15 WIB) dan Rolling Cooldown 3x SL (45 menit) aktif live pada bot M5 Pullback Sniper. Saldo akun 1 cent: 2,442.04 USC. Cron task-1222 (2 jam) aktif.
+- **Next Steps / Notes:** Filter jam rawan sesi New York (20:00-23:00 WIB) dan jeda Asia (08:15-09:15 WIB) serta cancel_all_pending_orders telah aktif live pada PID 591. Saldo: 2,442.04 USC.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-14 14:20 WIB
+- **Last Updated At:** 2026-10-14 14:29 WIB
