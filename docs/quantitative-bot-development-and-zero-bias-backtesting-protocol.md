@@ -11,6 +11,7 @@ Pada pengembangan terdahulu, terjadi beberapa kali ilusi performa pada bot (khus
 3. **Parameter Tidak Proporsional:** Buffer SL disamakan $20 USD untuk Bitcoin ($81.000), padahal $20 USD bahkan lebih kecil dari spread normal.
 4. **Warm-up Horizon Tidak Memadai:** Indikator dihitung dari data bar yang terlalu pendek sehingga menghasilkan nilai yang berbeda dengan live terminal.
 5. **Ketiadaan Filter Rejim:** Bot dipaksa trading di hari sideways/choppy tanpa filter ADX.
+6. **Intra-Bar Same-Bar TP Fallacy (Insiden Pullback Sniper Okt 2026):** Ketika Buy Limit terjemput pada lilin `i`, backtester langsung melihat apakah `High[i] >= TP` dan mencatatnya sebagai kemenangan seketika. Padahal `High[i]` terjadi SEBELUM harga ambles ke `Low[i]`, menciptakan ilusi Win Rate palsu 80–86% (padahal aslinya rugi di semua bulan).
 
 Protokol ini disusun agar kesalahan tersebut **TIDAK PERNAH TERULANG KEMBALI**.
 
@@ -23,11 +24,15 @@ Sinyal trading HANYA boleh dihasilkan dari lilin yang telah resmi ditutup sempur
 * **Di Backtest Python:** Jika entri dieksekusi pada `Open[i]`, seluruh indikator penentu (MACD, EMA, RSI, ADX, Doji) **WAJIB dibaca pada indeks `[i-1]`** atau di-`.shift(1)`. Dilarang keras mengevaluasi indikator berbasis `Close[i]` saat bar `i` baru dibuka!
 * **Di Bot MT5 Live:** Lilin indeks 0 (`rates[-1]`) adalah lilin berjalan yang belum selesai. Pemicu sinyal hanya boleh membaca lilin indeks 1 (`rates[-2]`) atau array yang telah di-slice `rates[:-1]`.
 
-### 2. Realisme Friksi Transaksi (Bid-Ask Kuotasi & Worst-Case Execution)
+### 2. Realisme Friksi Transaksi (Bid-Ask Kuotasi, Worst-Case Execution, & Anti-Same-Bar TP Fallacy)
 Mengabaikan spread dan selisih kuotasi adalah penipuan statistik:
 * **BUY:** Buka di harga **Ask** (`Bid + Spread`), TP tertutup di **Bid** (`High - Spread`), SL tertutup di **Bid** (`Low`).
 * **SELL:** Buka di harga **Bid**, TP tertutup di **Ask** (`Low + Spread`), SL tertutup di **Ask** (`High + Spread`).
 * **Prinsip Worst-Case Intra-Bar:** Jika dalam 1 candle yang sama tercatat `High >= TP` DAN `Low <= SL`, sistem backtest **WAJIB MENGASUMSIKAN STOP LOSS TERKENA LEBIH DULU**.
+* **Hukum Eksekusi Bar Lanjutan (Next-Bar Fill Mandate & Anti-Same-Bar TP Fallacy):**
+  * Ketika Pending Order (Limit / Stop) terjemput pada bar indeks `i`: **DILARANG KERAS mengevaluasi Take Profit (TP) pada bar `i` yang persis sama**.
+  * **Alasan Kuantitatif (Tick Sequence Fallacy):** Dalam lilin OHLC (M1 atau M5), harga bisa saja menyentuh `High` di awal lilin, lalu terjun menyentuh `Low` (menjemput Buy Limit). Mengasumsikan `High` tersebut dapat dijadikan TP setelah limit terjemput adalah penipuan urutan waktu (*lookahead bias fiktif*).
+  * **Mandat Eksekusi:** Pada bar penjemputan (`i`), HANYA evaluasi risiko Stop Loss (*Worst-Case*). Evaluasi Take Profit **HANYA SAH** dimulai pada bar-bar berikutnya (`i + 1` dst) kecuali menggunakan data tick riil per-milidetik.
 
 ### 3. Execution Latency & Tick Slippage (Friksi Jeda Eksekusi)
 * Lilin ditutup pada `14:00:00`. Order terkirim dan terisi di server broker pada `14:00:01` s/d `14:00:02`.
@@ -84,6 +89,7 @@ Sebelum menghitung lot, bot wajib memeriksa spesifikasi terminal:
 - [ ] Indikator dihitung murni pada `[i-1]` (lilin tertutup).
 - [ ] Entri dieksekusi pada harga `Open[i]` dengan penalti slippage realistis.
 - [ ] Buffer SL proporsional terhadap harga aset dan minimal 2x–3x spread broker.
+- [ ] Evaluasi pending order bebas dari Same-Bar TP Fallacy (TP dievaluasi mulai bar i+1, bar i hanya evaluasi worst-case SL).
 - [ ] Slicing array indikator bebas off-by-one error (`[-k]` vs `[:-1][-k]`).
 - [ ] Indikator memiliki warm-up minimal $3\times$ periode terpanjang (misal $\ge 1.000$ bar untuk EMA 200).
 - [ ] Efek swap dan jam rollover diakomodasi.

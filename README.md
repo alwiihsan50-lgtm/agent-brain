@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Implementasi Filter Tren EMA 50/200 & Target Asymmetric RR 1:2.0 serta Kodifikasi Protokol Anti-Same-Bar TP Fallacy pada Bot Pullback Sniper**
+
 - [x] **Implementasi Multi-Window Session Filter (Jeda Buka Asia 08:15-09:15 WIB & New York 20:00-23:00 WIB) serta Rolling Cooldown 3x SL pada Bot Pullback Sniper**
 
 - [ ] **Implementasi Dynamic High-Frequency Polling (1s) & Toleransi Slippage Trailing BEP pada Bot Pullback Sniper**
@@ -92,6 +94,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-14 16:20 WIB
+**Last Updated At:** 2026-10-14 16:55 WIB
 
 
