@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Implementasi Jeda Pembukaan Asia (08:15 - 09:15 WIB) & Rolling Cooldown 3x SL pada Bot Pullback Sniper**
+
 - [ ] **Implementasi Dynamic High-Frequency Polling (1s) & Toleransi Slippage Trailing BEP pada Bot Pullback Sniper**
 
 - [ ] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 2 Jam pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-885)**
@@ -92,6 +94,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-14 14:00 WIB
+**Last Updated At:** 2026-10-14 14:21 WIB
 
 
