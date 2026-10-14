@@ -37,7 +37,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Implementasi Multi-Window Session Filter (Jeda Buka Asia 08:15-09:15 WIB & New York 20:00-23:00 WIB) serta Rolling Cooldown 3x SL pada Bot Pullback Sniper**
+- [x] **Implementasi Multi-Window Session Filter (Jeda Buka Asia 08:15-09:15 WIB & New York 20:00-23:00 WIB) serta Rolling Cooldown 3x SL pada Bot Pullback Sniper**
 
 - [ ] **Implementasi Dynamic High-Frequency Polling (1s) & Toleransi Slippage Trailing BEP pada Bot Pullback Sniper**
 
@@ -48,8 +48,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [ ] **Investigasi & Eliminasi Cacat BEP Prematur Order B (TP2) pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent**
 
 - [x] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 30 Menit pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-471)**
-
-- [x] **Perbaikan Arsitektur Trailing BEP pada Bot M5 Pullback Sniper v1.0 Akun 1 Cent: Proteksi Order A dari premature choke, Kunci BEP Order B murni berbasis Halfway lilin (+0.05 buffer), dan sinkronisasi kapasitas konkurensi 6 tiket (3 pasang)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -94,6 +92,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-14 14:29 WIB
+**Last Updated At:** 2026-10-14 14:35 WIB
 
 
