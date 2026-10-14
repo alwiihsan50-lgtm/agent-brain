@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Implementasi Dynamic High-Frequency Polling (1s) & Toleransi Slippage Trailing BEP pada Bot Pullback Sniper**
+
 - [ ] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 2 Jam pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-885)**
 
 - [ ] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 1 Jam pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-772)**
@@ -90,6 +92,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-14 08:00 WIB
+**Last Updated At:** 2026-10-14 09:03 WIB
 
 
