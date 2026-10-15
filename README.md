@@ -43,7 +43,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [x] **Pembaruan Label Tab Navigasi & Halaman Menjadi "Pendidikan & Pelatihan Vokasi" di LPKPMentariWebsite (Live di lpkpmentari.id)**
 
-- [x] **Penambahan Paket Kursus 07 "TKJ / Teknik Komputer Jaringan" di MentariOnlineCourse (Commit e588f84 Pushed)**
+- [x] **Penambahan Paket Kursus 07 "TKJ / Teknik Komputer Jaringan" di MentariOnlineCourse (Live di course.lpkpmentari.id via Supabase DB Push)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -88,6 +88,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-15 17:36 WIB
+**Last Updated At:** 2026-10-15 18:44 WIB
 
 
