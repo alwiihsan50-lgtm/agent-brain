@@ -60,6 +60,7 @@ Dokumen ini memuat arsitektur lengkap, pemetaan repositori, basis data, alur bis
 4. **Paket RPL / Web Desain Dasar (Rp 900.000):** 24x pertemuan @ 2 jam (120 menit), dasar web coding, HTML, CSS, JavaScript, layout responsif, sertifikat resmi.
 5. **Paket RPL / Web Desain Terampil (Rp 900.000):** 24x pertemuan @ 2 jam (120 menit), pengembangan web lanjutan, logika interaktif, pembuatan website siap publikasi, sertifikat resmi.
 6. **Paket Komputer Akuntansi MYOB & Accurate (Rp 750.000):** 24x pertemuan @ 2 jam (120 menit), pembukuan digital, siklus akuntansi perusahaan dagang/jasa, laporan keuangan otomatis, sertifikat resmi.
+7. **Paket TKJ / Teknik Komputer Jaringan (Rp 900.000):** 24x pertemuan @ 2 jam (120 menit), perakitan hardware PC, instalasi sistem operasi & troubleshooting, crimping kabel LAN, konfigurasi router MikroTik, sertifikat resmi.
 
 ---
 

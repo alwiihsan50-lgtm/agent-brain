@@ -6,6 +6,8 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 15 Oktober 2026
 
+- [x] **Implementasi Multi-Window Session Filter (Jeda Buka Asia 08:15-09:15 WIB & New York 20:00-23:00 WIB) serta Rolling Cooldown 3x SL pada Bot Pullback Sniper**
+- [x] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 2 Jam pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-885 / task-1222)**
 - [x] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 1 Jam pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-772)**
 - [x] **Investigasi & Eliminasi Cacat BEP Prematur Order B (TP2) pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent**
 - [x] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 30 Menit pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-471)**

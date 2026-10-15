@@ -39,11 +39,11 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [ ] **Implementasi Filter Tren EMA 50/200 & Target Asymmetric RR 1:2.0 serta Kodifikasi Protokol Anti-Same-Bar TP Fallacy pada Bot Pullback Sniper**
 
-- [x] **Implementasi Multi-Window Session Filter (Jeda Buka Asia 08:15-09:15 WIB & New York 20:00-23:00 WIB) serta Rolling Cooldown 3x SL pada Bot Pullback Sniper**
-
 - [ ] **Implementasi Dynamic High-Frequency Polling (1s) & Toleransi Slippage Trailing BEP pada Bot Pullback Sniper**
 
-- [x] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 2 Jam pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-885 / task-1222)**
+- [x] **Pembaruan Label Tab Navigasi & Halaman Menjadi "Pendidikan & Pelatihan Vokasi" di LPKPMentariWebsite (Live di lpkpmentari.id)**
+
+- [x] **Penambahan Paket Kursus 07 "TKJ / Teknik Komputer Jaringan" di MentariOnlineCourse (Commit e588f84 Pushed)**
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -88,6 +88,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-15 13:01 WIB
+**Last Updated At:** 2026-10-15 17:36 WIB
 
 
