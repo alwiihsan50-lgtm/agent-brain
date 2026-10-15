@@ -4,6 +4,12 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 15 Oktober 2026
+
+- [x] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 1 Jam pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-772)**
+- [x] **Investigasi & Eliminasi Cacat BEP Prematur Order B (TP2) pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent**
+- [x] **Pemantauan Otomatis & Audit Mikrostruktur Tiap 30 Menit pada Bot M5 Pullback Sniper v1.0 Akun 1 Real Cent (task-471)**
+
 ## 📅 Selesai Per 14 Oktober 2026
 
 - [x] **Perbaikan Arsitektur Trailing BEP pada Bot M5 Pullback Sniper v1.0 Akun 1 Cent: Proteksi Order A dari premature choke, Kunci BEP Order B murni berbasis Halfway lilin (+0.05 buffer), dan sinkronisasi kapasitas konkurensi 6 tiket (3 pasang)**
