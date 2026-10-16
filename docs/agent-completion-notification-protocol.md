@@ -60,13 +60,16 @@ Sistem telah diintegrasikan dengan antarmuka chat interaktif lengkap:
 - **Tampilan Antarmuka:**
   - Status koneksi PC (`🟢 PC Connected`).
   - **💬 Riwayat Percakapan (Chat Box):** Menampilkan thread percakapan dua arah secara scrollable layaknya WhatsApp/iMessage (bubble biru untuk pengguna, bubble gelap dengan rendering Markdown lengkap untuk AI). Otomatis diperbarui setiap ada jawaban baru.
+  - **📂 Tombol `/resume` & Session Picker:** Tombol khusus di header dan chip pintas untuk membuka modal daftar sesi percakapan lampau. Pengguna dapat memilih sesi masa lalu mana pun dan melanjutkannya (`agy --conversation <id>`) di PC secara instan dari iPhone.
   - Input box teks + dukungan penuh tombol mikrofon suara (*voice-to-text*) bawaan keyboard iOS.
-  - Quick action chips: `Lanjutkan`, `Oke terima kasih`, `/usage`, `/status`.
+  - Quick action chips: `📂 /resume`, `Lanjutkan`, `Oke terima kasih`, `/usage`, `/status`.
   - Tombol aksi: `🚀 Kirim Balasan Prompt` dengan indikator *thinking bubble* optimis.
 - **Eksekusi ke Antigravity CLI:**
   - Teks balasan disimpan di antrean KV Cloudflare Workers.
   - Daemon lokal PC (`antigravity-reply-daemon.service` running 24/7) mengambil pesan dan menyuntikkannya langsung ke session `tmux` aktif menggunakan `tmux send-keys`.
+  - Jika pengguna meminta `/resume` sesi tertentu, daemon mengeksekusi peralihan sesi via `agy --conversation <id>` secara otomatis di PC.
   - Antigravity langsung memproses instruksi tanpa perlu menyentuh komputer atau login ulang di HP.
+
 
 
 
