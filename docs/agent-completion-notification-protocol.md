@@ -52,20 +52,21 @@ agent-notify "✅ Update Selesai" "Sinkronisasi agent-brain dan pengarsipan bot 
 
 ---
 
-## 📱 4. Direct Quick Reply via iPhone (Tanpa Login, Zero-Auth)
+## 📱 4. Direct Quick Reply & Chat Thread via iPhone (Zero-Auth)
 
-Sistem telah diintegrasikan dengan fitur **Direct Quick Reply** tanpa repot login Google:
+Sistem telah diintegrasikan dengan antarmuka chat interaktif lengkap:
 - **Web UI Mobile:** `https://mt5-push-backend.alwiihsan50.workers.dev/reply`.
-- **Aksi Ketuk Notifikasi:** Setiap kali notifikasi selesai di-tap di iPhone, Safari/PWA langsung membuka halaman Direct Reply yang bersih, responsif, dan ringan.
+- **Aksi Ketuk Notifikasi:** Setiap kali notifikasi selesai di-tap di iPhone, Safari/PWA langsung membuka antarmuka chat dua arah.
 - **Tampilan Antarmuka:**
   - Status koneksi PC (`🟢 PC Connected`).
-  - Ringkasan tugas selesai terakhir yang otomatis diperbarui secara live.
+  - **💬 Riwayat Percakapan (Chat Box):** Menampilkan thread percakapan dua arah secara scrollable layaknya WhatsApp/iMessage (bubble biru untuk pengguna, bubble gelap dengan rendering Markdown lengkap untuk AI). Otomatis diperbarui setiap ada jawaban baru.
   - Input box teks + dukungan penuh tombol mikrofon suara (*voice-to-text*) bawaan keyboard iOS.
   - Quick action chips: `Lanjutkan`, `Oke terima kasih`, `/usage`, `/status`.
-  - Tombol aksi: `🚀 Kirim Balasan Prompt`.
+  - Tombol aksi: `🚀 Kirim Balasan Prompt` dengan indikator *thinking bubble* optimis.
 - **Eksekusi ke Antigravity CLI:**
   - Teks balasan disimpan di antrean KV Cloudflare Workers.
   - Daemon lokal PC (`antigravity-reply-daemon.service` running 24/7) mengambil pesan dan menyuntikkannya langsung ke session `tmux` aktif menggunakan `tmux send-keys`.
   - Antigravity langsung memproses instruksi tanpa perlu menyentuh komputer atau login ulang di HP.
+
 
 
