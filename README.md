@@ -39,21 +39,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
 - [ ] **Penautan Kartu & Status Akreditasi BAN-PNF ke Portal Resmi BAN-PDM di Profil & Beranda (Live di lpkpmentari.id)**
-
 - [ ] **Pemisahan Tab Navigasi: 'Pendidikan Kursus' (Program 1 Tahun & Asrama) dan 'Pelatihan Vokasi' (11 Kejuruan Non-1-Tahun) di LPKPMentariWebsite (Live di lpkpmentari.id)**
-
 - [ ] **Pembaruan Label Kurikulum 'Modul 01 - Modul 05' Menjadi 'Materi Kompetensi 1 - Materi Kompetensi 5' di LPKPMentariWebsite (Live di lpkpmentari.id)**
-
 - [ ] **Penautan Kartu Identitas Registrasi VIN Kemnaker (1911127401) ke Portal Resmi Skillhub di Profil Lembaga (Live di lpkpmentari.id/tentang.html)**
-
 - [ ] **Implementasi Filter Tren EMA 50/200 & Target Asymmetric RR 1:2.0 serta Kodifikasi Protokol Anti-Same-Bar TP Fallacy pada Bot Pullback Sniper**
-
 - [ ] **Implementasi Dynamic High-Frequency Polling (1s) & Toleransi Slippage Trailing BEP pada Bot Pullback Sniper**
-
 - [x] **Pembaruan Label Tab Navigasi & Halaman Menjadi "Pendidikan & Pelatihan Vokasi" di LPKPMentariWebsite (Live di lpkpmentari.id)**
-
 - [x] **Penambahan Paket Kursus 07 "TKJ / Teknik Komputer Jaringan" di MentariOnlineCourse (Live di course.lpkpmentari.id via Supabase DB Push)**
-
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -63,7 +55,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - 📝 [**Active Session Scratchpad**](ACTIVE_SESSION.md) — Jembatan memori real-time antar agent saat pengerjaan tugas aktif.
 - 🏛️ [**Arsitektur Reverse Martingale Paroli 2-Way Trading**](docs/reverse-martingale-paroli-2way-architecture.md) — Panduan kanonikal sistem Paroli 2 arah anti-martingale, kalibrasi eliminasi spread asymmetry drag, dan atomic sync counterpart reset.
 - 🏛️ [**Arsitektur Triad Hedged Martingale Non-Stop**](docs/triad-hedged-martingale-nonstop-architecture.md) — Panduan kanonikal 3 solusi cerdas non-stop (Tail Pruning via Siphon Pool, Dynamic Decay Escape, Trend Booster, & Sizing Anti-Duplicate).
-- 🏆 [**Katalog Bot Trading Berperforma Unggul (Hall of Fame)**](docs/high-performance-trading-bots-catalog.md) — Etalase terpusat seluruh bot trading kuantitatif teruji (Cent Grid v3.2, Hybrid Grid Engulfing, M5 Trend Sniper, D1 Multi-Pair Doji, Forex SMC).
+- 🏆 [**Katalog Bot Trading Berperforma Unggul (Hall of Fame)**](docs/high-performance-trading-bots-catalog.md) — Etalase terpusat seluruh bot trading kuantitatif teruji (Cent Grid v3.2, Hybrid Engulfing, D1 Multi-Pair Doji, Forex SMC, & Lemari Arsip Bot Substandard).
 - 🏛️ [**Kerangka Trading Makro-Kuantitatif Institusional**](docs/institutional-macro-quant-trading-framework.md) — Alur kerja Top-Down Tri-Pillar (Makro/Fundamental + Sentimen Intermarket + Struktur SMC + Eksekusi Asimetris R:R 1:3).
 - 📄 [**Arsitektur Cent Grid Harvester (Anti-MC & Anti-Mati Lampu)**](docs/optimal-xauusd-cent-grid-harvester-architecture.md) — Panduan kanonikal resmi bot grid Akun 1 Cent v2.2 (Sizing, Mandatory Cut-Loss L4, Hard SL Broker, Pure Candle Flow).
 - 📄 [**Protokol Bot & Backtest Anti-Bias**](docs/quantitative-bot-development-and-zero-bias-backtesting-protocol.md) — Standar wajib 7 pilar kuantitatif eliminasi lookahead bias, spread drag, & validasi out-of-sample.
@@ -76,6 +68,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - 📄 [**Automasi Trading MT5 & Cloudflare Push**](docs/mt5-docker-forex-trading-automation.md) — Setup bot MT5 Docker, Wine Python, dynamic risk calculation.
 - 📄 [**Infrastruktur mentari-server Debian**](docs/mentari-server-debian-infrastructure.md) — Spesifikasi, remote SSH key, dan manajemen container.
 - 📄 [**Universal Web Push Notification Service**](docs/universal-web-push-notification-service.md) — Hub notifikasi REST API (Python, JS, Go, cURL).
+- 🔔 [**Protokol Notifikasi Selesai Tugas AI**](docs/agent-completion-notification-protocol.md) — Mandat otomatis dual-channel notification (Desktop + Apple Push) setiap kali AI menyelesaikan tugas/prompt.
 - 📄 [**Arsip-IMO Specification**](docs/arsip-imo-project.md) — Dokumentasi arsitektur dan UI/UX proyek Arsip-IMO.
 - 📄 [**SOP Bulk Upload Foto Absensi TailShare**](docs/sop-bulk-upload-foto-absensi-tailshare.md) — Prosedur otomasi ekstraksi ZIP foto TailShare, kompresi <=150KB, dan upload langsung database Supabase Arsip-IMO.
 - 📄 [**Cloudflare Manager & DNS Mapping**](docs/cloudflare-manager-architecture-and-dns-mapping.md) — Manajemen 12 DNS subdomain dan akses Zero Trust.
@@ -97,6 +90,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-17 03:11 WIB
+**Last Updated At:** 2026-10-17 03:14 WIB
 
 
