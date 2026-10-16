@@ -52,15 +52,20 @@ agent-notify "✅ Update Selesai" "Sinkronisasi agent-brain dan pengarsipan bot 
 
 ---
 
-## 📱 4. Antigravity Remote Control Web UI (Tap-to-Control dari iPhone)
+## 📱 4. Direct Quick Reply via iPhone (Tanpa Login, Zero-Auth)
 
-Sistem telah diintegrasikan dengan fitur resmi **Antigravity Remote Control**:
-- **Daemon Service:** `antigravity-cli-daemon.service` (systemd user unit, status aktif).
-- **Instance Name:** `PC-Workstation`.
-- **Portal Web UI:** `https://antigravity.google.com`.
-- **Aksi Klik Notifikasi:** Setiap notifikasi Web Push kini menyertakan `url: "https://antigravity.google.com"`. Ketika USER mengetuk notifikasi di iPhone, browser / PWA langsung membuka portal Antigravity Remote Control.
-- **Kemampuan Penuh di Ponsel:**
-  - Mengetik prompt balasan langsung secara real-time.
-  - Menjalankan slash commands terminal (`/usage`, `/new`, `/model`, `/status`, `/compact`).
-  - Membuka sesi baru, mengganti workspace, dan menginspeksi diff kode serta artifacts.
+Sistem telah diintegrasikan dengan fitur **Direct Quick Reply** tanpa repot login Google:
+- **Web UI Mobile:** `https://mt5-push-backend.alwiihsan50.workers.dev/reply`.
+- **Aksi Ketuk Notifikasi:** Setiap kali notifikasi selesai di-tap di iPhone, Safari/PWA langsung membuka halaman Direct Reply yang bersih, responsif, dan ringan.
+- **Tampilan Antarmuka:**
+  - Status koneksi PC (`🟢 PC Connected`).
+  - Ringkasan tugas selesai terakhir yang otomatis diperbarui secara live.
+  - Input box teks + dukungan penuh tombol mikrofon suara (*voice-to-text*) bawaan keyboard iOS.
+  - Quick action chips: `Lanjutkan`, `Oke terima kasih`, `/usage`, `/status`.
+  - Tombol aksi: `🚀 Kirim Balasan Prompt`.
+- **Eksekusi ke Antigravity CLI:**
+  - Teks balasan disimpan di antrean KV Cloudflare Workers.
+  - Daemon lokal PC (`antigravity-reply-daemon.service` running 24/7) mengambil pesan dan menyuntikkannya langsung ke session `tmux` aktif menggunakan `tmux send-keys`.
+  - Antigravity langsung memproses instruksi tanpa perlu menyentuh komputer atau login ulang di HP.
+
 
