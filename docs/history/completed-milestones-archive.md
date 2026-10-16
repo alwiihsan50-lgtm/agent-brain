@@ -4,6 +4,16 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 17 Oktober 2026
+
+- [x] **Penautan Kartu & Status Akreditasi BAN-PNF ke Portal Resmi BAN-PDM di Profil & Beranda (Live di lpkpmentari.id)**
+- [x] **Pemisahan Tab Navigasi: 'Pendidikan Kursus' (Program 1 Tahun & Asrama) dan 'Pelatihan Vokasi' (11 Kejuruan Non-1-Tahun) di LPKPMentariWebsite (Live di lpkpmentari.id)**
+- [x] **Pembaruan Label Kurikulum 'Modul 01 - Modul 05' Menjadi 'Materi Kompetensi 1 - Materi Kompetensi 5' di LPKPMentariWebsite (Live di lpkpmentari.id)**
+- [x] **Penautan Kartu Identitas Registrasi VIN Kemnaker (1911127401) ke Portal Resmi Skillhub di Profil Lembaga (Live di lpkpmentari.id/tentang.html)**
+- [x] **Pengarsipan Permanen Seluruh Bot Substandard (bot_trending.py, bot_sideways.py, bot_crypto_trending.py) Pasca Audit Forensik 12 Pilar quant-backtest-integrity**
+- [x] **Implementasi Mandat Notifikasi Otomatis agent-notify (Desktop + iPhone Web Push) dan Penataan Indeks docs/README.md**
+- [x] **Penutupan Tugas Pending MT5 Pullback Sniper (Filter EMA 50/200 & High-Frequency Polling resmi tidak dilanjutkan sesuai instruksi USER)**
+
 ## 📅 Selesai Per 15 Oktober 2026
 
 - [x] **Implementasi Multi-Window Session Filter (Jeda Buka Asia 08:15-09:15 WIB & New York 20:00-23:00 WIB) serta Rolling Cooldown 3x SL pada Bot Pullback Sniper**

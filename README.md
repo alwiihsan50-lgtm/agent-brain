@@ -38,14 +38,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Penautan Kartu & Status Akreditasi BAN-PNF ke Portal Resmi BAN-PDM di Profil & Beranda (Live di lpkpmentari.id)**
-- [ ] **Pemisahan Tab Navigasi: 'Pendidikan Kursus' (Program 1 Tahun & Asrama) dan 'Pelatihan Vokasi' (11 Kejuruan Non-1-Tahun) di LPKPMentariWebsite (Live di lpkpmentari.id)**
-- [ ] **Pembaruan Label Kurikulum 'Modul 01 - Modul 05' Menjadi 'Materi Kompetensi 1 - Materi Kompetensi 5' di LPKPMentariWebsite (Live di lpkpmentari.id)**
-- [ ] **Penautan Kartu Identitas Registrasi VIN Kemnaker (1911127401) ke Portal Resmi Skillhub di Profil Lembaga (Live di lpkpmentari.id/tentang.html)**
-- [ ] **Implementasi Filter Tren EMA 50/200 & Target Asymmetric RR 1:2.0 serta Kodifikasi Protokol Anti-Same-Bar TP Fallacy pada Bot Pullback Sniper**
-- [ ] **Implementasi Dynamic High-Frequency Polling (1s) & Toleransi Slippage Trailing BEP pada Bot Pullback Sniper**
-- [x] **Pembaruan Label Tab Navigasi & Halaman Menjadi "Pendidikan & Pelatihan Vokasi" di LPKPMentariWebsite (Live di lpkpmentari.id)**
-- [x] **Penambahan Paket Kursus 07 "TKJ / Teknik Komputer Jaringan" di MentariOnlineCourse (Live di course.lpkpmentari.id via Supabase DB Push)**
+- [x] **Pembaruan Label Kurikulum 'Materi Kompetensi 1 - Materi Kompetensi 5' & Pemisahan Tab Vokasi di LPKPMentariWebsite (Live di lpkpmentari.id)**
+- [x] **Penautan Kartu Akreditasi BAN-PDM & Identitas VIN Kemnaker ke Portal Resmi di Profil Lembaga (Live di lpkpmentari.id)**
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -64,6 +58,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-17 03:18 WIB
+**Last Updated At:** 2026-10-17 03:21 WIB
 
 
