@@ -53,43 +53,17 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ## 📚 Indeks Dokumentasi (`docs/`)
 
 - 📝 [**Active Session Scratchpad**](ACTIVE_SESSION.md) — Jembatan memori real-time antar agent saat pengerjaan tugas aktif.
-- 🏛️ [**Arsitektur Reverse Martingale Paroli 2-Way Trading**](docs/reverse-martingale-paroli-2way-architecture.md) — Panduan kanonikal sistem Paroli 2 arah anti-martingale, kalibrasi eliminasi spread asymmetry drag, dan atomic sync counterpart reset.
-- 🏛️ [**Arsitektur Triad Hedged Martingale Non-Stop**](docs/triad-hedged-martingale-nonstop-architecture.md) — Panduan kanonikal 3 solusi cerdas non-stop (Tail Pruning via Siphon Pool, Dynamic Decay Escape, Trend Booster, & Sizing Anti-Duplicate).
-- 🏆 [**Katalog Bot Trading Berperforma Unggul (Hall of Fame)**](docs/high-performance-trading-bots-catalog.md) — Etalase terpusat seluruh bot trading kuantitatif teruji (Cent Grid v3.2, Hybrid Engulfing, D1 Multi-Pair Doji, Forex SMC, & Lemari Arsip Bot Substandard).
-- 🏛️ [**Kerangka Trading Makro-Kuantitatif Institusional**](docs/institutional-macro-quant-trading-framework.md) — Alur kerja Top-Down Tri-Pillar (Makro/Fundamental + Sentimen Intermarket + Struktur SMC + Eksekusi Asimetris R:R 1:3).
-- 📄 [**Arsitektur Cent Grid Harvester (Anti-MC & Anti-Mati Lampu)**](docs/optimal-xauusd-cent-grid-harvester-architecture.md) — Panduan kanonikal resmi bot grid Akun 1 Cent v2.2 (Sizing, Mandatory Cut-Loss L4, Hard SL Broker, Pure Candle Flow).
-- 📄 [**Protokol Bot & Backtest Anti-Bias**](docs/quantitative-bot-development-and-zero-bias-backtesting-protocol.md) — Standar wajib 7 pilar kuantitatif eliminasi lookahead bias, spread drag, & validasi out-of-sample.
-- 📄 [**Tooling Efisiensi Token & MCP Server**](docs/token-efficiency-and-mcp-tooling.md) — Panduan `web2md`, `tokcut`, `sqlite-utils`, dan MCP SQLite.
-- 📄 [**STB RockChip Web Remote Architecture**](docs/stb-rockchip-web-remote-architecture.md) — Arsitektur daemon uinput, 4-Tab Hub, HDMI resolution tuner, Tailscale IP, dan optimasi kernel.
-- 📄 [**System Environment, Ports & Remote Access**](docs/system-environment-and-ports.md) — Port terpesan, Cloudflare Tunnel & Zero Trust.
-- 📄 [**Panduan Sinergi agent-brain & graphify**](docs/agent-brain-and-graphify-synergy-guide.md) — Integrasi memori makro dan knowledge graph mikro.
-- 📄 [**MoneyPrinterTurbo Hybrid Architecture**](docs/moneyprinterturbo-hybrid-architecture.md) — Setup pabrik video AI, port 8095/8501, local asset bank, & kinetic subtitle.
-- 📄 [**TikTok Marketing Agent Suite**](docs/tiktok-marketing-agent-suite.md) — Panduan arsitektur ttagent, CLI `tt`, video 9:16, live selling, & CRM SQLite.
-- 📄 [**Automasi Trading MT5 & Cloudflare Push**](docs/mt5-docker-forex-trading-automation.md) — Setup bot MT5 Docker, Wine Python, dynamic risk calculation.
-- 📄 [**Infrastruktur mentari-server Debian**](docs/mentari-server-debian-infrastructure.md) — Spesifikasi, remote SSH key, dan manajemen container.
-- 📄 [**Universal Web Push Notification Service**](docs/universal-web-push-notification-service.md) — Hub notifikasi REST API (Python, JS, Go, cURL).
-- 🔔 [**Protokol Notifikasi Selesai Tugas AI**](docs/agent-completion-notification-protocol.md) — Mandat otomatis dual-channel notification (Desktop + Apple Push) setiap kali AI menyelesaikan tugas/prompt.
-- 📄 [**Arsip-IMO Specification**](docs/arsip-imo-project.md) — Dokumentasi arsitektur dan UI/UX proyek Arsip-IMO.
-- 📄 [**SOP Bulk Upload Foto Absensi TailShare**](docs/sop-bulk-upload-foto-absensi-tailshare.md) — Prosedur otomasi ekstraksi ZIP foto TailShare, kompresi <=150KB, dan upload langsung database Supabase Arsip-IMO.
-- 📄 [**Cloudflare Manager & DNS Mapping**](docs/cloudflare-manager-architecture-and-dns-mapping.md) — Manajemen 12 DNS subdomain dan akses Zero Trust.
-- 📄 [**Safari iOS Web Push Notification**](docs/safari-ios-web-push-notification.md) — Panduan integrasi Web Push Safari iOS & PWA standalone.
-- 📄 [**LPKP Mentari Ecosystem**](docs/lpkp-mentari-ecosystem.md) — Struktur ekosistem platform web LPKP Mentari.
-- 📄 [**AI Browser Automation Tools**](docs/ai-browser-automation-tools.md) — Panduan Playwright MCP, Crawl4AI, dan Browser-Use.
-- 📄 [**Git Post-Commit Graphify Hook**](docs/git-post-commit-graphify-hook.md) — Panduan auto-sync graphify via Git Hook.
-- 📄 [**TailShare Linux Mint Guide**](docs/tailshare-linux-mint-installation.md) — Panduan instalasi dan auto-start TailShare.
-- 📄 [**Standardisasi PNPM & Shared node_modules**](docs/pnpm-global-store-node-modules-optimization.md) — Konfigurasi global store, hard links, dan panduan dependensi Node.js.
-- 📄 [**Kustomisasi Workflow Linux Mint**](docs/linux-mint-developer-workflow-customizations.md) — Starship, Zoxide, FZF, LazyDocker, Btop, aliases.
-- 📄 [**Katalog Proyek Drive D**](docs/drive-d-projects-catalog.md) — Pemetaan 18 repositori Git aktif di Drive `D:\Projects`.
-- 📄 [**Kebijakan Sentralisasi Torrent PC**](docs/torrent-download-centralization-policy.md) — Aturan mutlak seluruh task torrent hanya berjalan di PC workstation.
-- 📄 [**SIMPKK-DIGITAL Supabase Keep-Alive**](docs/simpkk-digital-supabase-keepalive.md) — Solusi dual-layer keepalive Supabase Free Tier (GitHub Actions + local crontab).
-- 📄 [**9Router AI Gateway**](docs/9router-ai-gateway.md) — Panduan integrasi AI proxy gateway & token saver (Port 20128).
-- 📄 [**AGY Local OpenAI Bridge**](docs/agy-local-openai-bridge.md) — Panduan arsitektur bridge Port 5050 bertenaga Antigravity CLI, integrasi 9Router, dan penggunaan aplikasi eksternal.
-- 📄 [**Kling AI Browser Automation & MoneyPrinter Pipeline**](docs/kling-ai-browser-automation-and-moneyprinter-pipeline.md) — Otomasi Kling AI, Playwright Chromium, kuota 66 kredit harian, CLI `kling-video`, & TailShare.
-- 📄 [**Arsip Milestone & Riwayat Lengkap**](docs/history/completed-milestones-archive.md) — Log lengkap seluruh fitur & milestone terdahulu.
+- 📑 [**Indeks Master Dokumentasi Terpusat (`docs/README.md`)**](docs/README.md) — Katalog terstruktur seluruh 34 dokumen sistem lintas kategori:
+  - 📈 [**Trading Kuantitatif & Algoritmik MT5**](docs/README.md#-1-trading-kuantitatif--algoritmik-mt5) (8 Dokumen: Cent Grid v3.2, Paroli 2-Way, Triad, 12 Pilar Anti-Bias, Hall of Fame)
+  - 🌐 [**Infrastruktur, Server & Jaringan Remote**](docs/README.md#-2-infrastruktur-server--jaringan-remote) (9 Dokumen: Ports, STB Remote, Web Push, Zero Trust, TailShare, Torrent)
+  - ⚡ [**AI Tooling, Context Efficiency & Workflow**](docs/README.md#-3-ai-tooling-context-efficiency--developer-workflow) (9 Dokumen: `web2md`, `tokcut`, Graphify Hook, 9Router, Headroom, AGY Bridge)
+  - 🏢 [**Ekosistem Platform Web Lembaga & Database**](docs/README.md#-4-ekosistem-platform-web-lembaga--database) (4 Dokumen: LPKP Mentari, Arsip-IMO, Supabase Keepalive)
+  - 🎬 [**Creative Media, AI Video & Marketing**](docs/README.md#-5-creative-media-ai-video--marketing-automation) (3 Dokumen: MoneyPrinterTurbo, TikTok Suite, Kling AI Automation)
+- 📜 [**Arsip Milestone Terdahulu**](docs/history/completed-milestones-archive.md) — Log lengkap 200+ riwayat pekerjaan selesai terverifikasi.
 
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-17 03:14 WIB
+**Last Updated At:** 2026-10-17 03:18 WIB
 
 
