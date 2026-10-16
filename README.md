@@ -38,10 +38,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Implementasi Tombol /new, Pemilih Ganti Sesi Terfokus (Hanya Chat Terakhir), & Optimasi Kuota Cloudflare Workers (<25% Free Tier) pada Quick Reply Antigravity**
-
+- [x] **Penyederhanaan Antarmuka Quick Reply Terfokus (Hanya Chat Terakhir, Bebas Distraksi) & Single Notification Guarantee (Auto-Deduplication 12s Cooldown)**
 - [x] **Pembaruan Label Kurikulum 'Materi Kompetensi 1 - Materi Kompetensi 5' & Pemisahan Tab Vokasi di LPKPMentariWebsite (Live di lpkpmentari.id)**
-- [x] **Penautan Kartu Akreditasi BAN-PDM & Identitas VIN Kemnaker ke Portal Resmi di Profil Lembaga (Live di lpkpmentari.id)**
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -60,6 +58,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-17 05:20 WIB
+**Last Updated At:** 2026-10-17 05:22 WIB
 
 
