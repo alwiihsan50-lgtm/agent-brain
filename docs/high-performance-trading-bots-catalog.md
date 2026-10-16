@@ -13,9 +13,9 @@
 | **1. Cent Grid Harvester v3.2** | `XAUUSDc` | M5 | High-Frequency Basket Harvest (4 Levels), Trend Cut $5 | **`+7.075 USC` (+353%)** | **`1.16`** | 99% Peak | 📦 **BASELINE FORMULA**<br>`mt5_config/bot_grid_cent.py` |
 | **2. Hybrid Grid + Full Engulfing** | `XAUUSDc` | M5 | 2-Candle Flow + Outer Bar Reversal Synergy | **`+4.233 USC` (+211%)** | **`1.10`** | **51.3%** | 🟢 **LIVE DI AKUN 1 (v3.3)**<br>`mt5_config/bot_grid_cent.py` |
 | **3. Standalone Outer Bar Engulfing**| `XAUUSDc` | M5 | Sinyal Reversal Murni (Outer Bar) searah H1 ZLEMA | **`+2.929 USC` (+146%)** | **`1.25`** ⭐ | **50.8%** ⭐ | 🧪 **VERIFIED READY**<br>`mt5_backtest/test_engulfing_rule.py` |
-| **4. Golden Stack M5 Trend Sniper** | `XAUUSD` | M5 + H1 | Doji Stalemate + Gold MACD (16,38,9) + R:R 1:3.0 | **`+Rp 7.55 Juta`** | **`1.66`** | 15.1 R | 🟢 **LIVE CO-RUNNING DI AKUN 1**<br>`Flat 0.05L` (`bot_trending.py`) |
-| **5. D1 Multi-Pair Doji Sniper** | Multi-Pair | D1 | Daily Doji Key S/R + MACD Histogram Divergence | **`WinRate 62%`** | **`1.45 - 1.82`** | **< 12%** | 📄 **VERIFIED PORTFOLIO**<br>`mt5_backtest/backtest_daily_doji_bot.py` |
-| **6. Forex SMC FVG Scalper** | EUR/GBP | M15 + H1 | H1 Trend + M15 FVG Retest + Asian Range Trap | **`WinRate 68%`** | **`1.35 - 1.52`** | 18% | 📄 **VERIFIED FOREX**<br>`mt5_backtest/backtest_eurusd_smc_deep.py` |
+| **4. D1 Multi-Pair Doji Sniper** | Multi-Pair | D1 | Daily Doji Key S/R + MACD Histogram Divergence | **`WinRate 62%`** | **`1.45 - 1.82`** | **< 12%** | 📄 **VERIFIED PORTFOLIO**<br>`mt5_config/bot_daily_doji.py` |
+| **5. Forex SMC FVG Scalper** | EUR/GBP | M15 + H1 | H1 Trend + M15 FVG Retest + Asian Range Trap | **`WinRate 68%`** | **`1.35 - 1.52`** | 18% | 📄 **VERIFIED FOREX**<br>`mt5_backtest/backtest_eurusd_smc_deep.py` |
+| ~~*M5 Trend Sniper (bot_trending)*~~ | `XAUUSD` | M5 | Diuji ulang 12 Pilar: Kebocoran Intra-Bar & Konsistensi < 75% | +Rp 15.6 Juta | 1.24 - 1.26 | 2.12 R | 🗄️ **DIARSIPKAN PERMANEN**<br>`archived_bots/bot_trending.py` |
 
 ---
 
@@ -73,30 +73,9 @@
 
 ---
 
-## 🎯 Kategori 2: Trend Sniper & Swing Portfolio (Risk-to-Reward Tinggi)
+## 🎯 Kategori 2: Reversal Sniper & Swing Portfolio (Risk-to-Reward Tinggi)
 
-### 🏹 4. The Optimal Golden Stack M5 Trend Sniper (bot_trending.py)
-* **Target Akun:** Akun 1 Real Cent (`Login 263301611 - Exness Real 37`) & Standar / PropFirm
-* **Pair:** `XAUUSD` / `XAUUSDc` | **Timeframe:** M5 Dual-Engine (Macro Filter H1)
-* **Arsitektur Parameter:**
-  * **Filter Tren Makro:** H1 Golden Cross (EMA 50 > EMA 200 untuk BUY / EMA 50 < EMA 200 untuk SELL)
-  * **Filter Kekuatan Tren:** H1 ADX $\ge$ 20.0 (Mematikan bot saat pasar mati / sideways Asia)
-  * **Siklus Momentum M5:** Gold MACD `(16, 38, 9)` disesuaikan dengan ritme volatilitas London & NY
-  * **Pemicu Entri:** Doji Stalemate Compression (`MIN_RANGE = $0.50`, `BODY_RATIO <= 30%`, Lookback 5 bar)
-  * **Stop Loss Boundary:** Dinamis `$1.50 - $4.50 USD` mengikuti ekor Doji + buffer
-  * **Target Profit:** **R:R Murni 1:3.0 (TANPA BEP)** *(Menyalakan BEP memotong profit sebesar -60%)*
-  * **Money Management:** **Flat 0.05 Lot** (Single-Order Strict Risk, Magic `889911`)
-  * **Circuit Breaker:** Rem 5x SL Harian berturut-turut (Maks rugi harian terkunci)
-* **Bukti Backtest (YTD Data M5):**
-  * **Net Profit:** **`+45.779 USC` (+Rp 7.553.248)** dari modal awal Rp 552.000
-  * **Profit Factor (PF):** **`1.66`** | **Win Rate:** **`35,8%`** (Asimetris R:R 1:3)
-  * **Max Drawdown:** 15.1 R (Rp 303.615 / 55.0% modal)
-* **File Script Kode:** [`/home/cuker/mt5_storage/mt5_config/bot_trending.py`](file:///home/cuker/mt5_storage/mt5_config/bot_trending.py)
-* **Dokumentasi Lengkap:** [`docs/mt5-xauusd-backtesting-and-strategy-calibration.md`](mt5-xauusd-backtesting-and-strategy-calibration.md)
-
----
-
-### 🦅 5. D1 Multi-Pair Doji Reversal Sniper (Multi-Asset Portfolio)
+### 🦅 4. D1 Multi-Pair Doji Reversal Sniper (Multi-Asset Portfolio)
 * **Pairs:** `XAUUSD`, `EURUSD`, `USDJPY`, `GBPUSD`
 * **Timeframe:** D1 (Daily Bars)
 * **Karakter:** Mengambil pembalikan arah besar di level Support/Resistance harian dengan konfirmasi MACD Histogram. Menahan posisi 1–4 hari dengan penyesuaian biaya swap.
@@ -106,13 +85,13 @@
   * **Sharpe Ratio:** **`> 1.40`**
   * **Max Drawdown:** **`< 12%`** (Sangat stabil untuk portofolio dana besar)
 * **File Tearsheet HTML:** [`/home/cuker/mt5_storage/mt5_backtest/d1_sniper_quantstats_tearsheet.html`](file:///home/cuker/mt5_storage/mt5_backtest/d1_sniper_quantstats_tearsheet.html)
-* **File Script:** [`/home/cuker/mt5_storage/mt5_backtest/backtest_daily_doji_bot.py`](file:///home/cuker/mt5_storage/mt5_backtest/backtest_daily_doji_bot.py)
+* **File Script:** [`/home/cuker/mt5_storage/mt5_config/bot_daily_doji.py`](file:///home/cuker/mt5_storage/mt5_config/bot_daily_doji.py)
 
 ---
 
 ## 🏛️ Kategori 3: Institutional Forex SMC & FVG Scalper
 
-### 💼 6. Forex Smart Money Concepts (SMC) FVG Scalper
+### 💼 5. Forex Smart Money Concepts (SMC) FVG Scalper
 * **Pairs:** `EURUSDc`, `GBPUSDc` | **Timeframe:** M15 (Filter Tren H1)
 * **Logika Inti:**
   * Filter Tren H1 ZLEMA 100 / EMA 200
@@ -132,5 +111,21 @@
 | **Modal Kecil ($20 - $50), Ingin Cuan Rutin Cepat Tiap Hari** | **Cent Grid Harvester v3.2** | Panen 5x/hari, turnover modal sangat cepat, modal melipat 4x dalam 2 tahun. |
 | **Modal $30 - $100, Mau Profit Maksimal Tapi Takut Floating DD Besar** | **Hybrid Grid + Full Engulfing** | Profit tertinggi (+4.233 USC), drawdown terpangkas ke 51%, panen stabil 4.5x/hari. |
 | **Paling Santai, Anti-Stress, Drawdown Terendah** | **Standalone Outer Bar Engulfing** | Profit Factor 1.25, cut-loss minim (hanya 97x dalam 2 tahun), sangat jarang floating lama. |
-| **Akun Standar / PropFirm, Ingin R:R Besar 1:3 Tanpa Martingale** | **Optimal Golden Stack (bot_trending.py)** | Single-order flat risk, tidak ada averaging, profit factor 1.66 dengan rem harian 3x SL. |
+| **Akun Standar / PropFirm, Ingin Swing R:R Asimetris Bebas Martingale** | **D1 Multi-Pair Doji Sniper** / **M5 Pullback Sniper v2.0** | Single-ticket order, strictly validated drawdown, profit factor teruji tanpa kompromi margin. |
 | **Investor Jangka Menengah / Portofolio Multi-Pair** | **D1 Multi-Pair Doji Sniper** | Drawdown <12%, Sharpe ratio tinggi, tidak butuh pantau chart harian. |
+
+---
+
+## 🗄️ Lemari Arsip Bot Tidak Lolos Audit Kuantitatif (Archived / Substandard Bots)
+
+> 🔒 **Status: NON-AKTIF & DIARSIPKAN PERMANEN**
+> Berdasarkan mandat **12 Pilar quant-backtest-integrity**, seluruh bot berikut telah dicabut dari status produksi dan dipindahkan ke folder arsip [`/home/cuker/mt5_storage/mt5_config/archived_bots/`](file:///home/cuker/mt5_storage/mt5_config/archived_bots/) karena terbukti gagal dalam pengujian ulang bebas bias.
+
+| File Script Terarsip | Nama Bot / Strategi | Hasil Audit Forensik & Fakta Kegagalan |
+| :--- | :--- | :--- |
+| [`bot_trending.py`](file:///home/cuker/mt5_storage/mt5_config/archived_bots/bot_trending.py) | **M5 Golden Stack Trend Sniper** (Doji + MACD + Golden Cross) | **Distorsi Metodologi & Kegagalan Konsistensi Bulanan:**<br>1. Backtest lama melewatkan evaluasi Stop Loss pada lilin pembukaan (*Same-Bar SL Blindspot*). Uji ulang membuktikan **235–273 transaksi langsung terkena Stop Loss di lilin entri**.<br>2. Profit Factor riil terkoreksi ke **`1.24 - 1.26`** (turun ke **`1.25`** saat stress test 1.5x spread).<br>3. Konsistensi bulanan hanya **`72.2%`** (turun ke **`66.7%`** saat spread 1.5x), gagal memenuhi batas minimum SOP institusional ($\ge 75\%$ bulan hijau). |
+| [`run_trending_bot_backtest.py`](file:///home/cuker/mt5_storage/mt5_backtest/run_trending_bot_backtest.py) | **Pure FVG CE 50% Pullback Engine** | **Profit Factor Marginal & Separuh Waktu Rugi:**<br>Profit Factor riil hanya **`1.02`** (nyaris impas / *break-even*). Konsistensi bulanan hanya **9 dari 18 bulan profit (50.0%)** dengan Max Drawdown **60.7%**. |
+| [`bot_sideways.py`](file:///home/cuker/mt5_storage/mt5_config/archived_bots/bot_sideways.py) | **Asian Range Sweep / Turtle Soup** | **Drawdown Asimetris & PF Rapuh:**<br>Profit Factor hanya **`1.09`**. Sangat rentan terkena stop-out masif saat terjadi *expansion breakout* awal sesi Eropa. |
+| [`bot_crypto_trending.py`](file:///home/cuker/mt5_storage/mt5_config/archived_bots/bot_crypto_trending.py) | **Crypto Trend Sniper M5 (BTCUSD)** | **Spread Drag Berat & Whipsaw:**<br>Volatilitas mikro BTCUSD M5 memicu slippage dan spread asymmetry drag tinggi. Digantikan permanen oleh arsitektur Paroli 2-Way Crypto (`bot_reverse_martingale_crypto.py`). |
+| `bot_*_backup.py` / `bot_v*_backup.py` | **Iterasi Grid Legacy (V4.5 - V5.1, ATR, Buy-Only)** | File eksperimen historis lama sebelum standarisasi Cent Grid Harvester v3.2 dan Pullback Sniper v2.0. |
+
