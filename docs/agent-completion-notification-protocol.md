@@ -52,23 +52,22 @@ agent-notify "✅ Update Selesai" "Sinkronisasi agent-brain dan pengarsipan bot 
 
 ---
 
-## 📱 4. Direct Quick Reply & Chat Thread via iPhone (Zero-Auth)
+## 📱 4. Minimalist Quick Reply Interface via iPhone (Zero-Auth)
 
-Sistem telah diintegrasikan dengan antarmuka chat interaktif lengkap:
+Sistem telah disederhanakan murni menjadi antarmuka **Quick Reply** yang cepat, bersih, dan tanpa distraksi:
 - **Web UI Mobile:** `https://mt5-push-backend.alwiihsan50.workers.dev/reply`.
-- **Aksi Ketuk Notifikasi:** Setiap kali notifikasi selesai di-tap di iPhone, Safari/PWA langsung membuka antarmuka chat dua arah.
+- **Aksi Ketuk Notifikasi:** Setiap kali notifikasi selesai di-tap di iPhone, Safari/PWA langsung membuka antarmuka balas cepat.
 - **Tampilan Antarmuka:**
-  - Status koneksi PC (`🟢 PC Connected`).
-  - **💬 Riwayat Percakapan (Chat Box):** Menampilkan thread percakapan dua arah secara scrollable layaknya WhatsApp/iMessage (bubble biru untuk pengguna, bubble gelap dengan rendering Markdown lengkap untuk AI). Otomatis diperbarui setiap ada jawaban baru.
-  - **📂 Tombol `/resume` & Session Picker:** Tombol khusus di header dan chip pintas untuk membuka modal daftar sesi percakapan lampau. Pengguna dapat memilih sesi masa lalu mana pun dan melanjutkannya (`agy --conversation <id>`) di PC secara instan dari iPhone.
-  - Input box teks + dukungan penuh tombol mikrofon suara (*voice-to-text*) bawaan keyboard iOS.
-  - Quick action chips: `📂 /resume`, `Lanjutkan`, `Oke terima kasih`, `/usage`, `/status`.
-  - Tombol aksi: `🚀 Kirim Balasan Prompt` dengan indikator *thinking bubble* optimis.
+  - Status koneksi PC (`🟢 PC Online`).
+  - **💬 Jawaban Terakhir dari Antigravity:** Menampilkan jawaban terakhir secara ringkas dan rapi dalam format Markdown (`marked.parse()`) di dalam satu kartu terfokus. Tanpa tumpukan riwayat chat masa lalu yang membebani layar HP, sehingga pengguna langsung fokus pada pesan yang ingin dibalas.
+  - **✍️ Box Input Balasan Cepat:** Input box teks autofokus yang siap menerima ketikan cepat atau tombol dikte suara (*voice dictation*) bawaan keyboard iOS.
+  - Quick action chips minimalis: `Lanjutkan`, `Oke terima kasih`.
+  - Tombol aksi utama: `🚀 Kirim Balasan` dengan indikator progres dan umpan balik haptik.
+  - **Desain Bebas Distraksi:** Seluruh tombol berlebih (`/resume`, `/status`, `/usage`, modal picker) telah dihilangkan agar fokus 100% pada pembalasan cepat.
 - **Eksekusi ke Antigravity CLI:**
   - Teks balasan disimpan di antrean KV Cloudflare Workers.
   - Daemon lokal PC (`antigravity-reply-daemon.service` running 24/7) mengambil pesan dan menyuntikkannya langsung ke session `tmux` aktif menggunakan `tmux send-keys`.
-  - Jika pengguna meminta `/resume` sesi tertentu, daemon mengeksekusi peralihan sesi via `agy --conversation <id>` secara otomatis di PC.
-  - Antigravity langsung memproses instruksi tanpa perlu menyentuh komputer atau login ulang di HP.
+  - Antigravity langsung memproses instruksi tanpa perlu menyentuh komputer atau login Google di HP.
 
 
 
