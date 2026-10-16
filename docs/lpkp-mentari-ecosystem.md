@@ -21,7 +21,7 @@ Dokumen ini memuat arsitektur lengkap, pemetaan repositori, basis data, alur bis
 
 | Nama Proyek | Direktori Lokal | Remote GitHub | Tech Stack & DNS | Keterangan / Peran |
 | :--- | :--- | :--- | :--- | :--- |
-| **Web 1: LPKPMentariWebsite** | `/media/cuker/Data/Projects/LPKPMentariWebsite` | `lpkpmentaribussiness/LPKPMentariWebsite` (Private) | Astro 7 + TS + Vercel (DNS: Cloudflare `76.76.21.21`) | Website profil resmi (`lpkpmentari.id`), legalitas, galeri prestasi, & katalog 11 program vokasi. |
+| **Web 1: LPKPMentariWebsite** | `/media/cuker/Data/Projects/LPKPMentariWebsite` | `lpkpmentaribussiness/LPKPMentariWebsite` (Private) | Astro 7 + TS + Vercel (DNS: Cloudflare `76.76.21.21`) | Website profil resmi (`lpkpmentari.id`), legalitas, galeri prestasi, tab Pendidikan Kursus (Program 1 Tahun & Asrama), & tab Pelatihan Vokasi (11 program kejuruan). |
 | **Web 2: MentariOnlineCourse** | `/media/cuker/Data/Projects/MentariOnlineCourse` | `lpkpmentaribussiness/MentariOnlineCourse` (Private) | Next.js 16 + React 19 + Tailwind 4 + Supabase | Platform LMS daring, pemutar video, upload 6 ujian, grading instruktur, & verifikasi sertifikat digital. |
 | **CompAcc** | `/media/cuker/Data/Projects/CompAcc` | `lpkpmentaribussiness/CompAcc` (Private) | Vite + React + TypeScript + Supabase | Platform aplikasi komputer akuntansi Mentari. |
 | **MentariAcc** | `/media/cuker/Data/Projects/MentariAcc` | `lpkpmentaribussiness/MentariAcc` (Private) | Vite + React + Supabase | Aplikasi manajemen keuangan & akuntansi internal. |

@@ -37,6 +37,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Pemisahan Tab Navigasi: 'Pendidikan Kursus' (Program 1 Tahun & Asrama) dan 'Pelatihan Vokasi' (11 Kejuruan Non-1-Tahun) di LPKPMentariWebsite (Live di lpkpmentari.id)**
+
 - [ ] **Pembaruan Label Kurikulum 'Modul 01 - Modul 05' Menjadi 'Materi Kompetensi 1 - Materi Kompetensi 5' di LPKPMentariWebsite (Live di lpkpmentari.id)**
 
 - [ ] **Penautan Kartu Identitas Registrasi VIN Kemnaker (1911127401) ke Portal Resmi Skillhub di Profil Lembaga (Live di lpkpmentari.id/tentang.html)**
@@ -92,6 +94,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-16 08:47 WIB
+**Last Updated At:** 2026-10-16 09:07 WIB
 
 
