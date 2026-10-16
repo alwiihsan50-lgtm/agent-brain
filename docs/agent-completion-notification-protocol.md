@@ -49,3 +49,18 @@ agent-notify "<Judul Ringkas>" "<Penjelasan Singkat Pekerjaan Selesai>"
 ```bash
 agent-notify "✅ Update Selesai" "Sinkronisasi agent-brain dan pengarsipan bot telah rampung."
 ```
+
+---
+
+## 📱 4. Antigravity Remote Control Web UI (Tap-to-Control dari iPhone)
+
+Sistem telah diintegrasikan dengan fitur resmi **Antigravity Remote Control**:
+- **Daemon Service:** `antigravity-cli-daemon.service` (systemd user unit, status aktif).
+- **Instance Name:** `PC-Workstation`.
+- **Portal Web UI:** `https://antigravity.google.com`.
+- **Aksi Klik Notifikasi:** Setiap notifikasi Web Push kini menyertakan `url: "https://antigravity.google.com"`. Ketika USER mengetuk notifikasi di iPhone, browser / PWA langsung membuka portal Antigravity Remote Control.
+- **Kemampuan Penuh di Ponsel:**
+  - Mengetik prompt balasan langsung secara real-time.
+  - Menjalankan slash commands terminal (`/usage`, `/new`, `/model`, `/status`, `/compact`).
+  - Membuka sesi baru, mengganti workspace, dan menginspeksi diff kode serta artifacts.
+
