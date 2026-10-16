@@ -71,8 +71,18 @@ Sistem mengadopsi antarmuka **Quick Reply Terfokus** yang cepat, bersih, dan hem
   - Menyisakan lebih dari 75.000 request bebas per hari, menjamin arsitektur Cloudflare Workers tetap berjalan lancar 24/7 tanpa risiko terblokir atau over-quota.
 - **Eksekusi ke Antigravity CLI:**
   - Daemon lokal PC (`antigravity-reply-daemon.service` running 24/7) menyuntikkan instruksi langsung ke session `tmux` aktif menggunakan `tmux send-keys`.
-  - Jika pengguna meminta `/new`, daemon secara bersih menghentikan proses `agy` lama via SIGTERM, lalu mengeksekusi `agy --dangerously-skip-permissions -i '<initial_prompt>'` sehingga sesi baru langsung memproses instruksi pertama tanpa macet.
-  - Jika pengguna beralih sesi lampau, daemon mengeksekusi `agy --dangerously-skip-permissions --conversation <id>`.
+
+---
+
+## ⚡ 5. Single Notification Guarantee (Auto-Deduplication & Cooldown)
+
+Untuk menjamin kenyamanan pengguna dan mencegah notifikasi ganda pada setiap kali pergantian turn/tugas:
+- **Penyebab Duplikasi Lampau:** Pemanggilan manual `agent-notify` oleh AI Agent dan pemicuan otomatis lifecycle hook `Stop` di Antigravity (`~/.local/bin/agent-notify-hook`) berjalan bersusulan (selisih ~1-2 detik).
+- **Mekanisme Auto-Deduplication (Smart Cooldown 12s):**
+  - Utilitas `~/.local/bin/agent-notify` menyimpan timestamp pengiriman terakhir di `/tmp/agent_notify_last_sent`.
+  - Jika AI Agent telah memanggil `agent-notify` secara manual, panggilan berikutnya dari lifecycle hook (`--from-hook`) otomatis di-skip.
+  - Jika AI Agent tidak memanggil secara manual, lifecycle hook bertindak sebagai jaring pengaman (*safety net*) dengan mengekstrak baris pertama respons AI dari transcript dan mengirimkannya secara otomatis.
+- **Hasil:** Pengguna dijamin **HANYA menerima tepat 1 notifikasi** per penyelesaian tugas di smartphone.
 
 
 
