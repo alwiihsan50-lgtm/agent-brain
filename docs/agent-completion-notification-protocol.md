@@ -54,20 +54,24 @@ agent-notify "✅ Update Selesai" "Sinkronisasi agent-brain dan pengarsipan bot 
 
 ## 📱 4. Minimalist Quick Reply Interface via iPhone (Zero-Auth)
 
-Sistem telah disederhanakan murni menjadi antarmuka **Quick Reply** yang cepat, bersih, dan tanpa distraksi:
+Sistem mengadopsi antarmuka **Quick Reply Terfokus** yang cepat, bersih, dan hemat kuota:
 - **Web UI Mobile:** `https://mt5-push-backend.alwiihsan50.workers.dev/reply`.
 - **Aksi Ketuk Notifikasi:** Setiap kali notifikasi selesai di-tap di iPhone, Safari/PWA langsung membuka antarmuka balas cepat.
 - **Tampilan Antarmuka:**
   - Status koneksi PC (`🟢 PC Online`).
-  - **💬 Jawaban Terakhir dari Antigravity:** Menampilkan jawaban terakhir secara ringkas dan rapi dalam format Markdown (`marked.parse()`) di dalam satu kartu terfokus. Tanpa tumpukan riwayat chat masa lalu yang membebani layar HP, sehingga pengguna langsung fokus pada pesan yang ingin dibalas.
-  - **✍️ Box Input Balasan Cepat:** Input box teks autofokus yang siap menerima ketikan cepat atau tombol dikte suara (*voice dictation*) bawaan keyboard iOS.
-  - Quick action chips minimalis: `Lanjutkan`, `Oke terima kasih`.
-  - Tombol aksi utama: `🚀 Kirim Balasan` dengan indikator progres dan umpan balik haptik.
-  - **Desain Bebas Distraksi:** Seluruh tombol berlebih (`/resume`, `/status`, `/usage`, modal picker) telah dihilangkan agar fokus 100% pada pembalasan cepat.
+  - **✨ Tombol `/new` (Header & Chips):** Tombol cepat untuk memulai sesi percakapan bersih baru di Antigravity CLI tanpa harus login ke PC. Saat ditekan, tampilan kartu respons langsung di-reset siap menerima instruksi awal.
+  - **📂 Tombol Ganti Sesi (Header & Chips):** Membuka bottom-sheet modal berisi 10 daftar sesi percakapan terbaru dengan waktu dan jumlah pesan.
+  - **💬 Jawaban Terakhir Saja (Zero-History Distraction):** Sesuai arahan efisiensi, saat pengguna beralih sesi atau membuka pesan, sistem **HANYA menampilkan chat terakhir dari sesi tersebut** (bukan seluruh tumpukan riwayat masa lalu). Layar HP tetap 100% ringan, terfokus, dan hemat memori.
+  - **✍️ Box Input Balasan Cepat:** Input box teks autofokus siap ketik atau tombol dikte suara (*voice-to-text*) bawaan iOS.
+  - Quick action chips: `✨ /new`, `📂 Ganti Sesi`, `Lanjutkan`, `Oke terima kasih`.
+  - Tombol aksi utama: `🚀 Kirim Balasan` dengan umpan balik visual dan haptik.
+- **⚡ Efisiensi Kuota Cloudflare (100% Aman):**
+  - Menggunakan endpoint terpadu (`/api/daemon-poll`) yang memeriksa prompt baru dan permintaan ganti sesi dalam satu request atomic.
+  - Polling interval diatur ke **3,5 detik** ($86.400 / 3,5 = \sim 24.685\text{ request/hari}$), hanya memakan **~24,7% kuota harian Cloudflare Free Tier (100k request/hari)**.
+  - Menyisakan lebih dari 75.000 request bebas per hari, menjamin arsitektur Cloudflare Workers tetap berjalan lancar 24/7 tanpa risiko terblokir atau over-quota.
 - **Eksekusi ke Antigravity CLI:**
-  - Teks balasan disimpan di antrean KV Cloudflare Workers.
-  - Daemon lokal PC (`antigravity-reply-daemon.service` running 24/7) mengambil pesan dan menyuntikkannya langsung ke session `tmux` aktif menggunakan `tmux send-keys`.
-  - Antigravity langsung memproses instruksi tanpa perlu menyentuh komputer atau login Google di HP.
+  - Daemon lokal PC (`antigravity-reply-daemon.service` running 24/7) menyuntikkan instruksi langsung ke session `tmux` aktif menggunakan `tmux send-keys`.
+  - Jika pengguna meminta `/new` atau beralih sesi, daemon menjalankan `agy --dangerously-skip-permissions [--conversation <id>]` secara otomatis.
 
 
 
