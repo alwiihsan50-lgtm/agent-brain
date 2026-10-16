@@ -11,7 +11,7 @@ Dokumen ini memuat arsitektur lengkap, pemetaan repositori, basis data, alur bis
 - **Legalitas & Akreditasi:**
   - **NPSN:** `K5666768`
   - **VIN (Kemnaker):** `1911127401` ([Kemnaker Skillhub](https://skillhub.kemnaker.go.id/mitra/temukan-mitra/lpk-profesional-mentari-3e4fe682-88cd-420a-8189-42c79b624e51/program?catalogue=99b95362-da3e-4cd5-894c-a91354d25e57))
-  - **Akreditasi:** Terakreditasi B (BAN-PNF 2017)
+  - **Akreditasi:** Terakreditasi B (BAN-PNF 2017) ([BAN-PDM](https://ban-pdm.id/satuanpendidikan/K5666768))
 - **Alamat Lembaga:** Jl. Kutilang No. 5, Lingkungan 06, Kelurahan Bulian, Kecamatan Bajenis, Kota Tebing Tinggi, Sumatera Utara
 - **Kontak & CS:** `0813-7000-7002` (`https://wa.me/6281370007002`) / `lpkp.mentari@gmail.com`
 
