@@ -52,25 +52,24 @@ agent-notify "✅ Update Selesai" "Sinkronisasi agent-brain dan pengarsipan bot 
 
 ---
 
-## 📱 4. Minimalist Quick Reply Interface via iPhone (Zero-Auth)
+## 📱 4. Direct Tunnel Webhook & Quick Reply Interface (0% Quota Waste, Zero-Auth)
 
-Sistem mengadopsi antarmuka **Quick Reply Terfokus** yang cepat, bersih, dan hemat kuota:
-- **Web UI Mobile:** `https://mt5-push-backend.alwiihsan50.workers.dev/reply`.
-- **Aksi Ketuk Notifikasi:** Setiap kali notifikasi selesai di-tap di iPhone, Safari/PWA langsung membuka antarmuka balas cepat.
-- **Tampilan Antarmuka:**
-  - Status koneksi PC (`🟢 PC Online`).
-  - **✨ Tombol `/new` (Popup Box Prompt Pertama & Auto-Switch):** Saat ditekan, muncul pop-up dialog yang meminta pengguna mengisikan instruksi atau prompt pertama untuk sesi baru. Begitu tombol 'Mulai & Buka Sesi' diklik, antarmuka web langsung otomatis beralih ke sesi baru tersebut dengan status tunggu respons awal, sementara PC Workstation langsung mengeksekusi `agy --dangerously-skip-permissions -i '<prompt>'`.
-  - **📂 Tombol Ganti Sesi (Header & Chips):** Membuka bottom-sheet modal berisi 10 daftar sesi percakapan terbaru dengan waktu dan jumlah pesan.
-  - **💬 Jawaban Terakhir Saja (Zero-History Distraction):** Sesuai arahan efisiensi, saat pengguna beralih sesi atau membuka pesan, sistem **HANYA menampilkan chat terakhir dari sesi tersebut** (bukan seluruh tumpukan riwayat masa lalu). Layar HP tetap 100% ringan, terfokus, dan hemat memori.
-  - **✍️ Box Input Balasan Cepat:** Input box teks autofokus siap ketik atau tombol dikte suara (*voice-to-text*) bawaan iOS.
-  - Quick action chips: `✨ /new`, `📂 Ganti Sesi`, `Lanjutkan`, `Oke terima kasih`.
-  - Tombol aksi utama: `🚀 Kirim Balasan` dengan umpan balik visual dan haptik.
-- **⚡ Efisiensi Kuota Cloudflare (100% Aman):**
-  - Menggunakan endpoint terpadu (`/api/daemon-poll`) yang memeriksa prompt baru dan permintaan ganti sesi dalam satu request atomic.
-  - Polling interval diatur ke **3,5 detik** ($86.400 / 3,5 = \sim 24.685\text{ request/hari}$), hanya memakan **~24,7% kuota harian Cloudflare Free Tier (100k request/hari)**.
-  - Menyisakan lebih dari 75.000 request bebas per hari, menjamin arsitektur Cloudflare Workers tetap berjalan lancar 24/7 tanpa risiko terblokir atau over-quota.
+Sistem mengadopsi arsitektur **Direct Webhook via Cloudflare Tunnel** yang mengeliminasi 100% beban polling Cloudflare:
+- **Web UI & Direct Webhook:** `https://reply.abbas.my.id` (Port lokal `40508` via Cloudflare Tunnel `cuker-apps`).
+- **Aksi Ketuk Notifikasi:** Notifikasi push iPhone langsung membuka `https://reply.abbas.my.id` secara instan tanpa login (Zero-Auth) dengan edge SSL Cloudflare otomatis.
+- **Tampilan Antarmuka (Minimalist Quick Reply):**
+  - Status koneksi PC (`🟢 PC Direct Tunnel (0% Quota)`).
+  - **💬 Jawaban Terakhir Saja:** Mengambil langsung jawaban terakhir dari `transcript.jsonl` lokal PC secara SSR (Server-Side Rendered), bebas riwayat chat panjang masa lalu yang membebani layar.
+  - **✍️ Box Input Balasan Cepat:** Input box autofokus siap menerima teks atau mikrofon dikte suara (*voice dictation*) bawaan iOS.
+  - Quick action chips minimalis: `Lanjutkan`, `Oke terima kasih`.
+  - Tombol aksi utama: `🚀 Kirim Balasan` dengan indikator progres dan getaran haptik.
+- **⚡ Efisiensi Kuota Cloudflare (100% Zero-Quota Polling):**
+  - **Zero Polling Loop:** PC Daemon tidak lagi melakukan polling ke Cloudflare Worker setiap 3,5 detik.
+  - **Zero KV Reads:** Pemborosan 49.370 KV Reads/hari dari loop polling dieliminasi **100% (turun menjadi 0)**.
+  - Cloudflare Worker murni hanya bertindak sebagai push gateway notifikasi ke Apple APNs saat tugas selesai (~10-20 request/hari = <0,02% kuota harian).
 - **Eksekusi ke Antigravity CLI:**
-  - Daemon lokal PC (`antigravity-reply-daemon.service` running 24/7) menyuntikkan instruksi langsung ke session `tmux` aktif menggunakan `tmux send-keys`.
+  - Server daemon lokal PC (`agent-reply-daemon` pada port `40508`) menerima POST dari browser HP via Cloudflare Tunnel secara instan (<50ms).
+  - Teks disuntikkan langsung ke sesi `tmux` aktif menggunakan `tmux send-keys` tanpa delay antrean.
 
 ---
 

@@ -17,6 +17,7 @@
 ## 2. Port Sistem Terpesan Lokal (Local Reserved Ports)
 > [!IMPORTANT]
 > - **PORT 40506**: Dipesan untuk **TailShare** (`/home/cuker/tailshare`).
+> - **PORT 40508**: Dipesan untuk **Antigravity Direct Webhook & Quick Reply** (`reply.abbas.my.id`).
 > - **PORT 3000 / 3001**: Dipesan untuk **MetaTrader 5 Web GUI VNC** (`exness-mt5` container).
 > - **PORT 8080**: Dipesan untuk **STB RockChip Web Remote Hub** (`erza` node).
 > - **PORT 6801**: Dipesan untuk **PC Torrent Aria2 RPC** (`pc-torrent`, lokasi unduhan: `/media/cuker/Data/Downloads/`).
@@ -33,8 +34,9 @@ Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.servi
 
 | Layanan / Aplikasi | Target Port Lokal | Subdomain Publik (HTTPS) | Status |
 | :--- | :---: | :--- | :---: |
-| 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `https://localhost:3001` *(mentari-server)* | **`https://mt5.abbas.my.id`** *(alias: `vnc`)* | ⚪ **Offline (mentari-server tidak aktif)** |
+| ⚡ **Antigravity Direct Quick Reply** | `http://localhost:40508` *(PC Workstation)* | **`https://reply.abbas.my.id`** | 🟢 **Live (HTTP 200, Zero-Auth)** |
 | 📁 **TailShare Web UI** | `http://localhost:40506` *(Windows Workstation / Linux)* | **`https://share.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
+| 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `https://localhost:3001` *(mentari-server)* | **`https://mt5.abbas.my.id`** *(alias: `vnc`)* | ⚪ **Offline (mentari-server tidak aktif)** |
 
 ### Konfigurasi Cloudflare Tunnel:
 * **Tunnel mentari-server:** `mentari-tunnel` (`6cd14b2e-12e7-44f2-b138-d8c1684690a6`) *(Status: Offline/Tidak Dijalankan, CasaOS telah didekomisi)*.
