@@ -59,7 +59,7 @@ Sistem mengadopsi antarmuka **Quick Reply Terfokus** yang cepat, bersih, dan hem
 - **Aksi Ketuk Notifikasi:** Setiap kali notifikasi selesai di-tap di iPhone, Safari/PWA langsung membuka antarmuka balas cepat.
 - **Tampilan Antarmuka:**
   - Status koneksi PC (`🟢 PC Online`).
-  - **✨ Tombol `/new` (Header & Chips):** Tombol cepat untuk memulai sesi percakapan bersih baru di Antigravity CLI tanpa harus login ke PC. Saat ditekan, tampilan kartu respons langsung di-reset siap menerima instruksi awal.
+  - **✨ Tombol `/new` (Popup Box Prompt Pertama & Auto-Switch):** Saat ditekan, muncul pop-up dialog yang meminta pengguna mengisikan instruksi atau prompt pertama untuk sesi baru. Begitu tombol 'Mulai & Buka Sesi' diklik, antarmuka web langsung otomatis beralih ke sesi baru tersebut dengan status tunggu respons awal, sementara PC Workstation langsung mengeksekusi `agy --dangerously-skip-permissions -i '<prompt>'`.
   - **📂 Tombol Ganti Sesi (Header & Chips):** Membuka bottom-sheet modal berisi 10 daftar sesi percakapan terbaru dengan waktu dan jumlah pesan.
   - **💬 Jawaban Terakhir Saja (Zero-History Distraction):** Sesuai arahan efisiensi, saat pengguna beralih sesi atau membuka pesan, sistem **HANYA menampilkan chat terakhir dari sesi tersebut** (bukan seluruh tumpukan riwayat masa lalu). Layar HP tetap 100% ringan, terfokus, dan hemat memori.
   - **✍️ Box Input Balasan Cepat:** Input box teks autofokus siap ketik atau tombol dikte suara (*voice-to-text*) bawaan iOS.
@@ -71,7 +71,8 @@ Sistem mengadopsi antarmuka **Quick Reply Terfokus** yang cepat, bersih, dan hem
   - Menyisakan lebih dari 75.000 request bebas per hari, menjamin arsitektur Cloudflare Workers tetap berjalan lancar 24/7 tanpa risiko terblokir atau over-quota.
 - **Eksekusi ke Antigravity CLI:**
   - Daemon lokal PC (`antigravity-reply-daemon.service` running 24/7) menyuntikkan instruksi langsung ke session `tmux` aktif menggunakan `tmux send-keys`.
-  - Jika pengguna meminta `/new` atau beralih sesi, daemon menjalankan `agy --dangerously-skip-permissions [--conversation <id>]` secara otomatis.
+  - Jika pengguna meminta `/new`, daemon secara bersih menghentikan proses `agy` lama via SIGTERM, lalu mengeksekusi `agy --dangerously-skip-permissions -i '<initial_prompt>'` sehingga sesi baru langsung memproses instruksi pertama tanpa macet.
+  - Jika pengguna beralih sesi lampau, daemon mengeksekusi `agy --dangerously-skip-permissions --conversation <id>`.
 
 
 
