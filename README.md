@@ -34,13 +34,14 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **AGY OpenAI Bridge** | `Port 5050` / `localhost:5050` | 🟢 Running | Local OpenAI-Compatible Bridge bertenaga `agy -p` (16 models: Gemini 3.8 Flash, Claude Sonnet 4.6, Opus, GPT-OSS) + integrasi 9Router prefix `agy/`. |
 | **Torrent PC Suite** | `Port 6801` (RPC) & `6888` (Web UI) | 🟢 Live | Sentralisasi torrent eksklusif PC (`cari-film` / `pc-torrent` / Web App). Akses via Tailscale. |
 | **MT5 MCP Server** | `mcp-mt5` / `mcp_config.json` | 🟢 Terpasang | Integrasi native MetaTrader 5 dengan Antigravity AI (`agy`): cek akun, posisi, analisa SMC M5, dan emergency close. |
+| **Vibe-Trading AI Workspace** | `Port 8899` / `localhost:8899` | 🟢 Live (Systemd) | Quantitative financial research & multi-agent trading workspace (HKUDS): 306 QuantLib math functions, 478 Alpha Zoo, 29 data loaders, React 19 UI, terintegrasi AGY Bridge Port 5050. |
 
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [x] **Instalasi Penuh Vibe-Trading AI Workspace (React 19 + FastAPI di Port 8899, Systemd User Service, & AGY OpenAI Bridge Integration)**
 - [x] **Penyederhanaan Antarmuka Quick Reply Terfokus (Hanya Chat Terakhir, Bebas Distraksi) & Single Notification Guarantee (Auto-Deduplication 12s Cooldown)**
-- [x] **Pembaruan Label Kurikulum 'Materi Kompetensi 1 - Materi Kompetensi 5' & Pemisahan Tab Vokasi di LPKPMentariWebsite (Live di lpkpmentari.id)**
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -59,6 +60,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-17 05:40 WIB
+**Last Updated At:** 2026-10-17 07:30 WIB
 
 

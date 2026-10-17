@@ -6,6 +6,7 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 17 Oktober 2026
 
+- [x] **Pembaruan Label Kurikulum 'Materi Kompetensi 1 - Materi Kompetensi 5' & Pemisahan Tab Vokasi di LPKPMentariWebsite (Live di lpkpmentari.id)**
 - [x] **Penyederhanaan Antarmuka Quick Reply Terfokus (Hanya Chat Terakhir, Bebas Distraksi) & Single Notification Guarantee (Auto-Deduplication 12s Cooldown)**
 - [x] **Penautan Kartu & Status Akreditasi BAN-PNF ke Portal Resmi BAN-PDM di Profil & Beranda (Live di lpkpmentari.id)**
 - [x] **Pemisahan Tab Navigasi: 'Pendidikan Kursus' (Program 1 Tahun & Asrama) dan 'Pelatihan Vokasi' (11 Kejuruan Non-1-Tahun) di LPKPMentariWebsite (Live di lpkpmentari.id)**
