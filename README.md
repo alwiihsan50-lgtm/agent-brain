@@ -35,11 +35,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Torrent PC Suite** | `Port 6801` (RPC) & `6888` (Web UI) | 🟢 Live | Sentralisasi torrent eksklusif PC (`cari-film` / `pc-torrent` / Web App). Akses via Tailscale. |
 | **MT5 MCP Server** | `mcp-mt5` / `mcp_config.json` | 🟢 Terpasang | Integrasi native MetaTrader 5 dengan Antigravity AI (`agy`): cek akun, posisi, analisa SMC M5, dan emergency close. |
 | **Vibe-Trading AI Workspace** | `Port 8899` / `localhost:8899` | 🟢 Live (Systemd) | Quantitative financial research & multi-agent trading workspace (HKUDS): 306 QuantLib math functions, 478 Alpha Zoo, 29 data loaders, React 19 UI, terintegrasi AGY Bridge Port 5050. |
+| **Cloudflare Web Terminal (`ttyd`)** | `Port 7681` / `ssh.abbas.my.id` | 🟢 Live (Tunnel) | Web Terminal Xterm.js 24/7 via Cloudflare Tunnel (`ttyd.service` PAM `/bin/login`, tanpa Tailscale) + perbaikan permission `~/.ssh/authorized_keys` (`0600`) untuk SSH LAN langsung. |
 
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Setup Web Terminal (`https://ssh.abbas.my.id` via `ttyd` Port `7681` + Cloudflare Tunnel `cuker-apps`) & Perbaikan Permission OpenSSH Lokal (`~/.ssh/authorized_keys` `0600`) untuk Akses SSH Tanpa Tailscale**
 - [x] **Audit Forensik 12-Pilar Zero-Bias Seluruh Kandidat Bot MT5, Pencatatan Bot Unprofitable (`bot_grid_cent.py` PF 1.06, `bot_pullback_sniper.py` PF 0.86-0.90) vs Profitable, & Deployment Dual Sniper Mode Moderat (`bot_trending.py` Magic `889911` + `bot_daily_doji.py` Magic `889933`) di Akun 1 (`443003218`)**
 - [x] **Instalasi Penuh Vibe-Trading AI Workspace (React 19 + FastAPI di Port 8899, Systemd User Service, & AGY OpenAI Bridge Integration)**
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
@@ -60,6 +62,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-17 21:21 WIB
+**Last Updated At:** 2026-10-17 21:56 WIB
 
 
