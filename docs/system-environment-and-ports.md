@@ -35,7 +35,7 @@ Remote access publik utama dikelola oleh **Cloudflare Tunnel (`cloudflared.servi
 | Layanan / Aplikasi | Target Port Lokal | Subdomain Publik (HTTPS) | Status |
 | :--- | :---: | :--- | :---: |
 | ⚡ **Antigravity Direct Quick Reply** | `http://localhost:40508` *(PC Workstation)* | **`https://reply.abbas.my.id`** | 🟢 **Live (HTTP 200, Zero-Auth)** |
-| 💻 **Web Terminal (`ttyd` PAM Login)** | `http://localhost:7681` *(PC Workstation)* | **`https://ssh.abbas.my.id`** | 🟢 **Live (HTTP 200 / WSS, Linux PAM Auth)** |
+| 💻 **Termix Web SSH & SFTP Hub** | `http://localhost:7681` *(Docker `termix`)* | **`https://ssh.abbas.my.id`** | 🟢 **Live (HTTP 200, Termix 34 Plugins)** |
 | 📁 **TailShare Web UI** | `http://localhost:40506` *(Windows Workstation / Linux)* | **`https://share.abbas.my.id`** | 🟢 **Live (HTTP 200)** |
 | 🖥️ **MetaTrader 5 Desktop GUI (VNC)** | `https://localhost:3001` *(mentari-server)* | **`https://mt5.abbas.my.id`** *(alias: `vnc`)* | ⚪ **Offline (mentari-server tidak aktif)** |
 

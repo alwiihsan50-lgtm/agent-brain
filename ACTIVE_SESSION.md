@@ -4,10 +4,10 @@
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
 - **Status:** IN_PROGRESS
-- **Active Project:** Cloudflare Web Terminal (ssh.abbas.my.id)
-- **Current Task:** Setup ttyd Web Terminal + Cloudflare Tunnel + Zero Trust OTP Protection
+- **Active Project:** Termix Self-Hosted Web SSH (ssh.abbas.my.id)
+- **Current Task:** Deploy Termix container on port 7681 replacing ttyd
 - **Modified Files:** -
 - **Verification Command / URL:** -
 - **Next Steps / Notes:** -
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-10-17 21:45 WIB
+- **Last Updated At:** 2026-10-17 22:03 WIB
