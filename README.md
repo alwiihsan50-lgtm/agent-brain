@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `263301611`: **M5 Pullback Sniper v1.0 Live** (`bot_pullback_sniper.py`, Magic `881100`, XAUUSDc, Sesi 06:00-23:00 WIB). Setup Momentum M5 Range $\ge \$3.50$ (Toleransi Ekor Close 8.0%) + Order Limit Diskon 33.3% (Expiry 3 Bar / 15 Mnt) + Split-Ticket Twin Orders (Hard TP1 70% di halfway + Hard TP2 30% di puncak + True Structural SL pangkal lilin). Sizing: **Pure Geometric Compounding 2.0% Risk of Balance Per Trade (Max 3 Posisi, Capped by Broker Max 200L)** + **Filter Berita Dinamis ForexFactory Red Folder USD**. **Saldo: 2.676,54 USC**. **Acc 2 (Port 3006):** IDR `463880423`: **3 Bot Running Paralel**: 1) **M5 Dual-Engine Reversal Marubozu & Pullback Sniper v2.0** (`bot.py`, Magic `889911`, Engine 1 Market Order Marubozu 1.2x TP + EMA 50, Engine 2 Pullback 50% Limit, XAUUSDm). 2) **Dual-Track Harvester v1.0** (`bot_dual_track.py`, Magic `992200` & `992201`, 19x wins). 3) **Reverse Martingale Paroli 2-Way Crypto v1.2** (`bot_reverse_martingale_crypto.py`, Magic `667788`, BTCUSDm, Tangga [0.01, 0.02, 0.03], Target $25 USD, Spread-Compensated TP, Atomic Sync Close). Saldo bersih: Rp 74,10+ Juta IDR. |
+| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `443003218` (`Exness-MT5Real44`, Saldo `27.926.772 IDC` / `Rp 279.268 IDR` / `~1.700 USC`): **Dual Zero-Bias Sniper Engine (Risk Moderat)**: 1) **M5 Doji Breakout + H1 ZLEMA 50/200 + MACD + SMC v5.1** (`bot_trending.py`, Magic `889911`, `XAUUSDc`, Flat `0.02 Lot`, Stationary `D1 ATR >= 0.90%`, `H1 ADX 22-50`, R:R `1:3.0`, Terbukti Profitable 25-Bulan Zero-Bias: `PF 1.24`, `20/25` Bulan Hijau `80%`, Max DD `23.3%`). 2) **D1 Swing Doji 2-Bar Reversal** (`bot_daily_doji.py`, Magic `889933`, `XAUUSDc + USDJPYc`, `0.01-0.02 Lot`, Target Risk `Rp 8.500`, Terbukti Profitable 6,5-Tahun Zero-Bias: `PF 1.22-1.28`). *(Bot Unprofitable diarsipkan ke `archived_bots/`: `bot_grid_cent.py` PF 1.06/DD>100%, `bot_pullback_sniper.py` PF 0.86-0.90 rugi akibat Same-Bar TP Fallacy, `bot.py` MC)*. **Acc 2 (Port 3006):** IDR `463880423`: **3 Bot Running Paralel** (`bot.py`, `bot_dual_track.py`, `bot_reverse_martingale_crypto.py`). Saldo bersih: Rp 74,10+ Juta IDR. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -40,8 +40,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [x] **Audit Forensik 12-Pilar Zero-Bias Seluruh Kandidat Bot MT5, Pencatatan Bot Unprofitable (`bot_grid_cent.py` PF 1.06, `bot_pullback_sniper.py` PF 0.86-0.90) vs Profitable, & Deployment Dual Sniper Mode Moderat (`bot_trending.py` Magic `889911` + `bot_daily_doji.py` Magic `889933`) di Akun 1 (`443003218`)**
 - [x] **Instalasi Penuh Vibe-Trading AI Workspace (React 19 + FastAPI di Port 8899, Systemd User Service, & AGY OpenAI Bridge Integration)**
-- [x] **Penyederhanaan Antarmuka Quick Reply Terfokus (Hanya Chat Terakhir, Bebas Distraksi) & Single Notification Guarantee (Auto-Deduplication 12s Cooldown)**
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -50,7 +50,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - 📝 [**Active Session Scratchpad**](ACTIVE_SESSION.md) — Jembatan memori real-time antar agent saat pengerjaan tugas aktif.
 - 📑 [**Indeks Master Dokumentasi Terpusat (`docs/README.md`)**](docs/README.md) — Katalog terstruktur seluruh 34 dokumen sistem lintas kategori:
-  - 📈 [**Trading Kuantitatif & Algoritmik MT5**](docs/README.md#-1-trading-kuantitatif--algoritmik-mt5) (8 Dokumen: Cent Grid v3.2, Paroli 2-Way, Triad, 12 Pilar Anti-Bias, Hall of Fame)
+  - 📈 [**Trading Kuantitatif & Algoritmik MT5**](docs/README.md#-1-trading-kuantitatif--algoritmik-mt5) (8 Dokumen: Katalog Audit Bot Profitable vs Unprofitable, Paroli 2-Way, Triad, 12 Pilar Anti-Bias)
   - 🌐 [**Infrastruktur, Server & Jaringan Remote**](docs/README.md#-2-infrastruktur-server--jaringan-remote) (9 Dokumen: Ports, STB Remote, Web Push, Zero Trust, TailShare, Torrent)
   - ⚡ [**AI Tooling, Context Efficiency & Workflow**](docs/README.md#-3-ai-tooling-context-efficiency--developer-workflow) (9 Dokumen: `web2md`, `tokcut`, Graphify Hook, 9Router, Headroom, AGY Bridge)
   - 🏢 [**Ekosistem Platform Web Lembaga & Database**](docs/README.md#-4-ekosistem-platform-web-lembaga--database) (4 Dokumen: LPKP Mentari, Arsip-IMO, Supabase Keepalive)
@@ -60,6 +60,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-17 07:30 WIB
+**Last Updated At:** 2026-10-17 21:21 WIB
 
 
