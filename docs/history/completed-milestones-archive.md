@@ -4,6 +4,10 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 18 Oktober 2026
+
+- [x] **Riset Sweep R:R `1:1.0` s/d `1:2.0` (12-Pilar Zero-Bias), Penghentian `bot_daily_doji.py` (`889933`, PF 2024–2026 `0.97`), & Upgrade Live `bot_trending.py` v6.1 Dual-Pair Optimized (`XAUUSDc` `0.01 Lot` `R:R 1:2.0` + `M5 ZLEMA 50` PF `1.38` + `USTECc` `0.20 Lot` `R:R 1:1.75` PF `1.42` -> Combined PF `1.40`, `24/26` Bulan Hijau `92.3%`, Sharpe `3.91`) di Akun 1 (`443003218`)**
+
 ## 📅 Selesai Per 17 Oktober 2026
 
 - [x] **Audit Forensik 12-Pilar Zero-Bias Seluruh Kandidat Bot MT5, Pencatatan Bot Unprofitable (`bot_grid_cent.py` PF 1.06, `bot_pullback_sniper.py` PF 0.86-0.90) vs Profitable, & Deployment Dual Sniper Mode Moderat (`bot_trending.py` Magic `889911` + `bot_daily_doji.py` Magic `889933`) di Akun 1 (`443003218`)**

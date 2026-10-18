@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `443003218` (`Exness-MT5Real44`, Saldo `27.926.772 IDC` / `Rp 279.268 IDR` / `~1.700 USC`): **Dual Zero-Bias Sniper Engine (Risk Moderat)**: 1) **M5 Doji Breakout + H1 ZLEMA 50/200 + MACD + SMC v5.1** (`bot_trending.py`, Magic `889911`, `XAUUSDc`, Flat `0.02 Lot`, Stationary `D1 ATR >= 0.90%`, `H1 ADX 22-50`, R:R `1:3.0`, Terbukti Profitable 25-Bulan Zero-Bias: `PF 1.24`, `20/25` Bulan Hijau `80%`, Max DD `23.3%`). 2) **D1 Swing Doji 2-Bar Reversal** (`bot_daily_doji.py`, Magic `889933`, `XAUUSDc + USDJPYc`, `0.01-0.02 Lot`, Target Risk `Rp 8.500`, Terbukti Profitable 6,5-Tahun Zero-Bias: `PF 1.22-1.28`). *(Bot Unprofitable diarsipkan ke `archived_bots/`: `bot_grid_cent.py` PF 1.06/DD>100%, `bot_pullback_sniper.py` PF 0.86-0.90 rugi akibat Same-Bar TP Fallacy, `bot.py` MC)*. **Acc 2 (Port 3006):** IDR `463880423`: **3 Bot Running Paralel** (`bot.py`, `bot_dual_track.py`, `bot_reverse_martingale_crypto.py`). Saldo bersih: Rp 74,10+ Juta IDR. |
+| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `443003218` (`Exness-MT5Real44`, Saldo `27.926.772 IDC` / `Rp 279.268 IDR` / `~1.700 USC`): **M5 Dual-Pair Sniper v6.1 (Stationary Hybrid-ATR + M5 ZLEMA 50 Champion)**: `bot_trending.py` (Magic `889911`: `XAUUSDc` `0.01 Lot` `R:R 1:2.0` + `M5 ZLEMA 50` PF `1.38` WR `39.9%` + `USTECc` `0.20 Lot` `R:R 1:1.75` + `M5 ZLEMA/EMA` PF `1.42` WR `46.2%` -> **Combined PF `1.40` (IS `1.40`, OOS `1.40`), `24/26` Bulan Hijau (`92.3%`), Sharpe `3.91`, Sortino `11.40`, Max DD `11.0%`**). *(Seluruh bot tidak profitable pada rezim 2024–2026 termasuk `bot_daily_doji.py` PF `0.97` diarsipkan ke `archived_bots/`)*. **Acc 2 (Port 3006):** IDR `463880423`: **3 Bot Running Paralel** (`bot.py`, `bot_dual_track.py`, `bot_reverse_martingale_crypto.py`). Saldo bersih: Rp 74,10+ Juta IDR. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -40,8 +40,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [x] **Riset Sweep R:R `1:1.0` s/d `1:2.0` (12-Pilar Zero-Bias), Penghentian `bot_daily_doji.py` (`889933`, PF 2024–2026 `0.97`), & Upgrade Live `bot_trending.py` v6.1 Dual-Pair Optimized (`XAUUSDc` `0.01 Lot` `R:R 1:2.0` + `M5 ZLEMA 50` PF `1.38` + `USTECc` `0.20 Lot` `R:R 1:1.75` PF `1.42` -> Combined PF `1.40`, `24/26` Bulan Hijau `92.3%`, Sharpe `3.91`) di Akun 1 (`443003218`)**
 - [x] **Audit Forensik 12-Pilar Zero-Bias Seluruh Kandidat Bot MT5, Pencatatan Bot Unprofitable (`bot_grid_cent.py` PF 1.06, `bot_pullback_sniper.py` PF 0.86-0.90) vs Profitable, & Deployment Dual Sniper Mode Moderat (`bot_trending.py` Magic `889911` + `bot_daily_doji.py` Magic `889933`) di Akun 1 (`443003218`)**
-- [x] **Instalasi Penuh Vibe-Trading AI Workspace (React 19 + FastAPI di Port 8899, Systemd User Service, & AGY OpenAI Bridge Integration)**
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -60,6 +60,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-18 08:52 WIB
+**Last Updated At:** 2026-10-18 10:09 WIB
 
 
