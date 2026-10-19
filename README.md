@@ -14,7 +14,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | Layanan / Komponen | Port / Endpoint | Status | Deskripsi |
 | :--- | :--- | :--- | :--- |
 | **STB Web Remote Hub** | `Port 8080` / `100.122.66.85:8080` | 🟢 Live | Streamlined 3-Tab Hub: Remote, Apps (Official YouTube TV, TV Bro, Tailscale), Settings, Ad & Adult Filter 167k+ domains, HDMI 1080p. |
-| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `443003218` (`Exness-MT5Real44`, Saldo `27.926.772 IDC` / `Rp 279.268 IDR`): **M5 Dual-Pair Sniper v6.2 (Native IDC 2% Flat Risk + HWM 10% Drawdown Ratchet)**: `bot_trending.py` (Magic `889911`: `XAUUSDc` `R:R 1:2.0` + `M5 ZLEMA 50` PF `1.38` + `USTECc` `R:R 1:1.75` + `M5 ZLEMA/EMA` PF `1.42` -> **Risk 2.0%/Trade (`558.535 IDC` / `Rp 5.585`) + HWM 10% DD Ratchet (Lot tidak dikecilkan bila DD `<10%`, step `-10%` tiap 10% DD, Growth 26bln `+42.049%` / `Rp 117,71 Juta`)**). **Acc 2 (Port 3006):** IDR `463880423`: **3 Bot Running Paralel** (`bot.py`, `bot_dual_track.py`, `bot_reverse_martingale_crypto.py`). Saldo bersih: Rp 74,10+ Juta IDR. |
+| **MT5 Dual Container & Autonomous Sentinel** | `Port 3000` (Acc 1) / `Port 3006` (Acc 2) | 🟢 Acc 1 & 2 Live | **Acc 1 (Port 3000):** Cent `443003218` (`Exness-MT5Real44`, Saldo `27.926.772 IDC` / `Rp 279.268 IDR`): **M5 Dual-Pair Sniper v6.2 (Native IDC 2% Flat Risk + HWM 10% Drawdown Ratchet)**: `bot_trending.py` (Magic `889911`: `XAUUSDc` `R:R 1:2.0` PF `1.23` + `USTECc` `R:R 1:1.75` PF `1.24` -> **Combined PF riil `1.24` (12/17 Bulan Hijau - 70.6%), Risk 2.0%/Trade (`558.535 IDC` / `Rp 5.585`) + HWM 10% DD Ratchet, Max DD historis `~46.2%`**). **Acc 2 (Port 3006):** IDR `463880423`: **3 Bot Running Paralel** (`bot.py`, `bot_dual_track.py`, `bot_reverse_martingale_crypto.py`). Saldo bersih: Rp 74,10+ Juta IDR. |
 | **Web Push Hub** | `mt5-push-backend.alwiihsan50.workers.dev` | 🟢 Live | Hub notifikasi push universal 24/7 (Cloudflare Workers + KV). |
 | **Cloudflare Manager & DNS** | `abbas.my.id` & `lpkpmentari.id` | 🟢 Full Access | Manajemen DNS terpusat 2 zona aktif (`abbas.my.id` & `lpkpmentari.id` Vercel/Hostinger), Zero Trust OTP `alwiihsan50@gmail.com`. |
 | **TailShare (original)** | `Port 40506` / `share.abbas.my.id` | 🟢 Running | Multi-network high speed transfer (Wi-Fi Direct `192.168.100.67`, LAN Gigabit `192.168.10.239`, Tailscale, & Cloudflare) + Live sync Drive D (`/media/cuker/Data/tailshare`). |
@@ -40,8 +40,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Penyusunan Modul Pembelajaran Lengkap Klaster 1 (Dasar Komputer & Sistem Operasi) Format PDF di TailShare**
+
+- [x] **Penautan elemen Lokasi (Tebing Tinggi) pada Beranda LPKPMentariWebsite ke Google Maps resmi**
+
+- [ ] **Review Audit Paritas Live bot_trending.py v6.2 (PF riil 1.24 vs klaim 1.40, bias re-entry Open-bar di engine lama, DD 2% HWM ~46%) & putuskan penurunan risiko 2%→1% di Akun 1 (443003218)**
+
 - [x] **Upgrade Live `bot_trending.py` v6.2 dengan Skema *Flat Risk 2.0% + High-Water Mark (HWM) 10% Drawdown Ratchet* Murni Satuan `IDC` (`558.535 IDC` / `Rp 5.585` per trade pada HWM `27.926.772 IDC`, Lot tidak dikecilkan bila DD `< 10%`, penyesuaian `-10%` tiap 10% DD, Dynamic Margin Guard tanpa cap statis `0.50 Lot`, & Audit Zero-Bias UTC) di Akun 1 (`443003218`)**
-- [x] **Riset Sweep R:R `1:1.0` s/d `1:2.0` (12-Pilar Zero-Bias), Penghentian `bot_daily_doji.py` (`889933`, PF 2024–2026 `0.97`), & Upgrade Live `bot_trending.py` v6.1 Dual-Pair Optimized (`XAUUSDc` `0.01 Lot` `R:R 1:2.0` + `M5 ZLEMA 50` PF `1.38` + `USTECc` `0.20 Lot` `R:R 1:1.75` PF `1.42` -> Combined PF `1.40`, `24/26` Bulan Hijau `92.3%`, Sharpe `3.91`) di Akun 1 (`443003218`)**
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -60,6 +65,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-18 11:07 WIB
+**Last Updated At:** 2026-10-19 20:00 WIB
 
 

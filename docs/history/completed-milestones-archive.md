@@ -4,6 +4,10 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 19 Oktober 2026
+
+- [x] **Riset Sweep R:R `1:1.0` s/d `1:2.0` (12-Pilar Zero-Bias), Penghentian `bot_daily_doji.py` (`889933`, PF 2024–2026 `0.97`), & Upgrade Live `bot_trending.py` v6.1 Dual-Pair Optimized (`XAUUSDc` `0.01 Lot` `R:R 1:2.0` + `M5 ZLEMA 50` PF `1.38` + `USTECc` `0.20 Lot` `R:R 1:1.75` PF `1.42` -> Combined PF `1.40`, `24/26` Bulan Hijau `92.3%`, Sharpe `3.91`) di Akun 1 (`443003218`)**
+
 ## 📅 Selesai Per 18 Oktober 2026
 
 - [x] **Upgrade Live `bot_trending.py` v6.2 dengan Skema *Flat Risk 2.0% + High-Water Mark (HWM) 10% Drawdown Ratchet* Murni Satuan `IDC` (`558.535 IDC` / `Rp 5.585` per trade pada HWM `27.926.772 IDC`, Lot tidak dikecilkan bila DD `< 10%`, penyesuaian `-10%` tiap 10% DD, Dynamic Margin Guard tanpa cap statis `0.50 Lot`, & Audit Zero-Bias UTC) di Akun 1 (`443003218`)**
