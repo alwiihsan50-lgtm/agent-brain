@@ -147,3 +147,21 @@ Tersedia skrip daemon `boot-ready-notify.py` di `~/.local/bin/` yang dijalankan 
 - **Info Payload:** Waktu boot (`systemd-analyze`), penggunaan RAM, IP LAN & Tailscale, serta status container Docker (MT5 Bot/Dashboard).
 - **Service Status:** `systemctl --user status boot-ready-notify.service`.
 
+---
+
+## 🚨 6. Monitoring Heartbeat & Deteksi PC Mati / Offline (Dead Man's Switch)
+Untuk mendeteksi jika PC mati mendadak (mati lampu / crash) atau koneksi internet rumah padam:
+- **Mekanisme:** Dead Man's Switch via Healthchecks.io. PC mengirim detak jantung (*heartbeat*) setiap 1 menit via crontab:
+  ```cron
+  * * * * * /usr/bin/curl -fsS -m 10 --retry 3 https://hc-ping.com/d9eeb62e-e06f-451b-a182-7435bc2a1af6 > /dev/null 2>&1
+  ```
+- **Integrasi Cloudflare Webhook (Mendukung URL Query & Custom JSON):**
+  - Jika ping terhenti selama > 4 menit (Period 2m + Grace 2m), server Healthchecks.io otomatis memanggil webhook:
+    - **URL when DOWN:** `https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification?status=down`
+    - **URL when UP:** `https://mt5-push-backend.alwiihsan50.workers.dev/trigger-notification?status=up`
+  - Cloudflare Worker otomatis memformat judul dan pesan peringatan darurat:
+    - DOWN: *"⚠️ PC Workstation MATI / OFFLINE - Detak jantung PC Workstation terhenti! Kemungkinan listrik padam atau koneksi internet terputus."*
+    - UP: *"✅ PC Workstation ONLINE KEMBALI - PC Workstation dan koneksi internet telah kembali terhubung normal."*
+  - Notifikasi instan diterima di iPhone/Android pengguna via Apple/Google Web Push.
+
+
