@@ -40,6 +40,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Uji Coba Live Bot Continuous SAR Trailing v2.0 (Jarak Stop $0.50 USD, Trailing Trigger $1.50 USD, XAUUSDm Lot 0.01) di MT5 Akun 2 Demo (463880423)**
+
 - [ ] **Penyusunan Modul Pembelajaran Lengkap Klaster 1 (Dasar Komputer & Sistem Operasi) Format PDF di TailShare**
 
 - [x] **Penautan elemen Lokasi (Tebing Tinggi) pada Beranda LPKPMentariWebsite ke Google Maps resmi**
@@ -65,6 +67,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-19 20:00 WIB
+**Last Updated At:** 2026-10-23 15:01 WIB
 
 
