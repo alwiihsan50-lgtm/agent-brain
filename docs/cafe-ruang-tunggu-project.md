@@ -9,7 +9,7 @@
 - **Vercel Project:** `cafe-ruang-tunggu` (scope `alwi-ikhsan-s-projects`), Git-connected, production branch `main`
 - **Supabase Project:** `cafe ruang tunggu` — ref `svgbotpzgukqurwcrdqd`, region `ap-southeast-1`, Postgres 17.12
 - **Tipe Aplikasi:** Web statis (HTML + CSS + JS) + Supabase Auth/PostgREST/Realtime
-- **Status:** Live dengan desain **Warm Specialty**; push ke `main` = deploy otomatis
+- **Status:** Live dengan desain **Warm Specialty**; push ke `main` = deploy otomatis; sudah di-QA untuk tablet & beragam ukuran HP
 
 ## 2. Tech Stack
 
@@ -88,7 +88,19 @@ Akun Auth (sandi **tidak** disimpan di repo): `owner@`, `kasir@`, `waiter@`,
 - **Login UI produksi:** 4/4 role berhasil, 0 error console.
 - **Alur order live:** kasir submit → tiket muncul realtime di dapur → diproses
   → siap → waiter minta struk → badge muncul realtime di kasir → closing.
-- **Responsif:** tanpa horizontal overflow pada 360/390/768/1024/1180/1280/1440px.
+- **Responsif:** tanpa horizontal overflow pada 320/360/390/412/430/768/820/834/
+  844x390/1024/1180/1280/1440/1920px.
+- **Tablet landscape 1024–1180px:** sidebar tetap tampil (bukan bottom nav),
+  grid menu 3–4 kolom, cart bar selebar area konten (tidak menutupi sidebar).
+- **Tablet portrait 768–834px:** bottom nav, grid 3 kolom, kanban 3 kolom,
+  KPI closing 3 kolom; sheet keranjang dibatasi 640px dan ditengahkan.
+- **HP 360px:** grid menu 2 kolom; 320px tetap 1 kolom.
+- **Tap target:** tombol +/– punya area sentuh ±44px walau visual 27–32px;
+  klik 4–5px di luar kotak visual tetap memicu tombol.
+- **Login:** HP landscape pendek (844x390) satu kolom dan tombol Masuk terlihat
+  tanpa scroll; tablet portrait ≥820px memakai panel brand.
+- **iOS safe area:** `viewport-fit=cover` + `env(safe-area-inset-bottom)` pada
+  bottom nav, cart bar, dan sheet.
 - **Mobile:** cart bar tidak menutupi bottom nav; bottom sheet bisa dibuka dan
   ditutup via Escape.
 - **Deploy:** push `main` memicu build Vercel otomatis; halaman live HTTP 200;
@@ -114,7 +126,21 @@ supabase projects list
 supabase projects api-keys --project-ref svgbotpzgukqurwcrdqd
 ```
 
-## 11. Pekerjaan Berikutnya
+## 11. Breakpoint Penting
+
+| Rentang | Shell | Keranjang | Grid menu |
+| --- | --- | --- | --- |
+| ≥1181px | Sidebar | Rail sticky | 3–6 kolom |
+| 901–1180px | Sidebar | Cart bar (mulai setelah sidebar) | 2–4 kolom |
+| ≤900px | Bottom nav | Cart bar di atas nav | 2–4 kolom |
+| ≤340px | Bottom nav | Cart bar | 1 kolom |
+
+Login satu kolom jika lebar ≤800px **atau** tinggi ≤520px.
+Screenshot acuan: `screenshots/tablet-768-order.png`,
+`tablet-1024-order.png`, `phone-360-order.png`, `tablet-768-cart-sheet.png`,
+`phone-landscape-login.png`.
+
+## 12. Pekerjaan Berikutnya
 
 1. Hardening: ganti sandi 4 akun demo, audit RLS, pertimbangkan env var.
 2. Peningkatan: foto menu asli, nomor urut harian, PWA/offline, custom domain.

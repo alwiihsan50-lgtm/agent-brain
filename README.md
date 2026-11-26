@@ -35,13 +35,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Torrent PC Suite** | `Port 6801` (RPC) & `6888` (Web UI) | 🟢 Live | Sentralisasi torrent eksklusif PC (`cari-film` / `pc-torrent` / Web App). Akses via Tailscale. |
 | **MT5 MCP Server** | `mcp-mt5` / `mcp_config.json` | 🟢 Terpasang | Integrasi native MetaTrader 5 dengan Antigravity AI (`agy`): cek akun, posisi, analisa SMC M5, dan emergency close. |
 | **Vibe-Trading AI Workspace** | `Port 8899` / `localhost:8899` | 🟢 Live (Systemd) | Quantitative financial research & multi-agent trading workspace (HKUDS): 306 QuantLib math functions, 478 Alpha Zoo, 29 data loaders, React 19 UI, terintegrasi AGY Bridge Port 5050. |
-| **Cafe Ruang Tunggu POS** | `cafe-ruang-tunggu.vercel.app` | 🟢 Live | POS kafe + antrean dapur (HTML statis + Supabase Auth/Realtime), 4 role. Desain Warm Specialty live; repo GitHub terhubung Vercel (push `main` = deploy). Lokal: `D:\Projects\cafe-ruang-tunggu`. |
+| **Cafe Ruang Tunggu POS** | `cafe-ruang-tunggu.vercel.app` | 🟢 Live | POS kafe + antrean dapur (HTML statis + Supabase Auth/Realtime), 4 role, tablet-ready (sidebar 901–1180px, tap target 44px, safe-area iOS). Desain Warm Specialty live; repo GitHub terhubung Vercel (push `main` = deploy). Lokal: `D:\Projects\cafe-ruang-tunggu`. |
 
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Cafe Ruang Tunggu — arsip progres (snapshot live + prototipe Warm Specialty + screenshot + docs) ke D:\Projects & agent-brain**
+- [x] **Cafe Ruang Tunggu — arsip progres (snapshot live + prototipe Warm Specialty + screenshot + docs) ke D:\Projects & agent-brain**
 
 - [ ] **Cafe Ruang Tunggu — port redesign Warm Specialty ke aplikasi live Vercel + integrasi GitHub auto-deploy**
 
@@ -57,7 +57,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [ ] **Review Audit Paritas Live bot_trending.py v6.2 (PF riil 1.24 vs klaim 1.40, bias re-entry Open-bar di engine lama, DD 2% HWM ~46%) & putuskan penurunan risiko 2%→1% di Akun 1 (443003218)**
 
-- [x] **Upgrade Live `bot_trending.py` v6.2 dengan Skema *Flat Risk 2.0% + High-Water Mark (HWM) 10% Drawdown Ratchet* Murni Satuan `IDC` (`558.535 IDC` / `Rp 5.585` per trade pada HWM `27.926.772 IDC`, Lot tidak dikecilkan bila DD `< 10%`, penyesuaian `-10%` tiap 10% DD, Dynamic Margin Guard tanpa cap statis `0.50 Lot`, & Audit Zero-Bias UTC) di Akun 1 (`443003218`)**
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
 ---
@@ -76,6 +75,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** OpenCode (DeepSeek V4.1 Flash)
-**Last Updated At:** 2026-11-26 08:25 WIB
+**Last Updated At:** 2026-11-26 08:45 WIB
 
 

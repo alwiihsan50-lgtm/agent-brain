@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** Cafe Ruang Tunggu (POS & Antrean)
-- **Current Task:** Port redesign Warm Specialty ke produksi + integrasi GitHub auto-deploy (selesai & terverifikasi; menunggu konfirmasi USER untuk [x])
-- **Modified Files:** cafe-ruang-tunggu: public/*, prototype/*, docs/*, vercel.json, README.md, CHANGELOG.md; agent-brain: README.md, ACTIVE_SESSION.md, docs/README.md, docs/drive-d-projects-catalog.md, docs/cafe-ruang-tunggu-project.md
-- **Verification Command / URL:** https://cafe-ruang-tunggu.vercel.app (HTTP 200) | vercel ls cafe-ruang-tunggu | https://github.com/alwiihsan50-lgtm/cafe-ruang-tunggu
-- **Next Steps / Notes:** Redesign live; push main = deploy Vercel. Uji 4 role + realtime + closing OK, 0 error console, 0 overflow 360-1440. Order uji A7 & TEST-DEPLOY dihapus; order produksi id=1 tidak disentuh. Sisa pekerjaan: hardening sandi/RLS/env. Jangan simpan service key.
+- **Current Task:** QA responsif tablet & beragam HP (selesai & live di commit d390aa1); task port+GitHub menunggu konfirmasi USER untuk [x]
+- **Modified Files:** public/styles.css, public/index.html, docs/DESIGN-SYSTEM.md, CHANGELOG.md, README.md, screenshots/tablet-*, screenshots/phone-*; agent-brain: README.md, ACTIVE_SESSION.md, docs/cafe-ruang-tunggu-project.md
+- **Verification Command / URL:** https://cafe-ruang-tunggu.vercel.app | vercel ls cafe-ruang-tunggu (source git, main, d390aa1) | audit 320-1920px
+- **Next Steps / Notes:** Breakpoint: >=1181 sidebar+rail; 901-1180 sidebar+cart bar; <=900 bottom nav; <=340 grid 1 kolom. Tap target 44px via pointer:coarse, safe-area iOS. 0 overflow 320..1920. Order uji QA-TABLET dihapus; order produksi id=1 utuh. Sisa: hardening sandi/RLS/env.
 - **Last Updated By:** OpenCode (DeepSeek V4.1 Flash)
-- **Last Updated At:** 2026-11-26 08:22 WIB
+- **Last Updated At:** 2026-11-26 08:38 WIB
