@@ -35,10 +35,15 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Torrent PC Suite** | `Port 6801` (RPC) & `6888` (Web UI) | 🟢 Live | Sentralisasi torrent eksklusif PC (`cari-film` / `pc-torrent` / Web App). Akses via Tailscale. |
 | **MT5 MCP Server** | `mcp-mt5` / `mcp_config.json` | 🟢 Terpasang | Integrasi native MetaTrader 5 dengan Antigravity AI (`agy`): cek akun, posisi, analisa SMC M5, dan emergency close. |
 | **Vibe-Trading AI Workspace** | `Port 8899` / `localhost:8899` | 🟢 Live (Systemd) | Quantitative financial research & multi-agent trading workspace (HKUDS): 306 QuantLib math functions, 478 Alpha Zoo, 29 data loaders, React 19 UI, terintegrasi AGY Bridge Port 5050. |
+| **Cafe Ruang Tunggu POS** | `cafe-ruang-tunggu.vercel.app` | 🟢 Live | POS kafe + antrean dapur (HTML statis + Supabase Auth/Realtime), 4 role. Redesign Warm Specialty selesai sebagai prototipe, belum deploy. Arsip: `D:\Projects\cafe-ruang-tunggu`. |
 
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
+
+- [ ] **Cafe Ruang Tunggu — arsip progres (snapshot live + prototipe Warm Specialty + screenshot + docs) ke D:\Projects & agent-brain**
+
+- [ ] **Cafe Ruang Tunggu — port redesign Warm Specialty ke aplikasi live Vercel + hardening sandi/env**
 
 - [ ] **Implementasi Proteksi Re-entry Pasca-TP (10m Cooldown), Anti-Same-Bar M5, & State Persistence Cooldown Pasca-SL di bot_trending.py v6.2 (Akun 1 443003218)**
 
@@ -69,6 +74,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-10-24 02:33 WIB
+**Last Updated At:** 2026-11-26 08:05 WIB
 
 

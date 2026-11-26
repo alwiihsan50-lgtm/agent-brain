@@ -72,6 +72,7 @@
 | [**Arsip-IMO 2025 Architecture Specification**](arsip-imo-project.md) | Dokumentasi web mandiri Cloudflare (Pages + D1 + KV) presensi IMO 2025 tanpa beban PC. |
 | [**SOP Bulk Upload Foto Absensi TailShare**](sop-bulk-upload-foto-absensi-tailshare.md) | Prosedur otomasi ekstraksi ZIP foto TailShare, kompresi <=150KB, dan upload langsung database Supabase. |
 | [**SIMPKK-DIGITAL Supabase Keep-Alive**](simpkk-digital-supabase-keepalive.md) | Solusi dual-layer keepalive Supabase Free Tier (GitHub Actions + local crontab) anti-pause. |
+| [**Cafe Ruang Tunggu POS & Antrean**](cafe-ruang-tunggu-project.md) | POS kafe statis + Supabase (Auth/Realtime), 4 role, arsitektur, status data, dan prototipe redesign Warm Specialty. |
 
 ---
 

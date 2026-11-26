@@ -22,6 +22,7 @@ Dokumen ini berisi pemetaan lengkap seluruh proyek, repositori Git, lokasi direk
 | **MentariOnlineCourse** | `D:\Projects\MentariOnlineCourse` | `https://github.com/lpkpmentaribussiness/MentariOnlineCourse.git` | `main` | Platform Kursus Online LPKP Mentari. |
 | **taste-skill** | `D:\Projects\taste-skill` | `https://github.com/Leonxlnx/taste-skill.git` | `main` | Taste Skill repository. |
 | **MoneyPrinterTurbo** | `D:\Projects\MoneyPrinterTurbo` | `https://github.com/harry0703/MoneyPrinterTurbo.git` | `main` | AI short video automated production factory (WebUI: 8501, API: 8095). |
+| **Cafe Ruang Tunggu** | `D:\Projects\cafe-ruang-tunggu` | - | `main` | POS kafe + antrean dapur (HTML statis + Supabase, live di `cafe-ruang-tunggu.vercel.app`). Arsip 26 Nov 2026: snapshot produksi, prototipe redesign Warm Specialty, screenshot, & docs. |
 
 ---
 
