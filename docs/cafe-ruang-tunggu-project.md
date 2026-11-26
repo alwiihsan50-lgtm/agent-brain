@@ -4,83 +4,107 @@
 
 - **Nama Proyek:** Cafe Ruang Tunggu — POS & Antrean
 - **Lokasi Lokal:** `D:\Projects\cafe-ruang-tunggu` (`/media/cuker/Data/Projects/cafe-ruang-tunggu`)
-- **Remote Git:** belum ada (repo lokal, branch `main`)
+- **GitHub Repo:** `alwiihsan50-lgtm/cafe-ruang-tunggu` (private, branch `main`)
 - **Produksi:** https://cafe-ruang-tunggu.vercel.app
-- **Vercel Project:** `cafe-ruang-tunggu` (scope `alwi-ikhsan-s-projects`)
+- **Vercel Project:** `cafe-ruang-tunggu` (scope `alwi-ikhsan-s-projects`), Git-connected, production branch `main`
 - **Supabase Project:** `cafe ruang tunggu` — ref `svgbotpzgukqurwcrdqd`, region `ap-southeast-1`, Postgres 17.12
 - **Tipe Aplikasi:** Web statis (HTML + CSS + JS) + Supabase Auth/PostgREST/Realtime
-- **Status:** Live; redesign **Warm Specialty** selesai sebagai prototipe, **belum di-deploy**
+- **Status:** Live dengan desain **Warm Specialty**; push ke `main` = deploy otomatis
 
 ## 2. Tech Stack
 
-- **Frontend produksi:** satu file HTML dengan CSS & JS inline, supabase-js v2 via CDN.
-- **Frontend prototipe:** `app/index.html` + `styles.css` + `app.js` (vanilla JS, data dummy).
-- **Auth:** Supabase Auth `signInWithPassword`, sesi disimpan client.
+- **Frontend:** `public/index.html` + `public/styles.css` + `public/app.js` (vanilla JS), config publik di `public/config.js`.
+- **Auth:** Supabase Auth `signInWithPassword`, sesi dipulihkan otomatis.
 - **Database:** tabel `menu`, `orders`, `order_items`, `profiles`; RPC `buat_order`, `my_role`.
-- **Realtime:** subscribe `postgres_changes` pada tabel `orders`.
+- **Realtime:** subscribe `postgres_changes` pada `orders` (order baru, minta struk, perubahan status).
 - **Font:** Plus Jakarta Sans + Fraunces (Google Fonts).
+- **Hosting:** Vercel static, output directory `public/` lewat `vercel.json`.
 
 ## 3. Struktur Folder Proyek
 
 ```
-app/          prototipe redesign (3 file, data dummy)
-legacy/       snapshot persis HTML produksi 26 Nov 2026
-docs/         DESIGN-SYSTEM.md, SUPABASE.md, ROADMAP.md
-screenshots/  bukti visual desktop & mobile
-scripts/      serve.sh
+public/       aplikasi produksi (satu-satunya folder yang di-deploy)
+prototype/    mockup desain awal, data dummy (referensi)
+legacy/       snapshot persis HTML produksi sebelum redesign (26 Nov 2026)
+docs/         DESIGN-SYSTEM.md, SUPABASE.md, DEPLOYMENT.md, ROADMAP.md
+screenshots/  bukti visual prototipe & produksi
+scripts/      serve.sh (menyajikan public/)
+vercel.json   output public/, cleanUrls, header keamanan
 ```
+
+Folder `prototype/`, `legacy/`, `docs/`, dan `screenshots/` **tidak** ikut
+ter-publish; sudah diverifikasi 404 di domain produksi.
 
 ## 4. Peran & Navigasi
 
 | Role | Tab | Catatan |
 | --- | --- | --- |
 | `owner` | Closing, Pesanan | Read-only di daftar pesanan |
-| `kasir` | Order, Pesanan, Closing | Membuat order & pembayaran |
+| `kasir` | Order, Pesanan, Closing | Membuat order, cetak struk, export CSV |
 | `waiter` | Order, Pesanan | Dapat meminta struk |
-| `dapur` | Antrean | Kanban Baru → Diproses → Siap |
+| `dapur` | Antrean | Kanban Baru → Diproses → Siap, bunyi saat order baru |
 
 Akun Auth (sandi **tidak** disimpan di repo): `owner@`, `kasir@`, `waiter@`,
 `dapur@ruangtunggu.com`.
 
-## 5. Status Data Saat Arsip
+## 5. Status Data Saat Update
 
 - `menu`: 6 baris aktif.
-- `orders` / `order_items`: 0 baris.
-- `profiles` / `auth.users`: 4 baris hasil setup sesi ini.
-- Deploy Vercel: Ready, HTTP 200, tanpa env var, Git belum terhubung.
-- Realtime & login diverifikasi; tidak ada order nyata yang dibuat saat audit.
+- `orders`: 1 order produksi nyata (`12/aji sumanto`, Rp40.000, status `siap`) —
+  **jangan dihapus**.
+- `profiles` / `auth.users`: 4 akun role.
+- Order uji `A7` dan `TEST-DEPLOY` sudah dihapus setelah verifikasi.
+- Deploy terakhir: build statis 2 detik dari commit Git, status Ready.
 
 ## 6. Arah Desain (Warm Specialty)
 
 - Krem `#F7F5F0`, hijau tua `#1F3D33`, terracotta `#C4703C`.
 - UI Plus Jakarta Sans; judul Fraunces.
 - Layout: sidebar + topbar di desktop, bottom nav + cart sheet di mobile.
-- Antrean dapur memakai kanban 3 kolom dengan timer; status >10 menit berwarna merah.
+- Antrean dapur kanban 3 kolom dengan timer; status >10 menit berwarna merah.
 - Token lengkap & keputusan per layar: `docs/DESIGN-SYSTEM.md` di repo proyek.
 
-## 7. Batasan & Keamanan (Constraints)
+## 7. Deployment
+
+- Repo GitHub terhubung ke Vercel via GitHub App; branch produksi `main`.
+- `vercel.json`: `outputDirectory: public`, `cleanUrls`, header keamanan,
+  `config.js` no-cache.
+- Tanpa environment variable; URL + anon key ada di `public/config.js`.
+- Rollback: promote deployment sehat di dashboard Vercel atau `git revert`.
+- Detail: `docs/DEPLOYMENT.md` di repo proyek.
+
+## 8. Batasan & Keamanan (Constraints)
 
 1. **Jangan simpan service role key** atau sandi akun di repo/dokumen.
-2. Anon key memang publik dan tertanam di HTML produksi; tetap patuhi RLS.
-3. Skema Supabase tidak boleh diubah saat porting desain.
-4. Prototipe `app/` memakai data dummy — jangan diklaim sebagai produksi.
-5. Ganti sandi demo sebelum aplikasi dipakai publik.
-6. Deploy produksi hanya setelah approval USER.
+2. Anon key memang publik dan tertanam di frontend; tetap patuhi RLS.
+3. Skema Supabase tidak boleh diubah tanpa pembahasan terpisah.
+4. Hanya isi `public/` yang boleh dipublikasikan; folder internal jangan
+   dipindah ke `public/`.
+5. Ganti sandi demo sebelum aplikasi dipakai lebih luas.
+6. Jangan hapus atau ubah order produksi nyata saat pengujian.
 
-## 8. Verifikasi yang Sudah Dilakukan
+## 9. Verifikasi yang Sudah Dilakukan
 
-- **Login API:** 4/4 role → 200 OK; profil sesuai role.
-- **Login UI produksi:** Chromium headless, 4/4 berhasil, 0 error console.
-- **Prototipe:** 4/4 role, alur tambah order → antrean → selesai, 0 error console.
+- **Login UI produksi:** 4/4 role berhasil, 0 error console.
+- **Alur order live:** kasir submit → tiket muncul realtime di dapur → diproses
+  → siap → waiter minta struk → badge muncul realtime di kasir → closing.
 - **Responsif:** tanpa horizontal overflow pada 360/390/768/1024/1180/1280/1440px.
-- **Salinan arsip:** checksum `app/` identik dengan workspace asal; server lokal HTTP 200.
+- **Mobile:** cart bar tidak menutupi bottom nav; bottom sheet bisa dibuka dan
+  ditutup via Escape.
+- **Deploy:** push `main` memicu build Vercel otomatis; halaman live HTTP 200;
+  aset `styles.css`, `app.js`, `config.js` HTTP 200; folder internal 404.
+- **Data:** order uji dibersihkan; order produksi tidak tersentuh.
 
-## 9. Perintah Cepat
+## 10. Perintah Cepat
 
 ```bash
-# Prototipe
+# Lokal
 cd /media/cuker/Data/Projects/cafe-ruang-tunggu
-./scripts/serve.sh                     # http://localhost:8901
+./scripts/serve.sh                     # http://localhost:8901 (data Supabase live)
+
+# Deploy
+git add -A && git commit -m "..." && git push origin main
+vercel ls cafe-ruang-tunggu            # cek status build
 
 # Git proyek
 git -C /media/cuker/Data/Projects/cafe-ruang-tunggu log --oneline
@@ -90,11 +114,12 @@ supabase projects list
 supabase projects api-keys --project-ref svgbotpzgukqurwcrdqd
 ```
 
-## 10. Pekerjaan Berikutnya
+## 11. Pekerjaan Berikutnya
 
-1. Port desain ke produksi tanpa mengubah skema (lihat `docs/ROADMAP.md`).
-2. Hardening: ganti sandi, audit RLS, env var Vercel, integrasi Git.
-3. Peningkatan: foto menu, export CSV nyata, cetak struk, PWA.
+1. Hardening: ganti sandi 4 akun demo, audit RLS, pertimbangkan env var.
+2. Peningkatan: foto menu asli, nomor urut harian, PWA/offline, custom domain.
+3. Backup berkala schema + data menu.
 
-> Catatan protokol: porting ke produksi **belum** dikerjakan. Tugas arsip progres
-> ini menunggu konfirmasi USER sebelum ditandai selesai di `README.md`.
+> Catatan protokol: pekerjaan porting & integrasi Git **sudah selesai dan
+> diverifikasi**, tetapi task di `README.md` agent-brain masih `[ ]` sampai
+> USER memberi konfirmasi eksplisit.
