@@ -5,9 +5,9 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** Dapur bisa atur menu yang sedang habis (stok) — SELESAI diimplementasi & terverifikasi, menunggu validasi user
+- **Current Task:** Stok dapur (SIAP REVIEW) + admin: email dapur minuman → barista@ruangtunggu.com
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Web 1.5.0 live (2007a96). Migration 20261127100000_menu_habis diterapkan ke prod via supabase CLI (login user; histori lama di-repair applied; penanda file 20261125174103). REST: dapur_makanan boleh set habis makanan (204), minuman ditolak, kasir ditolak, buat_order menolak item habis, audit habis_diubah_oleh terisi. E2E browser 10/10: tab Stok dapur (kategori terfilter), kasir realtime (badge Habis, keranjang auto-dikosongkan, guard addToCart), owner lihat badge, pulih tersedia tersiar balik, 0 page error. Screenshot /tmp/opencode/cafe-e2e/stok-*.png. Catatan deploy: commit harus pakai identitas git user (Vercel memblokir commit author tak dikenal — histori di-rewrite ke identitas alwiihsan50-lgtm). Stok DB bersih (habis=false semua).
+- **Next Steps / Notes:** Web 1.5.0 live, stok dapur E2E 10/10 (detail sebelumnya). 27 Nov: email akun dapur_minuman diganti via Admin API menjadi barista@ruangtunggu.com (email_confirm true; profil/role/nama tidak berubah; sandi tetap 123456; email lama sudah tidak berlaku — diverifikasi). Service-role key diambil via supabase CLI api-keys (tidak disimpan/dicetak). docs/SUPABASE.md tabel akun diperbarui 5 role (3743fa4). Menunggu validasi user untuk tugas stok.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-11-27 14:19 WIB
+- **Last Updated At:** 2026-11-27 14:24 WIB
