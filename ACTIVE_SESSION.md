@@ -5,9 +5,9 @@
 
 - **Status:** IDLE
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** Menu real 49 item terisi (menunggu konfirmasi USER) — wipe + isi menu selesai
-- **Modified Files:** supabase/seed-menu-real-20261128.sql, docs/SUPABASE.md (repo cafe, commit f4c8b1e)
-- **Verification Command / URL:** supabase db query --remote=svgbotpzgukqurwcrdqd --read-only 'SELECT kategori, count(*) FROM menu GROUP BY 1'
-- **Next Steps / Notes:** 28 Nov 2026: USER menyalin daftar menu dari 2 foto TailShare (model ini tanpa vision; OCR tesseract kabur, bridge vision kosong). 49 item di-insert via SQL (id identity GENERATED ALWAYS — tanpa id eksplisit). Verifikasi: 20 makanan + 29 minuman, cocok 100% dengan daftar USER, semua aktif, harga kelipatan 1000, ID 1-49. Subgrup minuman (Non Coffe/Coffe/Americano Series) tidak tersimpan — skema hanya kategori makanan/minuman; ejaan nama dipertahankan apa adanya (Coffe Latte, Butterschot, Mochacino, dll). Dua task menunggu konfirmasi USER: wipe database & isi menu real. 12 tugas lama tetap parkir. PENTING sebelum operasional: matikan mode review (demoLogin:true) + owner reset sandi via Kelola Staf.
+- **Current Task:** QRIS web 1.9.0 live (menunggu konfirmasi USER)
+- **Modified Files:** public/qris.webp, app.js, index.html, styles.css, sw.js, config.js, version.json, vercel.json, CHANGELOG.md (repo cafe, commit cb4ad61)
+- **Verification Command / URL:** curl -sI https://cafe-ruang-tunggu.vercel.app/qris.webp | grep -i cache
+- **Next Steps / Notes:** 28 Nov 2026: foto QRIS IMG_6747.jpeg dari TailShare (867x1154, 246KB) -> WebP 46KB (-82%), asli di-backup ke /media/cuker/Data/backups/cafe-ruang-tunggu/qris/. Fitur: pilih QRIS di keranjang -> foto tampil inline (rail+sheet), ketuk -> layar penuh (Escape/backdrop/back Android menutup). Optimasi kuota: precache SW cafe-v1.9.0 + Cache-Control immutable 1 tahun + toggle hidden tanpa re-render; test Playwright: 1 request total sepanjang sesi, transferSize 0, 0 error. Live: version.json 1.9.0, qris.webp 200 + x-vercel-cache HIT. APK otomatis dapat (memuat web produksi). Task menunggu konfirmasi USER: wipe DB, isi menu 49, QRIS 1.9.0. 12 tugas lama parkir. PENTING sebelum operasional: matikan mode review (demoLogin:true) + owner reset sandi.
 - **Last Updated By:** OpenCode (Qwen4 Max)
-- **Last Updated At:** 2026-11-28 00:04 WIB
+- **Last Updated At:** 2026-11-28 00:26 WIB

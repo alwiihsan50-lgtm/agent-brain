@@ -41,6 +41,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Cafe: QRIS tampil saat metode dipilih + layar penuh pelanggan (web 1.9.0) — WebP 46KB, 1x unduh per perangkat (precache SW + immutable CDN), test E2E lokal lulus**
+
 - [ ] **Cafe: isi menu real 49 item (20 makanan + 29 minuman) dari daftar foto owner — terverifikasi cocok 100% dengan daftar, seed SQL di repo**
 
 - [ ] **Cafe: wipe database produksi (sisakan 5 akun) — 139 baris terhapus, backup pre-wipe tersimpan, siap isi data real**
@@ -70,6 +72,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 00:04 WIB
+**Last Updated At:** 2026-11-28 00:26 WIB
 
 
