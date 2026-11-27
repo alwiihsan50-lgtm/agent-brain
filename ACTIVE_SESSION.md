@@ -5,9 +5,9 @@
 
 - **Status:** IDLE
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** Tidak ada pekerjaan aktif — waiter lacak pengantaran (1.6.1) dikonfirmasi USER & dicentang 27 Nov 2026
-- **Modified Files:** -
-- **Verification Command / URL:** -
-- **Next Steps / Notes:** Verifikasi live 27 Nov: web 1.8.0 HTTP 200, RPC tandai_diantar ada di remote (migration 20261127120000 applied), UI antar ada di app.js produksi. Tugas waiter dicentang atas instruksi USER ('yang sudah live tandai selesai'). Sisa 8 tugas cafe belum live penuh; hardening akun demo sebagian tercover 1.8.0 (sandi demo ditunda atas instruksi USER, owner reset mandiri via Kelola Staf; audit RLS & env var Vercel masih terbuka). PENTING: mode review 1.7.0 masih LIVE (demoLogin:true) — setelah user selesai review, matikan kill switch: supabase secrets unset DEMO_PASSWORD --project-ref svgbotpzgukqurwcrdqd dan/atau demoLogin:false di public/config.js. Catatan: CLI 'brain task done' memakai index berbeda dari 'brain task list' (hanya menghitung task unchecked) — verifikasi teks task setelah eksekusi.
+- **Current Task:** Menunggu list prioritas baru dari USER — semua tugas belum-live disisihkan
+- **Modified Files:** docs/parked-tasks.md, README.md
+- **Verification Command / URL:** brain task list
+- **Next Steps / Notes:** 27 Nov 2026: USER instruksikan sisihkan semua tugas belum live (12 tugas: 8 Cafe + 4 Non-Cafe) ke docs/parked-tasks.md, status tetap unchecked, bisa dikembalikan kapan saja. Daftar aktif README kini hanya 2 task selesai terakhir (auto-archival). USER akan memberi list prioritas baru — tambahkan via 'brain task add' saat diterima. PENTING: mode review 1.7.0 masih LIVE (demoLogin:true) — matikan kill switch setelah user selesai review: supabase secrets unset DEMO_PASSWORD --project-ref svgbotpzgukqurwcrdqd dan/atau demoLogin:false di public/config.js.
 - **Last Updated By:** OpenCode (Qwen4 Max)
-- **Last Updated At:** 2026-11-27 22:20 WIB
+- **Last Updated At:** 2026-11-27 22:23 WIB

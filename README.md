@@ -45,29 +45,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [x] **Cafe: dapur dapat menandai menu sedang habis (kolom habis + RPC set_menu_habis + tab Stok dapur + blokir & tampilan di kasir)**
 
-- [ ] **Cafe: perluas ketahanan offline (cache antrean dapur baca-saja, rencana jaringan cadangan)**
-
-- [ ] **Cafe: laporan mingguan/bulanan owner + nomor urut harian di struk**
-
-- [ ] **Cafe: monitoring error ringan (Sentry/log) + smoke test CI web**
-
-- [ ] **Cafe: helper printer thermal APK dan uji printer fisik sebelum buka**
-
-- [ ] **Cafe: fitur batal/void order dengan izin per-role + alasan + notifikasi + tampilan closing**
-
-- [ ] **Cafe: backup otomatis Supabase schema+data dan uji restore berkala**
-
-- [ ] **Cafe: audit & ketatkan RLS orders/profiles (pembatasan per-role/per-kolom + jejak audit perubahan)**
-
-- [ ] **Cafe Ruang Tunggu — hardening: ganti sandi 4 akun demo, audit RLS, & evaluasi env var Vercel**
-
-- [ ] **Implementasi Proteksi Re-entry Pasca-TP (10m Cooldown), Anti-Same-Bar M5, & State Persistence Cooldown Pasca-SL di bot_trending.py v6.2 (Akun 1 443003218)**
-
-- [ ] **Uji Coba Live Bot Continuous SAR Trailing v2.0 (Jarak Stop $0.50 USD, Trailing Trigger $1.50 USD, XAUUSDm Lot 0.01) di MT5 Akun 2 Demo (463880423)**
-
-- [ ] **Penyusunan Modul Pembelajaran Lengkap Klaster 1 (Dasar Komputer & Sistem Operasi) Format PDF di TailShare**
-
-- [ ] **Review Audit Paritas Live bot_trending.py v6.2 (PF riil 1.24 vs klaim 1.40, bias re-entry Open-bar di engine lama, DD 2% HWM ~46%) & putuskan penurunan risiko 2%→1% di Akun 1 (443003218)**
+- 🅿️ **12 tugas belum-live DISISIHKAN atas instruksi USER (27 Nov 2026)** menunggu list prioritas baru — 8 Cafe + 4 Non-Cafe, status tetap `- [ ]`, tersimpan utuh di [docs/parked-tasks.md](docs/parked-tasks.md).
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -76,6 +54,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ## 📚 Indeks Dokumentasi (`docs/`)
 
 - 📝 [**Active Session Scratchpad**](ACTIVE_SESSION.md) — Jembatan memori real-time antar agent saat pengerjaan tugas aktif.
+- 🅿️ [**Tugas Disisihkan (Parked Tasks)**](docs/parked-tasks.md) — 12 tugas belum-live yang diparkir atas instruksi USER 27 Nov 2026, menunggu list prioritas baru.
 - 📑 [**Indeks Master Dokumentasi Terpusat (`docs/README.md`)**](docs/README.md) — Katalog terstruktur seluruh 34 dokumen sistem lintas kategori:
   - 📈 [**Trading Kuantitatif & Algoritmik MT5**](docs/README.md#-1-trading-kuantitatif--algoritmik-mt5) (8 Dokumen: Katalog Audit Bot Profitable vs Unprofitable, Paroli 2-Way, Triad, 12 Pilar Anti-Bias)
   - 🌐 [**Infrastruktur, Server & Jaringan Remote**](docs/README.md#-2-infrastruktur-server--jaringan-remote) (9 Dokumen: Ports, STB Remote, Web Push, Zero Trust, TailShare, Torrent)
@@ -87,6 +66,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-27 22:20 WIB
+**Last Updated At:** 2026-11-27 22:23 WIB
 
 
