@@ -6,6 +6,8 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 27 November 2026
 
+- [x] **Cafe Ruang Tunggu — maksimalkan PWA sebagai alternatif APK: Web Push (VAPID) per-role + install prompt + ketahanan offline**
+- [x] **Cafe Ruang Tunggu — arsip progres (snapshot live + prototipe Warm Specialty + screenshot + docs) ke D:\Projects & agent-brain**
 - [x] **Cafe Ruang Tunggu — port redesign Warm Specialty ke aplikasi live Vercel + integrasi GitHub auto-deploy** (dikonfirmasi USER 26 Nov 2026)
 - [x] **Cafe Ruang Tunggu — fitur menu owner, PWA, APK Android (Capacitor), push FCM, & abstraksi printer thermal** (dikonfirmasi USER 26 Nov 2026; APK 1.1.0 + FCM live, uji perangkat fisik dilakukan mandiri oleh USER)
 - [x] **Penautan elemen Lokasi (Tebing Tinggi) pada Beranda LPKPMentariWebsite ke Google Maps resmi**
