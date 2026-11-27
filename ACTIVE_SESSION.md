@@ -5,9 +5,9 @@
 
 - **Status:** IDLE
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** Web 1.10.0 & 1.11.0 live — menunggu konfirmasi USER
-- **Modified Files:** repo cafe commit a23460b (1.10.0) & 4239214 (1.11.0); migrations 20261128000000_meja_30.sql + 20261128010000_batal_order.sql; push-notify redeploy
-- **Verification Command / URL:** curl -s https://cafe-ruang-tunggu.vercel.app/version.json (web 1.11.0); supabase db query --remote=svgbotpzgukqurwcrdqd --read-only "SELECT count(*) FROM orders" (0, data uji bersih)
-- **Next Steps / Notes:** 28 Nov 2026: 1.10.0 = meja 1-30 (regex RPC + dropdown), tab Selesai dapur terbaru di atas, waiter/kasir print independen (minta struk dihapus), penjualan per menu di Closing+CSV (client-side, 0 query tambahan). E2E 11/11. 1.11.0 = cancel order kasir/waiter HANYA saat semua kategori 'baru' (opsi aman USER; persetujuan dapur ditunda ke 1.12.0 bersyarat), alasan wajib (lama/tidak sesuai/lainnya ketik, min 3 karakter), RPC batal_order + guard_order_batal trigger + row lock, push dapur via push-notify (webhook terbukti 200), closing exclude batal + seksi audit (waktu/meja/alasan/oleh) + CSV. RLS profiles diperluas ke semua staf (hanya id/nama/role) agar nama pembatal terbaca lintas peran. E2E 35/35 termasuk negatif: peran dapur/owner ditolak, diproses/siap/diantar ditolak, alasan kosong ditolak, guard hidupkan kembali ditolak. 2 bug ditemukan test & diperbaiki sebelum deploy (guard kategori null, RLS profiles). Data uji dibersihkan, orders=0, menu 49 utuh. Task 1.10.0 & 1.11.0 menunggu konfirmasi USER; setelah konfirmasi, task parkir #6 (batal/void) tercover penuh -> kembalikan & centang. PENTING sebelum operasional: matikan mode review (demoLogin:true) + owner reset sandi 5 akun.
+- **Current Task:** Data dummy 14 order live untuk review USER — menunggu konfirmasi 1.10.0/1.11.0
+- **Modified Files:** -
+- **Verification Command / URL:** -
+- **Next Steps / Notes:** 28 Nov 2026: USER minta data dummy untuk cek langsung. Seed supabase/seed-dummy-20261128.sql (commit 8b79d9d): 14 order 'Dummy*' hari ini — 3 selesai, 2 siap (1 campuran diantar sebagian), 2 diproses, 3 baru (bisa dicancel), 4 batal (alasan: Terlalu lama / Tidak sesuai pesanan / 2 lainnya; oleh Kasir & Waiter). Meja sampai 30 (21/24/27/29/30 terpakai). Omzet valid 384K (Tunai 174K, QRIS 144K, Debit 66K), 10 transaksi. Catatan: umur order dipadatkan <=100 menit karena lewat tengah malam (order >105 menit jatuh ke kemarin, tidak tampil di view hari ini). Smoke test PRODUKSI 11/11 PASS. Cleanup: DELETE order_items/orders WHERE nama_pelanggan LIKE 'Dummy%' + restart identity (SQL di header file seed). Setelah USER konfirmasi: centang task 1.10.0 & 1.11.0, kembalikan task parkir #6, hapus data dummy. PENTING: mode review masih LIVE + sandi belum direset.
 - **Last Updated By:** OpenCode (Qwen4 Max)
-- **Last Updated At:** 2026-11-28 01:39 WIB
+- **Last Updated At:** 2026-11-28 01:48 WIB
