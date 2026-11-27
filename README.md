@@ -59,9 +59,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [ ] **Cafe: audit & ketatkan RLS orders/profiles (pembatasan per-role/per-kolom + jejak audit perubahan)**
 
-- [ ] **Cafe: hardening akun & akses — ganti sandi demo sebelum publik, halaman ganti sandi, tutup signup publik, kelola staf oleh owner**
-
-- [x] **Cafe Ruang Tunggu — chat staff satu grup + kotak tulis mengalir di bawah pesan terbaru (web 1.4.0–1.4.3, commit 7bd91d7)**
+- [x] **Cafe: hardening akun & akses — kelola staf oleh owner (`staff-admin`) + ganti sandi mandiri + signup publik ditutup (web 1.8.0, E2E 20/20)** (dikonfirmasi USER 27 Nov 2026; sandi demo tidak diubah agent — owner mengganti sendiri via Kelola Staf → Reset sandi)
 
 - [ ] **Cafe Ruang Tunggu — hardening: ganti sandi 4 akun demo, audit RLS, & evaluasi env var Vercel**
 
@@ -91,6 +89,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-27 19:01 WIB
+**Last Updated At:** 2026-11-27 21:54 WIB
 
 

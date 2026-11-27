@@ -14,6 +14,7 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 26 November 2026
 
+- [x] **Cafe Ruang Tunggu — chat staff satu grup + kotak tulis mengalir di bawah pesan terbaru (web 1.4.0–1.4.3, commit 7bd91d7)**
 - [x] **Upgrade Live `bot_trending.py` v6.2 dengan Skema *Flat Risk 2.0% + High-Water Mark (HWM) 10% Drawdown Ratchet* Murni Satuan `IDC` (`558.535 IDC` / `Rp 5.585` per trade pada HWM `27.926.772 IDC`, Lot tidak dikecilkan bila DD `< 10%`, penyesuaian `-10%` tiap 10% DD, Dynamic Margin Guard tanpa cap statis `0.50 Lot`, & Audit Zero-Bias UTC) di Akun 1 (`443003218`)**
 
 ## 📅 Selesai Per 19 Oktober 2026
