@@ -4,6 +4,12 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 28 November 2026
+
+- [x] **Cafe: wipe database produksi (sisakan 5 akun) — 139 baris terhapus, backup pre-wipe tersimpan, siap isi data real**
+- [x] **Cafe: waiter lacak pengantaran — daftar pesanan siap yang belum/sudah diantar + tandai diantar (status/item + push)**
+- [x] **Cafe: dapur dapat menandai menu sedang habis (kolom habis + RPC set_menu_habis + tab Stok dapur + blokir & tampilan di kasir)**
+
 ## 📅 Selesai Per 27 November 2026
 
 - [x] **Cafe: hardening akun & akses — kelola staf oleh owner (`staff-admin`) + ganti sandi mandiri + signup publik ditutup (web 1.8.0, E2E 20/20)** (dikonfirmasi USER 27 Nov 2026; sandi demo tidak diubah agent — owner mengganti sendiri via Kelola Staf → Reset sandi)

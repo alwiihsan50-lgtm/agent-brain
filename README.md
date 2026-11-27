@@ -41,15 +41,9 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Cafe: QRIS tampil saat metode dipilih + layar penuh pelanggan (web 1.9.0) — WebP 46KB, 1x unduh per perangkat (precache SW + immutable CDN), test E2E lokal lulus**
+- [x] **Cafe: QRIS tampil saat metode dipilih + layar penuh pelanggan (web 1.9.0) — WebP 46KB, 1x unduh per perangkat (precache SW + immutable CDN), test E2E lokal lulus**
 
-- [ ] **Cafe: isi menu real 49 item (20 makanan + 29 minuman) dari daftar foto owner — terverifikasi cocok 100% dengan daftar, seed SQL di repo**
-
-- [ ] **Cafe: wipe database produksi (sisakan 5 akun) — 139 baris terhapus, backup pre-wipe tersimpan, siap isi data real**
-
-- [x] **Cafe: waiter lacak pengantaran — daftar pesanan siap yang belum/sudah diantar + tandai diantar (status/item + push)**
-
-- [x] **Cafe: dapur dapat menandai menu sedang habis (kolom habis + RPC set_menu_habis + tab Stok dapur + blokir & tampilan di kasir)**
+- [x] **Cafe: isi menu real 49 item (20 makanan + 29 minuman) dari daftar foto owner — terverifikasi cocok 100% dengan daftar, seed SQL di repo**
 
 - 🅿️ **12 tugas belum-live DISISIHKAN atas instruksi USER (27 Nov 2026)** menunggu list prioritas baru — 8 Cafe + 4 Non-Cafe, status tetap `- [ ]`, tersimpan utuh di [docs/parked-tasks.md](docs/parked-tasks.md).
 
@@ -72,6 +66,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 00:26 WIB
+**Last Updated At:** 2026-11-28 00:33 WIB
 
 

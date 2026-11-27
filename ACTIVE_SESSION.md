@@ -5,9 +5,9 @@
 
 - **Status:** IDLE
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** QRIS web 1.9.0 live (menunggu konfirmasi USER)
-- **Modified Files:** public/qris.webp, app.js, index.html, styles.css, sw.js, config.js, version.json, vercel.json, CHANGELOG.md (repo cafe, commit cb4ad61)
-- **Verification Command / URL:** curl -sI https://cafe-ruang-tunggu.vercel.app/qris.webp | grep -i cache
-- **Next Steps / Notes:** 28 Nov 2026: foto QRIS IMG_6747.jpeg dari TailShare (867x1154, 246KB) -> WebP 46KB (-82%), asli di-backup ke /media/cuker/Data/backups/cafe-ruang-tunggu/qris/. Fitur: pilih QRIS di keranjang -> foto tampil inline (rail+sheet), ketuk -> layar penuh (Escape/backdrop/back Android menutup). Optimasi kuota: precache SW cafe-v1.9.0 + Cache-Control immutable 1 tahun + toggle hidden tanpa re-render; test Playwright: 1 request total sepanjang sesi, transferSize 0, 0 error. Live: version.json 1.9.0, qris.webp 200 + x-vercel-cache HIT. APK otomatis dapat (memuat web produksi). Task menunggu konfirmasi USER: wipe DB, isi menu 49, QRIS 1.9.0. 12 tugas lama parkir. PENTING sebelum operasional: matikan mode review (demoLogin:true) + owner reset sandi.
+- **Current Task:** Tidak ada pekerjaan aktif — wipe DB, menu real 49 item, QRIS 1.9.0 semuanya dikonfirmasi USER 28 Nov 2026
+- **Modified Files:** -
+- **Verification Command / URL:** -
+- **Next Steps / Notes:** 28 Nov 2026: USER konfirmasi 3 task selesai (wipe database sisakan 5 akun; isi menu real 49 item; QRIS web 1.9.0 dengan cache 1x unduh). Ketiganya dicentang + diarsipkan otomatis. App siap diisi data operasional real. 12 tugas lama tetap parkir di docs/parked-tasks.md menunggu prioritas baru USER. PENTING sebelum operasional nyata: (1) matikan mode review sekali klik — supabase secrets unset DEMO_PASSWORD --project-ref svgbotpzgukqurwcrdqd dan/atau demoLogin:false di public/config.js lalu deploy; (2) owner reset sandi 5 akun via Kelola Staf. Backup pre-wipe: /media/cuker/Data/backups/cafe-ruang-tunggu/2026-11-27-pre-wipe/; QRIS asli: .../qris/qris-asli-IMG_6747.jpeg.
 - **Last Updated By:** OpenCode (Qwen4 Max)
-- **Last Updated At:** 2026-11-28 00:26 WIB
+- **Last Updated At:** 2026-11-28 00:33 WIB
