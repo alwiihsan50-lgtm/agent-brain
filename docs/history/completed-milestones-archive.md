@@ -6,6 +6,7 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 27 November 2026
 
+- [x] **Cafe: hardening akun & akses — kelola staf oleh owner (`staff-admin`) + ganti sandi mandiri + signup publik ditutup (web 1.8.0, E2E 20/20)** (dikonfirmasi USER 27 Nov 2026; sandi demo tidak diubah agent — owner mengganti sendiri via Kelola Staf → Reset sandi)
 - [x] **Cafe Ruang Tunggu — maksimalkan PWA sebagai alternatif APK: Web Push (VAPID) per-role + install prompt + ketahanan offline**
 - [x] **Cafe Ruang Tunggu — arsip progres (snapshot live + prototipe Warm Specialty + screenshot + docs) ke D:\Projects & agent-brain**
 - [x] **Cafe Ruang Tunggu — port redesign Warm Specialty ke aplikasi live Vercel + integrasi GitHub auto-deploy** (dikonfirmasi USER 26 Nov 2026)

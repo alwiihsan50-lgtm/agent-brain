@@ -41,7 +41,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Cafe: waiter lacak pengantaran — daftar pesanan siap yang belum/sudah diantar + tandai diantar (status/item + push)**
+- [x] **Cafe: waiter lacak pengantaran — daftar pesanan siap yang belum/sudah diantar + tandai diantar (status/item + push)**
 
 - [x] **Cafe: dapur dapat menandai menu sedang habis (kolom habis + RPC set_menu_habis + tab Stok dapur + blokir & tampilan di kasir)**
 
@@ -58,8 +58,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [ ] **Cafe: backup otomatis Supabase schema+data dan uji restore berkala**
 
 - [ ] **Cafe: audit & ketatkan RLS orders/profiles (pembatasan per-role/per-kolom + jejak audit perubahan)**
-
-- [x] **Cafe: hardening akun & akses — kelola staf oleh owner (`staff-admin`) + ganti sandi mandiri + signup publik ditutup (web 1.8.0, E2E 20/20)** (dikonfirmasi USER 27 Nov 2026; sandi demo tidak diubah agent — owner mengganti sendiri via Kelola Staf → Reset sandi)
 
 - [ ] **Cafe Ruang Tunggu — hardening: ganti sandi 4 akun demo, audit RLS, & evaluasi env var Vercel**
 
@@ -89,6 +87,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-27 21:55 WIB
+**Last Updated At:** 2026-11-27 22:20 WIB
 
 
