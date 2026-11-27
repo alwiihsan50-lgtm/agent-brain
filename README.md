@@ -41,6 +41,22 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Cafe: perluas ketahanan offline (cache antrean dapur baca-saja, rencana jaringan cadangan)**
+
+- [ ] **Cafe: laporan mingguan/bulanan owner + nomor urut harian di struk**
+
+- [ ] **Cafe: monitoring error ringan (Sentry/log) + smoke test CI web**
+
+- [ ] **Cafe: helper printer thermal APK dan uji printer fisik sebelum buka**
+
+- [ ] **Cafe: fitur batal/void order dengan izin per-role + alasan + notifikasi + tampilan closing**
+
+- [ ] **Cafe: backup otomatis Supabase schema+data dan uji restore berkala**
+
+- [ ] **Cafe: audit & ketatkan RLS orders/profiles (pembatasan per-role/per-kolom + jejak audit perubahan)**
+
+- [ ] **Cafe: hardening akun & akses — ganti sandi demo sebelum publik, halaman ganti sandi, tutup signup publik, kelola staf oleh owner**
+
 - [x] **Cafe Ruang Tunggu — chat staff satu grup + kotak tulis mengalir di bawah pesan terbaru (web 1.4.0–1.4.3, commit 7bd91d7)**
 
 - [ ] **Cafe Ruang Tunggu — maksimalkan PWA sebagai alternatif APK: Web Push (VAPID) per-role + install prompt + ketahanan offline**
@@ -75,6 +91,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-27 13:29 WIB
+**Last Updated At:** 2026-11-27 13:59 WIB
 
 
