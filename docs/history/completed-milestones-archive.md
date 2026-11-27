@@ -4,6 +4,12 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ---
 
+## 📅 Selesai Per 27 November 2026
+
+- [x] **Cafe Ruang Tunggu — port redesign Warm Specialty ke aplikasi live Vercel + integrasi GitHub auto-deploy** (dikonfirmasi USER 26 Nov 2026)
+- [x] **Cafe Ruang Tunggu — fitur menu owner, PWA, APK Android (Capacitor), push FCM, & abstraksi printer thermal** (dikonfirmasi USER 26 Nov 2026; APK 1.1.0 + FCM live, uji perangkat fisik dilakukan mandiri oleh USER)
+- [x] **Penautan elemen Lokasi (Tebing Tinggi) pada Beranda LPKPMentariWebsite ke Google Maps resmi**
+
 ## 📅 Selesai Per 26 November 2026
 
 - [x] **Upgrade Live `bot_trending.py` v6.2 dengan Skema *Flat Risk 2.0% + High-Water Mark (HWM) 10% Drawdown Ratchet* Murni Satuan `IDC` (`558.535 IDC` / `Rp 5.585` per trade pada HWM `27.926.772 IDC`, Lot tidak dikecilkan bila DD `< 10%`, penyesuaian `-10%` tiap 10% DD, Dynamic Margin Guard tanpa cap statis `0.50 Lot`, & Audit Zero-Bias UTC) di Akun 1 (`443003218`)**

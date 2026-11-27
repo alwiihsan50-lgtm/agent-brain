@@ -35,15 +35,17 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Torrent PC Suite** | `Port 6801` (RPC) & `6888` (Web UI) | 🟢 Live | Sentralisasi torrent eksklusif PC (`cari-film` / `pc-torrent` / Web App). Akses via Tailscale. |
 | **MT5 MCP Server** | `mcp-mt5` / `mcp_config.json` | 🟢 Terpasang | Integrasi native MetaTrader 5 dengan Antigravity AI (`agy`): cek akun, posisi, analisa SMC M5, dan emergency close. |
 | **Vibe-Trading AI Workspace** | `Port 8899` / `localhost:8899` | 🟢 Live (Systemd) | Quantitative financial research & multi-agent trading workspace (HKUDS): 306 QuantLib math functions, 478 Alpha Zoo, 29 data loaders, React 19 UI, terintegrasi AGY Bridge Port 5050. |
-| **Cafe Ruang Tunggu POS** | `cafe-ruang-tunggu.vercel.app` | 🟢 Live | POS kafe + antrean dapur (HTML statis + Supabase Auth/Realtime), 4 role, tablet-ready (sidebar 901–1180px, tap target 44px, safe-area iOS). Desain Warm Specialty live; repo GitHub terhubung Vercel (push `main` = deploy). Lokal: `D:\Projects\cafe-ruang-tunggu`. |
+| **Cafe Ruang Tunggu POS** | `cafe-ruang-tunggu.vercel.app` | 🟢 Live | POS kafe + antrean + **kelola menu owner**; PWA (manifest/SW/offline/install) + APK Android Capacitor (`com.ruangtunggu.cafe`) + push FCM + printer thermal helper. Web live Warm Specialty; APK 1.1.0 (signed v2) + FCM sudah rilis & terverifikasi backend. Lokal: `D:\Projects\cafe-ruang-tunggu`. |
 
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [x] **Cafe Ruang Tunggu — arsip progres (snapshot live + prototipe Warm Specialty + screenshot + docs) ke D:\Projects & agent-brain**
+- [x] **Cafe Ruang Tunggu — chat staff satu grup + kotak tulis mengalir di bawah pesan terbaru (web 1.4.0–1.4.3, commit 7bd91d7)**
 
-- [ ] **Cafe Ruang Tunggu — port redesign Warm Specialty ke aplikasi live Vercel + integrasi GitHub auto-deploy**
+- [ ] **Cafe Ruang Tunggu — maksimalkan PWA sebagai alternatif APK: Web Push (VAPID) per-role + install prompt + ketahanan offline**
+
+- [x] **Cafe Ruang Tunggu — arsip progres (snapshot live + prototipe Warm Specialty + screenshot + docs) ke D:\Projects & agent-brain**
 
 - [ ] **Cafe Ruang Tunggu — hardening: ganti sandi 4 akun demo, audit RLS, & evaluasi env var Vercel**
 
@@ -52,8 +54,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 - [ ] **Uji Coba Live Bot Continuous SAR Trailing v2.0 (Jarak Stop $0.50 USD, Trailing Trigger $1.50 USD, XAUUSDm Lot 0.01) di MT5 Akun 2 Demo (463880423)**
 
 - [ ] **Penyusunan Modul Pembelajaran Lengkap Klaster 1 (Dasar Komputer & Sistem Operasi) Format PDF di TailShare**
-
-- [x] **Penautan elemen Lokasi (Tebing Tinggi) pada Beranda LPKPMentariWebsite ke Google Maps resmi**
 
 - [ ] **Review Audit Paritas Live bot_trending.py v6.2 (PF riil 1.24 vs klaim 1.40, bias re-entry Open-bar di engine lama, DD 2% HWM ~46%) & putuskan penurunan risiko 2%→1% di Akun 1 (443003218)**
 
@@ -74,7 +74,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ---
 
-**Last Updated By:** OpenCode (DeepSeek V4.1 Flash)
-**Last Updated At:** 2026-11-26 08:45 WIB
+**Last Updated By:** Antigravity (Gemini 3.8 Flash)
+**Last Updated At:** 2026-11-27 13:29 WIB
 
 

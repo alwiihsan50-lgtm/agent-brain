@@ -1,137 +1,197 @@
-# Dokumentasi Proyek: Cafe Ruang Tunggu (POS & Antrean)
+# Dokumentasi Proyek: Cafe Ruang Tunggu (POS, Antrean & Menu)
 
 ## 1. Metadata Repositori & Lingkungan
 
-- **Nama Proyek:** Cafe Ruang Tunggu — POS & Antrean
+- **Nama Proyek:** Cafe Ruang Tunggu — POS, Antrean & Menu
 - **Lokasi Lokal:** `D:\Projects\cafe-ruang-tunggu` (`/media/cuker/Data/Projects/cafe-ruang-tunggu`)
 - **GitHub Repo:** `alwiihsan50-lgtm/cafe-ruang-tunggu` (private, branch `main`)
 - **Produksi:** https://cafe-ruang-tunggu.vercel.app
+- **Halaman install:** https://cafe-ruang-tunggu.vercel.app/install
 - **Vercel Project:** `cafe-ruang-tunggu` (scope `alwi-ikhsan-s-projects`), Git-connected, production branch `main`
 - **Supabase Project:** `cafe ruang tunggu` — ref `svgbotpzgukqurwcrdqd`, region `ap-southeast-1`, Postgres 17.12
-- **Tipe Aplikasi:** Web statis (HTML + CSS + JS) + Supabase Auth/PostgREST/Realtime
-- **Status:** Live dengan desain **Warm Specialty**; push ke `main` = deploy otomatis; sudah di-QA untuk tablet & beragam ukuran HP
+- **Firebase:** project `project-998f2`, package Android `com.ruangtunggu.cafe`
+- **Tipe Aplikasi:** Web statis (HTML + CSS + JS) + Supabase; PWA; APK Android via Capacitor
+- **Status:** Web live (Warm Specialty). Menu owner, PWA, APK 1.1.0, push FCM, dan abstraksi printer sudah aktif. Tugas ditutup atas konfirmasi USER 26 Nov 2026; uji perangkat fisik dilakukan mandiri oleh USER.
 
 ## 2. Tech Stack
 
-- **Frontend:** `public/index.html` + `public/styles.css` + `public/app.js` (vanilla JS), config publik di `public/config.js`.
-- **Auth:** Supabase Auth `signInWithPassword`, sesi dipulihkan otomatis.
-- **Database:** tabel `menu`, `orders`, `order_items`, `profiles`; RPC `buat_order`, `my_role`.
-- **Realtime:** subscribe `postgres_changes` pada `orders` (order baru, minta struk, perubahan status).
-- **Font:** Plus Jakarta Sans + Fraunces (Google Fonts).
-- **Hosting:** Vercel static, output directory `public/` lewat `vercel.json`.
+- **Frontend:** `public/index.html`, `styles.css`, `app.js` (vanilla JS), `config.js` publik.
+- **Auth:** Supabase Auth `signInWithPassword`; sesi dipulihkan otomatis.
+- **Database:** `menu`, `orders`, `order_items`, `profiles`, `device_tokens`; RPC `buat_order`, `my_role`.
+- **Realtime:** publikasi `orders` + `menu`.
+- **PWA:** `manifest.webmanifest`, service worker `sw.js` (cache shell), `offline.html`.
+- **Android:** Capacitor 8, `@capacitor/push-notifications`, browser, app, status-bar, splash-screen.
+- **Push:** Firebase FCM v1 + Edge Function `push-notify` + trigger Postgres `pg_net`.
+- **Printer:** ESC/POS via helper HTTP localhost (APK terpisah).
+- **Hosting:** Vercel static `public/`; APK di Supabase Storage bucket `apk`.
+- **Build CI:** GitHub Actions (`.github/workflows/android.yml`), JDK 21, Android SDK 36.
 
 ## 3. Struktur Folder Proyek
 
 ```
-public/       aplikasi produksi (satu-satunya folder yang di-deploy)
-prototype/    mockup desain awal, data dummy (referensi)
-legacy/       snapshot persis HTML produksi sebelum redesign (26 Nov 2026)
-docs/         DESIGN-SYSTEM.md, SUPABASE.md, DEPLOYMENT.md, ROADMAP.md
-screenshots/  bukti visual prototipe & produksi
-scripts/      serve.sh (menyajikan public/)
-vercel.json   output public/, cleanUrls, header keamanan
+public/       aplikasi web produksi (+ manifest, sw, ikon, install, version.json)
+android/      proyek Capacitor (izin, ikon, signing config, google-services.json)
+supabase/     migrations SQL + functions/push-notify
+.github/      workflow build APK
+prototype/    mockup desain awal (data dummy)
+legacy/       snapshot sebelum redesign
+docs/         DESIGN-SYSTEM, SUPABASE, DEPLOYMENT, ANDROID, PUSH-NOTIFICATIONS, PRINTER, ROADMAP
+screenshots/  bukti visual
+scripts/      serve.sh, update-version.mjs
+vercel.json   output public/, cleanUrls, header cache/keamanan
 ```
 
-Folder `prototype/`, `legacy/`, `docs/`, dan `screenshots/` **tidak** ikut
-ter-publish; sudah diverifikasi 404 di domain produksi.
+Folder `prototype/`, `legacy/`, `docs/`, `android/`, `supabase/`, `screenshots/`
+tidak ikut ter-publish ke web.
 
 ## 4. Peran & Navigasi
 
 | Role | Tab | Catatan |
 | --- | --- | --- |
-| `owner` | Closing, Pesanan | Read-only di daftar pesanan |
-| `kasir` | Order, Pesanan, Closing | Membuat order, cetak struk, export CSV |
-| `waiter` | Order, Pesanan | Dapat meminta struk |
-| `dapur` | Antrean | Kanban Baru → Diproses → Siap, bunyi saat order baru |
+| `owner` | Closing, Pesanan, Menu | Kelola menu (CRUD + soft delete) |
+| `kasir` | Order, Pesanan, Closing | Order, cetak struk, export CSV |
+| `waiter` | Order, Pesanan | Order + minta struk |
+| `dapur` | Antrean | Kanban Baru → Diproses → Siap |
 
-Akun Auth (sandi **tidak** disimpan di repo): `owner@`, `kasir@`, `waiter@`,
-`dapur@ruangtunggu.com`.
+Akun Auth (sandi **tidak** disimpan di repo/dokumen): `owner@`, `kasir@`,
+`waiter@`, `dapur@ruangtunggu.com`. Sandi demo masih perlu diganti.
 
 ## 5. Status Data Saat Update
 
-- `menu`: 6 baris aktif.
-- `orders`: 1 order produksi nyata (`12/aji sumanto`, Rp40.000, status `siap`) —
-  **jangan dihapus**.
+- `menu`: 6 baris (aktif), dikelola lewat tab Menu owner.
+- `orders`: 2 baris; `id=1` adalah order produksi nyata (`12/aji sumanto`,
+  Rp40.000, status `siap`) — **jangan dihapus/diubah**. `id=6` adalah sisa uji
+  meja 7 (perlu keputusan user sebelum dibersihkan).
+- `order_items`: 6 baris.
 - `profiles` / `auth.users`: 4 akun role.
-- Order uji `A7` dan `TEST-DEPLOY` sudah dihapus setelah verifikasi.
-- Deploy terakhir: build statis 2 detik dari commit Git, status Ready.
+- `device_tokens`: 0 (menunggu APK terpasang).
+- Order uji `A7`, `TEST-DEPLOY`, dan `QA-TABLET` sebelumnya sudah dihapus.
 
 ## 6. Arah Desain (Warm Specialty)
 
 - Krem `#F7F5F0`, hijau tua `#1F3D33`, terracotta `#C4703C`.
 - UI Plus Jakarta Sans; judul Fraunces.
 - Layout: sidebar + topbar di desktop, bottom nav + cart sheet di mobile.
-- Antrean dapur kanban 3 kolom dengan timer; status >10 menit berwarna merah.
+- Antrean kanban 3 kolom dengan timer; status >10 menit merah.
 - Token lengkap & keputusan per layar: `docs/DESIGN-SYSTEM.md` di repo proyek.
 
-## 7. Deployment
+## 7. Fitur Baru (26 Nov 2026)
 
-- Repo GitHub terhubung ke Vercel via GitHub App; branch produksi `main`.
-- `vercel.json`: `outputDirectory: public`, `cleanUrls`, header keamanan,
-  `config.js` no-cache.
-- Tanpa environment variable; URL + anon key ada di `public/config.js`.
-- Rollback: promote deployment sehat di dashboard Vercel atau `git revert`.
-- Detail: `docs/DEPLOYMENT.md` di repo proyek.
+### 7.1 Kelola menu owner
+- Tab `menu` dengan pencarian + filter (Semua/Makanan/Minuman/Nonaktif).
+- Tambah/edit lewat bottom sheet; validasi nama 2–80 karakter, harga 0–10 jt.
+- Nonaktifkan = soft delete (`aktif=false`); hilang dari kasir/waiter, riwayat aman.
+- Hapus permanen hanya bila `order_items` belum pernah memakai menu tersebut.
+- Realtime `menu` → kasir/waiter langsung ter-update; item nonaktif dibuang dari
+  keranjang dengan notifikasi.
+- `buat_order` menolak item nonaktif/tidak ada (bukan lagi silent drop).
 
-## 8. Batasan & Keamanan (Constraints)
+### 7.2 PWA & versi
+- `manifest.webmanifest` (standalone, ikon 192/512/maskable/apple).
+- Service worker cache-first untuk shell, network-first untuk navigasi; halaman
+  `offline.html`.
+- `/install` berisi unduhan APK + panduan Add to Home Screen iOS.
+- `version.json` + banner update: web reload via service worker, APK buka URL
+  unduhan bila `versionCode` lebih baru.
 
-1. **Jangan simpan service role key** atau sandi akun di repo/dokumen.
-2. Anon key memang publik dan tertanam di frontend; tetap patuhi RLS.
-3. Skema Supabase tidak boleh diubah tanpa pembahasan terpisah.
-4. Hanya isi `public/` yang boleh dipublikasikan; folder internal jangan
-   dipindah ke `public/`.
+### 7.3 APK Android
+- Package `com.ruangtunggu.cafe`, minSdk 24 (Android 7), target 36.
+- `server.url` memuat web produksi → update web tanpa rebuild.
+- Ikon adaptive + splash brand; izin `POST_NOTIFICATIONS`, `VIBRATE`.
+- Network security config: cleartext hanya untuk `127.0.0.1`/`localhost` (helper printer).
+- Build CI menandatangani dengan PKCS12, unggah ke Storage, update `version.json`.
+
+### 7.4 Push FCM
+- Tabel `device_tokens` + RLS per user.
+- Edge Function memetakan event → role: order baru (dapur+owner), minta struk
+  (kasir+owner), siap (waiter+owner).
+- Channel Android `orders`, `receipt`, `ready`; tap notifikasi membuka tab terkait.
+- Token invalid dihapus otomatis; logout menghapus token user.
+
+### 7.5 Printer thermal
+- Pengaturan di sidebar APK: enabled, port 9123, PIN, lebar 58/80, tes koneksi.
+- `buildEscPos()` mengirim struk sebagai base64 ke `POST /print` helper.
+- Helper APK terpisah belum dibuat (menunggu printer dibeli); fallback dialog
+  print Android tetap aktif. Kontrak lengkap: `docs/PRINTER.md`.
+
+## 8. Deployment
+
+- **Web:** push `main` → Vercel build (output `public/`). `vercel.json` mengatur
+  cleanUrls, no-cache untuk `config.js`/`version.json`/`sw.js`, cache ikon.
+- **APK:** Actions → Build Android APK. Workflow menaikkan `versionCode`,
+  build, unggah ke bucket `apk`, lalu commit `public/version.json` ke `main`.
+- **Secrets GitHub:** `ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`,
+  `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`, `SUPABASE_URL`,
+  `SUPABASE_SERVICE_ROLE_KEY`.
+- **Supabase secrets:** `FIREBASE_SERVICE_ACCOUNT`, `PUSH_WEBHOOK_SECRET`.
+- Detail: `docs/DEPLOYMENT.md`, `docs/ANDROID.md`, `docs/PUSH-NOTIFICATIONS.md`.
+
+## 9. Batasan & Keamanan (Constraints)
+
+1. **Jangan simpan service role key**, service account Firebase, keystore, atau
+   sandi akun di repo/dokumen.
+2. Anon key memang publik di frontend; tetap patuhi RLS.
+3. Skema Supabase hanya diubah lewat migration yang dibahas; `buat_order` sudah
+   di-hardening.
+4. Hanya isi `public/` yang boleh dipublikasikan.
 5. Ganti sandi demo sebelum aplikasi dipakai lebih luas.
-6. Jangan hapus atau ubah order produksi nyata saat pengujian.
+6. Jangan hapus/ubah order produksi `id=1`.
+7. `minta_struk` harus direset `false` setelah struk dicetak agar permintaan
+   berikutnya memicu notifikasi.
+8. Keystore APK wajib dicadangkan; kehilangan = tidak bisa update menimpa.
 
-## 9. Verifikasi yang Sudah Dilakukan
+## 10. Verifikasi yang Sudah Dilakukan
 
 - **Login UI produksi:** 4/4 role berhasil, 0 error console.
-- **Alur order live:** kasir submit → tiket muncul realtime di dapur → diproses
-  → siap → waiter minta struk → badge muncul realtime di kasir → closing.
-- **Responsif:** tanpa horizontal overflow pada 320/360/390/412/430/768/820/834/
-  844x390/1024/1180/1280/1440/1920px.
-- **Tablet landscape 1024–1180px:** sidebar tetap tampil (bukan bottom nav),
-  grid menu 3–4 kolom, cart bar selebar area konten (tidak menutupi sidebar).
-- **Tablet portrait 768–834px:** bottom nav, grid 3 kolom, kanban 3 kolom,
-  KPI closing 3 kolom; sheet keranjang dibatasi 640px dan ditengahkan.
-- **HP 360px:** grid menu 2 kolom; 320px tetap 1 kolom.
-- **Tap target:** tombol +/– punya area sentuh ±44px walau visual 27–32px;
-  klik 4–5px di luar kotak visual tetap memicu tombol.
-- **Login:** HP landscape pendek (844x390) satu kolom dan tombol Masuk terlihat
-  tanpa scroll; tablet portrait ≥820px memakai panel brand.
-- **iOS safe area:** `viewport-fit=cover` + `env(safe-area-inset-bottom)` pada
-  bottom nav, cart bar, dan sheet.
-- **Mobile:** cart bar tidak menutupi bottom nav; bottom sheet bisa dibuka dan
-  ditutup via Escape.
-- **Deploy:** push `main` memicu build Vercel otomatis; halaman live HTTP 200;
-  aset `styles.css`, `app.js`, `config.js` HTTP 200; folder internal 404.
-- **Data:** order uji dibersihkan; order produksi tidak tersentuh.
+- **Alur order live:** kasir → dapur → siap → minta struk → closing.
+- **Menu owner (Playwright):** tambah, edit, nonaktifkan, filter nonaktif, hapus
+  permanen, dan kasir tidak melihat tab Menu — semua lulus.
+- **Layout menu:** 320–1440px tanpa overflow (filter membungkus di 320px).
+- **PWA:** manifest terpasang, service worker aktif, 11 aset ter-cache, reload
+  offline menampilkan shell login.
+- **Install page:** 320–1280px tanpa overflow; tombol APK menunggu version.json.
+- **Database:** RLS `device_tokens` 4 policy; publikasi realtime `menu` aktif;
+  fungsi `buat_order` sudah memuat validasi baru.
+- **APK 1.1.0 (versionCode 1):** build CI sukses, terunggah ke Storage,
+  `version.json` produksi menunjuk ke berkas itu; SHA-256 cocok dan sertifikat
+  v2 sama dengan keystore rilis (`44:E3:40:5C…`). Halaman `/install` live
+  menampilkan tombol unduh.
+- **FCM backend:** Edge Function `push-notify` ter-deploy; smoke test 401
+  (secret salah), token palsu dihapus otomatis (`dropped:1`); trigger
+  `orders_push_webhook` + `pg_net` aktif.
+- **Belum diverifikasi:** pemasangan APK di perangkat, push end-to-end 3 role,
+  banner update, dan helper printer.
 
-## 10. Perintah Cepat
+## 11. Perintah Cepat
 
 ```bash
 # Lokal
 cd /media/cuker/Data/Projects/cafe-ruang-tunggu
-./scripts/serve.sh                     # http://localhost:8901 (data Supabase live)
+python3 -m http.server 8901 --directory public
 
-# Deploy
+# Web deploy
 git add -A && git commit -m "..." && git push origin main
-vercel ls cafe-ruang-tunggu            # cek status build
+vercel ls cafe-ruang-tunggu
 
-# Git proyek
-git -C /media/cuker/Data/Projects/cafe-ruang-tunggu log --oneline
+# Capacitor
+npm run cap:sync
+npm run android:build        # butuh JDK 21 + Android SDK
 
-# Supabase read-only
-supabase projects list
-supabase projects api-keys --project-ref svgbotpzgukqurwcrdqd
+# Build APK via CI
+gh workflow run android.yml -f notes="Rilis ..."
+gh run watch
+
+# Supabase
+supabase functions deploy push-notify --project-ref svgbotpzgukqurwcrdqd --no-verify-jwt
+supabase secrets list --project-ref svgbotpzgukqurwcrdqd
 ```
 
-## 11. Breakpoint Penting
+## 12. Breakpoint Penting
 
 | Rentang | Shell | Keranjang | Grid menu |
 | --- | --- | --- | --- |
 | ≥1181px | Sidebar | Rail sticky | 3–6 kolom |
-| 901–1180px | Sidebar | Cart bar (mulai setelah sidebar) | 2–4 kolom |
+| 901–1180px | Sidebar | Cart bar (setelah sidebar) | 2–4 kolom |
 | ≤900px | Bottom nav | Cart bar di atas nav | 2–4 kolom |
 | ≤340px | Bottom nav | Cart bar | 1 kolom |
 
@@ -140,12 +200,16 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
 `tablet-1024-order.png`, `phone-360-order.png`, `tablet-768-cart-sheet.png`,
 `phone-landscape-login.png`.
 
-## 12. Pekerjaan Berikutnya
+## 13. Pekerjaan Berikutnya
 
-1. Hardening: ganti sandi 4 akun demo, audit RLS, pertimbangkan env var.
-2. Peningkatan: foto menu asli, nomor urut harian, PWA/offline, custom domain.
-3. Backup berkala schema + data menu.
+1. USER memasang APK 1.1.0 dan menguji push 3 role pada perangkat fisik.
+2. Bila ada laporan notifikasi: periksa `device_tokens`, log `push-notify`, dan
+   `net._http_response`; pastikan secret Vault = secret function.
+3. Putuskan order uji `id=6` (meja 7) — hapus atau biarkan.
+4. Beli printer → bangun APK helper sesuai `docs/PRINTER.md`.
+5. Hardening: ganti sandi 4 akun demo, audit RLS, backup schema/data.
+6. Peningkatan: foto menu asli, nomor urut harian, custom domain.
 
-> Catatan protokol: pekerjaan porting & integrasi Git **sudah selesai dan
-> diverifikasi**, tetapi task di `README.md` agent-brain masih `[ ]` sampai
-> USER memberi konfirmasi eksplisit.
+> Catatan protokol: seluruh task proyek ini **sudah ditandai selesai** atas
+> konfirmasi eksplisit USER pada 26 Nov 2026. Yang tersisa bersifat opsional
+> lanjutan (uji perangkat, printer fisik, hardening).
