@@ -5,9 +5,9 @@
 
 - **Status:** IDLE
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** Tidak ada pekerjaan aktif — wipe DB, menu real 49 item, QRIS 1.9.0 semuanya dikonfirmasi USER 28 Nov 2026
-- **Modified Files:** -
-- **Verification Command / URL:** -
-- **Next Steps / Notes:** 28 Nov 2026: USER konfirmasi 3 task selesai (wipe database sisakan 5 akun; isi menu real 49 item; QRIS web 1.9.0 dengan cache 1x unduh). Ketiganya dicentang + diarsipkan otomatis. App siap diisi data operasional real. 12 tugas lama tetap parkir di docs/parked-tasks.md menunggu prioritas baru USER. PENTING sebelum operasional nyata: (1) matikan mode review sekali klik — supabase secrets unset DEMO_PASSWORD --project-ref svgbotpzgukqurwcrdqd dan/atau demoLogin:false di public/config.js lalu deploy; (2) owner reset sandi 5 akun via Kelola Staf. Backup pre-wipe: /media/cuker/Data/backups/cafe-ruang-tunggu/2026-11-27-pre-wipe/; QRIS asli: .../qris/qris-asli-IMG_6747.jpeg.
+- **Current Task:** Web 1.10.0 & 1.11.0 live — menunggu konfirmasi USER
+- **Modified Files:** repo cafe commit a23460b (1.10.0) & 4239214 (1.11.0); migrations 20261128000000_meja_30.sql + 20261128010000_batal_order.sql; push-notify redeploy
+- **Verification Command / URL:** curl -s https://cafe-ruang-tunggu.vercel.app/version.json (web 1.11.0); supabase db query --remote=svgbotpzgukqurwcrdqd --read-only "SELECT count(*) FROM orders" (0, data uji bersih)
+- **Next Steps / Notes:** 28 Nov 2026: 1.10.0 = meja 1-30 (regex RPC + dropdown), tab Selesai dapur terbaru di atas, waiter/kasir print independen (minta struk dihapus), penjualan per menu di Closing+CSV (client-side, 0 query tambahan). E2E 11/11. 1.11.0 = cancel order kasir/waiter HANYA saat semua kategori 'baru' (opsi aman USER; persetujuan dapur ditunda ke 1.12.0 bersyarat), alasan wajib (lama/tidak sesuai/lainnya ketik, min 3 karakter), RPC batal_order + guard_order_batal trigger + row lock, push dapur via push-notify (webhook terbukti 200), closing exclude batal + seksi audit (waktu/meja/alasan/oleh) + CSV. RLS profiles diperluas ke semua staf (hanya id/nama/role) agar nama pembatal terbaca lintas peran. E2E 35/35 termasuk negatif: peran dapur/owner ditolak, diproses/siap/diantar ditolak, alasan kosong ditolak, guard hidupkan kembali ditolak. 2 bug ditemukan test & diperbaiki sebelum deploy (guard kategori null, RLS profiles). Data uji dibersihkan, orders=0, menu 49 utuh. Task 1.10.0 & 1.11.0 menunggu konfirmasi USER; setelah konfirmasi, task parkir #6 (batal/void) tercover penuh -> kembalikan & centang. PENTING sebelum operasional: matikan mode review (demoLogin:true) + owner reset sandi 5 akun.
 - **Last Updated By:** OpenCode (Qwen4 Max)
-- **Last Updated At:** 2026-11-28 00:33 WIB
+- **Last Updated At:** 2026-11-28 01:39 WIB

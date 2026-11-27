@@ -41,6 +41,10 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Cafe web 1.11.0: cancel order kasir/waiter hanya saat belum diproses + alasan wajib (lama/tidak sesuai/lainnya) + push dapur + tampilan closing**
+
+- [ ] **Cafe web 1.10.0: meja 1-30 + tab Selesai terbaru di atas + waiter/kasir print independen (hapus minta struk) + penjualan per menu di Closing**
+
 - [x] **Cafe: QRIS tampil saat metode dipilih + layar penuh pelanggan (web 1.9.0) — WebP 46KB, 1x unduh per perangkat (precache SW + immutable CDN), test E2E lokal lulus**
 
 - [x] **Cafe: isi menu real 49 item (20 makanan + 29 minuman) dari daftar foto owner — terverifikasi cocok 100% dengan daftar, seed SQL di repo**
@@ -66,6 +70,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 00:33 WIB
+**Last Updated At:** 2026-11-28 01:39 WIB
 
 
