@@ -41,6 +41,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Cafe: isi menu real 49 item (20 makanan + 29 minuman) dari daftar foto owner — terverifikasi cocok 100% dengan daftar, seed SQL di repo**
+
 - [ ] **Cafe: wipe database produksi (sisakan 5 akun) — 139 baris terhapus, backup pre-wipe tersimpan, siap isi data real**
 
 - [x] **Cafe: waiter lacak pengantaran — daftar pesanan siap yang belum/sudah diantar + tandai diantar (status/item + push)**
@@ -68,6 +70,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-27 23:51 WIB
+**Last Updated At:** 2026-11-28 00:04 WIB
 
 

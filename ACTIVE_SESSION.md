@@ -5,9 +5,9 @@
 
 - **Status:** IDLE
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** Wipe database selesai (menunggu konfirmasi USER) — langkah berikut: isi data real (menu via Kelola Menu owner)
-- **Modified Files:** docs/SUPABASE.md (repo cafe), backup: /media/cuker/Data/backups/cafe-ruang-tunggu/2026-11-27-pre-wipe/
-- **Verification Command / URL:** supabase db query --remote=svgbotpzgukqurwcrdqd --read-only 'SELECT count(*) FROM orders'
-- **Next Steps / Notes:** 27 Nov 2026: USER instruksikan hapus semua data kecuali akun, lalu konfirmasi eksplisit via pertanyaan. TRUNCATE order_items/orders/messages/device_tokens/menu RESTART IDENTITY — terverifikasi 0 baris; profiles 5 & auth.users 5 utuh; sequence reset ke 1. Backup 139 baris + metadata 5 akun di /media/cuker/Data/backups/cafe-ruang-tunggu/2026-11-27-pre-wipe/. Repo cafe: commit c36dd79 (docs). Task wipe di agent-brain masih unchecked menunggu konfirmasi USER. 12 tugas lama tetap parkir di docs/parked-tasks.md. PENTING: mode review 1.7.0 masih LIVE (demoLogin:true) — matikan sebelum operasional nyata: supabase secrets unset DEMO_PASSWORD --project-ref svgbotpzgukqurwcrdqd dan/atau demoLogin:false di public/config.js. Sandi demo belum diganti (owner reset via Kelola Staf).
+- **Current Task:** Menu real 49 item terisi (menunggu konfirmasi USER) — wipe + isi menu selesai
+- **Modified Files:** supabase/seed-menu-real-20261128.sql, docs/SUPABASE.md (repo cafe, commit f4c8b1e)
+- **Verification Command / URL:** supabase db query --remote=svgbotpzgukqurwcrdqd --read-only 'SELECT kategori, count(*) FROM menu GROUP BY 1'
+- **Next Steps / Notes:** 28 Nov 2026: USER menyalin daftar menu dari 2 foto TailShare (model ini tanpa vision; OCR tesseract kabur, bridge vision kosong). 49 item di-insert via SQL (id identity GENERATED ALWAYS — tanpa id eksplisit). Verifikasi: 20 makanan + 29 minuman, cocok 100% dengan daftar USER, semua aktif, harga kelipatan 1000, ID 1-49. Subgrup minuman (Non Coffe/Coffe/Americano Series) tidak tersimpan — skema hanya kategori makanan/minuman; ejaan nama dipertahankan apa adanya (Coffe Latte, Butterschot, Mochacino, dll). Dua task menunggu konfirmasi USER: wipe database & isi menu real. 12 tugas lama tetap parkir. PENTING sebelum operasional: matikan mode review (demoLogin:true) + owner reset sandi via Kelola Staf.
 - **Last Updated By:** OpenCode (Qwen4 Max)
-- **Last Updated At:** 2026-11-27 23:51 WIB
+- **Last Updated At:** 2026-11-28 00:04 WIB
