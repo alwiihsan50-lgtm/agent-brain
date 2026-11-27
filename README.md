@@ -35,7 +35,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Torrent PC Suite** | `Port 6801` (RPC) & `6888` (Web UI) | 🟢 Live | Sentralisasi torrent eksklusif PC (`cari-film` / `pc-torrent` / Web App). Akses via Tailscale. |
 | **MT5 MCP Server** | `mcp-mt5` / `mcp_config.json` | 🟢 Terpasang | Integrasi native MetaTrader 5 dengan Antigravity AI (`agy`): cek akun, posisi, analisa SMC M5, dan emergency close. |
 | **Vibe-Trading AI Workspace** | `Port 8899` / `localhost:8899` | 🟢 Live (Systemd) | Quantitative financial research & multi-agent trading workspace (HKUDS): 306 QuantLib math functions, 478 Alpha Zoo, 29 data loaders, React 19 UI, terintegrasi AGY Bridge Port 5050. |
-| **Cafe Ruang Tunggu POS** | `cafe-ruang-tunggu.vercel.app` | 🟢 Live | POS kafe + antrean + **kelola menu owner**; PWA (manifest/SW/offline/install) + APK Android Capacitor (`com.ruangtunggu.cafe`) + push FCM + printer thermal helper. Web live Warm Specialty **1.8.0: Kelola Staf owner + ganti sandi mandiri + signup publik ditutup** (E2E 20/20, menunggu validasi USER; sandi demo tidak diubah); APK 1.1.0 (signed v2) + FCM rilis & terverifikasi backend. Lokal: `D:\Projects\cafe-ruang-tunggu`. |
+| **Cafe Ruang Tunggu POS** | `cafe-ruang-tunggu.vercel.app` | 🟢 Live | POS kafe + antrean + **kelola menu owner**; PWA (manifest/SW/offline/install) + APK Android Capacitor (`com.ruangtunggu.cafe`) + push FCM + printer thermal helper. Web live Warm Specialty **1.8.0: Kelola Staf owner + ganti sandi mandiri + signup publik ditutup** (E2E 20/20, dikonfirmasi USER 27 Nov; sandi demo tidak diubah — owner reset mandiri via Kelola Staf); APK 1.1.0 (signed v2) + FCM rilis & terverifikasi backend. Lokal: `D:\Projects\cafe-ruang-tunggu`. |
 
 ---
 
@@ -89,6 +89,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-27 21:54 WIB
+**Last Updated At:** 2026-11-27 21:55 WIB
 
 

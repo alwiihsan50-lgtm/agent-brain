@@ -116,7 +116,7 @@ lewat **Kelola Staf** (`staff-admin`); staf bisa ganti sandi mandiri.
 - Helper APK terpisah belum dibuat (menunggu printer dibeli); fallback dialog
   print Android tetap aktif. Kontrak lengkap: `docs/PRINTER.md`.
 
-### 7.6 Kelola staf & akun (web 1.8.0, 27 Nov 2026 — menunggu validasi USER)
+### 7.6 Kelola staf & akun (web 1.8.0, 27 Nov 2026 — dikonfirmasi USER 27 Nov 2026)
 - **Kelola staf (owner)**: sheet baru dari sidebar/topbar — daftar staf
   (email, peran, status, masuk terakhir), tambah staf (email/nama/peran/
   sandi awal + generator acak), edit nama/peran, reset sandi,
