@@ -55,6 +55,8 @@ tidak ikut ter-publish ke web.
 
 Akun Auth (sandi **tidak** disimpan di repo/dokumen): `owner@`, `kasir@`,
 `waiter@`, `dapur@ruangtunggu.com`. Sandi demo masih perlu diganti.
+Sejak web 1.8.0: signup publik **ditutup**; akun baru hanya dibuat owner
+lewat **Kelola Staf** (`staff-admin`); staf bisa ganti sandi mandiri.
 
 ## 5. Status Data Saat Update
 
@@ -113,6 +115,23 @@ Akun Auth (sandi **tidak** disimpan di repo/dokumen): `owner@`, `kasir@`,
 - `buildEscPos()` mengirim struk sebagai base64 ke `POST /print` helper.
 - Helper APK terpisah belum dibuat (menunggu printer dibeli); fallback dialog
   print Android tetap aktif. Kontrak lengkap: `docs/PRINTER.md`.
+
+### 7.6 Kelola staf & akun (web 1.8.0, 27 Nov 2026 — menunggu validasi USER)
+- **Kelola staf (owner)**: sheet baru dari sidebar/topbar — daftar staf
+  (email, peran, status, masuk terakhir), tambah staf (email/nama/peran/
+  sandi awal + generator acak), edit nama/peran, reset sandi,
+  nonaktifkan/aktifkan (ban). Edge function `staff-admin` (JWT + cek role
+  owner di server; anti-lockout: owner tak bisa ban/menurunkan peran diri).
+- **Ganti sandi mandiri** (semua peran): sheet "Akun saya" dari chip user
+  topbar / sidebar; min 8 karakter + konfirmasi ulang (`auth.updateUser`).
+- **Signup publik ditutup**: `disable_signup=true`, `password_min_length=8`
+  (Management API). Akun baru hanya via owner.
+- **Sandi 5 akun demo TIDAK diubah** (instruksi USER); secret `DEMO_PASSWORD`
+  tetap → mode review sekali klik tetap jalan. Reset sandi suatu akun oleh
+  owner otomatis menghentikan login sekali klik untuk peran itu.
+- E2E produksi 20/20 (buat/login/ganti sandi/reset/ban/unban/403 non-owner/
+  anti-lockout/mobile 360px/demo-login 5 peran 200/cleanup cascade).
+  Screenshot: `screenshots/staff-*.png`. Commit `6bd28b4` + `61d7ab0`.
 
 ## 8. Deployment
 
@@ -207,7 +226,9 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
    `net._http_response`; pastikan secret Vault = secret function.
 3. Putuskan order uji `id=6` (meja 7) — hapus atau biarkan.
 4. Beli printer → bangun APK helper sesuai `docs/PRINTER.md`.
-5. Hardening: ganti sandi 4 akun demo, audit RLS, backup schema/data.
+5. Hardening: ganti sandi akun demo **oleh owner sendiri** lewat Kelola Staf
+   → Reset sandi (ditunda atas instruksi USER 27 Nov; jangan diubah agent),
+   audit RLS, backup schema/data. Signup publik sudah ditutup (web 1.8.0).
 6. Peningkatan: foto menu asli, nomor urut harian, custom domain.
 
 > Catatan protokol: seluruh task proyek ini **sudah ditandai selesai** atas
