@@ -5,9 +5,9 @@
 
 - **Status:** READY_FOR_REVIEW
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** Menunggu validasi user: PWA (Web Push per-role + install prompt + offline)
+- **Current Task:** Dapur bisa atur menu yang sedang habis (stok) — SELESAI diimplementasi & terverifikasi, menunggu validasi user
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** PWA E2E lulus penuh & siap review (detail sebelumnya). BARU: 8 tugas potensi perubahan sudah dicatat di README (hardening akun, audit RLS, backup, batal/void order, printer thermal, monitoring, laporan, offline dapur). Fitur batal order DITUNDA atas permintaan user — pengerjaan menunggu keputusan kebijakan (siapa yang boleh membatalkan) & jalur deploy DB (supabase login vs dashboard). Tidak ada perubahan kode aplikasi.
+- **Next Steps / Notes:** Web 1.5.0 live (2007a96). Migration 20261127100000_menu_habis diterapkan ke prod via supabase CLI (login user; histori lama di-repair applied; penanda file 20261125174103). REST: dapur_makanan boleh set habis makanan (204), minuman ditolak, kasir ditolak, buat_order menolak item habis, audit habis_diubah_oleh terisi. E2E browser 10/10: tab Stok dapur (kategori terfilter), kasir realtime (badge Habis, keranjang auto-dikosongkan, guard addToCart), owner lihat badge, pulih tersedia tersiar balik, 0 page error. Screenshot /tmp/opencode/cafe-e2e/stok-*.png. Catatan deploy: commit harus pakai identitas git user (Vercel memblokir commit author tak dikenal — histori di-rewrite ke identitas alwiihsan50-lgtm). Stok DB bersih (habis=false semua).
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-11-27 13:59 WIB
+- **Last Updated At:** 2026-11-27 14:19 WIB

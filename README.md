@@ -41,6 +41,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Cafe: dapur dapat menandai menu sedang habis (kolom habis + RPC set_menu_habis + tab Stok dapur + blokir & tampilan di kasir)**
+
 - [ ] **Cafe: perluas ketahanan offline (cache antrean dapur baca-saja, rencana jaringan cadangan)**
 
 - [ ] **Cafe: laporan mingguan/bulanan owner + nomor urut harian di struk**
@@ -91,6 +93,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-27 13:59 WIB
+**Last Updated At:** 2026-11-27 14:19 WIB
 
 
