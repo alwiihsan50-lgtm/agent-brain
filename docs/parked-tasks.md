@@ -4,15 +4,13 @@
 > Seluruh tugas di bawah **TIDAK dihapus dan TIDAK dianggap selesai** — status tetap `- [ ]`.
 > Untuk mengaktifkan kembali: pindahkan baris tugas ke bagian `## 🚀 Status Tugas Aktif` di `README.md` (atau minta agent mengembalikannya).
 
-## Cafe Ruang Tunggu (7 tugas — belum live penuh per verifikasi 27 Nov 2026)
+## Cafe Ruang Tunggu (6 tugas — belum live penuh per verifikasi 27 Nov 2026)
 
 - [ ] **Cafe: perluas ketahanan offline (cache antrean dapur baca-saja, rencana jaringan cadangan)**
 
 - [ ] **Cafe: laporan mingguan/bulanan owner + nomor urut harian di struk**
 
 - [ ] **Cafe: monitoring error ringan (Sentry/log) + smoke test CI web**
-
-- [ ] **Cafe: helper printer thermal APK dan uji printer fisik sebelum buka**
 
 - [ ] **Cafe: fitur batal/void order dengan izin per-role + alasan + notifikasi + tampilan closing**
 

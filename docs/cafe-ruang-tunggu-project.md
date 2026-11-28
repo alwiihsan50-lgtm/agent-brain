@@ -344,3 +344,34 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
 - Audit free tier atas permintaan USER: DB 15MB/500MB; storage 4,5MB/1GB; unduh pertama
   ±2,4MB/perangkat lalu cache SW; 1 channel/klien; estimasi egress <1GB/5GB; realtime
   <200rb/2M pesan; retensi 12 bulan membatasi pertumbuhan. Kesimpulan: tidak berat.
+
+## 17. RT Print Helper — APK helper printer thermal (28 Nov, SIAP REVIEW, belum konfirmasi USER)
+
+- Instruksi USER 28 Nov: siapkan APK helper untuk device dekat printer Bluetooth;
+  diklarifikasi: **tablet kasir terhubung langsung ke printer** → helper dipasang di
+  tablet kasir yang sama, kontrak localhost docs/PRINTER.md tidak berubah, main app
+  tidak perlu perubahan logika. Printer belum dibeli → generik SPP ESC/POS 58/80mm.
+- Tugas parkir "helper printer thermal APK" diaktifkan kembali (README + parked-tasks).
+- Implementasi: folder baru `printer-helper/` (Kotlin, minSdk 24, target 36,
+  package `com.ruangtunggu.printhelper`): modul `core` JVM murni (NanoHTTPD
+  127.0.0.1, PIN SHA-256+salt, lockout 5x→30s, base64 ketat ≤64KB, idempoten jobId
+  LRU 64, guard 9s) + modul `app` (foreground service connectedDevice, Bluetooth
+  SPP chunk 64B+jeda 15ms deadline 8s fallback RFCOMM 1, UI satu layar Warm
+  Specialty, tes koneksi/cetak, autostart boot). Tanpa izin lokasi (tidak scan).
+- Uji: `:core:test` 23/23 lulus di JVM (kontrak HTTP penuh dengan printer palsu).
+  Bug ditemukan & diperbaiki via test: body keep-alive harus dibaca sebelum respons
+  401/429; base64 kosong = array kosong; JVM target 17 konsisten.
+- Web 1.19.0: halaman /install kartu unduhan helper + panduan setup;
+  `public/helper-version.json` + `scripts/update-helper-version.mjs`;
+  vercel.json no-cache + sw.js network-first helper-version.json (cache v1.19.0);
+  sheet Printer main app menautkan /install.
+- CI: `.github/workflows/printer-helper.yml` (keystore sama dengan APK utama,
+  uji core → build → unggah bucket apk → update helper-version.json → commit main).
+- **CI run 46134571448 SUKSES (28 Nov)**: APK resmi `rt-print-helper-1.0.0-1.apk`
+  (768KB) terunggah ke bucket apk; SHA-256 unduhan cocok
+  `0efa04f6171f0c03…`; sertifikat rilis sama dengan APK utama (`44e3405c…`);
+  halaman /install produksi menampilkan tombol "Unduh RT Print Helper 1.0.0".
+  URL: https://svgbotpzgukqurwcrdqd.supabase.co/storage/v1/object/public/apk/rt-print-helper-1.0.0-1.apk
+- Lingkungan PC: Android SDK baru dipasang di ~/Android/sdk (Data drive NTFS tidak
+  bisa exec binary); openjdk-21-jdk-headless dipasang (sebelumnya JRE-only).
+- **Belum**: uji fisik printer (menunggu pembelian), konfirmasi USER.
