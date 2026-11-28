@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** Bugfix UI web 1.11.1 (blok merah tanpa label + tombol menu tumpang tindih) — menunggu review ulang USER
+- **Current Task:** Bugfix UI web 1.11.1 + 1.11.2 — menunggu review ulang USER
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** 28 Nov 07:13 USER kirim 2 SS via TailShare (IMG_6748/6749): tombol ghost danger = teks merah di latar merah (label tak terlihat) di Hapus menu, Batalkan order, Nonaktifkan staf; label aksi menu overlap di <=760px. Fix commit f4f94e7 (web 1.11.1): .btn.ghost.danger background:#fff; .menu-card-actions .btn flex 2x2 di <=760px; .btn:disabled opacity .55; bump sw.js CACHE_VERSION + config.appVersion + version.json. Verifikasi lokal 390px & 1280px lulus, 0 console error. DATA DUMMY TETAP DIPERTAHANKAN (instruksi USER). Task 1.10.0 & 1.11.0 TETAP - [ ] (konfirmasi selesai ditarik USER karena bug). Setelah USER konfirmasi ulang: centang task, kembalikan parkir #6, hapus dummy (SQL di header supabase/seed-dummy-20261128.sql). Mode review masih LIVE + sandi demo belum direset.
+- **Next Steps / Notes:** 28 Nov: (1) SS IMG_6748/6749: blok merah tanpa label = ghost danger teks merah di latar merah; fix 1.11.1 commit f4f94e7 (.btn.ghost.danger background #fff, aksi menu 2x2 <=760px, cue disabled). (2) SS IMG_6750: tombol antar/cetak pecah 2 baris bertingkat; fix 1.11.2 commit 10ff397 (.oc-foot flex-wrap, .oc-actions flex 1 1 300px + .btn grid 2 kolom rata). Keduanya terverifikasi lokal+produksi 390/414px, 0 console error; bukti screenshots/fix-1.11.1-*.png & fix-1.11.2-ocfoot-390.png. DATA DUMMY TETAP (instruksi USER). Task 1.10.0 & 1.11.0 TETAP - [ ] sampai USER konfirmasi ulang; setelah itu: centang, kembalikan parkir #6, hapus dummy (SQL header supabase/seed-dummy-20261128.sql). Mode review LIVE + sandi demo belum direset.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-11-28 07:18 WIB
+- **Last Updated At:** 2026-11-28 07:27 WIB
