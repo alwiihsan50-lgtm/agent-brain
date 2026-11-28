@@ -332,3 +332,15 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
   menu.foto DITOLAK untuk kasir dan owner lintas kategori; regresi 1.16/1.17 lulus.
 - Pelajaran: cleanup bucket produksi hanya pola uji (foto asli owner jangan disapu);
   skrip uji idempoten terhadap sisa run gagal; assertion gambar tunggu complete.
+
+### 16.1 Rilis 1.18.1 — riwayat chat berjendela + audit free tier
+
+- Temuan: chat lama limit 200 gabungan manusia+sistem, tanpa pagination; percakapan
+  bisa kelaparan oleh kartu sistem; staff tak punya Jejak → riwayat lama tak terjangkau.
+- Desain USER: maks 200 di layar; halaman lama MENGGANTI jendela (terbaru tidak dimuat).
+- loadChatWindow(older): keyset cursor (dibuat_pada,id), scope eq('tipe') per chip;
+  oldbar "Riwayat sampai …" + Kembali ke terbaru; realtime hanya menyisip ke jendela live.
+- Index komposit messages (tipe, dibuat_pada desc, id desc) + (dibuat_pada desc, id desc).
+- Audit free tier atas permintaan USER: DB 15MB/500MB; storage 4,5MB/1GB; unduh pertama
+  ±2,4MB/perangkat lalu cache SW; 1 channel/klien; estimasi egress <1GB/5GB; realtime
+  <200rb/2M pesan; retensi 12 bulan membatasi pertumbuhan. Kesimpulan: tidak berat.
