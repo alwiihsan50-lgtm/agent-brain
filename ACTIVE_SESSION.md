@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** RT Print Helper 1.0.0 — siap review USER
+- **Current Task:** Relay cetak jarak jauh print_jobs — siap review USER
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Commit e125215 push main; web 1.19.0 live (install kartu helper, helper-version.json no-cache). APK lokal 768KB signed sertifikat rilis 44e3405c; 23/23 uji core JVM lulus. CI run 46134571448 membangun APK resmi -> bucket apk + helper-version.json. Uji fisik printer menunggu pembelian. Tugas README tetap [ ] sampai konfirmasi USER.
+- **Next Steps / Notes:** Commit b920ce2; web 1.20.0 live; migrasi 20261128070000 diterapkan; 31/31 uji JVM + E2E RLS 14/14 + relayIT produksi lulus; CI helper 1.1.0 run 46139196594. Data uji bersih. Tugas tetap [ ] sampai konfirmasi USER.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-11-28 17:19 WIB
+- **Last Updated At:** 2026-11-28 18:19 WIB

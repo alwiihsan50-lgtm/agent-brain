@@ -375,3 +375,39 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
 - Lingkungan PC: Android SDK baru dipasang di ~/Android/sdk (Data drive NTFS tidak
   bisa exec binary); openjdk-21-jdk-headless dipasang (sebelumnya JRE-only).
 - **Belum**: uji fisik printer (menunggu pembelian), konfirmasi USER.
+
+## 18. Relay cetak jarak jauh print_jobs (28 Nov, Opsi B — SIAP REVIEW, belum konfirmasi USER)
+
+- Pertanyaan USER: "saat waiter print dari jauh, apa printer tetap bekerja kalau
+  tablet kasir terhubung?" → desain lama TIDAK bisa (helper hanya 127.0.0.1).
+  USER pilih **Opsi B: relay Supabase** ("B aja. langsung kerjakan").
+- **Migrasi 20261128070000_print_jobs.sql** (db push --remote): tabel print_jobs
+  (bytes ≤90000 char, status pending/printing/done/failed/cancelled, pelaku,
+  FK orders cascade). RLS: insert owner/owner_makanan/kasir/waiter pelaku=diri;
+  baca semua staf; update HANYA status/error/selesai_pada (revoke+grant per-kolom);
+  tanpa delete klien; realtime publication; retensi 7 hari pg_cron 03:25.
+- **Helper 1.1.0** (`core/relay/` JVM murni + OkHttp): GoTrueClient (login staf
+  sekali, refresh otomatis), JobsApi (pending/byId/claim atomik/finish/markOrder),
+  RealtimeClient (WebSocket Phoenix murni, heartbeat 30s, join pakai JWT → RLS),
+  RelayEngine (reconnect backoff 1→30s, kompensasi pending tiap tersambung,
+  cetak serial, klaim cegah dobel). UI kartu "Relay cloud" + status notifikasi.
+  Refresh token disimpan di prefs; sandi tidak disimpan.
+- **Web 1.20.0**: printOrder = helper lokal → relay (insert print_jobs + lacak
+  sesi + toast menunggu/tercetak/gagal + pengingat 30s) → window.print.
+  struk_dicetak ditandai HELPER setelah tercetak (bukan peminta). Realtime
+  UPDATE print_jobs di channel yang ada. Sheet Printer + /install diperbarui.
+- **Verifikasi**: 31/31 uji JVM (23 HTTP + 8 relay MockWebServer termasuk
+  simulasi Phoenix WS); E2E RLS produksi 14/14 (anon/dapur/spoof/bytes>90K
+  ditolak; klaim atomik; update bytes ditolak; delete senyap 0 baris);
+  **:core:relayIT ke Supabase asli LULUS** (realtime ONLINE, job waiter 18
+  tercetak byte-utuh, done, order ditandai). Data uji dibersihkan (job dihapus
+  via SQL, flag dummy dipulihkan; audit mencatat perubahan nyata saja).
+- Pelajaran: MockWebServer+WS teardown harus tutup socket sisi server dulu;
+  JVM IT wajib exitProcess (thread OkHttp menahan JVM); break dalam inline
+  lambda butuh Kotlin 2.2 (hindari); RLS delete menolak SENYAP (204, 0 baris).
+- Alat bantu sementara: /tmp/opencode/sbquery.py (SQL via Management API,
+  token dari keyring gnome — service "Supabase CLI"); e2e-print-jobs.mjs.
+- CI run 46139196594 **SUKSES**: APK resmi `rt-print-helper-1.1.0-2.apk`
+  terunggah; SHA-256 unduhan cocok `cbb0270796bab68a…`; sertifikat rilis sama
+  (`44e3405c…`); helper-version.json produksi 1.1.0 (2); commit b920ce2.
+- **Belum**: uji fisik Bluetooth (printer belum dibeli), konfirmasi USER.
