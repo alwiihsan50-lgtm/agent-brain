@@ -41,25 +41,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Cafe web 1.18.1: riwayat chat berjendela — maks 200 pesan di layar; Muat 200 lebih lama MENGGANTI jendela + Kembali ke terbaru; scope query per chip filter (kuota 200 masing-masing, percakapan tidak kelaparan oleh kartu sistem); realtime tidak menggeser halaman lama; index komposit messages (tipe,waktu,id)+(waktu,id); commit 8afb38b live**
+- [x] **Cafe web 1.18.1: riwayat chat berjendela — maks 200 pesan di layar; Muat 200 lebih lama MENGGANTI jendela + Kembali ke terbaru; scope query per chip filter (kuota 200 masing-masing, percakapan tidak kelaparan oleh kartu sistem); realtime tidak menggeser halaman lama; index komposit messages (tipe,waktu,id)+(waktu,id); commit 8afb38b live**
 
-- [ ] **Cafe web 1.18.0: foto per menu (49 foto default statis lisensi bebas di public/menu/, pola QRIS) + owner bisa ganti/hapus foto sendiri per menu via Kelola Menu (bucket menu-foto, RLS per kategori meniru 1.14.0, kompres client-side webp 600px, nama ber-timestamp, audit menu.foto tanpa kartu chat, cache SW cache-first); commit 3bea046 live**
-
-- [ ] **Cafe web 1.17.1: koneksi jujur + refresh eksplisit — pill Live/Menyambung/Offline berdasar kesehatan realtime (sidebar & dot mobile sinkron), tombol refresh topbar semua peran, resubscribe bersih semua channel + reload kompensasi saat online/pulih/visibility; commit a0c8521 + e52d7c0 live**
-
-- [ ] **Cafe web 1.17.0: tab Jejak khusus kedua owner + RLS audit_log owner-only di server (migrasi 20261128040000); staff: navigasi lebih lega (4/3 tab) & tetap lihat aktivitas live di chat; semua tindakan semua peran tetap tercatat; commit 17ae865 live**
-
-- [ ] **Cafe web 1.16.2: toggle Rincian item di tab Jejak — default ringkas (1 baris per pembuatan order, baris item.tambah disembunyikan), toggle buka arsip penuh, pencarian menembus toggle, CSV mengikuti toggle; murni client-side tanpa perubahan trigger/database; commit 4c3f475 live**
-
-- [ ] **Cafe web 1.16.0/1.16.1: jejak aktivitas (audit trail) — trigger database append-only (orders/order_items/menu/profiles) + staff-admin/demo-login tercatat pelaku terverifikasi; pesan sistem realtime di chat staff (filter Semua/Percakapan/Aktivitas, badge hanya pesan manusia); tab Jejak semua peran (filter periode/pelaku/aksi, cari, CSV); retensi 12 bulan pg_cron; refresh Jejak mulus; commit 472daf5 + 2e02f7b live**
+- [x] **Cafe web 1.18.0: foto per menu (49 foto default statis lisensi bebas di public/menu/, pola QRIS) + owner bisa ganti/hapus foto sendiri per menu via Kelola Menu (bucket menu-foto, RLS per kategori meniru 1.14.0, kompres client-side webp 600px, nama ber-timestamp, audit menu.foto tanpa kartu chat, cache SW cache-first); commit 3bea046 live**
 
 - [ ] **Cafe SAAT LAUNCH: hapus mode review — unset secret DEMO_PASSWORD & DEMO_PASSWORD_MAKANAN, set config.demoLogin false, hapus/nonaktifkan akun demo (owner/ownermakanan/kasir/waiter/dapur/barista@ruangtunggu.com); instruksi USER 28 Nov**
 - [ ] **Cafe SAAT LAUNCH (atau permintaan USER): hapus semua data dummy (LIKE 'Dummy%', 482 order per 28 Nov) — backup dulu ke file SQL, lalu DELETE order_items/orders; sequence pakai setval(max(id)+1) BUKAN restart 1 (order asli id 15 masih ada); verifikasi Closing/Evaluasi bersih**
 - [ ] **Cafe: backup otomatis Supabase schema+data dan uji restore berkala** (dikembalikan dari parkir #6 atas konfirmasi USER 28 Nov)
-
-- [x] **Cafe web 1.15.0: tombol review sekali klik Owner Makanan (demo-login provision otomatis via secret baru DEMO_PASSWORD_MAKANAN) + rename owner jadi Owner Minuman (profil, ROLELBL, topbar, opsi staf); commit 82ad807 live**
-
-- [x] **Cafe web 1.14.0: kunci manajemen menu per owner (varian B + UI hide) — role owner_makanan RLS makanan-only; UI owner(minuman+admin) & owner_makanan di-scope per kategori, form kategori terkunci; laporan/karyawan/laci bersama tetap; migrasi 20261128020000 + staff-admin ROLES; commit 11b4106 live**
 
 - 🅿️ **11 tugas belum-live DISISIHKAN atas instruksi USER (27 Nov 2026)** menunggu list prioritas baru — 7 Cafe + 4 Non-Cafe, status tetap `- [ ]`, tersimpan utuh di [docs/parked-tasks.md](docs/parked-tasks.md). (Backup otomatis dikembalikan ke aktif 28 Nov atas konfirmasi USER.)
 
@@ -82,6 +70,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 16:50 WIB
+**Last Updated At:** 2026-11-28 16:57 WIB
 
 

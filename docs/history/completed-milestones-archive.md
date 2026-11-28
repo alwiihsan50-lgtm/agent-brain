@@ -6,6 +6,12 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 28 November 2026
 
+- [x] **Cafe web 1.16.0/1.16.1: jejak aktivitas (audit trail) — trigger database append-only (orders/order_items/menu/profiles) + staff-admin/demo-login tercatat pelaku terverifikasi; pesan sistem realtime di chat staff (filter Semua/Percakapan/Aktivitas, badge hanya pesan manusia); tab Jejak semua peran (filter periode/pelaku/aksi, cari, CSV); retensi 12 bulan pg_cron; refresh Jejak mulus; commit 472daf5 + 2e02f7b live**
+- [x] **Cafe web 1.16.2: toggle Rincian item di tab Jejak — default ringkas (1 baris per pembuatan order, baris item.tambah disembunyikan), toggle buka arsip penuh, pencarian menembus toggle, CSV mengikuti toggle; murni client-side tanpa perubahan trigger/database; commit 4c3f475 live**
+- [x] **Cafe web 1.17.0: tab Jejak khusus kedua owner + RLS audit_log owner-only di server (migrasi 20261128040000); staff: navigasi lebih lega (4/3 tab) & tetap lihat aktivitas live di chat; semua tindakan semua peran tetap tercatat; commit 17ae865 live**
+- [x] **Cafe web 1.17.1: koneksi jujur + refresh eksplisit — pill Live/Menyambung/Offline berdasar kesehatan realtime (sidebar & dot mobile sinkron), tombol refresh topbar semua peran, resubscribe bersih semua channel + reload kompensasi saat online/pulih/visibility; commit a0c8521 + e52d7c0 live**
+- [x] **Cafe web 1.15.0: tombol review sekali klik Owner Makanan (demo-login provision otomatis via secret baru DEMO_PASSWORD_MAKANAN) + rename owner jadi Owner Minuman (profil, ROLELBL, topbar, opsi staf); commit 82ad807 live**
+- [x] **Cafe web 1.14.0: kunci manajemen menu per owner (varian B + UI hide) — role owner_makanan RLS makanan-only; UI owner(minuman+admin) & owner_makanan di-scope per kategori, form kategori terkunci; laporan/karyawan/laci bersama tetap; migrasi 20261128020000 + staff-admin ROLES; commit 11b4106 live**
 - [x] **Cafe web 1.10.0: meja 1-30 + tab Selesai terbaru di atas + waiter/kasir print independen (hapus minta struk) + penjualan per menu di Closing**
 - [x] **Cafe web 1.11.0: cancel order kasir/waiter hanya saat belum diproses + alasan wajib (lama/tidak sesuai/lainnya) + push dapur + tampilan closing**
 - [x] **Cafe web 1.12.0: format uang K untuk jutaan (1.554.000 -> 1.554K, 12.000.000 -> 12.000K); tidak-bulat ribuan tetap penuh; struk & CSV tetap angka penuh**
