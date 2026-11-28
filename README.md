@@ -41,6 +41,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Cafe web 1.18.0: foto per menu (49 foto default statis lisensi bebas di public/menu/, pola QRIS) + owner bisa ganti/hapus foto sendiri per menu via Kelola Menu (bucket menu-foto, RLS per kategori meniru 1.14.0, kompres client-side webp 600px, nama ber-timestamp, audit menu.foto tanpa kartu chat, cache SW cache-first); commit 3bea046 live**
+
 - [ ] **Cafe web 1.17.1: koneksi jujur + refresh eksplisit — pill Live/Menyambung/Offline berdasar kesehatan realtime (sidebar & dot mobile sinkron), tombol refresh topbar semua peran, resubscribe bersih semua channel + reload kompensasi saat online/pulih/visibility; commit a0c8521 + e52d7c0 live**
 
 - [ ] **Cafe web 1.17.0: tab Jejak khusus kedua owner + RLS audit_log owner-only di server (migrasi 20261128040000); staff: navigasi lebih lega (4/3 tab) & tetap lihat aktivitas live di chat; semua tindakan semua peran tetap tercatat; commit 17ae865 live**
@@ -78,6 +80,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 12:59 WIB
+**Last Updated At:** 2026-11-28 13:58 WIB
 
 

@@ -315,3 +315,20 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
   cegah channel yatim/dobel setelah network flap.
 - Pelajaran uji: nama data uji harus unik per run (sisa run lama terbaca sebagai
   data baru); instrumentasi loadTab+stack untuk membuktikan sumber reload.
+
+### 16. Rilis 1.18.0 — foto per menu + ganti foto oleh owner
+
+- Keputusan USER: foto ilustrasi dari internet untuk 49 menu existing; satu rilis
+  sekalian dengan fitur owner ganti foto sendiri (pilihan "Sekalian satu rilis").
+- Foto default: 49 webp (±35KB masing-masing, total 1,7MB) di public/menu/<id>.webp,
+  sumber Wikimedia Commons lisensi bebas; QA visual montase membuang kandidat salah.
+  Pola QRIS: nol beban Supabase untuk foto default; cache SW cache-first.
+- Override owner: kolom menu.foto + bucket menu-foto (baca publik; tulis owner /
+  owner_makanan sesuai folder kategori, meniru RLS menu 1.14.0). Upload dari
+  Kelola Menu: kompres client-side (canvas webp 600px q0.76), nama ber-timestamp
+  (URL immutable), satu update menu = satu baris audit menu.foto (tanpa kartu chat).
+- Fallback bertingkat: override owner → foto default statis (id<=49) → ikon.
+- Verifikasi: lintas perangkat override terlihat di kasir; penetrasi RLS storage &
+  menu.foto DITOLAK untuk kasir dan owner lintas kategori; regresi 1.16/1.17 lulus.
+- Pelajaran: cleanup bucket produksi hanya pola uji (foto asli owner jangan disapu);
+  skrip uji idempoten terhadap sisa run gagal; assertion gambar tunggu complete.
