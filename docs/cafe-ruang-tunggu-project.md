@@ -427,3 +427,37 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
   CACHE_VERSION); dijalankan untuk 1.20.0; checklist di docs/DEPLOYMENT.md.
 - Verifikasi produksi: config.js 1.20.0 + no-cache; version.json 1.20.0.
 - Pelajaran rilis web: jangan naikkan versi manual per-file; pakai script.
+
+## 20. Hardening pra-launch (28 Nov malam, commit 9159fca — SIAP REVIEW)
+
+Konfirmasi USER 28 Nov: kerjakan semua KECUALI #3 (mode review tetap sampai launch).
+Web 1.20.1 live; helper 1.2.0 via CI. Lima item:
+
+1. **Watchdog job cetak yatim** (migrasi 20261128080000, kolom `diklaim_pada`):
+   helper mati setelah klaim tapi sebelum selesai → job tertinggal `printing`
+   selamanya, struk diam-diam hilang. RelayEngine tiap 60s + saat tersambung
+   periksa job printing >3mnt: sudah tercetak (orders.struk_dicetak) → done;
+   belum → kembalikan ke pending (cetak ulang). Atomik+serial, ambang 3mnt ≫
+   guard tulis 9s (tak dobel). finish/markOrder retry 3x. +3 uji JVM → 34 lulus.
+2. **Refresh token relay terenkripsi** (EncryptedSharedPreferences/Android
+   Keystore AES256-GCM) + migrasi otomatis dari plain; fallback plain bila
+   Keystore bermasalah. useAndroidX=true. App kompilasi lulus.
+3. (DITUNDA sampai launch — matikan mode review.)
+4. **Snapshot skema inti** `supabase/schema_snapshot.sql` (supabase db dump
+   --remote): tabel awal + my_role + RPC order + RLS dasar + trigger yang dulu
+   dibuat langsung di remote (tak ada di repo). Referensi/restore, bukan migrasi.
+   RPC order ter-review aman (cek peran, validasi, harga dihitung server).
+5. **CSP ketat + header** (vercel.json): script self+CDN Supabase; inline
+   script/handler dirapikan (install.js, offline.js, listener terdelegasi);
+   frame-ancestors none + X-Frame-Options DENY + HSTS. connect-src izinkan
+   helper 127.0.0.1 + Supabase https/wss. Diuji Playwright headless lokal &
+   produksi: login/menu terautentikasi/install/offline = 0 pelanggaran CSP.
+6. **CORS edge function** (demo-login, staff-admin): hanya origin app
+   (cafe-ruang-tunggu.vercel.app, mencakup web+APK) + localhost dev; bukan *.
+   Deploy: demo-login --no-verify-jwt, staff-admin verify_jwt default.
+   Verifikasi: origin app di-echo, origin jahat ditolak.
+
+- Deploy: db push (kolom diklaim_pada ada), functions deploy keduanya, push
+  9159fca (Vercel), CI helper 1.2.0 (versionCode 3).
+- Verifikasi produksi: header CSP/HSTS/XFO aktif, config 1.20.1, CORS benar.
+- **Belum**: konfirmasi USER; uji fisik Bluetooth (printer belum dibeli).

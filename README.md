@@ -35,11 +35,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 | **Torrent PC Suite** | `Port 6801` (RPC) & `6888` (Web UI) | 🟢 Live | Sentralisasi torrent eksklusif PC (`cari-film` / `pc-torrent` / Web App). Akses via Tailscale. |
 | **MT5 MCP Server** | `mcp-mt5` / `mcp_config.json` | 🟢 Terpasang | Integrasi native MetaTrader 5 dengan Antigravity AI (`agy`): cek akun, posisi, analisa SMC M5, dan emergency close. |
 | **Vibe-Trading AI Workspace** | `Port 8899` / `localhost:8899` | 🟢 Live (Systemd) | Quantitative financial research & multi-agent trading workspace (HKUDS): 306 QuantLib math functions, 478 Alpha Zoo, 29 data loaders, React 19 UI, terintegrasi AGY Bridge Port 5050. |
-| **Cafe Ruang Tunggu POS** | `cafe-ruang-tunggu.vercel.app` | 🟢 Live | POS kafe + antrean + kelola menu owner; PWA + APK Android Capacitor (`com.ruangtunggu.cafe`) + push FCM/Web Push. Web live Warm Specialty **1.19.0** (halaman /install kartu unduhan **RT Print Helper** — APK helper printer Bluetooth `com.ruangtunggu.printhelper` di tablet kasir, 23/23 uji kontrak HTTP lulus, siap review USER 28 Nov; uji fisik menunggu printer dibeli). APK utama 1.1.0 (signed v2). Lokal: `D:\Projects\cafe-ruang-tunggu`. |
+| **Cafe Ruang Tunggu POS** | `cafe-ruang-tunggu.vercel.app` | 🟢 Live | POS kafe + antrean + kelola menu owner; PWA + APK Android Capacitor (`com.ruangtunggu.cafe`) + push FCM/Web Push. Web live **1.20.1** (hardening pra-launch: CSP ketat + header keamanan, CORS edge function dibatasi, watchdog job cetak yatim, token relay terenkripsi, snapshot skema inti — commit 9159fca, SIAP REVIEW USER 28 Nov). APK utama 1.1.0; **RT Print Helper 1.2.0** (3) di tablet kasir (Bluetooth SPP ESC/POS 58/80mm + relay cloud print_jobs; 34/34 uji JVM; uji fisik menunggu printer dibeli). Lokal: `D:\Projects\cafe-ruang-tunggu`. |
 
 ---
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
+
+- [ ] **Cafe hardening pra-launch (konfirmasi USER 28 Nov, kecuali #3 mode review): (1) watchdog job printing yatim + kolom diklaim_pada, (2) enkripsi refresh token relay (EncryptedSharedPreferences), (4) dump skema inti ke repo, (5) header keamanan web CSP/frame-ancestors/HSTS, (6) ketatkan CORS edge function. SIAP REVIEW setelah selesai**
 
 - [x] **Cafe: fix banner versi PWA loop (config.js appVersion tertinggal 1.18.1 sejak rilis 1.19/1.20) — sinkron 1.20.0 + script bump-web-version.mjs tiga-file; commit 031bdc4 live 28 Nov; SIAP REVIEW USER (cek iPhone: banner hilang)**
 
@@ -70,6 +72,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 20:49 WIB
+**Last Updated At:** 2026-11-28 21:57 WIB
 
 

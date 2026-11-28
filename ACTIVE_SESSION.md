@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** Relay cetak jarak jauh print_jobs — siap review USER
+- **Current Task:** Hardening pra-launch
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** Commit b920ce2; web 1.20.0 live; migrasi 20261128070000 diterapkan; 31/31 uji JVM + E2E RLS 14/14 + relayIT produksi lulus; CI helper 1.1.0 run 46139196594. Data uji bersih. Tugas tetap [ ] sampai konfirmasi USER.
+- **Next Steps / Notes:** 3 fitur dikonfirmasi USER selesai & diarsipkan. Diskusi hardening: RLS, auth/demo kill-switch, helper localhost, secrets, backup. Tugas launch (hapus demo+dummy) & backup masih [ ].
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-11-28 18:19 WIB
+- **Last Updated At:** 2026-11-28 20:49 WIB
