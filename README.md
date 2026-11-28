@@ -41,6 +41,10 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Cafe web 1.12.0: logo pohon beringin penempatan minimal (boot, login desktop+mobile, sidebar) + favicon/apple-touch/ikon PWA baru tree-*.png; ikon lama immutable dihapus**
+
+- [ ] **Cafe web 1.12.0: format uang K untuk jutaan (1.554.000 -> 1.554K, 12.000.000 -> 12.000K); tidak-bulat ribuan tetap penuh; struk & CSV tetap angka penuh**
+
 - [ ] **Cafe web 1.11.0: cancel order kasir/waiter hanya saat belum diproses + alasan wajib (lama/tidak sesuai/lainnya) + push dapur + tampilan closing**
 
 - [ ] **Cafe web 1.10.0: meja 1-30 + tab Selesai terbaru di atas + waiter/kasir print independen (hapus minta struk) + penjualan per menu di Closing**
@@ -70,6 +74,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 07:27 WIB
+**Last Updated At:** 2026-11-28 07:48 WIB
 
 
