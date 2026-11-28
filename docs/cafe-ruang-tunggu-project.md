@@ -303,3 +303,15 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
 - Pencatatan trigger TIDAK berubah: semua tindakan semua peran tetap tercatat.
 - Verifikasi: staff select 0 baris + tulis 403 DITOLAK; uji silang baris asli UTUH;
   owner penuh; chat staff tetap realtime; navigasi staff lebih lega.
+
+### 15.3 Rilis 1.17.1 — koneksi jujur & refresh eksplisit
+
+- Paket kecil event-driven (nol polling, nol perubahan DB): tombol refresh
+  topbar semua peran; pill Live/Menyambung…/Offline berdasar kesehatan channel
+  realtime + navigator.onLine; titik sidebar & dot mobile sinkron.
+- Pemulihan: online event / visibilitychange / refresh → resubscribe bila channel
+  tidak sehat; SUBSCRIBED pasca-putus → reload kompensasi (order tidak terlewat).
+- subscribeRealtime membuang SEMUA channel (db.getChannels) saat resubscribe:
+  cegah channel yatim/dobel setelah network flap.
+- Pelajaran uji: nama data uji harus unik per run (sisa run lama terbaca sebagai
+  data baru); instrumentasi loadTab+stack untuk membuktikan sumber reload.
