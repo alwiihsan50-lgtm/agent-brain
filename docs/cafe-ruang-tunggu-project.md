@@ -293,3 +293,13 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
 - Nol migrasi; fn_audit & seluruh jalur order tidak disentuh.
 - Produksi sudah dipakai sungguhan: 6 order asli (15, 498 batal, 517–520),
   68 baris audit asli — semuanya utuh setelah cleanup uji.
+
+### 15.2 Rilis 1.17.0 — Jejak owner-only (RLS di server)
+
+- Usul USER: tab Jejak tidak perlu di semua staff. Keputusan: arsip Jejak untuk
+  kedua owner; staff cukup chat live (messages tetap terbuka semua peran).
+- Migrasi 20261128040000: policy audit_baca → my_role() in ('owner','owner_makanan').
+  UI: TABS staff tanpa jejak; realtime audit_log hanya berlangganan owner.
+- Pencatatan trigger TIDAK berubah: semua tindakan semua peran tetap tercatat.
+- Verifikasi: staff select 0 baris + tulis 403 DITOLAK; uji silang baris asli UTUH;
+  owner penuh; chat staff tetap realtime; navigasi staff lebih lega.
