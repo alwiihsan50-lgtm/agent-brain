@@ -5,9 +5,9 @@
 
 - **Status:** IN_PROGRESS
 - **Active Project:** Cafe Ruang Tunggu
-- **Current Task:** Web 1.12.0 (format K jutaan + logo minimal) live — menunggu review USER; 1.10.0/1.11.0 juga masih menunggu konfirmasi
+- **Current Task:** Web 1.13.0 (tab Evaluasi menu owner) live — menunggu review USER; 1.10.0/1.11.0/1.12.0 juga masih menunggu konfirmasi
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** 28 Nov: rilis 1.12.0 commit bbe6559 live produksi. (1) fmt(): semua kelipatan 1000 -> K termasuk jutaan (1.554.000->1.554K, 12.000.000->12.000K); tidak-bulat tetap penuh; rp() struk&CSV tetap penuh; assert produksi lulus. (2) Logo beringin dari TailShare (5b4c1ec7 jpeg): latar putih dihapus jadi PNG transparan; tree-mark.png aspek alami; placement minimal boot/login-desktop(plate krem)/login-mobile/sidebar; favicon tree-32, apple tree-180, PWA tree-192/512/maskable (nama baru karena /icons/* immutable 1 th); ikon lama dihapus (404); SW CORE+notif icon pindah; cache cafe-v1.12.0. Bukti screenshots/logo-1.12.0-*.png. Task baru 1.12.0 x2 status - [ ]; task 1.10.0/1.11.0 tetap - [ ]; DATA DUMMY TETAP. Setelah USER konfirmasi: centang task terkait, kembalikan parkir #6, hapus dummy (SQL header seed-dummy-20261128.sql). Mode review LIVE + sandi demo belum direset.
+- **Next Steps / Notes:** 28 Nov: rilis 1.13.0 commit fe0d83a live produksi. Tab baru owner 'Evaluasi' (TABS.owner: closing,evaluasi,pesanan,menu,chat; ikon i-trend). computeMenuEval() murni client-side (pola computeClosingSplit): periode kini+pembanding satu query orders+order_items; semua menu dinilai termasuk 0 terjual & nonaktif; item menu terhapus ditandai; order batal dikecualikan. Ambang: Laris >=10% omzet, Sepi <2%, mati qty 0. KPI: omzet+tren, best seller, menu aktif tanpa penjualan, konsentrasi top 3. Periode: hari ini/7/30/custom (tanggal terbalik dinormalisasi). Export CSV evaluasi-menu-*.csv angka penuh. Bottom nav 5 tombol muat 390px (guard <=400px). Verifikasi lokal+produksi: assert sintetis (tren 100%, batal excluded, deleted row, dead count) + data nyata (453K/11 trx — ada 1 order baru dari review USER selain 10 dummy), 0 console error. Bukti screenshots/eval-1.13.0-*.png. Task 1.13.0 - [ ]; task 1.10.0/1.11.0/1.12.0x2 tetap - [ ]; DATA DUMMY TETAP. Setelah USER konfirmasi: centang task terkait, kembalikan parkir #6, hapus dummy (SQL header seed-dummy-20261128.sql). Mode review LIVE + sandi demo belum direset.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-11-28 07:48 WIB
+- **Last Updated At:** 2026-11-28 08:10 WIB

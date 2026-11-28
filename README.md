@@ -41,6 +41,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Cafe web 1.13.0: tab Evaluasi menu owner — periode hari ini/7/30 hari/custom, qty+omzet+% kontribusi+tren vs periode lalu, badge Laris/Normal/Sepi/Tidak terjual, KPI best seller/menu mati/konsentrasi top 3, export CSV; commit fe0d83a live produksi**
+
 - [ ] **Cafe web 1.12.0: logo pohon beringin penempatan minimal (boot, login desktop+mobile, sidebar) + favicon/apple-touch/ikon PWA baru tree-*.png; ikon lama immutable dihapus**
 
 - [ ] **Cafe web 1.12.0: format uang K untuk jutaan (1.554.000 -> 1.554K, 12.000.000 -> 12.000K); tidak-bulat ribuan tetap penuh; struk & CSV tetap angka penuh**
@@ -74,6 +76,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 07:48 WIB
+**Last Updated At:** 2026-11-28 08:10 WIB
 
 
