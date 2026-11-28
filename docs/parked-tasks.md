@@ -4,7 +4,7 @@
 > Seluruh tugas di bawah **TIDAK dihapus dan TIDAK dianggap selesai** — status tetap `- [ ]`.
 > Untuk mengaktifkan kembali: pindahkan baris tugas ke bagian `## 🚀 Status Tugas Aktif` di `README.md` (atau minta agent mengembalikannya).
 
-## Cafe Ruang Tunggu (8 tugas — belum live penuh per verifikasi 27 Nov 2026)
+## Cafe Ruang Tunggu (7 tugas — belum live penuh per verifikasi 27 Nov 2026)
 
 - [ ] **Cafe: perluas ketahanan offline (cache antrean dapur baca-saja, rencana jaringan cadangan)**
 
@@ -15,8 +15,6 @@
 - [ ] **Cafe: helper printer thermal APK dan uji printer fisik sebelum buka**
 
 - [ ] **Cafe: fitur batal/void order dengan izin per-role + alasan + notifikasi + tampilan closing**
-
-- [ ] **Cafe: backup otomatis Supabase schema+data dan uji restore berkala**
 
 - [ ] **Cafe: audit & ketatkan RLS orders/profiles (pembatasan per-role/per-kolom + jejak audit perubahan)**
 
@@ -37,4 +35,5 @@
 
 ## Pengingat terkait (bukan tugas parkir)
 
-- ⚠️ **Mode review login sekali klik (web 1.7.0) masih LIVE** (`demoLogin: true` di `public/config.js`). Setelah USER selesai review, matikan kill switch: `supabase secrets unset DEMO_PASSWORD --project-ref svgbotpzgukqurwcrdqd` dan/atau `demoLogin: false` lalu deploy.
+- ⚠️ **Mode review login sekali klik (web 1.7.0, diperluas 1.15.0 jadi 6 peran) masih LIVE** (`demoLogin: true` di `public/config.js`). Saat launch: `supabase secrets unset DEMO_PASSWORD DEMO_PASSWORD_MAKANAN --project-ref svgbotpzgukqurwcrdqd` dan `demoLogin: false` lalu deploy + bersihkan akun demo.
+- ⚠️ **Data dummy (482 order per 28 Nov) TETAP di produksi atas pilihan USER 28 Nov** ("centang task, dummy tetap") sampai permintaan hapus atau launch. Cleanup: SQL header `seed-dummy-20261128.sql` + sequence `setval(max(id)+1)` (bukan restart 1 — order asli id 15 ada).

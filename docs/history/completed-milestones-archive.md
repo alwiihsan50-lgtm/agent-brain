@@ -6,6 +6,14 @@ Dokumen ini berisi arsip seluruh milestone, tugas, dan fitur yang telah selesai 
 
 ## 📅 Selesai Per 28 November 2026
 
+- [x] **Cafe web 1.10.0: meja 1-30 + tab Selesai terbaru di atas + waiter/kasir print independen (hapus minta struk) + penjualan per menu di Closing**
+- [x] **Cafe web 1.11.0: cancel order kasir/waiter hanya saat belum diproses + alasan wajib (lama/tidak sesuai/lainnya) + push dapur + tampilan closing**
+- [x] **Cafe web 1.12.0: format uang K untuk jutaan (1.554.000 -> 1.554K, 12.000.000 -> 12.000K); tidak-bulat ribuan tetap penuh; struk & CSV tetap angka penuh**
+- [x] **Cafe web 1.12.0: logo pohon beringin penempatan minimal (boot, login desktop+mobile, sidebar) + favicon/apple-touch/ikon PWA baru tree-*.png; ikon lama immutable dihapus**
+- [x] **Cafe web 1.13.0: tab Evaluasi menu owner — periode hari ini/7/30 hari/custom, qty+omzet+% kontribusi+tren vs periode lalu, badge Laris/Normal/Sepi/Tidak terjual, KPI best seller/menu mati/konsentrasi top 3, export CSV; commit fe0d83a live produksi**
+- [x] **Cafe: seed dummy 30 hari (468 order lampau 30 Okt–27 Nov, pola realistis: akhir pekan x1.5, tren naik, ±7% batal, 4 menu sengaja nol peminat) via supabase/seed-dummy-30d-20261128.sql (commit 69f55d7); insert-only, guard anti-duplikat; cleanup tetap LIKE 'Dummy%'; hari ini + order asli tidak disentuh**
+- [x] **Cafe: QRIS tampil saat metode dipilih + layar penuh pelanggan (web 1.9.0) — WebP 46KB, 1x unduh per perangkat (precache SW + immutable CDN), test E2E lokal lulus**
+- [x] **Cafe: isi menu real 49 item (20 makanan + 29 minuman) dari daftar foto owner — terverifikasi cocok 100% dengan daftar, seed SQL di repo**
 - [x] **Cafe: wipe database produksi (sisakan 5 akun) — 139 baris terhapus, backup pre-wipe tersimpan, siap isi data real**
 - [x] **Cafe: waiter lacak pengantaran — daftar pesanan siap yang belum/sudah diantar + tandai diantar (status/item + push)**
 - [x] **Cafe: dapur dapat menandai menu sedang habis (kolom habis + RPC set_menu_habis + tab Stok dapur + blokir & tampilan di kasir)**

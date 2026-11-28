@@ -234,3 +234,27 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
 > Catatan protokol: seluruh task proyek ini **sudah ditandai selesai** atas
 > konfirmasi eksplisit USER pada 26 Nov 2026. Yang tersisa bersifat opsional
 > lanjutan (uji perangkat, printer fisik, hardening).
+## 14. Rilis 28 Nov 2026 (1.10.0 → 1.15.0) — dikonfirmasi USER "semua berjalan baik"
+
+- **1.10.0/1.11.0/1.11.1/1.11.2**: meja 1–30, tab Selesai, print independen,
+  penjualan per menu; batal order berizin+alasan; fix ghost-danger & grid aksi.
+- **1.12.0**: format uang K untuk jutaan (`1.554.000 → 1.554K`; tidak-bulat penuh;
+  struk & CSV penuh via `rp()`); logo beringin minimal 4 titik + ikon `tree-*.png`
+  (nama baru karena `/icons/*` immutable 1 tahun).
+- **1.13.0**: tab **Evaluasi** owner — periode hari ini/7/30/custom + pembanding,
+  tren, badge Laris(≥10%)/Sepi(<2%)/Tidak terjual, KPI, export CSV.
+- **Dummy 30 hari**: 468 order lampau (seed `seed-dummy-30d-20261128.sql`,
+  setseed 0.42, guard anti-duplikat); total 482 dummy + order asli `id=15`.
+- **1.14.0**: kunci manajemen menu per owner — role `owner_makanan` (RLS
+  makanan-only, migrasi `20261128020000`); UI owner(minuman+admin) & owner_makanan
+  di-scope per kategori; RLS owner tetap penuh = override darurat server.
+  Pelajaran: RLS UPDATE/DELETE menolak senyap (0 baris), INSERT error 403.
+- **1.15.0**: review 6 peran — tombol sekali klik Owner Makanan (provision otomatis
+  via secret baru `DEMO_PASSWORD_MAKANAN`; secret lama <8 karakter ditolak GoTrue);
+  rename owner → **Owner Minuman** (profil, label, topbar, form staf).
+- **Keputusan USER 28 Nov**: task review ditutup (`[x]` + arsip); parkir #6
+  (backup otomatis) dikembalikan ke aktif; **data dummy TETAP** sampai permintaan
+  hapus atau launch; mode review dihapus **saat launch** (task terpisah).
+- **Checklist launch**: unset `DEMO_PASSWORD` + `DEMO_PASSWORD_MAKANAN`,
+  `demoLogin: false`, bersihkan akun demo, hapus dummy (backup dulu; sequence
+  `setval(max(id)+1)` — jangan restart 1 karena order asli id 15 masih ada).

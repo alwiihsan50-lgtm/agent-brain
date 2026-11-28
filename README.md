@@ -42,28 +42,14 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
 - [ ] **Cafe SAAT LAUNCH: hapus mode review — unset secret DEMO_PASSWORD & DEMO_PASSWORD_MAKANAN, set config.demoLogin false, hapus/nonaktifkan akun demo (owner/ownermakanan/kasir/waiter/dapur/barista@ruangtunggu.com); instruksi USER 28 Nov**
+- [ ] **Cafe SAAT LAUNCH (atau permintaan USER): hapus semua data dummy (LIKE 'Dummy%', 482 order per 28 Nov) — backup dulu ke file SQL, lalu DELETE order_items/orders; sequence pakai setval(max(id)+1) BUKAN restart 1 (order asli id 15 masih ada); verifikasi Closing/Evaluasi bersih**
+- [ ] **Cafe: backup otomatis Supabase schema+data dan uji restore berkala** (dikembalikan dari parkir #6 atas konfirmasi USER 28 Nov)
 
-- [ ] **Cafe web 1.15.0: tombol review sekali klik Owner Makanan (demo-login provision otomatis via secret baru DEMO_PASSWORD_MAKANAN) + rename owner jadi Owner Minuman (profil, ROLELBL, topbar, opsi staf); commit 82ad807 live**
+- [x] **Cafe web 1.15.0: tombol review sekali klik Owner Makanan (demo-login provision otomatis via secret baru DEMO_PASSWORD_MAKANAN) + rename owner jadi Owner Minuman (profil, ROLELBL, topbar, opsi staf); commit 82ad807 live**
 
-- [ ] **Cafe web 1.14.0: kunci manajemen menu per owner (varian B + UI hide) — role owner_makanan RLS makanan-only; UI owner(minuman+admin) & owner_makanan di-scope per kategori, form kategori terkunci; laporan/karyawan/laci bersama tetap; migrasi 20261128020000 + staff-admin ROLES; commit 11b4106 live**
+- [x] **Cafe web 1.14.0: kunci manajemen menu per owner (varian B + UI hide) — role owner_makanan RLS makanan-only; UI owner(minuman+admin) & owner_makanan di-scope per kategori, form kategori terkunci; laporan/karyawan/laci bersama tetap; migrasi 20261128020000 + staff-admin ROLES; commit 11b4106 live**
 
-- [ ] **Cafe: seed dummy 30 hari (468 order lampau 30 Okt–27 Nov, pola realistis: akhir pekan x1.5, tren naik, ±7% batal, 4 menu sengaja nol peminat) via supabase/seed-dummy-30d-20261128.sql (commit 69f55d7); insert-only, guard anti-duplikat; cleanup tetap LIKE 'Dummy%'; hari ini + order asli tidak disentuh**
-
-- [ ] **Cafe web 1.13.0: tab Evaluasi menu owner — periode hari ini/7/30 hari/custom, qty+omzet+% kontribusi+tren vs periode lalu, badge Laris/Normal/Sepi/Tidak terjual, KPI best seller/menu mati/konsentrasi top 3, export CSV; commit fe0d83a live produksi**
-
-- [ ] **Cafe web 1.12.0: logo pohon beringin penempatan minimal (boot, login desktop+mobile, sidebar) + favicon/apple-touch/ikon PWA baru tree-*.png; ikon lama immutable dihapus**
-
-- [ ] **Cafe web 1.12.0: format uang K untuk jutaan (1.554.000 -> 1.554K, 12.000.000 -> 12.000K); tidak-bulat ribuan tetap penuh; struk & CSV tetap angka penuh**
-
-- [ ] **Cafe web 1.11.0: cancel order kasir/waiter hanya saat belum diproses + alasan wajib (lama/tidak sesuai/lainnya) + push dapur + tampilan closing**
-
-- [ ] **Cafe web 1.10.0: meja 1-30 + tab Selesai terbaru di atas + waiter/kasir print independen (hapus minta struk) + penjualan per menu di Closing**
-
-- [x] **Cafe: QRIS tampil saat metode dipilih + layar penuh pelanggan (web 1.9.0) — WebP 46KB, 1x unduh per perangkat (precache SW + immutable CDN), test E2E lokal lulus**
-
-- [x] **Cafe: isi menu real 49 item (20 makanan + 29 minuman) dari daftar foto owner — terverifikasi cocok 100% dengan daftar, seed SQL di repo**
-
-- 🅿️ **12 tugas belum-live DISISIHKAN atas instruksi USER (27 Nov 2026)** menunggu list prioritas baru — 8 Cafe + 4 Non-Cafe, status tetap `- [ ]`, tersimpan utuh di [docs/parked-tasks.md](docs/parked-tasks.md).
+- 🅿️ **11 tugas belum-live DISISIHKAN atas instruksi USER (27 Nov 2026)** menunggu list prioritas baru — 7 Cafe + 4 Non-Cafe, status tetap `- [ ]`, tersimpan utuh di [docs/parked-tasks.md](docs/parked-tasks.md). (Backup otomatis dikembalikan ke aktif 28 Nov atas konfirmasi USER.)
 
 - 📂 *Seluruh milestone dan riwayat tugas terdahulu telah diselesaikan dan diarsipkan ke [docs/history/completed-milestones-archive.md](docs/history/completed-milestones-archive.md).*
 
@@ -84,6 +70,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 10:00 WIB
+**Last Updated At:** 2026-11-28 10:36 WIB
 
 
