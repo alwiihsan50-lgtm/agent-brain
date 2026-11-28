@@ -281,3 +281,15 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
   arsip audit_log tetap (tanpa FK).
 - Verifikasi penuh lokal+produksi lulus; data uji dibersihkan total; baseline
   utuh (482 dummy + 2 order asli, 7 staf termasuk Tomo — cafe sudah pakai app).
+
+### 15.1 Patch 1.16.2 — toggle "Rincian item" (B-ringkas)
+
+- Keluhan USER (IMG_6752): 1 order = 5 baris Jejak (1 order + 4 item).
+- Opsi A (gabung di trigger) ditolak setelah analisis risiko: trigger fail-closed
+  di jalur order produksi, lubang audit bila nanti ada fitur tambah-item-berjalan,
+  arsip belang lama/baru. Dipilih B-ringkas: murni client-side.
+- `state.jejakRinci` (default false) menyembunyikan `item.tambah` di jejakFiltered();
+  toggle checkbox di toolbar; pencarian menembus toggle; CSV mengikuti toggle.
+- Nol migrasi; fn_audit & seluruh jalur order tidak disentuh.
+- Produksi sudah dipakai sungguhan: 6 order asli (15, 498 batal, 517–520),
+  68 baris audit asli — semuanya utuh setelah cleanup uji.
