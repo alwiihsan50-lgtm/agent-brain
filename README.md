@@ -41,6 +41,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Cafe: fix banner versi PWA loop (config.js appVersion tertinggal 1.18.1 sejak rilis 1.19/1.20) — sinkron 1.20.0 + script bump-web-version.mjs tiga-file; commit 031bdc4 live 28 Nov; SIAP REVIEW USER (cek iPhone: banner hilang)**
+
 - [ ] **Cafe: relay cetak jarak jauh print_jobs (Opsi B, instruksi USER 28 Nov) — waiter/perangkat mana pun insert job via Supabase, helper di tablet kasir berlangganan realtime lalu cetak Bluetooth; migrasi+RLS print_jobs, RelayEngine di helper (GoTrue+Realtime), web 1.20.0 fallback relay di printOrder, helper 1.1.0** (implementasi selesai 28 Nov: 31/31 uji JVM, E2E RLS 14/14, relayIT produksi lulus, web live — **SIAP REVIEW USER**; uji fisik Bluetooth menunggu printer)
 
 - [x] **Cafe web 1.18.1: riwayat chat berjendela — maks 200 pesan di layar; Muat 200 lebih lama MENGGANTI jendela + Kembali ke terbaru; scope query per chip filter (kuota 200 masing-masing, percakapan tidak kelaparan oleh kartu sistem); realtime tidak menggeser halaman lama; index komposit messages (tipe,waktu,id)+(waktu,id); commit 8afb38b live**
@@ -73,6 +75,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 18:34 WIB
+**Last Updated At:** 2026-11-28 20:22 WIB
 
 

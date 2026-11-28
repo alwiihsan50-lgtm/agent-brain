@@ -413,3 +413,17 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
   terunggah; SHA-256 unduhan cocok `cbb0270796bab68a…`; sertifikat rilis sama
   (`44e3405c…`); helper-version.json produksi 1.1.0 (2); commit b920ce2.
 - **Belum**: uji fisik Bluetooth (printer belum dibeli), konfirmasi USER.
+
+## 19. Fix banner versi PWA loop (28 Nov malam, commit 031bdc4 — SIAP REVIEW)
+
+- Laporan USER (foto IMG_6753 via TailShare): banner "Versi web 1.20.0 tersedia"
+  muncul terus di iPhone Add-to-Home-Screen walau sudah Muat ulang.
+- Akar masalah: rilis 1.19.0/1.20.0 menaikkan version.json + sw.js tetapi
+  **lupa `config.js appVersion`** (tertinggal 1.18.1). Banner membandingkan
+  version.json (no-cache, selalu baru) vs CFG.appVersion → selalu lebih baru.
+  Bukan bug SW/iOS; jalur SKIP_WAITING/controllerchange sudah benar.
+- Fix: `scripts/bump-web-version.mjs --version x.y.z --notes ...` menaikkan
+  TIGA file sekaligus (version.json web, config.js appVersion, sw.js
+  CACHE_VERSION); dijalankan untuk 1.20.0; checklist di docs/DEPLOYMENT.md.
+- Verifikasi produksi: config.js 1.20.0 + no-cache; version.json 1.20.0.
+- Pelajaran rilis web: jangan naikkan versi manual per-file; pakai script.
