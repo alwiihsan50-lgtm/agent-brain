@@ -257,7 +257,9 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
   hapus atau launch; mode review dihapus **saat launch** (task terpisah).
 - **Checklist launch**: unset `DEMO_PASSWORD` + `DEMO_PASSWORD_MAKANAN`,
   `demoLogin: false`, bersihkan akun demo, hapus dummy (backup dulu; sequence
-  `setval(max(id)+1)` — jangan restart 1 karena order asli id 15 masih ada).
+  `setval(max(id)+1)` — jangan restart 1 karena order asli id 15 masih ada),
+  **login ulang relay RT Print Helper dengan akun staf asli** (28 Nov, konfirmasi
+  USER — sesi relay akun demo ikut mati; tanpa ini cetak dari jauh mati diam-diam).
 
 ## 15. Rilis 28 Nov 2026 malam — 1.16.0/1.16.1 Jejak Aktivitas (audit trail)
 

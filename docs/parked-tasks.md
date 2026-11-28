@@ -34,4 +34,5 @@
 ## Pengingat terkait (bukan tugas parkir)
 
 - ⚠️ **Mode review login sekali klik (web 1.7.0, diperluas 1.15.0 jadi 6 peran) masih LIVE** (`demoLogin: true` di `public/config.js`). Saat launch: `supabase secrets unset DEMO_PASSWORD DEMO_PASSWORD_MAKANAN --project-ref svgbotpzgukqurwcrdqd` dan `demoLogin: false` lalu deploy + bersihkan akun demo.
+- ⚠️ **SAAT LAUNCH: login ulang relay RT Print Helper dengan akun staf asli** (ditambahkan 28 Nov atas konfirmasi USER). Relay helper login memakai akun staf; bila akun demo dihapus atau sandinya direset saat launch, refresh token helper invalid → cetak dari jauh (waiter/PWA/iOS) mati diam-diam. Langkah: buka helper di tablet kasir → kartu Relay cloud → login akun kasir/owner asli → pastikan status ONLINE → uji satu cetak dari perangkat waiter.
 - ⚠️ **Data dummy (482 order per 28 Nov) TETAP di produksi atas pilihan USER 28 Nov** ("centang task, dummy tetap") sampai permintaan hapus atau launch. Cleanup: SQL header `seed-dummy-20261128.sql` + sequence `setval(max(id)+1)` (bukan restart 1 — order asli id 15 ada).

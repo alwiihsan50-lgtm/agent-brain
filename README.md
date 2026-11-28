@@ -47,7 +47,7 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 - [x] **Cafe web 1.18.0: foto per menu (49 foto default statis lisensi bebas di public/menu/, pola QRIS) + owner bisa ganti/hapus foto sendiri per menu via Kelola Menu (bucket menu-foto, RLS per kategori meniru 1.14.0, kompres client-side webp 600px, nama ber-timestamp, audit menu.foto tanpa kartu chat, cache SW cache-first); commit 3bea046 live**
 
-- [ ] **Cafe SAAT LAUNCH: hapus mode review — unset secret DEMO_PASSWORD & DEMO_PASSWORD_MAKANAN, set config.demoLogin false, hapus/nonaktifkan akun demo (owner/ownermakanan/kasir/waiter/dapur/barista@ruangtunggu.com); instruksi USER 28 Nov**
+- [ ] **Cafe SAAT LAUNCH: hapus mode review — unset secret DEMO_PASSWORD & DEMO_PASSWORD_MAKANAN, set config.demoLogin false, hapus/nonaktifkan akun demo (owner/ownermakanan/kasir/waiter/dapur/barista@ruangtunggu.com); instruksi USER 28 Nov** + **login ulang relay RT Print Helper dengan akun staf asli** (sesi relay akun demo ikut mati saat akun dihapus/sandi direset — tanpa ini cetak dari jauh mati diam-diam; konfirmasi USER 28 Nov)
 - [ ] **Cafe SAAT LAUNCH (atau permintaan USER): hapus semua data dummy (LIKE 'Dummy%', 482 order per 28 Nov) — backup dulu ke file SQL, lalu DELETE order_items/orders; sequence pakai setval(max(id)+1) BUKAN restart 1 (order asli id 15 masih ada); verifikasi Closing/Evaluasi bersih**
 - [ ] **Cafe: backup otomatis Supabase schema+data dan uji restore berkala** (dikembalikan dari parkir #6 atas konfirmasi USER 28 Nov)
 - [ ] **Cafe: APK helper printer thermal "RT Print Helper" — native Kotlin, HTTP 127.0.0.1:9123 sesuai docs/PRINTER.md, Bluetooth SPP ESC/POS 58/80mm; dipasang di tablet kasir yang terhubung langsung ke printer Bluetooth (instruksi USER 28 Nov); uji fisik menunggu printer dibeli** (diaktifkan dari parkir 28 Nov; implementasi + CI rilis 1.0.0 selesai 28 Nov — 23/23 uji lulus, APK terunggah & live di /install — **SIAP REVIEW USER**)
@@ -73,6 +73,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 18:21 WIB
+**Last Updated At:** 2026-11-28 18:34 WIB
 
 
