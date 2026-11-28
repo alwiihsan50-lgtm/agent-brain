@@ -41,6 +41,10 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Cafe SAAT LAUNCH: hapus mode review — unset secret DEMO_PASSWORD & DEMO_PASSWORD_MAKANAN, set config.demoLogin false, hapus/nonaktifkan akun demo (owner/ownermakanan/kasir/waiter/dapur/barista@ruangtunggu.com); instruksi USER 28 Nov**
+
+- [ ] **Cafe web 1.15.0: tombol review sekali klik Owner Makanan (demo-login provision otomatis via secret baru DEMO_PASSWORD_MAKANAN) + rename owner jadi Owner Minuman (profil, ROLELBL, topbar, opsi staf); commit 82ad807 live**
+
 - [ ] **Cafe web 1.14.0: kunci manajemen menu per owner (varian B + UI hide) — role owner_makanan RLS makanan-only; UI owner(minuman+admin) & owner_makanan di-scope per kategori, form kategori terkunci; laporan/karyawan/laci bersama tetap; migrasi 20261128020000 + staff-admin ROLES; commit 11b4106 live**
 
 - [ ] **Cafe: seed dummy 30 hari (468 order lampau 30 Okt–27 Nov, pola realistis: akhir pekan x1.5, tren naik, ±7% batal, 4 menu sengaja nol peminat) via supabase/seed-dummy-30d-20261128.sql (commit 69f55d7); insert-only, guard anti-duplikat; cleanup tetap LIKE 'Dummy%'; hari ini + order asli tidak disentuh**
@@ -80,6 +84,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 09:45 WIB
+**Last Updated At:** 2026-11-28 10:00 WIB
 
 
