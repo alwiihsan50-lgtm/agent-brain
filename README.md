@@ -41,18 +41,13 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
-- [ ] **Cafe: fix banner versi PWA loop (config.js appVersion tertinggal 1.18.1 sejak rilis 1.19/1.20) — sinkron 1.20.0 + script bump-web-version.mjs tiga-file; commit 031bdc4 live 28 Nov; SIAP REVIEW USER (cek iPhone: banner hilang)**
+- [x] **Cafe: fix banner versi PWA loop (config.js appVersion tertinggal 1.18.1 sejak rilis 1.19/1.20) — sinkron 1.20.0 + script bump-web-version.mjs tiga-file; commit 031bdc4 live 28 Nov; SIAP REVIEW USER (cek iPhone: banner hilang)**
 
-- [ ] **Cafe: relay cetak jarak jauh print_jobs (Opsi B, instruksi USER 28 Nov) — waiter/perangkat mana pun insert job via Supabase, helper di tablet kasir berlangganan realtime lalu cetak Bluetooth; migrasi+RLS print_jobs, RelayEngine di helper (GoTrue+Realtime), web 1.20.0 fallback relay di printOrder, helper 1.1.0** (implementasi selesai 28 Nov: 31/31 uji JVM, E2E RLS 14/14, relayIT produksi lulus, web live — **SIAP REVIEW USER**; uji fisik Bluetooth menunggu printer)
-
-- [x] **Cafe web 1.18.1: riwayat chat berjendela — maks 200 pesan di layar; Muat 200 lebih lama MENGGANTI jendela + Kembali ke terbaru; scope query per chip filter (kuota 200 masing-masing, percakapan tidak kelaparan oleh kartu sistem); realtime tidak menggeser halaman lama; index komposit messages (tipe,waktu,id)+(waktu,id); commit 8afb38b live**
-
-- [x] **Cafe web 1.18.0: foto per menu (49 foto default statis lisensi bebas di public/menu/, pola QRIS) + owner bisa ganti/hapus foto sendiri per menu via Kelola Menu (bucket menu-foto, RLS per kategori meniru 1.14.0, kompres client-side webp 600px, nama ber-timestamp, audit menu.foto tanpa kartu chat, cache SW cache-first); commit 3bea046 live**
+- [x] **Cafe: relay cetak jarak jauh print_jobs (Opsi B, instruksi USER 28 Nov) — waiter/perangkat mana pun insert job via Supabase, helper di tablet kasir berlangganan realtime lalu cetak Bluetooth; migrasi+RLS print_jobs, RelayEngine di helper (GoTrue+Realtime), web 1.20.0 fallback relay di printOrder, helper 1.1.0** (implementasi selesai 28 Nov: 31/31 uji JVM, E2E RLS 14/14, relayIT produksi lulus, web live — **SIAP REVIEW USER**; uji fisik Bluetooth menunggu printer)
 
 - [ ] **Cafe SAAT LAUNCH: hapus mode review — unset secret DEMO_PASSWORD & DEMO_PASSWORD_MAKANAN, set config.demoLogin false, hapus/nonaktifkan akun demo (owner/ownermakanan/kasir/waiter/dapur/barista@ruangtunggu.com); instruksi USER 28 Nov** + **login ulang relay RT Print Helper dengan akun staf asli** (sesi relay akun demo ikut mati saat akun dihapus/sandi direset — tanpa ini cetak dari jauh mati diam-diam; konfirmasi USER 28 Nov)
 - [ ] **Cafe SAAT LAUNCH (atau permintaan USER): hapus semua data dummy (LIKE 'Dummy%', 482 order per 28 Nov) — backup dulu ke file SQL, lalu DELETE order_items/orders; sequence pakai setval(max(id)+1) BUKAN restart 1 (order asli id 15 masih ada); verifikasi Closing/Evaluasi bersih**
 - [ ] **Cafe: backup otomatis Supabase schema+data dan uji restore berkala** (dikembalikan dari parkir #6 atas konfirmasi USER 28 Nov)
-- [ ] **Cafe: APK helper printer thermal "RT Print Helper" — native Kotlin, HTTP 127.0.0.1:9123 sesuai docs/PRINTER.md, Bluetooth SPP ESC/POS 58/80mm; dipasang di tablet kasir yang terhubung langsung ke printer Bluetooth (instruksi USER 28 Nov); uji fisik menunggu printer dibeli** (diaktifkan dari parkir 28 Nov; implementasi + CI rilis 1.0.0 selesai 28 Nov — 23/23 uji lulus, APK terunggah & live di /install — **SIAP REVIEW USER**)
 
 - 🅿️ **10 tugas belum-live DISISIHKAN atas instruksi USER (27 Nov 2026)** menunggu list prioritas baru — 6 Cafe + 4 Non-Cafe, status tetap `- [ ]`, tersimpan utuh di [docs/parked-tasks.md](docs/parked-tasks.md). (Backup otomatis dikembalikan ke aktif 28 Nov; helper printer thermal diaktifkan 28 Nov atas instruksi USER — device helper = tablet kasir, koneksi Bluetooth langsung.)
 
@@ -75,6 +70,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 20:22 WIB
+**Last Updated At:** 2026-11-28 20:49 WIB
 
 
