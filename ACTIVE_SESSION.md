@@ -3,11 +3,11 @@
 > ℹ️ File ini berfungsi sebagai jembatan memori real-time antar AI Agent lintas sesi ketika ada pekerjaan yang sedang berjalan.
 > Update file ini saat beralih tugas atau sebelum handoff. Ketika tugas selesai dan telah divalidasi oleh USER, kembalikan status ke IDLE.
 
-- **Status:** IDLE
-- **Active Project:** -
-- **Current Task:** -
+- **Status:** IN_PROGRESS
+- **Active Project:** Cafe Ruang Tunggu
+- **Current Task:** 1.16.1 jejak aktivitas live — menunggu review USER; 1.10.0–1.15.0 sudah [x]; dummy tetap; launch-removal terbuka
 - **Modified Files:** -
 - **Verification Command / URL:** -
-- **Next Steps / Notes:** -
+- **Next Steps / Notes:** 28 Nov: rilis 1.16.0 (472daf5) + 1.16.1 (2e02f7b). Audit trail: tabel audit_log append-only (RLS select semua staf, tanpa policy tulis; revoke insert/update/delete dari authenticated), trigger fn_audit security definer di orders/order_items/menu/profiles; actor snapshot nama+peran; diff kolom berubah; teks siap baca. orders INSERT pakai CONSTRAINT TRIGGER INITIALLY DEFERRED agar ringkasan item tersedia saat commit (buat_order satu txn). Filter noise: inisialisasi status kategori null→'baru' oleh trigger item dilewati. messages + tipe/aksi/entitas_id, pengirim nullable (Sistem), messages_set_nama skip audit, policy kirim wajib tipe='chat' (anti-palsu). staff-admin: auditStaf (create/ubah/reset/ban/unban) pelaku owner JWT; sandi TIDAK dicatat. demo-login: auditDemo provisioning. pg_cron 2 job retensi 12 bulan (audit_log + messages audit). UI: chat kartu sistem + chip filter; badge unread hanya manusia; tab Jejak semua peran (TABS 6 owner) + filter/cari/CSV; bottomnav flex:1 min-width:0 muat 6 tab di 390px; 1.16.1 silent refresh Jejak (pola antrean) + fokus cari terjaga. PELAJARAN: (1) CLI db query per-statement = txn terpisah → uji deferred trigger harus DO block satu txn; (2) uji rollback via RAISE exception证明 trigger tanpa jejak; (3) race uji: reload realtime menampilkan loading → hitung baris 0; solusi silent refresh; (4) version.json struktur bersarang web.version; (5) Playwright wait_for_selector koma pilih elemen pertama (hidden) → pakai wait_for_function. Verifikasi lokal+produksi: RLS update/delete/insert audit & pesan audit palsu DITOLAK; realtime lintas perangkat dapur→kasir OK; badge diskriminasi 1; aktor Kasir/Barista/Waiter/Owner Minuman benar; CSV 39 baris; staf uji create/reset/ban/unban tercatat tanpa bocor sandi; mobile 6 tab tanpa overflow; 0 console error. Cleanup total: baseline 484 order (482 dummy + 2 asli incl. order baru pelanggan id 498), 7 staf (Tomo waiter baru — produksi aktif dipakai), 2 pesan manusia, 0 audit, 49 menu, Matcha 18000. Bukti screenshots/audit-1.16.*.png. DATA DUMMY TETAP; mode review TETAP sampai launch.
 - **Last Updated By:** AI Agent
-- **Last Updated At:** 2026-11-28 10:36 WIB
+- **Last Updated At:** 2026-11-28 11:12 WIB

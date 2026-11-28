@@ -258,3 +258,26 @@ Screenshot acuan: `screenshots/tablet-768-order.png`,
 - **Checklist launch**: unset `DEMO_PASSWORD` + `DEMO_PASSWORD_MAKANAN`,
   `demoLogin: false`, bersihkan akun demo, hapus dummy (backup dulu; sequence
   `setval(max(id)+1)` — jangan restart 1 karena order asli id 15 masih ada).
+
+## 15. Rilis 28 Nov 2026 malam — 1.16.0/1.16.1 Jejak Aktivitas (audit trail)
+
+- **Keputusan USER**: seluruh staf & owner melihat SEMUA riwayat (transparansi
+  penuh); cukup perubahan data (tanpa event login); retensi 12 bulan;
+  chat realtime + tab Jejak (filter/cari/CSV).
+- **Database**: `audit_log` append-only (trigger `fn_audit` security definer di
+  orders/order_items/menu/profiles; actor snapshot; diff kolom; teks siap baca).
+  orders INSERT = constraint trigger DEFERRED (ringkasan item saat commit).
+  Noise filter: inisialisasi status kategori null→'baru' tidak dicatat.
+  `messages.tipe` chat/audit; pengirim nullable (Sistem); klien wajib tipe='chat'.
+  pg_cron harian: hapus audit >12 bulan (satu-satunya jalur hapus).
+- **Edge functions**: staff-admin mencatat create/ubah/reset-sandi/ban/unban
+  dengan pelaku owner terverifikasi (sandi tidak pernah dicatat); demo-login
+  mencatat provisioning akun demo sebagai Sistem.
+- **UI**: chat = percakapan + kartu sistem realtime (chip Semua/Percakapan/
+  Aktivitas; badge unread hanya pesan manusia); tab Jejak semua peran;
+  bottomnav flex muat 6 tab di 390px; 1.16.1 refresh Jejak senyap + fokus cari.
+- **Batas jujur**: riwayat mulai sejak migrasi; akses service role/dashboard
+  tetap bisa mengubah log (di luar app); akun dihapus → pesan chatnya cascade,
+  arsip audit_log tetap (tanpa FK).
+- Verifikasi penuh lokal+produksi lulus; data uji dibersihkan total; baseline
+  utuh (482 dummy + 2 order asli, 7 staf termasuk Tomo — cafe sudah pakai app).

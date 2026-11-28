@@ -41,6 +41,8 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 
 ## 🚀 Status Tugas Aktif (Work in Progress)
 
+- [ ] **Cafe web 1.16.0/1.16.1: jejak aktivitas (audit trail) — trigger database append-only (orders/order_items/menu/profiles) + staff-admin/demo-login tercatat pelaku terverifikasi; pesan sistem realtime di chat staff (filter Semua/Percakapan/Aktivitas, badge hanya pesan manusia); tab Jejak semua peran (filter periode/pelaku/aksi, cari, CSV); retensi 12 bulan pg_cron; refresh Jejak mulus; commit 472daf5 + 2e02f7b live**
+
 - [ ] **Cafe SAAT LAUNCH: hapus mode review — unset secret DEMO_PASSWORD & DEMO_PASSWORD_MAKANAN, set config.demoLogin false, hapus/nonaktifkan akun demo (owner/ownermakanan/kasir/waiter/dapur/barista@ruangtunggu.com); instruksi USER 28 Nov**
 - [ ] **Cafe SAAT LAUNCH (atau permintaan USER): hapus semua data dummy (LIKE 'Dummy%', 482 order per 28 Nov) — backup dulu ke file SQL, lalu DELETE order_items/orders; sequence pakai setval(max(id)+1) BUKAN restart 1 (order asli id 15 masih ada); verifikasi Closing/Evaluasi bersih**
 - [ ] **Cafe: backup otomatis Supabase schema+data dan uji restore berkala** (dikembalikan dari parkir #6 atas konfirmasi USER 28 Nov)
@@ -70,6 +72,6 @@ Repositori ini adalah sistem memori terpusat (*Shared Memory System*) dan tempat
 ---
 
 **Last Updated By:** Antigravity (Gemini 3.8 Flash)
-**Last Updated At:** 2026-11-28 10:36 WIB
+**Last Updated At:** 2026-11-28 11:12 WIB
 
 
